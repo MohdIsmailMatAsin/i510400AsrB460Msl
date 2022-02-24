@@ -112,6 +112,8 @@
 SSDT-ACPI:
 
 - Modded SSDT: AWAC, PLUG, EC, DMAC (MCHC), GFX0 (ATY,Keelback), HDAU, PMCR (PPMC), TSUB, RTLK, USB0 (PXSX), USB1 (XHC), ANS0 (NVME), ANS1 (NVME), ARPT (WLAN), SATA (SAT0), SBUS, and USBX.
+- Added `"CFG,CFG_USE_AGDC"` on `GFX0` to fix wake issues
+- Added `"acpi-wake-type"` on both `PXSX (USB0)` and `XHC (USB1)`
 
 ```aml
 /*
@@ -121,13 +123,13 @@ SSDT-ACPI:
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLYjm0jY.aml, Thu Feb 24 21:02:14 2022
+ * Disassembly of iASL7sE4LT.aml, Fri Feb 25 00:55:42 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x000014A8 (5288)
+ *     Length           0x000014FC (5372)
  *     Revision         0x02
- *     Checksum         0x49
+ *     Checksum         0x50
  *     OEM ID           "Apple"
  *     OEM Table ID     "ACPI"
  *     OEM Revision     0x00000000 (0)
@@ -319,7 +321,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                                     })
                                 }
 
-                                Return (Package (0x16)
+                                Return (Package (0x18)
                                 {
                                     "AAPL,slot-name", 
                                     Buffer (0x1B)
@@ -339,6 +341,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                                         /* 0000 */  0x31, 0x31, 0x33, 0x2D, 0x4D, 0x53, 0x49, 0x54,  // 113-MSIT
                                         /* 0008 */  0x56, 0x33, 0x38, 0x32, 0x4D, 0x48, 0x2E, 0x31,  // V382MH.1
                                         /* 0010 */  0x36, 0x31                                       // 61
+                                    }, 
+
+                                    "CFG,CFG_USE_AGDC", 
+                                    Buffer (One)
+                                    {
+                                         0x01                                             // .
                                     }, 
 
                                     "@0,name", 
@@ -635,12 +643,18 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                             })
                         }
 
-                        Return (Package (0x0A)
+                        Return (Package (0x0C)
                         {
                             "AAPL,slot-name", 
                             Buffer (0x14)
                             {
                                 "Internal@0,28,4/0,0"
+                            }, 
+
+                            "acpi-wake-type", 
+                            Buffer (One)
+                            {
+                                 0x01                                             // .
                             }, 
 
                             "built-in", 
@@ -988,6 +1002,25 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
             {
                 Name (_ADR, 0x00140000)  // _ADR: Address
                 Name (_STR, Unicode ("Comet Lake PCH-V USB Controller"))  // _STR: Description String
+                Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                {
+                    If ((Arg2 == Zero))
+                    {
+                        Return (Buffer (One)
+                        {
+                             0x03                                             // .
+                        })
+                    }
+
+                    Return (Package (0x02)
+                    {
+                        "acpi-wake-type", 
+                        Buffer (0x17)
+                        {
+                             0x01                                             // .
+                        }
+                    })
+                }
             }
         }
 
@@ -1020,6 +1053,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
         }
     }
 }
+
 ```
 
 Additional Kext Info: 
@@ -1046,7 +1080,7 @@ Additional Kext Info:
 
 - Whatevergreen.kext   (Boot Arg | NVRAM: `agdpmod=pikera`) 
 
-<img width="1788" alt="Screen Shot 2022-02-25 at 12 51 16 AM" src="https://user-images.githubusercontent.com/72515939/155569930-bc530f09-0d99-4ae6-adc5-3ad126aeaf43.png">
+<img width="1788" alt="Screen Shot 2022-02-25 at 12 54 55 AM" src="https://user-images.githubusercontent.com/72515939/155570613-6a2e3ca0-203c-46ac-bdad-0c86c2fcdb9b.png">
 
 **Tools:**
 
