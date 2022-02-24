@@ -1,28 +1,28 @@
 # i510400FAsrockB460SteelLegend
 
-<img width="698" alt="Screen Shot 2022-02-24 at 8 51 59 PM" src="https://user-images.githubusercontent.com/72515939/155527979-c0f57c37-826d-43e8-9571-3d062dce01de.png">
+<p align="center"><img width="698" alt="Screen Shot 2022-02-24 at 8 51 59 PM" src="https://user-images.githubusercontent.com/72515939/155527979-c0f57c37-826d-43e8-9571-3d062dce01de.png"></p>
 
 **Processor:**
 
 - Intel® Core™ `i5-10400F` Processor
 
-<img width="1118" alt="Screen Shot 2022-02-25 at 12 06 55 AM" src="https://user-images.githubusercontent.com/72515939/155562143-98bd9483-8c34-43f2-95b4-d34e8c4675c7.png">
+<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 12 06 55 AM" src="https://user-images.githubusercontent.com/72515939/155562143-98bd9483-8c34-43f2-95b4-d34e8c4675c7.png"></p>
   
 **Motherboard:**
 
 - Asrock `B460M` Steel Legend
 
-![B460M_Steel_Legend-3](https://user-images.githubusercontent.com/72515939/155562844-fcc62df8-68e4-4b36-84f1-ce636bae81ec.png)
+<p align="center">![B460M_Steel_Legend-3](https://user-images.githubusercontent.com/72515939/155562844-fcc62df8-68e4-4b36-84f1-ce636bae81ec.png)</p>
 
 **DGPU:**
 
 - MSI Radeon `RX 5500` XT Mech OC 4GB
 
-<img width="1118" alt="Screen Shot 2022-02-25 at 12 07 00 AM" src="https://user-images.githubusercontent.com/72515939/155562166-62aedf1d-ab2d-48ca-99fa-62974d4e5f1b.png">
+<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 12 07 00 AM" src="https://user-images.githubusercontent.com/72515939/155562166-62aedf1d-ab2d-48ca-99fa-62974d4e5f1b.png"></p>
 
 **ATY, Framebuffer:** `ATY,Keelback`
 
-<img width="1405" alt="Screen Shot 2022-02-25 at 12 20 55 AM" src="https://user-images.githubusercontent.com/72515939/155564774-a93a1eb4-4ca4-4414-a414-065fd6cf916d.png">
+<p align="center"><img width="1405" alt="Screen Shot 2022-02-25 at 12 20 55 AM" src="https://user-images.githubusercontent.com/72515939/155564774-a93a1eb4-4ca4-4414-a414-065fd6cf916d.png"></p>
 
 **IGPU:**
 
@@ -33,13 +33,13 @@
 - BCM4360 802.11ac Wireless Network Adapter
 - ASM2142 USB 3.0 XHCI Controller (`4` x Companion `USB2.0/3.0 Type A` port, `1` x `USB2.0/3.0 Type C`)
 
-<img width="1527" alt="Screen Shot 2022-02-25 at 12 09 21 AM" src="https://user-images.githubusercontent.com/72515939/155562367-ec366c68-3b3d-4011-a5cb-3bf176c78121.png">
+<p align="center"><img width="1527" alt="Screen Shot 2022-02-25 at 12 09 21 AM" src="https://user-images.githubusercontent.com/72515939/155562367-ec366c68-3b3d-4011-a5cb-3bf176c78121.png"></p>
   
 **Memory:**
 
 - XLR8 32 GB DDR4 RAM 
 
-<img width="1118" alt="Screen Shot 2022-02-25 at 12 08 44 AM" src="https://user-images.githubusercontent.com/72515939/155562263-a3f8de51-d1a8-4fc0-b600-90edbe33a220.png">
+<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 12 08 44 AM" src="https://user-images.githubusercontent.com/72515939/155562263-a3f8de51-d1a8-4fc0-b600-90edbe33a220.png"></p>
 
 **Storage:**
 
@@ -47,13 +47,13 @@
   
 - 1 x SPCC M.2 NVMe-Phison  250GB (Spoof as Apple SSD Controller)
 
-<img width="1118" alt="Screen Shot 2022-02-24 at 9 38 31 PM" src="https://user-images.githubusercontent.com/72515939/155534666-3227b229-8797-47c6-bc87-6c54ee869db5.png">
+<p align="center"><img width="1118" alt="Screen Shot 2022-02-24 at 9 38 31 PM" src="https://user-images.githubusercontent.com/72515939/155534666-3227b229-8797-47c6-bc87-6c54ee869db5.png"></p>
 
 - 1 x SPCC Solid State Disk 500GB (Spoof to use Intel 11 Series Chipset)
 
 - 2 x WDC WD5000AAKX HDD    500GB (Spoof to use Intel 11 Series Chipset)
 
-<img width="1118" alt="Screen Shot 2022-02-24 at 9 36 53 PM" src="https://user-images.githubusercontent.com/72515939/155534612-33239277-dc78-4344-8a88-01101a24799f.png">
+<p align="center"><img width="1118" alt="Screen Shot 2022-02-24 at 9 36 53 PM" src="https://user-images.githubusercontent.com/72515939/155534612-33239277-dc78-4344-8a88-01101a24799f.png"></p>
 
 **OS Tested:**
 
@@ -1024,19 +1024,19 @@ Additional Kext Info:
 
 - AGPMInjector.kext   (`AGPM`/`Machines`/`iMacPro1,1`/`Vendor1002Device7340`) 
 
-<img width="1118" alt="Screen Shot 2022-02-24 at 9 23 55 PM" src="https://user-images.githubusercontent.com/72515939/155532265-5bbb6159-db1a-4efc-98e4-9dc84b73bd74.png">
+<p align="center"><img width="1118" alt="Screen Shot 2022-02-24 at 9 23 55 PM" src="https://user-images.githubusercontent.com/72515939/155532265-5bbb6159-db1a-4efc-98e4-9dc84b73bd74.png"></p>
 
 - Moussey.kext        (`Apple Wireless Mouse Interface`/`ProductID:100`/`VendorID:7847`)
 
-<img width="780" alt="Screen Shot 2022-02-24 at 9 10 54 PM" src="https://user-images.githubusercontent.com/72515939/155530287-29686499-0bad-4979-87e1-a3d8249b1ccd.png">
+<p align="center"><img width="780" alt="Screen Shot 2022-02-24 at 9 10 54 PM" src="https://user-images.githubusercontent.com/72515939/155530287-29686499-0bad-4979-87e1-a3d8249b1ccd.png"></p>
 
 - USBMap.kext         (`15 Port` disable motherboard `1` x `USB3.0 Type C`. Remark: `2` x `USB3.0 Type C` via `PCI` available)
 
-<img width="1405" alt="Screen Shot 2022-02-25 at 12 17 02 AM" src="https://user-images.githubusercontent.com/72515939/155563782-82326ee1-e775-45a7-9cba-b8166723fc7d.png">
+<p align="center"><img width="1405" alt="Screen Shot 2022-02-25 at 12 17 02 AM" src="https://user-images.githubusercontent.com/72515939/155563782-82326ee1-e775-45a7-9cba-b8166723fc7d.png"></p>
 
-<img width="1784" alt="Screen Shot 2022-02-25 at 12 14 12 AM" src="https://user-images.githubusercontent.com/72515939/155563332-36464363-c068-4abf-ac72-b4047ac5d37d.png">
+<p align="center"><img width="1784" alt="Screen Shot 2022-02-25 at 12 14 12 AM" src="https://user-images.githubusercontent.com/72515939/155563332-36464363-c068-4abf-ac72-b4047ac5d37d.png"></p>
 
-<img width="1118" alt="Screen Shot 2022-02-25 at 12 14 25 AM" src="https://user-images.githubusercontent.com/72515939/155563350-1dee3d26-574a-4c6f-8b3c-9dacbe48a33f.png">
+<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 12 14 25 AM" src="https://user-images.githubusercontent.com/72515939/155563350-1dee3d26-574a-4c6f-8b3c-9dacbe48a33f.png"></p>
 
 **Tools:**
 
@@ -2116,7 +2116,7 @@ Additional Kext Info:
 
 All Device
 
-<img width="1118" alt="Screen Shot 2022-02-24 at 9 28 49 PM" src="https://user-images.githubusercontent.com/72515939/155534249-aadb413e-761e-46cd-86da-44b274df3752.png">
+<p align="center"><img width="1118" alt="Screen Shot 2022-02-24 at 9 28 49 PM" src="https://user-images.githubusercontent.com/72515939/155534249-aadb413e-761e-46cd-86da-44b274df3752.png">
 
 **Non Working:**
 
@@ -3095,7 +3095,7 @@ NVMeFix.kext not support `SPCC M.2 NVMe` (`Phison Chipset`). Reminder: This kext
     +-o IOUserServer(com.apple.driverkit.AppleUserHIDDrivers-0x1000004da)  <cla$
     +-o IOUserServer(com.apple.IOUserBluetoothSerialDriver-0x10000079d)  <class$
 ```    
-![Screen Shot 2022-02-24 at 10 02 52 PM](https://user-images.githubusercontent.com/72515939/155539110-a79c2426-16c3-4182-acda-886adfe92230.jpg)
+<p align="center">![Screen Shot 2022-02-24 at 10 02 52 PM](https://user-images.githubusercontent.com/72515939/155539110-a79c2426-16c3-4182-acda-886adfe92230.jpg)</p>
 
 **BIOS/UEFI Settings:**
 
