@@ -10,7 +10,9 @@
   
 **Motherboard:**
 
-- Asrock `B460` Steel Legend
+- Asrock `B460M` Steel Legend
+
+![B460M_Steel_Legend-3](https://user-images.githubusercontent.com/72515939/155562844-fcc62df8-68e4-4b36-84f1-ce636bae81ec.png)
 
 **DGPU:**
 
