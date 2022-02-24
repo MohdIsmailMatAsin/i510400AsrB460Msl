@@ -2,8 +2,6 @@
 
 <img width="698" alt="Screen Shot 2022-02-24 at 8 51 59 PM" src="https://user-images.githubusercontent.com/72515939/155527979-c0f57c37-826d-43e8-9571-3d062dce01de.png">
 
-![Screen Shot 2022-02-24 at 10 02 52 PM](https://user-images.githubusercontent.com/72515939/155539110-a79c2426-16c3-4182-acda-886adfe92230.jpg)
-
 **Processor:**
 
 - Intel® Core™ `i5-10400F` Processor
@@ -3080,6 +3078,7 @@ NVMeFix.kext not support `SPCC M.2 NVMe` (`Phison Chipset`). Reminder: This kext
     +-o IOUserServer(com.apple.driverkit.AppleUserHIDDrivers-0x1000004da)  <cla$
     +-o IOUserServer(com.apple.IOUserBluetoothSerialDriver-0x10000079d)  <class$
 ```    
+![Screen Shot 2022-02-24 at 10 02 52 PM](https://user-images.githubusercontent.com/72515939/155539110-a79c2426-16c3-4182-acda-886adfe92230.jpg)
 
 **BIOS/UEFI Settings:**
 
