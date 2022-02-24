@@ -93,6 +93,915 @@ SSDT-ACPI:
 
 - Modded SSDT: AWAC, PLUG, EC, DMAC (MCHC), GFX0 (ATY,Keelback), HDAU, PMCR (PPMC), TSUB, RTLK, USB0 (PXSX), USB1 (XHC), ANS0 (NVME), ANS1 (NVME), ARPT (WLAN), SATA (SAT0), SBUS, and USBX.
 
+```aml
+/*
+ * Intel ACPI Component Architecture
+ * AML/ASL+ Disassembler version 20200925 (64-bit version)
+ * Copyright (c) 2000 - 2020 Intel Corporation
+ * 
+ * Disassembling to symbolic ASL+ operators
+ *
+ * Disassembly of iASLYjm0jY.aml, Thu Feb 24 21:02:14 2022
+ *
+ * Original Table Header:
+ *     Signature        "SSDT"
+ *     Length           0x000014A8 (5288)
+ *     Revision         0x02
+ *     Checksum         0x49
+ *     OEM ID           "Apple"
+ *     OEM Table ID     "ACPI"
+ *     OEM Revision     0x00000000 (0)
+ *     Compiler ID      "INTL"
+ *     Compiler Version 0x20210930 (539035952)
+ */
+DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
+{
+    External (_SB_.PCI0, DeviceObj)
+    External (_SB_.PCI0.GFX0, DeviceObj)
+    External (_SB_.PCI0.HECI, DeviceObj)
+    External (_SB_.PCI0.LPCB, DeviceObj)
+    External (_SB_.PCI0.LPCB.EC__, DeviceObj)
+    External (_SB_.PCI0.MCHC, DeviceObj)
+    External (_SB_.PCI0.PEG0, DeviceObj)
+    External (_SB_.PCI0.PEG0.PEGP, DeviceObj)
+    External (_SB_.PCI0.PPMC, DeviceObj)
+    External (_SB_.PCI0.RP04, DeviceObj)
+    External (_SB_.PCI0.RP04.PXSX, DeviceObj)
+    External (_SB_.PCI0.RP04.PXSX._STA, UnknownObj)
+    External (_SB_.PCI0.RP05, DeviceObj)
+    External (_SB_.PCI0.RP05.PXSX, DeviceObj)
+    External (_SB_.PCI0.RP05.PXSX._STA, UnknownObj)
+    External (_SB_.PCI0.RP09, DeviceObj)
+    External (_SB_.PCI0.RP09.PXSX, DeviceObj)
+    External (_SB_.PCI0.RP09.PXSX._STA, UnknownObj)
+    External (_SB_.PCI0.RP20, DeviceObj)
+    External (_SB_.PCI0.RP20.PXSX, DeviceObj)
+    External (_SB_.PCI0.RP20.PXSX._STA, UnknownObj)
+    External (_SB_.PCI0.RP21, DeviceObj)
+    External (_SB_.PCI0.RP21.PXSX, DeviceObj)
+    External (_SB_.PCI0.RP21.PXSX._STA, UnknownObj)
+    External (_SB_.PCI0.SAT0, DeviceObj)
+    External (_SB_.PCI0.SBUS, DeviceObj)
+    External (_SB_.PCI0.TSUB, DeviceObj)
+    External (_SB_.PCI0.XHC_, DeviceObj)
+    External (_SB_.PR00, ProcessorObj)
+    External (_SB_.USBX, DeviceObj)
+    External (STAS, IntObj)
+
+    Scope (\_SB)
+    {
+        Method (_INI, 0, Serialized)  // _INI: Initialize
+        {
+            If (_OSI ("Darwin"))
+            {
+                STAS = One
+            }
+        }
+
+        Scope (PR00)
+        {
+            If (_OSI ("Darwin"))
+            {
+                Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                {
+                    If (!Arg2)
+                    {
+                        Return (Buffer (One)
+                        {
+                             0x03                                             // .
+                        })
+                    }
+
+                    Return (Package (0x02)
+                    {
+                        "plugin-type", 
+                        One
+                    })
+                }
+            }
+        }
+
+        Scope (PCI0)
+        {
+            Scope (LPCB)
+            {
+                Device (EC)
+                {
+                    Name (_HID, EisaId ("PNP0C09") /* Embedded Controller Device */)  // _HID: Hardware ID
+                    Name (_STR, Unicode ("Embedded Controller Device"))  // _STR: Description String
+                    Method (_STA, 0, Serialized)  // _STA: Status
+                    {
+                        If (_OSI ("Darwin"))
+                        {
+                            Return (0x0F)
+                        }
+                        Else
+                        {
+                            Return (Zero)
+                        }
+                    }
+                }
+            }
+
+            Device (DMAC)
+            {
+                Name (_ADR, Zero)  // _ADR: Address
+                Name (_STR, Unicode ("Comet Lake-S 6c Host Bridge/DRAM Controller"))  // _STR: Description String
+                Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+                {
+                    If (_OSI ("Darwin"))
+                    {
+                        Return (Buffer (One)
+                        {
+                             0x03                                             // .
+                        })
+                    }
+
+                    Return (Package (0x08)
+                    {
+                        "AAPL,slot-name", 
+                        Buffer (0x09)
+                        {
+                            "Internal"
+                        }, 
+
+                        "built-in", 
+                        Buffer (0x17)
+                        {
+                             0x01, 0x00, 0x00, 0x00                           // ....
+                        }, 
+
+                        "device_type", 
+                        Buffer (0x0C)
+                        {
+                            "Host bridge"
+                        }, 
+
+                        "model", 
+                        Buffer (0x2C)
+                        {
+                            "Comet Lake-S 6c Host Bridge/DRAM Controller"
+                        }
+                    })
+                }
+            }
+
+            Scope (PEG0)
+            {
+                Scope (PEGP)
+                {
+                    Name (_STR, Unicode ("6th-10th Gen Core Processor PCIe Controller (x16)"))  // _STR: Description String
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    {
+                        If (_OSI ("Darwin"))
+                        {
+                            Return (Zero)
+                        }
+                        Else
+                        {
+                            Return (0x0F)
+                        }
+                    }
+                }
+
+                Device (EGP0)
+                {
+                    Name (_ADR, Zero)  // _ADR: Address
+                    Name (_STR, Unicode ("Navi 10 XL Upstream Port of PCI Express Switch"))  // _STR: Description String
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    {
+                        If (_OSI ("Darwin"))
+                        {
+                            Return (0x0F)
+                        }
+                        Else
+                        {
+                            Return (Zero)
+                        }
+                    }
+
+                    Device (EGP1)
+                    {
+                        Name (_ADR, Zero)  // _ADR: Address
+                        Name (_STR, Unicode ("Navi 10 XL Downstream Port of PCI Express Switch"))  // _STR: Description String
+                        Device (GFX0)
+                        {
+                            Name (_ADR, Zero)  // _ADR: Address
+                            Name (_STR, Unicode ("Navi 14 [Radeon RX 5500/5500M / Pro 5500M"))  // _STR: Description String
+                            Name (_SUN, One)  // _SUN: Slot User Number
+                            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                            {
+                                If ((Arg2 == Zero))
+                                {
+                                    Return (Buffer (One)
+                                    {
+                                         0x03                                             // .
+                                    })
+                                }
+
+                                Return (Package (0x16)
+                                {
+                                    "AAPL,slot-name", 
+                                    Buffer (0x1B)
+                                    {
+                                        "Internal@0,1,0/0,0/0,0/0,0"
+                                    }, 
+
+                                    "@0,ATY,EFIDisplay", 
+                                    Buffer (0x04)
+                                    {
+                                        "DP1"
+                                    }, 
+
+                                    "ATY,EFIVersionB", 
+                                    Buffer (0x12)
+                                    {
+                                        /* 0000 */  0x31, 0x31, 0x33, 0x2D, 0x4D, 0x53, 0x49, 0x54,  // 113-MSIT
+                                        /* 0008 */  0x56, 0x33, 0x38, 0x32, 0x4D, 0x48, 0x2E, 0x31,  // V382MH.1
+                                        /* 0010 */  0x36, 0x31                                       // 61
+                                    }, 
+
+                                    "@0,name", 
+                                    Buffer (0x0D)
+                                    {
+                                        "ATY,Keelback"
+                                    }, 
+
+                                    "@0,AAPL,boot-display", 
+                                    Buffer (0x04)
+                                    {
+                                         0x01, 0x00, 0x00, 0x00                           // ....
+                                    }, 
+
+                                    "ATY,EFIEnabledMode", 
+                                    Buffer (One)
+                                    {
+                                         0x01                                             // .
+                                    }, 
+
+                                    "ATY,EFIVersion", 
+                                    Buffer (0x07)
+                                    {
+                                         0x33, 0x2E, 0x32, 0x2E, 0x31, 0x33, 0x30         // 3.2.130
+                                    }, 
+
+                                    "ATY,copyright", 
+                                    Buffer (0x31)
+                                    {
+                                        /* 0000 */  0x43, 0x6F, 0x70, 0x79, 0x72, 0x69, 0x67, 0x68,  // Copyrigh
+                                        /* 0008 */  0x74, 0x20, 0x41, 0x4D, 0x44, 0x20, 0x49, 0x6E,  // t AMD In
+                                        /* 0010 */  0x63, 0x2E, 0x20, 0x41, 0x6C, 0x6C, 0x20, 0x52,  // c. All R
+                                        /* 0018 */  0x69, 0x67, 0x68, 0x74, 0x73, 0x20, 0x52, 0x65,  // ights Re
+                                        /* 0020 */  0x73, 0x65, 0x72, 0x76, 0x65, 0x64, 0x2E, 0x20,  // served. 
+                                        /* 0028 */  0x32, 0x30, 0x30, 0x35, 0x2D, 0x32, 0x30, 0x31,  // 2005-201
+                                        /* 0030 */  0x39                                             // 9
+                                    }, 
+
+                                    "ATY,copyright", 
+                                    Buffer (0x31){}, 
+                                    "hda-gfx", 
+                                    Buffer (0x0A)
+                                    {
+                                        "onboard-1"
+                                    }, 
+
+                                    "name", 
+                                    Buffer (0x08)
+                                    {
+                                        "ATY_GPU"
+                                    }
+                                })
+                            }
+                        }
+
+                        Device (HDAU)
+                        {
+                            Name (_ADR, One)  // _ADR: Address
+                            Name (_STR, Unicode ("Navi 10 HDMI Audio"))  // _STR: Description String
+                            Name (_SUN, One)  // _SUN: Slot User Number
+                            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                            {
+                                If ((Arg2 == Zero))
+                                {
+                                    Return (Buffer (One)
+                                    {
+                                         0x03                                             // .
+                                    })
+                                }
+
+                                Return (Package (0x0A)
+                                {
+                                    "AAPL,slot-name", 
+                                    Buffer (0x1B)
+                                    {
+                                        "Internal@0,1,0/0,0/0,0/0,1"
+                                    }, 
+
+                                    "device_type", 
+                                    Buffer (0x1D)
+                                    {
+                                        "High Definition Audio device"
+                                    }, 
+
+                                    "hda-gfx", 
+                                    Buffer (0x0A)
+                                    {
+                                        "onboard-1"
+                                    }, 
+
+                                    "model", 
+                                    Buffer (0x21)
+                                    {
+                                        "AMD Radeon RX 5500 XT HDMI Audio"
+                                    }, 
+
+                                    "name", 
+                                    Buffer (0x05)
+                                    {
+                                        "HDAU"
+                                    }
+                                })
+                            }
+                        }
+                    }
+                }
+            }
+
+            Scope (PPMC)
+            {
+                Name (_STA, Zero)  // _STA: Status
+            }
+
+            Device (PMCR)
+            {
+                Name (_ADR, 0x001F0002)  // _ADR: Address
+                Name (_STR, Unicode ("Memory controller"))  // _STR: Description String
+                Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                {
+                    If ((Arg2 == Zero))
+                    {
+                        Return (Buffer (One)
+                        {
+                             0x03                                             // .
+                        })
+                    }
+
+                    Return (Package (0x0E)
+                    {
+                        "AAPL,slot-name", 
+                        Buffer (0x09)
+                        {
+                            "Internal"
+                        }, 
+
+                        "built-in", 
+                        Buffer (0x17)
+                        {
+                             0x01, 0x00, 0x00, 0x00                           // ....
+                        }, 
+
+                        "compatible", 
+                        Buffer (0x0D)
+                        {
+                            "pci8086,a2a1"
+                        }, 
+
+                        "device_type", 
+                        Buffer (0x12)
+                        {
+                            "Memory controller"
+                        }, 
+
+                        "IOPCIMSIMode", 
+                        Buffer (One)
+                        {
+                             0x01                                             // .
+                        }, 
+
+                        "model", 
+                        Buffer (0x23)
+                        {
+                            "Comet Lake PCH-V Memory Controller"
+                        }, 
+
+                        "name", 
+                        Buffer (0x05)
+                        {
+                            "PMCR"
+                        }
+                    })
+                }
+            }
+
+            Device (TSUB)
+            {
+                Name (_ADR, 0x00140002)  // _ADR: Address
+                Name (_STR, Unicode ("Comet Lake PCH-V Thermal Subsystem"))  // _STR: Description String
+                Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+                {
+                    If (_OSI ("Darwin"))
+                    {
+                        Return (Buffer (One)
+                        {
+                             0x03                                             // .
+                        })
+                    }
+
+                    Return (Package (0x08)
+                    {
+                        "AAPL,slot-name", 
+                        Buffer (0x09)
+                        {
+                            "Internal"
+                        }, 
+
+                        "built-in", 
+                        Buffer (0x17)
+                        {
+                             0x01, 0x00, 0x00, 0x00                           // ....
+                        }, 
+
+                        "device_type", 
+                        Buffer (0x1D)
+                        {
+                            "Signal processing controller"
+                        }, 
+
+                        "model", 
+                        Buffer (0x25)
+                        {
+                            "Comet Lake-S PCH-V Thermal Subsystem"
+                        }
+                    })
+                }
+            }
+
+            Scope (RP04)
+            {
+                Scope (PXSX)
+                {
+                    Name (_STA, Zero)  // _STA: Status
+                }
+
+                Device (RTLK)
+                {
+                    Name (_ADR, Zero)  // _ADR: Address
+                    Name (_STR, Unicode ("RTL8125 2.5GbE Controller"))  // _STR: Description String
+                    Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                    {
+                        If ((Arg2 == Zero))
+                        {
+                            Return (Buffer (One)
+                            {
+                                 0x03                                             // .
+                            })
+                        }
+
+                        Return (Package (0x0A)
+                        {
+                            "AAPL,slot-name", 
+                            Buffer (0x09)
+                            {
+                                "Internal"
+                            }, 
+
+                            "built-in", 
+                            Buffer (0x17)
+                            {
+                                 0x01, 0x00, 0x00, 0x00                           // ....
+                            }, 
+
+                            "device_type", 
+                            Buffer (0x14)
+                            {
+                                "Ethernet controller"
+                            }, 
+
+                            "model", 
+                            Buffer (0x1A)
+                            {
+                                "RTL8125 2.5GbE Controller"
+                            }, 
+
+                            "name", 
+                            Buffer (0x05)
+                            {
+                                "ETH1"
+                            }
+                        })
+                    }
+                }
+            }
+
+            Scope (RP05)
+            {
+                Scope (PXSX)
+                {
+                    Name (_STA, Zero)  // _STA: Status
+                }
+
+                Device (USB0)
+                {
+                    Name (_ADR, Zero)  // _ADR: Address
+                    Name (_STR, Unicode ("ASM2142 USB 3.1 Host Controller"))  // _STR: Description String
+                    Name (_SUN, 0x04)  // _SUN: Slot User Number
+                    Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                    {
+                        If ((Arg2 == Zero))
+                        {
+                            Return (Buffer (One)
+                            {
+                                 0x03                                             // .
+                            })
+                        }
+
+                        Return (Package (0x0A)
+                        {
+                            "AAPL,slot-name", 
+                            Buffer (0x14)
+                            {
+                                "Internal@0,28,4/0,0"
+                            }, 
+
+                            "built-in", 
+                            Buffer (0x17)
+                            {
+                                 0x01, 0x00, 0x00, 0x00                           // ....
+                            }, 
+
+                            "device-id", 
+                            Buffer (0x17)
+                            {
+                                 0x01, 0x00, 0x00, 0x00                           // ....
+                            }, 
+
+                            "device_type", 
+                            Buffer (0x0F)
+                            {
+                                "USB controller"
+                            }, 
+
+                            "model", 
+                            Buffer (0x20)
+                            {
+                                "ASM2142 USB 3.1 Host Controller"
+                            }
+                        })
+                    }
+                }
+            }
+
+            Scope (RP09)
+            {
+                Scope (PXSX)
+                {
+                    Name (_STA, Zero)  // _STA: Status
+                }
+
+                Device (ANS0)
+                {
+                    Name (_ADR, Zero)  // _ADR: Address
+                    Name (_STR, Unicode ("NVMe SSD Controller MAP1001"))  // _STR: Description String
+                    Name (_SUN, Zero)  // _SUN: Slot User Number
+                    Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+                    {
+                        If ((Arg2 == Zero))
+                        {
+                            Return (Buffer (One)
+                            {
+                                 0x03                                             // .
+                            })
+                        }
+
+                        Return (Package (0x0E)
+                        {
+                            "AAPL,slot-name", 
+                            Buffer (0x14)
+                            {
+                                "Internal@0,29,0/0,0"
+                            }, 
+
+                            "built-in", 
+                            Buffer (0x17)
+                            {
+                                 0x01, 0x00, 0x00, 0x00                           // ....
+                            }, 
+
+                            "device-id", 
+                            Buffer (0x17)
+                            {
+                                 0x06, 0xA8, 0x00, 0x00                           // ....
+                            }, 
+
+                            "device_type", 
+                            Buffer (0x1F)
+                            {
+                                "Non-Volatile memory controller"
+                            }, 
+
+                            "model", 
+                            Buffer (0x14)
+                            {
+                                "SPCC M.2 NVMe-Maxio"
+                            }, 
+
+                            "name", 
+                            Buffer (0x05)
+                            {
+                                "NVM0"
+                            }, 
+
+                            "vendor-id", 
+                            Buffer (0x17)
+                            {
+                                 0x4D, 0x14, 0x00, 0x00                           // M...
+                            }
+                        })
+                    }
+                }
+            }
+
+            Scope (RP20)
+            {
+                Scope (PXSX)
+                {
+                    Name (_STA, Zero)  // _STA: Status
+                }
+
+                Device (ARPT)
+                {
+                    Name (_ADR, Zero)  // _ADR: Address
+                    Name (_STR, Unicode ("BCM4360 802.11ac Wireless Network Adapter"))  // _STR: Description String
+                    Name (_SUN, 0x03)  // _SUN: Slot User Number
+                    Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                    {
+                        If ((Arg2 == Zero))
+                        {
+                            Return (Buffer (One)
+                            {
+                                 0x03                                             // .
+                            })
+                        }
+
+                        Return (Package (0x0A)
+                        {
+                            "AAPL,slot-name", 
+                            Buffer (0x14)
+                            {
+                                "Internal@0,27,0/0,0"
+                            }, 
+
+                            "built-in", 
+                            Buffer (0x17)
+                            {
+                                 0x01, 0x00, 0x00, 0x00                           // ....
+                            }, 
+
+                            "device_type", 
+                            Buffer (0x13)
+                            {
+                                "Network controller"
+                            }, 
+
+                            "model", 
+                            Buffer (0x2A)
+                            {
+                                "BCM4360 802.11ac Wireless Network Adapter"
+                            }, 
+
+                            "name", 
+                            Buffer (0x05)
+                            {
+                                "WLAN"
+                            }
+                        })
+                    }
+                }
+            }
+
+            Scope (RP21)
+            {
+                Scope (PXSX)
+                {
+                    Name (_STA, Zero)  // _STA: Status
+                }
+
+                Device (ANS1)
+                {
+                    Name (_ADR, Zero)  // _ADR: Address
+                    Name (_STR, Unicode ("PS5013 E13 NVMe Controller"))  // _STR: Description String
+                    Name (_SUN, 0x02)  // _SUN: Slot User Number
+                    Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+                    {
+                        If ((Arg2 == Zero))
+                        {
+                            Return (Buffer (One)
+                            {
+                                 0x03                                             // .
+                            })
+                        }
+
+                        Return (Package (0x0E)
+                        {
+                            "AAPL,slot-name", 
+                            Buffer (0x14)
+                            {
+                                "Internal@0,27,4/0,0"
+                            }, 
+
+                            "built-in", 
+                            Buffer (0x17)
+                            {
+                                 0x01, 0x00, 0x00, 0x00                           // ....
+                            }, 
+
+                            "device-id", 
+                            Buffer (0x17)
+                            {
+                                 0x06, 0xA8, 0x00, 0x00                           // ....
+                            }, 
+
+                            "device_type", 
+                            Buffer (0x1F)
+                            {
+                                "Non-Volatile memory controller"
+                            }, 
+
+                            "model", 
+                            Buffer (0x15)
+                            {
+                                "SPCC M.2 NVMe-Phison"
+                            }, 
+
+                            "name", 
+                            Buffer (0x05)
+                            {
+                                "NVM1"
+                            }, 
+
+                            "vendor-id", 
+                            Buffer (0x17)
+                            {
+                                 0x4D, 0x14, 0x00, 0x00                           // M...
+                            }
+                        })
+                    }
+                }
+            }
+
+            Scope (SAT0)
+            {
+                Name (_STA, Zero)  // _STA: Status
+            }
+
+            Device (SATA)
+            {
+                Name (_ADR, 0x00170000)  // _ADR: Address
+                Name (_STR, Unicode ("400 Series Chipset Family SATA AHCI Controller"))  // _STR: Description String
+                Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                {
+                    If ((Arg2 == Zero))
+                    {
+                        Return (Buffer (One)
+                        {
+                             0x03                                             // .
+                        })
+                    }
+
+                    Return (Package (0x0E)
+                    {
+                        "AAPL,slot-name", 
+                        Buffer (0x09)
+                        {
+                            "Internal"
+                        }, 
+
+                        "built-in", 
+                        Buffer (0x17)
+                        {
+                             0x01, 0x00, 0x00, 0x00                           // ....
+                        }, 
+
+                        "compatible", 
+                        Buffer (0x10)
+                        {
+                            "pci8086,a352"
+                        }, 
+
+                        "device_type", 
+                        Buffer (0x10)
+                        {
+                            "SATA controller"
+                        }, 
+
+                        "IOPCIMSIMode", 
+                        Buffer (One)
+                        {
+                             0x01                                             // .
+                        }, 
+
+                        "model", 
+                        Buffer (0x2F)
+                        {
+                            "400 Series Chipset Family SATA AHCI Controller"
+                        }, 
+
+                        "name", 
+                        Buffer (0x05)
+                        {
+                            "SATA"
+                        }
+                    })
+                }
+            }
+
+            Scope (SBUS)
+            {
+                Device (BUS0)
+                {
+                    Name (_CID, "smbus")  // _CID: Compatible ID
+                    Name (_ADR, 0x001F0004)  // _ADR: Address
+                    Name (_STR, Unicode ("Comet Lake PCH-V SMBus Host Controller "))  // _STR: Description String
+                    Device (BLC0)
+                    {
+                        Name (_ADR, 0x57)  // _ADR: Address
+                        Name (_STR, Unicode ("AppleSMBusControllerICH"))  // _STR: Description String
+                        Name (_CID, "smbus-blc")  // _CID: Compatible ID
+                        Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                        {
+                            If (!Arg2)
+                            {
+                                Return (Buffer (One)
+                                {
+                                     0x03                                             // .
+                                })
+                            }
+
+                            Return (Package (0x02)
+                            {
+                                "address", 
+                                Zero
+                            })
+                        }
+                    }
+
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    {
+                        If (_OSI ("Darwin"))
+                        {
+                            Return (0x0F)
+                        }
+                        Else
+                        {
+                            Return (Zero)
+                        }
+                    }
+                }
+            }
+
+            Scope (XHC)
+            {
+                Name (_STA, Zero)  // _STA: Status
+            }
+
+            Device (USB1)
+            {
+                Name (_ADR, 0x00140000)  // _ADR: Address
+                Name (_STR, Unicode ("Comet Lake PCH-V USB Controller"))  // _STR: Description String
+            }
+        }
+
+        Device (USBX)
+        {
+            Name (_ADR, Zero)  // _ADR: Address
+            Name (_STR, Unicode ("PXSX/XHC Power Control"))  // _STR: Description String
+            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+            {
+                If ((Arg2 == Zero))
+                {
+                    Return (Buffer (One)
+                    {
+                         0x03                                             // .
+                    })
+                }
+
+                Return (Package (0x08)
+                {
+                    "kUSBSleepPowerSupply", 
+                    0x13EC, 
+                    "kUSBSleepPortCurrentLimit", 
+                    0x0834, 
+                    "kUSBWakePowerSupply", 
+                    0x13EC, 
+                    "kUSBWakePortCurrentLimit", 
+                    0x0834
+                })
+            }
+        }
+    }
+}
+```
+
 Additional Kext Info: 
 
 - AGPMInjector.kext   (`AGPM`/`Machines`/`iMacPro1,1`/`Vendor1002Device7340`) 
