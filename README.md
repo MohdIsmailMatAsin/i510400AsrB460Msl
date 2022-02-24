@@ -137,11 +137,11 @@ SSDT-ACPI:
 DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 {
     External (_SB_.PCI0, DeviceObj)
+    External (_SB_.PCI0.DMAC, DeviceObj)
     External (_SB_.PCI0.GFX0, DeviceObj)
     External (_SB_.PCI0.HECI, DeviceObj)
     External (_SB_.PCI0.LPCB, DeviceObj)
     External (_SB_.PCI0.LPCB.EC__, DeviceObj)
-    External (_SB_.PCI0.MCHC, DeviceObj)
     External (_SB_.PCI0.PEG0, DeviceObj)
     External (_SB_.PCI0.PEG0.PEGP, DeviceObj)
     External (_SB_.PCI0.PPMC, DeviceObj)
