@@ -51,8 +51,6 @@
 
 <img width="1118" alt="Screen Shot 2022-02-24 at 9 36 53 PM" src="https://user-images.githubusercontent.com/72515939/155534612-33239277-dc78-4344-8a88-01101a24799f.png">
 
-<img width="1527" alt="Screen Shot 2022-02-25 at 12 09 21 AM" src="https://user-images.githubusercontent.com/72515939/155562459-590d3292-c6bc-49e5-bc1b-38cdf938831a.png">
-
 **OS Tested:**
 
 - [x] macOS Catalina  (Require MinDate: -1 | MinVersion: -1)
