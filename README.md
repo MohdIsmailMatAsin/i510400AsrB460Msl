@@ -1,6 +1,6 @@
 # i510400FAsrockB460SteelLegend
 
-![Screen Shot 2022-02-24 at 10 02 52 PM](https://user-images.githubusercontent.com/72515939/155538788-f1ebf640-02d4-454d-b2e7-8aeb98083635.jpg)
+![Screen Shot 2022-02-24 at 10 02 52 PM](https://user-images.githubusercontent.com/72515939/155538983-891ce601-a313-48cf-b9f1-96c9c22f931d.jpg)
 
 <img width="698" alt="Screen Shot 2022-02-24 at 8 51 59 PM" src="https://user-images.githubusercontent.com/72515939/155527979-c0f57c37-826d-43e8-9571-3d062dce01de.png">
 
