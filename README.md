@@ -1044,9 +1044,9 @@ Additional Kext Info:
 
 <p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 12 14 25 AM" src="https://user-images.githubusercontent.com/72515939/155563350-1dee3d26-574a-4c6f-8b3c-9dacbe48a33f.png"></p>
 
-- Whatevergreen.kext   (Boot Arg: `agdpmod=pikera`) 
+- Whatevergreen.kext   (Boot Arg | NVRAM: `agdpmod=pikera`) 
 
-<img width="1788" alt="Screen Shot 2022-02-25 at 12 46 14 AM" src="https://user-images.githubusercontent.com/72515939/155569051-5d1e9ebd-6c96-4cf3-bd64-bd8c3cb9309b.png">
+<img width="1788" alt="Screen Shot 2022-02-25 at 12 51 16 AM" src="https://user-images.githubusercontent.com/72515939/155569930-bc530f09-0d99-4ae6-adc5-3ad126aeaf43.png">
 
 **Tools:**
 
