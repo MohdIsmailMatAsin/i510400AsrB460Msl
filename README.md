@@ -5,6 +5,8 @@
 **Processor:**
 
 - Intel® Core™ `i5-10400F` Processor
+
+<img width="1118" alt="Screen Shot 2022-02-25 at 12 06 55 AM" src="https://user-images.githubusercontent.com/72515939/155562143-98bd9483-8c34-43f2-95b4-d34e8c4675c7.png">
   
 **Motherboard:**
 
@@ -14,6 +16,8 @@
 
 - MSI Radeon `RX 5500` XT Mech OC 4GB
 
+<img width="1118" alt="Screen Shot 2022-02-25 at 12 07 00 AM" src="https://user-images.githubusercontent.com/72515939/155562166-62aedf1d-ab2d-48ca-99fa-62974d4e5f1b.png">
+
 **IGPU:**
 
 - None
@@ -22,11 +26,14 @@
 
 - BCM4360 802.11ac Wireless Network Adapter
 - ASM2142 USB 3.0 XHCI Controller (`4` x Companion `USB2.0/3.0 Type A` port, `1` x `USB2.0/3.0 Type C`)
+
+<img width="1527" alt="Screen Shot 2022-02-25 at 12 09 21 AM" src="https://user-images.githubusercontent.com/72515939/155562367-ec366c68-3b3d-4011-a5cb-3bf176c78121.png">
   
 **Memory:**
 
 - XLR8 32 GB DDR4 RAM 
-  
+
+<img width="1118" alt="Screen Shot 2022-02-25 at 12 08 44 AM" src="https://user-images.githubusercontent.com/72515939/155562263-a3f8de51-d1a8-4fc0-b600-90edbe33a220.png">
 
 **Storage:**
 
@@ -41,6 +48,8 @@
 - 2 x WDC WD5000AAKX HDD    500GB (Spoof to use Intel 11 Series Chipset)
 
 <img width="1118" alt="Screen Shot 2022-02-24 at 9 36 53 PM" src="https://user-images.githubusercontent.com/72515939/155534612-33239277-dc78-4344-8a88-01101a24799f.png">
+
+<img width="1527" alt="Screen Shot 2022-02-25 at 12 09 21 AM" src="https://user-images.githubusercontent.com/72515939/155562459-590d3292-c6bc-49e5-bc1b-38cdf938831a.png">
 
 **OS Tested:**
 
