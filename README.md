@@ -2096,7 +2096,7 @@ All Device
 
 **Non Working:**
 
-NVMeFix.kext not support PSPCC M.2 NVMe (Phison Chipset). Reminder: This kext will cause Kernel Panic. Please Refer: Acidanthera [Bugtracker #1752](https://github.com/acidanthera/bugtracker/issues/1752)
+NVMeFix.kext not support `SPCC M.2 NVMe` (`Phison Chipset`). Reminder: This kext will cause `Kernel Panic` (KP). Please Refer: `Acidanthera [Bugtracker #1752](https://github.com/acidanthera/bugtracker/issues/1752)`
 
 **BIOS/UEFI Settings:**
 
