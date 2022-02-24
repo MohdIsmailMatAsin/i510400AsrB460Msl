@@ -1028,7 +1028,6 @@ Additional Kext Info:
 
 <img width="1788" alt="Screen Shot 2022-02-25 at 12 46 14 AM" src="https://user-images.githubusercontent.com/72515939/155569051-5d1e9ebd-6c96-4cf3-bd64-bd8c3cb9309b.png">
 
-
 - AGPMInjector.kext   (`AGPM`/`Machines`/`iMacPro1,1`/`Vendor1002Device7340`) 
 
 <p align="center"><img width="1118" alt="Screen Shot 2022-02-24 at 9 23 55 PM" src="https://user-images.githubusercontent.com/72515939/155532265-5bbb6159-db1a-4efc-98e4-9dc84b73bd74.png"></p>
@@ -1044,6 +1043,10 @@ Additional Kext Info:
 <p align="center"><img width="1784" alt="Screen Shot 2022-02-25 at 12 14 12 AM" src="https://user-images.githubusercontent.com/72515939/155563332-36464363-c068-4abf-ac72-b4047ac5d37d.png"></p>
 
 <p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 12 14 25 AM" src="https://user-images.githubusercontent.com/72515939/155563350-1dee3d26-574a-4c6f-8b3c-9dacbe48a33f.png"></p>
+
+- Whatevergreen.kext   (Boot Arg: `agdpmod=pikera`) 
+
+<img width="1788" alt="Screen Shot 2022-02-25 at 12 46 14 AM" src="https://user-images.githubusercontent.com/72515939/155569051-5d1e9ebd-6c96-4cf3-bd64-bd8c3cb9309b.png">
 
 **Tools:**
 
