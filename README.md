@@ -2091,10 +2091,12 @@ Additional Kext Info:
 ```
 
 **Working:**
+
 All Device
 
 **Non Working:**
-None
+
+NVMeFix.kext not support PSPCC M.2 NVMe (Phison Chipset). Reminder: This kext will cause Kernel Panic. Please Refer: Acidanthera [Bugtracker #1752](https://github.com/acidanthera/bugtracker/issues/1752)
 
 **BIOS/UEFI Settings:**
 
