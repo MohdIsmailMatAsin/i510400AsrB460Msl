@@ -28,14 +28,17 @@
 
 **Storage:**
 
-- 1 x SPCC M.2 NVMe-Maxio   500GB
+- 1 x SPCC M.2 NVMe-Maxio   500GB (Spoof as Apple SSD Controller)
   
-- 1 x SPCC M.2 NVMe-Phison  250GB
-  
-- 1 x SPCC Solid State Disk 500GB
+- 1 x SPCC M.2 NVMe-Phison  250GB (Spoof as Apple SSD Controller)
 
-- 2 x WDC WD5000AAKX HDD    500GB
-  
+<img width="1118" alt="Screen Shot 2022-02-24 at 9 38 31 PM" src="https://user-images.githubusercontent.com/72515939/155534666-3227b229-8797-47c6-bc87-6c54ee869db5.png">
+
+- 1 x SPCC Solid State Disk 500GB (Spoof to use Intel 11 Series Chipset)
+
+- 2 x WDC WD5000AAKX HDD    500GB (Spoof to use Intel 11 Series Chipset)
+
+<img width="1118" alt="Screen Shot 2022-02-24 at 9 36 53 PM" src="https://user-images.githubusercontent.com/72515939/155534612-33239277-dc78-4344-8a88-01101a24799f.png">
 
 **OS Tested:**
 
@@ -2093,6 +2096,8 @@ Additional Kext Info:
 **Working:**
 
 All Device
+
+<img width="1118" alt="Screen Shot 2022-02-24 at 9 28 49 PM" src="https://user-images.githubusercontent.com/72515939/155534249-aadb413e-761e-46cd-86da-44b274df3752.png">
 
 **Non Working:**
 
