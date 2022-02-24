@@ -3158,7 +3158,7 @@ NVMeFix.kext not support `SPCC M.2 NVMe` (`Phison Chipset`). Reminder: This kext
 
 - Disable CSM/ Enable UEFI
 - Disable Secure Boot
-- Set SATA as AHCI (Do not installation macOS through Rapid Storage Technology)
+- Set SATA as AHCI (Do not install macOS through Rapid Storage Technology)
 - Disable CFG Lock
 - Disable Intel Virtualization Technology
 - Disable VT-D
