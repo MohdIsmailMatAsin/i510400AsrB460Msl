@@ -3096,7 +3096,9 @@ NVMeFix.kext not support `SPCC M.2 NVMe` (`Phison Chipset`). Reminder: This kext
     | +-o AppleIntelMCEReporter  <class AppleIntelMCEReporter, id 0x1000004b1, $
     +-o IOUserServer(com.apple.driverkit.AppleUserHIDDrivers-0x1000004da)  <cla$
     +-o IOUserServer(com.apple.IOUserBluetoothSerialDriver-0x10000079d)  <class$
-```    
+```    										 
+<p align="center"><img width="1276" alt="Screen Shot 2022-02-25 at 12 42 24 AM" src="https://user-images.githubusercontent.com/72515939/155568519-5f373cff-862f-458c-92b1-b86afac436a8.png"><p/>
+										 
 ![Screen Shot 2022-02-24 at 10 02 52 PM](https://user-images.githubusercontent.com/72515939/155539110-a79c2426-16c3-4182-acda-886adfe92230.jpg)
 
 **BIOS/UEFI Settings:**
