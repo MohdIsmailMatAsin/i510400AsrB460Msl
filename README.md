@@ -1024,6 +1024,11 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 
 Additional Kext Info: 
 
+- AppleALC.kext   (Boot Arg: `alcid=1` | DeviceProperties: `layout-id`/`Data`/`01000000`) 
+
+<img width="1788" alt="Screen Shot 2022-02-25 at 12 46 14 AM" src="https://user-images.githubusercontent.com/72515939/155569051-5d1e9ebd-6c96-4cf3-bd64-bd8c3cb9309b.png">
+
+
 - AGPMInjector.kext   (`AGPM`/`Machines`/`iMacPro1,1`/`Vendor1002Device7340`) 
 
 <p align="center"><img width="1118" alt="Screen Shot 2022-02-24 at 9 23 55 PM" src="https://user-images.githubusercontent.com/72515939/155532265-5bbb6159-db1a-4efc-98e4-9dc84b73bd74.png"></p>
@@ -3096,8 +3101,13 @@ NVMeFix.kext not support `SPCC M.2 NVMe` (`Phison Chipset`). Reminder: This kext
     | +-o AppleIntelMCEReporter  <class AppleIntelMCEReporter, id 0x1000004b1, $
     +-o IOUserServer(com.apple.driverkit.AppleUserHIDDrivers-0x1000004da)  <cla$
     +-o IOUserServer(com.apple.IOUserBluetoothSerialDriver-0x10000079d)  <class$
-```    										 
+```  
+										 
+**Support Coverage:**										 
+										 
 <p align="center"><img width="1276" alt="Screen Shot 2022-02-25 at 12 42 24 AM" src="https://user-images.githubusercontent.com/72515939/155568519-5f373cff-862f-458c-92b1-b86afac436a8.png"><p/>
+	
+**My Layout:**	
 										 
 ![Screen Shot 2022-02-24 at 10 02 52 PM](https://user-images.githubusercontent.com/72515939/155539110-a79c2426-16c3-4182-acda-886adfe92230.jpg)
 
