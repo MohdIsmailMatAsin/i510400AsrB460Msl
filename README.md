@@ -3145,7 +3145,9 @@ NVMeFix.kext not support `SPCC M.2 NVMe` (`Phison Chipset`). Reminder: This kext
 **Geekbench:**	
 
 <img width="1088" alt="Screen Shot 2022-02-25 at 1 10 50 AM" src="https://user-images.githubusercontent.com/72515939/155573599-1e79782b-6f64-4ea4-bfb1-66aabbc4564c.png">
+	
 <img width="1088" alt="Screen Shot 2022-02-25 at 1 11 41 AM" src="https://user-images.githubusercontent.com/72515939/155573632-c6278197-995e-4f4a-a0cf-ea3a96784acd.png">
+	
 <img width="1088" alt="Screen Shot 2022-02-25 at 1 12 33 AM" src="https://user-images.githubusercontent.com/72515939/155573645-49ac8b91-6fbf-4eea-8620-cd2ff4d0d5e0.png">
 
 **My Layout:**	
