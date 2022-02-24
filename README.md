@@ -113,7 +113,7 @@ SSDT-ACPI:
 
 - Modded SSDT: AWAC, PLUG, EC, DMAC (MCHC), GFX0 (ATY,Keelback), HDAU, PMCR (PPMC), TSUB, RTLK, USB0 (PXSX), USB1 (XHC), ANS0 (NVME), ANS1 (NVME), ARPT (WLAN), SATA (SAT0), SBUS, and USBX.
 - Added `"CFG,CFG_USE_AGDC"` on `GFX0` to fix wake issues
-- Added `"acpi-wake-type"` on both `PXSX (USB0)` and `XHC (USB1)`
+- Added `"acpi-wake-type"` on both `PXSX (USB0)` and `XHC (USB1)` to fix wake issues
 
 ```aml
 /*
