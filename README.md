@@ -1026,7 +1026,7 @@ Additional Kext Info:
 
 <img width="780" alt="Screen Shot 2022-02-24 at 9 10 54 PM" src="https://user-images.githubusercontent.com/72515939/155530287-29686499-0bad-4979-87e1-a3d8249b1ccd.png">
 
-- USBMap.kext         (`15 Port` without `USB3.0 Type C`. Remark: Only use `2 x USB3.0 Type C` via `PCI`)
+- USBMap.kext         (`15 Port` disable motherboard `1` x `USB3.0 Type C`. Remark: `2` x `USB3.0 Type C` via `PCI` available)
 
 <img width="1405" alt="Screen Shot 2022-02-25 at 12 17 02 AM" src="https://user-images.githubusercontent.com/72515939/155563782-82326ee1-e775-45a7-9cba-b8166723fc7d.png">
 
