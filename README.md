@@ -12,7 +12,7 @@
 
 - Asrock `B460M` Steel Legend
 
-<p align="center">![B460M_Steel_Legend-3](https://user-images.githubusercontent.com/72515939/155562844-fcc62df8-68e4-4b36-84f1-ce636bae81ec.png)</p>
+![B460M_Steel_Legend-3](https://user-images.githubusercontent.com/72515939/155562844-fcc62df8-68e4-4b36-84f1-ce636bae81ec.png)
 
 **DGPU:**
 
@@ -3095,7 +3095,7 @@ NVMeFix.kext not support `SPCC M.2 NVMe` (`Phison Chipset`). Reminder: This kext
     +-o IOUserServer(com.apple.driverkit.AppleUserHIDDrivers-0x1000004da)  <cla$
     +-o IOUserServer(com.apple.IOUserBluetoothSerialDriver-0x10000079d)  <class$
 ```    
-<p align="center">![Screen Shot 2022-02-24 at 10 02 52 PM](https://user-images.githubusercontent.com/72515939/155539110-a79c2426-16c3-4182-acda-886adfe92230.jpg)</p>
+![Screen Shot 2022-02-24 at 10 02 52 PM](https://user-images.githubusercontent.com/72515939/155539110-a79c2426-16c3-4182-acda-886adfe92230.jpg)
 
 **BIOS/UEFI Settings:**
 
