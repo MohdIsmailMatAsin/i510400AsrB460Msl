@@ -1030,7 +1030,7 @@ Additional Kext Info:
 
 - USBMap.kext         (`15 Port` without `USB3.0 Type C`. Remark: Only use `2 x USB3.0 Type C` via `PCI`)
 
-<img width="704" alt="Screen Shot 2022-02-24 at 9 13 13 PM" src="https://user-images.githubusercontent.com/72515939/155531328-ea6da084-7901-4705-b18f-4792fdba5260.png">
+<img width="1405" alt="Screen Shot 2022-02-25 at 12 17 02 AM" src="https://user-images.githubusercontent.com/72515939/155563782-82326ee1-e775-45a7-9cba-b8166723fc7d.png">
 
 <img width="1784" alt="Screen Shot 2022-02-25 at 12 14 12 AM" src="https://user-images.githubusercontent.com/72515939/155563332-36464363-c068-4abf-ac72-b4047ac5d37d.png">
 
