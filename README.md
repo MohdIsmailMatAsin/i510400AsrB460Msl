@@ -1109,7 +1109,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 
 ## 2.0 - Booter
 
-- **MmioWhitelist** | **Patch | Quirks** | **Delete**
+- **MmioWhitelist** | **Patch** | Quirks** | **Delete**
   
 
 ```aml
@@ -1682,7 +1682,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 
 ### 5.0 - Misc
 
-- **BlessOverride** | **Boot | Debug** | **Entries** | **Patch** | **Security** | **Tools**
+- **BlessOverride** | **Boot** | Debug** | **Entries** | **Patch** | **Security** | **Tools**
 
 **Feature:**
 
