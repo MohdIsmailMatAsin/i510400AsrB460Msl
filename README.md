@@ -1255,7 +1255,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 <p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 23 55 PM" src="https://user-images.githubusercontent.com/72515939/155723344-c35c57b1-0d8d-433b-8a10-a12f44838072.png"><p/>
 <p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 23 59 PM" src="https://user-images.githubusercontent.com/72515939/155723351-60a00513-3fcb-4d3c-9fc6-593b304a9e1a.png"><p/>
 <p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 24 07 PM" src="https://user-images.githubusercontent.com/72515939/155723355-aff97499-a4c9-484f-a759-3b157951b931.png"><p/>
-<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 24 12 PM" src="https://user-images.githubusercontent.com/72515939/155723364-583094c6-1c99-4098-80c1-116501a8207d.png"><p/>
+<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 24 12 PM" src="https://user-images.githubusercontent.com/72515939/155723926-d6cea777-f0bb-4d88-8a89-fd374488ca41.png"><p/>
 <p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 24 18 PM" src="https://user-images.githubusercontent.com/72515939/155723375-14b14d0c-87bd-4fb4-ae44-66d4b1e16612.png"><p/>
 <p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 24 23 PM" src="https://user-images.githubusercontent.com/72515939/155723385-4f6e69f6-7a21-41ec-8e46-e60121b54357.png"><p/>
 <p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 24 27 PM" src="https://user-images.githubusercontent.com/72515939/155723392-90eee8b0-724a-4776-b213-de7f7cc23959.png"><p/>
