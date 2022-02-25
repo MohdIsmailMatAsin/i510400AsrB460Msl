@@ -1253,8 +1253,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 		<dict/>
 	</dict>
 ```
-
-<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 07 38 PM" src="https://user-images.githubusercontent.com/72515939/155720376-2d80544d-ea08-44ef-89bd-c7fbe07a7cf2.png"><p/>
+<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 56 07 PM" src="https://user-images.githubusercontent.com/72515939/155727382-5ebb3a2c-167b-4315-9d79-70e073eb4888.png"><p/>
 <p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 23 50 PM" src="https://user-images.githubusercontent.com/72515939/155723321-50ab188d-5eb7-48a4-b646-6c5221e7d316.png"><p/>
 <p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 23 55 PM" src="https://user-images.githubusercontent.com/72515939/155723344-c35c57b1-0d8d-433b-8a10-a12f44838072.png"><p/>
 <p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 23 59 PM" src="https://user-images.githubusercontent.com/72515939/155723351-60a00513-3fcb-4d3c-9fc6-593b304a9e1a.png"><p/>
