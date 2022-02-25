@@ -2291,9 +2291,17 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 	</dict>
 </dict>
 ```
-  
 
-### 10.0 - BIOS/UEFI Settings
+### 10.0 - Results
+
+#### 10.2 - Working:
+- All Device
+
+#### 10.1 - Non Working:
+
+- NVMe is working fine with trim support. `NVMeFix.kext` will cause `KP` with `SPCC M.2 NVMe (Phison Chipset)`. Please Refer: [Acidanthera Bugtracker #1752](https://github.com/acidanthera/bugtracker/issues/1752) for more info.
+
+#### 11.0 - BIOS/UEFI Settings
 
 - Disable `CSM/ Enable UEFI`
 - Disable `Secure Boot`
