@@ -1080,6 +1080,140 @@ Additional Kext Info:
 
 <img width="1788" alt="Screen Shot 2022-02-25 at 12 54 55 AM" src="https://user-images.githubusercontent.com/72515939/155570613-6a2e3ca0-203c-46ac-bdad-0c86c2fcdb9b.png">
 
+**NVRAM:**
+
+- Navi dGPU Black Screen Fix Boot Arg: `agdpmod=pikera`
+
+- Without boot arg, patch this additional properties to GFX0 as follows:
+
+<p align="center"><img width="736" alt="Screen Shot 2022-02-25 at 3 19 59 PM" src="https://user-images.githubusercontent.com/72515939/155673026-766a56ea-f4ee-49c1-9be7-f7c29e9f89e1.png"></p>
+
+Complete GFX0 ACPI patch:
+
+```aml
+Device (EGP0)
+                {
+                    Name (_ADR, Zero)  // _ADR: Address
+                    Name (_STR, Unicode ("Navi 10 XL Upstream Port of PCI Express Switch"))  // _STR: Description String
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    {
+                        If (_OSI ("Darwin"))
+                        {
+                            Return (0x0F)
+                        }
+                        Else
+                        {
+                            Return (Zero)
+                        }
+                    }
+
+                    Device (EGP1)
+                    {
+                        Name (_ADR, Zero)  // _ADR: Address
+                        Name (_STR, Unicode ("Navi 10 XL Downstream Port of PCI Express Switch"))  // _STR: Description String
+                        Device (GFX0)
+                        {
+                            Name (_ADR, Zero)  // _ADR: Address
+                            Name (_STR, Unicode ("Navi 14 [Radeon RX 5500/5500M / Pro 5500M"))  // _STR: Description String
+                            Name (_SUN, One)  // _SUN: Slot User Number
+                            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                            {
+                                If ((Arg2 == Zero))
+                                {
+                                    Return (Buffer (One)
+                                    {
+                                         0x03                                             // .
+                                    })
+                                }
+
+                                Return (Package (0x1A)
+                                {
+                                    "AAPL,slot-name", 
+                                    Buffer (0x1B)
+                                    {
+                                        "Internal@0,1,0/0,0/0,0/0,0"
+                                    }, 
+
+                                    "@0,ATY,EFIDisplay", 
+                                    Buffer (0x04)
+                                    {
+                                        "DP1"
+                                    }, 
+
+                                    "ATY,EFIVersionB", 
+                                    Buffer (0x12)
+                                    {
+                                        /* 0000 */  0x31, 0x31, 0x33, 0x2D, 0x4D, 0x53, 0x49, 0x54,  // 113-MSIT
+                                        /* 0008 */  0x56, 0x33, 0x38, 0x32, 0x4D, 0x48, 0x2E, 0x31,  // V382MH.1
+                                        /* 0010 */  0x36, 0x31                                       // 61
+                                    }, 
+
+                                    "agdpmod", 
+                                    Buffer (0x07)
+                                    {
+                                         0x70, 0x69, 0x6B, 0x65, 0x72, 0x61               // pikera
+                                    }, 
+
+                                    "CFG,CFG_USE_AGDC", 
+                                    Buffer (One)
+                                    {
+                                         0x01                                             // .
+                                    }, 
+
+                                    "@0,name", 
+                                    Buffer (0x0D)
+                                    {
+                                        "ATY,Keelback"
+                                    }, 
+
+                                    "@0,AAPL,boot-display", 
+                                    Buffer (0x04)
+                                    {
+                                         0x01, 0x00, 0x00, 0x00                           // ....
+                                    }, 
+
+                                    "ATY,EFIEnabledMode", 
+                                    Buffer (One)
+                                    {
+                                         0x01                                             // .
+                                    }, 
+
+                                    "ATY,EFIVersion", 
+                                    Buffer (0x07)
+                                    {
+                                         0x33, 0x2E, 0x32, 0x2E, 0x31, 0x33, 0x30         // 3.2.130
+                                    }, 
+
+                                    "ATY,copyright", 
+                                    Buffer (0x31)
+                                    {
+                                        /* 0000 */  0x43, 0x6F, 0x70, 0x79, 0x72, 0x69, 0x67, 0x68,  // Copyrigh
+                                        /* 0008 */  0x74, 0x20, 0x41, 0x4D, 0x44, 0x20, 0x49, 0x6E,  // t AMD In
+                                        /* 0010 */  0x63, 0x2E, 0x20, 0x41, 0x6C, 0x6C, 0x20, 0x52,  // c. All R
+                                        /* 0018 */  0x69, 0x67, 0x68, 0x74, 0x73, 0x20, 0x52, 0x65,  // ights Re
+                                        /* 0020 */  0x73, 0x65, 0x72, 0x76, 0x65, 0x64, 0x2E, 0x20,  // served. 
+                                        /* 0028 */  0x32, 0x30, 0x30, 0x35, 0x2D, 0x32, 0x30, 0x31,  // 2005-201
+                                        /* 0030 */  0x39                                             // 9
+                                    }, 
+
+                                    "ATY,copyright", 
+                                    Buffer (0x31){}, 
+                                    "hda-gfx", 
+                                    Buffer (0x0A)
+                                    {
+                                        "onboard-1"
+                                    }, 
+
+                                    "name", 
+                                    Buffer (0x08)
+                                    {
+                                        "ATY_GPU"
+                                    }
+                                })
+                            }
+                        }
+			
+```
 **Tools:**
 
 - Editing Plist : [OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools)
