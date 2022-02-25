@@ -1092,7 +1092,7 @@ Via `config.plist`:
 
 Step 1: Add `boot-args`/`strings`/`agdpmod=pikera`
 
-<img width="719" alt="Screen Shot 2022-02-25 at 3 39 51 PM" src="https://user-images.githubusercontent.com/72515939/155674941-d7cddf24-02eb-4f04-b378-c8c6c0218d44.png">
+<p align="center"><img width="719" alt="Screen Shot 2022-02-25 at 3 39 51 PM" src="https://user-images.githubusercontent.com/72515939/155674941-d7cddf24-02eb-4f04-b378-c8c6c0218d44.png"></p>
 
 Step 2:
 
