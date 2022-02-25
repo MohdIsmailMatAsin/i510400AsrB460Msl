@@ -1165,6 +1165,10 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 		</dict>
 	</dict>
 ```
+<p align="center"><img width="1405" alt="Screen Shot 2022-02-25 at 9 51 15 PM" src="https://user-images.githubusercontent.com/72515939/155726770-b850f956-9676-4ac8-9cdc-05ec3a3b884d.png"><p/>
+
+<p align="center"><img width="1405" alt="Screen Shot 2022-02-25 at 9 51 53 PM" src="https://user-images.githubusercontent.com/72515939/155726776-df0830cf-eb5c-4c11-b2a7-17393ee87aa1.png"><p/>
+
 
 ### 3.0 - DeviceProperties
 
