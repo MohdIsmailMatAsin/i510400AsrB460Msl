@@ -1263,7 +1263,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 | Whatevergreen | `Various patches` necessary for certain `ATI`/`AMD`/`Intel`/`Nvidia` GPUs |
 | SMCProcessor | Additional support for `VirtualSMC`. Used for monitoring `CPU` temperature |
 | SMCSuperIO | Additional support for `VirtualSMC`. Used for monitoring `FAN` speed |
-| SMCRadeonGPU | Based on F`akeSMCs` `RadeonMonitor` to provide `GPU` temperature to a dedicated gadget `without relying` on `FakeSMC` being installed and can therefore be used with `VirtualSMC` instead |
+| SMCRadeonGPU | Based on `FakeSMCs` `RadeonMonitor` to provide `GPU` temperature to a dedicated gadget `without relying` on `FakeSMC` being installed and can therefore be used with `VirtualSMC` instead |
 | RadeonSensor | To read the `GPU` temperature. `Lilu` is required. |
 | LucyRTL8125Ethernet | `Realtek RTL8125 2.5GBit Ethernet Controllers` driver |
 | AGPMInjector | `Apple Graphics Power Management` (AGPM). Only need when selected `SMBIOS` is `not freatured` with certain selected `DGPU`. Patch:`AGPM`/`Machines`/`iMacPro1,1`/`Vendor1002Device7340.`Require [AGPMinjector](https://github.com/Pavo-IM/AGPMInjector) |
