@@ -1250,6 +1250,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 	</dict>
 ```
 
+<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 07 38 PM" src="https://user-images.githubusercontent.com/72515939/155720376-2d80544d-ea08-44ef-89bd-c7fbe07a7cf2.png"><p/>
+
+
 ### 4.0 - Kernel
 
 - **Add** | **Block** | **Emulate** | **Force** | **Patch** | **Quirks** | **Scheme**
@@ -1996,7 +1999,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 
 ### 9.0 - UEFI
 
-**APFS** | **AppleInput** | **Audio** | **ConnectedDrivers** | **Drivers** | **Input** | **Output** | **ProtocolOverrides** | **Quirks** | **ReserveMemory**
+- **APFS** | **AppleInput** | **Audio** | **ConnectedDrivers** | **Drivers** | **Input** | **Output** | **ProtocolOverrides** | **Quirks** | **ReserveMemory**
 
 **9.1 - APFS**
 
