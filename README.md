@@ -1082,11 +1082,35 @@ Additional Kext Info:
 
 **NVRAM:**
 
-- Navi dGPU Black Screen Fix Boot Arg: `agdpmod=pikera`
+agdpmod=pikera:
 
-- Without boot arg, patch this additional properties to GFX0 as follows:
+The use of `boot-args` can only used by `Navi based GPU` and it is `necessary`. There are two steps to put `agdpmod = pikera`, either via `NVRAM` or `SSDT`. The explanation is as follows:
+
+Via `config.plist`:
+
+- Find `NVRAM/Add/7C436110-AB2A-4BBB-A880-FE41995C9F82/boot-args` via `config.plist`
+
+Step 1: Add `boot-args`/`strings`/`agdpmod=pikera`
+
+<img width="719" alt="Screen Shot 2022-02-25 at 3 39 51 PM" src="https://user-images.githubusercontent.com/72515939/155674941-d7cddf24-02eb-4f04-b378-c8c6c0218d44.png">
+
+Step 2:
+
+Save config.plist
+
+
+Via `SSDT`:
+
+- Find `GFX0` section via `SSDT` and edit the properties as follows:
+
+Step 1:
 
 <p align="center"><img width="736" alt="Screen Shot 2022-02-25 at 3 19 59 PM" src="https://user-images.githubusercontent.com/72515939/155673026-766a56ea-f4ee-49c1-9be7-f7c29e9f89e1.png"></p>
+
+Step 2:
+
+Save the `SSDT`. If `agdpmod=pikera` is available on config.plist, please remove it.
+
 
 **Tools:**
 
