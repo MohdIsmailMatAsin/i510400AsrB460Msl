@@ -1687,7 +1687,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 
 - **BlessOverride** | **Boot** | **Debug** | **Entries** | **Patch** | **Security** | **Tools**
 
-**Feature:**
+#### 5.1 Feature
 
 1. `PickerMode` Enabled (Require `OpenCanopy.efi`) in `Boot` section
   
@@ -1810,6 +1810,10 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 		</array>
 	</dict>
 ```
+#### 5.2 Csrutil  
+
+<p align="center"><img width="697" alt="Screen Shot 2022-02-25 at 9 11 05 PM" src="https://user-images.githubusercontent.com/72515939/155721342-b2ca1831-5ec2-4d6e-8554-838554e8d6c4.png"><p/>
+
 
 ### 6.0 - Tools
 
@@ -1842,7 +1846,6 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 		</array>
 	</dict>
 ```
-  
 
 ### 7.0 - NVRAM
 
@@ -1944,6 +1947,8 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 		<true/>
 	</dict>
 ```
+<p align="center"><img width="1636" alt="Screen Shot 2022-02-25 at 9 17 07 PM" src="https://user-images.githubusercontent.com/72515939/155721615-fd029f19-26a1-4e31-898f-f7d0784340bf.png">
+<p/>
 
 
 ### 8.0 - PlatformInfo
@@ -1995,6 +2000,8 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 		<false/>
 	</dict>
 ```
+
+<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 18 14 PM" src="https://user-images.githubusercontent.com/72515939/155721828-8fe6d6da-037c-40e1-a154-3e2c3db0a3c8.png"><p/>
 
 
 ### 9.0 - UEFI
