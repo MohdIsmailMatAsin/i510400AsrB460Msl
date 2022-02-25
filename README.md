@@ -2024,9 +2024,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 
 - [x] Catalina require `MinDate -1` & `MinVersion -1`
   
-- [x] Big Sur require `MinDate -0`&`MinVersion -0`
+- [x] Big Sur require `MinDate -0` & `MinVersion -0`
   
-- [x] Monterey require `MinDate -0`&`MinVersion -0`
+- [x] Monterey require `MinDate -0` & `MinVersion -0`
   
 
 **9.2 - Drivers**
