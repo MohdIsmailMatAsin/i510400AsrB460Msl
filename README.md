@@ -2300,9 +2300,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 #### 10.2 - Working:
 - All Device
 
-**<p align="center">Refresh Rate: ProMotion<p/>**
-**<p align="center">What is ProMotion?<p/>**
-<p align="center">While a standard refresh rate will update a display 60 times a second (60Hz), the ProMotion’s adaptive 120Hz screen works at twice this speed. This results in smoother scrolling, improved responsiveness and better gaming performance.<p/>
+**Refresh Rate: ProMotion**
+What is ProMotion?
+While a standard refresh rate will update a display 60 times a second (60Hz), the ProMotion’s adaptive 120Hz screen works at twice this speed. This results in smoother scrolling, improved responsiveness and better gaming performance.
 <p align="center"><img width="780" alt="Screen Shot 2022-02-26 at 10 56 57 PM" src="https://user-images.githubusercontent.com/72515939/155847708-82cf3e91-382d-49e6-8daa-5c91a2b818a8.png"><p/>
 
 **System Preferences**
@@ -2310,17 +2310,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 
 **Hardware Acceleration**
 <p align="center"><img width="1576" alt="Screen Shot 2022-02-26 at 11 01 05 PM" src="https://user-images.githubusercontent.com/72515939/155848009-6eec0d59-100d-4d0b-87c1-b4454f455c7b.png"><p/>
-
 <p align="center"><img width="697" alt="Screen Shot 2022-02-26 at 11 03 25 PM" src="https://user-images.githubusercontent.com/72515939/155848011-901fea49-870e-479e-89e1-b9320eba4227.png"><p/>
-
 <p align="center"><img width="1436" alt="Screen Shot 2022-02-26 at 11 20 39 PM" src="https://user-images.githubusercontent.com/72515939/155848626-6dc58cb6-82cb-49d7-86bb-cccaa6113694.png"><p/>
-
 <p align="center"><img width="656" alt="Screen Shot 2022-02-26 at 11 20 48 PM" src="https://user-images.githubusercontent.com/72515939/155848627-ea380db3-beea-47a9-a093-6145cdf9028f.png"><p/>
-
 <p align="center"><img width="658" alt="Screen Shot 2022-02-26 at 11 20 45 PM" src="https://user-images.githubusercontent.com/72515939/155848666-c5e0cf30-f3e6-45fd-a6df-606eeb7215e7.png"><p/>
 
 **DGPU Benchmark**
-
 <p align="center"><img width="1088" alt="Screen Shot 2022-02-26 at 11 28 14 PM" src="https://user-images.githubusercontent.com/72515939/155848856-1b1b1314-007a-419a-b0df-edde1afd89ee.png"><p/>
 <p align="center"><img width="1088" alt="Screen Shot 2022-02-26 at 11 29 07 PM" src="https://user-images.githubusercontent.com/72515939/155848857-0edf37eb-f942-4ee1-97b8-c5834151b477.png"><p/>
 
