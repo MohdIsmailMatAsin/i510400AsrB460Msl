@@ -2301,16 +2301,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 - All Device
 
 **<p align="center">Refresh Rate: ProMotion<p/>**
-<p align="center"><img width="780" alt="Screen Shot 2022-02-26 at 10 56 57 PM" src="https://user-images.githubusercontent.com/72515939/155847708-82cf3e91-382d-49e6-8daa-5c91a2b818a8.png"><p/>
-
 **<p align="center">What is ProMotion?<p/>**
-
 <p align="center">While a standard refresh rate will update a display 60 times a second (60Hz), the ProMotion’s adaptive 120Hz screen works at twice this speed. This results in smoother scrolling, improved responsiveness and better gaming performance.<p/>
-
+<p align="center"><img width="780" alt="Screen Shot 2022-02-26 at 10 56 57 PM" src="https://user-images.githubusercontent.com/72515939/155847708-82cf3e91-382d-49e6-8daa-5c91a2b818a8.png"><p/>
 
 **<p align="center">System Preferences<p/>**
 <p align="center"><img width="780" alt="Screen Shot 2022-02-26 at 11 00 04 PM" src="https://user-images.githubusercontent.com/72515939/155847817-a54b080b-66c5-48ab-ac3e-35ba4cf13e4f.png"><p/>
-
 
 **<p align="center">Hardware Acceleration<p/>**
 <p align="center"><img width="1576" alt="Screen Shot 2022-02-26 at 11 01 05 PM" src="https://user-images.githubusercontent.com/72515939/155848009-6eec0d59-100d-4d0b-87c1-b4454f455c7b.png"><p/>
