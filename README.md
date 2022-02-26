@@ -2300,7 +2300,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 #### 10.2 - Working:
 - All Device
 
-<p align="center">**Refresh Rate: ProMotion**<p/>
+**<p align="center">Refresh Rate: ProMotion<p/>**
 <p align="center"><img width="780" alt="Screen Shot 2022-02-26 at 10 56 57 PM" src="https://user-images.githubusercontent.com/72515939/155847708-82cf3e91-382d-49e6-8daa-5c91a2b818a8.png"><p/>
 
 
