@@ -2303,6 +2303,18 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 **<p align="center">Refresh Rate: ProMotion<p/>**
 <p align="center"><img width="780" alt="Screen Shot 2022-02-26 at 10 56 57 PM" src="https://user-images.githubusercontent.com/72515939/155847708-82cf3e91-382d-49e6-8daa-5c91a2b818a8.png"><p/>
 
+**<p align="center">What is ProMotion?<p/>**
+
+<p align="center">While a standard refresh rate will update a display 60 times a second (60Hz), the ProMotion’s adaptive 120Hz screen works at twice this speed. This results in smoother scrolling, improved responsiveness and better gaming performance.<p/>
+
+**<p align="center">You can read Apple’s official definition of ProMotion below:<p/>**
+
+**<p align="center">“The stunning, redesigned Retina display in iPad Pro features ProMotion, a new technology that delivers refresh rates of up to 120Hz for fluid scrolling, greater responsiveness and smoother motion content.<p/>**
+
+**<p align="center">With ProMotion, Apple Pencil is even more responsive with an industry-best, 20-millisecond latency for even more fluid and natural drawing. ProMotion also improves display quality and reduces power consumption by automatically adjusting the display refresh rate to match the movement of the content”.<p/>**
+
+**<p align="center">One of the most important aspects here is that the refresh rate is adaptive. This means you won’t be stuck at 120Hz when the high speeds offer no benefit, saving you some battery. Examples of this include when you’re watching a 24fps movie or a 30fps YouTube video.<p/>** 
+
 **<p align="center">System Preferences<p/>**
 <p align="center"><img width="780" alt="Screen Shot 2022-02-26 at 11 00 04 PM" src="https://user-images.githubusercontent.com/72515939/155847817-a54b080b-66c5-48ab-ac3e-35ba4cf13e4f.png"><p/>
 
