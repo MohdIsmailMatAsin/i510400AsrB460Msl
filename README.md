@@ -2317,7 +2317,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 
 <p align="center"><img width="656" alt="Screen Shot 2022-02-26 at 11 20 48 PM" src="https://user-images.githubusercontent.com/72515939/155848627-ea380db3-beea-47a9-a093-6145cdf9028f.png"><p/>
 
-<p align="center"><img width="656" alt="Screen Shot 2022-02-26 at 11 20 48 PM" src="https://user-images.githubusercontent.com/72515939/155848629-4c870a67-c55b-4d8c-abf9-845f4e34b694.png"><p/>
+<p align="center"><img width="658" alt="Screen Shot 2022-02-26 at 11 20 45 PM" src="https://user-images.githubusercontent.com/72515939/155848666-c5e0cf30-f3e6-45fd-a6df-606eeb7215e7.png"><p/>
 
 
 #### 10.1 - Non Working:
