@@ -2320,7 +2320,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 <p align="center"><img width="658" alt="Screen Shot 2022-02-26 at 11 20 45 PM" src="https://user-images.githubusercontent.com/72515939/155848666-c5e0cf30-f3e6-45fd-a6df-606eeb7215e7.png"><p/>
 
 
-#### 10.1 - Non Working:
+#### 10.1 - Not Working:
 
 - No `apst` (`Autonomous Power State Transition`) profile via `ioreg`in `NVMe`. `NVMe` still working fine with `trim` support (without 3rd party app/kext). `NVMeFix.kext` will cause `KP` with `SPCC M.2 NVMe (Phison Chipset)`. Please Refer: [Acidanthera Bugtracker #1752](https://github.com/acidanthera/bugtracker/issues/1752) for more info.
 
