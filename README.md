@@ -2303,10 +2303,16 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 **<p align="center">Refresh Rate: ProMotion<p/>**
 <p align="center"><img width="780" alt="Screen Shot 2022-02-26 at 10 56 57 PM" src="https://user-images.githubusercontent.com/72515939/155847708-82cf3e91-382d-49e6-8daa-5c91a2b818a8.png"><p/>
 
+**<p align="center">System Preferences<p/>**
+<p align="center"><img width="780" alt="Screen Shot 2022-02-26 at 11 00 04 PM" src="https://user-images.githubusercontent.com/72515939/155847817-a54b080b-66c5-48ab-ac3e-35ba4cf13e4f.png"><p/>
+
+**<p align="center">Hardware Acceleration<p/>**
+<p align="center"><img width="1576" alt="Screen Shot 2022-02-26 at 11 01 05 PM" src="https://user-images.githubusercontent.com/72515939/155848009-6eec0d59-100d-4d0b-87c1-b4454f455c7b.png"><p/>
+<p align="center"><img width="697" alt="Screen Shot 2022-02-26 at 11 03 25 PM" src="https://user-images.githubusercontent.com/72515939/155848011-901fea49-870e-479e-89e1-b9320eba4227.png"><p/>
 
 #### 10.1 - Non Working:
 
-- NVMe is working fine with trim support. `NVMeFix.kext` will cause `KP` with `SPCC M.2 NVMe (Phison Chipset)`. Please Refer: [Acidanthera Bugtracker #1752](https://github.com/acidanthera/bugtracker/issues/1752) for more info.
+- No `apst` (`Autonomous Power State Transition`) profile via `ioreg`in `NVMe`. `NVMe` still working fine with `trim` support (without 3rd party app/kext). `NVMeFix.kext` will cause `KP` with `SPCC M.2 NVMe (Phison Chipset)`. Please Refer: [Acidanthera Bugtracker #1752](https://github.com/acidanthera/bugtracker/issues/1752) for more info.
 
 #### 11.0 - BIOS/UEFI Settings
 
