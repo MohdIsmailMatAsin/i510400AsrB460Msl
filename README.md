@@ -2313,6 +2313,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 
 <p align="center"><img width="697" alt="Screen Shot 2022-02-26 at 11 03 25 PM" src="https://user-images.githubusercontent.com/72515939/155848011-901fea49-870e-479e-89e1-b9320eba4227.png"><p/>
 
+<p align="center"><img width="1436" alt="Screen Shot 2022-02-26 at 11 20 39 PM" src="https://user-images.githubusercontent.com/72515939/155848626-6dc58cb6-82cb-49d7-86bb-cccaa6113694.png"><p/>
+
+<p align="center"><img width="656" alt="Screen Shot 2022-02-26 at 11 20 48 PM" src="https://user-images.githubusercontent.com/72515939/155848627-ea380db3-beea-47a9-a093-6145cdf9028f.png"><p/>
+
+<p align="center"><img width="656" alt="Screen Shot 2022-02-26 at 11 20 48 PM" src="https://user-images.githubusercontent.com/72515939/155848629-4c870a67-c55b-4d8c-abf9-845f4e34b694.png"><p/>
+
 
 #### 10.1 - Non Working:
 
