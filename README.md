@@ -1,4 +1,4 @@
-# Hackintosh: Intel i5 10400F & Asrock B460 Steel Legend
+# <p align="center">Hackintosh: Intel i5 10400F & Asrock B460 Steel Legend</p>
 
 <p align="center"><img width="698" alt="Screen Shot 2022-02-24 at 8 51 59 PM" src="https://user-images.githubusercontent.com/72515939/155527979-c0f57c37-826d-43e8-9571-3d062dce01de.png"></p>
 
