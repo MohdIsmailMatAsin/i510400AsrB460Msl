@@ -2301,6 +2301,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 - All Device
 
 **Refresh Rate: ProMotion**
+
 What is ProMotion?
 <p align="justify">While a standard refresh rate will update a display 60 times a second (60Hz), the ProMotion’s adaptive 120Hz screen works at twice this speed. This results in smoother scrolling, improved responsiveness and better gaming performance.<p/>
 <p align="center"><img width="780" alt="Screen Shot 2022-02-26 at 10 56 57 PM" src="https://user-images.githubusercontent.com/72515939/155847708-82cf3e91-382d-49e6-8daa-5c91a2b818a8.png"><p/>
