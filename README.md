@@ -2340,3 +2340,8 @@ What is ProMotion?
 Copyright : `MohdIsmailMatAsin`
 
 Date : `24 Feb 2022`
+
+# Acknowledgements
+
+I would like to thanks all folks in Hackintosh/ Hackintosh/ Malaysia/ r/Hackintosh community. Without their idea, question and answer, my hack is not possible to do. 
+
