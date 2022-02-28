@@ -149,8 +149,8 @@
 | PMCR | Classed as `Memory Controller` and known as `PPMC` in `Comet Lake (CML)` platform. This `SSDT` renamed `PPMC` as `PMCR` with compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, which is identical to `CML` `pci8086,a3a1` |
 | TSUB | Nothing fancy, just` Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB` |
 | RTLK | Rename `RTL8125 2.5GbE Controller` device as `RP04,PXSX` to `RP04,RTLK` |
-| USB0 | Rename PCIe`ASM2142 USB 3.1 Host Controller` device as `RP05,PXSX` to `RP05,XHC0` and added `acpi-wake-type` to overcome wake issue using USB device. |
-| USB1 | Rename PCIe`Comet Lake PCH-V USB Controller` device as `XHC` to `XHC1` and added `acpi-wake-type` to overcome wake issue using USB device. |
+| XHC0 | Rename PCIe`ASM2142 USB 3.1 Host Controller` device as `RP05,PXSX` to `RP05,XHC0` and added `acpi-wake-type` to overcome wake issue using USB device. |
+| XHC1 | Rename PCIe`Comet Lake PCH-V USB Controller` device as `XHC` to `XHC1` and added `acpi-wake-type` to overcome wake issue using USB device. |
 | ANS0 | Rename `RP09,PXSX` to `RP09,ANS0` and spoof `NVMe` as `Apple SSD Controller` .`_SUN` information is added to reveal proper `slot number` |
 | ANS1 | Rename `RP021,PXSX` to `RP21,ANS1` and spoof `NVMe` as `Apple SSD Controller`. `_SUN` information is added to reveal proper `slot number` |
 | ARPT | Rename `RP20,PXSX` to `RP20,ARPT` and adding `_SUN` information to reveal proper `slot number` |
