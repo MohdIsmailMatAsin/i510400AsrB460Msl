@@ -2318,8 +2318,7 @@ What is ProMotion?
 **DGPU Benchmark**
 <p align="center"><img width="1088" alt="Screen Shot 2022-02-26 at 11 28 14 PM" src="https://user-images.githubusercontent.com/72515939/155848856-1b1b1314-007a-419a-b0df-edde1afd89ee.png"><p/>
 <p align="center"><img width="1088" alt="Screen Shot 2022-02-26 at 11 29 07 PM" src="https://user-images.githubusercontent.com/72515939/155848857-0edf37eb-f942-4ee1-97b8-c5834151b477.png"><p/>
-Remark: PowerPlay injection may increase Metal, sometimes decrease OpenGL scores. Benchmarking CPU and GPU through BigSur/Monterey is not a good idea since both is bloated with M1 Processor code. The best way to check Metal and OpenGL is through Catalina while the OS was Intel optimized. 
-
+Remark: PowerPlay injection may increase Metal, sometimes decrease OpenGL scores. Benchmarking the CPU and GPU through BigSur/Monterey is not a good idea since both are bloated with M1 Processor code. The best way to check Metal and OpenGL is through Catalina while the OS was Intel optimized.
 #### 10.1 - Not Working/Issue:
 
 - No `apst` (`Autonomous Power State Transition`) profile via `ioreg`in `NVMe`. `NVMe` still working fine with `trim` support (without 3rd party app/kext). `NVMeFix.kext` will cause `KP` with `SPCC M.2 NVMe (Phison Chipset)`. Please Refer: [Acidanthera Bugtracker #1752](https://github.com/acidanthera/bugtracker/issues/1752) for more info.
