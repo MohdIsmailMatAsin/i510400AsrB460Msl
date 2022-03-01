@@ -155,7 +155,7 @@
 | ANS0 | Rename `RP09,PXSX` to `RP09,ANS0` and spoof `NVMe` as `Apple SSD Controller` .`_SUN` information is added to reveal proper `slot number` |
 | ANS1 | Rename `RP021,PXSX` to `RP21,ANS1` and spoof `NVMe` as `Apple SSD Controller`. `_SUN` information is added to reveal proper `slot number` |
 | ARPT | Rename `RP20,PXSX` to `RP20,ARPT` and adding `_SUN` information to reveal proper `slot number` |
-| SATA | Rename SATA to SAT0 with additiopnal information and spoof `400 Series Chipset Family SATA AHCI Controller` to `Intel 11 Series Chipset Controler` |
+| SATA | Rename SATA to SAT0 with additional information and spoof `400 Series Chipset Family SATA AHCI Controller` to `Intel 11 Series Chipset Controler` |
 | SBUS | To fixing `AppleSMBus` support in macOS.  Eg: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc` |
 | USBX | To supply USB power properties for Skylake and newer. Nothing fancy here. |
 
