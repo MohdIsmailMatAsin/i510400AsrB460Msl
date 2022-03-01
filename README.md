@@ -100,7 +100,7 @@
 - **Add** | **Delete** | **Patch** | **Quirks**
   
 
-```aml
+```xml
 <key>ACPI</key>
 	<dict>
 		<key>Add</key>
@@ -1425,7 +1425,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 3. `PciRoot(0x0)/Pci(0x1F,0x4)` just a patch are only used for display information related to the `Comet Lake PCH-V SMBus Host Controllerr` via `About This Mac/System Report/PCI`). Without this patch, information related to the device is working but not displayed. It's Optional.
   
 
-```plist
+```xml
 </dict>
 	<key>DeviceProperties</key>
 	<dict>
@@ -1517,7 +1517,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 | USBMap | Kext to `route` selected `USB ports`. This is `compulsory to handle` `15 port limit` requirements by macOS. Require [USBMap](https://github.com/corpnewt/USBMap) or [USBToolbox](https://github.com/USBToolBox/tool) |
 | Moussey | My `modified` kext based from late [FakeAppleWirelessMouse.kext](https://github.com/ArchCryptonIO/Kext-Collection) |
 
-```plist
+```xml
 </dict>
 	<key>Kernel</key>
 	<dict>
@@ -1938,7 +1938,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 2. All `Error` and `Warning` log is disable in `Debug` section
   
 
-```plist
+```xml
 </dict>
 	<key>Misc</key>
 	<dict>
@@ -2167,7 +2167,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 
 - `iMacPro1,1` SMBIOS
 
-```plist
+```xml
 </dict>
 	<key>PlatformInfo</key>
 	<dict>
@@ -2237,7 +2237,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
   
 - [x] OpenRuntime.efi - Extension for `OpenCore` to help with patching `boot.efi `for `NVRAM` fixes and better `memory management`
 
-```plist
+```xml
 </dict>
 	<key>UEFI</key>
 	<dict>
