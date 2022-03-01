@@ -145,7 +145,8 @@
 | EC  | `Fake Embedded Controller` (EC) drivers since `CML` don't have native support EC |
 | DMAC | Actually, this was `MCHC` which compiled with `SBUS`. Known as `SSDT-SBUS-MCHC.aml` and renamed as `DMAC`.  (Rename `MCHC` to `DMAC`). Remark: `MCHC` and `SBUS` code is `splitted` |
 | GFX0 | `Dedicated Graphic Processor Unit (DGPU)`.  This `SSDT` contain all `Navi 14` patch information.  Contain: `Framebuffer`: `ATY,Keelback`, `CFG,CFG_USE_AGDC` to overcome wake issue using `DGPU`, `_SUN` information is added to reveal proper `slot number` and added `agdpmod=pikera` in data format `70696B657261`. `boot-args` injection via `NVRAM` is `not required`
-| HDAU | `High Defiition Audio` through `HDMI` patch. `_SUN` information is added to reveal proper `slot number` |
+| HDAU | `High Definition Audio` through `HDMI` patch. `_SUN` information is added to reveal proper `slot number` |
+| HDEF | `High Definition Audio System` aka (`HDAS`) in actual DSDT renamed with HDEF injected with alcid=1 (layout id/data/01000000 |
 | PMCR | Classed as `Memory Controller` and known as `PPMC` in `Comet Lake (CML)` platform. This `SSDT` renamed `PPMC` as `PMCR` with compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, which is identical to `CML` `pci8086,a3a1` |
 | TSUB | Nothing fancy, just` Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB` |
 | RTLK | Rename `RTL8125 2.5GbE Controller` device as `RP04,PXSX` to `RP04,RTLK` |
@@ -1424,7 +1425,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 3. `PciRoot(0x0)/Pci(0x1F,0x4)` just a patch are only used for display information related to the `Comet Lake PCH-V SMBus Host Controllerr` via `About This Mac/System Report/PCI`). Without this patch, information related to the device is working but not displayed. It's Optional.
   
 
-```aml
+```plist
 </dict>
 	<key>DeviceProperties</key>
 	<dict>
@@ -1458,22 +1459,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 			<key>PciRoot(0x0)/Pci(0x1F,0x2)</key>
 			<dict/>
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>Audio device</string>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-				<key>layout-id</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>model</key>
-				<string>Comet Lake PCH-V cAVS</string>
-				<key>name</key>
-				<string>HDEF</string>
-			</dict>
+			<dict/>
 			<key>PciRoot(0x0)/Pci(0x1F,0x4)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -1531,7 +1517,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 | USBMap | Kext to `route` selected `USB ports`. This is `compulsory to handle` `15 port limit` requirements by macOS. Require [USBMap](https://github.com/corpnewt/USBMap) or [USBToolbox](https://github.com/USBToolBox/tool) |
 | Moussey | My `modified` kext based from late [FakeAppleWirelessMouse.kext](https://github.com/ArchCryptonIO/Kext-Collection) |
 
-```aml
+```plist
 </dict>
 	<key>Kernel</key>
 	<dict>
@@ -1952,7 +1938,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 2. All `Error` and `Warning` log is disable in `Debug` section
   
 
-```aml
+```plist
 </dict>
 	<key>Misc</key>
 	<dict>
@@ -2073,43 +2059,11 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 <p align="center"><img width="697" alt="Screen Shot 2022-02-25 at 9 11 05 PM" src="https://user-images.githubusercontent.com/72515939/155721342-b2ca1831-5ec2-4d6e-8554-838554e8d6c4.png"><p/>
 
 
-### 6.0 - Tools
-
-- Only **CleanNvram.efi** is added. Nothing fancy
-
-```aml
-</dict>
-		<key>Tools</key>
-		<array>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Auxiliary</key>
-				<true/>
-				<key>Comment</key>
-				<string>CleanNvram.efi</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Flavour</key>
-				<string>Auto</string>
-				<key>Name</key>
-				<string>CleanNvram.efi</string>
-				<key>Path</key>
-				<string>CleanNvram.efi</string>
-				<key>RealPath</key>
-				<false/>
-				<key>TextMode</key>
-				<false/>
-			</dict>
-		</array>
-	</dict>
-```
-
-### 7.0 - NVRAM
+### 6.0 - NVRAM
 
 - No `boot-args` is require
 
-```aml
+```plist
 <key>NVRAM</key>
 	<dict>
 		<key>Add</key>
@@ -2209,11 +2163,11 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 <p/>
 
 
-### 8.0 - PlatformInfo
+### 7.0 - PlatformInfo
 
 - `iMacPro1,1` SMBIOS
 
-```aml
+```plist
 </dict>
 	<key>PlatformInfo</key>
 	<dict>
@@ -2262,11 +2216,11 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 <p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 18 14 PM" src="https://user-images.githubusercontent.com/72515939/155721828-8fe6d6da-037c-40e1-a154-3e2c3db0a3c8.png"><p/>
 
 
-### 9.0 - UEFI
+### 8.0 - UEFI
 
 - **APFS** | **AppleInput** | **Audio** | **ConnectedDrivers** | **Drivers** | **Input** | **Output** | **ProtocolOverrides** | **Quirks** | **ReserveMemory**
 
-**9.1 - APFS**
+**8.1 - APFS**
 
 - [x] Catalina require `MinDate -1` & `MinVersion -1`
   
@@ -2275,7 +2229,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 - [x] Monterey require `MinDate -0` & `MinVersion -0`
   
 
-**9.2 - Drivers**
+**8.2 - Drivers**
 
 - [x] HfsPlus.efi - Needed for seeing `HFS` volumes
   
@@ -2283,7 +2237,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
   
 - [x] OpenRuntime.efi - Extension for `OpenCore` to help with patching `boot.efi `for `NVRAM` fixes and better `memory management`
 
-```aml
+```plist
 </dict>
 	<key>UEFI</key>
 	<dict>
@@ -2538,9 +2492,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 </dict>
 ```
 
-### 10.0 - Results
+### 9.0 - Results
 
-#### 10.2 - Working:
+#### 9.1 - Working:
 - All Device
 
 **Refresh Rate: ProMotion**
@@ -2564,11 +2518,11 @@ What is ProMotion?
 <p align="center"><img width="1088" alt="Screen Shot 2022-02-26 at 11 29 07 PM" src="https://user-images.githubusercontent.com/72515939/155848857-0edf37eb-f942-4ee1-97b8-c5834151b477.png"><p/>
 Remark: PowerPlay injection may increase Metal, sometimes decrease OpenGL scores. Benchmarking the CPU and GPU through BigSur/Monterey is not a good idea since both are bloated with M1 Processor code. The best way to check Metal and OpenGL is through Catalina while the OS was Intel optimized.
 
-#### 10.1 - Not Working/Issue:
+#### 9.2 - Not Working/Issue:
 
 - No `apst` (`Autonomous Power State Transition`) profile via `ioreg`in `NVMe`. `NVMe` still working fine with `trim` support (without 3rd party app/kext). `NVMeFix.kext` will cause `KP` with `SPCC M.2 NVMe (Phison Chipset)`. Please Refer: [Acidanthera Bugtracker #1752](https://github.com/acidanthera/bugtracker/issues/1752) for more info.
 
-#### 11.0 - BIOS/UEFI Settings
+#### 10.0 - BIOS/UEFI Settings
 
 - Disable `CSM/ Enable UEFI`
 - Disable `Secure Boot`
@@ -2586,5 +2540,5 @@ Date : `24 Feb 2022`
 
 # Acknowledgements
 
-I would like to thanks all folks in Hackintosh/ Hackintosh Malaysia/ r/Hackintosh community. Without their idea, question and answer, my hack is not possible.
+I would like to thanks all folks in Hackintosh Community/ [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/)/ [r/Hackintosh](https://www.reddit.com/r/hackintosh/). Without their idea, question and answer, my hack is not possible.
 
