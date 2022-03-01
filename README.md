@@ -146,7 +146,7 @@
 | DMAC | Actually, this was `MCHC` which compiled with `SBUS`. Known as `SSDT-SBUS-MCHC.aml` and renamed as `DMAC`.  (Rename `MCHC` to `DMAC`). Remark: `MCHC` and `SBUS` code is `splitted` |
 | GFX0 | `Dedicated Graphic Processor Unit (DGPU)`.  This `SSDT` contain all `Navi 14` patch information.  Contain: `Framebuffer`: `ATY,Keelback`, `CFG,CFG_USE_AGDC` to overcome wake issue using `DGPU`, `_SUN` information is added to reveal proper `slot number` and added `agdpmod=pikera` in data format `70696B657261`. `boot-args` injection via `NVRAM` is `not required`
 | HDAU | `High Definition Audio` through `HDMI` patch. `_SUN` information is added to reveal proper `slot number` |
-| HDEF | `High Definition Audio System` aka (`HDAS`) in actual DSDT renamed with HDEF injected with alcid=1 (layout id/data/01000000 |
+| HDEF | `High Definition Audio System` aka (`HDAS`) in actual `DSDT`, renamed with `HDEF` and injected with `alcid=1`/`layout id/data/01000000` |
 | PMCR | Classed as `Memory Controller` and known as `PPMC` in `Comet Lake (CML)` platform. This `SSDT` renamed `PPMC` as `PMCR` with compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, which is identical to `CML` `pci8086,a3a1` |
 | TSUB | Nothing fancy, just` Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB` |
 | RTLK | Rename `RTL8125 2.5GbE Controller` device as `RP04,PXSX` to `RP04,RTLK` |
