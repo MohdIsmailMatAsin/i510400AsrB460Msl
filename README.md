@@ -2061,7 +2061,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 
 - No `boot-args` is require
 
-```plist
+```xml
 <key>NVRAM</key>
 	<dict>
 		<key>Add</key>
