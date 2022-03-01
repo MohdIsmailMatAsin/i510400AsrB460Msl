@@ -1420,9 +1420,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 
 1. `PciRoot(0x0)/Pci(0x14,0x0)` just a patch are only used for display information related to the `CML PCH-V USB Controller` via `About This Mac/System Report/PCI`). Without this patch, information related to the device is working but not displayed. It's Optional.
   
-2. `PciRoot(0x0)/Pci(0x1F,0x3)`is a patch are only used to enable working audio device related to the`Comet Lake PCH-V cAVS` via `About This Mac/System Report/PCI`). This patch is compulsory to allow working audio (`HDEF`). Boot-args `alcid=1` is not require.
-  
-3. `PciRoot(0x0)/Pci(0x1F,0x4)` just a patch are only used for display information related to the `Comet Lake PCH-V SMBus Host Controllerr` via `About This Mac/System Report/PCI`). Without this patch, information related to the device is working but not displayed. It's Optional.
+2. `PciRoot(0x0)/Pci(0x1F,0x4)` just a patch are only used for display information related to the `Comet Lake PCH-V SMBus Host Controllerr` via `About This Mac/System Report/PCI`). Without this patch, information related to the device is working but not displayed. It's Optional.
   
 
 ```xml
