@@ -118,6 +118,8 @@ EFI
 | ALS0 | Not needed. However, real `iMac` have these device properties. **Patch:** smc-als and AppleLMUController`) |
 | PLUG | To allow the kernel's `XCPM / XNU's CPU Power Management` to manage CPU's power management |
 | EC  | Fake Embedded Controller / EC drivers since `CML` don't have native support EC |
+| IGPU | `GFX0` to `IGPU` rename, only for Intergrated Graphica Unit with additional info related to Intel UHD 630 as headless graphics unit (built-in)|
+| IMEI | `HECI` to `IMEI` rename |
 | MCHC | Come with `SBUS` patch to aids with correct temperature, fan, voltage, ICH, etc readings and proper memory reporting |
 | GFX0 | `Dedicated Graphic Processor Unit / DGPU`.  This `SSDT` contain all `Navi 14` patch information. **Patch:** `ATY,Keelback` framebuffer and `CFG,CFG_USE_AGDC` properties to overcome wake issue using `DGPU`, `_SUN` information |
 | HDAU | `High Definition Audio` through `HDMI` patch. `_SUN` information is added to reveal proper `slot number` |
