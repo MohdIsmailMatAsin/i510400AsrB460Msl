@@ -95,7 +95,7 @@
     └── config.plist
 ```
 
-### 1.0 - SSDT:
+### 1.0 - SSDT
 
 <p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file i.e. `SSDT-Mac.aml`. There are also several other sources of properties that are injected to reduce the kext workload. As example, renaming `GFX0` to an `IGPU` that goes through `Whatevergreen.kext`. The following is a list of devices that have been injected with specific properties.</p>
 
