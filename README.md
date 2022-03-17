@@ -143,7 +143,7 @@ EFI
 
 Why SSDT's modding / editing? Why not DSDT's patching?
 
-[Dortania:](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime)Do not add your DSDT to OpenCore, its already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your config based of the architecture of your CPU.
+[Dortania:](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) Do not add your DSDT to OpenCore, its already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your config based of the architecture of your CPU.
 
 <p align="justify">`DSDT Patching` should be `avoided`.  There are various reasonable reasons why DSDT Patching is not recommended.  Some forums/webpages (i.e: `Olarila`) state that it is a major solution.  As a matter of knowledge, `DSDT` is the `main table` while `SSDT` is the `secondary table`.  The difference is, `DSDT` cannot be tampered with and touched.  Because it is the `main code` to hanle your machine with various device.  Meanwhile, `SSDT` is the `secondary table`, where we can change (modify), add and drop.  Although the language (code) used is the same, it has a different task/method. Reason? I'll explain why</p>
 
