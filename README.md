@@ -124,9 +124,7 @@ EFI
 | SBUS | Fix `AppleSMBus` support in macOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc` |
 | USBX | To supply `USB Power Properties` for Skylake and newer motherboard generation. |
 
-###
-
-### 1.1 - SSDT-Mac.aml
+#### 1.1 - SSDT-Mac.aml
 
 ```aml
 /*
@@ -1740,7 +1738,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
 
 ```
 
-### 1.2 - Config.plist
+#### 1.2 - Config.plist
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -2700,7 +2698,11 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
 | BluetoolFixup | Apple `macOS Monterey` has changed parts of the `Bluetooth` stack from `kernel-space` to `user-space`. Note: Required when bluetooth not working properly in macOS 12. |
 | USBMap | Kext to `route` selected `USB ports`. This is `compulsory to handle` `15 port limit` requirements by macOS. Require [USBMap](https://github.com/corpnewt/USBMap) or [USBToolbox](https://github.com/USBToolBox/tool) |
 
-#### 3.0 - BIOS/UEFI Settings
+### 3.0 - Results
+
+<p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 43 08 PM" src="https://user-images.githubusercontent.com/72515939/158739299-acd27c5b-839d-4d6c-a335-19d976a5cf79.png"></p>
+ 
+### 4.0 - BIOS/UEFI Settings
 
 - Disable `CSM/ Enable UEFI`
 - Disable `Secure Boot`
