@@ -44,11 +44,11 @@
 
 **OS Tested:**
 
-- [x] **Catalina** require `Mindate:-1` , `MinVersion:-1` and `SetApfsTimeout:-1`
+- [x] **Catalina** require `Mindate:-1` , `MinVersion:-1` and `SetApfsTrimTimeout:-1`
   
-- [x] **BigSur** require `Mindate:0` , `MinVersion:0` and `SetApfsTimeout:-1`
+- [x] **BigSur** require `Mindate:0` , `MinVersion:0` and `SetApfsTrimTimeout:-1`
   
-- [x] **Monterey** require `Mindate:0` , `MinVersion:0` and `SetApfsTimeout:0`
+- [x] **Monterey** require `Mindate:0` , `MinVersion:0` and `SetApfsTrimTimeout:0`
   
 
 **SMBIOS:**
