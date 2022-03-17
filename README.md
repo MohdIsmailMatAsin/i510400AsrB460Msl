@@ -141,7 +141,7 @@ EFI
 
 **Question:**
 
-Why SSDT's modding / editing? Why not DSDT's patching?
+Why SSDT's patch? And why not DSDT's patching?
 
 [Dortania:](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) Do not add your DSDT to OpenCore, its already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your config based of the architecture of your CPU.
 
