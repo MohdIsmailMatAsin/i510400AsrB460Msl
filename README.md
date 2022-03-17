@@ -2,6 +2,8 @@
 
 ![Last Update](https://img.shields.io/badge/Last_Update_(yy/mm/dd):-22.03.16-blueviolet.svg)
 
+<p align="center"><img width="698" alt="Screen Shot 2022-03-16 at 9 32 33 PM" src="https://user-images.githubusercontent.com/72515939/158737697-36fe343e-f013-4342-bfa7-d1e3b46c2866.png"></p>
+
 ## Information
 
 **Processor:**
