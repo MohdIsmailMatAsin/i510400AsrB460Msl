@@ -53,7 +53,7 @@
 
 - [x] `iMac19,2`
 
-**Tree:**
+**OpenCore v0.7.9:**
 
 ```tree
 .
