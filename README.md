@@ -2716,6 +2716,8 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
 
 <p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 42 15 PM" src="https://user-images.githubusercontent.com/72515939/158741829-37f15929-4436-44d7-9b2c-453ff1d5763f.png"></p>
 
+
+
 ### 4.0 - BIOS/UEFI Settings
 
 - Disable `CSM/ Enable UEFI`
@@ -2734,4 +2736,4 @@ Date : `24 Feb 2022`
 
 # Acknowledgements
 
-I would like to thanks all folks in Hackintosh Community, [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) for great guide, [Acidanthera](https://github.com/acidanthera) for great work, [CorpNewt](https://github.com/corpnewt) for great tools, [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for great knowledge sharing, [r/Hackintosh](https://www.reddit.com/r/hackintosh/) for great undocumented refereces, [daliansky](https://github.com/daliansky) for great ACPI method, [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky work. Thanks a lot Community!
+I would like to thanks all folks in Hackintosh Community, [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) for great guide, [Acidanthera](https://github.com/acidanthera) for great work, [CorpNewt](https://github.com/corpnewt) for great tools, [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for great knowledge sharing, [r/Hackintosh](https://www.reddit.com/r/hackintosh/) for great undocumented refereces, [daliansky](https://github.com/daliansky) for great ACPI method, [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky work. Thanks a lot Community! 
