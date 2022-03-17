@@ -55,7 +55,12 @@
 - [x] **macOS Monterey** v 12.2
 - [x] **Windows 11**
 
-Remark: Separate Drive OS. Settings via `config.plist`: `UpdateSMBIOSMode` = Custom, `CustomSMBIOSGuid` = True
+**Remark:**
+Separate Drive OS. 
+
+**Dual boot requirement:** 
+- `UpdateSMBIOSMode` = Custom
+- `CustomSMBIOSGuid` = True
 
 **SMBIOS:**
 
