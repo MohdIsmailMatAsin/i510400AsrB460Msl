@@ -2700,7 +2700,21 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
 
 ### 3.0 - Results
 
+<p align="center"><img width="697" alt="Screen Shot 2022-03-16 at 9 40 10 PM" src="https://user-images.githubusercontent.com/72515939/158741247-7cd3bdbd-b9a0-4e50-8e4b-4e90b99229f1.png"></p>
+
 <p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 43 08 PM" src="https://user-images.githubusercontent.com/72515939/158739299-acd27c5b-839d-4d6c-a335-19d976a5cf79.png"></p>
+
+<p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 43 08 PM" src="https://user-images.githubusercontent.com/72515939/158741514-37362510-6e5e-459a-9863-cf426dd3e0f9.png"></>
+
+<p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 42 41 PM" src="https://user-images.githubusercontent.com/72515939/158741435-7b7c9766-6b27-4ece-9999-60219a1bdba7.png"></p>
+
+<p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 42 44 PM" src="https://user-images.githubusercontent.com/72515939/158741452-0d41a713-3016-46bf-ba13-641527e07ded.png"></p>
+
+
+
+
+
+
  
 ### 4.0 - BIOS/UEFI Settings
 
