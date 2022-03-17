@@ -128,11 +128,11 @@ EFI
 
 **Refer:**  [SSDT-Mac.aml](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl)
 
-#### 1.2 - Config.plist
+### 2.0 - Config.plist
 
 **Refer:**  [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
 
-### 2.0 - Kernel Extension
+### 3.0 - Kernel Extension
 
 | Kext | Information |
 | --- | --- |
@@ -150,7 +150,7 @@ EFI
 | BluetoolFixup | Apple `macOS Monterey` has changed parts of the `Bluetooth` stack from `kernel-space` to `user-space`. Note: Required when bluetooth not working properly in macOS 12. |
 | USBMap | Kext to `route` selected `USB ports`. This is `compulsory to handle` `15 port limit` requirements by macOS. Require [USBMap](https://github.com/corpnewt/USBMap) or [USBToolbox](https://github.com/USBToolBox/tool) |
 
-### 3.0 - Results
+### 4.0 - Results
 
 <p align="center"><img width="697" alt="Screen Shot 2022-03-16 at 9 40 10 PM" src="https://user-images.githubusercontent.com/72515939/158741247-7cd3bdbd-b9a0-4e50-8e4b-4e90b99229f1.png"></p>
 
@@ -178,7 +178,7 @@ EFI
 
 <p align="center"><img width="1157" alt="Screen Shot 2022-03-16 at 9 39 50 PM" src="https://user-images.githubusercontent.com/72515939/158748867-55531a1c-0af1-428e-847d-2613b2fa233a.png"></p>
 
-### 4.0 - BIOS/UEFI Settings
+### 5.0 - BIOS/UEFI Settings
 
 - Disable `CSM/ Enable UEFI`
 - Disable `Secure Boot`
