@@ -121,7 +121,7 @@ EFI
 | IGPU | `GFX0` to `IGPU` rename. Other rename method via `SSDT` for `Intergrated Graphics Unit / IGPU` which can be handled by `Whatevergreen.kext`. Additional info related to `Intel UHD 630` is added as `headless` built-in graphics module |
 | IMEI | `HECI` to `IMEI` rename via `SSDT` |
 | MCHC | Come with `SBUS` patch to aids with correct temperature, fan, voltage, ICH, etc readings and proper memory reporting |
-| GFX0 | `Dedicated Graphic Processor Unit / DGPU`.  This `SSDT` contain all `Navi 14` patch information. **Patch:** `ATY,Keelback` framebuffer and `CFG,CFG_USE_AGDC` properties to overcome wake issue using `DGPU`, `_SUN` information |
+| GFX0 | `Dedicated Graphic Processor Unit / DGPU`.  This `SSDT` contain all `Navi 14` patch information. **Patch:** `ATY,Keelback` framebuffer and `CFG,CFG_USE_AGDC` properties to overcome wake issue using `DGPU` also `_SUN` information to reveal slot number|
 | HDAU | `High Definition Audio` through `HDMI` patch. `_SUN` information is added to reveal proper `slot number` |
 | HDEF | `High Definition Audio System / HDAS` in actual `DSDT`, renamed with `HDEF` . **Patch:**`layout id/data/01000000` which is equal to `alcid=1` |
 | PMCR | Classed as `Memory Controller` and known as `PPMC` in `Comet Lake (CML)` platform. This `SSDT` renamed `PPMC` as `PMCR` with compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, which is identical to `CML` `pci8086,a3a1` |
@@ -147,7 +147,7 @@ Why SSDT's patch? And why not DSDT's patching?
 
 [Dortania:](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) Do not add your DSDT to OpenCore, its already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your config based of the architecture of your CPU.
 
-<p align="justify"> DSDT Patching should be avoided.  There are various reasonable reasons why DSDT Patching is not recommended.  Some forums/webpages (i.e: Olarila) state that it is a major solution.  As a matter of knowledge, DSDT is the main table while SSDT is the secondary table (additional table).  The difference is DSDT cannot be tampered with and touched.  Because it is the main .aml code to handle your machine with various device.  Meanwhile, SSDT is the secondary table, where we can change (modify), add and drop.  Although the language (code) used is the same, it has a different task/method. Reason? I'll explain why</p>
+<p align="justify"> DSDT Patching should be avoided.  There are various reasons why DSDT Patching is not recommended.  Some forums/webpages (i.e: Olarila) state that it is a major solution.  As a matter of knowledge, DSDT is the main table while SSDT is the secondary table (additional table).  The difference is DSDT cannot be tampered with and touched.  Because it is the main .aml code to handle your machine with various device.  Meanwhile, SSDT is the secondary table, where we can change (modify), add and drop.  Although the language (code) used is the same, it has a different task/method. Reason? I'll explain why</p>
 
 **DSDT Patching** may 
 - Broke motherboard BIOS
