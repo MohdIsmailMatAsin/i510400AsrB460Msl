@@ -1,12 +1,12 @@
-# <p align="center">Hackintosh: Intel i5 10400F & Asrock B460 Steel Legend</p>
+# Hackintosh: Intel i5 10400 & Asrock B460M Steel Legend
 
-<p align="center"><img width="698" alt="Screen Shot 2022-02-24 at 8 51 59 PM" src="https://user-images.githubusercontent.com/72515939/155527979-c0f57c37-826d-43e8-9571-3d062dce01de.png"></p>
+![Last Update](https://img.shields.io/badge/Last_Update_(yy/mm/dd):-22.03.16-blueviolet.svg)
 
 ## Information
 
 **Processor:**
 
-- [Intel® Core™ i5-10400F Processor](https://www.intel.com/content/www/us/en/products/sku/199278/intel-core-i510400f-processor-12m-cache-up-to-4-30-ghz/specifications.html)
+- [Intel® Core™ i5-10400 Processor](https://ark.intel.com/content/www/us/en/ark/products/199271/intel-core-i510400-processor-12m-cache-up-to-4-30-ghz.html)
 
 **Motherboard:**
 
@@ -18,61 +18,61 @@
 
 **IGPU:**
 
-- None
+- [Intel® UHD Graphics 630](https://ark.intel.com/content/www/us/en/ark/products/graphics/126790/intel-uhd-graphics-630.html)
 
-**PCIe Card:**
+**Additional PCI Card:**
 
-- [BCM4360 802.11ac Wireless Network Adapter](https://www.amazon.com/BCM94360CD-802-11ac-Wireless-Accessory-Broadcom/dp/B08LNBJVZR)
-- [ASM2142 USB 3.0 XHCI Controller](https://shopee.com.my/PCIe-to-USB-3-2-Gen-2-Card-with-20Gbps-Bandwidth-5-Port-i.191431968.15231983955?gclid=Cj0KCQiAmeKQBhDvARIsAHJ7mF5_-v6Q-AnoQ3yGaKPBUAwOTxGRuGKZ7ZWc5d9YJydtv-iuQYpq-QUaAk3wEALw_wcB)
+- [Intel® Wireless AC 9620](https://www.intel.com/content/www/us/en/products/sku/99445/intel-wirelessac-9260/specifications.html)
+- [VL805/806 xHCI USB 3.0 Controller](https://www.via-labs.com/product_show.php?id=48)
 
 **Memory:**
 
-- [XLR8 DDR4 3200MHz Desktop Memory](https://www.pny.com.tw/en/products-detail/XLR8-DDR4-3200MHz-Desktop-Memory-32GB/)
+- [PNY XLR8 Gaming Epic-X RGB DDR4 Memory 3200MHz](https://www.pny.com.tw/en/products-detail/XLR8-DDR4-3200MHz-Desktop-Memory-32GB/)
 
 **Storage:**
 
-- 1 x Silicon Power 500GB NVMe M.2 PCIe Gen3x4 (Maxio Chipset)
-  
-- 1 x Silicon Power 250GB NVMe M.2 PCIe Gen3x4 (Phison Chipset)
-  
-
-- 1 x Silicon Power 500GB Solid State Disk
-  
-- 2 x Western Digital 500GB WD5000AAKX HDD
-  
+| Value | Disk Type | Product | Size |
+| --- | --- | --- | --- |
+| 2   | M.2 NVMe | [Kingston A2000 NVMe (500GB)](https://shopee.com.my/Kingston-A2000-NV1-NVMe-PCIe-Gen-3x4-M.2-2280-Internal-Solid-State-Drives-SSD-SA2000-SNVS-(250GB-500GB-1TB-2TB)-i.15417888.1248954996) | 500 GB |
+| 1   | M.2 NVMe | [Silicon Power PS5013 E13 NVMe](https://shopee.com.my/Silicon-Power-NVMe-PCIe-Gen3x4-M.2-2280-SSD-(256GB-512GB-1TB)-A80-P34-Solid-State-Drives-i.137317911.2095142026) | 500 GB |
+| 1   | SATA SSD | [San Disk SSD Plus](https://www.westerndigital.com/en-ap/products/internal-drives/sandisk-ssd-plus-sata-iii-ssd) | 480 GB |
+| 1   | SATA SSD | [San Disk SSD Plus](https://www.westerndigital.com/en-ap/products/internal-drives/sandisk-ssd-plus-sata-iii-ssd) | 240 GB |
+| 2   | SATA HDD | [Western Digital WDC WD5000AAKX-001CA0](https://products.wdc.com/library/SpecSheet/ENG/2879-701277.pdf) | 500 GB |
+| 1   | SATA HDD | [Hitachi HDT721016SLA380](https://www.hdsentinel.com/storageinfo_details.php?lang=en&model=HITACHI%20HDT721016SLA380) | 160 GB |
 
 **OS Tested:**
 
-- [x] macOS `Catalina`
+- [x] **Catalina** require `Mindate:-1` , `MinVersion:-1` and `SetApfsTimeout:-1`
   
-- [x] macOS `Big Sur`
+- [x] **BigSur** require `Mindate:0` , `MinVersion:0` and `SetApfsTimeout:-1`
   
-- [x] macOS `Monterey`
+- [x] **Monterey** require `Mindate:0` , `MinVersion:0` and `SetApfsTimeout:0`
   
 
 **SMBIOS:**
 
-- [x] `iMacPro1,1` (No IGPU)
-  
+- [x] `iMac19,2`
 
-## Tree
+**Tree:**
 
 ```tree
+.
 ├── BOOT
 │   └── BOOTx64.efi
 └── OC
     ├── ACPI
-    │   ├── SSDT-ACPI.aml             
+    │   └── SSDT-Mac.aml
     ├── Drivers
     │   ├── HfsPlus.efi
     │   ├── OpenCanopy.efi
     │   └── OpenRuntime.efi
     ├── Kexts
-    │   ├── AGPMInjector.kext
+    │   ├── AirportItlwm.kext
     │   ├── AppleALC.kext
+    │   ├── BlueToolFixup.kext
+    │   ├── IntelBluetoothFirmware.kext
     │   ├── Lilu.kext
     │   ├── LucyRTL8125Ethernet.kext
-    │   ├── Moussey.kext
     │   ├── RadeonSensor.kext
     │   ├── SMCProcessor.kext
     │   ├── SMCRadeonGPU.kext
@@ -95,71 +95,36 @@
     └── config.plist
 ```
 
-### 1.0 - ACPI
+### 1.0 - SSDT:
 
-- **Add** | **Delete** | **Patch** | **Quirks**
-  
-
-```xml
-<key>ACPI</key>
-	<dict>
-		<key>Add</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-ACPI.aml</string>
-			</dict>
-		</array>
-		<key>Delete</key>
-		<array/>
-		<key>Patch</key>
-		<array/>
-		<key>Quirks</key>
-		<dict>
-			<key>FadtEnableReset</key>
-			<false/>
-			<key>NormalizeHeaders</key>
-			<false/>
-			<key>RebaseRegions</key>
-			<false/>
-			<key>ResetHwSig</key>
-			<false/>
-			<key>ResetLogoStatus</key>
-			<false/>
-			<key>SyncTableIds</key>
-			<false/>
-		</dict>
-	</dict>
-```
-
-### 1.1 - SSDT:
+<p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt for the easy process. The entire SSDT has been merged into one file i.e. `SSDT-Mac.aml`. There are also several other sources of properties that are injected to reduce the kext workload. As example, renaming `GFX0` to an `IGPU` that goes through `Whatevergreen.kext`. The following is a list of devices that have been injected with specific properties.</p>
 
 | Device | Information |
 | --- | --- |
 | AWAC | To fix the `System Clocks` found on newer hardware |
-| PLUG | To allow the kernel's `XCPM (XNU's CPU Power Management)` to manage CPU's power management |
-| EC  | `Fake Embedded Controller` (EC) drivers since `CML` don't have native support EC |
-| DMAC | Actually, this was `MCHC` which compiled with `SBUS`. Known as `SSDT-SBUS-MCHC.aml` and renamed as `DMAC`.  (Rename `MCHC` to `DMAC`). Remark: `MCHC` and `SBUS` code is `splitted` |
-| GFX0 | `Dedicated Graphic Processor Unit (DGPU)`.  This `SSDT` contain all `Navi 14` patch information.  Contain: `Framebuffer`: `ATY,Keelback`, `CFG,CFG_USE_AGDC` to overcome wake issue using `DGPU`, `_SUN` information is added to reveal proper `slot number` and added `agdpmod=pikera` in data format `70696B657261` (Only applicable when no `IGPU`). `boot-args` injection via `NVRAM` is `not required`
+| ALS0 | Not needed. However, real `iMac` have these device properties. **Patch:** smc-als and AppleLMUController`) |
+| PLUG | To allow the kernel's `XCPM / XNU's CPU Power Management` to manage CPU's power management |
+| EC  | Fake Embedded Controller / EC drivers since `CML` don't have native support EC |
+| MCHC | Come with `SBUS` patch to aids with correct temperature, fan, voltage, ICH, etc readings and proper memory reporting |
+| GFX0 | `Dedicated Graphic Processor Unit / DGPU`.  This `SSDT` contain all `Navi 14` patch information. **Patch:** `ATY,Keelback` framebuffer and `CFG,CFG_USE_AGDC` properties to overcome wake issue using `DGPU`, `_SUN` information |
 | HDAU | `High Definition Audio` through `HDMI` patch. `_SUN` information is added to reveal proper `slot number` |
-| HDEF | `High Definition Audio System` aka (`HDAS`) in actual `DSDT`, renamed with `HDEF` and injected with `alcid=1`/`layout id/data/01000000` |
+| HDEF | `High Definition Audio System / HDAS` in actual `DSDT`, renamed with `HDEF` . **Patch:**`layout id/data/01000000` which is equal to `alcid=1` |
 | PMCR | Classed as `Memory Controller` and known as `PPMC` in `Comet Lake (CML)` platform. This `SSDT` renamed `PPMC` as `PMCR` with compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, which is identical to `CML` `pci8086,a3a1` |
-| TSUB | Nothing fancy, just` Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB` |
-| RTLK | Rename `RTL8125 2.5GbE Controller` device as `RP04,PXSX` to `RP04,RTLK` |
-| XHC0 | Rename PCIe`ASM2142 USB 3.1 Host Controller` device as `RP05,PXSX` to `RP05,XHC0` and added `acpi-wake-type` to overcome wake issue using USB device. |
-| XHC1 | Rename PCIe`Comet Lake PCH-V USB Controller` device as `XHC` to `XHC1` and added `acpi-wake-type` to overcome wake issue using USB device. |
-| ANS0 | Rename `RP09,PXSX` to `RP09,ANS0` and spoof `NVMe` as `Apple SSD Controller` .`_SUN` information is added to reveal proper `slot number` |
-| ANS1 | Rename `RP021,PXSX` to `RP21,ANS1` and spoof `NVMe` as `Apple SSD Controller`. `_SUN` information is added to reveal proper `slot number` |
-| ARPT | Rename `RP20,PXSX` to `RP20,ARPT` and adding `_SUN` information to reveal proper `slot number` |
-| SATA | Rename SATA to SAT0 with additional information and spoof `400 Series Chipset Family SATA AHCI Controller` to `Intel 11 Series Chipset Controler` |
-| SBUS | To fixing `AppleSMBus` support in macOS.  Eg: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc` |
-| USBX | To supply USB power properties for Skylake and newer. Nothing fancy here. |
+| TSUB | `Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB` |
+| XHC1 | Rename PCIe`Comet Lake PCH-V USB Controller` device as `XHC` to `XHC1` .** Patch:** `acpi-wake-type` to overcome wake issue using USB device. |
+| ARPT | Rename `RP03,PXSX` to `RP03,ARPT` and adding `_SUN` information to reveal proper `slot number` |
+| RTL0 | Rename `RTL8125 2.5GbE Controller` device as `RP04,PXSX` to `RP04,RTL0` |
+| XHC0 | Rename `ASM2142 USB 3.1 Host Controller` device as `RP05,PXSX` to `RP05,XHC0`. **Patch:** `acpi-wake-type` to overcome wake issue using USB device. |
+| ANS0 | Rename `RP09,PXSX` to `RP09,ANS0`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` with additional`_SUN` information,  to reveal proper `slot number` |
+| ANS1 | Rename `RP20,PXSX` to `RP20,ANS1`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` with additional`_SUN` information,  to reveal proper `slot number` |
+| ANS2 | Rename `RP21,PXSX` to `RP21,ANS2`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` with additional`_SUN` information,  to reveal proper `slot number` |
+| SATA | Rename SATA to SAT0 with additional information. **Patch:** Spoof `400 Series Chipset Family SATA AHCI Controller` to `Intel 11 Series Chipset Controler` |
+| SBUS | Fix `AppleSMBus` support in macOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc` |
+| USBX | To supply `USB Power Properties` for Skylake and newer motherboard generation. |
 
-### 1.2 - Code
+###
+
+### 1.1 - SSDT-Mac.aml
 
 ```aml
 /*
@@ -169,29 +134,35 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLpxUPvF.aml, Tue Mar  1 08:23:47 2022
+ * Disassembly of iASLl0hdGJ.aml, Wed Mar 16 19:31:32 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00001CDA (7386)
+ *     Length           0x00002093 (8339)
  *     Revision         0x02
- *     Checksum         0x45
+ *     Checksum         0x99
  *     OEM ID           "Apple"
- *     OEM Table ID     "ACPI"
+ *     OEM Table ID     "Mac"
  *     OEM Revision     0x00000000 (0)
  *     Compiler ID      "INTL"
- *     Compiler Version 0x20210930 (539035952)
+ *     Compiler Version 0x20200925 (538970405)
  */
-DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
+DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
 {
     External (_SB_.PCI0, DeviceObj)
-    External (_SB_.PCI0.DMAC, DeviceObj)
+    External (_SB_.PCI0.ALS0, DeviceObj)
+    External (_SB_.PCI0.GFX0, DeviceObj)
     External (_SB_.PCI0.HDAS, DeviceObj)
+    External (_SB_.PCI0.HECI, DeviceObj)
     External (_SB_.PCI0.LPCB, DeviceObj)
     External (_SB_.PCI0.LPCB.EC__, DeviceObj)
+    External (_SB_.PCI0.MCHC, DeviceObj)
     External (_SB_.PCI0.PEG0, DeviceObj)
     External (_SB_.PCI0.PEG0.PEGP, DeviceObj)
     External (_SB_.PCI0.PPMC, DeviceObj)
+    External (_SB_.PCI0.RP03, DeviceObj)
+    External (_SB_.PCI0.RP03.PXSX, DeviceObj)
+    External (_SB_.PCI0.RP03.PXSX._STA, UnknownObj)
     External (_SB_.PCI0.RP04, DeviceObj)
     External (_SB_.PCI0.RP04.PXSX, DeviceObj)
     External (_SB_.PCI0.RP04.PXSX._STA, UnknownObj)
@@ -213,6 +184,8 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
     External (_SB_.PCI0.XHC_, DeviceObj)
     External (_SB_.PR00, ProcessorObj)
     External (_SB_.USBX, DeviceObj)
+    External (LHIH, IntObj)
+    External (LLOW, IntObj)
     External (STAS, IntObj)
 
     Scope (\_SB)
@@ -250,12 +223,128 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 
         Scope (PCI0)
         {
+            Device (ALS0)
+            {
+                Name (_HID, "ACPI0008" /* Ambient Light Sensor Device */)  // _HID: Hardware ID
+                Name (_CID, "smc-als")  // _CID: Compatible ID
+                Method (_ALI, 0, NotSerialized)  // _ALI: Ambient Light Illuminance
+                {
+                    Return (((LHIH << 0x08) | LLOW))
+                }
+
+                Name (_ALR, Package (0x05)  // _ALR: Ambient Light Response
+                {
+                    Package (0x02)
+                    {
+                        0x46, 
+                        Zero
+                    }, 
+
+                    Package (0x02)
+                    {
+                        0x49, 
+                        0x0A
+                    }, 
+
+                    Package (0x02)
+                    {
+                        0x55, 
+                        0x50
+                    }, 
+
+                    Package (0x02)
+                    {
+                        0x64, 
+                        0x012C
+                    }, 
+
+                    Package (0x02)
+                    {
+                        0x96, 
+                        0x03E8
+                    }
+                })
+            }
+
+            Scope (GFX0)
+            {
+                Name (_STA, Zero)  // _STA: Status
+            }
+
+            Device (IGPU)
+            {
+                Name (_ADR, 0x00020000)  // _ADR: Address
+                Name (_STR, Unicode ("Display Controller"))  // _STR: Description String
+                Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                {
+                    If ((Arg2 == Zero))
+                    {
+                        Return (Buffer (One)
+                        {
+                             0x03                                             // .
+                        })
+                    }
+
+                    Return (Package (0x10)
+                    {
+                        "AAPL,ig-platform-id", 
+                        Buffer (0x04)
+                        {
+                             0x03, 0x00, 0xC5, 0x9B                           // ....
+                        }, 
+
+                        "built-in", 
+                        Buffer (0x04)
+                        {
+                             0x01, 0x00, 0x00, 0x00                           // ....
+                        }, 
+
+                        "class-code", 
+                        Buffer (0x04)
+                        {
+                             0x00, 0x00, 0x03, 0x00                           // ....
+                        }, 
+
+                        "device-id", 
+                        Buffer (0x04)
+                        {
+                             0x9B, 0x3E, 0x00, 0x00                           // .>..
+                        }, 
+
+                        "iommu-selection", 
+                        Buffer (0x04)
+                        {
+                             0x00, 0x00, 0x00, 0x00                           // ....
+                        }, 
+
+                        "subsystem-id", 
+                        Buffer (0x04)
+                        {
+                             0xFF, 0xFF, 0x00, 0x00                           // ....
+                        }, 
+
+                        "subsystem-vendor-id", 
+                        Buffer (0x04)
+                        {
+                             0x6B, 0x10, 0x00, 0x00                           // k...
+                        }, 
+
+                        "vendor-id", 
+                        Buffer (0x04)
+                        {
+                             0x86, 0x80, 0x00, 0x00                           // ....
+                        }
+                    })
+                }
+            }
+
             Scope (LPCB)
             {
                 Device (EC)
                 {
-                    Name (_HID, EisaId ("PNP0C09") /* Embedded Controller Device */)  // _HID: Hardware ID
-                    Name (_STR, Unicode ("Embedded Controller Device"))  // _STR: Description String
+                    Name (_HID, "PNP0C09" /* Embedded Controller Device */)  // _HID: Hardware ID
+                    Name (_UID, One)  // _UID: Unique ID
+                    Name (_STR, Unicode ("Embedded Controller"))  // _STR: Description String
                     Method (_STA, 0, Serialized)  // _STA: Status
                     {
                         If (_OSI ("Darwin"))
@@ -278,6 +367,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
             Device (HDEF)
             {
                 Name (_ADR, 0x001F0003)  // _ADR: Address
+                Name (_STR, Unicode ("Audio Endpoint"))  // _STR: Description String
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
                     If ((Arg2 == Zero))
@@ -288,12 +378,18 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                         })
                     }
 
-                    Return (Package (0x0C)
+                    Return (Package (0x0E)
                     {
                         "AAPL,slot-name", 
                         Buffer (0x09)
                         {
                             "Internal"
+                        }, 
+
+                        "built-in", 
+                        Buffer (0x04)
+                        {
+                             0x01, 0x00, 0x00, 0x00                           // ....
                         }, 
 
                         "device_type", 
@@ -305,7 +401,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                         "hda-gfx", 
                         Buffer (0x0A)
                         {
-                            "onboard-2"
+                            "onboard-1"
                         }, 
 
                         "layout-id", 
@@ -329,10 +425,64 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                 }
             }
 
-            Device (DMAC)
+            Scope (HECI)
+            {
+                Name (_STA, Zero)  // _STA: Status
+            }
+
+            Device (IMEI)
+            {
+                Name (_ADR, 0x00160000)  // _ADR: Address
+                Name (_STR, Unicode ("PCI Simple Communication Controller"))  // _STR: Description String
+                Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                {
+                    If ((Arg2 == Zero))
+                    {
+                        Return (Buffer (One)
+                        {
+                             0x03                                             // .
+                        })
+                    }
+
+                    Return (Package (0x0A)
+                    {
+                        "AAPL,slot-name", 
+                        Buffer (0x09)
+                        {
+                            "Internal"
+                        }, 
+
+                        "built-in", 
+                        Buffer (0x04)
+                        {
+                             0x01, 0x00, 0x00, 0x00                           // ....
+                        }, 
+
+                        "device_type", 
+                        Buffer (0x19)
+                        {
+                            "Communication controller"
+                        }, 
+
+                        "model", 
+                        Buffer (0x21)
+                        {
+                            "Comet Lake PCH-V HECI Controller"
+                        }, 
+
+                        "name", 
+                        Buffer (0x05)
+                        {
+                            "IMEI"
+                        }
+                    })
+                }
+            }
+
+            Device (MCHC)
             {
                 Name (_ADR, Zero)  // _ADR: Address
-                Name (_STR, Unicode ("Comet Lake-S 6c Host Bridge/DRAM Controller"))  // _STR: Description String
+                Name (_STR, Unicode ("Bridge"))  // _STR: Description String
                 Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
                 {
                     If (_OSI ("Darwin"))
@@ -343,7 +493,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                         })
                     }
 
-                    Return (Package (0x08)
+                    Return (Package (0x0A)
                     {
                         "AAPL,slot-name", 
                         Buffer (0x09)
@@ -352,9 +502,15 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                         }, 
 
                         "built-in", 
-                        Buffer (0x17)
+                        Buffer (0x04)
                         {
                              0x01, 0x00, 0x00, 0x00                           // ....
+                        }, 
+
+                        "device-id", 
+                        Buffer (0x04)
+                        {
+                             0x53, 0x9B, 0x00, 0x00                           // S...
                         }, 
 
                         "device_type", 
@@ -376,7 +532,6 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
             {
                 Scope (PEGP)
                 {
-                    Name (_STR, Unicode ("6th-10th Gen Core Processor PCIe Controller (x16)"))  // _STR: Description String
                     Method (_STA, 0, NotSerialized)  // _STA: Status
                     {
                         If (_OSI ("Darwin"))
@@ -393,7 +548,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                 Device (EGP0)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("Navi 10 XL Upstream Port of PCI Express Switch"))  // _STR: Description String
+                    Name (_STR, Unicode ("Bridge"))  // _STR: Description String
                     Method (_STA, 0, NotSerialized)  // _STA: Status
                     {
                         If (_OSI ("Darwin"))
@@ -409,12 +564,24 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                     Device (EGP1)
                     {
                         Name (_ADR, Zero)  // _ADR: Address
-                        Name (_STR, Unicode ("Navi 10 XL Downstream Port of PCI Express Switch"))  // _STR: Description String
+                        Name (_STR, Unicode ("Bridge"))  // _STR: Description String
+                        Method (_STA, 0, NotSerialized)  // _STA: Status
+                        {
+                            If (_OSI ("Darwin"))
+                            {
+                                Return (0x0F)
+                            }
+                            Else
+                            {
+                                Return (Zero)
+                            }
+                        }
+
                         Device (GFX0)
                         {
                             Name (_ADR, Zero)  // _ADR: Address
-                            Name (_STR, Unicode ("Navi 14 [Radeon RX 5500/5500M / Pro 5500M"))  // _STR: Description String
-                            Name (_SUN, One)  // _SUN: Slot User Number
+                            Name (_STR, Unicode ("Video Controller"))  // _STR: Description String
+                            Name (_SUN, Zero)  // _SUN: Slot User Number
                             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                             {
                                 If ((Arg2 == Zero))
@@ -428,7 +595,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                                 Return (Package (0x24)
                                 {
                                     "AAPL00,DualLink", 
-                                    Buffer (0x1B)
+                                    Buffer (0x04)
                                     {
                                          0x01, 0x00, 0x00, 0x00                           // ....
                                     }, 
@@ -458,31 +625,26 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                                     }, 
 
                                     "ATY,EFIVersion", 
-                                    Buffer (0x07)
+                                    Buffer (0x0D)
                                     {
-                                         0x33, 0x2E, 0x32, 0x2E, 0x31, 0x33, 0x30         // 3.2.130
+                                        /* 0000 */  0x33, 0x30, 0x2E, 0x30, 0x2E, 0x31, 0x30, 0x31,  // 30.0.101
+                                        /* 0008 */  0x2E, 0x31, 0x33, 0x34, 0x30                     // .1340
                                     }, 
 
                                     "ATY,EFIVersionB", 
-                                    Buffer (0x12)
+                                    Buffer (0x16)
                                     {
-                                        /* 0000 */  0x31, 0x31, 0x33, 0x2D, 0x4D, 0x53, 0x49, 0x54,  // 113-MSIT
-                                        /* 0008 */  0x56, 0x33, 0x38, 0x32, 0x4D, 0x48, 0x2E, 0x31,  // V382MH.1
-                                        /* 0010 */  0x36, 0x31                                       // 61
-                                    }, 
-
-                                    "agdpmod", 
-                                    Buffer (0x07)
-                                    {
-                                         0x70, 0x69, 0x6B, 0x65, 0x72, 0x61               // pikera
+                                        /* 0000 */  0x30, 0x31, 0x37, 0x2E, 0x30, 0x30, 0x32, 0x2E,  // 017.002.
+                                        /* 0008 */  0x30, 0x30, 0x30, 0x2E, 0x30, 0x30, 0x30, 0x2E,  // 000.000.
+                                        /* 0010 */  0x30, 0x33, 0x37, 0x36, 0x33, 0x36               // 037636
                                     }, 
 
                                     "device_type", 
                                     Buffer (One)
                                     {
-                                        /* 0000 */  0x0D, 0x41, 0x54, 0x59, 0x2C, 0x50, 0x79, 0x74,  // .ATY,Pyt
-                                        /* 0008 */  0x68, 0x6F, 0x6E, 0x50, 0x61, 0x72, 0x65, 0x6E,  // honParen
-                                        /* 0010 */  0x74, 0x00                                       // t.
+                                        /* 0000 */  0x41, 0x54, 0x59, 0x2C, 0x4B, 0x65, 0x65, 0x6C,  // ATY,Keel
+                                        /* 0008 */  0x62, 0x61, 0x63, 0x6B, 0x50, 0x61, 0x72, 0x65,  // backPare
+                                        /* 0010 */  0x6E, 0x74                                       // nt
                                     }, 
 
                                     "CFG,CFG_USE_AGDC", 
@@ -494,7 +656,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                                     "hda-gfx", 
                                     Buffer (0x0A)
                                     {
-                                        "onboard-1"
+                                        "onboard-2"
                                     }, 
 
                                     "name", 
@@ -506,8 +668,8 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                                     "PP_PhmSoftPowerPlayTable", 
                                     Buffer (0x068A)
                                     {
-                                        /* 0000 */  0x8A, 0x06, 0x0C, 0x00, 0x01, 0xE2, 0x01, 0x1D,  // ........
-                                        /* 0008 */  0x09, 0x00, 0x00, 0x7E, 0x3A, 0x00, 0x00, 0x7D,  // ...~:..}
+                                        /* 0000 */  0x8A, 0x06, 0x0C, 0x00, 0x01, 0xE2, 0x01, 0x3D,  // .......=
+                                        /* 0008 */  0x09, 0x00, 0x00, 0x94, 0x3B, 0x00, 0x00, 0x7D,  // ....;..}
                                         /* 0010 */  0x00, 0x08, 0x00, 0x00, 0x00, 0x1B, 0x00, 0x00,  // ........
                                         /* 0018 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
                                         /* 0020 */  0x71, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // q.......
@@ -531,17 +693,17 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                                         /* 00B0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x00,  // ........
                                         /* 00B8 */  0x00, 0x00, 0x0E, 0x00, 0x00, 0x00, 0x1E, 0x00,  // ........
                                         /* 00C0 */  0x00, 0x00, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01,  // ........
-                                        /* 00C8 */  0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01,  // ........
+                                        /* 00C8 */  0x01, 0x01, 0x01, 0x00, 0x01, 0x01, 0x01, 0x01,  // ........
                                         /* 00D0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
                                         /* 00D8 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                        /* 00E0 */  0x00, 0x00, 0x98, 0x08, 0x00, 0x00, 0x98, 0x08,  // ........
-                                        /* 00E8 */  0x00, 0x00, 0x98, 0x08, 0x00, 0x00, 0x7E, 0x04,  // ......~.
-                                        /* 00F0 */  0x00, 0x00, 0x98, 0x08, 0x00, 0x00, 0x7E, 0x04,  // ......~.
-                                        /* 00F8 */  0x00, 0x00, 0x98, 0x08, 0x00, 0x00, 0x7E, 0x04,  // ......~.
-                                        /* 0100 */  0x00, 0x00, 0xA2, 0x03, 0x00, 0x00, 0x14, 0x00,  // ........
-                                        /* 0108 */  0x00, 0x00, 0x10, 0x0E, 0x00, 0x00, 0x10, 0x0E,  // ........
-                                        /* 0110 */  0x00, 0x00, 0x64, 0x00, 0x00, 0x00, 0x69, 0x00,  // ..d...i.
-                                        /* 0118 */  0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01, 0x00,  // ........
+                                        /* 00E0 */  0x00, 0x00, 0xD0, 0x07, 0x00, 0x00, 0xD0, 0x07,  // ........
+                                        /* 00E8 */  0x00, 0x00, 0xD0, 0x07, 0x00, 0x00, 0x7E, 0x04,  // ......~.
+                                        /* 00F0 */  0x00, 0x00, 0xD0, 0x07, 0x00, 0x00, 0x7E, 0x04,  // ......~.
+                                        /* 00F8 */  0x00, 0x00, 0xD0, 0x07, 0x00, 0x00, 0x7E, 0x04,  // ......~.
+                                        /* 0100 */  0x00, 0x00, 0xA2, 0x03, 0x00, 0x00, 0x0A, 0x00,  // ........
+                                        /* 0108 */  0x00, 0x00, 0x80, 0x0C, 0x00, 0x00, 0x80, 0x0C,  // ........
+                                        /* 0110 */  0x00, 0x00, 0x50, 0x00, 0x00, 0x00, 0x69, 0x00,  // ..P...i.
+                                        /* 0118 */  0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
                                         /* 0120 */  0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00,  // ........
                                         /* 0128 */  0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x64, 0x00,  // ......d.
                                         /* 0130 */  0x00, 0x00, 0x64, 0x00, 0x00, 0x00, 0x64, 0x00,  // ..d...d.
@@ -550,12 +712,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                                         /* 0148 */  0x00, 0x00, 0x64, 0x00, 0x00, 0x00, 0x64, 0x00,  // ..d...d.
                                         /* 0150 */  0x00, 0x00, 0x64, 0x00, 0x00, 0x00, 0x00, 0x00,  // ..d.....
                                         /* 0158 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                        /* 0160 */  0x00, 0x00, 0x20, 0x03, 0x00, 0x00, 0x20, 0x03,  // .. ... .
-                                        /* 0168 */  0x00, 0x00, 0x20, 0x03, 0x00, 0x00, 0xBC, 0x02,  // .. .....
-                                        /* 0170 */  0x00, 0x00, 0x20, 0x03, 0x00, 0x00, 0xBC, 0x02,  // .. .....
-                                        /* 0178 */  0x00, 0x00, 0x20, 0x03, 0x00, 0x00, 0xBC, 0x02,  // .. .....
+                                        /* 0160 */  0x00, 0x00, 0xF4, 0x01, 0x00, 0x00, 0xF4, 0x01,  // ........
+                                        /* 0168 */  0x00, 0x00, 0xF4, 0x01, 0x00, 0x00, 0xBC, 0x02,  // ........
+                                        /* 0170 */  0x00, 0x00, 0xF4, 0x01, 0x00, 0x00, 0xBC, 0x02,  // ........
+                                        /* 0178 */  0x00, 0x00, 0xF4, 0x01, 0x00, 0x00, 0xBC, 0x02,  // ........
                                         /* 0180 */  0x00, 0x00, 0x71, 0x02, 0x00, 0x00, 0x32, 0x00,  // ..q...2.
-                                        /* 0188 */  0x00, 0x00, 0x84, 0x03, 0x00, 0x00, 0x84, 0x03,  // ........
+                                        /* 0188 */  0x00, 0x00, 0xE8, 0x03, 0x00, 0x00, 0xE8, 0x03,  // ........
                                         /* 0190 */  0x00, 0x00, 0x19, 0x00, 0x00, 0x00, 0x32, 0x00,  // ......2.
                                         /* 0198 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
                                         /* 01A0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
@@ -567,12 +729,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                                         /* 01D0 */  0x00, 0x00, 0x23, 0x00, 0x00, 0x00, 0x00, 0x00,  // ..#.....
                                         /* 01D8 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
                                         /* 01E0 */  0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0xFB, 0xEF,  // ........
-                                        /* 01E8 */  0xFF, 0xA7, 0x23, 0x06, 0x00, 0x00, 0x82, 0x00,  // ..#.....
+                                        /* 01E8 */  0xFF, 0xA7, 0x23, 0x06, 0x00, 0x00, 0x7D, 0x00,  // ..#...}.
                                         /* 01F0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                        /* 01F8 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x82, 0x00,  // ........
+                                        /* 01F8 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x7D, 0x00,  // ......}.
                                         /* 0200 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                        /* 0208 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x12, 0x00,  // ........
-                                        /* 0210 */  0x00, 0x00, 0x96, 0x00, 0x00, 0x00, 0x6E, 0x00,  // ......n.
+                                        /* 0208 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0F, 0x00,  // ........
+                                        /* 0210 */  0x00, 0x00, 0x82, 0x00, 0x00, 0x00, 0x6E, 0x00,  // ......n.
                                         /* 0218 */  0x69, 0x00, 0x69, 0x00, 0x73, 0x00, 0x73, 0x00,  // i.i.s.s.
                                         /* 0220 */  0x73, 0x00, 0x73, 0x00, 0x00, 0x00, 0x00, 0x00,  // s.s.....
                                         /* 0228 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
@@ -648,9 +810,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                                         /* 0458 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x32, 0x00,  // ......2.
                                         /* 0460 */  0x3C, 0x00, 0x00, 0x00, 0x90, 0x01, 0x90, 0x01,  // <.......
                                         /* 0468 */  0x90, 0x01, 0x90, 0x01, 0x90, 0x01, 0x90, 0x01,  // ........
-                                        /* 0470 */  0x90, 0x01, 0x90, 0x01, 0x90, 0x01, 0x0F, 0x00,  // ........
-                                        /* 0478 */  0xD0, 0x07, 0x98, 0x08, 0x10, 0x0E, 0x50, 0x00,  // ......P.
-                                        /* 0480 */  0xDC, 0x05, 0x01, 0x00, 0x01, 0x02, 0x00, 0x00,  // ........
+                                        /* 0470 */  0x90, 0x01, 0x90, 0x01, 0x90, 0x01, 0x19, 0x00,  // ........
+                                        /* 0478 */  0x60, 0x09, 0xF0, 0x0A, 0x80, 0x0C, 0x50, 0x00,  // `.....P.
+                                        /* 0480 */  0xDC, 0x05, 0x01, 0x00, 0x00, 0x02, 0x00, 0x00,  // ........
                                         /* 0488 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
                                         /* 0490 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
                                         /* 0498 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
@@ -682,10 +844,10 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                                         /* 0568 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xCB, 0x00,  // ........
                                         /* 0570 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
                                         /* 0578 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                        /* 0580 */  0x00, 0x00, 0x19, 0x00, 0x19, 0x00, 0x00, 0x00,  // ........
-                                        /* 0588 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                        /* 0590 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                        /* 0598 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+                                        /* 0580 */  0x00, 0x00, 0x19, 0x00, 0x19, 0x00, 0x6F, 0x06,  // ......o.
+                                        /* 0588 */  0x00, 0x00, 0xC5, 0x06, 0x00, 0x00, 0x35, 0x07,  // ......5.
+                                        /* 0590 */  0x00, 0x00, 0x6F, 0x06, 0x00, 0x00, 0xC5, 0x06,  // ..o.....
+                                        /* 0598 */  0x00, 0x00, 0x35, 0x07, 0x00, 0x00, 0x00, 0x00,  // ..5.....
                                         /* 05A0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
                                         /* 05A8 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
                                         /* 05B0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
@@ -716,6 +878,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                                         /* 0678 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
                                         /* 0680 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
                                         /* 0688 */  0x00, 0x00                                       // ..
+                                    }, 
+
+                                    "shikigva", 
+                                    Buffer (One)
+                                    {
+                                         0x80                                             // .
                                     }, 
 
                                     "@0,name", 
@@ -760,8 +928,8 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                         Device (HDAU)
                         {
                             Name (_ADR, One)  // _ADR: Address
-                            Name (_STR, Unicode ("Navi 10 HDMI Audio"))  // _STR: Description String
-                            Name (_SUN, One)  // _SUN: Slot User Number
+                            Name (_STR, Unicode ("Audio Endpoint"))  // _STR: Description String
+                            Name (_SUN, Zero)  // _SUN: Slot User Number
                             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                             {
                                 If ((Arg2 == Zero))
@@ -775,9 +943,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                                 Return (Package (0x0A)
                                 {
                                     "AAPL,slot-name", 
-                                    Buffer (0x1B)
+                                    Buffer (0x19)
                                     {
-                                        "Internal@0,1,0/0,0/0,0/0,1"
+                                        "Slot-0@0,1,0/0,0/0,0/0,1"
                                     }, 
 
                                     "device_type", 
@@ -789,7 +957,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                                     "hda-gfx", 
                                     Buffer (0x0A)
                                     {
-                                        "onboard-1"
+                                        "onboard-2"
                                     }, 
 
                                     "model", 
@@ -818,7 +986,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
             Device (PMCR)
             {
                 Name (_ADR, 0x001F0002)  // _ADR: Address
-                Name (_STR, Unicode ("Memory controller"))  // _STR: Description String
+                Name (_STR, Unicode ("PCI Memory Controller"))  // _STR: Description String
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
                     If ((Arg2 == Zero))
@@ -838,7 +1006,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                         }, 
 
                         "built-in", 
-                        Buffer (0x17)
+                        Buffer (0x04)
                         {
                              0x01, 0x00, 0x00, 0x00                           // ....
                         }, 
@@ -876,46 +1044,67 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                 }
             }
 
-            Device (TSUB)
+            Scope (RP03)
             {
-                Name (_ADR, 0x00140002)  // _ADR: Address
-                Name (_STR, Unicode ("Comet Lake PCH-V Thermal Subsystem"))  // _STR: Description String
-                Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+                Scope (PXSX)
                 {
-                    If (_OSI ("Darwin"))
+                    Name (_STA, Zero)  // _STA: Status
+                }
+
+                Device (ARPT)
+                {
+                    Name (_ADR, Zero)  // _ADR: Address
+                    Name (_STR, Unicode ("Network Adapters"))  // _STR: Description String
+                    Name (_SUN, One)  // _SUN: Slot User Number
+                    Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
                     {
-                        Return (Buffer (One)
+                        ToUUID ("5025030f-842f-4ab4-a561-99a5189762d0") /* Unknown UUID */, 
+                        Package (0x01)
                         {
-                             0x03                                             // .
-                        })
-                    }
-
-                    Return (Package (0x08)
-                    {
-                        "AAPL,slot-name", 
-                        Buffer (0x09)
-                        {
-                            "Internal"
-                        }, 
-
-                        "built-in", 
-                        Buffer (0x17)
-                        {
-                             0x01, 0x00, 0x00, 0x00                           // ....
-                        }, 
-
-                        "device_type", 
-                        Buffer (0x1D)
-                        {
-                            "Signal processing controller"
-                        }, 
-
-                        "model", 
-                        Buffer (0x25)
-                        {
-                            "Comet Lake-S PCH-V Thermal Subsystem"
+                            Package (0x02)
+                            {
+                                "StorageD3Enable", 
+                                One
+                            }
                         }
                     })
+                    Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                    {
+                        If ((Arg2 == Zero))
+                        {
+                            Return (Buffer (One)
+                            {
+                                 0x03                                             // .
+                            })
+                        }
+
+                        Return (Package (0x08)
+                        {
+                            "AAPL,slot-name", 
+                            Buffer (0x07)
+                            {
+                                "Slot-1"
+                            }, 
+
+                            "device_type", 
+                            Buffer (0x13)
+                            {
+                                "Network controller"
+                            }, 
+
+                            "model", 
+                            Buffer (0x11)
+                            {
+                                "Wireless-AC 9260"
+                            }, 
+
+                            "name", 
+                            Buffer (0x05)
+                            {
+                                "ARPT"
+                            }
+                        })
+                    }
                 }
             }
 
@@ -926,10 +1115,10 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                     Name (_STA, Zero)  // _STA: Status
                 }
 
-                Device (RTLK)
+                Device (RTL0)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("RTL8125 2.5GbE Controller"))  // _STR: Description String
+                    Name (_STR, Unicode ("Network Adapters"))  // _STR: Description String
                     Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
@@ -949,7 +1138,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                             }, 
 
                             "built-in", 
-                            Buffer (0x17)
+                            Buffer (0x04)
                             {
                                  0x01, 0x00, 0x00, 0x00                           // ....
                             }, 
@@ -986,8 +1175,8 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                 Device (XHC0)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("ASM2142 USB 3.1 Host Controller"))  // _STR: Description String
-                    Name (_SUN, 0x04)  // _SUN: Slot User Number
+                    Name (_STR, Unicode ("Universal Serial Bus Controller"))  // _STR: Description String
+                    Name (_SUN, 0x02)  // _SUN: Slot User Number
                     Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
@@ -1001,9 +1190,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                         Return (Package (0x0C)
                         {
                             "AAPL,slot-name", 
-                            Buffer (0x14)
+                            Buffer (0x07)
                             {
-                                "Internal@0,28,4/0,0"
+                                "Slot-2"
                             }, 
 
                             "acpi-wake-type", 
@@ -1013,13 +1202,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                             }, 
 
                             "built-in", 
-                            Buffer (0x17)
-                            {
-                                 0x01, 0x00, 0x00, 0x00                           // ....
-                            }, 
-
-                            "device-id", 
-                            Buffer (0x17)
+                            Buffer (0x04)
                             {
                                  0x01, 0x00, 0x00, 0x00                           // ....
                             }, 
@@ -1031,9 +1214,15 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                             }, 
 
                             "model", 
-                            Buffer (0x20)
+                            Buffer (0x22)
                             {
-                                "ASM2142 USB 3.1 Host Controller"
+                                "VL805/806 xHCI USB 3.0 Controller"
+                            }, 
+
+                            "name", 
+                            Buffer (0x05)
+                            {
+                                "XHC0"
                             }
                         })
                     }
@@ -1050,8 +1239,20 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                 Device (ANS0)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("NVMe SSD Controller MAP1001"))  // _STR: Description String
-                    Name (_SUN, Zero)  // _SUN: Slot User Number
+                    Name (_STR, Unicode ("Standard NVM Express Controller"))  // _STR: Description String
+                    Name (_SUN, 0x03)  // _SUN: Slot User Number
+                    Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
+                    {
+                        ToUUID ("5025030f-842f-4ab4-a561-99a5189762d0") /* Unknown UUID */, 
+                        Package (0x01)
+                        {
+                            Package (0x02)
+                            {
+                                "StorageD3Enable", 
+                                One
+                            }
+                        }
+                    })
                     Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
@@ -1065,19 +1266,19 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                         Return (Package (0x0E)
                         {
                             "AAPL,slot-name", 
-                            Buffer (0x14)
+                            Buffer (0x07)
                             {
-                                "Internal@0,29,0/0,0"
+                                "Slot-3"
                             }, 
 
                             "built-in", 
-                            Buffer (0x17)
+                            Buffer (0x04)
                             {
                                  0x01, 0x00, 0x00, 0x00                           // ....
                             }, 
 
                             "device-id", 
-                            Buffer (0x17)
+                            Buffer (0x04)
                             {
                                  0x06, 0xA8, 0x00, 0x00                           // ....
                             }, 
@@ -1089,19 +1290,19 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                             }, 
 
                             "model", 
-                            Buffer (0x14)
+                            Buffer (0x18)
                             {
-                                "SPCC M.2 NVMe-Maxio"
+                                "Kingston A2000 NVMe SSD"
                             }, 
 
                             "name", 
                             Buffer (0x05)
                             {
-                                "NVM0"
+                                "ANS0"
                             }, 
 
                             "vendor-id", 
-                            Buffer (0x17)
+                            Buffer (0x04)
                             {
                                  0x4D, 0x14, 0x00, 0x00                           // M...
                             }
@@ -1117,69 +1318,23 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                     Name (_STA, Zero)  // _STA: Status
                 }
 
-                Device (ARPT)
-                {
-                    Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("BCM4360 802.11ac Wireless Network Adapter"))  // _STR: Description String
-                    Name (_SUN, 0x03)  // _SUN: Slot User Number
-                    Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
-                    {
-                        If ((Arg2 == Zero))
-                        {
-                            Return (Buffer (One)
-                            {
-                                 0x03                                             // .
-                            })
-                        }
-
-                        Return (Package (0x0A)
-                        {
-                            "AAPL,slot-name", 
-                            Buffer (0x14)
-                            {
-                                "Internal@0,27,0/0,0"
-                            }, 
-
-                            "built-in", 
-                            Buffer (0x17)
-                            {
-                                 0x01, 0x00, 0x00, 0x00                           // ....
-                            }, 
-
-                            "device_type", 
-                            Buffer (0x13)
-                            {
-                                "Network controller"
-                            }, 
-
-                            "model", 
-                            Buffer (0x2A)
-                            {
-                                "BCM4360 802.11ac Wireless Network Adapter"
-                            }, 
-
-                            "name", 
-                            Buffer (0x05)
-                            {
-                                "WLAN"
-                            }
-                        })
-                    }
-                }
-            }
-
-            Scope (RP21)
-            {
-                Scope (PXSX)
-                {
-                    Name (_STA, Zero)  // _STA: Status
-                }
-
                 Device (ANS1)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("PS5013 E13 NVMe Controller"))  // _STR: Description String
-                    Name (_SUN, 0x02)  // _SUN: Slot User Number
+                    Name (_STR, Unicode ("Standard NVM Express Controller"))  // _STR: Description String
+                    Name (_SUN, 0x04)  // _SUN: Slot User Number
+                    Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
+                    {
+                        ToUUID ("5025030f-842f-4ab4-a561-99a5189762d0") /* Unknown UUID */, 
+                        Package (0x01)
+                        {
+                            Package (0x02)
+                            {
+                                "StorageD3Enable", 
+                                One
+                            }
+                        }
+                    })
                     Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
@@ -1193,19 +1348,19 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                         Return (Package (0x0E)
                         {
                             "AAPL,slot-name", 
-                            Buffer (0x14)
+                            Buffer (0x09)
                             {
-                                "Internal@0,27,4/0,0"
+                                "Slot-4"
                             }, 
 
                             "built-in", 
-                            Buffer (0x17)
+                            Buffer (0x04)
                             {
                                  0x01, 0x00, 0x00, 0x00                           // ....
                             }, 
 
                             "device-id", 
-                            Buffer (0x17)
+                            Buffer (0x04)
                             {
                                  0x06, 0xA8, 0x00, 0x00                           // ....
                             }, 
@@ -1217,19 +1372,101 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                             }, 
 
                             "model", 
-                            Buffer (0x15)
+                            Buffer (0x1B)
                             {
-                                "SPCC M.2 NVMe-Phison"
+                                "PS5013 E13 NVMe Controller"
                             }, 
 
                             "name", 
                             Buffer (0x05)
                             {
-                                "NVM1"
+                                "ANS1"
                             }, 
 
                             "vendor-id", 
-                            Buffer (0x17)
+                            Buffer (0x04)
+                            {
+                                 0x4D, 0x14, 0x00, 0x00                           // M...
+                            }
+                        })
+                    }
+                }
+            }
+
+            Scope (RP21)
+            {
+                Scope (PXSX)
+                {
+                    Name (_STA, Zero)  // _STA: Status
+                }
+
+                Device (ANS2)
+                {
+                    Name (_ADR, Zero)  // _ADR: Address
+                    Name (_STR, Unicode ("Standard NVM Express Controller"))  // _STR: Description String
+                    Name (_SUN, 0x05)  // _SUN: Slot User Number
+                    Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
+                    {
+                        ToUUID ("5025030f-842f-4ab4-a561-99a5189762d0") /* Unknown UUID */, 
+                        Package (0x01)
+                        {
+                            Package (0x02)
+                            {
+                                "StorageD3Enable", 
+                                One
+                            }
+                        }
+                    })
+                    Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+                    {
+                        If ((Arg2 == Zero))
+                        {
+                            Return (Buffer (One)
+                            {
+                                 0x03                                             // .
+                            })
+                        }
+
+                        Return (Package (0x0E)
+                        {
+                            "AAPL,slot-name", 
+                            Buffer (0x07)
+                            {
+                                "Slot-5"
+                            }, 
+
+                            "built-in", 
+                            Buffer (0x04)
+                            {
+                                 0x01, 0x00, 0x00, 0x00                           // ....
+                            }, 
+
+                            "device-id", 
+                            Buffer (0x04)
+                            {
+                                 0x06, 0xA8, 0x00, 0x00                           // ....
+                            }, 
+
+                            "device_type", 
+                            Buffer (0x1F)
+                            {
+                                "Non-Volatile memory controller"
+                            }, 
+
+                            "model", 
+                            Buffer (0x18)
+                            {
+                                "Kingston A2000 NVMe SSD"
+                            }, 
+
+                            "name", 
+                            Buffer (0x05)
+                            {
+                                "ANS2"
+                            }, 
+
+                            "vendor-id", 
+                            Buffer (0x04)
                             {
                                  0x4D, 0x14, 0x00, 0x00                           // M...
                             }
@@ -1246,7 +1483,19 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
             Device (SATA)
             {
                 Name (_ADR, 0x00170000)  // _ADR: Address
-                Name (_STR, Unicode ("400 Series Chipset Family SATA AHCI Controller"))  // _STR: Description String
+                Name (_STR, Unicode ("Storage Spaces Controller"))  // _STR: Description String
+                Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
+                {
+                    ToUUID ("5025030f-842f-4ab4-a561-99a5189762d0") /* Unknown UUID */, 
+                    Package (0x01)
+                    {
+                        Package (0x02)
+                        {
+                            "StorageD3Enable", 
+                            One
+                        }
+                    }
+                })
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
                     If ((Arg2 == Zero))
@@ -1266,13 +1515,13 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                         }, 
 
                         "built-in", 
-                        Buffer (0x17)
+                        Buffer (0x04)
                         {
                              0x01, 0x00, 0x00, 0x00                           // ....
                         }, 
 
                         "compatible", 
-                        Buffer (0x10)
+                        Buffer (0x0D)
                         {
                             "pci8086,a352"
                         }, 
@@ -1290,9 +1539,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                         }, 
 
                         "model", 
-                        Buffer (0x22)
+                        Buffer (0x2F)
                         {
-                            "Intel 11 Series Chipset Controler"
+                            "400 Series Chipset Family SATA AHCI Controller"
                         }, 
 
                         "name", 
@@ -1309,12 +1558,11 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                 Device (BUS0)
                 {
                     Name (_CID, "smbus")  // _CID: Compatible ID
+                    Name (_STR, Unicode ("Universal Serial Bus Controller"))  // _STR: Description String
                     Name (_ADR, 0x001F0004)  // _ADR: Address
-                    Name (_STR, Unicode ("Comet Lake PCH-V SMBus Host Controller "))  // _STR: Description String
                     Device (BLC0)
                     {
                         Name (_ADR, 0x57)  // _ADR: Address
-                        Name (_STR, Unicode ("AppleSMBusControllerICH"))  // _STR: Description String
                         Name (_CID, "smbus-blc")  // _CID: Compatible ID
                         Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                         {
@@ -1348,6 +1596,55 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                 }
             }
 
+            Device (TSUB)
+            {
+                Name (_ADR, 0x00140002)  // _ADR: Address
+                Name (_STR, Unicode ("Thermal Subsystem"))  // _STR: Description String
+                Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                {
+                    If (_OSI ("Darwin"))
+                    {
+                        Return (Buffer (One)
+                        {
+                             0x03                                             // .
+                        })
+                    }
+
+                    Return (Package (0x0A)
+                    {
+                        "AAPL,slot-name", 
+                        Buffer (0x09)
+                        {
+                            "Internal"
+                        }, 
+
+                        "built-in", 
+                        Buffer (0x04)
+                        {
+                             0x01, 0x00, 0x00, 0x00                           // ....
+                        }, 
+
+                        "device_type", 
+                        Buffer (0x1D)
+                        {
+                            "Signal processing controller"
+                        }, 
+
+                        "model", 
+                        Buffer (0x23)
+                        {
+                            "Comet Lake PCH-V Thermal Subsystem"
+                        }, 
+
+                        "name", 
+                        Buffer (0x05)
+                        {
+                            "TSUB"
+                        }
+                    })
+                }
+            }
+
             Scope (XHC)
             {
                 Name (_STA, Zero)  // _STA: Status
@@ -1356,7 +1653,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
             Device (XHC1)
             {
                 Name (_ADR, 0x00140000)  // _ADR: Address
-                Name (_STR, Unicode ("Comet Lake PCH-V USB Controller"))  // _STR: Description String
+                Name (_STR, Unicode ("Universal Serial Bus Controller"))  // _STR: Description String
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
                     If ((Arg2 == Zero))
@@ -1367,12 +1664,42 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
                         })
                     }
 
-                    Return (Package (0x02)
+                    Return (Package (0x0C)
                     {
+                        "AAPL,slot-name", 
+                        Buffer (0x09)
+                        {
+                            "Internal"
+                        }, 
+
                         "acpi-wake-type", 
-                        Buffer (0x17)
+                        Buffer (One)
                         {
                              0x01                                             // .
+                        }, 
+
+                        "built-in", 
+                        Buffer (0x04)
+                        {
+                             0x01, 0x00, 0x00, 0x00                           // ....
+                        }, 
+
+                        "device_type", 
+                        Buffer (0x0F)
+                        {
+                            "USB controller"
+                        }, 
+
+                        "model", 
+                        Buffer (0x20)
+                        {
+                            "Comet Lake PCH-V USB Controller"
+                        }, 
+
+                        "name", 
+                        Buffer (0x05)
+                        {
+                            "XHC1"
                         }
                     })
                 }
@@ -1382,7 +1709,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
         Device (USBX)
         {
             Name (_ADR, Zero)  // _ADR: Address
-            Name (_STR, Unicode ("PXSX/XHC Power Control"))  // _STR: Description String
+            Name (_STR, Unicode ("USB Power Controller"))  // _STR: Description String
             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
             {
                 If ((Arg2 == Zero))
@@ -1408,97 +1735,954 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
         }
     }
 }
+
 ```
-<p align="center"><img width="1405" alt="Screen Shot 2022-02-25 at 9 51 15 PM" src="https://user-images.githubusercontent.com/72515939/155726770-b850f956-9676-4ac8-9cdc-05ec3a3b884d.png"><p/>
 
-<p align="center"><img width="1405" alt="Screen Shot 2022-02-25 at 9 51 53 PM" src="https://user-images.githubusercontent.com/72515939/155726776-df0830cf-eb5c-4c11-b2a7-17393ee87aa1.png"><p/>
-
-
-### 3.0 - DeviceProperties
-
-- **Add** | **Delete** |
-
-1. `PciRoot(0x0)/Pci(0x14,0x0)` just a patch are only used for display information related to the `CML PCH-V USB Controller` via `About This Mac/System Report/PCI`). Without this patch, information related to the device is working but not displayed. It's Optional.
-  
-2. `PciRoot(0x0)/Pci(0x1F,0x4)` just a patch are only used for display information related to the `Comet Lake PCH-V SMBus Host Controllerr` via `About This Mac/System Report/PCI`). Without this patch, information related to the device is working but not displayed. It's Optional.
-  
+### 1.2 - Config.plist
 
 ```xml
-</dict>
-	<key>DeviceProperties</key>
-	<dict>
-		<key>Add</key>
-		<dict>
-			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
-			<dict/>
-			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x1)</key>
-			<dict/>
-			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>USB controller</string>
-				<key>model</key>
-				<string>Comet Lake PCH-V USB Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x17,0x0)</key>
-			<dict/>
-			<key>PciRoot(0x0)/Pci(0x1B,0x0)/Pci(0x0,0x0)</key>
-			<dict/>
-			<key>PciRoot(0x0)/Pci(0x1B,0x4)/Pci(0x0,0x0)</key>
-			<dict/>
-			<key>PciRoot(0x0)/Pci(0x1C,0x0)/Pci(0x0,0x0)</key>
-			<dict/>
-			<key>PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)</key>
-			<dict/>
-			<key>PciRoot(0x0)/Pci(0x1D,0x0)/Pci(0x0,0x0)</key>
-			<dict/>
-			<key>PciRoot(0x0)/Pci(0x1F,0x2)</key>
-			<dict/>
-			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
-			<dict/>
-			<key>PciRoot(0x0)/Pci(0x1F,0x4)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>IOPCIMSIMode</key>
-				<integer>1</integer>
-				<key>built-in</key>
-				<data>
-				AQ==
-				</data>
-				<key>device_type</key>
-				<string>SMBus</string>
-				<key>model</key>
-				<string>Comet Lake PCH-V SMBus Host Controller</string>
-				<key>name</key>
-				<string>SBUS</string>
-			</dict>
-		</dict>
-		<key>Delete</key>
-		<dict/>
-	</dict>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>ACPI</key>
+        <dict>
+            <key>Add</key>
+            <array>
+                <dict>
+                    <key>Comment</key>
+                    <string>SSDT-Mac.aml</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>SSDT-Mac.aml</string>
+                </dict>
+            </array>
+            <key>Delete</key>
+            <array/>
+            <key>Patch</key>
+            <array/>
+            <key>Quirks</key>
+            <dict>
+                <key>FadtEnableReset</key>
+                <false/>
+                <key>NormalizeHeaders</key>
+                <false/>
+                <key>RebaseRegions</key>
+                <false/>
+                <key>ResetHwSig</key>
+                <false/>
+                <key>ResetLogoStatus</key>
+                <false/>
+                <key>SyncTableIds</key>
+                <false/>
+            </dict>
+        </dict>
+        <key>Booter</key>
+        <dict>
+            <key>MmioWhitelist</key>
+            <array/>
+            <key>Patch</key>
+            <array/>
+            <key>Quirks</key>
+            <dict>
+                <key>AllowRelocationBlock</key>
+                <false/>
+                <key>AvoidRuntimeDefrag</key>
+                <true/>
+                <key>DevirtualiseMmio</key>
+                <true/>
+                <key>DisableSingleUser</key>
+                <false/>
+                <key>DisableVariableWrite</key>
+                <false/>
+                <key>DiscardHibernateMap</key>
+                <false/>
+                <key>EnableSafeModeSlide</key>
+                <true/>
+                <key>EnableWriteUnprotector</key>
+                <false/>
+                <key>ForceBooterSignature</key>
+                <false/>
+                <key>ForceExitBootServices</key>
+                <false/>
+                <key>ProtectMemoryRegions</key>
+                <false/>
+                <key>ProtectSecureBoot</key>
+                <false/>
+                <key>ProtectUefiServices</key>
+                <true/>
+                <key>ProvideCustomSlide</key>
+                <true/>
+                <key>ProvideMaxSlide</key>
+                <integer>0</integer>
+                <key>RebuildAppleMemoryMap</key>
+                <true/>
+                <key>ResizeAppleGpuBars</key>
+                <integer>-1</integer>
+                <key>SetupVirtualMap</key>
+                <false/>
+                <key>SignalAppleOS</key>
+                <false/>
+                <key>SyncRuntimePermissions</key>
+                <true/>
+            </dict>
+        </dict>
+        <key>DeviceProperties</key>
+        <dict>
+            <key>Add</key>
+            <dict>
+                <key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
+                <dict/>
+                <key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x1)</key>
+                <dict/>
+                <key>PciRoot(0x0)/Pci(0x14,0x0)</key>
+                <dict/>
+                <key>PciRoot(0x0)/Pci(0x16,0x0)</key>
+                <dict/>
+                <key>PciRoot(0x0)/Pci(0x17,0x0)</key>
+                <dict/>
+                <key>PciRoot(0x0)/Pci(0x1B,0x0)/Pci(0x0,0x0)</key>
+                <dict/>
+                <key>PciRoot(0x0)/Pci(0x1B,0x4)/Pci(0x0,0x0)</key>
+                <dict/>
+                <key>PciRoot(0x0)/Pci(0x1C,0x0)/Pci(0x0,0x0)</key>
+                <dict/>
+                <key>PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)</key>
+                <dict/>
+                <key>PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)</key>
+                <dict/>
+                <key>PciRoot(0x0)/Pci(0x1D,0x0)/Pci(0x0,0x0)</key>
+                <dict/>
+                <key>PciRoot(0x0)/Pci(0x1F,0x2)</key>
+                <dict/>
+                <key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
+                <dict/>
+                <key>PciRoot(0x0)/Pci(0x1F,0x4)</key>
+                <dict>
+                    <key>AAPL,slot-name</key>
+                    <string>Internal</string>
+                    <key>IOPCIMSIMode</key>
+                    <integer>1</integer>
+                    <key>device_type</key>
+                    <string>SMBus</string>
+                    <key>model</key>
+                    <string>Comet Lake PCH-V SMBus Host Controller</string>
+                    <key>name</key>
+                    <string>SBUS</string>
+                </dict>
+                <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+                <dict/>
+            </dict>
+            <key>Delete</key>
+            <dict/>
+        </dict>
+        <key>Kernel</key>
+        <dict>
+            <key>Add</key>
+            <array>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>Lilu.kext</string>
+                    <key>Comment</key>
+                    <string>V1.6.0 | Lilu.kext</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/Lilu</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>VirtualSMC.kext</string>
+                    <key>Comment</key>
+                    <string>V1.2.9</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/VirtualSMC</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>AppleALC.kext</string>
+                    <key>Comment</key>
+                    <string>V1.7.0 | AppleALC.kext</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/AppleALC</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>SMCProcessor.kext</string>
+                    <key>Comment</key>
+                    <string>V1.2.9 | SMCProcessor.kext</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/SMCProcessor</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>SMCSuperIO.kext</string>
+                    <key>Comment</key>
+                    <string>V1.2.9 | SMCSuperIO.kext</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/SMCSuperIO</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>SMCRadeonGPU.kext</string>
+                    <key>Comment</key>
+                    <string>V0.3.1 | SMCRadeonGPU.kext</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/SMCRadeonGPU</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>RadeonSensor.kext</string>
+                    <key>Comment</key>
+                    <string>V0.3.1 | RadeonSensor.kext</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/RadeonSensor</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>IntelBluetoothFirmware.kext</string>
+                    <key>Comment</key>
+                    <string>V2.1.0 | IntelBluetoothFirmware.kext</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/IntelBluetoothFirmware</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>LucyRTL8125Ethernet.kext</string>
+                    <key>Comment</key>
+                    <string>V1.1.0d12 | LucyRTL8125Ethernet.kext</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/LucyRTL8125Ethernet</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>AirportItlwm.kext</string>
+                    <key>Comment</key>
+                    <string>V2.1.0 | AirportItlwm.kext</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/AirportItlwm</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>BlueToolFixup.kext</string>
+                    <key>Comment</key>
+                    <string>V2.6.1 | BlueToolFixup.kext</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/BlueToolFixup</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>USBMap.kext</string>
+                    <key>Comment</key>
+                    <string>V1.1 | USBMap.kext</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string></string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+                <dict>
+                    <key>Arch</key>
+                    <string>x86_64</string>
+                    <key>BundlePath</key>
+                    <string>WhateverGreen.kext</string>
+                    <key>Comment</key>
+                    <string>V1.5.8 | WhateverGreen.kext</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>ExecutablePath</key>
+                    <string>Contents/MacOS/WhateverGreen</string>
+                    <key>MaxKernel</key>
+                    <string></string>
+                    <key>MinKernel</key>
+                    <string></string>
+                    <key>PlistPath</key>
+                    <string>Contents/Info.plist</string>
+                </dict>
+            </array>
+            <key>Block</key>
+            <array/>
+            <key>Emulate</key>
+            <dict>
+                <key>Cpuid1Data</key>
+                <data></data>
+                <key>Cpuid1Mask</key>
+                <data></data>
+                <key>DummyPowerManagement</key>
+                <false/>
+                <key>MaxKernel</key>
+                <string></string>
+                <key>MinKernel</key>
+                <string></string>
+            </dict>
+            <key>Force</key>
+            <array/>
+            <key>Patch</key>
+            <array/>
+            <key>Quirks</key>
+            <dict>
+                <key>AppleCpuPmCfgLock</key>
+                <false/>
+                <key>AppleXcpmCfgLock</key>
+                <false/>
+                <key>AppleXcpmExtraMsrs</key>
+                <false/>
+                <key>AppleXcpmForceBoost</key>
+                <false/>
+                <key>CustomSMBIOSGuid</key>
+                <true/>
+                <key>DisableIoMapper</key>
+                <true/>
+                <key>DisableLinkeditJettison</key>
+                <true/>
+                <key>DisableRtcChecksum</key>
+                <false/>
+                <key>ExtendBTFeatureFlags</key>
+                <false/>
+                <key>ExternalDiskIcons</key>
+                <false/>
+                <key>ForceSecureBootScheme</key>
+                <false/>
+                <key>IncreasePciBarSize</key>
+                <false/>
+                <key>LapicKernelPanic</key>
+                <false/>
+                <key>LegacyCommpage</key>
+                <false/>
+                <key>PanicNoKextDump</key>
+                <true/>
+                <key>PowerTimeoutKernelPanic</key>
+                <true/>
+                <key>ProvideCurrentCpuInfo</key>
+                <false/>
+                <key>SetApfsTrimTimeout</key>
+                <integer>0</integer>
+                <key>ThirdPartyDrives</key>
+                <false/>
+                <key>XhciPortLimit</key>
+                <false/>
+            </dict>
+            <key>Scheme</key>
+            <dict>
+                <key>CustomKernel</key>
+                <false/>
+                <key>FuzzyMatch</key>
+                <true/>
+                <key>KernelArch</key>
+                <string>x86_64</string>
+                <key>KernelCache</key>
+                <string>Auto</string>
+            </dict>
+        </dict>
+        <key>Misc</key>
+        <dict>
+            <key>BlessOverride</key>
+            <array/>
+            <key>Boot</key>
+            <dict>
+                <key>ConsoleAttributes</key>
+                <integer>0</integer>
+                <key>HibernateMode</key>
+                <string>Auto</string>
+                <key>HideAuxiliary</key>
+                <true/>
+                <key>LauncherOption</key>
+                <string>Full</string>
+                <key>LauncherPath</key>
+                <string>Default</string>
+                <key>PickerAttributes</key>
+                <integer>17</integer>
+                <key>PickerAudioAssist</key>
+                <false/>
+                <key>PickerMode</key>
+                <string>External</string>
+                <key>PickerVariant</key>
+                <string>Acidanthera\GoldenGate</string>
+                <key>PollAppleHotKeys</key>
+                <false/>
+                <key>ShowPicker</key>
+                <true/>
+                <key>TakeoffDelay</key>
+                <integer>0</integer>
+                <key>Timeout</key>
+                <integer>5</integer>
+            </dict>
+            <key>Debug</key>
+            <dict>
+                <key>AppleDebug</key>
+                <false/>
+                <key>ApplePanic</key>
+                <false/>
+                <key>DisableWatchDog</key>
+                <false/>
+                <key>DisplayDelay</key>
+                <integer>0</integer>
+                <key>DisplayLevel</key>
+                <integer>0</integer>
+                <key>LogModules</key>
+                <string>*</string>
+                <key>SerialInit</key>
+                <false/>
+                <key>SysReport</key>
+                <false/>
+                <key>Target</key>
+                <integer>0</integer>
+            </dict>
+            <key>Entries</key>
+            <array/>
+            <key>Security</key>
+            <dict>
+                <key>AllowNvramReset</key>
+                <true/>
+                <key>AllowSetDefault</key>
+                <true/>
+                <key>AllowToggleSip</key>
+                <true/>
+                <key>ApECID</key>
+                <integer>0</integer>
+                <key>AuthRestart</key>
+                <false/>
+                <key>BlacklistAppleUpdate</key>
+                <true/>
+                <key>DmgLoading</key>
+                <string>Signed</string>
+                <key>EnablePassword</key>
+                <false/>
+                <key>ExposeSensitiveData</key>
+                <integer>6</integer>
+                <key>HaltLevel</key>
+                <integer>2147483648</integer>
+                <key>PasswordHash</key>
+                <data></data>
+                <key>PasswordSalt</key>
+                <data></data>
+                <key>ScanPolicy</key>
+                <integer>2690819</integer>
+                <key>SecureBootModel</key>
+                <string>Default</string>
+                <key>Vault</key>
+                <string>Optional</string>
+            </dict>
+            <key>Tools</key>
+            <array>
+                <dict>
+                    <key>Arguments</key>
+                    <string></string>
+                    <key>Auxiliary</key>
+                    <true/>
+                    <key>Comment</key>
+                    <string>CleanNvram.efi</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Flavour</key>
+                    <string>Auto</string>
+                    <key>Name</key>
+                    <string>CleanNvram.efi</string>
+                    <key>Path</key>
+                    <string>CleanNvram.efi</string>
+                    <key>RealPath</key>
+                    <false/>
+                    <key>TextMode</key>
+                    <false/>
+                </dict>
+            </array>
+        </dict>
+        <key>NVRAM</key>
+        <dict>
+            <key>Add</key>
+            <dict>
+                <key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
+                <dict>
+                    <key>DefaultBackgroundColor</key>
+                    <data>AAAAAA==</data>
+                    <key>UIScale</key>
+                    <data>AQ==</data>
+                </dict>
+                <key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
+                <dict>
+                    <key>rtc-blacklist</key>
+                    <data></data>
+                </dict>
+                <key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
+                <dict>
+                    <key>ForceDisplayRotationInEFI</key>
+                    <integer>0</integer>
+                    <key>SystemAudioVolume</key>
+                    <data>Rg==</data>
+                    <key>boot-args</key>
+                    <string>agdpmod=pikera -igfxfw=2 igfxmetal=1</string>
+                    <key>csr-active-config</key>
+                    <data>AAAAAA==</data>
+                    <key>prev-lang:kbd</key>
+                    <data>ZW4tVVM6MA==</data>
+                    <key>run-efi-updater</key>
+                    <string>No</string>
+                </dict>
+            </dict>
+            <key>Delete</key>
+            <dict>
+                <key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
+                <array>
+                    <string>UIScale</string>
+                    <string>DefaultBackgroundColor</string>
+                </array>
+                <key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
+                <array>
+                    <string>rtc-blacklist</string>
+                </array>
+                <key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
+                <array>
+                    <string>boot-args</string>
+                </array>
+            </dict>
+            <key>LegacyEnable</key>
+            <false/>
+            <key>LegacyOverwrite</key>
+            <false/>
+            <key>LegacySchema</key>
+            <dict>
+                <key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
+                <array>
+                    <string>EFILoginHiDPI</string>
+                    <string>EFIBluetoothDelay</string>
+                    <string>LocationServicesEnabled</string>
+                    <string>SystemAudioVolume</string>
+                    <string>SystemAudioVolumeDB</string>
+                    <string>SystemAudioVolumeSaved</string>
+                    <string>bluetoothActiveControllerInfo</string>
+                    <string>bluetoothInternalControllerInfo</string>
+                    <string>flagstate</string>
+                    <string>fmm-computer-name</string>
+                    <string>fmm-mobileme-token-FMM</string>
+                    <string>fmm-mobileme-token-FMM-BridgeHasAccount</string>
+                    <string>nvda_drv</string>
+                    <string>prev-lang:kbd</string>
+                </array>
+                <key>8BE4DF61-93CA-11D2-AA0D-00E098032B8C</key>
+                <array>
+                    <string>Boot0080</string>
+                    <string>Boot0081</string>
+                    <string>Boot0082</string>
+                    <string>BootNext</string>
+                    <string>BootOrder</string>
+                </array>
+            </dict>
+            <key>WriteFlash</key>
+            <true/>
+        </dict>
+        <key>PlatformInfo</key>
+        <dict>
+            <key>Automatic</key>
+            <true/>
+            <key>CustomMemory</key>
+            <false/>
+            <key>Generic</key>
+            <dict>
+                <key>AdviseFeatures</key>
+                <false/>
+                <key>MLB</key>
+                <string>XXXXXXXXXXXXXX</string>
+                <key>MaxBIOSVersion</key>
+                <false/>
+                <key>ProcessorType</key>
+                <integer>0</integer>
+                <key>ROM</key>
+                <data>2LvBAZOm</data>
+                <key>SpoofVendor</key>
+                <true/>
+                <key>SystemMemoryStatus</key>
+                <string>Auto</string>
+                <key>SystemProductName</key>
+                <string>iMac19,2</string>
+                <key>SystemSerialNumber</key>
+                <string>XXXXXXXXXXXXX</string>
+                <key>SystemUUID</key>
+                <string>XXXXXXXX-XXXX-XXXX-XXXXX-XXXXXXX</string>
+            </dict>
+            <key>UpdateDataHub</key>
+            <true/>
+            <key>UpdateNVRAM</key>
+            <true/>
+            <key>UpdateSMBIOS</key>
+            <true/>
+            <key>UpdateSMBIOSMode</key>
+            <string>Custom</string>
+            <key>UseRawUuidEncoding</key>
+            <false/>
+        </dict>
+        <key>UEFI</key>
+        <dict>
+            <key>APFS</key>
+            <dict>
+                <key>EnableJumpstart</key>
+                <true/>
+                <key>GlobalConnect</key>
+                <false/>
+                <key>HideVerbose</key>
+                <true/>
+                <key>JumpstartHotPlug</key>
+                <false/>
+                <key>MinDate</key>
+                <integer>0</integer>
+                <key>MinVersion</key>
+                <integer>0</integer>
+            </dict>
+            <key>AppleInput</key>
+            <dict>
+                <key>AppleEvent</key>
+                <string>Builtin</string>
+                <key>CustomDelays</key>
+                <false/>
+                <key>GraphicsInputMirroring</key>
+                <true/>
+                <key>KeyInitialDelay</key>
+                <integer>0</integer>
+                <key>KeySubsequentDelay</key>
+                <integer>5</integer>
+                <key>PointerPollMask</key>
+                <integer>-1</integer>
+                <key>PointerPollMax</key>
+                <integer>80</integer>
+                <key>PointerPollMin</key>
+                <integer>10</integer>
+                <key>PointerSpeedDiv</key>
+                <integer>1</integer>
+                <key>PointerSpeedMul</key>
+                <integer>1</integer>
+            </dict>
+            <key>Audio</key>
+            <dict>
+                <key>AudioCodec</key>
+                <integer>0</integer>
+                <key>AudioDevice</key>
+                <string>PciRoot(0x0)/Pci(0x1F,0x3)</string>
+                <key>AudioOutMask</key>
+                <integer>1</integer>
+                <key>AudioSupport</key>
+                <false/>
+                <key>DisconnectHda</key>
+                <false/>
+                <key>MaximumGain</key>
+                <integer>-15</integer>
+                <key>MinimumAssistGain</key>
+                <integer>-30</integer>
+                <key>MinimumAudibleGain</key>
+                <integer>-55</integer>
+                <key>PlayChime</key>
+                <string>Auto</string>
+                <key>ResetTrafficClass</key>
+                <false/>
+                <key>SetupDelay</key>
+                <integer>0</integer>
+            </dict>
+            <key>ConnectDrivers</key>
+            <true/>
+            <key>Drivers</key>
+            <array>
+                <dict>
+                    <key>Arguments</key>
+                    <string></string>
+                    <key>Comment</key>
+                    <string>HfsPlus.efi</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>HfsPlus.efi</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <string></string>
+                    <key>Comment</key>
+                    <string>OpenCanopy.efi</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>OpenCanopy.efi</string>
+                </dict>
+                <dict>
+                    <key>Arguments</key>
+                    <string></string>
+                    <key>Comment</key>
+                    <string>OpenRuntime.efi</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>OpenRuntime.efi</string>
+                </dict>
+            </array>
+            <key>Input</key>
+            <dict>
+                <key>KeyFiltering</key>
+                <false/>
+                <key>KeyForgetThreshold</key>
+                <integer>5</integer>
+                <key>KeySupport</key>
+                <true/>
+                <key>KeySupportMode</key>
+                <string>Auto</string>
+                <key>KeySwap</key>
+                <false/>
+                <key>PointerSupport</key>
+                <false/>
+                <key>PointerSupportMode</key>
+                <string>ASUS</string>
+                <key>TimerResolution</key>
+                <integer>50000</integer>
+            </dict>
+            <key>Output</key>
+            <dict>
+                <key>ClearScreenOnModeSwitch</key>
+                <false/>
+                <key>ConsoleMode</key>
+                <string></string>
+                <key>DirectGopRendering</key>
+                <false/>
+                <key>ForceResolution</key>
+                <false/>
+                <key>GopPassThrough</key>
+                <string>Disabled</string>
+                <key>IgnoreTextInGraphics</key>
+                <false/>
+                <key>ProvideConsoleGop</key>
+                <true/>
+                <key>ReconnectGraphicsOnConnect</key>
+                <false/>
+                <key>ReconnectOnResChange</key>
+                <false/>
+                <key>ReplaceTabWithSpace</key>
+                <false/>
+                <key>Resolution</key>
+                <string>Max</string>
+                <key>SanitiseClearScreen</key>
+                <false/>
+                <key>TextRenderer</key>
+                <string>BuiltinGraphics</string>
+                <key>UIScale</key>
+                <integer>-1</integer>
+                <key>UgaPassThrough</key>
+                <false/>
+            </dict>
+            <key>ProtocolOverrides</key>
+            <dict>
+                <key>AppleAudio</key>
+                <false/>
+                <key>AppleBootPolicy</key>
+                <false/>
+                <key>AppleDebugLog</key>
+                <false/>
+                <key>AppleEg2Info</key>
+                <false/>
+                <key>AppleFramebufferInfo</key>
+                <false/>
+                <key>AppleImageConversion</key>
+                <false/>
+                <key>AppleImg4Verification</key>
+                <false/>
+                <key>AppleKeyMap</key>
+                <false/>
+                <key>AppleRtcRam</key>
+                <false/>
+                <key>AppleSecureBoot</key>
+                <false/>
+                <key>AppleSmcIo</key>
+                <false/>
+                <key>AppleUserInterfaceTheme</key>
+                <false/>
+                <key>DataHub</key>
+                <false/>
+                <key>DeviceProperties</key>
+                <false/>
+                <key>FirmwareVolume</key>
+                <true/>
+                <key>HashServices</key>
+                <false/>
+                <key>OSInfo</key>
+                <false/>
+                <key>UnicodeCollation</key>
+                <false/>
+            </dict>
+            <key>Quirks</key>
+            <dict>
+                <key>ActivateHpetSupport</key>
+                <false/>
+                <key>DisableSecurityPolicy</key>
+                <false/>
+                <key>EnableVectorAcceleration</key>
+                <true/>
+                <key>EnableVmx</key>
+                <false/>
+                <key>ExitBootServicesDelay</key>
+                <integer>0</integer>
+                <key>ForceOcWriteFlash</key>
+                <false/>
+                <key>ForgeUefiSupport</key>
+                <false/>
+                <key>IgnoreInvalidFlexRatio</key>
+                <false/>
+                <key>ReleaseUsbOwnership</key>
+                <false/>
+                <key>ReloadOptionRoms</key>
+                <false/>
+                <key>RequestBootVarRouting</key>
+                <true/>
+                <key>ResizeGpuBars</key>
+                <integer>-1</integer>
+                <key>TscSyncTimeout</key>
+                <integer>0</integer>
+                <key>UnblockFsConnect</key>
+                <false/>
+            </dict>
+            <key>ReservedMemory</key>
+            <array>
+                <dict>
+                    <key>Address</key>
+                    <integer>569344</integer>
+                    <key>Comment</key>
+                    <string>Fix black screen on wake from hibernation for Lenovo Thinkpad T490</string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>Size</key>
+                    <integer>4096</integer>
+                    <key>Type</key>
+                    <string>RuntimeCode</string>
+                </dict>
+                <dict>
+                    <key>Address</key>
+                    <integer>268435456</integer>
+                    <key>Comment</key>
+                    <string>HD3000: IGPU memory corruption errata</string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>Size</key>
+                    <integer>268435456</integer>
+                    <key>Type</key>
+                    <string>Reserved</string>
+                </dict>
+            </array>
+        </dict>
+    </dict>
+</plist>
 ```
-<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 56 07 PM" src="https://user-images.githubusercontent.com/72515939/155727382-5ebb3a2c-167b-4315-9d79-70e073eb4888.png"><p/>
-<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 23 50 PM" src="https://user-images.githubusercontent.com/72515939/155723321-50ab188d-5eb7-48a4-b646-6c5221e7d316.png"><p/>
-<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 23 55 PM" src="https://user-images.githubusercontent.com/72515939/155723344-c35c57b1-0d8d-433b-8a10-a12f44838072.png"><p/>
-<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 23 59 PM" src="https://user-images.githubusercontent.com/72515939/155723351-60a00513-3fcb-4d3c-9fc6-593b304a9e1a.png"><p/>
-<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 24 07 PM" src="https://user-images.githubusercontent.com/72515939/155723355-aff97499-a4c9-484f-a759-3b157951b931.png"><p/>
-<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 24 12 PM" src="https://user-images.githubusercontent.com/72515939/155723926-d6cea777-f0bb-4d88-8a89-fd374488ca41.png"><p/>
-<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 24 18 PM" src="https://user-images.githubusercontent.com/72515939/155723375-14b14d0c-87bd-4fb4-ae44-66d4b1e16612.png"><p/>
-<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 24 23 PM" src="https://user-images.githubusercontent.com/72515939/155723385-4f6e69f6-7a21-41ec-8e46-e60121b54357.png"><p/>
-<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 24 27 PM" src="https://user-images.githubusercontent.com/72515939/155723392-90eee8b0-724a-4776-b213-de7f7cc23959.png"><p/>
-<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 24 40 PM" src="https://user-images.githubusercontent.com/72515939/155723398-dfa6a99a-2c65-4602-ac88-3cfc587e5cdf.png"><p/>
-<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 24 54 PM" src="https://user-images.githubusercontent.com/72515939/155723407-05dc9c4d-f5d8-4493-922a-b0e197e3244c.png"><p/>
-<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 25 03 PM" src="https://user-images.githubusercontent.com/72515939/155723414-58fbfe77-fbc3-44c4-972e-548a354b0a6a.png"><p/>
-<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 30 41 PM" src="https://user-images.githubusercontent.com/72515939/155723661-9cbe4969-2d44-4329-b509-af6b6b67f67b.png"><p/>
 
-
-### 4.0 - Kernel
+### 2.0 - Kernel Extension
 
 - **Add** | **Block** | **Emulate** | **Force** | **Patch** | **Quirks** | **Scheme**
-  
 
 | Kext | Information |
 | --- | --- |
@@ -1511,1016 +2695,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "ACPI", 0x00000000)
 | SMCRadeonGPU | Based on `FakeSMCs` `RadeonMonitor` to provide `GPU` temperature to a dedicated gadget `without relying` on `FakeSMC` being installed and can therefore be used with `VirtualSMC` instead |
 | RadeonSensor | To read the `GPU` temperature. `Lilu` is required. |
 | LucyRTL8125Ethernet | `Realtek RTL8125 2.5GBit Ethernet Controllers` driver |
-| AGPMInjector | `Apple Graphics Power Management` (AGPM). Only need when selected `SMBIOS` is `not freatured` with certain selected `DGPU`. Patch:`AGPM`/`Machines`/`iMacPro1,1`/`Vendor1002Device7340.`Require [AGPMinjector](https://github.com/Pavo-IM/AGPMInjector) |
+| AirportItlwm | An `Intel Wi-Fi Adapter` Kernel Extension for macOS, based on the OpenBSD Project |
+| IntelBluetoothFirmware | `Kext` that uploads `Intel Wireless Bluetooth Firmware` to provide `native Bluetooth` in macOS. The firmware binary files are from the `Linux Open Source Project` |
+| BluetoolFixup | Apple `macOS Monterey` has changed parts of the `Bluetooth` stack from `kernel-space` to `user-space`. Note: Required when bluetooth not working properly in macOS 12. |
 | USBMap | Kext to `route` selected `USB ports`. This is `compulsory to handle` `15 port limit` requirements by macOS. Require [USBMap](https://github.com/corpnewt/USBMap) or [USBToolbox](https://github.com/USBToolBox/tool) |
-| Moussey | My `modified` kext based from late [FakeAppleWirelessMouse.kext](https://github.com/ArchCryptonIO/Kext-Collection) |
 
-```xml
-</dict>
-	<key>Kernel</key>
-	<dict>
-		<key>Add</key>
-		<array>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>Lilu.kext</string>
-				<key>Comment</key>
-				<string>V1.6.0</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/Lilu</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>VirtualSMC.kext</string>
-				<key>Comment</key>
-				<string>V1.2.8</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/VirtualSMC</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>AppleALC.kext</string>
-				<key>Comment</key>
-				<string>V1.6.9</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/AppleALC</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>WhateverGreen.kext</string>
-				<key>Comment</key>
-				<string>V1.5.7</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/WhateverGreen</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>SMCProcessor.kext</string>
-				<key>Comment</key>
-				<string>V1.2.8</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/SMCProcessor</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>SMCSuperIO.kext</string>
-				<key>Comment</key>
-				<string>V1.2.8</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/SMCSuperIO</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>SMCRadeonGPU.kext</string>
-				<key>Comment</key>
-				<string>V0.3.1</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/SMCRadeonGPU</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>RadeonSensor.kext</string>
-				<key>Comment</key>
-				<string>V0.3.1</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/RadeonSensor</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>LucyRTL8125Ethernet.kext</string>
-				<key>Comment</key>
-				<string>V1.1.0d12</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/LucyRTL8125Ethernet</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>AGPMInjector.kext</string>
-				<key>Comment</key>
-				<string>V127</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>USBMap.kext</string>
-				<key>Comment</key>
-				<string>V1.0</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>19.0.0</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>Moussey.kext</string>
-				<key>Comment</key>
-				<string>V999</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-		</array>
-		<key>Block</key>
-		<array/>
-		<key>Emulate</key>
-		<dict>
-			<key>Cpuid1Data</key>
-			<data>
-			</data>
-			<key>Cpuid1Mask</key>
-			<data>
-			</data>
-			<key>DummyPowerManagement</key>
-			<false/>
-			<key>MaxKernel</key>
-			<string></string>
-			<key>MinKernel</key>
-			<string></string>
-		</dict>
-		<key>Force</key>
-		<array/>
-		<key>Patch</key>
-		<array>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>USB Port limit patch #1/2 10.15.x (credit DalianSky) | Catalina</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				g/sPDw==
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.iokit.IOUSBHostFamily</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>Replace</key>
-				<data>
-				g/s/Dw==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>USB Port limit patch #2/2 10.15.x (credit DalianSky) | Catalina</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				g/kPDw==
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.usb.AppleUSBXHCI</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>Replace</key>
-				<data>
-				g/k/Dw==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>Enable TRIM for SSD</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				AEFQUExFIFNTRAA=
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.iokit.IOAHCIBlockStorage</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>Replace</key>
-				<data>
-				AAAAAAAAAAAAAAA=
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-		</array>
-		<key>Quirks</key>
-		<dict>
-			<key>AppleCpuPmCfgLock</key>
-			<false/>
-			<key>AppleXcpmCfgLock</key>
-			<false/>
-			<key>AppleXcpmExtraMsrs</key>
-			<false/>
-			<key>AppleXcpmForceBoost</key>
-			<false/>
-			<key>CustomSMBIOSGuid</key>
-			<false/>
-			<key>DisableIoMapper</key>
-			<true/>
-			<key>DisableLinkeditJettison</key>
-			<true/>
-			<key>DisableRtcChecksum</key>
-			<false/>
-			<key>ExtendBTFeatureFlags</key>
-			<false/>
-			<key>ExternalDiskIcons</key>
-			<false/>
-			<key>ForceSecureBootScheme</key>
-			<false/>
-			<key>IncreasePciBarSize</key>
-			<false/>
-			<key>LapicKernelPanic</key>
-			<false/>
-			<key>LegacyCommpage</key>
-			<false/>
-			<key>PanicNoKextDump</key>
-			<true/>
-			<key>PowerTimeoutKernelPanic</key>
-			<true/>
-			<key>ProvideCurrentCpuInfo</key>
-			<false/>
-			<key>SetApfsTrimTimeout</key>
-			<integer>-1</integer>
-			<key>ThirdPartyDrives</key>
-			<false/>
-			<key>XhciPortLimit</key>
-			<false/>
-		</dict>
-		<key>Scheme</key>
-		<dict>
-			<key>CustomKernel</key>
-			<false/>
-			<key>FuzzyMatch</key>
-			<true/>
-			<key>KernelArch</key>
-			<string>x86_64</string>
-			<key>KernelCache</key>
-			<string>Auto</string>
-		</dict>
-	</dict>
-```
-
-### 5.0 - Misc
-
-- **BlessOverride** | **Boot** | **Debug** | **Entries** | **Patch** | **Security** | **Tools**
-
-#### 5.1 Feature
-
-1. `PickerMode` Enabled (Require `OpenCanopy.efi`) in `Boot` section
-  
-2. All `Error` and `Warning` log is disable in `Debug` section
-  
-
-```xml
-</dict>
-	<key>Misc</key>
-	<dict>
-		<key>BlessOverride</key>
-		<array/>
-		<key>Boot</key>
-		<dict>
-			<key>ConsoleAttributes</key>
-			<integer>0</integer>
-			<key>HibernateMode</key>
-			<string>Auto</string>
-			<key>HideAuxiliary</key>
-			<true/>
-			<key>LauncherOption</key>
-			<string>Full</string>
-			<key>LauncherPath</key>
-			<string>Default</string>
-			<key>PickerAttributes</key>
-			<integer>17</integer>
-			<key>PickerAudioAssist</key>
-			<false/>
-			<key>PickerMode</key>
-			<string>External</string>
-			<key>PickerVariant</key>
-			<string>Acidanthera\GoldenGate</string>
-			<key>PollAppleHotKeys</key>
-			<false/>
-			<key>ShowPicker</key>
-			<true/>
-			<key>TakeoffDelay</key>
-			<integer>0</integer>
-			<key>Timeout</key>
-			<integer>5</integer>
-		</dict>
-		<key>Debug</key>
-		<dict>
-			<key>AppleDebug</key>
-			<false/>
-			<key>ApplePanic</key>
-			<false/>
-			<key>DisableWatchDog</key>
-			<false/>
-			<key>DisplayDelay</key>
-			<integer>0</integer>
-			<key>DisplayLevel</key>
-			<integer>0</integer>
-			<key>SerialInit</key>
-			<false/>
-			<key>SysReport</key>
-			<false/>
-			<key>Target</key>
-			<integer>0</integer>
-		</dict>
-		<key>Entries</key>
-		<array/>
-		<key>Security</key>
-		<dict>
-			<key>AllowNvramReset</key>
-			<true/>
-			<key>AllowSetDefault</key>
-			<true/>
-			<key>AllowToggleSip</key>
-			<true/>
-			<key>ApECID</key>
-			<integer>0</integer>
-			<key>AuthRestart</key>
-			<false/>
-			<key>BlacklistAppleUpdate</key>
-			<true/>
-			<key>DmgLoading</key>
-			<string>Signed</string>
-			<key>EnablePassword</key>
-			<false/>
-			<key>ExposeSensitiveData</key>
-			<integer>6</integer>
-			<key>HaltLevel</key>
-			<integer>2147483648</integer>
-			<key>PasswordHash</key>
-			<data>
-			</data>
-			<key>PasswordSalt</key>
-			<data>
-			</data>
-			<key>ScanPolicy</key>
-			<integer>2690819</integer>
-			<key>SecureBootModel</key>
-			<string>Default</string>
-			<key>Vault</key>
-			<string>Optional</string>
-		</dict>
-		<key>Tools</key>
-		<array>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Auxiliary</key>
-				<true/>
-				<key>Comment</key>
-				<string>CleanNvram.efi</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Flavour</key>
-				<string>Auto</string>
-				<key>Name</key>
-				<string>CleanNvram.efi</string>
-				<key>Path</key>
-				<string>CleanNvram.efi</string>
-				<key>RealPath</key>
-				<false/>
-				<key>TextMode</key>
-				<false/>
-			</dict>
-		</array>
-	</dict>
-```
-#### 5.2 Csrutil  
-
-<p align="center"><img width="697" alt="Screen Shot 2022-02-25 at 9 11 05 PM" src="https://user-images.githubusercontent.com/72515939/155721342-b2ca1831-5ec2-4d6e-8554-838554e8d6c4.png"><p/>
-
-
-### 6.0 - NVRAM
-
-- No `boot-args` is require
-
-```xml
-<key>NVRAM</key>
-	<dict>
-		<key>Add</key>
-		<dict>
-			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
-			<dict>
-				<key>DefaultBackgroundColor</key>
-				<data>
-				AAAAAA==
-				</data>
-				<key>UIScale</key>
-				<data>
-				AQ==
-				</data>
-			</dict>
-			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
-			<dict>
-				<key>rtc-blacklist</key>
-				<data>
-				</data>
-			</dict>
-			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
-			<dict>
-				<key>ForceDisplayRotationInEFI</key>
-				<integer>0</integer>
-				<key>SystemAudioVolume</key>
-				<data>
-				Rg==
-				</data>
-				<key>boot-args</key>
-				<string></string>
-				<key>csr-active-config</key>
-				<data>
-				AAAAAA==
-				</data>
-				<key>prev-lang:kbd</key>
-				<data>
-				ZW4tVVM6MA==
-				</data>
-				<key>run-efi-updater</key>
-				<string>No</string>
-			</dict>
-		</dict>
-		<key>Delete</key>
-		<dict>
-			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
-			<array>
-				<string>UIScale</string>
-				<string>DefaultBackgroundColor</string>
-			</array>
-			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
-			<array>
-				<string>rtc-blacklist</string>
-			</array>
-			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
-			<array>
-				<string>boot-args</string>
-			</array>
-		</dict>
-		<key>LegacyEnable</key>
-		<false/>
-		<key>LegacyOverwrite</key>
-		<false/>
-		<key>LegacySchema</key>
-		<dict>
-			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
-			<array>
-				<string>EFILoginHiDPI</string>
-				<string>EFIBluetoothDelay</string>
-				<string>LocationServicesEnabled</string>
-				<string>SystemAudioVolume</string>
-				<string>SystemAudioVolumeDB</string>
-				<string>SystemAudioVolumeSaved</string>
-				<string>bluetoothActiveControllerInfo</string>
-				<string>bluetoothInternalControllerInfo</string>
-				<string>flagstate</string>
-				<string>fmm-computer-name</string>
-				<string>fmm-mobileme-token-FMM</string>
-				<string>fmm-mobileme-token-FMM-BridgeHasAccount</string>
-				<string>nvda_drv</string>
-				<string>prev-lang:kbd</string>
-			</array>
-			<key>8BE4DF61-93CA-11D2-AA0D-00E098032B8C</key>
-			<array>
-				<string>Boot0080</string>
-				<string>Boot0081</string>
-				<string>Boot0082</string>
-				<string>BootNext</string>
-				<string>BootOrder</string>
-			</array>
-		</dict>
-		<key>WriteFlash</key>
-		<true/>
-	</dict>
-```
-<p align="center"><img width="1636" alt="Screen Shot 2022-02-25 at 9 17 07 PM" src="https://user-images.githubusercontent.com/72515939/155721615-fd029f19-26a1-4e31-898f-f7d0784340bf.png">
-<p/>
-
-
-### 7.0 - PlatformInfo
-
-- `iMacPro1,1` SMBIOS
-
-```xml
-</dict>
-	<key>PlatformInfo</key>
-	<dict>
-		<key>Automatic</key>
-		<true/>
-		<key>CustomMemory</key>
-		<false/>
-		<key>Generic</key>
-		<dict>
-			<key>AdviseFeatures</key>
-			<false/>
-			<key>MLB</key>
-			<string>00000000000000000</string>
-			<key>MaxBIOSVersion</key>
-			<false/>
-			<key>ProcessorType</key>
-			<integer>0</integer>
-			<key>ROM</key>
-			<data>
-			wEPIYNlY
-			</data>
-			<key>SpoofVendor</key>
-			<true/>
-			<key>SystemMemoryStatus</key>
-			<string>Auto</string>
-			<key>SystemProductName</key>
-			<string>iMacPro1,1</string>
-			<key>SystemSerialNumber</key>
-			<string>000000000000</string>
-			<key>SystemUUID</key>
-			<string>00000000-0000-0000-0000-000000000000</string>
-		</dict>
-		<key>UpdateDataHub</key>
-		<true/>
-		<key>UpdateNVRAM</key>
-		<true/>
-		<key>UpdateSMBIOS</key>
-		<true/>
-		<key>UpdateSMBIOSMode</key>
-		<string>Create</string>
-		<key>UseRawUuidEncoding</key>
-		<false/>
-	</dict>
-```
-
-<p align="center"><img width="1118" alt="Screen Shot 2022-02-25 at 9 18 14 PM" src="https://user-images.githubusercontent.com/72515939/155721828-8fe6d6da-037c-40e1-a154-3e2c3db0a3c8.png"><p/>
-
-
-### 8.0 - UEFI
-
-- **APFS** | **AppleInput** | **Audio** | **ConnectedDrivers** | **Drivers** | **Input** | **Output** | **ProtocolOverrides** | **Quirks** | **ReserveMemory**
-
-**8.1 - APFS**
-
-- [x] Catalina require `MinDate -1` & `MinVersion -1`
-  
-- [x] Big Sur require `MinDate -0` & `MinVersion -0`
-  
-- [x] Monterey require `MinDate -0` & `MinVersion -0`
-  
-
-**8.2 - Drivers**
-
-- [x] HfsPlus.efi - Needed for seeing `HFS` volumes
-  
-- [x] OpenCanopy.efi - `OpenCore Beauty Treatment` extension
-  
-- [x] OpenRuntime.efi - Extension for `OpenCore` to help with patching `boot.efi `for `NVRAM` fixes and better `memory management`
-
-```xml
-</dict>
-	<key>UEFI</key>
-	<dict>
-		<key>APFS</key>
-		<dict>
-			<key>EnableJumpstart</key>
-			<true/>
-			<key>GlobalConnect</key>
-			<false/>
-			<key>HideVerbose</key>
-			<true/>
-			<key>JumpstartHotPlug</key>
-			<false/>
-			<key>MinDate</key>
-			<integer>0</integer>
-			<key>MinVersion</key>
-			<integer>0</integer>
-		</dict>
-		<key>AppleInput</key>
-		<dict>
-			<key>AppleEvent</key>
-			<string>Builtin</string>
-			<key>CustomDelays</key>
-			<false/>
-			<key>GraphicsInputMirroring</key>
-			<true/>
-			<key>KeyInitialDelay</key>
-			<integer>0</integer>
-			<key>KeySubsequentDelay</key>
-			<integer>5</integer>
-			<key>PointerPollMask</key>
-			<integer>-1</integer>
-			<key>PointerPollMax</key>
-			<integer>80</integer>
-			<key>PointerPollMin</key>
-			<integer>10</integer>
-			<key>PointerSpeedDiv</key>
-			<integer>1</integer>
-			<key>PointerSpeedMul</key>
-			<integer>1</integer>
-		</dict>
-		<key>Audio</key>
-		<dict>
-			<key>AudioCodec</key>
-			<integer>0</integer>
-			<key>AudioDevice</key>
-			<string>PciRoot(0x0)/Pci(0x1F,0x3)</string>
-			<key>AudioOutMask</key>
-			<integer>1</integer>
-			<key>AudioSupport</key>
-			<false/>
-			<key>DisconnectHda</key>
-			<false/>
-			<key>MaximumGain</key>
-			<integer>-15</integer>
-			<key>MinimumAssistGain</key>
-			<integer>-30</integer>
-			<key>MinimumAudibleGain</key>
-			<integer>-55</integer>
-			<key>PlayChime</key>
-			<string>Auto</string>
-			<key>ResetTrafficClass</key>
-			<false/>
-			<key>SetupDelay</key>
-			<integer>0</integer>
-		</dict>
-		<key>ConnectDrivers</key>
-		<true/>
-		<key>Drivers</key>
-		<array>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Comment</key>
-				<string>HfsPlus.efi</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>HfsPlus.efi</string>
-			</dict>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Comment</key>
-				<string>OpenCanopy.efi</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>OpenCanopy.efi</string>
-			</dict>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Comment</key>
-				<string>OpenRuntime.efi</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>OpenRuntime.efi</string>
-			</dict>
-		</array>
-		<key>Input</key>
-		<dict>
-			<key>KeyFiltering</key>
-			<false/>
-			<key>KeyForgetThreshold</key>
-			<integer>5</integer>
-			<key>KeySupport</key>
-			<true/>
-			<key>KeySupportMode</key>
-			<string>Auto</string>
-			<key>KeySwap</key>
-			<false/>
-			<key>PointerSupport</key>
-			<false/>
-			<key>PointerSupportMode</key>
-			<string>ASUS</string>
-			<key>TimerResolution</key>
-			<integer>50000</integer>
-		</dict>
-		<key>Output</key>
-		<dict>
-			<key>ClearScreenOnModeSwitch</key>
-			<false/>
-			<key>ConsoleMode</key>
-			<string></string>
-			<key>DirectGopRendering</key>
-			<false/>
-			<key>ForceResolution</key>
-			<false/>
-			<key>GopPassThrough</key>
-			<string>Disabled</string>
-			<key>IgnoreTextInGraphics</key>
-			<false/>
-			<key>ProvideConsoleGop</key>
-			<true/>
-			<key>ReconnectGraphicsOnConnect</key>
-			<false/>
-			<key>ReconnectOnResChange</key>
-			<false/>
-			<key>ReplaceTabWithSpace</key>
-			<false/>
-			<key>Resolution</key>
-			<string>Max</string>
-			<key>SanitiseClearScreen</key>
-			<false/>
-			<key>TextRenderer</key>
-			<string>BuiltinGraphics</string>
-			<key>UIScale</key>
-			<integer>-1</integer>
-			<key>UgaPassThrough</key>
-			<false/>
-		</dict>
-		<key>ProtocolOverrides</key>
-		<dict>
-			<key>AppleAudio</key>
-			<false/>
-			<key>AppleBootPolicy</key>
-			<false/>
-			<key>AppleDebugLog</key>
-			<false/>
-			<key>AppleEg2Info</key>
-			<false/>
-			<key>AppleFramebufferInfo</key>
-			<false/>
-			<key>AppleImageConversion</key>
-			<false/>
-			<key>AppleImg4Verification</key>
-			<false/>
-			<key>AppleKeyMap</key>
-			<false/>
-			<key>AppleRtcRam</key>
-			<false/>
-			<key>AppleSecureBoot</key>
-			<false/>
-			<key>AppleSmcIo</key>
-			<false/>
-			<key>AppleUserInterfaceTheme</key>
-			<false/>
-			<key>DataHub</key>
-			<false/>
-			<key>DeviceProperties</key>
-			<false/>
-			<key>FirmwareVolume</key>
-			<true/>
-			<key>HashServices</key>
-			<false/>
-			<key>OSInfo</key>
-			<false/>
-			<key>UnicodeCollation</key>
-			<false/>
-		</dict>
-		<key>Quirks</key>
-		<dict>
-			<key>ActivateHpetSupport</key>
-			<false/>
-			<key>DisableSecurityPolicy</key>
-			<false/>
-			<key>EnableVectorAcceleration</key>
-			<true/>
-			<key>EnableVmx</key>
-			<false/>
-			<key>ExitBootServicesDelay</key>
-			<integer>0</integer>
-			<key>ForceOcWriteFlash</key>
-			<false/>
-			<key>ForgeUefiSupport</key>
-			<false/>
-			<key>IgnoreInvalidFlexRatio</key>
-			<false/>
-			<key>ReleaseUsbOwnership</key>
-			<false/>
-			<key>ReloadOptionRoms</key>
-			<false/>
-			<key>RequestBootVarRouting</key>
-			<true/>
-			<key>ResizeGpuBars</key>
-			<integer>-1</integer>
-			<key>TscSyncTimeout</key>
-			<integer>0</integer>
-			<key>UnblockFsConnect</key>
-			<false/>
-		</dict>
-		<key>ReservedMemory</key>
-		<array>
-			<dict>
-				<key>Address</key>
-				<integer>569344</integer>
-				<key>Comment</key>
-				<string>Fix black screen on wake from hibernation for Lenovo Thinkpad T490</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Size</key>
-				<integer>4096</integer>
-				<key>Type</key>
-				<string>RuntimeCode</string>
-			</dict>
-			<dict>
-				<key>Address</key>
-				<integer>268435456</integer>
-				<key>Comment</key>
-				<string>HD3000: IGPU memory corruption errata</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Size</key>
-				<integer>268435456</integer>
-				<key>Type</key>
-				<string>Reserved</string>
-			</dict>
-		</array>
-	</dict>
-</dict>
-```
-
-### 9.0 - Results
-
-#### 9.1 - Working:
-- All Device
-
-**Refresh Rate: ProMotion**
-
-What is ProMotion?
-<p align="justify">While a standard refresh rate will update a display 60 times a second (60Hz), the ProMotion’s adaptive 120Hz screen works at twice this speed. This results in smoother scrolling, improved responsiveness and better gaming performance.<p/>
-<p align="center"><img width="780" alt="Screen Shot 2022-02-26 at 10 56 57 PM" src="https://user-images.githubusercontent.com/72515939/155847708-82cf3e91-382d-49e6-8daa-5c91a2b818a8.png"><p/>
-
-**System Preferences**
-<p align="center"><img width="780" alt="Screen Shot 2022-02-26 at 11 00 04 PM" src="https://user-images.githubusercontent.com/72515939/155847817-a54b080b-66c5-48ab-ac3e-35ba4cf13e4f.png"><p/>
-
-**Hardware Acceleration**
-<p align="center"><img width="1576" alt="Screen Shot 2022-02-26 at 11 01 05 PM" src="https://user-images.githubusercontent.com/72515939/155848009-6eec0d59-100d-4d0b-87c1-b4454f455c7b.png"><p/>
-<p align="center"><img width="697" alt="Screen Shot 2022-02-26 at 11 03 25 PM" src="https://user-images.githubusercontent.com/72515939/155848011-901fea49-870e-479e-89e1-b9320eba4227.png"><p/>
-<p align="center"><img width="1436" alt="Screen Shot 2022-02-26 at 11 20 39 PM" src="https://user-images.githubusercontent.com/72515939/155848626-6dc58cb6-82cb-49d7-86bb-cccaa6113694.png"><p/>
-<p align="center"><img width="656" alt="Screen Shot 2022-02-26 at 11 20 48 PM" src="https://user-images.githubusercontent.com/72515939/155848627-ea380db3-beea-47a9-a093-6145cdf9028f.png"><p/>
-<p align="center"><img width="658" alt="Screen Shot 2022-02-26 at 11 20 45 PM" src="https://user-images.githubusercontent.com/72515939/155848666-c5e0cf30-f3e6-45fd-a6df-606eeb7215e7.png"><p/>
-
-**DGPU Benchmark**
-<p align="center"><img width="1088" alt="Screen Shot 2022-02-26 at 11 28 14 PM" src="https://user-images.githubusercontent.com/72515939/155848856-1b1b1314-007a-419a-b0df-edde1afd89ee.png"><p/>
-<p align="center"><img width="1088" alt="Screen Shot 2022-02-26 at 11 29 07 PM" src="https://user-images.githubusercontent.com/72515939/155848857-0edf37eb-f942-4ee1-97b8-c5834151b477.png"><p/>
-Remark: PowerPlay injection may increase Metal, sometimes decrease OpenGL scores. Benchmarking the CPU and GPU through BigSur/Monterey is not a good idea since both are bloated with M1 Processor code. The best way to check Metal and OpenGL is through Catalina while the OS was Intel optimized.
-
-#### 9.2 - Not Working/Issue:
-
-- No `apst` (`Autonomous Power State Transition`) profile via `ioreg`in `NVMe`. `NVMe` still working fine with `trim` support (without 3rd party app/kext). `NVMeFix.kext` will cause `KP` with `SPCC M.2 NVMe (Phison Chipset)`. Please Refer: [Acidanthera Bugtracker #1752](https://github.com/acidanthera/bugtracker/issues/1752) for more info.
-
-#### 10.0 - BIOS/UEFI Settings
+#### 3.0 - BIOS/UEFI Settings
 
 - Disable `CSM/ Enable UEFI`
 - Disable `Secure Boot`
@@ -2538,5 +2718,4 @@ Date : `24 Feb 2022`
 
 # Acknowledgements
 
-I would like to thanks all folks in Hackintosh Community/ [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/)/ [r/Hackintosh](https://www.reddit.com/r/hackintosh/). Without their idea, question and answer, my hack is not possible.
-
+I would like to thanks all folks in Hackintosh Community, [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) for great guide, [Acidanthera](https://github.com/acidanthera) for great work, [CorpNewt](https://github.com/corpnewt) for great tools, [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for great knowledge sharing/ [r/Hackintosh](https://www.reddit.com/r/hackintosh/) for great undocumented refereces, [daliansky](https://github.com/daliansky) for great ACPI method, [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky work. Thanks a lot Community!
