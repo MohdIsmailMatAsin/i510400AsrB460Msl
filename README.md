@@ -141,7 +141,7 @@ EFI
 
 ### 2.0 - Config.plist
 
-<p align="justify">My config.plist is based on the selected hardware. Suitability is dependent on SMBIOS. Quirk selected was according to Intel 10th Gen suitability at random</p>
+<p align="justify">My config.plist is based on the selected hardware. Suitability is dependent on SMBIOS + compatible hardware. Quirk selected was according to Intel 10th Gen `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the concept of Hackintosh.  Starting with Clover, it was a bit confusing for me because of the scattered setting arrangement of each level.  The OpenCore concept is easier to understand and compiled every level to improve the stability of this Operating System. I also provide examples, and explain some important settings for OpenCore `EFI` Folders and Files.</p>
 
 **Refer:**  [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
 
