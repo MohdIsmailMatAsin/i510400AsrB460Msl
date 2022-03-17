@@ -49,7 +49,13 @@
 - [x] **BigSur** require `Mindate:0` , `MinVersion:0` and `SetApfsTrimTimeout:-1`
   
 - [x] **Monterey** require `Mindate:0` , `MinVersion:0` and `SetApfsTrimTimeout:0`
-  
+
+**Current OS**
+
+- [x] **macOS Monterey** v 12.2
+- [x] **Windows 11**
+
+Remark: Separate Drive OS. 
 
 **SMBIOS:**
 
