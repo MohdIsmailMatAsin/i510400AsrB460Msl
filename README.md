@@ -139,9 +139,26 @@ EFI
 
 **Refer:**  [SSDT-Mac.aml](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl)
 
+**Question:**
+
+Why SSDT's modding / editing? Why not DSDT's patching?
+
+[Dortania:](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime)Do not add your DSDT to OpenCore, its already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your config based of the architecture of your CPU.
+
+<p align="justify">`DSDT Patching` should be `avoided`.  There are various reasonable reasons why DSDT Patching is not recommended.  Some forums/webpages (i.e: `Olarila`) state that it is a major solution.  As a matter of knowledge, `DSDT` is the `main table` while `SSDT` is the `secondary table`.  The difference is, `DSDT` cannot be tampered with and touched.  Because it is the `main code` to hanle your machine with various device.  Meanwhile, `SSDT` is the `secondary table`, where we can change (modify), add and drop.  Although the language (code) used is the same, it has a different task/method. Reason? I'll explain why</p>
+
+**DSDT Patching** may 
+- Broke motherboard BIOS
+- Cause unefficient device due to different structure
+- Unable to boot corectly because incorrect patch (Hard to reverse)
+- Malfunction device
+
+<p align="justify">From here, SSDT Patch is better solution and reasonable. Any addition, modification does not affect your machine.  If an error occurs, it is easy to revert back to the original state.  The SSDT concept is only as a patch of information and does not affect the existing hardware.</p>
+
+
 ### 2.0 - Config.plist
 
-<p align="justify">My config.plist is based on the selected hardware. Suitability is dependent on SMBIOS + compatible hardware. Quirk selected was according to Intel 10th Gen `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the concept of Hackintosh.  Starting with Clover, it was a bit confusing for me because of the scattered setting arrangement of each level.  The OpenCore concept is easier to understand and compiled every level to improve the stability of this Operating System. I also provide examples, and explain some important settings for OpenCore `EFI` Folders and Files.</p>
+<p align="justify">This section is simple. COMPATIBLE Knowledge + Hardware + Effort = Stability. Honestly the process of preparing this file took a long time.  Still, I am thankful that I have over 20 years of experience using computers.  I am not too clumsy to understand the concept even though I am not from the field of programming and technology. Quirk selected was according to Intel 10th Gen `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the concept of Hackintosh.  Starting with Clover, it was a bit confusing for me because of the scattered setting arrangement of each level.  The OpenCore concept is easier to understand and compiled every level to improve the stability of this Operating System. I also provide examples, and explain some important settings for OpenCore `EFI` Folders and Files.</p>
 
 **Refer:**  [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
 
