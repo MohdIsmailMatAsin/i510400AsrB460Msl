@@ -130,6 +130,8 @@ EFI
 
 ### 2.0 - Config.plist
 
+<p align="justify">My config.plist is based on the selected hardware. Suitability is dependent on SMBIOS. Quirk selected was according to Intel 10th Gen suitability at random</p>
+
 **Refer:**  [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
 
 ### 3.0 - Kernel Extension
