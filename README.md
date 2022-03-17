@@ -2682,8 +2682,6 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
 
 ### 2.0 - Kernel Extension
 
-- **Add** | **Block** | **Emulate** | **Force** | **Patch** | **Quirks** | **Scheme**
-
 | Kext | Information |
 | --- | --- |
 | Lilu | `Arbitrary kext` and `process patching` on macOS |
