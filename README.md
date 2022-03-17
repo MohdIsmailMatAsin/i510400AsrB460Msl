@@ -56,7 +56,7 @@
 **OpenCore v0.7.9:**
 
 ```tree
-.
+EFI
 ├── BOOT
 │   └── BOOTx64.efi
 └── OC
