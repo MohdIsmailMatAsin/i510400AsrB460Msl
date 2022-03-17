@@ -2704,18 +2704,18 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
 
 <p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 43 08 PM" src="https://user-images.githubusercontent.com/72515939/158739299-acd27c5b-839d-4d6c-a335-19d976a5cf79.png"></p>
 
-<p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 43 08 PM" src="https://user-images.githubusercontent.com/72515939/158741514-37362510-6e5e-459a-9863-cf426dd3e0f9.png"></>
-
 <p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 42 41 PM" src="https://user-images.githubusercontent.com/72515939/158741435-7b7c9766-6b27-4ece-9999-60219a1bdba7.png"></p>
 
 <p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 42 44 PM" src="https://user-images.githubusercontent.com/72515939/158741452-0d41a713-3016-46bf-ba13-641527e07ded.png"></p>
 
+<p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 42 48 PM" src="https://user-images.githubusercontent.com/72515939/158741714-49368356-88bb-4164-8952-8d3d0ba9f2bb.png"></p>
 
+<p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 42 34 PM" src="https://user-images.githubusercontent.com/72515939/158741848-92e75717-5809-4926-b713-7c02031bba1f.png"></p>
 
+<p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 42 22 PM" src="https://user-images.githubusercontent.com/72515939/158741814-ada8ec4c-3f7f-4d25-9d72-1c47c3d425dc.png"></p>
 
+<p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 42 15 PM" src="https://user-images.githubusercontent.com/72515939/158741829-37f15929-4436-44d7-9b2c-453ff1d5763f.png"></p>
 
-
- 
 ### 4.0 - BIOS/UEFI Settings
 
 - Disable `CSM/ Enable UEFI`
