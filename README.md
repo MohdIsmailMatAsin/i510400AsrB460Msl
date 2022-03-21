@@ -2,9 +2,9 @@
 
 ![Last Update](https://img.shields.io/badge/Last_Update_(yy/mm/dd):-22.03.16-blueviolet.svg)
 
-<p align="center"><img width="698" alt="Screen Shot 2022-03-16 at 9 32 33 PM" src="https://user-images.githubusercontent.com/72515939/158737697-36fe343e-f013-4342-bfa7-d1e3b46c2866.png"></p>
+##
 
-## Information
+## Hardware Information
 
 **Processor:**
 
@@ -49,6 +49,7 @@
 - [x] **BigSur** require `Mindate:0` , `MinVersion:0` and `SetApfsTrimTimeout:-1`
   
 - [x] **Monterey** require `Mindate:0` , `MinVersion:0` and `SetApfsTrimTimeout:0`
+  
 
 **Current OS**
 
@@ -56,15 +57,26 @@
 - [x] **Windows 11**
 
 **Remark:**
-Separate Drive OS. 
+Separate Drive OS.
 
-**Dual boot requirement:** 
+**Dual boot requirement:**
+
 - `UpdateSMBIOSMode` = Custom
 - `CustomSMBIOSGuid` = True
 
 **SMBIOS:**
 
 - [x] `iMac19,2`
+
+# 
+
+# Introduction
+
+<p align="justify">What is OpenCore? OpenCore is what we refer to as a "boot loader"; it is a complex piece of software that we use to prepare our systems for macOS, specifically by injecting new data for macOS such as SMBIOS, ACPI tables, and kexts.</p>
+
+**Refer:** [OpenCore](https://dortania.github.io/OpenCore-Install-Guide/)
+
+<p align="justify">There is the basic OpenCore folder, which is EFI (the main file). The main file contains several other folders. Please refer to the diagram below for better understanding.</p>
 
 **OpenCore v0.7.9:**
 
@@ -98,19 +110,44 @@ EFI
     │   ├── Audio
     │   ├── Font
     │   ├── Image
-    │   │   └── Acidanthera
-    │   │       ├── Chardonnay
-    │   │       ├── GoldenGate
-    │   │       └── Syrah
     │   └── Label
     ├── Tools
     │   └── CleanNvram.efi
     └── config.plist
 ```
 
-### 1.0 - SSDT
+### 1.0 - Config.plist
 
-<p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e. SSDT-Mac.aml). There are also several other sources of properties that are injected to reduce the kext workload. As example, renaming GFX0 to an IGPU that handle through Whatevergreen.kext. The following is a list of devices that have been injected with specific properties.</p>
+<p align="justify">This section is simple. Knowledge + Hardware + Effort = Stability. Honestly, the process of preparing this file took a long time.  Still, I am thankful that I have over 20 years of experience using computers.  I am not too clumsy to understand the concept even though I am not from programming and technology field. Quirk selected was according to Intel 10th Gen `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the Vanilla Hackintosh concept.  Starting with Clover, it was a bit confusing for me because of the scattered setting and arrangement of each part.  OpenCore concept is easier to understand and compiled every part to improve hardware, device and the OS stability. I also provide examples, and expose some important settings for OpenCore config.plist.</p>
+
+**Refer:** [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
+
+### 2.0 - SSDT
+
+**Question:**
+
+Why SSDT's patch? And why not DSDT's patching?
+
+[Dortania:](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) Do not add your DSDT to OpenCore; it's already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your configuration based on the architecture of your CPU.
+
+<p align="justify">DSDT patching should be avoided. There are various reasons why DSDT patching is not recommended. Some forums/webpages (i.e., Olarila) state that it is a major solution. As a matter of knowledge, DSDT is the main table while SSDT is the secondary table (additional table). The difference is that DSDT cannot be tampered with or touched. Because it is the main.aml code to handle your machine with various devices. Meanwhile, SSDT is the secondary table, where we can change (modify), add, and drop. Although the language (code) used is the same, it has a different task or method. Reason? I'll explain why.</p>
+
+**DSDT Patching** may cause
+
+- Broken motherboard BIOS
+  
+- Inefficient device with the wrong injection, or
+  
+- Cause malfunction device
+  
+- PC unable to boot properly due to an incorrect patch (difficult to reverse).
+  
+
+<p align="justify">From here, SSDT Patch is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. The SSDT concept is only a patch of information and does not affect the existing hardware.</p>
+
+<p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-Mac.aml). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext.The following is a list of devices that have been injected with specific properties:</p>
+
+##### 2.1 - SSDT-Mac.aml
 
 | Device | Information |
 | --- | --- |
@@ -121,7 +158,7 @@ EFI
 | IGPU | `GFX0` to `IGPU` rename. Other rename method via `SSDT` for `Intergrated Graphics Unit / IGPU` which can be handled by `Whatevergreen.kext`. Additional info related to `Intel UHD 630` is added as `headless` built-in graphics module |
 | IMEI | `HECI` to `IMEI` rename via `SSDT` |
 | MCHC | Come with `SBUS` patch to aids with correct temperature, fan, voltage, ICH, etc readings and proper memory reporting |
-| GFX0 | `Dedicated Graphic Processor Unit / DGPU`.  This `SSDT` contain all `Navi 14` patch information. **Patch:** `ATY,Keelback` framebuffer and `CFG,CFG_USE_AGDC` properties to overcome wake issue using `DGPU` also `_SUN` information to reveal slot number|
+| GFX0 | `Dedicated Graphic Processor Unit / DGPU`.  This `SSDT` contain all `Navi 14` patch information. **Patch:** `ATY,Keelback` framebuffer and `CFG,CFG_USE_AGDC` properties to overcome wake issue using `DGPU` also `_SUN` information to reveal slot number |
 | HDAU | `High Definition Audio` through `HDMI` patch. `_SUN` information is added to reveal proper `slot number` |
 | HDEF | `High Definition Audio System / HDAS` in actual `DSDT`, renamed with `HDEF` . **Patch:**`layout id/data/01000000` which is equal to `alcid=1` |
 | PMCR | Classed as `Memory Controller` and known as `PPMC` in `Comet Lake (CML)` platform. This `SSDT` renamed `PPMC` as `PMCR` with compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, which is identical to `CML` `pci8086,a3a1` |
@@ -137,34 +174,21 @@ EFI
 | SBUS | Fix `AppleSMBus` support in macOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc` |
 | USBX | To supply `USB Power Properties` for Skylake and newer motherboard generation. |
 
-#### 1.1 - SSDT-Mac.aml
+**Refer:** [SSDT-Mac.aml](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl)
 
-**Refer:**  [SSDT-Mac.aml](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl)
+### 3.0 - Drivers
 
-**Question:**
+<p align="justify">Only use 3 basic driver types. HfsPlus.efi, OpenCanopy.efi and OpenRuntime.efi. These three files are essentially basic things to get driver support. Usage information is as follows:</p>
 
-Why SSDT's patch? And why not DSDT's patching?
+| Driver | Information |
+| --- | --- |
+| HfsPlus.efi | Official HFS+ Driver Support for Apple macOS |
+| OpenCanopy.efi | OpenCore cosmetics driver for OpenCore boot menu |
+| OpenRuntime.efi | AptioMemoryFix.efi (Clover Bootloader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management. |
 
-[Dortania:](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) Do not add your DSDT to OpenCore, its already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your config based of the architecture of your CPU.
+### 4.0 - Kernel Extension
 
-<p align="justify"> DSDT Patching should be avoided.  There are various reasons why DSDT Patching is not recommended.  Some forums/webpages (i.e: Olarila) state that it is a major solution.  As a matter of knowledge, DSDT is the main table while SSDT is the secondary table (additional table).  The difference is DSDT cannot be tampered with and touched.  Because it is the main .aml code to handle your machine with various device.  Meanwhile, SSDT is the secondary table, where we can change (modify), add and drop.  Although the language (code) used is the same, it has a different task/method. Reason? I'll explain why</p>
-
-**DSDT Patching** may 
-- Broke motherboard BIOS
-- Cause unefficient device due to different structure
-- Unable to boot corectly because incorrect patch (Hard to reverse)
-- Malfunction device
-
-<p align="justify">From here, SSDT Patch is better solution and reasonable. Any addition, modification does not affect your machine.  If an error occurs, it is easy to revert back to the original state.  The SSDT concept is only as a patch of information and does not affect the existing hardware.</p>
-
-
-### 2.0 - Config.plist
-
-<p align="justify">This section is simple. Knowledge + Hardware + Effort = Stability. Honestly, the process of preparing this file took a long time.  Still, I am thankful that I have over 20 years of experience using computers.  I am not too clumsy to understand the concept even though I am not from programming and technology field. Quirk selected was according to Intel 10th Gen `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the Vanilla Hackintosh concept.  Starting with Clover, it was a bit confusing for me because of the scattered setting and arrangement of each part.  OpenCore concept is easier to understand and compiled every part to improve hardware, device and the OS stability. I also provide examples, and expose some important settings for OpenCore config.plist.</p>
-
-**Refer:**  [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
-
-### 3.0 - Kernel Extension
+<p align="justify">Kernel extensions (kexts) let developers load code directly into the macOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is additional kexts to improve the function of the device or hardware. The table below contains some kexts used for this PC.</p>
 
 | Kext | Information |
 | --- | --- |
@@ -182,7 +206,18 @@ Why SSDT's patch? And why not DSDT's patching?
 | BluetoolFixup | Apple `macOS Monterey` has changed parts of the `Bluetooth` stack from `kernel-space` to `user-space`. Note: Required when bluetooth not working properly in macOS 12. |
 | USBMap | Kext to `route` selected `USB ports`. This is `compulsory to handle` `15 port limit` requirements by macOS. Require [USBMap](https://github.com/corpnewt/USBMap) or [USBToolbox](https://github.com/USBToolBox/tool) |
 
-### 4.0 - Results
+### 5.0 - Resource
+
+<p align="justify">This folder is related to OpenCore Beauty Treatment and is used with OpenCanopy.efi. It is up to you to do your own research for a custom boot menu.</p>
+
+**Refer:** [OC Binary Resource](https://github.com/acidanthera/OcBinaryData)
+
+### 6.0 - Tools
+
+<p align="justify">Nothing fancy, just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist.</p>
+
+
+### 7.0 - Results
 
 <p align="center"><img width="697" alt="Screen Shot 2022-03-16 at 9 40 10 PM" src="https://user-images.githubusercontent.com/72515939/158741247-7cd3bdbd-b9a0-4e50-8e4b-4e90b99229f1.png"></p>
 
@@ -210,7 +245,7 @@ Why SSDT's patch? And why not DSDT's patching?
 
 <p align="center"><img width="1157" alt="Screen Shot 2022-03-16 at 9 39 50 PM" src="https://user-images.githubusercontent.com/72515939/158748867-55531a1c-0af1-428e-847d-2613b2fa233a.png"></p>
 
-### 5.0 - BIOS/UEFI Settings
+### 8.0 - BIOS/UEFI Settings
 
 - Disable `CSM/ Enable UEFI`
 - Disable `Secure Boot`
@@ -224,8 +259,20 @@ Why SSDT's patch? And why not DSDT's patching?
 
 Copyright : `MohdIsmailMatAsin`
 
-Date : `24 Feb 2022`
-
 # Acknowledgements
 
-I would like to thanks all folks in Hackintosh Community, [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) for great guide, [Acidanthera](https://github.com/acidanthera) for great work, [CorpNewt](https://github.com/corpnewt) for great tools, [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for great knowledge sharing, [r/Hackintosh](https://www.reddit.com/r/hackintosh/) for great undocumented refereces, [daliansky](https://github.com/daliansky) for great ACPI method, [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky work. Thanks a lot Community! 
+I would like to thanks all folks in Hackintosh Community especially:
+
+- [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) for great guide
+  
+- [Acidanthera](https://github.com/acidanthera) for great work
+  
+- [CorpNewt](https://github.com/corpnewt) for great tools
+  
+- [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for great knowledge sharing
+  
+- [r/Hackintosh](https://www.reddit.com/r/hackintosh/) for great undocumented refereces
+  
+- [daliansky](https://github.com/daliansky) for great ACPI method
+  
+- [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky work. Thanks a lot Community!
