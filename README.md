@@ -246,6 +246,36 @@ Why SSDT's patch? And why not DSDT's patching?
 <p align="center"><img width="1157" alt="Screen Shot 2022-03-16 at 9 39 50 PM" src="https://user-images.githubusercontent.com/72515939/158748867-55531a1c-0af1-428e-847d-2613b2fa233a.png"></p>
 
 
+### 8.0 - Others
+
+- USBMap
+**Refer:** [Port](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/USBMap/Contents/Info.plist)
+
+<p align="center"><img width="1458" alt="Screen Shot 2022-03-21 at 11 36 12 PM" src="https://user-images.githubusercontent.com/72515939/159296213-89056733-8c3f-44e4-a45f-66353751743b.png"></p>
+
+- EFI Update Method
+
+**Refer:** [OCTool](https://github.com/rusty-bits/octool)
+
+**Where to put all file to update?**
+
+<p align="center"><img width="1032" alt="Screen Shot 2022-03-21 at 11 39 55 PM" src="https://user-images.githubusercontent.com/72515939/159297314-1c6bf371-22e2-4229-b417-6557950e1af9.png"></p>
+
+**My Files**
+
+<p align="center"><img width="1032" alt="Screen Shot 2022-03-21 at 11 40 28 PM" src="https://user-images.githubusercontent.com/72515939/159297421-83cafc34-c534-4ebe-a104-9c3a2db830c9.png"></p>
+
+**Update Process**
+
+<p align="center"><img width="1040" alt="Screen Shot 2022-03-21 at 11 45 30 PM" src="https://user-images.githubusercontent.com/72515939/159298318-38ac50d1-6227-4017-854e-66e77994a3ec.png"></p>
+
+<p align="center"><img width="1032" alt="Screen Shot 2022-03-21 at 11 45 40 PM" src="https://user-images.githubusercontent.com/72515939/159298366-29fff9fb-be7a-47a0-8c7a-4128de9ea1fd.png"></p>
+
+<p align="center"><img width="1032" alt="Screen Shot 2022-03-21 at 11 45 44 PM" src="https://user-images.githubusercontent.com/72515939/159298448-3cc8abe9-49b7-4dd7-b824-4421112efdfa.png"></p>
+
+**Notes:** Please read OpenCore EFI update instruction. 
+
+
 ### 8.0 - BIOS/UEFI Settings
 
 - Disable `CSM/ Enable UEFI`
