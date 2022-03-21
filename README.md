@@ -68,7 +68,6 @@ Separate Drive OS.
 
 - [x] `iMac19,2`
 
-# 
 
 # Introduction
 
@@ -246,12 +245,12 @@ Why SSDT's patch? And why not DSDT's patching?
 
 ### 8.0 - Others
 
-- USBMap
+##### 8.1 - USBMap
 **Refer:** [Port](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/USBMap/Contents/Info.plist)
 
 <p align="center"><img width="1458" alt="Screen Shot 2022-03-21 at 11 36 12 PM" src="https://user-images.githubusercontent.com/72515939/159296213-89056733-8c3f-44e4-a45f-66353751743b.png"></p>
 
-- EFI Update Method
+##### 8.2 - EFI Update Method
 
 **Refer:** [OCTool](https://github.com/rusty-bits/octool)
 
