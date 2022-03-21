@@ -245,6 +245,8 @@ Why SSDT's patch? And why not DSDT's patching?
 
 <p align="center"><img width="1157" alt="Screen Shot 2022-03-16 at 9 39 50 PM" src="https://user-images.githubusercontent.com/72515939/158748867-55531a1c-0af1-428e-847d-2613b2fa233a.png"></p>
 
+<p align="center">![Screen Shot 2022-03-21 at 11 25 17 PM](https://user-images.githubusercontent.com/72515939/159294317-7a1e35ab-35e3-4c52-9de4-0ba0e2ef9692.jpg)</p>
+
 ### 8.0 - BIOS/UEFI Settings
 
 - Disable `CSM/ Enable UEFI`
