@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLwRQX6l.aml, Thu Mar 17 00:30:38 2022
+ * Disassembly of iASLgfEClW.aml, Tue Mar 22 22:39:45 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00002093 (8339)
+ *     Length           0x000020CA (8394)
  *     Revision         0x02
- *     Checksum         0x99
+ *     Checksum         0x5F
  *     OEM ID           "Apple"
  *     OEM Table ID     "Mac"
  *     OEM Revision     0x00000000 (0)
@@ -71,6 +71,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
 
         Scope (PR00)
         {
+            Name (_STR, Unicode ("Processor"))  // _STR: Description String
             If (_OSI ("Darwin"))
             {
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
@@ -211,6 +212,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
 
             Scope (LPCB)
             {
+                Name (_STR, Unicode ("Low Pin Count BUS"))  // _STR: Description String
                 Device (EC)
                 {
                     Name (_HID, "PNP0C09" /* Embedded Controller Device */)  // _HID: Hardware ID
@@ -452,7 +454,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         {
                             Name (_ADR, Zero)  // _ADR: Address
                             Name (_STR, Unicode ("Video Controller"))  // _STR: Description String
-                            Name (_SUN, Zero)  // _SUN: Slot User Number
+                            Name (_SUN, One)  // _SUN: Slot User Number
                             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                             {
                                 If ((Arg2 == Zero))
@@ -800,7 +802,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         {
                             Name (_ADR, One)  // _ADR: Address
                             Name (_STR, Unicode ("Audio Endpoint"))  // _STR: Description String
-                            Name (_SUN, Zero)  // _SUN: Slot User Number
+                            Name (_SUN, One)  // _SUN: Slot User Number
                             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                             {
                                 If ((Arg2 == Zero))
@@ -926,7 +928,6 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
                     Name (_STR, Unicode ("Network Adapters"))  // _STR: Description String
-                    Name (_SUN, One)  // _SUN: Slot User Number
                     Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
                     {
                         ToUUID ("5025030f-842f-4ab4-a561-99a5189762d0") /* Unknown UUID */, 
@@ -952,9 +953,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         Return (Package (0x08)
                         {
                             "AAPL,slot-name", 
-                            Buffer (0x07)
+                            Buffer (0x09)
                             {
-                                "Slot-1"
+                                "M2- Wifi"
                             }, 
 
                             "device_type", 
@@ -1047,7 +1048,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
                     Name (_STR, Unicode ("Universal Serial Bus Controller"))  // _STR: Description String
-                    Name (_SUN, 0x02)  // _SUN: Slot User Number
+                    Name (_SUN, 0x03)  // _SUN: Slot User Number
                     Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
@@ -1111,7 +1112,6 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
                     Name (_STR, Unicode ("Standard NVM Express Controller"))  // _STR: Description String
-                    Name (_SUN, 0x03)  // _SUN: Slot User Number
                     Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
                     {
                         ToUUID ("5025030f-842f-4ab4-a561-99a5189762d0") /* Unknown UUID */, 
@@ -1137,9 +1137,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         Return (Package (0x0E)
                         {
                             "AAPL,slot-name", 
-                            Buffer (0x07)
+                            Buffer (0x06)
                             {
-                                "Slot-3"
+                                "M2- 1"
                             }, 
 
                             "built-in", 
@@ -1193,7 +1193,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
                     Name (_STR, Unicode ("Standard NVM Express Controller"))  // _STR: Description String
-                    Name (_SUN, 0x04)  // _SUN: Slot User Number
+                    Name (_SUN, 0x02)  // _SUN: Slot User Number
                     Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
                     {
                         ToUUID ("5025030f-842f-4ab4-a561-99a5189762d0") /* Unknown UUID */, 
@@ -1275,7 +1275,6 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
                     Name (_STR, Unicode ("Standard NVM Express Controller"))  // _STR: Description String
-                    Name (_SUN, 0x05)  // _SUN: Slot User Number
                     Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
                     {
                         ToUUID ("5025030f-842f-4ab4-a561-99a5189762d0") /* Unknown UUID */, 
@@ -1301,9 +1300,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         Return (Package (0x0E)
                         {
                             "AAPL,slot-name", 
-                            Buffer (0x07)
+                            Buffer (0x06)
                             {
-                                "Slot-5"
+                                "M2- 2"
                             }, 
 
                             "built-in", 
@@ -1606,4 +1605,3 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
         }
     }
 }
-
