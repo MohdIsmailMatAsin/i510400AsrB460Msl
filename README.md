@@ -161,11 +161,11 @@ Why SSDT's patch? And why not DSDT's patching?
 
 **DSDT Patching** may cause
 
-- Broken motherboard BIOS
+- Broken motherboard BIOS or
   
 - Inefficient device with the wrong injection, or
   
-- Cause malfunction device
+- Cause malfunction device or
   
 - PC unable to boot properly due to an incorrect patch (difficult to reverse).
   
