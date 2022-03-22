@@ -144,7 +144,7 @@ EFI
 
 - Temporary: EFI\BOOT\BOOTx64.efi
 
-<p align="justify">While OpenCore is just a bootloader. This kind of stuffs is include with their own firmware. As a bootloader, portability is  on of the features to allow chainloader option.</p>
+<p align="justify">While OpenCore is just a bootloader. This kind of bootloader is include with their own firmware with ability to boot macOS partition. Other than that, OpenCore has portability features to allow chainloader option to other OS.</p>
 
 
 ### 2.0 - SSDT
