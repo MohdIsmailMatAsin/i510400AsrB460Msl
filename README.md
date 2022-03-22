@@ -130,19 +130,19 @@ EFI
 **Other Operating System (OS) Implementation**
 
 `Windows`
-- Temporary: EFI\boot\bootx64.efi
-- Permanent: EFI\Microsoft\Boot\bootmgfw.efi (Windows Boot Manager/UEFI which contain a GUID reference)
+- Temporary: `EFI\boot\bootx64.efi`
+- Permanent: `EFI\Microsoft\Boot\bootmgfw.efi` (Windows Boot Manager/UEFI which contain a GUID reference)
 
 `Linux`
-- Temporary: EFI\boot\bootx64.efi
-- Permanent: EFI\Ubuntu\grubx64.efi (No Secure Boot Support)
-- Permanent: EFI\Ubuntu\shimx64.efi (Secure Boot Support)
+- Temporary: `EFI\boot\bootx64.efi`
+- Permanent: `EFI\Ubuntu\grubx64.efi` (No Secure Boot Support)
+- Permanent: `EFI\Ubuntu\shimx64.efi` (Secure Boot Support)
 
 **OpenCore Implementation**
 
 `OpenCore`
 
-- Temporary: EFI\BOOT\BOOTx64.efi
+- Temporary: `EFI\BOOT\BOOTx64.efi`
 
 <p align="justify">While OpenCore is just a bootloader. This kind of bootloader is include with their own firmware, include extended quirks to boot macOS partition. Plus, OpenCore has portable features to allow chainloader option to other OS.</p>
 
