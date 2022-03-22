@@ -111,7 +111,7 @@ EFI
 
 ### 1.0 - BOOT
 
-<p align="justify">Fallback bootloader path. This is the only bootloader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As failsafe method, most firmware are include this drivers to prevent certain boot issue. There are 2 types of fallback. Details below explain between Temporary and Permanent method, mostly used by specified UEFI firmware and Operating System implementation.</p>
+<p align="justify">Fallback bootloader path. This is the only bootloader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As a failsafe method, most firmware includes these drivers to prevent certain boot issues. There are 2 types of fallback. Details below explain the temporary and permanent methods, mostly used by specified UEFI firmware and operating system implementation.</p>
 
 **Temporary vs Permanent:**
 
@@ -143,7 +143,7 @@ EFI
 
 - Temporary: `EFI\BOOT\BOOTx64.efi`
 
-<p align="justify">While OpenCore is just a bootloader. This kind of bootloader is include with their own firmware, include extended quirks to boot macOS partition. Plus, OpenCore has portable features to allow chainloader option to other OS.</p>
+<p align="justify">While OpenCore is just a bootloader, this type of bootloader is included with their own firmware, along with additional quirks for booting the macOS partition. Furthermore, OpenCore has portable features that enable the chainloader option to be used with other operating systems.</p>
 
 
 ### 2.0 - ACPI
@@ -256,7 +256,7 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 
 ### 6.0 - Resources
 
-<p align="justify">This folder is related to OpenCore Beauty Treatment and is used with OpenCanopy.efi driver. It is up to you to do your own research for a custom boot menu.</p>
+<p align="justify">This folder is related to OpenCore Beauty Treatment and is used with the OpenCanopy.efi driver. It is up to you to do your own research for a custom boot menu.</p>
 
 **Refer:** [OC Binary Resource](https://github.com/acidanthera/OcBinaryData)
 
@@ -332,7 +332,7 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 
 <p align="center"><img width="1032" alt="Screen Shot 2022-03-21 at 11 45 44 PM" src="https://user-images.githubusercontent.com/72515939/159298448-3cc8abe9-49b7-4dd7-b824-4421112efdfa.png"></p>
 
-<p align="justify">After update process finished, Cut/Move or Copy updated EFI to proper location, MacOS EFI Partition (i.e., Volume\EFI)</p>
+<p align="justify">After the update is complete, cut/move or copy the updated EFI to the appropriate location within the MacOS EFI Partition. (i.e., Volume\EFI)</p>
 
 
 ### 11.0 - BIOS/UEFI Settings
