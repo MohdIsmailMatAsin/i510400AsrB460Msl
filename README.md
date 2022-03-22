@@ -343,9 +343,9 @@ I would like to thanks all folks in Hackintosh Community especially:
   
 - [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for knowledge sharing.
   
-- [r/Hackintosh](https://www.reddit.com/r/hackintosh/) for easy undocumented refereces.
+- [r/Hackintosh](https://www.reddit.com/r/hackintosh/) for an easy undocumented refereces.
   
-- [daliansky](https://github.com/daliansky) for publishing his own OpenCore ACPI method and implementation.
+- [daliansky](https://github.com/daliansky) for publishing his own OpenCore ACPI method (OC-Little) and implementation.
   
 - [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky OC-Little.
 
