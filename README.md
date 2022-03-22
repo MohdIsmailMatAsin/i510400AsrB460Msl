@@ -170,9 +170,9 @@ EFI
 
 **SSDT Patching** may cause
 
-- Broken Windows if `Dual Booting` (can be solve by `OpenCore Quirks Settings`).
+- Broken Windows if `dual booting` (can be solve by `OpenCore Quirks Settings`).
  
-<p align="justify">However, this problem can be fixed via quirks settings in config.plist. This setting allows OpenCore not to use ACPI Injection entirely. The information is as below:</p>
+<p align="justify">Broken Windows can be fixed via quirks settings in config.plist. This quirks option allows OpenCore not to use ACPI injection entirely. The information is as below:</p>
 
 
 **OpenCore Quirks Settings**
