@@ -333,18 +333,20 @@ Written by `MohdIsmailMatAsin`
 
 I would like to thanks all folks in Hackintosh Community especially:
 
-- [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) for a great guide
+- [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) for a great guide.
   
-- [Acidanthera](https://github.com/acidanthera) and kudos for a great work
+- [Acidanthera](https://github.com/acidanthera) for a great work. KUDOS for them.
   
-- [CorpNewt](https://github.com/corpnewt) for developing simple USB mapping tools
+- [CorpNewt](https://github.com/corpnewt) for developing simple USB mapping tools.
 
-- [dhinakg](https://github.com/USBToolBox/tool) for developing easy Windows based USB mapping tools inspired by CorpNewt USBMap 
+- [dhinakg](https://github.com/USBToolBox/tool) for developing easy Windows based USB mapping tools inspired by CorpNewt USBMap.
   
-- [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for knowledge sharing
+- [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for knowledge sharing.
   
-- [r/Hackintosh](https://www.reddit.com/r/hackintosh/) for easy undocumented refereces
+- [r/Hackintosh](https://www.reddit.com/r/hackintosh/) for easy undocumented refereces.
   
-- [daliansky](https://github.com/daliansky) for publishing his own OpenCore ACPI method and implementation
+- [daliansky](https://github.com/daliansky) for publishing his own OpenCore ACPI method and implementation.
   
 - [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky OC-Little.
+
+- [rusty-bits](https://github.com/rusty-bits) for easy EFI update terminal solution.
