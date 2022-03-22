@@ -214,7 +214,7 @@ Why SSDT's patch? And why not DSDT's patching?
 
 ### 4.0 - Kernel Extension
 
-<p align="justify">Kernel extensions (kexts) let developers load code directly into the macOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is additional kexts to improve the function of the device or hardware. The table below contains some kexts used for this PC.</p>
+<p align="justify">Kernel extensions (kexts) let developers load code directly into the macOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed function. The table below contains some kexts used for this PC.</p>
 
 | Kext | Information |
 | --- | --- |
