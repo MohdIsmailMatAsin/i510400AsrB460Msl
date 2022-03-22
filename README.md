@@ -238,7 +238,7 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 
 ### 6.0 - Resources
 
-<p align="justify">This folder is related to OpenCore Beauty Treatment and is used with OpenCanopy.efi. It is up to you to do your own research for a custom boot menu.</p>
+<p align="justify">This folder is related to OpenCore Beauty Treatment and is used with OpenCanopy.efi driver. It is up to you to do your own research for a custom boot menu.</p>
 
 **Refer:** [OC Binary Resource](https://github.com/acidanthera/OcBinaryData)
 
