@@ -127,10 +127,7 @@ EFI
 `Permanent`
 - Cannot be ported due to GUID info binding.
 
-**Operating System Implementation**
-
-`OpenCore`
-- Temporary: EFI\BOOT\BOOTx64.efi
+**Other Operating System (OS) Implementation**
 
 `Windows`
 - Temporary: EFI\boot\bootx64.efi
@@ -140,6 +137,14 @@ EFI
 - Temporary: EFI\boot\bootx64.efi
 - Permanent: EFI\Ubuntu\grubx64.efi (No Secure Boot Support)
 - Permanent: EFI\Ubuntu\shimx64.efi (Secure Boot Support)
+
+**OpenCore Implementation**
+
+`OpenCore`
+
+- Temporary: EFI\BOOT\BOOTx64.efi
+
+<p align="justify">While OpenCore is just a bootloader. This kind of stuffs is include with their own firmware. As a bootloader, portability is  on of the features to allow chainloader option.</p>
 
 
 ### 2.0 - SSDT
