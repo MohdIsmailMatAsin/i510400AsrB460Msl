@@ -114,14 +114,33 @@ EFI
     │   └── CleanNvram.efi
     └── config.plist
 ```
+### 1.0 - BOOT
 
-### 1.0 - SSDT
+<p align="justify">Fallback bootloader path. This is the only bootloader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As failsafe method, most firmware are include this drivers to prevent certain boot issue.</p>
+
+**Details:**
+
+`OpenCore`
+- Temporary: EFI\BOOT\BOOTx64.efi
+
+`Windows`
+- Temporary: EFI\boot\bootx64.efi
+- Permanent: EFI\Microsoft\Boot\bootmgfw.efi (Windows Boot Manager/UEFI which contain a GUID reference)
+
+`Linux`
+- Temporary: EFI\boot\bootx64.efi
+- Permanent: EFI\Ubuntu\grubx64.efi (No Secure Boot Support)
+- Permanent: EFI\Ubuntu\shimx64.efi (Secure Boot Support)
+
+### 2.0 - SSDT
 
 **Question:**
 
-Why SSDT's patch? And why not DSDT's patching?
+Why SSDT's patch? And why not DSDT's patching?.
 
-[Dortania:](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) Do not add your DSDT to OpenCore; it's already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your configuration based on the architecture of your CPU.
+<p align="justify">Do not add your DSDT to OpenCore; it's already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your configuration based on the architecture of your CPU.</p>
+
+**Refer:** [Dortania:](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime)
 
 <p align="justify">DSDT patching should be avoided. There are various reasons why DSDT patching is not recommended. Some forums/webpages (i.e., Olarila) state that it is a major solution. As a matter of knowledge, DSDT is the main table while SSDT is the secondary table (additional table). The difference is that DSDT cannot be tampered with or touched. Because it is the main.aml code to handle your machine with various devices. Meanwhile, SSDT is the secondary table, where we can change (modify), add, and drop. Although the language (code) used is the same, it has a different task or method. Reason? I'll explain why.</p>
 
@@ -140,7 +159,7 @@ Why SSDT's patch? And why not DSDT's patching?
 
 <p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-Mac.aml). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext.The following is a list of devices that have been injected with specific properties:</p>
 
-##### 1.1 - SSDT-Mac.aml
+##### 2.1 - SSDT-Mac.aml
 
 | Device | Information |
 | --- | --- |
@@ -169,7 +188,7 @@ Why SSDT's patch? And why not DSDT's patching?
 
 **Refer:** [SSDT-Mac.aml](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl)
 
-### 2.0 - Drivers
+### 3.0 - Drivers
 
 <p align="justify">Only use 3 basic driver types. HfsPlus.efi, OpenCanopy.efi and OpenRuntime.efi. These three files are essentially basic things to get driver support. Usage information is as follows:</p>
 
@@ -179,7 +198,7 @@ Why SSDT's patch? And why not DSDT's patching?
 | OpenCanopy.efi | OpenCore cosmetics driver for OpenCore boot menu |
 | OpenRuntime.efi | AptioMemoryFix.efi (Clover Bootloader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management. |
 
-### 3.0 - Kernel Extension
+### 4.0 - Kernel Extension
 
 <p align="justify">Kernel extensions (kexts) let developers load code directly into the macOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is additional kexts to improve the function of the device or hardware. The table below contains some kexts used for this PC.</p>
 
@@ -199,25 +218,25 @@ Why SSDT's patch? And why not DSDT's patching?
 | BluetoolFixup | Apple `macOS Monterey` has changed parts of the `Bluetooth` stack from `kernel-space` to `user-space`. Note: Required when bluetooth not working properly in macOS 12. |
 | USBMap | Kext to `route` selected `USB ports`. This is `compulsory to handle` `15 port limit` requirements by macOS. Require [USBMap](https://github.com/corpnewt/USBMap) or [USBToolbox](https://github.com/USBToolBox/tool) |
 
-### 4.0 - Resources
+### 5.0 - Resources
 
 <p align="justify">This folder is related to OpenCore Beauty Treatment and is used with OpenCanopy.efi. It is up to you to do your own research for a custom boot menu.</p>
 
 **Refer:** [OC Binary Resource](https://github.com/acidanthera/OcBinaryData)
 
-### 5.0 - Tools
+### 6.0 - Tools
 
 <p align="justify">Nothing fancy, just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist.</p>
 
 
-### 6.0 - Config.plist
+### 7.0 - Config.plist
 
 <p align="justify">This section is simple. Knowledge + Hardware + Effort = Stability. Honestly, the process of preparing this file took a long time.  Still, I am thankful that I have over 20 years of experience using computers.  I am not too clumsy to understand the concept even though I am not from programming and technology field. Quirk selected was according to Intel 10th Gen `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the Vanilla Hackintosh concept.  Starting with Clover, it was a bit confusing for me because of the scattered setting and arrangement of each part.  OpenCore concept is easier to understand and compiled every part to improve hardware, device and the OS stability. I also provide examples, and expose some important settings for OpenCore config.plist.</p>
 
 **Refer:** [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
 
 
-### 7.0 - Results
+### 8.0 - Results
 
 <p align="center"><img width="697" alt="Screen Shot 2022-03-16 at 9 40 10 PM" src="https://user-images.githubusercontent.com/72515939/158741247-7cd3bdbd-b9a0-4e50-8e4b-4e90b99229f1.png"></p>
 
@@ -244,14 +263,14 @@ Why SSDT's patch? And why not DSDT's patching?
 <p align="center"><img width="1157" alt="Screen Shot 2022-03-16 at 9 39 50 PM" src="https://user-images.githubusercontent.com/72515939/158748867-55531a1c-0af1-428e-847d-2613b2fa233a.png"></p>
 
 
-### 8.0 - Others
+### 9.0 - Others
 
-##### 8.1 - USBMap
+##### 9.1 - USBMap
 **Refer:** [Port](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/USBMap/Contents/Info.plist)
 
 <p align="center"><img width="1458" alt="Screen Shot 2022-03-21 at 11 36 12 PM" src="https://user-images.githubusercontent.com/72515939/159296213-89056733-8c3f-44e4-a45f-66353751743b.png"></p>
 
-##### 8.2 - EFI Update Method
+##### 9.2 - EFI Update Method
 
 **Refer:** [OCTool](https://github.com/rusty-bits/octool)
 
