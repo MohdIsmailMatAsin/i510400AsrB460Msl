@@ -327,7 +327,7 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 - Enable` XHCI Hand-off`
 - Disable `Legacy USB Support` (If Needed)
 
-Copyright : `MohdIsmailMatAsin`
+Written by `MohdIsmailMatAsin`
 
 # Acknowledgements
 
@@ -345,4 +345,4 @@ I would like to thanks all folks in Hackintosh Community especially:
   
 - [daliansky](https://github.com/daliansky) for great ACPI method
   
-- [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky work. Thanks a lot Community!
+- [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky work. Thanks a lot Community! 
