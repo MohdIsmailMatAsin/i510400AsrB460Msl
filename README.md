@@ -151,7 +151,7 @@ EFI
 
 **Question:**
 
-Why SSDT's patch? And why not DSDT's patching?.
+Why SSDT's patch? And why not DSDT's patching?
 
 <p align="justify">Do not add your DSDT to OpenCore; it's already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your configuration based on the architecture of your CPU.</p>
 
