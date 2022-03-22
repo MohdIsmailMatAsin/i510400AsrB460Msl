@@ -132,6 +132,7 @@ EFI
 - Permanent: EFI\Ubuntu\grubx64.efi (No Secure Boot Support)
 - Permanent: EFI\Ubuntu\shimx64.efi (Secure Boot Support)
 
+
 ### 2.0 - SSDT
 
 **Question:**
@@ -154,7 +155,6 @@ Why SSDT's patch? And why not DSDT's patching?.
   
 - PC unable to boot properly due to an incorrect patch (difficult to reverse).
   
-
 <p align="justify">From here, SSDT Patch is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. The SSDT concept is only a patch of information and does not affect the existing hardware.</p>
 
 <p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-Mac.aml). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext.The following is a list of devices that have been injected with specific properties:</p>
@@ -222,25 +222,25 @@ Why SSDT's patch? And why not DSDT's patching?.
 
 OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/). This file is compulsory.
 
-### 5.0 - Resources
+### 6.0 - Resources
 
 <p align="justify">This folder is related to OpenCore Beauty Treatment and is used with OpenCanopy.efi. It is up to you to do your own research for a custom boot menu.</p>
 
 **Refer:** [OC Binary Resource](https://github.com/acidanthera/OcBinaryData)
 
-### 6.0 - Tools
+### 7.0 - Tools
 
 <p align="justify">Nothing fancy, just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist.</p>
 
 
-### 7.0 - Config.plist
+### 8.0 - Config.plist
 
 <p align="justify">This section is simple. Knowledge + Hardware + Effort = Stability. Honestly, the process of preparing this file took a long time.  Still, I am thankful that I have over 20 years of experience using computers.  I am not too clumsy to understand the concept even though I am not from programming and technology field. Quirk selected was according to Intel 10th Gen `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the Vanilla Hackintosh concept.  Starting with Clover, it was a bit confusing for me because of the scattered setting and arrangement of each part.  OpenCore concept is easier to understand and compiled every part to improve hardware, device and the OS stability. I also provide examples, and expose some important settings for OpenCore config.plist.</p>
 
 **Refer:** [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
 
 
-### 8.0 - Results
+### 9.0 - Results
 
 <p align="center"><img width="697" alt="Screen Shot 2022-03-16 at 9 40 10 PM" src="https://user-images.githubusercontent.com/72515939/158741247-7cd3bdbd-b9a0-4e50-8e4b-4e90b99229f1.png"></p>
 
@@ -267,14 +267,14 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 <p align="center"><img width="1157" alt="Screen Shot 2022-03-16 at 9 39 50 PM" src="https://user-images.githubusercontent.com/72515939/158748867-55531a1c-0af1-428e-847d-2613b2fa233a.png"></p>
 
 
-### 9.0 - Others
+### 10.0 - Others
 
-##### 9.1 - USBMap
+##### 10.1 - USBMap
 **Refer:** [Port](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/USBMap/Contents/Info.plist)
 
 <p align="center"><img width="1458" alt="Screen Shot 2022-03-21 at 11 36 12 PM" src="https://user-images.githubusercontent.com/72515939/159296213-89056733-8c3f-44e4-a45f-66353751743b.png"></p>
 
-##### 9.2 - EFI Update Method
+##### 10.2 - EFI Update Method
 
 **Refer:** [OCTool](https://github.com/rusty-bits/octool)
 
@@ -297,7 +297,7 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 **Notes:** Please read OpenCore EFI update instruction. 
 
 
-### 9.0 - BIOS/UEFI Settings
+### 11.0 - BIOS/UEFI Settings
 
 - Disable `CSM/ Enable UEFI`
 - Disable `Secure Boot`
