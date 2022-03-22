@@ -244,7 +244,7 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 
 ### 7.0 - Tools
 
-<p align="justify">Nothing fancy, just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist.</p>
+<p align="justify">Nothing fancy, just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist. This tool is hiding via "hide auxilliary". Use "Spacebar" to reveal the function. I just include this tools as failsafe.</p>
 
 
 ### 8.0 - Config.plist
