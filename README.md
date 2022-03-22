@@ -288,9 +288,11 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 
 <p align="center"><img width="1458" alt="Screen Shot 2022-03-21 at 11 36 12 PM" src="https://user-images.githubusercontent.com/72515939/159296213-89056733-8c3f-44e4-a45f-66353751743b.png"></p>
 
-##### 10.2 - EFI Update Method
+##### 10.2 - EFI Update
 
 **Refer:** [OCTool](https://github.com/rusty-bits/octool)
+
+**Notes:** Please read guide properly to know all `octool` extended features.
 
 **Where to put all file to update?**
 
@@ -308,8 +310,7 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 
 <p align="center"><img width="1032" alt="Screen Shot 2022-03-21 at 11 45 44 PM" src="https://user-images.githubusercontent.com/72515939/159298448-3cc8abe9-49b7-4dd7-b824-4421112efdfa.png"></p>
 
-**Notes:** Please read OpenCore EFI update instruction. 
-
+<p align="justify">Cut/Move/Copy updated EFI to proper location, MacOS EFI Partition (i.e., Volume\EFI)</p>
 
 ### 11.0 - BIOS/UEFI Settings
 
