@@ -2,7 +2,6 @@
 
 ![Last Update](https://img.shields.io/badge/Last_Update_(yy/mm/dd):-22.03.16-blueviolet.svg)
 
-##
 
 ## Hardware Information
 
@@ -50,7 +49,6 @@
   
 - [x] **Monterey** require `Mindate:0` , `MinVersion:0` and `SetApfsTrimTimeout:0`
   
-
 **Current OS**
 
 - [x] **macOS Monterey** v 12.2
@@ -59,14 +57,10 @@
 **Remark:**
 Separate Drive OS.
 
-**Dual boot requirement:**
-
-- `UpdateSMBIOSMode` = Custom
-- `CustomSMBIOSGuid` = True
-
 **SMBIOS:**
 
 - [x] `iMac19,2`
+
 
 # Introduction
 
@@ -114,6 +108,7 @@ EFI
     └── config.plist
 ```
 
+
 ### 1.0 - BOOT
 
 <p align="justify">Fallback bootloader path. This is the only bootloader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As failsafe method, most firmware are include this drivers to prevent certain boot issue. There are 2 types of fallback. Details below explain between Temporary and Permanent method, mostly used by specified UEFI firmware and Operating System implementation.</p>
@@ -150,17 +145,17 @@ EFI
 
 <p align="justify">While OpenCore is just a bootloader. This kind of bootloader is include with their own firmware, include extended quirks to boot macOS partition. Plus, OpenCore has portable features to allow chainloader option to other OS.</p>
 
-### 2.0 - SSDT
 
-**Question:**
+### 2.0 - ACPI
 
-Why SSDT's patch? And why not DSDT's patching?
+**DSDT vs SSDT Patching**
 
 <p align="justify">As documented by Dortania, "Do not add your DSDT to OpenCore; it's already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your configuration based on the architecture of your CPU".</p>
 
 **Refer:** [Dortania:](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime)
 
 <p align="justify">DSDT patching should be avoided. There are various reasons why DSDT patching is not recommended. Some forums/webpages (i.e., Olarila) state that it is a major solution. As a matter of knowledge, DSDT is the main table while SSDT is the secondary table (additional table). The difference is that DSDT cannot be tampered with or touched. Because it is the main.aml code to handle your machine with various devices. Meanwhile, SSDT is the secondary table, where we can change (modify), add, and drop. Although the language (code) used is the same, it has a different task or method. Reason? I'll explain why.</p>
+
 
 **DSDT Patching** may cause
 
@@ -171,11 +166,26 @@ Why SSDT's patch? And why not DSDT's patching?
 - Cause malfunction device, or
   
 - PC unable to boot properly due to an incorrect patch (difficult to reverse).
-  
 
-<p align="justify">From here, SSDT Patch is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. The SSDT concept is only a patch of information and does not affect the existing hardware.</p>
+
+**SSDT Patching** may cause
+
+- Broken Windows if `Dual Booting` (can be solve by `OpenCore Quirks Settings`).
+ 
+<p align="justify">However, this problem can be fixed via quirks settings in config.plist. This setting allows OpenCore not to use ACPI Injection entirely. The information is as below:</p>
+
+
+**OpenCore Quirks Settings**
+
+1. PlatformInfo\SerialInfo\UpdateSMBIOSMode = `Custom`
+  
+2. Kernel\Quirks\CustomSMBIOSGuid = `True` 
+
+
+<p align="justify">From here, SSDT patching is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. The SSDT concept is only a patch of information and does not affect the existing hardware.</p>
 
 <p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-Mac.aml). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext.The following is a list of devices that have been injected with specific properties:</p>
+
 
 ##### 2.1 - SSDT-Mac.aml
 
@@ -206,6 +216,7 @@ Why SSDT's patch? And why not DSDT's patching?
 
 **Refer:** [SSDT-Mac.aml](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl)
 
+
 ### 3.0 - Drivers
 
 <p align="justify">Only use 3 basic driver types. HfsPlus.efi, OpenCanopy.efi and OpenRuntime.efi. These three files are essentially basic things to get driver support. Usage information is as follows:</p>
@@ -215,6 +226,7 @@ Why SSDT's patch? And why not DSDT's patching?
 | HfsPlus.efi | Official `HFS+ Driver` Support for Apple macOS |
 | OpenCanopy.efi | OpenCore `Cosmetics Driver` for OpenCore boot menu |
 | OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Bootloader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management. |
+
 
 ### 4.0 - Kernel Extension
 
@@ -236,9 +248,11 @@ Why SSDT's patch? And why not DSDT's patching?
 | BluetoolFixup | Apple `macOS Monterey` has changed parts of the `Bluetooth` stack from `kernel-space` to `user-space`. Note: Required when bluetooth not working properly in macOS 12. |
 | USBMap | Kext to `route` selected `USB ports`. This is `compulsory to handle` `15 port limit` requirements by macOS. Require [USBMap](https://github.com/corpnewt/USBMap) or [USBToolbox](https://github.com/USBToolBox/tool) |
 
+
 ### 5.0 - OpenCore.efi
 
 OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/). This file is compulsory.
+
 
 ### 6.0 - Resources
 
@@ -246,15 +260,18 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 
 **Refer:** [OC Binary Resource](https://github.com/acidanthera/OcBinaryData)
 
+
 ### 7.0 - Tools
 
 <p align="justify">Nothing fancy, just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist. This tool is hiding via "hide auxilliary". Use "Spacebar" to reveal the function. I just include this tools as failsafe.</p>
+
 
 ### 8.0 - Config.plist
 
 <p align="justify">Knowledge + Hardware + Effort = Stability. Honestly, the process of preparing this file took a long time.  Still, I am thankful that I have over 20 years of experience using computers.  I am not too clumsy to understand the concept even though I am not from programming and technology field. Quirk selected was according to Intel 10th Gen `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the Vanilla Hackintosh concept.  Starting with Clover, it was a bit confusing for me because of the scattered setting and arrangement of each part.  OpenCore concept is easier to understand and compiled every part to improve hardware, device and the OS stability. I also provide examples, and expose some important settings for OpenCore config.plist.</p>
 
 **Refer:** [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
+
 
 ### 9.0 - Results
 
@@ -281,6 +298,7 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 <p align="center"><img width="656" alt="Screen Shot 2022-03-16 at 9 38 48 PM" src="https://user-images.githubusercontent.com/72515939/158748838-43b831dd-f8c8-4f7b-829e-636d6f4a40e7.png"></p>
 
 <p align="center"><img width="1157" alt="Screen Shot 2022-03-16 at 9 39 50 PM" src="https://user-images.githubusercontent.com/72515939/158748867-55531a1c-0af1-428e-847d-2613b2fa233a.png"></p>
+
 
 ### 10.0 - Others
 
@@ -315,6 +333,7 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 <p align="center"><img width="1032" alt="Screen Shot 2022-03-21 at 11 45 44 PM" src="https://user-images.githubusercontent.com/72515939/159298448-3cc8abe9-49b7-4dd7-b824-4421112efdfa.png"></p>
 
 <p align="justify">After update process finished, Cut/Move or Copy updated EFI to proper location, MacOS EFI Partition (i.e., Volume\EFI)</p>
+
 
 ### 11.0 - BIOS/UEFI Settings
 
