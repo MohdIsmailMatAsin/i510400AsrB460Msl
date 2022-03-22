@@ -115,13 +115,7 @@ EFI
     └── config.plist
 ```
 
-### 1.0 - Config.plist
-
-<p align="justify">This section is simple. Knowledge + Hardware + Effort = Stability. Honestly, the process of preparing this file took a long time.  Still, I am thankful that I have over 20 years of experience using computers.  I am not too clumsy to understand the concept even though I am not from programming and technology field. Quirk selected was according to Intel 10th Gen `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the Vanilla Hackintosh concept.  Starting with Clover, it was a bit confusing for me because of the scattered setting and arrangement of each part.  OpenCore concept is easier to understand and compiled every part to improve hardware, device and the OS stability. I also provide examples, and expose some important settings for OpenCore config.plist.</p>
-
-**Refer:** [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
-
-### 2.0 - SSDT
+### 1.0 - SSDT
 
 **Question:**
 
@@ -146,7 +140,7 @@ Why SSDT's patch? And why not DSDT's patching?
 
 <p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-Mac.aml). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext.The following is a list of devices that have been injected with specific properties:</p>
 
-##### 2.1 - SSDT-Mac.aml
+##### 1.1 - SSDT-Mac.aml
 
 | Device | Information |
 | --- | --- |
@@ -175,7 +169,7 @@ Why SSDT's patch? And why not DSDT's patching?
 
 **Refer:** [SSDT-Mac.aml](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl)
 
-### 3.0 - Drivers
+### 2.0 - Drivers
 
 <p align="justify">Only use 3 basic driver types. HfsPlus.efi, OpenCanopy.efi and OpenRuntime.efi. These three files are essentially basic things to get driver support. Usage information is as follows:</p>
 
@@ -185,7 +179,7 @@ Why SSDT's patch? And why not DSDT's patching?
 | OpenCanopy.efi | OpenCore cosmetics driver for OpenCore boot menu |
 | OpenRuntime.efi | AptioMemoryFix.efi (Clover Bootloader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management. |
 
-### 4.0 - Kernel Extension
+### 3.0 - Kernel Extension
 
 <p align="justify">Kernel extensions (kexts) let developers load code directly into the macOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is additional kexts to improve the function of the device or hardware. The table below contains some kexts used for this PC.</p>
 
@@ -205,15 +199,22 @@ Why SSDT's patch? And why not DSDT's patching?
 | BluetoolFixup | Apple `macOS Monterey` has changed parts of the `Bluetooth` stack from `kernel-space` to `user-space`. Note: Required when bluetooth not working properly in macOS 12. |
 | USBMap | Kext to `route` selected `USB ports`. This is `compulsory to handle` `15 port limit` requirements by macOS. Require [USBMap](https://github.com/corpnewt/USBMap) or [USBToolbox](https://github.com/USBToolBox/tool) |
 
-### 5.0 - Resources
+### 4.0 - Resources
 
 <p align="justify">This folder is related to OpenCore Beauty Treatment and is used with OpenCanopy.efi. It is up to you to do your own research for a custom boot menu.</p>
 
 **Refer:** [OC Binary Resource](https://github.com/acidanthera/OcBinaryData)
 
-### 6.0 - Tools
+### 5.0 - Tools
 
 <p align="justify">Nothing fancy, just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist.</p>
+
+
+### 6.0 - Config.plist
+
+<p align="justify">This section is simple. Knowledge + Hardware + Effort = Stability. Honestly, the process of preparing this file took a long time.  Still, I am thankful that I have over 20 years of experience using computers.  I am not too clumsy to understand the concept even though I am not from programming and technology field. Quirk selected was according to Intel 10th Gen `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the Vanilla Hackintosh concept.  Starting with Clover, it was a bit confusing for me because of the scattered setting and arrangement of each part.  OpenCore concept is easier to understand and compiled every part to improve hardware, device and the OS stability. I also provide examples, and expose some important settings for OpenCore config.plist.</p>
+
+**Refer:** [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
 
 
 ### 7.0 - Results
@@ -273,7 +274,7 @@ Why SSDT's patch? And why not DSDT's patching?
 **Notes:** Please read OpenCore EFI update instruction. 
 
 
-### 8.0 - BIOS/UEFI Settings
+### 9.0 - BIOS/UEFI Settings
 
 - Disable `CSM/ Enable UEFI`
 - Disable `Secure Boot`
