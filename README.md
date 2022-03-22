@@ -116,9 +116,18 @@ EFI
 ```
 ### 1.0 - BOOT
 
-<p align="justify">Fallback bootloader path. This is the only bootloader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As failsafe method, most firmware are include this drivers to prevent certain boot issue.</p>
+<p align="justify">Fallback bootloader path. This is the only bootloader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As failsafe method, most firmware are include this drivers to prevent certain boot issue. There are 2 types of fallback. Below details will explain between Temporary and Permanent method, mostly used by specified UEFI firmware and Operating System implementation.</p>
 
-**Details:**
+**Temporary vs Permanent:**
+
+`Temporary`
+- Can be ported to other GUID Partition
+- As a solution to boot certain OS (Depending on Firmware i.e., OpenCore, Clover and rEFInd)
+
+`Permanent`
+- Cannot be ported due to GUID info binding.
+
+**Operating System Implementation**
 
 `OpenCore`
 - Temporary: EFI\BOOT\BOOTx64.efi
