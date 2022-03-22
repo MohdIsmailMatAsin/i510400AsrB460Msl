@@ -116,7 +116,7 @@ EFI
 ```
 ### 1.0 - BOOT
 
-<p align="justify">Fallback bootloader path. This is the only bootloader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As failsafe method, most firmware are include this drivers to prevent certain boot issue. There are 2 types of fallback. Below details will explain between Temporary and Permanent method, mostly used by specified UEFI firmware and Operating System implementation.</p>
+<p align="justify">Fallback bootloader path. This is the only bootloader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As failsafe method, most firmware are include this drivers to prevent certain boot issue. There are 2 types of fallback. Details below explain between Temporary and Permanent method, mostly used by specified UEFI firmware and Operating System implementation.</p>
 
 **Temporary vs Permanent:**
 
