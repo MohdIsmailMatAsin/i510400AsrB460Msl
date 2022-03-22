@@ -68,7 +68,6 @@ Separate Drive OS.
 
 - [x] `iMac19,2`
 
-
 # Introduction
 
 <p align="justify">What is OpenCore? OpenCore is what we refer to as a "boot loader"; it is a complex piece of software that we use to prepare our systems for macOS, specifically by injecting new data for macOS such as SMBIOS, ACPI tables, and kexts.</p>
@@ -114,6 +113,7 @@ EFI
     │   └── CleanNvram.efi
     └── config.plist
 ```
+
 ### 1.0 - BOOT
 
 <p align="justify">Fallback bootloader path. This is the only bootloader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As failsafe method, most firmware are include this drivers to prevent certain boot issue. There are 2 types of fallback. Details below explain between Temporary and Permanent method, mostly used by specified UEFI firmware and Operating System implementation.</p>
@@ -121,19 +121,23 @@ EFI
 **Temporary vs Permanent:**
 
 `Temporary`
+
 - Can be ported to other GUID Partition
 - As a solution to boot certain OS (Depending on Firmware i.e., OpenCore, Clover and rEFInd)
 
 `Permanent`
+
 - Cannot be ported due to GUID info binding.
 
 **Other Operating System (OS) Implementation**
 
 `Windows`
+
 - Temporary: `EFI\boot\bootx64.efi`
 - Permanent: `EFI\Microsoft\Boot\bootmgfw.efi` (Windows Boot Manager/UEFI which contain a GUID reference)
 
 `Linux`
+
 - Temporary: `EFI\boot\bootx64.efi`
 - Permanent: `EFI\Ubuntu\grubx64.efi` (No Secure Boot Support)
 - Permanent: `EFI\Ubuntu\shimx64.efi` (Secure Boot Support)
@@ -145,7 +149,6 @@ EFI
 - Temporary: `EFI\BOOT\BOOTx64.efi`
 
 <p align="justify">While OpenCore is just a bootloader. This kind of bootloader is include with their own firmware, include extended quirks to boot macOS partition. Plus, OpenCore has portable features to allow chainloader option to other OS.</p>
-
 
 ### 2.0 - SSDT
 
@@ -169,6 +172,7 @@ Why SSDT's patch? And why not DSDT's patching?
   
 - PC unable to boot properly due to an incorrect patch (difficult to reverse).
   
+
 <p align="justify">From here, SSDT Patch is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. The SSDT concept is only a patch of information and does not affect the existing hardware.</p>
 
 <p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-Mac.aml). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext.The following is a list of devices that have been injected with specific properties:</p>
@@ -186,16 +190,16 @@ Why SSDT's patch? And why not DSDT's patching?
 | MCHC | Come with `SBUS` patch to aids with correct temperature, fan, voltage, ICH, etc readings and proper memory reporting |
 | GFX0 | `Dedicated Graphic Processor Unit / DGPU`.  This `SSDT` contain all `Navi 14` patch information. **Patch:** `ATY,Keelback` framebuffer and `CFG,CFG_USE_AGDC` properties to overcome wake issue using `DGPU` also `_SUN` information to reveal slot number |
 | HDAU | `High Definition Audio` through `HDMI` patch. `_SUN` information is added to reveal proper `slot number` |
-| HDEF | `High Definition Audio System / HDAS` in actual `DSDT`, renamed with `HDEF` . **Patch:**`layout id/data/01000000` which is equal to `alcid=1` |
+| HDEF | `High Definition Audio System / HDAS` in actual `DSDT`, renamed with `HDEF` . **Patch:** `layout id/data/01000000` which is equal to `alcid=1` |
 | PMCR | Classed as `Memory Controller` and known as `PPMC` in `Comet Lake (CML)` platform. This `SSDT` renamed `PPMC` as `PMCR` with compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, which is identical to `CML` `pci8086,a3a1` |
 | TSUB | `Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB` |
 | XHC1 | Rename PCIe`Comet Lake PCH-V USB Controller` device as `XHC` to `XHC1`. **Patch:**`acpi-wake-type` to overcome wake issue using USB device. |
-| ARPT | Rename `RP03,PXSX` to `RP03,ARPT`|
+| ARPT | Rename `RP03,PXSX` to `RP03,ARPT` |
 | RTL0 | Rename `RTL8125 2.5GbE Controller` device as `RP04,PXSX` to `RP04,RTL0` |
 | XHC0 | Rename `ASM2142 USB 3.1 Host Controller` device as `RP05,PXSX` to `RP05,XHC0`. **Patch:** `acpi-wake-type` to overcome wake issue using USB device. |
-| ANS0 | Rename `RP09,PXSX` to `RP09,ANS0`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller`|
-| ANS1 | Rename `RP20,PXSX` to `RP20,ANS1`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller`|
-| ANS2 | Rename `RP21,PXSX` to `RP21,ANS2`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller`|
+| ANS0 | Rename `RP09,PXSX` to `RP09,ANS0`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
+| ANS1 | Rename `RP20,PXSX` to `RP20,ANS1`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
+| ANS2 | Rename `RP21,PXSX` to `RP21,ANS2`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
 | SATA | Rename SATA to SAT0 with additional information. **Patch:** Spoof `400 Series Chipset Family SATA AHCI Controller` to `Intel 11 Series Chipset Controler` |
 | SBUS | Fix `AppleSMBus` support in macOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc` |
 | USBX | To supply `USB Power Properties` for Skylake and newer motherboard generation. |
@@ -208,9 +212,9 @@ Why SSDT's patch? And why not DSDT's patching?
 
 | Driver | Information |
 | --- | --- |
-| HfsPlus.efi | Official HFS+ Driver Support for Apple macOS |
-| OpenCanopy.efi | OpenCore cosmetics driver for OpenCore boot menu |
-| OpenRuntime.efi | AptioMemoryFix.efi (Clover Bootloader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management. |
+| HfsPlus.efi | Official `HFS+ Driver` Support for Apple macOS |
+| OpenCanopy.efi | OpenCore `Cosmetics Driver` for OpenCore boot menu |
+| OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Bootloader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management. |
 
 ### 4.0 - Kernel Extension
 
@@ -246,13 +250,11 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 
 <p align="justify">Nothing fancy, just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist. This tool is hiding via "hide auxilliary". Use "Spacebar" to reveal the function. I just include this tools as failsafe.</p>
 
-
 ### 8.0 - Config.plist
 
 <p align="justify">Knowledge + Hardware + Effort = Stability. Honestly, the process of preparing this file took a long time.  Still, I am thankful that I have over 20 years of experience using computers.  I am not too clumsy to understand the concept even though I am not from programming and technology field. Quirk selected was according to Intel 10th Gen `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the Vanilla Hackintosh concept.  Starting with Clover, it was a bit confusing for me because of the scattered setting and arrangement of each part.  OpenCore concept is easier to understand and compiled every part to improve hardware, device and the OS stability. I also provide examples, and expose some important settings for OpenCore config.plist.</p>
 
 **Refer:** [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
-
 
 ### 9.0 - Results
 
@@ -279,7 +281,6 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 <p align="center"><img width="656" alt="Screen Shot 2022-03-16 at 9 38 48 PM" src="https://user-images.githubusercontent.com/72515939/158748838-43b831dd-f8c8-4f7b-829e-636d6f4a40e7.png"></p>
 
 <p align="center"><img width="1157" alt="Screen Shot 2022-03-16 at 9 39 50 PM" src="https://user-images.githubusercontent.com/72515939/158748867-55531a1c-0af1-428e-847d-2613b2fa233a.png"></p>
-
 
 ### 10.0 - Others
 
@@ -313,7 +314,7 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 
 <p align="center"><img width="1032" alt="Screen Shot 2022-03-21 at 11 45 44 PM" src="https://user-images.githubusercontent.com/72515939/159298448-3cc8abe9-49b7-4dd7-b824-4421112efdfa.png"></p>
 
-<p align="justify">Cut/Move/Copy updated EFI to proper location, MacOS EFI Partition (i.e., Volume\EFI)</p>
+<p align="justify">After update process finished, Cut/Move or Copy updated EFI to proper location, MacOS EFI Partition (i.e., Volume\EFI)</p>
 
 ### 11.0 - BIOS/UEFI Settings
 
@@ -338,7 +339,7 @@ I would like to thanks all folks in Hackintosh Community especially:
 - [Acidanthera](https://github.com/acidanthera) for a great work. KUDOS for them.
   
 - [CorpNewt](https://github.com/corpnewt) for developing simple USB mapping tools.
-
+  
 - [dhinakg](https://github.com/USBToolBox/tool) for developing easy Windows based USB mapping tools inspired by CorpNewt USBMap.
   
 - [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for knowledge sharing.
@@ -348,5 +349,5 @@ I would like to thanks all folks in Hackintosh Community especially:
 - [daliansky](https://github.com/daliansky) for publishing his own OpenCore ACPI method (OC-Little) and implementation.
   
 - [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky OC-Little.
-
+  
 - [rusty-bits](https://github.com/rusty-bits) for an easy EFI update using windows "cmdprompt", linux and macOS Terminal.
