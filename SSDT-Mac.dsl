@@ -99,6 +99,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
             {
                 Name (_HID, "ACPI0008" /* Ambient Light Sensor Device */)  // _HID: Hardware ID
                 Name (_CID, "smc-als")  // _CID: Compatible ID
+                Name (_STR, Unicode ("Ambient Light Sensor")) // _STR: Description String
                 Method (_ALI, 0, NotSerialized)  // _ALI: Ambient Light Illuminance
                 {
                     Return (((LHIH << 0x08) | LLOW))
