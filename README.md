@@ -43,11 +43,11 @@
 
 **OS Tested:**
 
-- [x] **Catalina** require `Mindate:-1` , `MinVersion:-1` and `SetApfsTrimTimeout:-1`. Replace `AirportItlwm.kext` to `Catalina` Stable Version.
+- [x] **Catalina** require `Mindate:-1` , `MinVersion:-1`, `SetApfsTrimTimeout:-1` and replace `AirportItlwm.kext` to `Catalina` for working wifi.
   
-- [x] **BigSur** require `Mindate:0` , `MinVersion:0` and `SetApfsTrimTimeout:-1`. Replace `AirportItlwm.kext` to `BigSur` Stable Version.
+- [x] **BigSur** require `Mindate:0` , `MinVersion:0`, `SetApfsTrimTimeout:-1` and replace `AirportItlwm.kext` to `BigSur` for working wifi.
   
-- [x] **Monterey** require `Mindate:0` , `MinVersion:0` and `SetApfsTrimTimeout:0`. Replace `AirportItlwm.kext` to `Monterey` Stable Version.
+- [x] **Monterey** require `Mindate:0` , `MinVersion:0`, `SetApfsTrimTimeout:0` and replace `AirportItlwm.kext` to `Monterey` for working wifi.
 
 **Current OS**
 
