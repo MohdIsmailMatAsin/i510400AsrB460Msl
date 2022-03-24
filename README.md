@@ -43,12 +43,12 @@
 
 **OS Tested:**
 
-- [x] **Catalina** require `Mindate:-1` , `MinVersion:-1` and `SetApfsTrimTimeout:-1`
+- [x] **Catalina** require `Mindate:-1` , `MinVersion:-1` and `SetApfsTrimTimeout:-1`. Replace `AirportItlwm.kext` to `Catalina` Stable Version.
   
-- [x] **BigSur** require `Mindate:0` , `MinVersion:0` and `SetApfsTrimTimeout:-1`
+- [x] **BigSur** require `Mindate:0` , `MinVersion:0` and `SetApfsTrimTimeout:-1`. Replace `AirportItlwm.kext` to `BigSur` Stable Version.
   
-- [x] **Monterey** require `Mindate:0` , `MinVersion:0` and `SetApfsTrimTimeout:0`
-  
+- [x] **Monterey** require `Mindate:0` , `MinVersion:0` and `SetApfsTrimTimeout:0`. Replace `AirportItlwm.kext` to `Monterey` Stable Version.
+
 **Current OS**
 
 - [x] **macOS Monterey** v 12.2
