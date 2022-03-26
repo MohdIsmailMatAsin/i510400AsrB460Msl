@@ -214,7 +214,9 @@ EFI
 | SBUS | Fix `AppleSMBus` support in macOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc` |
 | USBX | To supply `USB Power Properties` for Skylake and newer motherboard generation. |
 
-**Refer:** [SSDT-Mac](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl)
+**Refer:** 
+- [SSDT-Mac](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl) - with Intel® Wireless AC 962
+- [SSDT-Mac_v2](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac_v2.dsl) - with BCM94360
 
 
 ### 3.0 - Drivers
