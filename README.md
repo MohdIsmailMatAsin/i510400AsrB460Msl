@@ -107,7 +107,7 @@ EFI
     │   └── CleanNvram.efi
     └── config.plist
 ```
-
+**Remark:** AirportItlwm.kext, Blutoolfixup.kext and IntelBluetoothFirmware.kext is depreciated in next update since got working BCM94630 device with M.2 to Mini PCIe Converter.
 
 ### 1.0 - BOOT
 
