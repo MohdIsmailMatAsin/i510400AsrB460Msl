@@ -107,7 +107,7 @@ EFI
     │   └── CleanNvram.efi
     └── config.plist
 ```
-**Remark:** AirportItlwm.kext, Bluetoolfixup.kext and IntelBluetoothFirmware.kext is depreciated in next update since got working BCM94630 device on M.2 WiFi Slot using Mini PCIe to M.2 Converter.
+**Remark:** AirportItlwm.kext, Bluetoolfixup.kext and IntelBluetoothFirmware.kext is depreciated in next update since got working BCM94630 device on M.2 WiFi Slot using Mini PCIe to M.2 Converter. Refer [EFI](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/files/8355605/EFI_v0.7.9.zip)
 
 ### 1.0 - BOOT
 
