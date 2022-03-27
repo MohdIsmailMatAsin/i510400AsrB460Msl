@@ -190,7 +190,8 @@ EFI
 
 ##### 2.1 - SSDT-Mac.aml
 
-**What is content inside SSDT.Mac.aml?**
+**What is the content inside SSDT.Mac.aml?**
+- All possible SSDT based patch according to the compatoble device.
 
 | Device | Information |
 | --- | --- |
