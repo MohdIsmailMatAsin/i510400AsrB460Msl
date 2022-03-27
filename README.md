@@ -190,10 +190,12 @@ EFI
 
 ##### 2.1 - SSDT-Mac.aml
 
+**What is content inside SSDT.Mac.aml?**
+
 | Device | Information |
 | --- | --- |
 | AWAC | To fix the `System Clocks` found on newer hardware. `_INI` Method is implemented |
-| ALS0 | Not needed. However, real `iMac` have these device properties. **Patch:** smc-als and AppleLMUController`) |
+| ALS0 | Optional/Not Needed. However, real `iMac` have these device information via IOREG. **Patch:** `smc-als` and `AppleLMUController`). These patch is only `Cosmetics`|
 | PLUG | To allow the kernel's `XCPM / XNU's CPU Power Management` to manage CPU's power management |
 | EC  | Fake Embedded Controller / EC drivers since `CML` don't have native support EC |
 | IGPU | `GFX0` to `IGPU` rename. Other rename method via `SSDT` for `Intergrated Graphics Unit / IGPU` which can be handled by `Whatevergreen.kext`. Additional info related to `Intel UHD 630` is added as `headless` built-in graphics module |
@@ -202,6 +204,7 @@ EFI
 | GFX0 | `Dedicated Graphic Processor Unit / DGPU`.  This `SSDT` contain all `Navi 14` patch information. **Patch:** `ATY,Keelback` framebuffer and `CFG,CFG_USE_AGDC` properties to overcome wake issue using `DGPU` also `_SUN` information to reveal slot number |
 | HDAU | `High Definition Audio` through `HDMI` patch. `_SUN` information is added to reveal proper `slot number` |
 | HDEF | `High Definition Audio System / HDAS` in actual `DSDT`, renamed with `HDEF` . **Patch:** `layout id/data/01000000` which is equal to `alcid=1` |
+| LPCB | Just regular `Low Pin Count Bus` path corresponding to Embed Controller / EC |
 | PMCR | Classed as `Memory Controller` and known as `PPMC` in `Comet Lake (CML)` platform. This `SSDT` renamed `PPMC` as `PMCR` with compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, which is identical to `CML` `pci8086,a3a1` |
 | TSUB | `Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB` |
 | XHC1 | Rename PCIe`Comet Lake PCH-V USB Controller` device as `XHC` to `XHC1`. **Patch:**`acpi-wake-type` to overcome wake issue using USB device. |
