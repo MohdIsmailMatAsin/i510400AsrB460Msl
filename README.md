@@ -85,10 +85,10 @@ EFI
     │   ├── OpenCanopy.efi
     │   └── OpenRuntime.efi
     ├── Kexts
-    │   ├── AirportItlwm.kext
+    │   ├── AirportItlwm.kext (depreciated)
     │   ├── AppleALC.kext
-    │   ├── BlueToolFixup.kext
-    │   ├── IntelBluetoothFirmware.kext
+    │   ├── BlueToolFixup.kext (depreciated)
+    │   ├── IntelBluetoothFirmware.kext (depreciated)
     │   ├── Lilu.kext
     │   ├── LucyRTL8125Ethernet.kext
     │   ├── RadeonSensor.kext
