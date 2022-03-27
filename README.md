@@ -24,6 +24,7 @@
 **Additional PCI Card:**
 
 - <strike>[Intel® Wireless AC 9620](https://www.intel.com/content/www/us/en/products/sku/99445/intel-wirelessac-9260/specifications.html)</strike>
+- BCM94360 WiFi + Bluetooth
 - [VL805/806 xHCI USB 3.0 Controller](https://www.via-labs.com/product_show.php?id=48)
 
 **Memory:**
