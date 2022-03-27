@@ -245,9 +245,9 @@ EFI
 | SMCRadeonGPU | Based on `FakeSMCs`, `RadeonMonitor` to provide `GPU` temperature to a dedicated gadget `without relying` on `FakeSMC` being installed and can therefore be used with `VirtualSMC` instead |
 | RadeonSensor | To read the `GPU` temperature. `Lilu` is required. |
 | LucyRTL8125Ethernet | `Realtek RTL8125 2.5GBit Ethernet Controllers` driver |
-| AirportItlwm | An `Intel Wi-Fi Adapter` Kernel Extension for macOS, based on the OpenBSD Project |
-| IntelBluetoothFirmware | `Kext` that uploads `Intel Wireless Bluetooth Firmware` to provide `native Bluetooth` in macOS. The firmware binary files are from the `Linux Open Source Project` |
-| BluetoolFixup | Apple `macOS Monterey` has changed parts of the `Bluetooth` stack from `kernel-space` to `user-space`. Note: Required when bluetooth not working properly in macOS 12. |
+| <strike>AirportItlwm</strike> | <strike>An `Intel Wi-Fi Adapter` Kernel Extension for macOS, based on the OpenBSD Project.</strike> |
+| <strike>IntelBluetoothFirmware</strike> | <strike>`Kext` that uploads `Intel Wireless Bluetooth Firmware` to provide `native Bluetooth` in macOS. The firmware binary files are from the `Linux Open Source Project`</strike> |
+| <strike>BluetoolFixup</strike> | <strike>Apple `macOS Monterey` has changed parts of the `Bluetooth` stack from `kernel-space` to `user-space`. Note: Required when bluetooth not working properly in macOS 12.</strike> |
 | USBMap | Kext to `route` selected `USB ports`. This is `compulsory to handle` `15 port limit` requirements by macOS. Require [USBMap](https://github.com/corpnewt/USBMap) or [USBToolbox](https://github.com/USBToolBox/tool) |
 
 
