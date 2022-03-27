@@ -44,11 +44,11 @@
 
 **OS Tested:**
 
-- [x] **Catalina** require `Mindate:-1` , `MinVersion:-1`, `SetApfsTrimTimeout:-1` and replace `AirportItlwm.kext` Catalina version for working wifi.
+- [x] **Catalina** require `Mindate:-1` , `MinVersion:-1`, `SetApfsTrimTimeout:-1` <strike>and replace `AirportItlwm.kext` Catalina version for working wifi.</strike>
   
-- [x] **BigSur** require `Mindate:0` , `MinVersion:0`, `SetApfsTrimTimeout:-1` and replace `AirportItlwm.kext` BigSur version for working wifi.
+- [x] **BigSur** require `Mindate:0` , `MinVersion:0`, `SetApfsTrimTimeout:-1` <strike>and replace `AirportItlwm.kext` BigSur version for working wifi.</strike>
   
-- [x] **Monterey** require `Mindate:0` , `MinVersion:0`, `SetApfsTrimTimeout:0` and replace `AirportItlwm.kext` Monterey version for working wifi.
+- [x] **Monterey** require `Mindate:0` , `MinVersion:0`, `SetApfsTrimTimeout:0` <strike>and replace `AirportItlwm.kext` Monterey version for working wifi.</strike>
 
 **Current OS**
 
@@ -216,7 +216,7 @@ EFI
 | USBX | To supply `USB Power Properties` for Skylake and newer motherboard generation. |
 
 **Refer:** 
-- [SSDT-Mac_v1](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl) - with Intel® Wireless AC 962 (Non-Native)
+- <strike>[SSDT-Mac_v1](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl) - with Intel® Wireless AC 962 (Non-Native)</strike>
 - [SSDT-Mac_v2](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac_v2.dsl) - with BCM94360 (Native)
 
 
