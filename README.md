@@ -192,7 +192,7 @@ EFI
 
 | Device | Information |
 | --- | --- |
-| AWAC | To fix the `System Clocks` found on newer hardware |
+| AWAC | To fix the `System Clocks` found on newer hardware. `_INI` Method is implemented |
 | ALS0 | Not needed. However, real `iMac` have these device properties. **Patch:** smc-als and AppleLMUController`) |
 | PLUG | To allow the kernel's `XCPM / XNU's CPU Power Management` to manage CPU's power management |
 | EC  | Fake Embedded Controller / EC drivers since `CML` don't have native support EC |
