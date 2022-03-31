@@ -52,8 +52,8 @@
 
 **Current OS**
 
-- [x] **macOS Monterey** v12.3
-- [x] **Windows** 11
+- [x] `macOS Monterey` v12.3
+- [x] `Windows` 11
 
 **Remark:**
 Separate Drive OS.
