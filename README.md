@@ -52,8 +52,8 @@
 
 **Current OS**
 
-- [x] **macOS Monterey** v 12.2
-- [x] **Windows 11**
+- [x] **macOS Monterey** v12.3
+- [x] **Windows** 11
 
 **Remark:**
 Separate Drive OS.
@@ -62,6 +62,11 @@ Separate Drive OS.
 
 - [x] `iMac19,2`
 
+**My Experience Rating Test**
+
+- **macOS Monterey** `8/10` - Stable
+- **macOS BigSur** `6/10` - Stable
+- **macOS Catalina** `10/10` - Stable, Fast and Impresive
 
 # Introduction
 
