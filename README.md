@@ -181,7 +181,7 @@ EFI
 <p align="justify">Broken Windows can be fixed via quirks settings in config.plist. This quirks option allows OpenCore not to use ACPI injection entirely. The information is as below:</p>
 
 
-**OpenCore Quirks Settings**
+**ACPI Quirks for Dual Booting**
 
 1. PlatformInfo\SerialInfo\UpdateSMBIOSMode = `Custom`
   
