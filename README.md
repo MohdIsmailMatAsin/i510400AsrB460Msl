@@ -66,7 +66,7 @@ Separate Drive OS.
 
 - **macOS Monterey** `8/10` - Stable
 - **macOS BigSur** `6/10` - Stable
-- **macOS Catalina** `10/10` - Stable, Fast and Impresive
+- **macOS Catalina** `10/10` - Stable & Fast
 
 # Introduction
 
