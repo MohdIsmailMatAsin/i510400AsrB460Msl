@@ -163,6 +163,13 @@ EFI
 <p align="justify">DSDT patching should be avoided. There are various reasons why DSDT patching is not recommended. Some forums/webpages (i.e., Olarila) state that it is a major solution. As a matter of knowledge, DSDT is the main table while SSDT is the secondary table (additional table). The difference is that DSDT cannot be tampered with or touched. Because it is the main.aml code to handle your machine with various devices. Meanwhile, SSDT is the secondary table, where we can change (modify), add, and drop. Although the language (code) used is the same, it has a different task or method. Reason? I'll explain why.</p>
 
 
+**Additional: ACPI Quirks for Dual Booting via config.plist**
+
+1. PlatformInfo\SerialInfo\UpdateSMBIOSMode = `Custom`
+  
+2. Kernel\Quirks\CustomSMBIOSGuid = `True` 
+
+
 **DSDT Patching** may cause
 
 - Broken motherboard BIOS, or
@@ -179,14 +186,6 @@ EFI
 - Broken Windows if `dual booting` (can be solve by `OpenCore Quirks Settings`).
  
 <p align="justify">Broken Windows can be fixed via quirks settings in config.plist. This quirks option allows OpenCore not to use ACPI injection entirely. The information is as below:</p>
-
-
-**ACPI Quirks for Dual Booting**
-
-1. PlatformInfo\SerialInfo\UpdateSMBIOSMode = `Custom`
-  
-2. Kernel\Quirks\CustomSMBIOSGuid = `True` 
-
 
 <p align="justify">From here, SSDT patching is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. The SSDT concept is only a patch of information and does not affect the existing hardware.</p>
 
