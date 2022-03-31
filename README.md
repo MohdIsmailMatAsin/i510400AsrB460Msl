@@ -24,7 +24,7 @@
 **Additional PCI Card:**
 
 - <strike>[Intel® Wireless AC 9620](https://www.intel.com/content/www/us/en/products/sku/99445/intel-wirelessac-9260/specifications.html)</strike>
-- [BCM94360 WiFi + Bluetooth](https://shopee.com.my/product/328098260/8609545085?smtt=0.65290281-1648740799.9) + [Mini PCIe to M.2 Adapter](https://s.lazada.com.my/s.ewFm4)
+- [BCM94360 WiFi & Bluetooth](https://shopee.com.my/product/328098260/8609545085?smtt=0.65290281-1648740799.9) + [Mini PCIe to M.2 Adapter](https://s.lazada.com.my/s.ewFm4)
 - [VL805/806 xHCI USB 3.0 Controller](https://www.via-labs.com/product_show.php?id=48)
 
 **Memory:**
