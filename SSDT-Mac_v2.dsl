@@ -1,17 +1,17 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20210930 (32-bit version)
- * Copyright (c) 2000 - 2021 Intel Corporation
+ * AML/ASL+ Disassembler version 20200925 (64-bit version)
+ * Copyright (c) 2000 - 2020 Intel Corporation
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of C:/Users/Mohd Ismail Mat Asin/AppData/Local/Temp/Temp1_EFI_v0.7.9.zip/EFI/OC/ACPI/SSDT-Mac.aml, Sat Mar 26 22:22:54 2022
+ * Disassembly of iASLRGPc5S.aml, Thu Mar 31 17:42:02 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00001FE0 (8160)
+ *     Length           0x00001F8E (8078)
  *     Revision         0x02
- *     Checksum         0xAA
+ *     Checksum         0x03
  *     OEM ID           "Apple"
  *     OEM Table ID     "Mac"
  *     OEM Revision     0x00000000 (0)
@@ -26,6 +26,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
     External (_SB_.PCI0.HDAS, DeviceObj)
     External (_SB_.PCI0.HECI, DeviceObj)
     External (_SB_.PCI0.LPCB, DeviceObj)
+    External (_SB_.PCI0.LPCB.ARTC, DeviceObj)
     External (_SB_.PCI0.LPCB.EC__, DeviceObj)
     External (_SB_.PCI0.MCHC, DeviceObj)
     External (_SB_.PCI0.PEG0, DeviceObj)
@@ -147,6 +148,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
             {
                 Name (_ADR, 0x00020000)  // _ADR: Address
                 Name (_STR, Unicode ("Display Controller"))  // _STR: Description String
+                Name (_SUN, Zero)  // _SUN: Slot User Number
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
                     If ((Arg2 == Zero))
@@ -157,54 +159,24 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         })
                     }
 
-                    Return (Package (0x10)
+                    Return (Package (0x06)
                     {
-                        "AAPL,ig-platform-id", 
-                        Buffer (0x04)
-                        {
-                             0x03, 0x00, 0xC5, 0x9B                           // ....
-                        }, 
-
-                        "built-in", 
+                        "enable-metal", 
                         Buffer (0x04)
                         {
                              0x01, 0x00, 0x00, 0x00                           // ....
                         }, 
 
-                        "class-code", 
+                        "igfxfw", 
                         Buffer (0x04)
                         {
-                             0x00, 0x00, 0x03, 0x00                           // ....
-                        }, 
-
-                        "device-id", 
-                        Buffer (0x04)
-                        {
-                             0x9B, 0x3E, 0x00, 0x00                           // .>..
+                             0x02, 0x00, 0x00, 0x00                           // ....
                         }, 
 
                         "iommu-selection", 
                         Buffer (0x04)
                         {
                              0x00, 0x00, 0x00, 0x00                           // ....
-                        }, 
-
-                        "subsystem-id", 
-                        Buffer (0x04)
-                        {
-                             0xFF, 0xFF, 0x00, 0x00                           // ....
-                        }, 
-
-                        "subsystem-vendor-id", 
-                        Buffer (0x04)
-                        {
-                             0x6B, 0x10, 0x00, 0x00                           // k...
-                        }, 
-
-                        "vendor-id", 
-                        Buffer (0x04)
-                        {
-                             0x86, 0x80, 0x00, 0x00                           // ....
                         }
                     })
                 }
@@ -529,7 +501,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                                     "hda-gfx", 
                                     Buffer (0x0A)
                                     {
-                                        "onboard-2"
+                                        "onboard-1"
                                     }, 
 
                                     "name", 
@@ -830,7 +802,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                                     "hda-gfx", 
                                     Buffer (0x0A)
                                     {
-                                        "onboard-2"
+                                        "onboard-1"
                                     }, 
 
                                     "model", 
@@ -1074,9 +1046,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                             }, 
 
                             "model", 
-                            Buffer (0x22)
+                            Buffer (0x26)
                             {
-                                "VL805/806 xHCI USB 3.0 Controller"
+                                "ASmedia USB 3.1 eXtensible Controller"
                             }, 
 
                             "name", 
@@ -1501,9 +1473,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         }, 
 
                         "model", 
-                        Buffer (0x20)
+                        Buffer (0x24)
                         {
-                            "Comet Lake PCH-V USB Controller"
+                            "Intel USB 3.0 eXtensible Controller"
                         }, 
 
                         "name", 
@@ -1545,4 +1517,3 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
         }
     }
 }
-
