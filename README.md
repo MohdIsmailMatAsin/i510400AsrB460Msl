@@ -413,6 +413,8 @@ OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/Ope
 
 
 ### 12.0 - MacOS
+  
+![Screenshot 2022-04-03 at 11 09 39 PM](https://user-images.githubusercontent.com/72515939/161434593-802b241f-3468-4d2a-b622-1c73477e4ede.jpg)
 
 <img width="697" alt="Screenshot 2022-04-02 at 8 51 45 PM" src="https://user-images.githubusercontent.com/72515939/161410582-fe3b95ea-34f6-409e-9c58-4f570e6fd608.png">
 
