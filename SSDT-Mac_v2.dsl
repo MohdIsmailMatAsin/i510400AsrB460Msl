@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLRGPc5S.aml, Thu Mar 31 17:42:02 2022
+ * Disassembly of iASLrdXC1X.aml, Sat Apr  2 20:54:08 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00001F8E (8078)
+ *     Length           0x00001F14 (7956)
  *     Revision         0x02
- *     Checksum         0x03
+ *     Checksum         0x40
  *     OEM ID           "Apple"
  *     OEM Table ID     "Mac"
  *     OEM Revision     0x00000000 (0)
@@ -148,7 +148,6 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
             {
                 Name (_ADR, 0x00020000)  // _ADR: Address
                 Name (_STR, Unicode ("Display Controller"))  // _STR: Description String
-                Name (_SUN, Zero)  // _SUN: Slot User Number
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
                     If ((Arg2 == Zero))
@@ -159,8 +158,20 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         })
                     }
 
-                    Return (Package (0x06)
+                    Return (Package (0x0C)
                     {
+                        "AAPL,ig-platform-id", 
+                        Buffer (0x04)
+                        {
+                             0x03, 0x00, 0xC5, 0x9B                           // ....
+                        }, 
+
+                        "AAPL,slot-name", 
+                        Buffer (0x0C)
+                        {
+                            "Intergrated"
+                        }, 
+
                         "enable-metal", 
                         Buffer (0x04)
                         {
@@ -171,6 +182,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         Buffer (0x04)
                         {
                              0x02, 0x00, 0x00, 0x00                           // ....
+                        }, 
+
+                        "igfxonln", 
+                        Buffer (0x04)
+                        {
+                             0x01, 0x00, 0x00, 0x00                           // ....
                         }, 
 
                         "iommu-selection", 
@@ -223,18 +240,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         })
                     }
 
-                    Return (Package (0x0E)
+                    Return (Package (0x0C)
                     {
                         "AAPL,slot-name", 
                         Buffer (0x09)
                         {
                             "Internal"
-                        }, 
-
-                        "built-in", 
-                        Buffer (0x04)
-                        {
-                             0x01, 0x00, 0x00, 0x00                           // ....
                         }, 
 
                         "device_type", 
@@ -289,18 +300,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         })
                     }
 
-                    Return (Package (0x0A)
+                    Return (Package (0x08)
                     {
                         "AAPL,slot-name", 
                         Buffer (0x09)
                         {
                             "Internal"
-                        }, 
-
-                        "built-in", 
-                        Buffer (0x04)
-                        {
-                             0x01, 0x00, 0x00, 0x00                           // ....
                         }, 
 
                         "device_type", 
@@ -338,18 +343,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         })
                     }
 
-                    Return (Package (0x0A)
+                    Return (Package (0x08)
                     {
                         "AAPL,slot-name", 
                         Buffer (0x09)
                         {
                             "Internal"
-                        }, 
-
-                        "built-in", 
-                        Buffer (0x04)
-                        {
-                             0x01, 0x00, 0x00, 0x00                           // ....
                         }, 
 
                         "device-id", 
@@ -842,18 +841,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         })
                     }
 
-                    Return (Package (0x0E)
+                    Return (Package (0x0C)
                     {
                         "AAPL,slot-name", 
                         Buffer (0x09)
                         {
                             "Internal"
-                        }, 
-
-                        "built-in", 
-                        Buffer (0x04)
-                        {
-                             0x01, 0x00, 0x00, 0x00                           // ....
                         }, 
 
                         "compatible", 
@@ -875,9 +868,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         }, 
 
                         "model", 
-                        Buffer (0x23)
+                        Buffer (0x3D)
                         {
-                            "Comet Lake PCH-V Memory Controller"
+                            "Comet Lake PCH Power Management Controller/Memory Controller"
                         }, 
 
                         "name", 
@@ -913,9 +906,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         Return (Package (0x08)
                         {
                             "AAPL,slot-name", 
-                            Buffer (0x06)
+                            Buffer (0x0A)
                             {
-                                "M2- 3"
+                                "M.2- WiFi"
                             }, 
 
                             "device_type", 
@@ -961,18 +954,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                             })
                         }
 
-                        Return (Package (0x0A)
+                        Return (Package (0x08)
                         {
                             "AAPL,slot-name", 
                             Buffer (0x09)
                             {
-                                "Internal"
-                            }, 
-
-                            "built-in", 
-                            Buffer (0x04)
-                            {
-                                 0x01, 0x00, 0x00, 0x00                           // ....
+                                "Ethernet"
                             }, 
 
                             "device_type", 
@@ -1008,7 +995,6 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
                     Name (_STR, Unicode ("Universal Serial Bus Controller"))  // _STR: Description String
-                    Name (_SUN, 0x03)  // _SUN: Slot User Number
                     Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
@@ -1019,24 +1005,18 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                             })
                         }
 
-                        Return (Package (0x0C)
+                        Return (Package (0x0A)
                         {
                             "AAPL,slot-name", 
-                            Buffer (0x07)
+                            Buffer (0x08)
                             {
-                                "Slot-2"
+                                "Slot- 3"
                             }, 
 
                             "acpi-wake-type", 
                             Buffer (One)
                             {
                                  0x01                                             // .
-                            }, 
-
-                            "built-in", 
-                            Buffer (0x04)
-                            {
-                                 0x01, 0x00, 0x00, 0x00                           // ....
                             }, 
 
                             "device_type", 
@@ -1048,7 +1028,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                             "model", 
                             Buffer (0x26)
                             {
-                                "ASmedia USB 3.1 eXtensible Controller"
+                                "ASmedia USB 3.2 eXtensible Controller"
                             }, 
 
                             "name", 
@@ -1082,18 +1062,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                             })
                         }
 
-                        Return (Package (0x0E)
+                        Return (Package (0x0C)
                         {
                             "AAPL,slot-name", 
-                            Buffer (0x06)
+                            Buffer (0x07)
                             {
-                                "M2- 1"
-                            }, 
-
-                            "built-in", 
-                            Buffer (0x04)
-                            {
-                                 0x01, 0x00, 0x00, 0x00                           // ....
+                                "M.2- 0"
                             }, 
 
                             "device-id", 
@@ -1141,7 +1115,6 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
                     Name (_STR, Unicode ("Standard NVM Express Controller"))  // _STR: Description String
-                    Name (_SUN, 0x02)  // _SUN: Slot User Number
                     Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
@@ -1152,18 +1125,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                             })
                         }
 
-                        Return (Package (0x0E)
+                        Return (Package (0x0C)
                         {
                             "AAPL,slot-name", 
-                            Buffer (0x09)
+                            Buffer (0x08)
                             {
-                                "Slot-4"
-                            }, 
-
-                            "built-in", 
-                            Buffer (0x04)
-                            {
-                                 0x01, 0x00, 0x00, 0x00                           // ....
+                                "Slot- 2"
                             }, 
 
                             "device-id", 
@@ -1221,18 +1188,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                             })
                         }
 
-                        Return (Package (0x0E)
+                        Return (Package (0x0C)
                         {
                             "AAPL,slot-name", 
-                            Buffer (0x06)
+                            Buffer (0x07)
                             {
-                                "M2- 2"
-                            }, 
-
-                            "built-in", 
-                            Buffer (0x04)
-                            {
-                                 0x01, 0x00, 0x00, 0x00                           // ....
+                                "M.2- 1"
                             }, 
 
                             "device-id", 
@@ -1288,18 +1249,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         })
                     }
 
-                    Return (Package (0x0E)
+                    Return (Package (0x0C)
                     {
                         "AAPL,slot-name", 
                         Buffer (0x09)
                         {
                             "Internal"
-                        }, 
-
-                        "built-in", 
-                        Buffer (0x04)
-                        {
-                             0x01, 0x00, 0x00, 0x00                           // ....
                         }, 
 
                         "compatible", 
@@ -1392,18 +1347,12 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         })
                     }
 
-                    Return (Package (0x0A)
+                    Return (Package (0x08)
                     {
                         "AAPL,slot-name", 
                         Buffer (0x09)
                         {
                             "Internal"
-                        }, 
-
-                        "built-in", 
-                        Buffer (0x04)
-                        {
-                             0x01, 0x00, 0x00, 0x00                           // ....
                         }, 
 
                         "device_type", 
@@ -1446,7 +1395,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         })
                     }
 
-                    Return (Package (0x0C)
+                    Return (Package (0x0A)
                     {
                         "AAPL,slot-name", 
                         Buffer (0x09)
@@ -1458,12 +1407,6 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         Buffer (One)
                         {
                              0x01                                             // .
-                        }, 
-
-                        "built-in", 
-                        Buffer (0x04)
-                        {
-                             0x01, 0x00, 0x00, 0x00                           // ....
                         }, 
 
                         "device_type", 
