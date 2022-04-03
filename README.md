@@ -124,7 +124,7 @@
 
 <p align="justify">OpenCore is what we refer to as a "boot loader" and also as "chain loader" at the same time; it is a complex piece of software that we use to prepare our systems for MacOS, specifically by injecting new data for MacOS such as SMBIOS, ACPI tables, and kexts.</p>
 
-
+<img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161431087-8fadbe79-bdc6-49fc-8721-eb149db7ede0.png">
 
 **Refer:** [OpenCore](https://dortania.github.io/OpenCore-Install-Guide/)
 
