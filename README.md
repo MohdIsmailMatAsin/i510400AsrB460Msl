@@ -23,9 +23,7 @@
 
 **Additional PCI Card:**
 
-- <strike>[Intel® Wireless AC 9620](https://www.intel.com/content/www/us/en/products/sku/99445/intel-wirelessac-9260/specifications.html)</strike>
 - [BCM94360 WiFi & Bluetooth](https://shopee.com.my/product/328098260/8609545085?smtt=0.65290281-1648740799.9) + [Mini PCIe to M.2 Adapter](https://s.lazada.com.my/s.ewFm4)
-- <strike>[VL805/806 xHCI USB 3.0 Controller](https://www.via-labs.com/product_show.php?id=48)</strike>
 - [ASM2142 USB 3.1 Host Controller with USB Type C](https://shopee.com.my/product/182112974/12539214940?smtt=0.65290281-1648742968.9)
 
 **Memory:**
@@ -37,7 +35,7 @@
 | Value | Disk Type | Product | Size |
 | --- | --- | --- | --- |
 | 2   | M.2 NVMe | [Kingston A2000 NVMe](https://shopee.com.my/Kingston-A2000-NV1-NVMe-PCIe-Gen-3x4-M.2-2280-Internal-Solid-State-Drives-SSD-SA2000-SNVS-(250GB-500GB-1TB-2TB)-i.15417888.1248954996) | 500 GB |
-| 1   | M.2 NVMe | [Silicon Power Maxio Chipset NVMe](https://shopee.com.my/Silicon-Power-NVMe-PCIe-Gen3x4-M.2-2280-SSD-(256GB-512GB-1TB)-A80-P34-Solid-State-Drives-i.137317911.2095142026) | 250 GB |
+| 1   | M.2 NVMe | [Silicon Power MAP1001 NVMe SSD](https://shopee.com.my/Silicon-Power-NVMe-PCIe-Gen3x4-M.2-2280-SSD-(256GB-512GB-1TB)-A80-P34-Solid-State-Drives-i.137317911.2095142026) | 256 GB |
 | 1   | SATA SSD | [San Disk SSD Plus](https://www.westerndigital.com/en-ap/products/internal-drives/sandisk-ssd-plus-sata-iii-ssd) | 480 GB |
 | 1   | SATA SSD | [San Disk SSD Plus](https://www.westerndigital.com/en-ap/products/internal-drives/sandisk-ssd-plus-sata-iii-ssd) | 240 GB |
 | 2   | SATA HDD | [Western Digital WDC WD5000AAKX-001CA0](https://products.wdc.com/library/SpecSheet/ENG/2879-701277.pdf) | 500 GB |
@@ -45,15 +43,17 @@
 
 **OS Tested:**
 
-- [x] **Catalina** require `Mindate: 20200306` , `MinVersion: 1412101001000000`, `SetApfsTrimTimeout:-1`, `SecureBootModel: Disable`. <strike>Use`AirportItlwm.kext` Catalina version for working wifi.</strike>
+- [x] MacOS Catalina requirement: `Mindate: 20200306`|`MinVersion: 1412101001000000`|`SetApfsTrimTimeout:-1`|`SecureBootModel: Disable`.
   
-- [x] **BigSur** require `Mindate: 0` , `MinVersion: 0`, `SetApfsTrimTimeout:-1`, `SecureBootModel: Default`. <strike>Use `AirportItlwm.kext` BigSur version for working wifi.</strike>
+- [x] MacOS BigSur requirement: `Mindate: 0`| `MinVersion: 0`|`SetApfsTrimTimeout:-1`|`SecureBootModel: Default`.
   
-- [x] **Monterey** require `Mindate: 0` , `MinVersion: 0`, `SetApfsTrimTimeout:0`, `SecureBootModel: Default`. <strike>Use `AirportItlwm.kext` Monterey version for working wifi.</strike>
+- [x] MacOS Monterey requirement: `Mindate: 0`|`MinVersion: 0`|`SetApfsTrimTimeout:0`|`SecureBootModel: Default`.
+
+**Remark:** Quirk must set as processor codename. Refer [OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html) and head to Configs.
 
 **Current OS**
 
-- [x] `macOS Monterey` v12.3
+- [x] `MacOS Monterey` v12.3
 - [x] `Windows` 11
 
 **Remark:**
@@ -65,13 +65,13 @@ Separate Drive OS.
 
 **My Experience Rating Test**
 
-- **macOS Monterey** `8/10` - Stable
-- **macOS BigSur** `6/10` - Stable
-- **macOS Catalina** `10/10` - Stable & Fast
+- **MacOS Monterey** `8/10` - Stable
+- **MacOS BigSur** `6/10` - Stable
+- **MacOS Catalina** `10/10` - Stable & Fast
 
 # Introduction
 
-<p align="justify">What is OpenCore? OpenCore is what we refer to as a "boot loader"; it is a complex piece of software that we use to prepare our systems for macOS, specifically by injecting new data for macOS such as SMBIOS, ACPI tables, and kexts.</p>
+<p align="justify">What is OpenCore? OpenCore is what we refer to as a "boot loader"; it is a complex piece of software that we use to prepare our systems for MacOS, specifically by injecting new data for MacOS such as SMBIOS, ACPI tables, and kexts.</p>
 
 **Refer:** [OpenCore](https://dortania.github.io/OpenCore-Install-Guide/)
 
@@ -80,39 +80,66 @@ Separate Drive OS.
 **OpenCore v0.7.9:**
 
 ```tree
-EFI
-├── BOOT
-│   └── BOOTx64.efi
-└── OC
-    ├── ACPI
-    │   └── SSDT-Mac.aml
-    ├── Drivers
-    │   ├── HfsPlus.efi
-    │   ├── OpenCanopy.efi
-    │   └── OpenRuntime.efi
-    ├── Kexts
-    │   ├── AirportItlwm.kext (depreciated)
-    │   ├── AppleALC.kext
-    │   ├── BlueToolFixup.kext (depreciated)
-    │   ├── IntelBluetoothFirmware.kext (depreciated)
-    │   ├── Lilu.kext
-    │   ├── LucyRTL8125Ethernet.kext
-    │   ├── RadeonSensor.kext
-    │   ├── SMCProcessor.kext
-    │   ├── SMCRadeonGPU.kext
-    │   ├── SMCSuperIO.kext
-    │   ├── USBMap.kext
-    │   ├── VirtualSMC.kext
-    │   └── WhateverGreen.kext
-    ├── OpenCore.efi
-    ├── Resources
-    │   ├── Audio
-    │   ├── Font
-    │   ├── Image
-    │   └── Label
-    ├── Tools
-    │   └── CleanNvram.efi
-    └── config.plist
+
+\---EFI
+    +---BOOT
+    |       BOOTx64.efi
+    |
+    \---OC
+        |   config.plist
+        |   OpenCore.efi
+        |
+        +---ACPI
+        |       SSDT-Mac.aml
+        |
+        +---Drivers
+        |       HfsPlus.efi
+        |       OpenCanopy.efi
+        |       OpenRuntime.efi
+        |
+        +---Kexts
+        |   +---AppleALC.kext
+        |   |
+        |   +---Lilu.kext
+        |   |
+        |   +---LucyRTL8125Ethernet.kext
+        |   |
+        |   +---RadeonSensor.kext
+        |   |
+        |   +---SMCLightSensor.kext
+        |   |
+        |   +---SMCProcessor.kext
+        |   |
+        |   +---SMCRadeonGPU.kext
+        |   |
+        |   +---SMCSuperIO.kext
+        |   |
+        |   +---USBMap.kext
+        |   |
+        |   +---USBMapFull.kext
+        |   |
+        |   +---VirtualSMC.kext
+        |   |
+        |   \---WhateverGreen.kext
+        |
+        +---Resources
+        |   +---Audio
+        |   |
+        |   +---Font
+        |   |
+        |   +---Image
+        |   |   \---Acidanthera
+        |   |       +---Chardonnay
+        |   |       |
+        |   |       +---GoldenGate
+        |   |       |
+        |   |       +---Syrah
+        |   |
+        |   \---Label
+        |
+        \---Tools
+                CleanNvram.efi
+                
 ```
 **Remark:** BCM94630 device on M.2 WiFi Slot using Mini PCIe to M.2 Converter. Refer [EFI](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/files/8355605/EFI_v0.7.9.zip) for updated EFI.
 
@@ -150,7 +177,7 @@ EFI
 
 - Temporary: `EFI\BOOT\BOOTx64.efi`
 
-<p align="justify">While OpenCore is just a bootloader, this type of bootloader is included with their own firmware, along with additional quirks for booting the macOS partition. Furthermore, OpenCore has portable features that enable the chainloader option to be used with other operating systems.</p>
+<p align="justify">While OpenCore is just a bootloader, this type of bootloader is included with their own firmware, along with additional quirks for booting the MacOS partition. Furthermore, OpenCore has portable features that enable the chainloader option to be used with other operating systems.</p>
 
 
 ### 2.0 - ACPI
@@ -220,7 +247,7 @@ EFI
 | ANS1 | Rename `RP20,PXSX` to `RP20,ANS1`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
 | ANS2 | Rename `RP21,PXSX` to `RP21,ANS2`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
 | SATA | Rename SATA to SAT0 with additional information. **Patch:** Spoof `400 Series Chipset Family SATA AHCI Controller` to `Intel 11 Series Chipset Controler` |
-| SBUS | Fix `AppleSMBus` support in macOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc` |
+| SBUS | Fix `AppleSMBus` support in MacOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc` |
 | USBX | To supply `USB Power Properties` for Skylake and newer motherboard generation. |
 
 **Refer:** 
@@ -234,30 +261,30 @@ EFI
 
 | Driver | Information |
 | --- | --- |
-| HfsPlus.efi | Official `HFS+ Driver` Support for Apple macOS |
+| HfsPlus.efi | Official `HFS+ Driver` Support for Apple MacOS |
 | OpenCanopy.efi | OpenCore `Cosmetics Driver` for OpenCore boot menu |
 | OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Bootloader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management. |
 
 
 ### 4.0 - Kernel Extension
 
-<p align="justify">Kernel extensions (kexts) let developers load code directly into the macOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed function. The table below contains some kexts used to properly boot MacOS through OpenCore</p>
+<p align="justify">Kernel extensions (kexts) let developers load code directly into the MacOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed function. The table below contains some kexts used to properly boot MacOS through OpenCore</p>
 
 | Kext | Information |
 | --- | --- |
-| Lilu | `Arbitrary kext` and `process patching` on macOS |
+| Lilu | `Arbitrary kext` and `process patching` on MacOS |
 | VirtualSMC | `System Management Controller` (SMC) emulator layer |
-| AppleALC | An `open source kernel extension` enabling `native macOS HD audio` for `not officially supported codecs` without any filesystem modifications |
+| AppleALC | An `open source kernel extension` enabling `native MacOS HD audio` for `not officially supported codecs` without any filesystem modifications |
 | Whatevergreen | `Various patches` necessary for certain `ATI`/`AMD`/`Intel`/`Nvidia` GPUs |
 | SMCProcessor | Additional support for `VirtualSMC`. Used for monitoring `CPU` temperature |
 | SMCSuperIO | Additional support for `VirtualSMC`. Used for monitoring `FAN` speed |
 | SMCRadeonGPU | Based on `FakeSMCs`, `RadeonMonitor` to provide `GPU` temperature to a dedicated gadget `without relying` on `FakeSMC` being installed and can therefore be used with `VirtualSMC` instead |
 | RadeonSensor | To read the `GPU` temperature. `Lilu` is required. |
 | LucyRTL8125Ethernet | `Realtek RTL8125 2.5GBit Ethernet Controllers` driver |
-| <strike>AirportItlwm</strike> | <strike>An `Intel Wi-Fi Adapter` Kernel Extension for macOS, based on the OpenBSD Project.</strike> |
-| <strike>IntelBluetoothFirmware</strike> | <strike>`Kext` that uploads `Intel Wireless Bluetooth Firmware` to provide `native Bluetooth` in macOS. The firmware binary files are from the `Linux Open Source Project`</strike> |
-| <strike>BluetoolFixup</strike> | <strike>Apple `macOS Monterey` has changed parts of the `Bluetooth` stack from `kernel-space` to `user-space`. Note: Required when bluetooth not working properly in macOS 12.</strike> |
-| USBMap | Kext to `route` selected `USB ports`. This is `compulsory to handle` `15 port limit` requirements by macOS. Require [USBMap](https://github.com/corpnewt/USBMap) or [USBToolbox](https://github.com/USBToolBox/tool) |
+| <strike>AirportItlwm</strike> | <strike>An `Intel Wi-Fi Adapter` Kernel Extension for MacOS, based on the OpenBSD Project.</strike> |
+| <strike>IntelBluetoothFirmware</strike> | <strike>`Kext` that uploads `Intel Wireless Bluetooth Firmware` to provide `native Bluetooth` in MacOS. The firmware binary files are from the `Linux Open Source Project`</strike> |
+| <strike>BluetoolFixup</strike> | <strike>Apple `MacOS Monterey` has changed parts of the `Bluetooth` stack from `kernel-space` to `user-space`. Note: Required when bluetooth not working properly in MacOS 12.</strike> |
+| USBMap | Kext to `route` selected `USB ports`. This is `compulsory to handle` `15 port limit` requirements by MacOS. Require [USBMap](https://github.com/corpnewt/USBMap) or [USBToolbox](https://github.com/USBToolBox/tool) |
 
 
 ### 5.0 - OpenCore.efi
@@ -331,7 +358,7 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 
 - Disable `CSM/ Enable UEFI`
 - Disable `Secure Boot`
-- Set SATA as `AHCI` (Do not install macOS through RST)
+- Set SATA as `AHCI` (Do not install MacOS through RST)
 - Disable `CFG Lock`
 - Disable `Fast Boot`
 - Disable `Intel Virtualization Technology`
@@ -361,4 +388,4 @@ I would like to thanks all folks in Hackintosh Community especially:
   
 - [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky OC-Little.
   
-- [rusty-bits](https://github.com/rusty-bits) for an easy EFI update using windows "cmdprompt", linux and macOS Terminal.
+- [rusty-bits](https://github.com/rusty-bits) for an easy EFI update using windows "cmdprompt", linux and MacOS Terminal.
