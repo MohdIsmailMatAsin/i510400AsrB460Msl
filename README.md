@@ -126,6 +126,8 @@
 
 <img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161431087-8fadbe79-bdc6-49fc-8721-eb149db7ede0.png">
 
+<p align="justify">Remark: OpenCore EFI position inside USB Installer is the same as the picture above. The EFI folder (include content) must be in a USB volume either ESP/EFI which is a FAT32 format volume. Post MacOS install, OpenCore EFI must be in MacOS ESP/EFI which also as FAT32 format volume.</p>
+
 **Refer:** [OpenCore](https://dortania.github.io/OpenCore-Install-Guide/)
 
 <p align="justify">There is the basic OpenCore folder, which is EFI. This folder contain several other files and folders. Please refer to the diagram below for better understanding.</p>
