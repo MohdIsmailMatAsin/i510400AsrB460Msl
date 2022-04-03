@@ -95,7 +95,7 @@
 
 **Refer:** [OpenCore](https://dortania.github.io/OpenCore-Install-Guide/)
 
-<p align="justify">There is the basic OpenCore folder, which is EFI (the main file). The main file contains several other folders. Please refer to the diagram below for better understanding.</p>
+<p align="justify">There is the basic OpenCore folder, which is EFI. This folder contain several other files and folders. Please refer to the diagram below for better understanding.</p>
 
 **OpenCore v0.7.9:**
 
@@ -230,13 +230,11 @@
 
 <p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-Mac.aml). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext.The following is a list of devices that have been injected with specific properties:</p>
 
-
 **Additional: ACPI Quirks for Dual Booting via config.plist**
 
 1. PlatformInfo\SerialInfo\UpdateSMBIOSMode = `Custom`
   
 2. Kernel\Quirks\CustomSMBIOSGuid = `True` 
-
 
 ##### 2.1 - SSDT-Mac.aml
 
@@ -265,13 +263,13 @@
 | ANS0 | Rename `RP09,PXSX` to `RP09,ANS0`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
 | ANS1 | Rename `RP20,PXSX` to `RP20,ANS1`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
 | ANS2 | Rename `RP21,PXSX` to `RP21,ANS2`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
-| SATA | Rename SATA to SAT0 with additional information. **Patch:** Spoof `400 Series Chipset Family SATA AHCI Controller` to `Intel 11 Series Chipset Controler` |
+| SATA | Rename SATA to SAT0 with additional information. **Patch:** Spoof `400 Series Chipset Family SATA AHCI Controller` to `Intel 11 Series Chipset Controler`|
 | SBUS | Fix `AppleSMBus` support in MacOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc` |
 | USBX | To supply `USB Power Properties` for Skylake and newer motherboard generation. |
 
 **Refer:** 
-- <strike>[SSDT-Mac_v1](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl) - with Intel® Wireless AC 962 (Non-Native)</strike>
-- [SSDT-Mac_v2](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac_v2.dsl) - with BCM94360 (Native)
+
+- [SSDT-Mac.aml](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl)
 
 
 ### 3.0 - Drivers
@@ -282,8 +280,7 @@
 | --- | --- |
 | HfsPlus.efi | Official `HFS+ Driver` Support for Apple MacOS |
 | OpenCanopy.efi | OpenCore `Cosmetics Driver` for OpenCore boot menu |
-| OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Bootloader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management. |
-
+| OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Bootloader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
 
 ### 4.0 - Kernel Extension
 
@@ -300,15 +297,12 @@
 | SMCRadeonGPU | Based on `FakeSMCs`, `RadeonMonitor` to provide `GPU` temperature to a dedicated gadget `without relying` on `FakeSMC` being installed and can therefore be used with `VirtualSMC` instead |
 | RadeonSensor | To read the `GPU` temperature. `Lilu` is required. |
 | LucyRTL8125Ethernet | `Realtek RTL8125 2.5GBit Ethernet Controllers` driver |
-| <strike>AirportItlwm</strike> | <strike>An `Intel Wi-Fi Adapter` Kernel Extension for MacOS, based on the OpenBSD Project.</strike> |
-| <strike>IntelBluetoothFirmware</strike> | <strike>`Kext` that uploads `Intel Wireless Bluetooth Firmware` to provide `native Bluetooth` in MacOS. The firmware binary files are from the `Linux Open Source Project`</strike> |
-| <strike>BluetoolFixup</strike> | <strike>Apple `MacOS Monterey` has changed parts of the `Bluetooth` stack from `kernel-space` to `user-space`. Note: Required when bluetooth not working properly in MacOS 12.</strike> |
 | USBMap | Kext to `route` selected `USB ports`. This is `compulsory to handle` `15 port limit` requirements by MacOS. Require [USBMap](https://github.com/corpnewt/USBMap) or [USBToolbox](https://github.com/USBToolBox/tool) |
 
 
 ### 5.0 - OpenCore.efi
 
-OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/). This file is compulsory.
+OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/). This file is compulsory.
 
 
 ### 6.0 - Resources
@@ -358,6 +352,7 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 
 <p align="center"><img width="1032" alt="Screen Shot 2022-03-21 at 11 39 55 PM" src="https://user-images.githubusercontent.com/72515939/159297314-1c6bf371-22e2-4229-b417-6557950e1af9.png"></p>
 
+
 **My Files**
 
 <p align="center"><img width="1032" alt="Screen Shot 2022-03-21 at 11 40 28 PM" src="https://user-images.githubusercontent.com/72515939/159297421-83cafc34-c534-4ebe-a104-9c3a2db830c9.png"></p>
@@ -392,6 +387,17 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 | Monterey | 8/10 | Stable |
 | BigSur | 6/10 | Stable |
 | Catalina | 10/10 | Stable & Fast |
+
+
+### 13.0 - Windows
+
+<img width="640" alt="Windows Info" src="https://user-images.githubusercontent.com/72515939/161429239-6b9c41c8-aec9-4090-bb69-a6c6a6256ade.png">
+
+<img width="1920" alt="Windows" src="https://user-images.githubusercontent.com/72515939/161429244-0a4af658-e1d6-44b2-8c73-8a66fae152cf.png">
+
+
+### 13.0 - MacOS
+
 
 Written by `MohdIsmailMatAsin`
 
