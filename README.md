@@ -119,6 +119,8 @@
 
 <img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161430979-9b890a71-a348-439b-98df-0e53e6a49da8.png">
 
+<img width="1399" alt="Screenshot 2022-04-03 at 10 47 56 PM" src="https://user-images.githubusercontent.com/72515939/161433665-d12eb9b1-5893-4831-96f6-05f2b28bc4a1.png">
+
 
 **OpenCore**
 
