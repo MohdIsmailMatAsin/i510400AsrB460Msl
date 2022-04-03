@@ -286,32 +286,13 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 
 ### 9.0 - Results
 
-<p align="center"><img width="697" alt="Screen Shot 2022-03-16 at 9 40 10 PM" src="https://user-images.githubusercontent.com/72515939/158741247-7cd3bdbd-b9a0-4e50-8e4b-4e90b99229f1.png"></p>
+**Terminal Info\Archey4**
 
-<p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 43 08 PM" src="https://user-images.githubusercontent.com/72515939/158739299-acd27c5b-839d-4d6c-a335-19d976a5cf79.png"></p>
+<img width="697" alt="Screenshot 2022-04-02 at 8 51 45 PM" src="https://user-images.githubusercontent.com/72515939/161410582-fe3b95ea-34f6-409e-9c58-4f570e6fd608.png">
 
-<p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 42 41 PM" src="https://user-images.githubusercontent.com/72515939/158741435-7b7c9766-6b27-4ece-9999-60219a1bdba7.png"></p>
+**System Report\PCI**
 
-<p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 42 44 PM" src="https://user-images.githubusercontent.com/72515939/158741452-0d41a713-3016-46bf-ba13-641527e07ded.png"></p>
-
-<p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 42 48 PM" src="https://user-images.githubusercontent.com/72515939/158741714-49368356-88bb-4164-8952-8d3d0ba9f2bb.png"></p>
-
-<p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 42 34 PM" src="https://user-images.githubusercontent.com/72515939/158741848-92e75717-5809-4926-b713-7c02031bba1f.png"></p>
-
-<p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 42 22 PM" src="https://user-images.githubusercontent.com/72515939/158741814-ada8ec4c-3f7f-4d25-9d72-1c47c3d425dc.png"></p>
-
-<p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 42 15 PM" src="https://user-images.githubusercontent.com/72515939/158741829-37f15929-4436-44d7-9b2c-453ff1d5763f.png"></p>
-
-<p align="center"><img width="1015" alt="Screen Shot 2022-03-16 at 9 42 28 PM" src="https://user-images.githubusercontent.com/72515939/158748040-f6dee057-1cef-4355-bd89-01a0d56d504b.png"></p>
-
-<p align="center"><img width="656" alt="Screen Shot 2022-03-16 at 9 39 01 PM" src="https://user-images.githubusercontent.com/72515939/158748806-ad730a31-19e9-4049-afa9-201b44dd0cd3.png"></p>
-
-<p align="center"><img width="656" alt="Screen Shot 2022-03-16 at 9 38 48 PM" src="https://user-images.githubusercontent.com/72515939/158748838-43b831dd-f8c8-4f7b-829e-636d6f4a40e7.png"></p>
-
-<p align="center"><img width="1157" alt="Screen Shot 2022-03-16 at 9 39 50 PM" src="https://user-images.githubusercontent.com/72515939/158748867-55531a1c-0af1-428e-847d-2613b2fa233a.png"></p>
-
-
-### 10.0 - Others
+<img width="1356" alt="Screenshot 2022-04-02 at 8 50 21 PM" src="https://user-images.githubusercontent.com/72515939/161410563-bf844fa2-75f3-4f42-8e43-4a6c74441460.png">
 
 ##### 10.1 - USBMap
 
