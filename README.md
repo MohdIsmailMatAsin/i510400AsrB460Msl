@@ -377,7 +377,8 @@ OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/Ope
 
 ### 8.0 - Config.plist
 
-<p align="justify">Knowledge + Hardware + Effort = Stability. Honestly, the process of preparing this file took a long time.  Still, I am thankful that I have over 20 years of experience using computers.  I am not too clumsy to understand the concept even though I am not from programming and technology field. Quirk selected was according to Intel 10th Gen `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the Vanilla Hackintosh concept.  Starting with Clover, it was a bit confusing for me because of the scattered setting and arrangement of each part.  OpenCore concept is easier to understand and compiled every part to improve hardware, device and the OS stability. I also provide examples, and expose some important settings for OpenCore config.plist.</p>
+<p align="justify">Knowledge + Hardware + Effort = Stability. Honestly, the process of preparing this file took a long time.  Still, I am thankful that I have over 20 years of experience using computers.  I am not too clumsy to understand the concept even though I am not from programming and technology field. Quirk selected was according to Intel 10th Gen `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the Vanilla Hackintosh concept.  Starting with Clover, it was a bit confusing for me because of the scattered setting and arrangement of each part.  OpenCore concept is easier to understand and compiled every part to improve hardware, device and the OS stability. I also provide examples, and expose some important settings for OpenCore config.plist.
+
 
 **Refer:** [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
 
@@ -417,8 +418,10 @@ OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/Ope
 
 <img width="1356" alt="Screenshot 2022-04-02 at 8 50 21 PM" src="https://user-images.githubusercontent.com/72515939/161410563-bf844fa2-75f3-4f42-8e43-4a6c74441460.png">
 
-<img width="392" alt="Screenshot 2022-04-03 at 11 04 29 PM" src="https://user-images.githubusercontent.com/72515939/161434396-ac6ffcb2-88c6-4465-8ee4-046ec2d7324d.png"><img width="392" alt="Screenshot 2022-04-03 at 11 04 25 PM" src="https://user-images.githubusercontent.com/72515939/161434402-141550ba-2caf-4771-ba51-a18e849c2a2b.png"><img width="392" alt="Screenshot 2022-04-03 at 11 04 15 PM" src="https://user-images.githubusercontent.com/72515939/161434407-293bc38a-6f52-4d03-9264-9d48c98e8370.png"><img width="392" alt="Screenshot 2022-04-03 at 11 04 10 PM" src="https://user-images.githubusercontent.com/72515939/161434412-c70de907-7c49-4e66-9f13-efa713cf8f1c.png"><img width="392" alt="Screenshot 2022-04-03 at 11 04 06 PM" src="https://user-images.githubusercontent.com/72515939/161434413-e9652e0a-86d0-4d1f-8281-4270419c3238.png">
-
+<img width="392" alt="Screenshot 2022-04-03 at 11 04 29 PM" src="https://user-images.githubusercontent.com/72515939/161434396-ac6ffcb2-88c6-4465-8ee4-046ec2d7324d.png"><img width="392" alt="Screenshot 2022-04-03 at 11 04 25 PM" src="https://user-images.githubusercontent.com/72515939/161434402-141550ba-2caf-4771-ba51-a18e849c2a2b.png"><img width="392" alt="Screenshot 2022-04-03 at 11 04 15 PM" src="https://user-images.githubusercontent.com/72515939/161434407-293bc38a-6f52-4d03-9264-9d48c98e8370.png"><img width="392" alt="Screenshot 2022-04-03 at 11 04 10 PM" src="https://user-images.githubusercontent.com/72515939/161434412-c70de907-7c49-4e66-9f13-efa713cf8f1c.png"><img width="392" alt="Screenshot 2022-04-03 at 11 04 06 PM" src="https://user-images.githubusercontent.com/72515939/161434413-e9652e0a-86d0-4d1f-8281-4270419c3238.png"><img width="346" alt="Screenshot 2022-04-03 at 11 07 41 PM" src="https://user-images.githubusercontent.com/72515939/161434500-38ca0242-44aa-4627-aaf4-306fc4c890d9.png">
+  
+<img width="1072" alt="Screenshot 2022-04-03 at 11 07 49 PM" src="https://user-images.githubusercontent.com/72515939/161434509-c8860ce4-d380-4079-8ff8-36c71596e69a.png">
+ 
 
 ### 13.0 - Download
 
