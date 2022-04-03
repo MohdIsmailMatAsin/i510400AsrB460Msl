@@ -417,6 +417,8 @@ OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/Ope
 
 <img width="1356" alt="Screenshot 2022-04-02 at 8 50 21 PM" src="https://user-images.githubusercontent.com/72515939/161410563-bf844fa2-75f3-4f42-8e43-4a6c74441460.png">
 
+<img width="392" alt="Screenshot 2022-04-03 at 11 04 29 PM" src="https://user-images.githubusercontent.com/72515939/161434396-ac6ffcb2-88c6-4465-8ee4-046ec2d7324d.png"><img width="392" alt="Screenshot 2022-04-03 at 11 04 25 PM" src="https://user-images.githubusercontent.com/72515939/161434402-141550ba-2caf-4771-ba51-a18e849c2a2b.png"><img width="392" alt="Screenshot 2022-04-03 at 11 04 15 PM" src="https://user-images.githubusercontent.com/72515939/161434407-293bc38a-6f52-4d03-9264-9d48c98e8370.png"><img width="392" alt="Screenshot 2022-04-03 at 11 04 10 PM" src="https://user-images.githubusercontent.com/72515939/161434412-c70de907-7c49-4e66-9f13-efa713cf8f1c.png"><img width="392" alt="Screenshot 2022-04-03 at 11 04 06 PM" src="https://user-images.githubusercontent.com/72515939/161434413-e9652e0a-86d0-4d1f-8281-4270419c3238.png">
+
 
 ### 13.0 - Download
 
