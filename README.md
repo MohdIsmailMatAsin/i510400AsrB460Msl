@@ -324,12 +324,7 @@ OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/Ope
 **Refer:** [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
 
 
-### 9.0 - Results
-
-**Terminal Info\Archey4**
-
-
-### 10.0 - BIOS/UEFI Settings
+### 9.0 - BIOS/UEFI Settings
 
 - Disable `CSM/ Enable UEFI`
 - Disable `Secure Boot`
@@ -341,7 +336,7 @@ OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/Ope
 - Enable` XHCI Hand-off`
 - Disable `Legacy USB Support` (If Needed)
 
-### 11.0 - My Experience Rating Test
+### 10.0 - My Experience Rating Test
 
 | MacOS | Rating 10/10 | Review |
 | --- | --- | --- |
@@ -350,20 +345,21 @@ OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/Ope
 | Catalina | 10/10 | Stable & Fast |
 
 
-### 12.0 - Windows
+### 11.0 - Windows
 
 <img width="640" alt="Windows Info" src="https://user-images.githubusercontent.com/72515939/161429239-6b9c41c8-aec9-4090-bb69-a6c6a6256ade.png">
 
 <img width="1920" alt="Windows" src="https://user-images.githubusercontent.com/72515939/161429244-0a4af658-e1d6-44b2-8c73-8a66fae152cf.png">
 
 
-### 13.0 - MacOS
+### 12.0 - MacOS
 
 <img width="697" alt="Screenshot 2022-04-02 at 8 51 45 PM" src="https://user-images.githubusercontent.com/72515939/161410582-fe3b95ea-34f6-409e-9c58-4f570e6fd608.png">
 
 <img width="1356" alt="Screenshot 2022-04-02 at 8 50 21 PM" src="https://user-images.githubusercontent.com/72515939/161410563-bf844fa2-75f3-4f42-8e43-4a6c74441460.png">
 
 Written by `MohdIsmailMatAsin`
+
 
 # Acknowledgements
 
