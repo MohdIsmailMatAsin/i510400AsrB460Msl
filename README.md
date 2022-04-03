@@ -426,6 +426,13 @@ OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/Ope
 **Note:** Any issues is not my responsible, please generate same SMBIOS with different serial. 
 
 
+### 14.0 - Ioreg
+
+- [Mohd's Ioreg](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/Mohd%E2%80%99s%20iMac.ioreg)
+
+**Note:** [Ioreg](https://github.com/MohdIsmailMatAsin/AdditionalTools4Xcode13.2/blob/main/IORegistryExplorer.zip) is required to view the details. 
+
+
 # Acknowledgements
 
 I would like to thanks all folks in Hackintosh Community especially:
