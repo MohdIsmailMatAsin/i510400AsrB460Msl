@@ -2,28 +2,35 @@
 
 ![Last Update](https://img.shields.io/badge/Last_Update_(yy/mm/dd):-22.03.16-blueviolet.svg)
 
+
 ## Hardware Information
+
 
 **Processor:**
 
 - [Intel® Core™ i5-10400 Processor](https://ark.intel.com/content/www/us/en/ark/products/199271/intel-core-i510400-processor-12m-cache-up-to-4-30-ghz.html)
 
+
 **Motherboard:**
 
 - [Asrock B460M Steel Legend](https://www.asrock.com/mb/Intel/B460M%20Steel%20Legend/)
+
 
 **DGPU:**
 
 - [MSI Radeon RX 5500 XT Mech OC 4GB](https://www.msi.com/Graphics-Card/radeon-rx-5500-xt-mech-4g-oc)
 
+
 **IGPU:**
 
 - [Intel® UHD Graphics 630](https://ark.intel.com/content/www/us/en/ark/products/graphics/126790/intel-uhd-graphics-630.html)
+
 
 **Additional PCI Card:**
 
 - [BCM94360 WiFi & Bluetooth](https://shopee.com.my/product/328098260/8609545085?smtt=0.65290281-1648740799.9) + [Mini PCIe to M.2 Adapter](https://s.lazada.com.my/s.ewFm4)
 - [ASM2142 USB 3.1 Host Controller with USB Type C](https://shopee.com.my/product/182112974/12539214940?smtt=0.65290281-1648742968.9)
+
 
 **Memory:**
 
@@ -40,6 +47,7 @@
 | 2   | SATA HDD | [Western Digital WDC WD5000AAKX-001CA0](https://products.wdc.com/library/SpecSheet/ENG/2879-701277.pdf) | 500 GB |
 | 1   | SATA HDD | [Hitachi HDT721016SLA380](https://www.hdsentinel.com/storageinfo_details.php?lang=en&model=HITACHI%20HDT721016SLA380) | 160 GB |
 
+
 **OS Tested:**
 
 - [x] MacOS Catalina requirement: `Mindate: 20200306`|`MinVersion: 1412101001000000`|`SetApfsTrimTimeout:-1`|`SecureBootModel: Disable`.
@@ -50,11 +58,13 @@
 
 <p align="justify">Remark: Quirk must set as processor codename. Refer OpenCore Getting Started] and head to Configs. For easy settings, use OCAuxiliaryTools. However, i will not recommend this tools. Any error occur to  config.plist, it is your own responsibility. Please make a backup before using it. Link can be refer below.</p>
 
+
 **Link**
 
 - [OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html)
 
 - [OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools)
+
 
 **Current OS**
 
@@ -96,6 +106,18 @@
 **What is Bootloader**
 
 <p align="justify">A boot loader, also known as a boot program or bootstrap loader, is a special operating system software that loads into the working memory of a computer after start-up. For this purpose, immediately after a device starts, a bootloader is generally launched by a bootable medium like a hard drive, a CD/DVD or a USB stick. The boot medium receives information from the computer’s firmware (e.g. BIOS) about where the bootloader is. The whole process is also described as “booting”. OpenCore, Clover, rEFInd, reEFIt, Chameleon, and a few other names is known as bootloaders. Mosts of these boot loaders are capable as chain loader/chain-loading. Chain loader is similar to the use of overlays. Unlike overlays, chain loader replaces the currently executing program in its entirety. Overlays usually replace only a portion of the running program. Like the use of overlays, the use of chain loading increases the I/O load of an application.</p>
+
+
+**My Partition**
+
+- **Windows**
+
+<img width="827" alt="Screenshot 2022-04-03 133920" src="https://user-images.githubusercontent.com/72515939/161430959-f530d4a2-812f-43ec-9b78-6b54522f3a50.png">
+
+
+- **MacOS**
+
+<img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161430979-9b890a71-a348-439b-98df-0e53e6a49da8.png">
 
 
 **OpenCore**
