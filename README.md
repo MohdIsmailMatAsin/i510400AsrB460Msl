@@ -124,6 +124,8 @@
 
 <p align="justify">OpenCore is what we refer to as a "boot loader" and also as "chain loader" at the same time; it is a complex piece of software that we use to prepare our systems for MacOS, specifically by injecting new data for MacOS such as SMBIOS, ACPI tables, and kexts.</p>
 
+
+
 **Refer:** [OpenCore](https://dortania.github.io/OpenCore-Install-Guide/)
 
 <p align="justify">There is the basic OpenCore folder, which is EFI. This folder contain several other files and folders. Please refer to the diagram below for better understanding.</p>
