@@ -395,6 +395,7 @@ OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/Ope
 [Clover](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/files/8404601/Clover-EFI_v5146.zip) & [OpenCore](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/files/8404602/OC-EFI_v0.7.9.zip)
 
 **Remark:** Clover Boot Loader is include with same output as OpenCore.
+
 **Note:** Any issues is not my responsible, please generate same SMBIOS with different serial. 
 
 
