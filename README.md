@@ -2,7 +2,6 @@
 
 ![Last Update](https://img.shields.io/badge/Last_Update_(yy/mm/dd):-22.03.16-blueviolet.svg)
 
-
 ## Hardware Information
 
 **Processor:**
@@ -49,29 +48,50 @@
   
 - [x] MacOS Monterey requirement: `Mindate: 0`|`MinVersion: 0`|`SetApfsTrimTimeout:0`|`SecureBootModel: Default`.
 
-**Remark:** Quirk must set as processor codename. Refer [OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html) and head to Configs.
+<p align="justify">Remark: Quirk must set as processor codename. Refer OpenCore Getting Started] and head to Configs. For easy settings, use OCAuxiliaryTools. However, i will not recommend this tools. Any error occur to  config.plist, it is your own responsibility. Please make a backup before using it. Link can be refer below.</p>
+
+**Link**
+
+- [OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html)
+
+- [OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools)
 
 **Current OS**
 
 - [x] `MacOS Monterey` v12.3
 - [x] `Windows` 11
 
-**Remark:**
-Separate Drive OS.
+<p align="justify">Remark: Operating System is installed in separated drive.</p>
 
 **SMBIOS:**
 
 - [x] `iMac19,2`
 
-**My Experience Rating Test**
-
-- **MacOS Monterey** `8/10` - Stable
-- **MacOS BigSur** `6/10` - Stable
-- **MacOS Catalina** `10/10` - Stable & Fast
-
 # Introduction
 
-<p align="justify">What is OpenCore? OpenCore is what we refer to as a "boot loader"; it is a complex piece of software that we use to prepare our systems for MacOS, specifically by injecting new data for MacOS such as SMBIOS, ACPI tables, and kexts.</p>
+**What is BIOS?**
+
+- **BIOS** = Basic Input/Output System
+
+<p align="justify">BIOS stands for Basic Input/Output System, the firmware we talked about in the above boot procedure. It is stored on an EPROM (Erasable Programmable Read-Only Memory), allowing the manufacturer to push out updates easily. It provides many helper functions that allow reading boot sectors of attached storage and printing things on screen. You can access BIOS during the initial phases of the boot procedure by pressing del, F2 or F10.</p>
+
+**What is EFI?**
+
+- **EFI** = Extensible Firmware Interface
+
+<p align="justify">The EFI system partition (ESP), a small partition formatted with FAT32, is usually around 100MB, this is where the EFI boot loaders and applications used by the firmware at system during start-up are stored. If your hard drive is in the GUID Partition table (GPT) partition style, it will automatically generate an EFI system partition after you have installed your operating systems. Both Windows and Mac operating systems are supported.</p>
+
+![efi-system-partition](https://user-images.githubusercontent.com/72515939/161425316-cb229e60-b2ad-4538-9b68-bbabb89a88a8.png)
+
+**What is UEFI?**
+
+- **UEFI** = Unified Extensible Firmware Interface
+
+<p align="justify">UEFI stands for "Unified Extensible Firmware Interface." The UEFI Specification defines a new model for the interface between personal-computer operating systems and platform firmware. The interface consists of data tables that contain platform-related information, plus boot and runtime service calls that are available to the operating system and its loader. Together, these provide a standard environment for booting an operating system and running pre-boot applications.</p>
+
+**OpenCore**
+
+<p align="justify">OpenCore is what we refer to as a "boot loader"; it is a complex piece of software that we use to prepare our systems for MacOS, specifically by injecting new data for MacOS such as SMBIOS, ACPI tables, and kexts.</p>
 
 **Refer:** [OpenCore](https://dortania.github.io/OpenCore-Install-Guide/)
 
@@ -141,7 +161,6 @@ Separate Drive OS.
                 CleanNvram.efi
                 
 ```
-**Remark:** BCM94630 device on M.2 WiFi Slot using Mini PCIe to M.2 Converter. Refer [EFI](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/files/8355605/EFI_v0.7.9.zip) for updated EFI.
 
 ### 1.0 - BOOT
 
@@ -365,6 +384,14 @@ OpenCore firmware. Include with all [OpenCorePkg](https://github.com/acidanthera
 - Disable `VT-D`
 - Enable` XHCI Hand-off`
 - Disable `Legacy USB Support` (If Needed)
+
+### 12.0 - My Experience Rating Test
+
+| MacOS | Rating 10/10 | Review |
+| --- | --- | --- |
+| Monterey | 8/10 | Stable |
+| BigSur | 6/10 | Stable |
+| Catalina | 10/10 | Stable & Fast |
 
 Written by `MohdIsmailMatAsin`
 
