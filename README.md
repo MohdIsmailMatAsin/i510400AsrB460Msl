@@ -69,11 +69,13 @@
 
 # Introduction
 
+
 **What is BIOS?**
 
 - **BIOS** = Basic Input/Output System
 
 <p align="justify">BIOS stands for Basic Input/Output System, the firmware we talked about in the above boot procedure. It is stored on an EPROM (Erasable Programmable Read-Only Memory), allowing the manufacturer to push out updates easily. It provides many helper functions that allow reading boot sectors of attached storage and printing things on screen. You can access BIOS during the initial phases of the boot procedure by pressing del, F2 or F10.</p>
+
 
 **What is EFI?**
 
@@ -83,24 +85,31 @@
 
 ![efi-system-partition](https://user-images.githubusercontent.com/72515939/161425316-cb229e60-b2ad-4538-9b68-bbabb89a88a8.png)
 
+
 **What is UEFI?**
 
 - **UEFI** = Unified Extensible Firmware Interface
 
 <p align="justify">UEFI stands for "Unified Extensible Firmware Interface." The UEFI Specification defines a new model for the interface between personal-computer operating systems and platform firmware. The interface consists of data tables that contain platform-related information, plus boot and runtime service calls that are available to the operating system and its loader. Together, these provide a standard environment for booting an operating system and running pre-boot applications.</p>
 
+
+**What is Bootloader**
+
+<p align="justify">A boot loader, also known as a boot program or bootstrap loader, is a special operating system software that loads into the working memory of a computer after start-up. For this purpose, immediately after a device starts, a bootloader is generally launched by a bootable medium like a hard drive, a CD/DVD or a USB stick. The boot medium receives information from the computer’s firmware (e.g. BIOS) about where the bootloader is. The whole process is also described as “booting”. OpenCore, Clover, rEFInd, reEFIt, Chameleon, and a few other names is known as bootloaders. Mosts of these boot loaders are capable as chain loader/chain-loading. Chain loader is similar to the use of overlays. Unlike overlays, chain loader replaces the currently executing program in its entirety. Overlays usually replace only a portion of the running program. Like the use of overlays, the use of chain loading increases the I/O load of an application.</p>
+
+
 **OpenCore**
 
-<p align="justify">OpenCore is what we refer to as a "boot loader"; it is a complex piece of software that we use to prepare our systems for MacOS, specifically by injecting new data for MacOS such as SMBIOS, ACPI tables, and kexts.</p>
+<p align="justify">OpenCore is what we refer to as a "boot loader" and also as "chain loader" at the same time; it is a complex piece of software that we use to prepare our systems for MacOS, specifically by injecting new data for MacOS such as SMBIOS, ACPI tables, and kexts.</p>
 
 **Refer:** [OpenCore](https://dortania.github.io/OpenCore-Install-Guide/)
 
 <p align="justify">There is the basic OpenCore folder, which is EFI. This folder contain several other files and folders. Please refer to the diagram below for better understanding.</p>
 
+
 **OpenCore v0.7.9:**
 
 ```tree
-
 \---EFI
     +---BOOT
     |       BOOTx64.efi
@@ -158,13 +167,15 @@
         |   \---Label
         |
         \---Tools
-                CleanNvram.efi
-                
+                CleanNvram.efi            
 ```
+Remark: This information is dumped via Windows Command Prompt. Refer [Tree Syntax via Windows](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/tree)
+
 
 ### 1.0 - BOOT
 
 <p align="justify">Fallback bootloader path. This is the only bootloader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As a failsafe method, most firmware includes these drivers to prevent certain boot issues. There are 2 types of fallback. Details below explain the temporary and permanent methods, mostly used by specified UEFI firmware and operating system implementation.</p>
+
 
 **Temporary vs Permanent:**
 
@@ -176,6 +187,7 @@
 `Permanent`
 
 - Cannot be ported due to GUID info binding.
+
 
 **Other Operating System (OS) Implementation**
 
@@ -190,6 +202,7 @@
 - Permanent: `EFI\Ubuntu\grubx64.efi` (No Secure Boot Support)
 - Permanent: `EFI\Ubuntu\shimx64.efi` (Secure Boot Support)
 
+
 **OpenCore Implementation**
 
 `OpenCore`
@@ -201,6 +214,19 @@
 
 ### 2.0 - ACPI
 
+
+**What is DSDT?**
+
+<p align="justify">DSDT stands for Differentiated System Description Table. It Is a major ACPI table and is used to describe what peripherals the machine has. Also holds information on PCI IRQ mappings and power management.</p>
+
+
+**What is SSDT?**
+
+<p align="justify">The SSDT is an ACPI decriptor table. It is encoded in AML in exactly the same way as the DSDT. It acts as a supplement to the DSDT.</p>
+
+Full information on DSDT and SSDT can be found at the link provided. Refer [DSDT](https://wiki.osdev.org/DSDT#:~:text=DSDT%20stands%20for%20Differentiated%20System,IRQ%20mappings%20and%20power%20management.) dan [SSDT](https://wiki.osdev.org/SSDT#:~:text=The%20SSDT%20is%20an%20ACPI,a%20supplement%20to%20the%20DSDT.)
+
+
 **DSDT vs SSDT Patching**
 
 <p align="justify">As documented by Dortania, "Do not add your DSDT to OpenCore; it's already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your configuration based on the architecture of your CPU".</p>
@@ -208,6 +234,7 @@
 **Refer:** [Dortania](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime)
 
 <p align="justify">DSDT patching should be avoided. There are various reasons why DSDT patching is not recommended. Some forums/webpages (i.e., Olarila) state that it is a major solution. As a matter of knowledge, DSDT is the main table while SSDT is the secondary table (additional table). The difference is that DSDT cannot be tampered with or touched. Because it is the main.aml code to handle your machine with various devices. Meanwhile, SSDT is the secondary table, where we can change (modify), add, and drop. Although the language (code) used is the same, it has a different task or method. Reason? I'll explain why.</p>
+
 
 **DSDT Patching** may cause
 
@@ -230,13 +257,13 @@
 
 <p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-Mac.aml). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext.The following is a list of devices that have been injected with specific properties:</p>
 
+
 **Additional: ACPI Quirks for Dual Booting via config.plist**
 
 1. PlatformInfo\SerialInfo\UpdateSMBIOSMode = `Custom`
   
 2. Kernel\Quirks\CustomSMBIOSGuid = `True` 
 
-##### 2.1 - SSDT-Mac.aml
 
 **What is the content inside SSDT.Mac.aml?**
 - All possible SSDT based patch according to the compatoble device.
@@ -272,7 +299,9 @@
 
 ### 3.0 - Drivers
 
+
 <p align="justify">Only use 3 basic driver types. HfsPlus.efi, OpenCanopy.efi and OpenRuntime.efi. These three files are essentially basic things to get driver support. Usage information is as follows:</p>
+
 
 | Driver | Information |
 | --- | --- |
@@ -283,7 +312,9 @@
 
 ### 4.0 - Kernel Extension
 
+
 <p align="justify">Kernel extensions (kexts) let developers load code directly into the MacOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed function. The table below contains some kexts used to properly boot MacOS through OpenCore</p>
+
 
 | Kext | Information |
 | --- | --- |
@@ -334,6 +365,7 @@ OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/Ope
 - Disable `VT-D`
 - Enable` XHCI Hand-off`
 - Disable `Legacy USB Support` (If Needed)
+
 
 ### 10.0 - My Experience Rating Test
 
