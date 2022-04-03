@@ -267,9 +267,7 @@
 | SBUS | Fix `AppleSMBus` support in MacOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc` |
 | USBX | To supply `USB Power Properties` for Skylake and newer motherboard generation. |
 
-**Refer:** 
-
-- [SSDT-Mac.aml](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl)
+**Refer:** [SSDT-Mac.aml](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl)
 
 
 ### 3.0 - Drivers
@@ -281,6 +279,7 @@
 | HfsPlus.efi | Official `HFS+ Driver` Support for Apple MacOS |
 | OpenCanopy.efi | OpenCore `Cosmetics Driver` for OpenCore boot menu |
 | OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Bootloader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
+
 
 ### 4.0 - Kernel Extension
 
