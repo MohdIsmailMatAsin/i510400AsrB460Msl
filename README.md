@@ -204,7 +204,6 @@ Remark: This information is dumped via Windows Command Prompt. Refer [Tree Synta
 
 <p align="justify">Fallback bootloader path. This is the only bootloader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As a failsafe method, most firmware includes these drivers to prevent certain boot issues. There are 2 types of fallback. Details below explain the temporary and permanent methods, mostly used by specified UEFI firmware and operating system implementation.</p>
 
-
 **Temporary vs Permanent:**
 
 `Temporary`
@@ -252,7 +251,7 @@ Remark: This information is dumped via Windows Command Prompt. Refer [Tree Synta
 
 <p align="justify">The SSDT is an ACPI decriptor table. It is encoded in AML in exactly the same way as the DSDT. It acts as a supplement to the DSDT.</p>
 
-Full information on DSDT and SSDT can be found at the link provided. Refer [DSDT](https://wiki.osdev.org/DSDT#:~:text=DSDT%20stands%20for%20Differentiated%20System,IRQ%20mappings%20and%20power%20management.) dan [SSDT](https://wiki.osdev.org/SSDT#:~:text=The%20SSDT%20is%20an%20ACPI,a%20supplement%20to%20the%20DSDT.)
+Full information on DSDT and SSDT can be found at the link provided. Refer [DSDT](https://wiki.osdev.org/DSDT#:~:text=DSDT%20stands%20for%20Differentiated%20System,IRQ%20mappings%20and%20power%20management.) and [SSDT](https://wiki.osdev.org/SSDT#:~:text=The%20SSDT%20is%20an%20ACPI,a%20supplement%20to%20the%20DSDT.)
 
 
 **DSDT vs SSDT Patching**
