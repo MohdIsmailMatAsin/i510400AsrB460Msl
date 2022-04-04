@@ -1,5 +1,4 @@
 # Hackintosh: Intel i5 10400 & Asrock B460M Steel Legend
-![Last Commit](https://img.shields.io/github/last-commit/mohdismailmatasin/i510400AsrockB460MSteelLegend)
 
 ## Hardware Information
 
@@ -450,5 +449,3 @@ I would like to thanks all folks in Hackintosh Community especially:
 - [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky OC-Little.
   
 - [rusty-bits](https://github.com/rusty-bits) for an easy EFI update using windows "Cmd-Prompt", linux and MacOS Terminal.
-
-![mohdismailmatasin@gmail.com](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)
