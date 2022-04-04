@@ -1,7 +1,5 @@
 # Hackintosh: Intel i5 10400 & Asrock B460M Steel Legend
-
-![Last Update](https://img.shields.io/badge/Last_Update_(yy/mm/dd):-22.03.16-blueviolet.svg)
-
+![Last Commit](https://img.shields.io/github/last-commit/mohdismailmatasin/i510400AsrockB460MSteelLegend)
 
 ## Hardware Information
 
@@ -139,63 +137,63 @@
 
 ```tree
 \---EFI
-    +---BOOT
-    |       BOOTx64.efi
-    |
-    \---OC
-        |   config.plist
-        |   OpenCore.efi
-        |
-        +---ACPI
-        |       SSDT-Mac.aml
-        |
-        +---Drivers
-        |       HfsPlus.efi
-        |       OpenCanopy.efi
-        |       OpenRuntime.efi
-        |
-        +---Kexts
-        |   +---AppleALC.kext
-        |   |
-        |   +---Lilu.kext
-        |   |
-        |   +---LucyRTL8125Ethernet.kext
-        |   |
-        |   +---RadeonSensor.kext
-        |   |
-        |   +---SMCLightSensor.kext
-        |   |
-        |   +---SMCProcessor.kext
-        |   |
-        |   +---SMCRadeonGPU.kext
-        |   |
-        |   +---SMCSuperIO.kext
-        |   |
-        |   +---USBMap.kext
-        |   |
-        |   +---USBMapFull.kext
-        |   |
-        |   +---VirtualSMC.kext
-        |   |
-        |   \---WhateverGreen.kext
-        |
-        +---Resources
-        |   +---Audio
-        |   |
-        |   +---Font
-        |   |
-        |   +---Image
-        |   |   \---Acidanthera
-        |   |       +---Chardonnay
-        |   |       |
-        |   |       +---GoldenGate
-        |   |       |
-        |   |       +---Syrah
-        |   |
-        |   \---Label
-        |
-        \---Tools
-                CleanNvram.efi            
+	+---BOOT
+	|       BOOTx64.efi
+	|
+	\---OC
+		|   config.plist
+		|   OpenCore.efi
+		|
+		+---ACPI
+		|       SSDT-Mac.aml
+		|
+		+---Drivers
+		|       HfsPlus.efi
+		|       OpenCanopy.efi
+		|       OpenRuntime.efi
+		|
+		+---Kexts
+		|   +---AppleALC.kext
+		|   |
+		|   +---Lilu.kext
+		|   |
+		|   +---LucyRTL8125Ethernet.kext
+		|   |
+		|   +---RadeonSensor.kext
+		|   |
+		|   +---SMCLightSensor.kext
+		|   |
+		|   +---SMCProcessor.kext
+		|   |
+		|   +---SMCRadeonGPU.kext
+		|   |
+		|   +---SMCSuperIO.kext
+		|   |
+		|   +---USBMap.kext
+		|   |
+		|   +---USBMapFull.kext
+		|   |
+		|   +---VirtualSMC.kext
+		|   |
+		|   \---WhateverGreen.kext
+		|
+		+---Resources
+		|   +---Audio
+		|   |
+		|   +---Font
+		|   |
+		|   +---Image
+		|   |   \---Acidanthera
+		|   |       +---Chardonnay
+		|   |       |
+		|   |       +---GoldenGate
+		|   |       |
+		|   |       +---Syrah
+		|   |
+		|   \---Label
+		|
+		\---Tools
+				CleanNvram.efi            
 ```
 Remark: This information is dumped via Windows Command Prompt. Refer [Tree Syntax via Windows](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/tree)
 
@@ -408,18 +406,12 @@ OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/Ope
 
 <img width="640" alt="Windows Info" src="https://user-images.githubusercontent.com/72515939/161429239-6b9c41c8-aec9-4090-bb69-a6c6a6256ade.png">
 
-<img width="1920" alt="Windows" src="https://user-images.githubusercontent.com/72515939/161429244-0a4af658-e1d6-44b2-8c73-8a66fae152cf.png">
-
 
 ### 12.0 - MacOS
-  
-![Screenshot 2022-04-03 at 11 09 39 PM](https://user-images.githubusercontent.com/72515939/161434593-802b241f-3468-4d2a-b622-1c73477e4ede.jpg)
 
 <img width="697" alt="Screenshot 2022-04-02 at 8 51 45 PM" src="https://user-images.githubusercontent.com/72515939/161410582-fe3b95ea-34f6-409e-9c58-4f570e6fd608.png">
 
 <img width="1356" alt="Screenshot 2022-04-02 at 8 50 21 PM" src="https://user-images.githubusercontent.com/72515939/161410563-bf844fa2-75f3-4f42-8e43-4a6c74441460.png">
-
-<img width="392" alt="Screenshot 2022-04-03 at 11 04 29 PM" src="https://user-images.githubusercontent.com/72515939/161434396-ac6ffcb2-88c6-4465-8ee4-046ec2d7324d.png"><img width="392" alt="Screenshot 2022-04-03 at 11 04 25 PM" src="https://user-images.githubusercontent.com/72515939/161434402-141550ba-2caf-4771-ba51-a18e849c2a2b.png"><img width="392" alt="Screenshot 2022-04-03 at 11 04 15 PM" src="https://user-images.githubusercontent.com/72515939/161434407-293bc38a-6f52-4d03-9264-9d48c98e8370.png"><img width="392" alt="Screenshot 2022-04-03 at 11 04 10 PM" src="https://user-images.githubusercontent.com/72515939/161434412-c70de907-7c49-4e66-9f13-efa713cf8f1c.png"><img width="392" alt="Screenshot 2022-04-03 at 11 04 06 PM" src="https://user-images.githubusercontent.com/72515939/161434413-e9652e0a-86d0-4d1f-8281-4270419c3238.png"><img width="346" alt="Screenshot 2022-04-03 at 11 07 41 PM" src="https://user-images.githubusercontent.com/72515939/161434500-38ca0242-44aa-4627-aaf4-306fc4c890d9.png">
   
 <img width="1072" alt="Screenshot 2022-04-03 at 11 07 49 PM" src="https://user-images.githubusercontent.com/72515939/161434509-c8860ce4-d380-4079-8ff8-36c71596e69a.png">
  
@@ -462,3 +454,5 @@ I would like to thanks all folks in Hackintosh Community especially:
 - [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky OC-Little.
   
 - [rusty-bits](https://github.com/rusty-bits) for an easy EFI update using windows "cmdprompt", linux and MacOS Terminal.
+
+![mohdismailmatasin@gmail.com](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)
