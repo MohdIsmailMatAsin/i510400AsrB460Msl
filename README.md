@@ -263,18 +263,15 @@ Full information on DSDT and SSDT can be found at the link provided. Refer [DSDT
 
 **DSDT Patching** may cause
 
-- Broken motherboard BIOS, or
-  
-- Inefficient device with the wrong injection, or
-  
-- Cause malfunction device, or
-  
-- PC unable to boot properly due to an incorrect patch (difficult to reverse).
+1. Broken motherboard BIOS, or
+2. Inefficient device with the wrong injection, or
+3. Cause malfunction device, or
+4. PC unable to boot properly due to an incorrect patch (difficult to reverse).
 
 
 **SSDT Patching** may cause
 
-- Broken Windows if `dual booting` (can be solve by `OpenCore Quirks Settings`).
+*  Broken Windows if `dual booting` (however, this can be solve by `OpenCore Quirks Settings`).
  
 <p align="justify">Broken Windows can be fixed via quirks settings in config.plist. This quirks option allows OpenCore not to use ACPI injection entirely. The information is as below:</p>
 
@@ -286,12 +283,11 @@ Full information on DSDT and SSDT can be found at the link provided. Refer [DSDT
 **Additional: ACPI Quirks for Dual Booting via config.plist**
 
 1. PlatformInfo\SerialInfo\UpdateSMBIOSMode = `Custom`
-  
 2. Kernel\Quirks\CustomSMBIOSGuid = `True` 
 
 
 **What is the content inside SSDT.Mac.aml?**
-- All possible SSDT based patch according to the compatoble device.
+*  All possible SSDT based patch according to the compatible device.
 
 | Device | Information |
 | --- | --- |
