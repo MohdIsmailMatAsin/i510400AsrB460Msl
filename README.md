@@ -103,7 +103,7 @@
 
 **What is Bootloader**
 
-<p align="justify">A boot loader, also known as a boot program or bootstrap loader, is a special operating system software that loads into the working memory of a computer after start-up. For this purpose, immediately after a device starts, a bootloader is generally launched by a bootable medium like a hard drive, a CD/DVD or a USB stick. The boot medium receives information from the computer’s firmware (e.g. BIOS) about where the bootloader is. The whole process is also described as “booting”. OpenCore, Clover, rEFInd, reEFIt, Chameleon, and a few other names is known as bootloaders. Mosts of these boot loaders are capable as chain loader/chain-loading. Chain loader is similar to the use of overlays. Unlike overlays, chain loader replaces the currently executing program in its entirety. Overlays usually replace only a portion of the running program. Like the use of overlays, the use of chain loading increases the I/O load of an application.</p>
+<p align="justify">A boot loader, also known as a boot program or bootstrap loader, is a special operating system software that loads into the working memory of a computer after start-up. For this purpose, immediately after a device starts, a boot-loader is generally launched by a bootable medium like a hard drive, a CD/DVD or a USB stick. The boot medium receives information from the computer’s firmware (e.g. BIOS) about where the boot-loader is. The whole process is also described as “booting”. OpenCore, Clover, rEFInd, reEFIt, Chameleon, and a few other names is known as boot-loaders. Mosts of these boot loaders are capable as chain loader/chain-loading. Chain loader is similar to the use of overlays. Unlike overlays, chain loader replaces the currently executing program in its entirety. Overlays usually replace only a portion of the running program. Like the use of overlays, the use of chain loading increases the I/O load of an application.</p>
 
 
 **My Partition**
@@ -118,7 +118,6 @@
 <img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161430979-9b890a71-a348-439b-98df-0e53e6a49da8.png">
 
 <img width="1399" alt="Screenshot 2022-04-03 at 10 47 56 PM" src="https://user-images.githubusercontent.com/72515939/161433665-d12eb9b1-5893-4831-96f6-05f2b28bc4a1.png">
-
 
 **OpenCore**
 
@@ -200,41 +199,42 @@ Remark: This information is dumped via Windows Command Prompt. Refer [Tree Synta
 
 ### 1.0 - BOOT
 
-<p align="justify">Fallback bootloader path. This is the only bootloader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As a failsafe method, most firmware includes these drivers to prevent certain boot issues. There are 2 types of fallback. Details below explain the temporary and permanent methods, mostly used by specified UEFI firmware and operating system implementation.</p>
+<p align="justify">Fallback boot-loader path. This is the only boot-loader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As a failsafe method, most firmware includes these drivers to prevent certain boot issues. There are 2 types of fallback. Details below explain the temporary and permanent methods, mostly used by specified UEFI firmware and operating system implementation.</p>
 
 **Temporary vs Permanent:**
 
 `Temporary`
 
-- Can be ported to other GUID Partition
-- As a solution to boot certain OS (Depending on Firmware i.e., OpenCore, Clover and rEFInd)
+1. Can be ported to other GUID Partition
+2. As a solution to boot certain OS (Depending on Firmware i.e., OpenCore, Clover and rEFInd)
 
 `Permanent`
 
-- Cannot be ported due to GUID info binding.
+1. Cannot be ported due to GUID info binding.
+2. Hard to modify
 
 
 **Other Operating System (OS) Implementation**
 
 `Windows`
 
-- Temporary: `EFI\boot\bootx64.efi`
-- Permanent: `EFI\Microsoft\Boot\bootmgfw.efi` (Windows Boot Manager/UEFI which contain a GUID reference)
+1. Temporary: `EFI\boot\bootx64.efi`
+2. Permanent: `EFI\Microsoft\Boot\bootmgfw.efi` (Windows Boot Manager/UEFI which contain a GUID reference)
 
 `Linux`
 
-- Temporary: `EFI\boot\bootx64.efi`
-- Permanent: `EFI\Ubuntu\grubx64.efi` (No Secure Boot Support)
-- Permanent: `EFI\Ubuntu\shimx64.efi` (Secure Boot Support)
-
+1. Temporary: `EFI\boot\bootx64.efi`
+2. Permanent: `EFI\Ubuntu\grubx64.efi` (No Secure Boot Support)
+3. Permanent: `EFI\Ubuntu\shimx64.efi` (Secure Boot Support)
 
 **OpenCore Implementation**
 
 `OpenCore`
 
-- Temporary: `EFI\BOOT\BOOTx64.efi`
+1. Temporary: `EFI\BOOT\BOOTx64.efi` via USB Drive (Installation Device)
+2. Permanent: `EFI\BOOT\BOOTx64.efi` via HDD/SSD/NVMe (MacOS Drive)
 
-<p align="justify">While OpenCore is just a bootloader, this type of bootloader is included with their own firmware, along with additional quirks for booting the MacOS partition. Furthermore, OpenCore has portable features that enable the chainloader option to be used with other operating systems.</p>
+<p align="justify">While OpenCore is just a boot-loader, this type of boot-loader is included with their own firmware, along with additional quirks for booting the MacOS partition. Furthermore, OpenCore has portable features that enable the chain-loader option to be used with other operating systems.</p>
 
 
 ### 2.0 - ACPI
@@ -247,7 +247,7 @@ Remark: This information is dumped via Windows Command Prompt. Refer [Tree Synta
 
 **What is SSDT?**
 
-<p align="justify">The SSDT is an ACPI decriptor table. It is encoded in AML in exactly the same way as the DSDT. It acts as a supplement to the DSDT.</p>
+<p align="justify">The SSDT is an ACPI descriptor table. It is encoded in AML in exactly the same way as the DSDT. It acts as a supplement to the DSDT.</p>
 
 Full information on DSDT and SSDT can be found at the link provided. Refer [DSDT](https://wiki.osdev.org/DSDT#:~:text=DSDT%20stands%20for%20Differentiated%20System,IRQ%20mappings%20and%20power%20management.) and [SSDT](https://wiki.osdev.org/SSDT#:~:text=The%20SSDT%20is%20an%20ACPI,a%20supplement%20to%20the%20DSDT.)
 
@@ -258,7 +258,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer [DSDT
 
 **Refer:** [Dortania](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime)
 
-<p align="justify">DSDT patching should be avoided. There are various reasons why DSDT patching is not recommended. Some forums/webpages (i.e., Olarila) state that it is a major solution. As a matter of knowledge, DSDT is the main table while SSDT is the secondary table (additional table). The difference is that DSDT cannot be tampered with or touched. Because it is the main.aml code to handle your machine with various devices. Meanwhile, SSDT is the secondary table, where we can change (modify), add, and drop. Although the language (code) used is the same, it has a different task or method. Reason? I'll explain why.</p>
+<p align="justify">DSDT patching should be avoided. There are various reasons why DSDT patching is not recommended. Some forums/webpages (i.e., Olarila) state that it is a major solution. As a matter of knowledge, DSDT is the main table while SSDT is the secondary table (additional table). The difference is that DSDT cannot be tampered with or touched. Because it is the primary code to handle your machine with various devices. Meanwhile, SSDT is the secondary table, where we can change (modify), add, and drop. Although the language (code) used is the same, it has a different task or method. Reason? I'll explain why.</p>
 
 
 **DSDT Patching** may cause
@@ -280,7 +280,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer [DSDT
 
 <p align="justify">From here, SSDT patching is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. The SSDT concept is only a patch of information and does not affect the existing hardware.</p>
 
-<p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-Mac.aml). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext.The following is a list of devices that have been injected with specific properties:</p>
+<p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-Mac.aml). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext. The following is a list of devices that have been injected with specific properties:</p>
 
 
 **Additional: ACPI Quirks for Dual Booting via config.plist**
@@ -302,7 +302,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer [DSDT
 | IGPU | `GFX0` to `IGPU` rename. Other rename method via `SSDT` for `Intergrated Graphics Unit / IGPU` which can be handled by `Whatevergreen.kext`. Additional info related to `Intel UHD 630` is added as `headless` built-in graphics module |
 | IMEI | `HECI` to `IMEI` rename via `SSDT` |
 | MCHC | Come with `SBUS` patch to aids with correct temperature, fan, voltage, ICH, etc readings and proper memory reporting |
-| GFX0 | `Dedicated Graphic Processor Unit / DGPU`.  This `SSDT` contain all `Navi 14` patch information. **Patch:** `ATY,Keelback` framebuffer and `CFG,CFG_USE_AGDC` properties to overcome wake issue using `DGPU`|
+| GFX0 | `Dedicated Graphic Processor Unit / DGPU`.  This `SSDT` contain all `Navi 14` patch information. **Patch:** `ATY,Keelback` frame-buffer and `CFG,CFG_USE_AGDC` properties to overcome wake issue using `DGPU`|
 | HDAU | `High Definition Audio` through `HDMI` patch.|
 | HDEF | `High Definition Audio System / HDAS` in actual `DSDT`, renamed with `HDEF` . **Patch:** `layout id/data/01000000` which is equal to `alcid=1` |
 | LPCB | Just regular `Low Pin Count Bus` path corresponding to Embed Controller / EC |
@@ -332,7 +332,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer [DSDT
 | --- | --- |
 | HfsPlus.efi | Official `HFS+ Driver` Support for Apple MacOS |
 | OpenCanopy.efi | OpenCore `Cosmetics Driver` for OpenCore boot menu |
-| OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Bootloader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
+| OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Boot-loader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
 
 
 ### 4.0 - Kernel Extension
@@ -369,12 +369,12 @@ OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/Ope
 
 ### 7.0 - Tools
 
-<p align="justify">Nothing fancy, just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist. This tool is hiding via "hide auxilliary". Use "Spacebar" to reveal the function. I just include this tools as failsafe.</p>
+<p align="justify">Nothing fancy, just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist. This tool is hiding via "hide auxiliary". Use "Spacebar" to reveal the function. I just include this tools as failsafe.</p>
 
 
 ### 8.0 - Config.plist
 
-<p align="justify">Knowledge + Hardware + Effort = Stability. Honestly, the process of preparing this file took a long time.  Still, I am thankful that I have over 20 years of experience using computers.  I am not too clumsy to understand the concept even though I am not from programming and technology field. Quirk selected was according to Intel 10th Gen `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the Vanilla Hackintosh concept.  Starting with Clover, it was a bit confusing for me because of the scattered setting and arrangement of each part.  OpenCore concept is easier to understand and compiled every part to improve hardware, device and the OS stability. I also provide examples, and expose some important settings for OpenCore config.plist.
+<p align="justify">Knowledge + Hardware + Effort = Stability. Honestly, the process of preparing this file took a long time.  Still, I am thankful that I have over 20 years of experience using computers.  I am not too clumsy to understand the concept even though I am not from programming and technology field. Quirk selected was according to Intel 10th Generation `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the Vanilla Hackintosh concept.  Starting with Clover, it was a bit confusing for me because of the scattered setting and arrangement of each part.  OpenCore concept is easier to understand and compiled every part to improve hardware, device and the OS stability. I also provide examples, and expose some important settings for OpenCore config.plist.
 
 
 **Refer:** [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
@@ -447,12 +447,12 @@ I would like to thanks all folks in Hackintosh Community especially:
   
 - [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for knowledge sharing.
   
-- [r/Hackintosh](https://www.reddit.com/r/hackintosh/) for an easy undocumented refereces.
+- [r/Hackintosh](https://www.reddit.com/r/hackintosh/) for an easy undocumented references.
   
 - [daliansky](https://github.com/daliansky) for publishing his own OpenCore ACPI method (OC-Little) and implementation.
   
 - [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky OC-Little.
   
-- [rusty-bits](https://github.com/rusty-bits) for an easy EFI update using windows "cmdprompt", linux and MacOS Terminal.
+- [rusty-bits](https://github.com/rusty-bits) for an easy EFI update using windows "Cmd-Prompt", linux and MacOS Terminal.
 
 ![mohdismailmatasin@gmail.com](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)
