@@ -1,17 +1,17 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20210930 (32-bit version)
- * Copyright (c) 2000 - 2021 Intel Corporation
+ * AML/ASL+ Disassembler version 20200925 (64-bit version)
+ * Copyright (c) 2000 - 2020 Intel Corporation
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of C:/Users/Mohd Ismail Mat Asin/Desktop/ACPI Tables/ssdt6.dat, Sun Apr  3 12:51:53 2022
+ * Disassembly of iASLlhbRXG.aml, Wed Apr  6 01:43:19 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00001F14 (7956)
+ *     Length           0x00001F33 (7987)
  *     Revision         0x02
- *     Checksum         0x40
+ *     Checksum         0xA3
  *     OEM ID           "Apple"
  *     OEM Table ID     "Mac"
  *     OEM Revision     0x00000000 (0)
@@ -158,18 +158,24 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         })
                     }
 
-                    Return (Package (0x0C)
+                    Return (Package (0x0E)
                     {
                         "AAPL,ig-platform-id", 
                         Buffer (0x04)
                         {
-                             0x03, 0x00, 0xC5, 0x9B                           // ....
+                             0x03, 0x00, 0xC8, 0x9B                           // ....
                         }, 
 
                         "AAPL,slot-name", 
-                        Buffer (0x0C)
+                        Buffer (0x09)
                         {
-                            "Intergrated"
+                            "Internal"
+                        }, 
+
+                        "device-id", 
+                        Buffer (0x04)
+                        {
+                             0x9B, 0x3E, 0x00, 0x00                           // .>..
                         }, 
 
                         "enable-metal", 
@@ -805,9 +811,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                                     }, 
 
                                     "model", 
-                                    Buffer (0x21)
+                                    Buffer (0x1D)
                                     {
-                                        "AMD Radeon RX 5500 XT HDMI Audio"
+                                        "Radeon RX 5500 XT HDMI Audio"
                                     }, 
 
                                     "name", 
@@ -906,9 +912,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         Return (Package (0x08)
                         {
                             "AAPL,slot-name", 
-                            Buffer (0x0A)
+                            Buffer (0x06)
                             {
-                                "M.2- WiFi"
+                                "M2- 3"
                             }, 
 
                             "device_type", 
@@ -995,6 +1001,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
                     Name (_STR, Unicode ("Universal Serial Bus Controller"))  // _STR: Description String
+                    Name (_SUN, 0x03)  // _SUN: Slot User Number
                     Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
@@ -1026,9 +1033,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                             }, 
 
                             "model", 
-                            Buffer (0x26)
+                            Buffer (0x2B)
                             {
-                                "ASmedia USB 3.2 eXtensible Controller"
+                                "ASMedia USB 3.1 eXtensible Host Controller"
                             }, 
 
                             "name", 
@@ -1065,9 +1072,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         Return (Package (0x0C)
                         {
                             "AAPL,slot-name", 
-                            Buffer (0x07)
+                            Buffer (0x06)
                             {
-                                "M.2- 0"
+                                "M2- 1"
                             }, 
 
                             "device-id", 
@@ -1111,10 +1118,11 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                     Name (_STA, Zero)  // _STA: Status
                 }
 
-                Device (ANS1)
+                Device (ANS2)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
                     Name (_STR, Unicode ("Standard NVM Express Controller"))  // _STR: Description String
+                    Name (_SUN, 0x02)  // _SUN: Slot User Number
                     Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
@@ -1154,7 +1162,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                             "name", 
                             Buffer (0x05)
                             {
-                                "ANS1"
+                                "ANS2"
                             }, 
 
                             "vendor-id", 
@@ -1174,7 +1182,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                     Name (_STA, Zero)  // _STA: Status
                 }
 
-                Device (ANS2)
+                Device (ANS1)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
                     Name (_STR, Unicode ("Standard NVM Express Controller"))  // _STR: Description String
@@ -1191,9 +1199,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         Return (Package (0x0C)
                         {
                             "AAPL,slot-name", 
-                            Buffer (0x07)
+                            Buffer (0x06)
                             {
-                                "M.2- 1"
+                                "M2- 2"
                             }, 
 
                             "device-id", 
@@ -1217,7 +1225,7 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                             "name", 
                             Buffer (0x05)
                             {
-                                "ANS2"
+                                "ANS1"
                             }, 
 
                             "vendor-id", 
@@ -1416,9 +1424,9 @@ DefinitionBlock ("", "SSDT", 2, "Apple", "Mac", 0x00000000)
                         }, 
 
                         "model", 
-                        Buffer (0x24)
+                        Buffer (0x2A)
                         {
-                            "Intel USB 3.0 eXtensible Controller"
+                            "Intel USB 3.0 eXtensible Host Controller "
                         }, 
 
                         "name", 
