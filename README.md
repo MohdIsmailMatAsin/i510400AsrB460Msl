@@ -419,7 +419,7 @@ OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/Ope
  
 ### 13.0 - IQSV + Navi Issue
 
-<p align="justify">Intel® UHD630 is currently not paired with Navi Based GPU. This happen due to Navi Encoding and Decoding is perform better, higher and stable than IQSV. Stable IQSV can be optimise using Polaris based GPU such as AMD RX580. However, a bit settings may perform better encoding and decoding mode via IQSV. and Navi GPU. Setting can be found below:</p>
+<p align="justify">"Intel® UHD630" is currently not best paired with "Navi Based GPU". This happen due to Navi "Encoding" and "Decoding" is perform better, higher and stable than "IQSV". Stable "IQSV" can be optimise using "Polaris" based GPU such as "AMD RX580". However, a bit settings may perform better encoding and decoding mode via "IQSV and Navi" GPU. Setting can be found below:</p>
 
 **Refer:** [SSDT-Mac.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl) (check GFX0 properties using MacIASL.app)
 
