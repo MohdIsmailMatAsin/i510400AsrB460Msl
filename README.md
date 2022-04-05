@@ -404,17 +404,18 @@ OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/Ope
 
 ### 12.0 - MacOS
 
-<img width="697" alt="Screenshot 2022-04-02 at 8 51 45 PM" src="https://user-images.githubusercontent.com/72515939/161410582-fe3b95ea-34f6-409e-9c58-4f570e6fd608.png">
+<img width="697" alt="Screenshot 2022-04-06 at 1 54 31 AM" src="https://user-images.githubusercontent.com/72515939/161819681-d04170c0-f1ad-4258-b002-89d51c372689.png">
 
-<img width="1356" alt="Screenshot 2022-04-02 at 8 50 21 PM" src="https://user-images.githubusercontent.com/72515939/161410563-bf844fa2-75f3-4f42-8e43-4a6c74441460.png">
-  
-<img width="1072" alt="Screenshot 2022-04-03 at 11 07 49 PM" src="https://user-images.githubusercontent.com/72515939/161434509-c8860ce4-d380-4079-8ff8-36c71596e69a.png">
+<img width="1356" alt="Screenshot 2022-04-06 at 1 55 37 AM" src="https://user-images.githubusercontent.com/72515939/161819701-ca09f51f-8230-4753-a86e-9e3a42d3c75e.png">
 
-<img width="697" alt="Screenshot 2022-04-02 at 8 51 45 PM" src="https://user-images.githubusercontent.com/72515939/161410582-fe3b95ea-34f6-409e-9c58-4f570e6fd608.png">
+<img width="1356" alt="Screenshot 2022-04-06 at 1 55 47 AM" src="https://user-images.githubusercontent.com/72515939/161819713-bed7141a-4ff4-4fcf-8aef-0b373f2a0ced.png">
 
-<img width="1356" alt="Screenshot 2022-04-02 at 8 50 21 PM" src="https://user-images.githubusercontent.com/72515939/161410563-bf844fa2-75f3-4f42-8e43-4a6c74441460.png">
-  
-<img width="1072" alt="Screenshot 2022-04-03 at 11 07 49 PM" src="https://user-images.githubusercontent.com/72515939/161434509-c8860ce4-d380-4079-8ff8-36c71596e69a.png">	
+<img width="1356" alt="Screenshot 2022-04-06 at 1 55 54 AM" src="https://user-images.githubusercontent.com/72515939/161819724-4d3228aa-18ba-4493-8bae-6af4324b42af.png">
+
+<img width="1356" alt="Screenshot 2022-04-06 at 1 56 08 AM" src="https://user-images.githubusercontent.com/72515939/161819740-d555a5fb-9a11-4906-9d8b-237fe7cb6372.png">
+
+<img width="1356" alt="Screenshot 2022-04-06 at 1 56 13 AM" src="https://user-images.githubusercontent.com/72515939/161819756-32142247-2b18-4de8-a743-41d5d2c03dcc.png">
+	
  
 ### 13.0 - IQSV + Navi Issue
 
