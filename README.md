@@ -409,9 +409,25 @@ OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/Ope
 <img width="1356" alt="Screenshot 2022-04-02 at 8 50 21 PM" src="https://user-images.githubusercontent.com/72515939/161410563-bf844fa2-75f3-4f42-8e43-4a6c74441460.png">
   
 <img width="1072" alt="Screenshot 2022-04-03 at 11 07 49 PM" src="https://user-images.githubusercontent.com/72515939/161434509-c8860ce4-d380-4079-8ff8-36c71596e69a.png">
- 
 
-### 13.0 - Download
+<img width="697" alt="Screenshot 2022-04-02 at 8 51 45 PM" src="https://user-images.githubusercontent.com/72515939/161410582-fe3b95ea-34f6-409e-9c58-4f570e6fd608.png">
+
+<img width="1356" alt="Screenshot 2022-04-02 at 8 50 21 PM" src="https://user-images.githubusercontent.com/72515939/161410563-bf844fa2-75f3-4f42-8e43-4a6c74441460.png">
+  
+<img width="1072" alt="Screenshot 2022-04-03 at 11 07 49 PM" src="https://user-images.githubusercontent.com/72515939/161434509-c8860ce4-d380-4079-8ff8-36c71596e69a.png">	
+ 
+### 13.0 - IQSV + Navi Issue
+
+<p align="justify">Intel® UHD630 is currently not paired with Navi Based GPU. This happen due to Navi Encoding and Decoding is perform better, higher and stable than IQSV. Stable IQSV can be optimise using Polaris based GPU such as AMD RX580. However, a bit settings may perform better encoding and decoding mode via IQSV. and Navi GPU. Setting can be found below:</p>
+
+**Refer:** [SSDT-Mac.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl) (check GFX0 properties using MacIASL.app)
+
+<p align="justify">Picture below is the proof IQSV and Navi Based GPU is working. Test is made via Apple TV.</p>
+
+<img width="1054" alt="Screenshot 2022-04-06 at 1 42 24 AM" src="https://user-images.githubusercontent.com/72515939/161819118-ef5f01d2-9406-4d31-8781-085c2e36224c.png">	
+
+
+### 14.0 - Download
 
 - [Clover](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/files/8404601/Clover-EFI_v5146.zip)
 - [OpenCore](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/files/8404602/OC-EFI_v0.7.9.zip)
@@ -421,7 +437,7 @@ OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/Ope
 **Note:** Any issues is not my responsible, please generate same SMBIOS with different serial. 
 
 
-### 14.0 - Ioreg
+### 15.0 - Ioreg
 
 - [Mohd's Ioreg](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/Mohd%E2%80%99s%20iMac.ioreg)
 
