@@ -79,30 +79,30 @@
 
 **What is BIOS?**
 
-- **BIOS** = Basic Input/Output System
+BIOS = Basic Input/Output System
 
-<p align="justify">BIOS stands for Basic Input/Output System, the firmware we talked about in the above boot procedure. It is stored on an EPROM (Erasable Programmable Read-Only Memory), allowing the manufacturer to push out updates easily. It provides many helper functions that allow reading boot sectors of attached storage and printing things on screen. Asrock Motherboard can access BIOS during the initial phases of the boot procedure by pressing Del, F11 (Enter Setup).</p>
+- <p align="justify">BIOS stands for Basic Input/Output System, the firmware we talked about in the above boot procedure. It is stored on an EPROM (Erasable Programmable Read-Only Memory), allowing the manufacturer to push out updates easily. It provides many helper functions that allow reading boot sectors of attached storage and printing things on screen. Asrock Motherboard can access BIOS during the initial phases of the boot procedure by pressing Del, F11 (Enter Setup).</p>
 
 
 **What is EFI?**
 
-- **EFI** = Extensible Firmware Interface
+EFI = Extensible Firmware Interface
 
-<p align="justify">The EFI system partition (ESP), a small partition formatted with FAT32, is usually around 100MB for Windows and around 200MB for MacOS, this is where the EFI boot loaders and applications used by the firmware at system during start-up are stored. If your hard drive is in the GUID Partition table (GPT) partition style, it will automatically generate an EFI system partition after you have installed your operating systems. Both Windows and Mac operating systems are supported.</p>
+- <p align="justify">The EFI system partition (ESP), a small partition formatted with FAT32, is usually around 100MB for Windows and around 200MB for MacOS, this is where the EFI boot loaders and applications used by the firmware at system during start-up are stored. If your hard drive is in the GUID Partition table (GPT) partition style, it will automatically generate an EFI system partition after you have installed your operating systems. Both Windows and Mac operating systems are supported.</p>
 
 ![efi-system-partition](https://user-images.githubusercontent.com/72515939/161425316-cb229e60-b2ad-4538-9b68-bbabb89a88a8.png)
 
 
 **What is UEFI?**
 
-- **UEFI** = Unified Extensible Firmware Interface
+UEFI = Unified Extensible Firmware Interface
 
-<p align="justify">UEFI stands for "Unified Extensible Firmware Interface." The UEFI Specification defines a new model for the interface between personal-computer operating systems and platform firmware. The interface consists of data tables that contain platform-related information, plus boot and runtime service calls that are available to the operating system and its loader. Together, these provide a standard environment for booting an operating system and running pre-boot applications.</p>
+- <p align="justify">UEFI stands for "Unified Extensible Firmware Interface." The UEFI Specification defines a new model for the interface between personal-computer operating systems and platform firmware. The interface consists of data tables that contain platform-related information, plus boot and runtime service calls that are available to the operating system and its loader. Together, these provide a standard environment for booting an operating system and running pre-boot applications.</p>
 
 
 **What is Bootloader**
 
-<p align="justify">A boot-loader, also known as a boot program or bootstrap loader, is a special operating system software that loads into the working memory of a computer after start-up. For this purpose, immediately after a device starts, a boot-loader is generally launched by a bootable medium like a hard drive, a CD/DVD or a USB stick. The boot medium receives information from the computer’s firmware (e.g. BIOS) about where the boot-loader is. The whole process is also described as “booting”. OpenCore, Clover, rEFInd, reEFIt, Chameleon, and a few other names is known as boot-loaders. Mosts of these boot-loaders are capable as chain-loader/chain-loading. Chain-loader is similar to the use of overlays. Unlike overlays, chain-loader replaces the currently executing program in its entirety. Overlays usually replace only a portion of the running program. Like the use of overlays, the use of chain-loading increases the I/O load of an application.</p>
+- <p align="justify">A boot-loader, also known as a boot program or bootstrap loader, is a special operating system software that loads into the working memory of a computer after start-up. For this purpose, immediately after a device starts, a boot-loader is generally launched by a bootable medium like a hard drive, a CD/DVD or a USB stick. The boot medium receives information from the computer’s firmware (e.g. BIOS) about where the boot-loader is. The whole process is also described as “booting”. OpenCore, Clover, rEFInd, reEFIt, Chameleon, and a few other names is known as boot-loaders. Mosts of these boot-loaders are capable as chain-loader/chain-loading. Chain-loader is similar to the use of overlays. Unlike overlays, chain-loader replaces the currently executing program in its entirety. Overlays usually replace only a portion of the running program. Like the use of overlays, the use of chain-loading increases the I/O load of an application.</p>
 
 
 **My Partition**
@@ -120,7 +120,7 @@
 
 **OpenCore**
 
-<p align="justify">OpenCore is what we refer to as a "boot-loader" and also as "chain-loader" at the same time; it is a complex piece of software that we use to prepare our systems for MacOS, specifically by injecting new data for MacOS such as SMBIOS, ACPI tables, and kexts.</p>
+- <p align="justify">OpenCore is what we refer to as a "boot-loader" and also as "chain-loader" at the same time; it is a complex piece of software that we use to prepare our systems for MacOS, specifically by injecting new data for MacOS such as SMBIOS, ACPI tables, and kexts.</p>
 
 <img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161431087-8fadbe79-bdc6-49fc-8721-eb149db7ede0.png">
 
@@ -128,7 +128,7 @@
 
 **Refer:** [OpenCore](https://dortania.github.io/OpenCore-Install-Guide/)
 
-<p align="justify">There is the basic OpenCore folder, which is EFI. This folder contain several other files and folders. Please refer to the diagram below for better understanding.</p>
+- <p align="justify">There is the basic OpenCore folder, which is EFI. This folder contain several other files and folders. Please refer to the diagram below for better understanding.</p>
 
 
 **OpenCore v0.7.9:**
@@ -198,7 +198,7 @@ Remark: This information is dumped via Windows Command Prompt. Refer [Tree Synta
 
 ### 1.0 - BOOT
 
-<p align="justify">Fallback boot-loader path. This is the only boot-loader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As a failsafe method, most firmware includes these drivers to prevent certain boot issues. There are 2 types of fallback. Details below explain the temporary and permanent methods, mostly used by specified UEFI firmware and operating system implementation.</p>
+- <p align="justify">Fallback boot-loader path. This is the only boot-loader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As a failsafe method, most firmware includes these drivers to prevent certain boot issues. There are 2 types of fallback. Details below explain the temporary and permanent methods, mostly used by specified UEFI firmware and operating system implementation.</p>
 
 **Temporary vs Permanent:**
 
@@ -233,31 +233,30 @@ Remark: This information is dumped via Windows Command Prompt. Refer [Tree Synta
 1. Temporary: `EFI\BOOT\BOOTx64.efi` via USB Drive (Installation Device)
 2. Permanent: `EFI\BOOT\BOOTx64.efi` via HDD/SSD/NVMe (MacOS Drive)
 
-<p align="justify">While OpenCore is just a boot-loader, this type of boot-loader is included with their own firmware, along with additional quirks for booting the MacOS partition. Furthermore, OpenCore has portable features that enable the chain-loader option to be used with other operating systems.</p>
+- <p align="justify">While OpenCore is just a boot-loader, this type of boot-loader is included with their own firmware, along with additional quirks for booting the MacOS partition. Furthermore, OpenCore has portable features that enable the chain-loader option to be used with other operating systems.</p>
 
 
 ### 2.0 - ACPI
 
-
 **What is DSDT?**
 
-<p align="justify">DSDT stands for Differentiated System Description Table. It Is a major ACPI table and is used to describe what peripherals the machine has. Also holds information on PCI IRQ mappings and power management.</p>
+- <p align="justify">DSDT stands for Differentiated System Description Table. It Is a major ACPI table and is used to describe what peripherals the machine has. Also holds information on PCI IRQ mappings and power management.</p>
 
 
 **What is SSDT?**
 
-<p align="justify">The SSDT is an ACPI descriptor table. It is encoded in AML in exactly the same way as the DSDT. It acts as a supplement to the DSDT.</p>
+- <p align="justify">The SSDT is an ACPI descriptor table. It is encoded in AML in exactly the same way as the DSDT. It acts as a supplement to the DSDT.</p>
 
-Full information on DSDT and SSDT can be found at the link provided. Refer [DSDT](https://wiki.osdev.org/DSDT#:~:text=DSDT%20stands%20for%20Differentiated%20System,IRQ%20mappings%20and%20power%20management.) and [SSDT](https://wiki.osdev.org/SSDT#:~:text=The%20SSDT%20is%20an%20ACPI,a%20supplement%20to%20the%20DSDT.)
+- Full information on DSDT and SSDT can be found at the link provided. Refer [DSDT](https://wiki.osdev.org/DSDT#:~:text=DSDT%20stands%20for%20Differentiated%20System,IRQ%20mappings%20and%20power%20management.) and [SSDT](https://wiki.osdev.org/SSDT#:~:text=The%20SSDT%20is%20an%20ACPI,a%20supplement%20to%20the%20DSDT.) for more info.
 
 
 **DSDT vs SSDT Patching**
 
-<p align="justify">As documented by Dortania, "Do not add your DSDT to OpenCore; it's already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your configuration based on the architecture of your CPU".</p>
+- <p align="justify">As documented by Dortania, "Do not add your DSDT to OpenCore; it's already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your configuration based on the architecture of your CPU".</p>
 
 **Refer:** [Dortania](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime)
 
-<p align="justify">DSDT patching should be avoided. There are various reasons why DSDT patching is not recommended. Some forums/webpages (i.e., Olarila) state that it is a major solution. As a matter of knowledge, DSDT is the main table while SSDT is the secondary table (additional table). The difference is that DSDT cannot be tampered with or touched. Because it is the primary code to handle your machine with various devices. Meanwhile, SSDT is the secondary table, where we can change (modify), add, and drop. Although the language (code) used is the same, it has a different task or method. Reason? I'll explain why.</p>
+- <p align="justify">DSDT patching should be avoided. There are various reasons why DSDT patching is not recommended. Some forums/webpages (i.e., Olarila) state that it is a major solution. As a matter of knowledge, DSDT is the main table while SSDT is the secondary table (additional table). The difference is that DSDT cannot be tampered with or touched. Because it is the primary code to handle your machine with various devices. Meanwhile, SSDT is the secondary table, where we can change (modify), add, and drop. Although the language (code) used is the same, it has a different task or method. Reason? I'll explain why.</p>
 
 
 **DSDT Patching** may cause
@@ -270,23 +269,19 @@ Full information on DSDT and SSDT can be found at the link provided. Refer [DSDT
 
 **SSDT Patching** may cause
 
-*  Broken Windows if `dual booting` (however, this can be solve by `OpenCore Quirks Settings`).
+1. ACPI Injection via OpenCore
+2. Broken Windows update. (however, this can be solve by `OpenCore Quirks Settings`).
  
-<p align="justify">Broken Windows can be fixed via quirks settings in config.plist. This quirks option allows OpenCore not to use ACPI injection entirely. The information is as below:</p>
-
-<p align="justify">From here, SSDT patching is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. The SSDT concept is only a patch of information and does not affect the existing hardware.</p>
-
-<p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-Mac.aml). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext. The following is a list of devices that have been injected with specific properties:</p>
-
-
-**Additional: ACPI Quirks for Dual Booting via config.plist**
+- <p align="justify">Mostly, these issue may affect dual booting (Windows + MacOS). Luckily, there are settings via config.plist to prevent both issues, but this is only experimental. Do not assume this settings will work 100% on your machine. Settings explained below:</p>
 
 1. PlatformInfo\SerialInfo\UpdateSMBIOSMode = `Custom`
 2. Kernel\Quirks\CustomSMBIOSGuid = `True` 
 
+- <p align="justify">From here, SSDT patching is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. The SSDT concept is only a patch of information and does not affect the existing hardware.</p>
 
-**What is the content inside SSDT.Mac.aml?**
-*  All possible SSDT based patch according to the compatible device.
+- <p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-Mac.aml). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext. The following is a list of devices that have been injected with specific properties:</p>
+
+**SSDT-AsrockSL.aml** is my combine and modified settings via SSDT to improve OpenCore information injection. Table below explained the detail:
 
 | Device | Information |
 | --- | --- |
@@ -314,13 +309,12 @@ Full information on DSDT and SSDT can be found at the link provided. Refer [DSDT
 | SBUS | Fix `AppleSMBus` support in MacOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc` |
 | USBX | To supply `USB Power Properties` for Skylake and newer motherboard generation. |
 
-**Refer:** [SSDT-Mac.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl)
+**Refer:** [SSDT-AsrockSL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-AsrockSL.dsl)
 
 
 ### 3.0 - Drivers
 
-
-<p align="justify">Only use 3 basic driver types. HfsPlus.efi, OpenCanopy.efi and OpenRuntime.efi. These three files are essentially basic things to get driver support. Usage information is as follows:</p>
+- <p align="justify">Only use 3 basic driver types. HfsPlus.efi, OpenCanopy.efi and OpenRuntime.efi. These three files are essentially basic things to get driver support. Usage information is as follows:</p>
 
 
 | Driver | Information |
@@ -332,8 +326,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer [DSDT
 
 ### 4.0 - Kernel Extension
 
-
-<p align="justify">Kernel extensions (kexts) let developers load code directly into the MacOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed function. The table below contains some kexts used to properly boot MacOS through OpenCore</p>
+- <p align="justify">Kernel extensions (kexts) let developers load code directly into the MacOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed function. The table below contains some kexts used to properly boot MacOS through OpenCore</p>
 
 
 | Kext | Information |
@@ -352,40 +345,39 @@ Full information on DSDT and SSDT can be found at the link provided. Refer [DSDT
 
 ### 5.0 - OpenCore.efi
 
-OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/). This file is compulsory.
+- OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/). This file is compulsory.
 
 
 ### 6.0 - Resources
 
-<p align="justify">This folder is related to OpenCore Beauty Treatment and is used with the OpenCanopy.efi driver. It is up to you to do your own research for a custom boot menu.</p>
+- <p align="justify">This folder is related to OpenCore Beauty Treatment and is used with the OpenCanopy.efi driver. It is up to you to do your own research for a custom boot menu.</p>
 
 **Refer:** [OC Binary Resource](https://github.com/acidanthera/OcBinaryData)
 
 
 ### 7.0 - Tools
 
-<p align="justify">Nothing fancy, just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist. This tool is hiding via "hide auxiliary". Use "Spacebar" to reveal the function. I just include this tools as failsafe.</p>
+- <p align="justify">Nothing fancy, just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist. This tool is hiding via "hide auxiliary". Use "Spacebar" to reveal the function. I just include this tools as failsafe.</p>
 
 
 ### 8.0 - Config.plist
 
-<p align="justify">Knowledge + Hardware + Effort = Stability. Honestly, the process of preparing this file took a long time.  Still, I am thankful that I have over 20 years of experience using computers.  I am not too clumsy to understand the concept even though I am not from programming and technology field. Quirk selected was according to Intel 10th Generation `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the Vanilla Hackintosh concept.  Starting with Clover, it was a bit confusing for me because of the scattered setting and arrangement of each part.  OpenCore concept is easier to understand and compiled every part to improve hardware, device and the OS stability. I also provide examples, and expose some important settings for OpenCore config.plist.
-
+- <p align="justify">Knowledge + Hardware + Effort = Stability. Honestly, the process of preparing this file took a long time.  Still, I am thankful that I have over 20 years of experience using computers.  I am not too clumsy to understand the concept even though I am not from programming and technology field. Quirk selected was according to Intel 10th Generation `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the Vanilla Hackintosh concept.  Starting with Clover, it was a bit confusing for me because of the scattered setting and arrangement of each part.  OpenCore concept is easier to understand and compiled every part to improve hardware, device and the OS stability. I also provide examples, and expose some important settings for OpenCore config.plist.
 
 **Refer:** [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
 
 
 ### 9.0 - BIOS/UEFI Settings
 
-- Disable `CSM/ Enable UEFI`
-- Disable `Secure Boot`
-- Set SATA as `AHCI` (Do not install MacOS through RST)
-- Disable `CFG Lock`
-- Disable `Fast Boot`
-- Disable `Intel Virtualization Technology`
-- Disable `VT-D`
-- Enable` XHCI Hand-off`
-- Disable `Legacy USB Support` (If Needed)
+1. Disable `CSM/ Enable UEFI`
+2. Disable `Secure Boot`
+3. Set SATA as `AHCI` (Do not install MacOS through RST)
+4. Disable `CFG Lock`
+5. Disable `Fast Boot`
+6. Disable `Intel Virtualization Technology`
+7. Disable `VT-D`
+8. Enable` XHCI Hand-off`
+9. Disable `Legacy USB Support` (If Needed)
 
 
 ### 10.0 - My Experience Rating Test
@@ -419,11 +411,11 @@ OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/Ope
  
 ### 13.0 - IQSV + Navi Issue
 
-<p align="justify">"Intel® UHD630" is currently not best paired with "Navi Based GPU". This happen due to Navi "Encoding" and "Decoding" is perform better, higher and stable than "IQSV". Stable "IQSV" can be optimise using "Polaris" based GPU such as "AMD RX580". However, a bit settings may perform better encoding and decoding mode via "IQSV and Navi" GPU. Setting can be found below:</p>
+- <p align="justify">"Intel® UHD630" is currently not best paired with "Navi Based GPU". This happen due to Navi "Encoding" and "Decoding" is perform better, higher and stable than "IQSV". Stable "IQSV" can be optimise using "Polaris" based GPU such as "AMD RX580". However, a bit settings may perform better encoding and decoding mode via "IQSV and Navi" GPU. Setting can be found below:</p>
 
 **Refer:** [SSDT-Mac.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-Mac.dsl) (check GFX0 properties using MacIASL.app)
 
-<p align="justify">Picture below is the proof IQSV and Navi Based GPU is working. Test is made via Apple TV.</p>
+- <p align="justify">Picture below is the proof IQSV and Navi Based GPU is working. Test is made via Apple TV.</p>
 
 <img width="1054" alt="Screenshot 2022-04-06 at 1 42 24 AM" src="https://user-images.githubusercontent.com/72515939/161819118-ef5f01d2-9406-4d31-8781-085c2e36224c.png">	
 
