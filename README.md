@@ -422,8 +422,8 @@ Remark: This information is dumped via Windows Command Prompt. Refer [Tree Synta
 
 ### 14.0 - Download
 
-- [Clover](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/files/8404601/Clover-EFI_v5146.zip)
-- [OpenCore](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/files/8404602/OC-EFI_v0.7.9.zip)
+- [Clover](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/files/8428324/EFI_CLv5146.zip)
+- [OpenCore](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/files/8428314/EFI_OCv0.7.9.zip)
 
 **Remark:** Clover Boot Loader is include with same output as OpenCore.
 
