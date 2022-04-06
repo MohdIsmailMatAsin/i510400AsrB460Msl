@@ -447,7 +447,7 @@ I would like to thanks all folks in Hackintosh Community especially:
   
 - [CorpNewt](https://github.com/corpnewt) for developing simple USB mapping tools.
   
-- [dhinakg](https://github.com/USBToolBox/tool) for developing easy Windows based USB mapping tools inspired by CorpNewt USBMap.
+- [dhinakg](https://github.com/USBToolBox/tool) for developing easy Windows based USB mapping tools inspired by CorpNewt USBMap. 
   
 - [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for knowledge sharing.
   
