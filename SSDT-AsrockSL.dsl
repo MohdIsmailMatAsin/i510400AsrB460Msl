@@ -1,17 +1,17 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20210930 (64-bit version)
- * Copyright (c) 2000 - 2021 Intel Corporation
+ * AML/ASL+ Disassembler version 20200925 (64-bit version)
+ * Copyright (c) 2000 - 2020 Intel Corporation
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of /Volumes/EFI/EFI/OC/ACPI/SSDT-AsrockSL.aml, Wed Apr  6 22:46:08 2022
+ * Disassembly of iASLs1s3Bh.aml, Wed Apr  6 23:15:35 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00001F33 (7987)
+ *     Length           0x00001F45 (8005)
  *     Revision         0x02
- *     Checksum         0xA3
+ *     Checksum         0x3F
  *     OEM ID           "Hack"
  *     OEM Table ID     "AsrockSL"
  *     OEM Revision     0x00000000 (0)
@@ -1133,12 +1133,18 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                             })
                         }
 
-                        Return (Package (0x0C)
+                        Return (Package (0x0E)
                         {
                             "AAPL,slot-name", 
                             Buffer (0x08)
                             {
                                 "Slot- 2"
+                            }, 
+
+                            "built-in", 
+                            Buffer (0x08)
+                            {
+                                 0x01, 0x00, 0x00, 0x00                           // ....
                             }, 
 
                             "device-id", 
@@ -1468,4 +1474,3 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
         }
     }
 }
-
