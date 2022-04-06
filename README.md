@@ -270,7 +270,7 @@ Remark: This information is dumped via Windows Command Prompt. Refer [Tree Synta
 **SSDT Patching** may cause
 
 1. ACPI Injection via OpenCore
-2. Broken Windows update. (however, this can be solve by `OpenCore Quirks Settings`).
+2. Broken Windows update
  
 - <p align="justify">Mostly, these issue may affect dual booting (Windows + MacOS). Luckily, there are settings via config.plist to prevent both issues, but this is only experimental. Do not assume this settings will work 100% on your machine. Settings explained below:</p>
 
