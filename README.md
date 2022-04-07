@@ -21,9 +21,9 @@
 
 **OS Tested:**
 
-- [x] MacOS Catalina requirement: `Mindate: 20200306`|`MinVersion: 1412101001000000`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Disable`.
-- [x] MacOS BigSur requirement: `Mindate: 0`| `MinVersion: 0`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Default`.
-- [x] MacOS Monterey requirement: `Mindate: 0`|`MinVersion: 0`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Default`.
+- [x] MacOS Catalina requirement:<br>`Mindate: 20200306`|`MinVersion: 1412101001000000`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Disable`.
+- [x] MacOS BigSur requirement:<br>`Mindate: 0`| `MinVersion: 0`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Default`.
+- [x] MacOS Monterey requirement:<br>`Mindate: 0`|`MinVersion: 0`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Default`.
 
 <p align="justify">Remark: Quirk must set as processor codename. Refer OpenCore Getting Started] and head to Configs. For easy settings, use OCAuxiliaryTools. However, i will not recommend this tools. Any error occur to  config.plist, it is your own responsibility. Please make a backup before using it. Link can be refer below.</p>
 
