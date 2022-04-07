@@ -255,9 +255,7 @@ Remark: This information is dumped via Windows Command Prompt. Refer [Tree Synta
 
 - <p align="justify">From here, SSDT patching is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. The SSDT concept is only a patch of information and does not affect the existing hardware.</p>
 
-- <p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-Mac.aml). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext. The following is a list of devices that have been injected with specific properties:</p>
-
-**SSDT-AsrockSL.aml** is my combine and modified settings via SSDT to improve OpenCore information injection. Table below explained the detail:
+- <p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-AsrockSL.aml). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext. The following is a list of devices that have been injected with specific properties:</p>
 
 | Device | Information                                                                                                                                                                                                                             |
 | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -285,7 +283,12 @@ Remark: This information is dumped via Windows Command Prompt. Refer [Tree Synta
 | SBUS   | Fix `AppleSMBus` support in MacOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc`                                                                                                                          |
 | USBX   | Known as `USB Power Properties` for Skylake and newer motherboard generation.                                                                                                                                                           |
 
-**Refer:** [SSDT-AsrockSL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-AsrockSL.dsl)
+**Refer:** 
+
+- OpenCore [SSDT-Asrock.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-AsrockSL.dsl)
+- Clover [SSDT-Asrock_Clover.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-AsrockSL_Clover.dsl)
+
+Remark: Do note,`_SUN` injection may affect differently in PCI slot via OpenCore and Clover.
 
 ### 3.0 - Drivers
 
