@@ -2,41 +2,22 @@
 
 ## Hardware Information
 
-**Processor:**
+| Info               | Details                                                |
+| ------------------ | ------------------------------------------------------ |
+| Operating System 1 | Microsoft Windows 11 Pro                               |
+| Operating System 2 | MacOS Catalina 10.15.7                                 |
+| Processor          | Intel® Core(TM) i5-10400 CPU @ 2.90GHz                 |
+| Graphics Card      | Radeon RX 5500 XT 4GB / Intel® UHD Graphics 630  1GB   |
+| Memory             | PNY XLR8 Gaming X Memory 3200MHz (XMP: 2666MHz)        |
+| Monitor            | Samsung U28E590 4K                                     |
+| Audio 1            | 7.1 CH HD Audio (Realtek ALC1200 Audio Codec)          |
+| Audio 2            | U-Phoria UM2 USB Audio Device                          |
+| Motherboard        | ASRock (B460M Steel Legend)                            |
+| PCI 1              | BCM94360 WiFi & Bluetooth                              |
+| PCI 2              | ASM2142 USB 3.1 Host Controller with USB Type C        |
+| Storage 1          | 500GB Kingston A2000 NVMe                              |
+| Storage 2          | 500GB Kingston A2000 NVMe                              |
 
-- [Intel® Core™ i5-10400 Processor](https://ark.intel.com/content/www/us/en/ark/products/199271/intel-core-i510400-processor-12m-cache-up-to-4-30-ghz.html)
-
-**Motherboard:**
-
-- [Asrock B460M Steel Legend](https://www.asrock.com/mb/Intel/B460M%20Steel%20Legend/)
-
-**DGPU:**
-
-- [MSI Radeon RX 5500 XT Mech OC 4GB](https://www.msi.com/Graphics-Card/radeon-rx-5500-xt-mech-4g-oc)
-
-**IGPU:**
-
-- [Intel® UHD Graphics 630](https://ark.intel.com/content/www/us/en/ark/products/graphics/126790/intel-uhd-graphics-630.html)
-
-**Additional PCI Card:**
-
-- [BCM94360 WiFi & Bluetooth](https://shopee.com.my/product/328098260/8609545085?smtt=0.65290281-1648740799.9) + [Mini PCIe to M.2 Adapter](https://s.lazada.com.my/s.ewFm4)
-- [ASM2142 USB 3.1 Host Controller with USB Type C](https://shopee.com.my/product/182112974/12539214940?smtt=0.65290281-1648742968.9)
-
-**Memory:**
-
-- [32GB (8+8+8+8) PNY XLR8 Gaming Epic-X RGB DDR4 Memory 3200MHz](https://www.pny.com.tw/en/products-detail/XLR8-DDR4-3200MHz-Desktop-Memory-32GB/)
-
-**Storage:**
-
-| Value | Disk Type | Product                                                                                                                                                                              | Size   |
-| ----- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
-| 2     | M.2 NVMe  | [Kingston A2000 NVMe](<https://shopee.com.my/Kingston-A2000-NV1-NVMe-PCIe-Gen-3x4-M.2-2280-Internal-Solid-State-Drives-SSD-SA2000-SNVS-(250GB-500GB-1TB-2TB)-i.15417888.1248954996>) | 500 GB |
-| 1     | M.2 NVMe  | [Silicon Power MAP1001 NVMe SSD](<https://shopee.com.my/Silicon-Power-NVMe-PCIe-Gen3x4-M.2-2280-SSD-(256GB-512GB-1TB)-A80-P34-Solid-State-Drives-i.137317911.2095142026>)            | 256 GB |
-| 1     | SATA SSD  | [San Disk SSD Plus](https://www.westerndigital.com/en-ap/products/internal-drives/sandisk-ssd-plus-sata-iii-ssd)                                                                     | 480 GB |
-| 1     | SATA SSD  | [San Disk SSD Plus](https://www.westerndigital.com/en-ap/products/internal-drives/sandisk-ssd-plus-sata-iii-ssd)                                                                     | 240 GB |
-| 2     | SATA HDD  | [Western Digital WDC WD5000AAKX-001CA0](https://products.wdc.com/library/SpecSheet/ENG/2879-701277.pdf)                                                                              | 500 GB |
-| 1     | SATA HDD  | [Hitachi HDT721016SLA380](https://www.hdsentinel.com/storageinfo_details.php?lang=en&model=HITACHI%20HDT721016SLA380)                                                                | 160 GB |
 
 **OS Tested:**
 
