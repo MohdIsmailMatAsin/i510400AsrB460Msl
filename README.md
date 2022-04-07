@@ -61,7 +61,7 @@
 
 **SMBIOS:**
 
-- [x] `iMac19,2`
+- [x] `iMac20,1`
 
 # Introduction
 
@@ -261,29 +261,29 @@ Remark: This information is dumped via Windows Command Prompt. Refer [Tree Synta
 
 | Device | Information                                                                                                                                                                                                                             |
 | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AWAC   | To fix the `System Clocks` found on newer hardware. `_INI` Method is implemented                                                                                                                                                        |
-| ALS0   | Optional/Not Needed. However, real `iMac` have these device information via IOREG. **Patch:** `smc-als` and `AppleLMUController`). These patch is only `Cosmetics`                                                                      |
+| AWAC   | To fix the `System Clocks` found on newer hardware.                                                                                                                                                                                     |
+| ALS0   | Optional/Not Needed. Normally, real `iMac` is include this device information. **Patch:** `smc-als` and `AppleLMUController`). These patch is only `Cosmetics`, nothing much we can do                                                  |
 | PLUG   | To allow the kernel's `XCPM / XNU's CPU Power Management` to manage CPU's power management                                                                                                                                              |
 | EC     | Fake Embedded Controller / EC drivers since `CML` don't have native support EC                                                                                                                                                          |
-| IGPU   | `GFX0` to `IGPU` rename. Other rename method via `SSDT` for `Intergrated Graphics Unit / IGPU` which can be handled by `Whatevergreen.kext`. Additional info related to `Intel UHD 630` is added as `headless` built-in graphics module |
-| IMEI   | `HECI` to `IMEI` rename via `SSDT`                                                                                                                                                                                                      |
+| IGPU   | An Intel® Intergrated Graphics Unit device.`GFX0` to `IGPU` rename. Other rename method via `SSDT` for `Intergrated Graphics Unit / IGPU` which can be handled by `Whatevergreen.kext`. Additional info related to `Intel UHD 630` is added as `headless` built-in graphics module |
+| IMEI   | An Intel® Management Engine Interface.`HECI` to `IMEI` rename via `SSDT`                                                                                                                                                                |
 | MCHC   | Come with `SBUS` patch to aids with correct temperature, fan, voltage, ICH, etc readings and proper memory reporting                                                                                                                    |
-| GFX0   | `Dedicated Graphic Processor Unit / DGPU`.  This `SSDT` contain all `Navi 14` patch information. **Patch:** `ATY,Keelback` frame-buffer and `CFG,CFG_USE_AGDC` properties to overcome wake issue using `DGPU`                           |
-| HDAU   | `High Definition Audio` through `HDMI` patch.                                                                                                                                                                                           |
-| HDEF   | `High Definition Audio System / HDAS` in actual `DSDT`, renamed with `HDEF` . **Patch:** `layout id/data/01000000` which is equal to `alcid=1`                                                                                          |
+| GFX0   | Display Output from `Dedicated Graphic Processor Unit / DGPU`.  This `SSDT` contain all `Navi 14` patch information. **Patch:** `ATY,Keelback` frame-buffer and `CFG,CFG_USE_AGDC` properties to overcome wake issue using `DGPU`. `_SUN` is added to get proper PCI Slot Number|
+| HDAU   | Audio Output device through HDMI, called as `High Definition Audio`. `_SUN` is added to get proper PCI Slot Number                                                                                                                      |
+| HDEF   | Audio device, known as `High Definition Audio System / HDAS` in actual `DSDT`, renamed with `HDEF` . **Patch:** `layout id/data/01000000` which is equal to `alcid=1`                                                                   |
 | LPCB   | Just regular `Low Pin Count Bus` path corresponding to Embed Controller / EC                                                                                                                                                            |
 | PMCR   | Classed as `Memory Controller` and known as `PPMC` in `Comet Lake (CML)` platform. This `SSDT` renamed `PPMC` as `PMCR` with compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, which is identical to `CML` `pci8086,a3a1`           |
-| TSUB   | `Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB`                                                                                                                                        |
+| TSUB   | Known as `Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB`                                                                                                                               |
 | XHC1   | Rename PCIe`Comet Lake PCH-V USB Controller` device as `XHC` to `XHC1`. **Patch:**`acpi-wake-type` to overcome wake issue using USB device.                                                                                             |
-| ARPT   | Rename `RP03,PXSX` to `RP03,ARPT`                                                                                                                                                                                                       |
+| ARPT   | Rename `RP03,PXSX` to `RP03,ARPT`. Device is pointed to `M2- 3` Slot                                                                                                                                                                    |
 | RTL0   | Rename `RTL8125 2.5GbE Controller` device as `RP04,PXSX` to `RP04,RTL0`                                                                                                                                                                 |
-| XHC0   | Rename `ASM2142 USB 3.1 Host Controller` device as `RP05,PXSX` to `RP05,XHC0`. **Patch:** `acpi-wake-type` to overcome wake issue using USB device.                                                                                     |
-| ANS0   | Rename `RP09,PXSX` to `RP09,ANS0`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller`                                                                                                                                            |
-| ANS1   | Rename `RP20,PXSX` to `RP20,ANS1`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller`                                                                                                                                            |
-| ANS2   | Rename `RP21,PXSX` to `RP21,ANS2`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller`                                                                                                                                            |
+| XHC0   | Rename ASMedia USB device, `ASM2142 USB 3.1 Host Controller` device as `RP05,PXSX` to `RP05,XHC0`. Device is pointed to `Slot- 3`. **Patch:** `acpi-wake-type` to overcome wake issue using USB device                                  |
+| ANS0   | Rename `RP09,PXSX` to `RP09,ANS0`. Device is pointed to `M2- 1` Slot. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller`                                                                                                         |
+| ANS2   | Rename `RP20,PXSX` to `RP20,ANS2`. Device is pointed to `Slot- 2`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller`                                                                                                            |
+| ANS1   | Rename `RP21,PXSX` to `RP21,ANS1`. Device is pointed to `M2- 2` Slot. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller`                                                                                                         |
 | SATA   | Rename SATA to SAT0 with additional information. **Patch:** Spoof `400 Series Chipset Family SATA AHCI Controller` to `Intel 11 Series Chipset Controler`                                                                               |
 | SBUS   | Fix `AppleSMBus` support in MacOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc`                                                                                                                          |
-| USBX   | To supply `USB Power Properties` for Skylake and newer motherboard generation.                                                                                                                                                          |
+| USBX   | Known as `USB Power Properties` for Skylake and newer motherboard generation.                                                                                                                                                           |
 
 **Refer:** [SSDT-AsrockSL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-AsrockSL.dsl)
 
@@ -311,12 +311,12 @@ Remark: This information is dumped via Windows Command Prompt. Refer [Tree Synta
 | SMCSuperIO          | Additional support for `VirtualSMC`. Used for monitoring `FAN` speed                                                                                                                                                 |
 | SMCRadeonGPU        | Based on `FakeSMCs`, `RadeonMonitor` to provide `GPU` temperature to a dedicated gadget `without relying` on `FakeSMC` being installed and can therefore be used with `VirtualSMC` instead                           |
 | RadeonSensor        | To read the `GPU` temperature. `Lilu` is required.                                                                                                                                                                   |
-| LucyRTL8125Ethernet | `Realtek RTL8125 2.5GBit Ethernet Controllers` driver                                                                                                                                                                |
-| USBMap              | Kext to `route` selected `USB ports`. This is `compulsory to handle` `15 port limit` requirements by MacOS. Require [USBMap](https://github.com/corpnewt/USBMap) or [USBToolbox](https://github.com/USBToolBox/tool) |
+| LucyRTL8125Ethernet | Ethernet device, `Realtek RTL8125 2.5GBit Ethernet Controllers` driver                                                                                                                                               |
+| USBMap              | Kext to `route` selected `USB ports` to `Physical Ports` via USB port address. This is `compulsory to handle` `15 port limit` requirements by MacOS. Require [USBMap](https://github.com/corpnewt/USBMap) or [USBToolbox](https://github.com/USBToolBox/tool)|
 
 ### 5.0 - OpenCore.efi
 
-- OpenCore firmware. Include with [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/). This file is compulsory.
+- An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is include with [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/). This file is compulsory.
 
 ### 6.0 - Resources
 
