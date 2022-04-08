@@ -28,8 +28,6 @@
 
 <p align="justify">Remark: Quirk must set as processor codename. Refer OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, i will not recommend this tools. Any error occur to  config.plist, it is your own responsibility. Please make a backup before using it. Link can be refer below.</p>
 
-**Link**
-
 - [OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html)
 - [OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools)
 
