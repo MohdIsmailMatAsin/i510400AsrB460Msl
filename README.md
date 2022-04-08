@@ -7,7 +7,8 @@
 | Operating System 1 | Microsoft Windows 11 Pro                             |
 | Operating System 2 | MacOS Catalina 10.15.7                               |
 | Processor          | Intel® Core(TM) i5-10400 CPU @ 2.90GHz               |
-| Graphics Card      | Radeon RX 5500 XT 4GB / Intel® UHD Graphics 630  1GB |
+| GPU                | Radeon RX 5500 XT 4GB                                |
+| Intergrated GPU    | Intel® UHD Graphics 630  1GB                         |
 | Memory             | PNY XLR8 Gaming X Memory 3200MHz (XMP: 2666MHz)      |
 | Monitor            | Samsung U28E590 4K                                   |
 | Audio 1            | 7.1 CH HD Audio (Realtek ALC1200 Audio Codec)        |
@@ -36,7 +37,7 @@
 
 **What is BIOS?**<br>*BIOS = Basic Input/Output System*
 
-- <p align="justify">BIOS stands for Basic Input/Output System, the firmware we talked about in the above boot procedure. It is stored on an EPROM (Erasable Programmable Read-Only Memory), allowing the manufacturer to push out updates easily. It provides many helper functions that allow reading boot sectors of attached storage and printing things on screen. Asrock Motherboard can access BIOS during the initial phases of the boot procedure by pressing Del, F11 (Enter Setup).</p>
+- <p align="justify">BIOS stands for Basic Input/Output System, stored on an EPROM (Erasable Programmable Read-Only Memory), allowing the manufacturer to push out updates easily. It provides many helper functions that allow reading boot sectors of attached storage and printing things on screen. Asrock Motherboard can access BIOS during the initial phases of the boot procedure by pressing Del, F11 (Enter Setup).</p>
 
 **What is EFI?**<br>*EFI = Extensible Firmware Interface*
 
