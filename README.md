@@ -19,7 +19,7 @@
 - [x] MacOS BigSur requirement:<br>`Mindate: 0`| `MinVersion: 0`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Default`.
 - [x] MacOS Monterey requirement:<br>`Mindate: 0`|`MinVersion: 0`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Default`.
 
-<p align="justify">Remark: Quirk must set as processor codename. Refer OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, i will not recommend this tools. Any error occur to  config.plist, it is your own responsibility. Please make a backup before using it. Link can be refer below.</p>
+<p align="justify">Remark: Quirk must set as processor codename. Refer OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, OCAuxilliaryTools is not recommended. Any error occur to config.plist is by your own responsibility. Please make a backup before using it. Link can be refer below.</p>
 
 - [OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html)
 - [OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools)
