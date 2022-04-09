@@ -277,8 +277,7 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 
 ### 11.0 - Windows
 	
-<img width="774" alt="Screenshot 2022-04-07 235639" src="https://user-images.githubusercontent.com/72515939/162246264-bb17d21e-8580-496f-9cfc-72f0dfe82091.png"><img width="640" alt="Windows Info" src="https://user-images.githubusercontent.com/72515939/161429239-6b9c41c8-aec9-4090-bb69-a6c6a6256ade.png">
-
+<img width="774" alt="Screenshot 2022-04-07 235639" src="https://user-images.githubusercontent.com/72515939/162246264-bb17d21e-8580-496f-9cfc-72f0dfe82091.png">
 
 ### 12.0 - MacOS
 	
