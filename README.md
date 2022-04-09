@@ -57,13 +57,6 @@
 
 <p align="justify">OpenCore is what we refer to as a boot-loader and also as chain-loader at the same time; it is a complex piece of software that we use to prepare our systems for MacOS, specifically by injecting new data for MacOS such as SMBIOS, ACPI tables, and kexts.</p>
 
-**Installer:**
-1. [MacOS](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/mac-install.html#downloading-macos-modern-os)
-2. [Windows](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html#making-the-installer-in-windows)
-3. [Linux](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/linux-install.html)
-
-**Post Install:** [Boot Without USB](https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html#grabbing-opencore-off-the-usb)
-
 **OpenCore EFI Structure**
 
 The basic OpenCore folder structure. This folder contain several sub files and folders.
@@ -109,6 +102,13 @@ The basic OpenCore folder structure. This folder contain several sub files and f
         │   └── CleanNvram.efi
         └── config.plist
 ```
+
+**Installer:**
+1. [MacOS](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/mac-install.html#downloading-macos-modern-os)
+2. [Windows](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html#making-the-installer-in-windows)
+3. [Linux](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/linux-install.html)
+
+**Post Install:** [Boot Without USB](https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html#grabbing-opencore-off-the-usb)
 
 
 ### 1.0 - BOOT
