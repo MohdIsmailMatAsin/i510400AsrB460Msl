@@ -22,9 +22,9 @@
 
 **OS Tested:**
 
-- [x] MacOS Catalina requirement:<br>`Mindate: 20200306`|`MinVersion: 1412101001000000`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Disable`
-- [x] MacOS BigSur requirement:<br>`Mindate: 0`| `MinVersion: 0`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Default`
-- [x] MacOS Monterey requirement:<br>`Mindate: 0`|`MinVersion: 0`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Default`
+- [x] MacOS Catalina requirement:<br>`Mindate: 20200306`|`MinVersion: 1412101001000000`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Disable`.
+- [x] MacOS BigSur requirement:<br>`Mindate: 0`| `MinVersion: 0`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Default`.
+- [x] MacOS Monterey requirement:<br>`Mindate: 0`|`MinVersion: 0`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Default`.
 
 <p align="justify">Remark: Quirk must set as processor codename. Refer OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, i will not recommend this tools. Any error occur to  config.plist, it is your own responsibility. Please make a backup before using it. Link can be refer below.</p>
 
@@ -198,7 +198,7 @@
 | ANS1   | Rename `RP21,PXSX` to `RP21,ANS1`. Device is pointed to `M2- 2` Slot. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller|
 | SATA   | Rename SATA to SAT0 with additional information|
 | SBUS   | Fix `AppleSMBus` support in MacOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc|
-| USBX   | USB `Power Properties` for Skylake and newer motherboard generation|                                                                         
+| USBX   | USB `Power Properties` for Skylake and newer motherboard generation|   
 
 **Refer:**<br>
 - OpenCore [SSDT-OCB460M-SL.aml](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-AsrockSL.dsl)
@@ -269,6 +269,7 @@
 8. Enable` XHCI Hand-off`
 9. Disable `Legacy USB Support` (If Needed)
 
+
 ### 10.0 - My Experience Rating Test
 
 | MacOS    | Rating 10/10 | Review        |
@@ -277,13 +278,16 @@
 | BigSur   | 6/10         | Stable        |
 | Catalina | 10/10        | Stable & Fast |
 
+
 ### 11.0 - Windows
 	
 <img width="774" alt="Screenshot 2022-04-07 235639" src="https://user-images.githubusercontent.com/72515939/162246264-bb17d21e-8580-496f-9cfc-72f0dfe82091.png"><img width="640" alt="Windows Info" src="https://user-images.githubusercontent.com/72515939/161429239-6b9c41c8-aec9-4090-bb69-a6c6a6256ade.png">
 
+
 ### 12.0 - MacOS
 	
 <img width="697" alt="Screenshot 2022-04-06 at 1 54 31 AM" src="https://user-images.githubusercontent.com/72515939/161819681-d04170c0-f1ad-4258-b002-89d51c372689.png"><img width="1356" alt="Screenshot 2022-04-06 at 1 55 37 AM" src="https://user-images.githubusercontent.com/72515939/161819701-ca09f51f-8230-4753-a86e-9e3a42d3c75e.png"><img width="1356" alt="Screenshot 2022-04-06 at 1 55 47 AM" src="https://user-images.githubusercontent.com/72515939/161819713-bed7141a-4ff4-4fcf-8aef-0b373f2a0ced.png"><img width="1356" alt="Screenshot 2022-04-06 at 1 55 54 AM" src="https://user-images.githubusercontent.com/72515939/161819724-4d3228aa-18ba-4493-8bae-6af4324b42af.png"><img width="1356" alt="Screenshot 2022-04-06 at 1 56 08 AM" src="https://user-images.githubusercontent.com/72515939/161819740-d555a5fb-9a11-4906-9d8b-237fe7cb6372.png"><img width="1356" alt="Screenshot 2022-04-06 at 1 56 13 AM" src="https://user-images.githubusercontent.com/72515939/161819756-32142247-2b18-4de8-a743-41d5d2c03dcc.png">
+
 
 ### 13.0 - Download
 
@@ -292,11 +296,13 @@
 
 *Remark: Clover Boot Loader is include with same output as OpenCore. Any issues is not my responsible, please generate same SMBIOS with different serial*
 
+
 ### 15.0 - Ioreg
 
 - [Mohd's Ioreg](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/Mohd%E2%80%99s%20iMac.ioreg)
 
 *Remark: [Ioreg](https://github.com/MohdIsmailMatAsin/AdditionalTools4Xcode13.2/blob/main/IORegistryExplorer.zip) is required to view the details*
+
 
 # Acknowledgements
 
