@@ -186,7 +186,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 | LPCB   | LPCB, `Low Pin Count Bus` path corresponding to Embed Controller/EC|
 | PPMC   | Classed as `Memory Controller` in `Comet Lake (CML)` platform. **Patch:** Compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, identical to `CML` device `pci8086,a3a1`|
 | TSUB   | Known as `Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB`|
-| XHC    | PCIe`Comet Lake PCH-V USB Controller` device|
+| XHC    | Board `Comet Lake PCH-V USB Controller` device|
 | ARPT   | Rename `RP03,PXSX` to `RP03,ARPT`. Device is pointed to `M2- 3` Wifi Slot|
 | RTL0   | Rename `RTL8125 2.5GbE Controller` device as `RP04,PXSX` to `RP04,RTL0`|
 | PXSX   | ASMedia USB device, `ASM2142 USB 3.1 Host Controller` device|
