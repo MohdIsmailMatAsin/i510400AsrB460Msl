@@ -11,7 +11,7 @@
 | IGPU               | Intel® UHD Graphics 630  1GB                         | PCI 2              | ASM2142 USB 3.1 Host Controller + USB Type C        |
 | Memory             | PNY XLR8 Gaming X Memory 3200MHz                     | Storage 1          | 500GB Kingston A2000 NVMe                           | 
 | Monitor            | Samsung U28E590 4K                                   | Storage 2          | 500GB Kingston A2000 NVMe                           |
-| SMBIOS             | iMac20,1                                             | 
+| SMBIOS             | iMac20,1                                             | Board ID           | Mac-CFF7D910A743CAAF                                |
 
 **OS Tested:**
 
