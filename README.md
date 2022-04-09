@@ -231,7 +231,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 
 ### 5.0 - OpenCore.efi
 
-An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is include with [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/). This file is compulsory.
+An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is include with [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/) and it is compulsory.
 
 
 ### 6.0 - Resources
