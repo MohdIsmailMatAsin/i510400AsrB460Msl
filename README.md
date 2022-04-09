@@ -192,7 +192,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 | GFX0   | Display Output from `Dedicated Graphic Processor Unit / DGPU`. `_SUN` is added to get proper PCI Slot Number|
 | HDAU   | Audio Output device through HDMI, called as `High Definition Audio`. `_SUN` is added to get proper PCI Slot Number|
 | HDEF   | Audio device, known as `High Definition Audio System / HDAS` in actual `DSDT`, renamed with `HDEF`|
-| LPCB   | LPCB, `Low Pin Count Bus` path corresponding to Embed Controller/EC|
+| LPCB   | Path of `Low Pin Count Bus` which is corresponding to Embed Controller/EC|
 | PPMC   | Classed as `Memory Controller` in `Comet Lake (CML)` platform. **Patch:** Compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, identical to `CML` device `pci8086,a3a1`|
 | TSUB   | Known as `Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB`|
 | XHC    | Board `Comet Lake PCH-V USB Controller` device|
