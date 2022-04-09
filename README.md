@@ -134,11 +134,11 @@
 
 ### 2.0 - ACPI
 
-**What is DSDT?**<br>*DSDT = Differentiated System Description Table*
+**What is `DSDT`?**<br>*DSDT = Differentiated System Description Table*
 
 - <p align="justify">It Is a major ACPI table and is used to describe what peripherals the machine has. Also holds information on PCI IRQ mappings and power management.</p>
 
-**What is SSDT?**<br>*SSDT = Secondary System Description Table*
+**What is `SSDT`?**<br>*SSDT = Secondary System Description Table*
 
 - <p align="justify">It is encoded in AML in exactly the same way as the DSDT. It acts as a supplement to the DSDT.</p>
 
