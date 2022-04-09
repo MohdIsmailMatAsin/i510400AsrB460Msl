@@ -309,6 +309,6 @@ I would like to thanks all folks in Hackintosh Community especially:
 - [dhinakg](https://github.com/USBToolBox/tool) for developing easy Windows based USB mapping tools inspired by CorpNewt USBMap
 - [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for knowledge sharing
 - [r/Hackintosh](https://www.reddit.com/r/hackintosh/) for an easy undocumented references
-- [daliansky](https://github.com/daliansky) for publishing his own OpenCore ACPI method (OC-Little) and implementation.
+- [daliansky](https://github.com/daliansky) for publishing his own OpenCore ACPI method (OC-Little) and implementation
 - [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky OC-Little
 - [rusty-bits](https://github.com/rusty-bits) for an easy EFI update using windows "Cmd-Prompt", linux and MacOS Terminal
