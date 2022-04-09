@@ -197,8 +197,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 | SBUS   | Fix `AppleSMBus` support in MacOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc|
 | USBX   | USB `Power Properties` for Skylake and newer motherboard generation|   
 
-**Refer:**<br>
-OpenCore [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)
+**Refer:** OpenCore [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)
 
 
 ### 3.0 - Drivers
