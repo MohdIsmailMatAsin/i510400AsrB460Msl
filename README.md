@@ -9,7 +9,7 @@
 | Processor          | Intel® Core(TM) i5-10400 CPU @ 2.90GHz               | Motherboard        | ASRock (B460M Steel Legend)                         | 
 | GFX0               | Radeon RX 5500 XT 4GB                                | PCI 1              | BCM94360 WiFi & Bluetooth                           |
 | IGPU               | Intel® UHD Graphics 630  1GB                         | PCI 2              | ASM2142 USB 3.1 Host Controller + USB Type C        |
-| Memory             | PNY XLR8 Gaming X Memory 3200MHz (XMP: 2666MHz)      | Storage 1          | 500GB Kingston A2000 NVMe                           | 
+| Memory             | PNY XLR8 Gaming X Memory 3200MHz                     | Storage 1          | 500GB Kingston A2000 NVMe                           | 
 | Monitor            | Samsung U28E590 4K                                   | Storage 2          | 500GB Kingston A2000 NVMe                           |
 | SMBIOS             | iMac20,1                                             | 
 
