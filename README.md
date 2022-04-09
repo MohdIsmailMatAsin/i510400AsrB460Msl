@@ -48,13 +48,16 @@
 
 - <p align="justify">OpenCore is what we refer to as a boot-loader and also as chain-loader at the same time; it is a complex piece of software that we use to prepare our systems for MacOS, specifically by injecting new data for MacOS such as SMBIOS, ACPI tables, and kexts.</p>
 
-*Remark: OpenCore EFI position inside USB Installer is the same as the picture above. The EFI folder (include content) must be in a USB volume either ESP/EFI which is a FAT32 format volume. Post MacOS install, OpenCore EFI must be in MacOS ESP/EFI which also as FAT32 format volume*
+**Installer:**<br>`Windows`
+1. [MacOS](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/mac-install.html#downloading-macos-modern-os)
+2. [Windows](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html#making-the-installer-in-windows)
+3. [Linux](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/linux-install.html)
 
-**Refer:** [OpenCore](https://dortania.github.io/OpenCore-Install-Guide/)
+**Post Install:** [Boot Without USB](https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html#grabbing-opencore-off-the-usb)
 
-- <p align="justify">EFI, the basic OpenCore folder structure. This folder contain several sub files and folders. Tree diagram below explained the detail:</p>
+**OpenCore EFI Structure**
 
-**OpenCore v0.7.9:**
+- The basic OpenCore folder structure. This folder contain several sub files and folders.
 
 ```tree
 % cd /Volumes/EFI
