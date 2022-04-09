@@ -26,17 +26,17 @@
 
 # Introduction
 
-**What is BIOS?**<br>*BIOS = Basic Input/Output System*
+**What is `BIOS`?**<br>*BIOS = Basic Input/Output System*
 
 - <p align="justify">BIOS stands for Basic Input/Output System, stored on an EPROM (Erasable Programmable Read-Only Memory), allowing the manufacturer to push out updates easily. It provides many helper functions that allow reading boot sectors of attached storage and printing things on screen. Asrock Motherboard can access BIOS during the initial phases of the boot procedure by pressing Del, F11 (Enter Setup).</p>
 
-**What is EFI?**<br>*EFI = Extensible Firmware Interface*
+**What is `EFI`?**<br>*EFI = Extensible Firmware Interface*
 
 - <p align="justify">The EFI system partition (ESP), a small partition formatted with FAT32, is usually around 100MB for Windows and around 200MB for MacOS, this is where the EFI boot loaders and applications used by the firmware at system during start-up are stored. If your hard drive is in the GUID Partition table (GPT) partition style, it will automatically generate an EFI system partition after you have installed your operating systems. Both Windows and Mac operating systems are supported.</p>
 
 ![efi-system-partition](https://user-images.githubusercontent.com/72515939/161425316-cb229e60-b2ad-4538-9b68-bbabb89a88a8.png)
 
-**What is UEFI?**<br>*UEFI = Unified Extensible Firmware Interface*
+**What is `UEFI`?**<br>*UEFI = Unified Extensible Firmware Interface*
 
 - <p align="justify">UEFI stands for "Unified Extensible Firmware Interface." The UEFI Specification defines a new model for the interface between personal-computer operating systems and platform firmware. The interface consists of data tables that contain platform-related information, plus boot and runtime service calls that are available to the operating system and its loader. Together, these provide a standard environment for booting an operating system and running pre-boot applications.</p>
 
