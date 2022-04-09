@@ -64,45 +64,47 @@
 **OpenCore v0.7.9:**
 
 ```tree
-\---EFI
-    +---BOOT
-    |       BOOTx64.efi
-    \---OC
-        |   config.plist
-        |   OpenCore.efi
-        +---ACPI
-        |       SSDT-AsrockSL.aml
-        +---Drivers
-        |       HfsPlus.efi
-        |       OpenCanopy.efi
-        |       OpenRuntime.efi
-        +---Kexts
-        |   +---AppleALC.kext
-        |   +---Lilu.kext
-        |   +---LucyRTL8125Ethernet.kext
-        |   +---RadeonSensor.kext
-        |   +---SMCLightSensor.kext
-        |   +---SMCProcessor.kext
-        |   +---SMCRadeonGPU.kext
-        |   +---SMCSuperIO.kext
-        |   +---USBMap.kext
-        |   +---USBMapFull.kext
-        |   +---VirtualSMC.kext
-        |   \---WhateverGreen.kext
-        +---Resources
-        |   +---Audio
-        |   +---Font
-        |   +---Image
-        |   |   \---Acidanthera
-        |   |       +---Chardonnay     
-        |   |       +---GoldenGate   
-        |   |       +---Syrah
-        |   \---Label
-        \---Tools
-                CleanNvram.efi
+% cd /Volumes/EFI
+↓
+% tree
+.
+└── EFI
+    ├── BOOT
+    │   └── BOOTx64.efi
+    └── OC
+        ├── ACPI
+        │   └── SSDT-OCB460M-SL.aml
+        ├── Drivers
+        │   ├── HfsPlus.efi
+        │   ├── OpenCanopy.efi
+        │   └── OpenRuntime.efi
+        ├── Kexts
+        │   ├── AppleALC.kext
+        │   ├── Lilu.kext
+        │   ├── LucyRTL8125Ethernet.kext
+        │   ├── RadeonSensor.kext
+        │   ├── SMCLightSensor.kext
+        │   ├── SMCProcessor.kext
+        │   ├── SMCRadeonGPU.kext
+        │   ├── SMCSuperIO.kext
+        │   ├── USBMap.kext
+        │   ├── VirtualSMC.kext
+        │   └── WhateverGreen.kext
+        ├── OpenCore.efi
+        ├── Resources
+        │   ├── Audio
+        │   ├── Font
+        │   ├── Image
+        │   │   └── Acidanthera
+        │   │       ├── Chardonnay
+        │   │       ├── GoldenGate
+        │   │       └── Syrah
+        │   └── Label
+        ├── Tools
+        │   └── CleanNvram.efi
+        └── config.plist
 ```
 
-*Remark: This information is dumped via Windows Command Prompt. Refer [Tree Syntax via Windows](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/tree)*
 
 ### 1.0 - BOOT
 
@@ -132,6 +134,7 @@
 1. Temporary: `EFI\BOOT\BOOTx64.efi` via USB Drive (Installation Device)
 2. Permanent: `EFI\BOOT\BOOTx64.efi` via HDD/SSD/NVMe (MacOS Drive)
 - <p align="justify">While OpenCore is just a boot-loader, this type of boot-loader is included with their own firmware, along with additional quirks for booting the MacOS partition. Furthermore, OpenCore has portable features that enable the chain-loader option to be used with other operating systems.</p>
+
 
 ### 2.0 - ACPI
 
@@ -177,31 +180,30 @@
 | ALS0   | Optional/Not Needed. Normally, real `iMac` is include this device information. **Patch:** `smc-als` and `AppleLMUController`). These patch is only `Cosmetics`, nothing much we can do|
 | PLUG   | To allow the kernel's `XCPM / XNU's CPU Power Management` to manage CPU's power management|
 | EC     | Fake Embedded Controller / EC drivers since `CML` don't have native support EC|
-| IGPU   | An Intel® Intergrated Graphics Unit device.`GFX0` to `IGPU` rename. Other rename method via `SSDT` for `Intergrated Graphics Unit / IGPU` which can be handled by `Whatevergreen.kext`. Additional info related to `Intel UHD 630` is added as `headless` built-in graphics module|
-| IMEI   | An Intel® Management Engine Interface.`HECI` to `IMEI` rename via `SSDT`|
+| IGPU   | An Intel® Intergrated Graphics Unit device.`GFX0` to `IGPU` rename|
+| IMEI   | An Intel® Management Engine Interface.`HECI` to `IMEI` rename|
 | MCHC   | Come with `SBUS` patch to aids with correct temperature, fan, voltage, ICH, etc readings and proper memory reporting|
-| GFX0   | Display Output from `Dedicated Graphic Processor Unit / DGPU`.  This `SSDT` contain all `Navi 14` patch information. **Patch:** `ATY,Keelback` frame-buffer and `CFG,CFG_USE_AGDC` properties to overcome wake issue using `DGPU`. `_SUN` is added to get proper PCI Slot Number|
+| GFX0   | Display Output from `Dedicated Graphic Processor Unit / DGPU`. `_SUN` is added to get proper PCI Slot Number|
 | HDAU   | Audio Output device through HDMI, called as `High Definition Audio`. `_SUN` is added to get proper PCI Slot Number|
-| HDEF   | Audio device, known as `High Definition Audio System / HDAS` in actual `DSDT`, renamed with `HDEF` . **Patch:** `layout id/data/01000000` which is equal to `alcid=1`|
-| LPCB   | Just regular `Low Pin Count Bus` path corresponding to Embed Controller/EC|
-| PMCR   | Classed as `Memory Controller` and known as `PPMC` in `Comet Lake (CML)` platform. This `SSDT` renamed `PPMC` as `PMCR` with compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, which is identical to `CML` `pci8086,a3a1`|
+| HDEF   | Audio device, known as `High Definition Audio System / HDAS` in actual `DSDT`, renamed with `HDEF`|
+| LPCB   | LPCB, `Low Pin Count Bus` path corresponding to Embed Controller/EC|
+| PPMC   | Classed as `Memory Controller` in `Comet Lake (CML)` platform. **Patch:** Compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, identical to `CML` device `pci8086,a3a1`|
 | TSUB   | Known as `Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB`|
 | XHC1   | Rename PCIe`Comet Lake PCH-V USB Controller` device as `XHC` to `XHC1`. **Patch:**`acpi-wake-type` to overcome wake issue using USB device|
-| ARPT   | Rename `RP03,PXSX` to `RP03,ARPT`. Device is pointed to `M2- 3` Slot|
+| ARPT   | Rename `RP03,PXSX` to `RP03,ARPT`. Device is pointed to `M2- 3` Wifi Slot|
 | RTL0   | Rename `RTL8125 2.5GbE Controller` device as `RP04,PXSX` to `RP04,RTL0`|
-| XHC0   | Rename ASMedia USB device, `ASM2142 USB 3.1 Host Controller` device as `RP05,PXSX` to `RP05,XHC0`. Device is pointed to `Slot- 3`. **Patch:** `acpi-wake-type` to overcome wake issue using USB device|
+| PXSX   | ASMedia USB device, `ASM2142 USB 3.1 Host Controller` device|
 | ANS0   | Rename `RP09,PXSX` to `RP09,ANS0`. Device is pointed to `M2- 1` Slot. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller`|
 | ANS2   | Rename `RP20,PXSX` to `RP20,ANS2`. Device is pointed to `Slot- 2`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller`|
 | ANS1   | Rename `RP21,PXSX` to `RP21,ANS1`. Device is pointed to `M2- 2` Slot. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller|
-| SATA   | Rename SATA to SAT0 with additional information. **Patch:** Spoof `400 Series Chipset Family SATA AHCI Controller` to `Intel 11 Series Chipset Controler`|
+| SATA   | Rename SATA to SAT0 with additional information|
 | SBUS   | Fix `AppleSMBus` support in MacOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc|
-| USBX   | Known as `USB Power Properties` for Skylake and newer motherboard generation|                                                                         
+| USBX   | USB `Power Properties` for Skylake and newer motherboard generation|                                                                         
 
 **Refer:**<br>
-- OpenCore [SSDT-Asrock.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-AsrockSL.dsl)
-- Clover [SSDT-Asrock_Clover.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-AsrockSL_Clover.dsl)
+- OpenCore [SSDT-OCB460M-SL.aml](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-AsrockSL.dsl)
+- Clover [SSSDT-CVB460M-SL.aml](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-AsrockSL_Clover.dsl)
 
-*Remark: Do note,`_SUN` injection may affect differently in PCI slot via OpenCore and Clover*
 
 ### 3.0 - Drivers
 
@@ -218,21 +220,23 @@
 - <p align="justify">Kernel extensions (kexts) let developers load code directly into the MacOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed function. The table below contains some kexts used to properly boot MacOS through OpenCore</p>
 
 | Kext                | Information |
-| ------------------- | ------------------------------------------------------------------------------------- |
+| ------------------- | -------------------------------------------------------------------------------------|
 | Lilu                | `Arbitrary kext` and `process patching` on MacOS |
 | VirtualSMC          | `System Management Controller` (SMC) emulator layer |
-| AppleALC            | An `open source kernel extension` enabling `native MacOS HD audio` for `not officially supported codecs` without any filesystem modifications |
-| Whatevergreen       | `Various patches` necessary for certain `ATI`/`AMD`/`Intel`/`Nvidia` GPUs |
-| SMCProcessor        | Additional support for `VirtualSMC`. Used for monitoring `CPU` temperature |
+| AppleALC            | An `open source kernel extension` enabling `native MacOS HD audio` for `not officially supported codecs` without any filesystem modifications|
+| Whatevergreen       | `Various patches` necessary for certain `ATI`/`AMD`/`Intel`/`Nvidia` GPUs|
+| SMCProcessor        | Additional support for `VirtualSMC`. Used for monitoring `CPU` temperature|
 | SMCSuperIO          | Additional support for `VirtualSMC`. Used for monitoring `FAN` speed |
-| SMCRadeonGPU        | Based on `FakeSMCs`, `RadeonMonitor` to provide `GPU` temperature to a dedicated gadget `without relying` on `FakeSMC` being installed and can therefore be used with `VirtualSMC` instead |
-| RadeonSensor        | To read the `GPU` temperature. `Lilu` is required |
-| LucyRTL8125Ethernet | Ethernet device, `Realtek RTL8125 2.5GBit Ethernet Controllers` driver |
-| USBMap              | Kext to `route` selected `USB ports` to `Physical Ports` via USB port address. This is `compulsory to handle` `15 port limit` requirements by MacOS. Require [USBMap](https://github.com/corpnewt/USBMap) or [USBToolbox](https://github.com/USBToolBox/tool)|
+| SMCRadeonGPU        | Based on `FakeSMCs`, `RadeonMonitor` to provide `GPU` temperature to a dedicated gadget `without relying` on `FakeSMC`|
+| RadeonSensor        | To read the `GPU` temperature. `Lilu` is required|
+| LucyRTL8125Ethernet | Ethernet device, `Realtek RTL8125 2.5GBit Ethernet Controllers` driver|
+| USBMap              | Kext to `route` selected `USB ports` to `Physical Ports` via USB port address. This is `compulsory to handle` `15 port limit` requirements by MacOS|
+
 
 ### 5.0 - OpenCore.efi
 
 - An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is include with [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/). This file is compulsory.
+
 
 ### 6.0 - Resources
 
@@ -240,15 +244,18 @@
 
 **Refer:** [OC Binary Resource](https://github.com/acidanthera/OcBinaryData)
 
+
 ### 7.0 - Tools
 
 - <p align="justify">Nothing fancy, just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist. This tool is hiding via "hide auxiliary". Use "Spacebar" to reveal the function. I just include this tools as failsafe.</p>
 
+
 ### 8.0 - Config.plist
 
-- <p align="justify">Knowledge + Hardware + Effort = Stability. Honestly, the process of preparing this file took a long time.  Still, I am thankful that I have over 20 years of experience using computers.  I am not too clumsy to understand the concept even though I am not from programming and technology field. Quirk selected was according to Intel 10th Generation `Comet Lake` recommend settings via Dortania. It has taken me several years to understand the Vanilla Hackintosh concept.  Starting with Clover, it was a bit confusing for me because of the scattered setting and arrangement of each part.  OpenCore concept is easier to understand and compiled every part to improve hardware, device and the OS stability. I also provide examples, and expose some important settings for OpenCore config.plist.
+- <p align="justify">Property list based on xml code. Structured OpenCore method and upgraded injection function. A .plist is a "preference" file for the Application that it holds the preference settings for. By trashing and then relaunching an application you are getting rid of old user set preferences that may have become corrupt. This is often used to correct problems that a user may be having with an application.</p>
 
-**Refer:** [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
+**Refer:** [OpenCore config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
+
 
 ### 9.0 - BIOS/UEFI Settings
 
