@@ -287,7 +287,7 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 
 ### 13.0 - Ioreg
 
-[iHack20,1](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/iHack20%2C1.ioreg)*
+[iHack20,1](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/iHack20%2C1.ioreg)
 
 
 # Acknowledgements
