@@ -69,7 +69,7 @@
     │   └── BOOTx64.efi
     └── OC
         ├── ACPI
-        │   └── SSDT-OCB460M-SL.aml
+        │   └── SSDT-B460M-SL.aml
         ├── Drivers
         │   ├── HfsPlus.efi
         │   ├── OpenCanopy.efi
@@ -169,7 +169,8 @@
 2. Kernel\Quirks\CustomSMBIOSGuid = `True`
 
 - <p align="justify">From here, SSDT patching is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. The SSDT concept is only a patch of information and does not affect the existing hardware.</p>
-- <p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-AsrockSL.aml). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext. The following is a list of devices that have been injected with specific properties:</p>
+- <p align="justify">The SSDT I use is a combination of various sources from SSDTTime. Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-B460M-SL.dsl). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext. The following is a list of devices that have been injected with specific properties:</p>
+
 | Device | Information|
 | ------ | -----------|
 | AWAC   | To fix the `System Clocks` found on newer hardware|
@@ -197,8 +198,7 @@
 | USBX   | USB `Power Properties` for Skylake and newer motherboard generation|   
 
 **Refer:**<br>
-- OpenCore [SSDT-OCB460M-SL.aml](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-AsrockSL.dsl)
-- Clover [SSSDT-CVB460M-SL.aml](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-AsrockSL_Clover.dsl)
+- OpenCore [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)
 
 
 ### 3.0 - Drivers
@@ -207,9 +207,10 @@
 
 | Driver          | Information  |
 | --------------- | -------------|
-| HfsPlus.efi     | Official `HFS+ Driver` Support for Apple MacOS |                                                                                                   
+| HfsPlus.efi     | Official `HFS+ Driver` Support for Apple MacOS |                                                                                     
 | OpenCanopy.efi  | OpenCore `Cosmetics Driver` for OpenCore boot menu |   
 | OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Boot-loader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
+
 
 ### 4.0 - Kernel Extension
 
@@ -250,7 +251,7 @@
 
 - <p align="justify">Property list based on xml code. Structured OpenCore method and upgraded injection function. A .plist is a "preference" file for the Application that it holds the preference settings for. By trashing and then relaunching an application you are getting rid of old user set preferences that may have become corrupt. This is often used to correct problems that a user may be having with an application.</p>
 
-**Refer:** [OpenCore config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
+**Refer:** [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
 
 
 ### 9.0 - BIOS/UEFI Settings
@@ -285,19 +286,11 @@
 <img width="697" alt="Screenshot 2022-04-06 at 1 54 31 AM" src="https://user-images.githubusercontent.com/72515939/161819681-d04170c0-f1ad-4258-b002-89d51c372689.png"><img width="1356" alt="Screenshot 2022-04-06 at 1 55 37 AM" src="https://user-images.githubusercontent.com/72515939/161819701-ca09f51f-8230-4753-a86e-9e3a42d3c75e.png"><img width="1356" alt="Screenshot 2022-04-06 at 1 55 47 AM" src="https://user-images.githubusercontent.com/72515939/161819713-bed7141a-4ff4-4fcf-8aef-0b373f2a0ced.png"><img width="1356" alt="Screenshot 2022-04-06 at 1 55 54 AM" src="https://user-images.githubusercontent.com/72515939/161819724-4d3228aa-18ba-4493-8bae-6af4324b42af.png"><img width="1356" alt="Screenshot 2022-04-06 at 1 56 08 AM" src="https://user-images.githubusercontent.com/72515939/161819740-d555a5fb-9a11-4906-9d8b-237fe7cb6372.png"><img width="1356" alt="Screenshot 2022-04-06 at 1 56 13 AM" src="https://user-images.githubusercontent.com/72515939/161819756-32142247-2b18-4de8-a743-41d5d2c03dcc.png">
 
 
-### 13.0 - Download
-
-- [Clover](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/files/8428324/EFI_CLv5146.zip)
-- [OpenCore](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/files/8428314/EFI_OCv0.7.9.zip)
-
-*Remark: Clover Boot Loader is include with same output as OpenCore. Any issues is not my responsible, please generate same SMBIOS with different serial*
-
-
-### 15.0 - Ioreg
+### 13.0 - Ioreg
 
 - [Mohd's Ioreg](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/Mohd%E2%80%99s%20iMac.ioreg)
 
-*Remark: [Ioreg](https://github.com/MohdIsmailMatAsin/AdditionalTools4Xcode13.2/blob/main/IORegistryExplorer.zip) is required to view the details*
+*Remark: [iHack20,1](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/iHack20%2C1.ioreg)*
 
 
 # Acknowledgements
