@@ -2,16 +2,16 @@
 
 ## Information
 
-| Info               | Details                                              | Info               | Details                                             |
-| ------------------ | ---------------------------------------------------- | ------------------ | ----------------------------------------------------|
-| OS 1               | Microsoft Windows 11 Pro                             | Audio 1            | 7.1 CH HD Audio (Realtek ALC1200 Audio Codec)       |
-| OS 2               | MacOS Catalina 10.15.7                               | Audio 2            | U-Phoria UM2 USB Audio Device                       | 
-| Processor          | Intel® Core(TM) i5-10400                             | Motherboard        | ASRock (B460M Steel Legend)                         | 
-| GFX0               | Radeon RX 5500 XT 4GB                                | PCI 1              | BCM94360 WiFi & Bluetooth                           |
-| IGPU               | Intel® UHD Graphics 630  1GB                         | PCI 2              | ASM2142 USB 3.1 Host Controller + USB Type C        |
-| Memory             | PNY XLR8 Gaming X Memory 3200MHz                     | Storage 1          | 500GB Kingston A2000 NVMe                           | 
-| Monitor            | Samsung U28E590 4K                                   | Storage 2          | 500GB Kingston A2000 NVMe                           |
-| SMBIOS             | iMac20,1                                             | Board ID           | Mac-CFF7D910A743CAAF                                |
+| Info      | Details                          | Info        | Details                                       |
+| --------- | -------------------------------- | ----------- | --------------------------------------------- |
+| OS 1      | Microsoft Windows 11 Pro         | Audio 1     | 7.1 CH HD Audio (Realtek ALC1200 Audio Codec) |
+| OS 2      | MacOS Catalina 10.15.7           | Audio 2     | U-Phoria UM2 USB Audio Device                 |
+| Processor | Intel® Core(TM) i5-10400         | Motherboard | ASRock (B460M Steel Legend)                   |
+| GFX0      | Radeon RX 5500 XT 4GB            | PCI 1       | BCM94360 WiFi & Bluetooth                     |
+| IGPU      | Intel® UHD Graphics 630  1GB     | PCI 2       | ASM2142 USB 3.1 Host Controller + USB Type C  |
+| Memory    | PNY XLR8 Gaming X Memory 3200MHz | Storage 1   | 500GB Kingston A2000 NVMe                     |
+| Monitor   | Samsung U28E590 4K               | Storage 2   | 500GB Kingston A2000 NVMe                     |
+| SMBIOS    | iMac20,1                         | Board ID    | Mac-CFF7D910A743CAAF                          |
 
 **OS Tested:**
 
@@ -47,12 +47,15 @@
 **My Partition**<br>
 
 - **Windows**
+
 <p align="center"><img width="827" alt="Screenshot 2022-04-03 133920" src="https://user-images.githubusercontent.com/72515939/161430959-f530d4a2-812f-43ec-9b78-6b54522f3a50.png"></p>
-	
+
 - **MacOS**
+
 <p align="center"><img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161430979-9b890a71-a348-439b-98df-0e53e6a49da8.png"></p>
-	
+
 - **OpenCore**
+
 <p align="center"><img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161431087-8fadbe79-bdc6-49fc-8721-eb149db7ede0.png"></p>
 
 <p align="justify">OpenCore is what we refer to as a boot-loader and also as chain-loader at the same time; it is a complex piece of software that we use to prepare our systems for MacOS, specifically by injecting new data for MacOS such as SMBIOS, ACPI tables, and kexts.</p>
@@ -68,42 +71,43 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 .
 └── EFI
     ├── BOOT
-    │   └── BOOTx64.efi
+    │   └── BOOTx64.efi
     └── OC
         ├── ACPI
-        │   └── SSDT-B460M-SL.aml
+        │   └── SSDT-B460M-SL.aml
         ├── Drivers
-        │   ├── HfsPlus.efi
-        │   ├── OpenCanopy.efi
-        │   └── OpenRuntime.efi
+        │   ├── HfsPlus.efi
+        │   ├── OpenCanopy.efi
+        │   └── OpenRuntime.efi
         ├── Kexts
-        │   ├── AppleALC.kext
-        │   ├── Lilu.kext
-        │   ├── LucyRTL8125Ethernet.kext
-        │   ├── RadeonSensor.kext
-        │   ├── SMCLightSensor.kext
-        │   ├── SMCProcessor.kext
-        │   ├── SMCRadeonGPU.kext
-        │   ├── SMCSuperIO.kext
-        │   ├── USBMap.kext
-        │   ├── VirtualSMC.kext
-        │   └── WhateverGreen.kext
+        │   ├── AppleALC.kext
+        │   ├── Lilu.kext
+        │   ├── LucyRTL8125Ethernet.kext
+        │   ├── RadeonSensor.kext
+        │   ├── SMCLightSensor.kext
+        │   ├── SMCProcessor.kext
+        │   ├── SMCRadeonGPU.kext
+        │   ├── SMCSuperIO.kext
+        │   ├── USBMap.kext
+        │   ├── VirtualSMC.kext
+        │   └── WhateverGreen.kext
         ├── OpenCore.efi
         ├── Resources
-        │   ├── Audio
-        │   ├── Font
-        │   ├── Image
-        │   │   └── Acidanthera
-        │   │       ├── Chardonnay
-        │   │       ├── GoldenGate
-        │   │       └── Syrah
-        │   └── Label
+        │   ├── Audio
+        │   ├── Font
+        │   ├── Image
+        │   │   └── Acidanthera
+        │   │       ├── Chardonnay
+        │   │       ├── GoldenGate
+        │   │       └── Syrah
+        │   └── Label
         ├── Tools
-        │   └── CleanNvram.efi
+        │   └── CleanNvram.efi
         └── config.plist
 ```
 
 **Installer:**
+
 1. [MacOS](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/mac-install.html#downloading-macos-modern-os)
 2. [Windows](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html#making-the-installer-in-windows)
 3. [Linux](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/linux-install.html)
@@ -116,15 +120,18 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 <p align="justify">Fallback boot-loader path. This is the only boot-loader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As a failsafe method, most firmware includes these drivers to prevent certain boot issues. There are 2 types of fallback. Details below explain the temporary and permanent methods, mostly used by specified UEFI firmware and operating system implementation.</p>
 
 **Temporary vs Permanent:**<br>`Temporary`
+
 1. Can be ported to other GUID Partition
 2. As a solution to boot certain OS (Depending on Firmware i.e., OpenCore, Clover and rEFInd)
 
 `Permanent`
+
 1. Cannot be ported due to GUID info binding.
 2. Hard to modify
 
 **Other Operating System (OS) Implementation**
 `Windows`
+
 1. Temporary: `EFI\boot\bootx64.efi`
 2. Permanent: `EFI\Microsoft\Boot\bootmgfw.efi` (Windows Boot Manager/UEFI which contain a GUID reference)
 
@@ -139,7 +146,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 1. Temporary: `EFI\BOOT\BOOTx64.efi` via USB Drive (Installation Device)
 2. Permanent: `EFI\BOOT\BOOTx64.efi` via HDD/SSD/NVMe (MacOS Drive)
 
-<p align="justify">While OpenCore is just a boot-loader, this type of boot-loader is included with their own firmware, along with additional quirks for booting the MacOS partition. Furthermore, OpenCore has portable features that enable the chain-loader option to be used with other operating systems.</p>
+<p align="justify">While OpenCore is just a boot-loader, this type of boot-loader is included with their own firmware, along with additional quirks for booting the MacOS partition. Furthermore, OpenCore has portable features that enable the chain-loader option to be used with other operating systems.</p>
 
 
 ### 2.0 - ACPI
@@ -163,6 +170,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 <p align="justify">DSDT patching should be avoided. There are various reasons why DSDT patching is not recommended. Some forums/webpages (i.e., Olarila) state that it is a major solution. As a matter of knowledge, DSDT is the main table while SSDT is the secondary table (additional table). The difference is that DSDT cannot be tampered with or touched. Because it is the primary code to handle your machine with various devices. Meanwhile, SSDT is the secondary table, where we can change (modify), add, and drop. Although the language (code) used is the same, it has a different task or method. Reason? I'll explain why.</p>
 
 **DSDT Patching** may cause
+
 1. Broken motherboard BIOS, or
 2. Inefficient device with the wrong injection, or
 3. Cause malfunction device, or
@@ -172,39 +180,39 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 
 <p align="justify">ACPI Injection to Windows/Linux. Mostly, these issue may affect dual booting (Windows + MacOS). Luckily, there are settings via config.plist to prevent both issues, but this is only experimental. Do not assume this settings will work 100% on your machine. Settings is explained via table below:</p>
 
-| Path          | Path       | Path               | Mode    |
-| ------------- | -----------| ------------------ | --------|
-| PlatformInfo  | SerialInfo | UpdateSMBIOSMode   | Custom  |
-| Kernel        | Quirks     | CustomSMBIOSGuid   | True    | 
+| Path         | Path       | Path             | Mode   |
+| ------------ | ---------- | ---------------- | ------ |
+| PlatformInfo | SerialInfo | UpdateSMBIOSMode | Custom |
+| Kernel       | Quirks     | CustomSMBIOSGuid | True   |
 
 <p align="justify">From here, SSDT patching is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. The SSDT concept is only a patch of information and does not affect the existing hardware.</p>
 <p align="justify">TThanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-B460M-SL.dsl). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext. The following is a list of devices that have been injected with specific properties:</p>
 
-| Device | Information|
-| ------ | -----------|
-| AWAC   | To fix the `System Clocks` found on newer hardware|
-| ALS0   | Optional/Not Needed. Normally, real `iMac` is include this device information. **Patch:** `smc-als` and `AppleLMUController`). These patch is only `Cosmetics`, nothing much we can do|
-| PLUG   | To allow the kernel's `XCPM / XNU's CPU Power Management` to manage CPU's power management|
-| EC     | Fake Embedded Controller / EC drivers since `CML` don't have native support EC|
-| IGPU   | An Intel® Intergrated Graphics Unit device.`GFX0` to `IGPU` rename|
-| IMEI   | An Intel® Management Engine Interface.`HECI` to `IMEI` rename|
-| MCHC   | Come with `SBUS` patch to aids with correct temperature, fan, voltage, ICH, etc readings and proper memory reporting|
-| GFX0   | Display Output from `Dedicated Graphic Processor Unit / DGPU`. `_SUN` is added to get proper PCI Slot Number|
-| HDAU   | Audio Output device through HDMI, called as `High Definition Audio`. `_SUN` is added to get proper PCI Slot Number|
-| HDEF   | Audio device, known as `High Definition Audio System / HDAS` in actual `DSDT`, renamed with `HDEF`|
-| LPCB   | Path of `Low Pin Count Bus` which is corresponding to Embed Controller/EC|
-| PPMC   | Classed as `Memory Controller` in `Comet Lake (CML)` platform. **Patch:** Compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, identical to `CML` device `pci8086,a3a1`|
-| TSUB   | Known as `Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB`|
-| XHC    | Board `Comet Lake PCH-V USB Controller` device|
-| ARPT   | Rename Broadcom device, BCM94360 `RP03,PXSX` to `RP03,ARPT`. Device is pointed to `M2- 3` Wifi Slot|
-| RTL0   | Rename `RTL8125 2.5GbE Controller` device as `RP04,PXSX` to `RP04,RTL0`|
-| PXSX   | ASMedia USB device, `ASM2142 USB 3.1 Host Controller` device|
-| ANS0   | Rename Kingston A2000 NVMe, `RP09,PXSX` to `RP09,ANS0`. Device is pointed to `M2- 1` Slot. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller`|
-| ANS2   | Rename Silicon Power MAP1001 NVMe, `RP20,PXSX` to `RP20,ANS2`. Device is pointed to `Slot- 2`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller`|
-| ANS1   | Rename Kingston A2000 NVMe, `RP21,PXSX` to `RP21,ANS1`. Device is pointed to `M2- 2` Slot. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller`|
-| SATA   | Serial ATA Device. Rename `SATA` to `SAT0`|
-| SBUS   | Fix `AppleSMBus` support in MacOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc|
-| USBX   | USB `Power Properties` for Skylake and newer motherboard generation|   
+| Device | Information                                                  |
+| ------ | ------------------------------------------------------------ |
+| AWAC   | To fix the `System Clocks` found on newer hardware           |
+| ALS0   | Optional/Not Needed. Normally, real `iMac` is include this device information. **Patch:** `smc-als` and `AppleLMUController`). These patch is only `Cosmetics`, nothing much we can do |
+| PLUG   | To allow the kernel's `XCPM / XNU's CPU Power Management` to manage CPU's power management |
+| EC     | Fake Embedded Controller / EC drivers since `CML` don't have native support EC |
+| IGPU   | An Intel® Intergrated Graphics Unit device.`GFX0` to `IGPU` rename |
+| IMEI   | An Intel® Management Engine Interface.`HECI` to `IMEI` rename |
+| MCHC   | Come with `SBUS` patch to aids with correct temperature, fan, voltage, ICH, etc readings and proper memory reporting |
+| GFX0   | Display Output from `Dedicated Graphic Processor Unit / DGPU`. `_SUN` is added to get proper PCI Slot Number |
+| HDAU   | Audio Output device through HDMI, called as `High Definition Audio`. `_SUN` is added to get proper PCI Slot Number |
+| HDEF   | Audio device, known as `High Definition Audio System / HDAS` in actual `DSDT`, renamed with `HDEF` |
+| LPCB   | Path of `Low Pin Count Bus` which is corresponding to Embed Controller/EC |
+| PPMC   | Classed as `Memory Controller` in `Comet Lake (CML)` platform. **Patch:** Compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, identical to `CML` device `pci8086,a3a1` |
+| TSUB   | Known as `Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB` |
+| XHC    | Board `Comet Lake PCH-V USB Controller` device               |
+| ARPT   | Rename Broadcom device, BCM94360 `RP03,PXSX` to `RP03,ARPT`. Device is pointed to `M2- 3` Wifi Slot |
+| RTL0   | Rename `RTL8125 2.5GbE Controller` device as `RP04,PXSX` to `RP04,RTL0` |
+| PXSX   | ASMedia USB device, `ASM2142 USB 3.1 Host Controller` device |
+| ANS0   | Rename Kingston A2000 NVMe, `RP09,PXSX` to `RP09,ANS0`. Device is pointed to `M2- 1` Slot. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
+| ANS2   | Rename Silicon Power MAP1001 NVMe, `RP20,PXSX` to `RP20,ANS2`. Device is pointed to `Slot- 2`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
+| ANS1   | Rename Kingston A2000 NVMe, `RP21,PXSX` to `RP21,ANS1`. Device is pointed to `M2- 2` Slot. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
+| SATA   | Serial ATA Device. Rename `SATA` to `SAT0`                   |
+| SBUS   | Fix `AppleSMBus` support in MacOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc |
+| USBX   | USB `Power Properties` for Skylake and newer motherboard generation |
 
 **Refer:** OpenCore [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)
 
@@ -213,29 +221,29 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 
 <p align="justify">Only use 3 basic driver types. HfsPlus.efi, OpenCanopy.efi and OpenRuntime.efi. These three files are essentially basic things to get driver support. Usage information is as follows:</p>
 
-| Driver          | Information  |
-| --------------- | -------------|
-| HfsPlus.efi     | Official `HFS+ Driver` Support for Apple MacOS |                                                                                     
-| OpenCanopy.efi  | OpenCore `Cosmetics Driver` for OpenCore boot menu |   
-| OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Boot-loader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
+| Driver          | Information                                                  |
+| --------------- | ------------------------------------------------------------ |
+| HfsPlus.efi     | Official `HFS+ Driver` Support for Apple MacOS               |
+| OpenCanopy.efi  | OpenCore `Cosmetics Driver` for OpenCore boot menu           |
+| OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Boot-loader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
 
 
 ### 4.0 - Kernel Extension
 
 <p align="justify">Kernel extensions (kexts) let developers load code directly into the MacOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed function. The table below contains some kexts used to properly boot MacOS through OpenCore</p>
 
-| Kext                | Information |
-| ------------------- | -------------------------------------------------------------------------------------|
-| Lilu                | `Arbitrary kext` and `process patching` on MacOS |
-| VirtualSMC          | `System Management Controller` (SMC) emulator layer |
-| AppleALC            | An `open source kernel extension` enabling `native MacOS HD audio` for `not officially supported codecs` without any filesystem modifications|
-| Whatevergreen       | `Various patches` necessary for certain `ATI`/`AMD`/`Intel`/`Nvidia` GPUs|
-| SMCProcessor        | Additional support for `VirtualSMC`. Used for monitoring `CPU` temperature|
-| SMCSuperIO          | Additional support for `VirtualSMC`. Used for monitoring `FAN` speed |
-| SMCRadeonGPU        | Based on `FakeSMCs`, `RadeonMonitor` to provide `GPU` temperature to a dedicated gadget `without relying` on `FakeSMC`|
-| RadeonSensor        | To read the `GPU` temperature. `Lilu` is required|
-| LucyRTL8125Ethernet | Ethernet device, `Realtek RTL8125 2.5GBit Ethernet Controllers` driver|
-| USBMap              | Kext to `route` selected `USB ports` to `Physical Ports` via USB port address. This is `compulsory to handle` `15 port limit` requirements by MacOS|
+| Kext                | Information                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| Lilu                | `Arbitrary kext` and `process patching` on MacOS             |
+| VirtualSMC          | `System Management Controller` (SMC) emulator layer          |
+| AppleALC            | Enabling `native MacOS HD audio` for unofficial codecs       |
+| Whatevergreen       | `Various patches` necessary for certain `ATI`/`AMD`/`Intel`/`Nvidia` GPUs |
+| SMCProcessor        | Additional support for `VirtualSMC`. Used for monitoring `CPU` temperature |
+| SMCSuperIO          | Additional support for `VirtualSMC`. Used for monitoring `FAN` speed |
+| SMCRadeonGPU        | Based on `FakeSMCs`, `RadeonMonitor` to provide `GPU` temperature to a dedicated gadget |
+| RadeonSensor        | To read the `GPU` temperature. `Lilu` is required            |
+| LucyRTL8125Ethernet | Ethernet device, `Realtek RTL8125 2.5G bit Ethernet Controllers` driver |
+| USBMap              | Kext to `route` selected `USB ports` to `Physical Ports` via USB port address. This is `compulsory to handle` `15 port limit` requirements by MacOS |
 
 
 ### 5.0 - OpenCore.efi
@@ -285,12 +293,12 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 
 
 ### 11.0 - Windows
-	
+
 <p align="center"><img width="774" alt="Screenshot 2022-04-07 235639" src="https://user-images.githubusercontent.com/72515939/162246264-bb17d21e-8580-496f-9cfc-72f0dfe82091.png"></p>
 
 
 ### 12.0 - MacOS
-	
+
 <p align="center"><img width="698" alt="1" src="https://user-images.githubusercontent.com/72515939/162583863-62d3883b-ad9e-4a2b-a7dc-b01ac62d960c.png"><br><img width="1159" alt="2" src="https://user-images.githubusercontent.com/72515939/162583870-df3ccbc1-327d-43f8-90dd-2bacd2426de3.png"><br><img width="1159" alt="3" src="https://user-images.githubusercontent.com/72515939/162583875-47ac2220-34dd-41b1-bb19-fec919736d1e.png"><br><img width="1159" alt="4" src="https://user-images.githubusercontent.com/72515939/162583877-98a0b3fe-e6e7-46d0-8caf-03d146c0baea.png"><br><img width="1159" alt="5" src="https://user-images.githubusercontent.com/72515939/162583883-e8d6f66d-1703-45b3-8457-c00b322742c6.png"><br><img width="1159" alt="6" src="https://user-images.githubusercontent.com/72515939/162583885-f8b5ab91-4e02-466d-837e-aab4807d44ec.png"><br><img width="1159" alt="7" src="https://user-images.githubusercontent.com/72515939/162583887-09aede56-3eba-4683-9c0a-e2e0345fafa3.png"><br><img width="1159" alt="8" src="https://user-images.githubusercontent.com/72515939/162583888-a35adbd7-be90-447f-bb70-bb58a6b8846e.png"><br><img width="1159" alt="9" src="https://user-images.githubusercontent.com/72515939/162583891-c1584d78-5568-4b3b-b71b-73cc1f986b54.png"><br><img width="1159" alt="10" src="https://user-images.githubusercontent.com/72515939/162583893-34ac59b7-93f9-40cd-974e-09cadd1149df.png"><br><img width="1159" alt="11" src="https://user-images.githubusercontent.com/72515939/162583896-a17e7ba9-207c-4079-89e9-40325933211b.png"><br><img width="1159" alt="12" src="https://user-images.githubusercontent.com/72515939/162583898-aa0d9be4-0598-4bd2-badb-c3a41c1ddab9.png"><br><img width="1159" alt="13" src="https://user-images.githubusercontent.com/72515939/162583900-52534b66-1444-426c-a806-67826fd8d504.png"><br><img width="1159" alt="14" src="https://user-images.githubusercontent.com/72515939/162583902-c424b58b-d838-40dd-a25c-eb0611235fd6.png"><br><img width="1159" alt="15" src="https://user-images.githubusercontent.com/72515939/162583903-f52cbbd8-7548-481c-8523-67402fb3db84.png"><br><img width="1227" alt="16" src="https://user-images.githubusercontent.com/72515939/162586666-daf8fb99-dd6b-4d59-b62b-0e3b8e9e44f8.png"><br><img width="524" alt="17" src="https://user-images.githubusercontent.com/72515939/162586677-064feee0-dfdf-4113-9ec4-593d087a12f8.png"></p>
 
 
