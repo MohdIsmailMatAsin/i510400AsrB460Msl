@@ -62,6 +62,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
 
     Scope (\_SB)
     {
+        Name (_STR, Unicode ("System Bus"))  // _STR: Description String
         Method (_INI, 0, Serialized)  // _INI: Initialize
         {
             If (_OSI ("Darwin"))
