@@ -5,7 +5,7 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLwK2iod.aml, Tue Apr 19 01:15:46 2022
+ * Disassembly of iASLrmXGyH.aml, Tue Apr 19 01:16:47 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
@@ -100,6 +100,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
             {
                 Name (_HID, "ACPI0008" /* Ambient Light Sensor Device */)  // _HID: Hardware ID
                 Name (_CID, "smc-als")  // _CID: Compatible ID
+                Name (_STR, Unicode ("Light Sensor"))  // _STR: Description String
                 Method (_ALI, 0, NotSerialized)  // _ALI: Ambient Light Illuminance
                 {
                     Return (((LHIH << 0x08) | LLOW))
