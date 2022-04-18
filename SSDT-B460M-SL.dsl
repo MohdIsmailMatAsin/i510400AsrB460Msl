@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLcBNYat.aml, Sun Apr 10 00:34:44 2022
+ * Disassembly of iASLwK2iod.aml, Tue Apr 19 01:15:46 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000D13 (3347)
+ *     Length           0x00000E67 (3687)
  *     Revision         0x02
- *     Checksum         0x1D
+ *     Checksum         0xE2
  *     OEM ID           "Hack"
  *     OEM Table ID     "AsrockSL"
  *     OEM Revision     0x00000000 (0)
@@ -72,7 +72,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
 
         Scope (PR00)
         {
-            Name (_STR, Unicode ("Processor"))  // _STR: Description String
+            Name (_STR, Unicode ("CPU #1"))  // _STR: Description String
             If (_OSI ("Darwin"))
             {
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
@@ -147,12 +147,12 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
             Device (IGPU)
             {
                 Name (_ADR, 0x00020000)  // _ADR: Address
-                Name (_STR, Unicode ("Intergrated Graphics"))  // _STR: Description String
+                Name (_STR, Unicode ("Intel UHD Graphics"))  // _STR: Description String
             }
 
             Scope (LPCB)
             {
-                Name (_STR, Unicode ("Low Pin Count BUS"))  // _STR: Description String
+                Name (_STR, Unicode ("Intel LPC Controller"))  // _STR: Description String
                 Device (EC)
                 {
                     Name (_HID, "PNP0C09" /* Embedded Controller Device */)  // _HID: Hardware ID
@@ -180,7 +180,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
             Device (HDEF)
             {
                 Name (_ADR, 0x001F0003)  // _ADR: Address
-                Name (_STR, Unicode ("Audio Endpoint"))  // _STR: Description String
+                Name (_STR, Unicode ("Realtek Digital Output"))  // _STR: Description String
             }
 
             Scope (HECI)
@@ -191,7 +191,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
             Device (IMEI)
             {
                 Name (_ADR, 0x00160000)  // _ADR: Address
-                Name (_STR, Unicode ("PCI Simple Communication Controller"))  // _STR: Description String
+                Name (_STR, Unicode ("Intel Management Engine Interface #1"))  // _STR: Description String
             }
 
             Device (MCHC)
@@ -230,7 +230,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                 Device (EGP0)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("Upstream Port"))  // _STR: Description String
+                    Name (_STR, Unicode ("AMD PCI Express Upstream Switch Port"))  // _STR: Description String
                     Method (_STA, 0, NotSerialized)  // _STA: Status
                     {
                         If (_OSI ("Darwin"))
@@ -246,7 +246,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                     Device (EGP1)
                     {
                         Name (_ADR, Zero)  // _ADR: Address
-                        Name (_STR, Unicode ("Downstream Port"))  // _STR: Description String
+                        Name (_STR, Unicode ("AMD PCI Express Downsteam Switch Port"))  // _STR: Description String
                         Method (_STA, 0, NotSerialized)  // _STA: Status
                         {
                             If (_OSI ("Darwin"))
@@ -262,14 +262,14 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                         Device (GFX0)
                         {
                             Name (_ADR, Zero)  // _ADR: Address
-                            Name (_STR, Unicode ("Video Controller"))  // _STR: Description String
+                            Name (_STR, Unicode ("AMD Radeon RX 5500XT"))  // _STR: Description String
                             Name (_SUN, One)  // _SUN: Slot User Number
                         }
 
                         Device (HDAU)
                         {
                             Name (_ADR, One)  // _ADR: Address
-                            Name (_STR, Unicode ("HDMI Audio"))  // _STR: Description String
+                            Name (_STR, Unicode ("AMD Radeon RX 5500XT High Definition Audio Device"))  // _STR: Description String
                             Name (_SUN, One)  // _SUN: Slot User Number
                         }
                     }
@@ -286,7 +286,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                 Device (ARPT)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("Network Adapters"))  // _STR: Description String
+                    Name (_STR, Unicode ("Broadcom 802.11ac Network Adapter"))  // _STR: Description String
                 }
             }
 
@@ -300,7 +300,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                 Device (RTL0)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("Network Adapters"))  // _STR: Description String
+                    Name (_STR, Unicode ("Realtek Gaming 2.5GbE Family Controller"))  // _STR: Description String
                 }
             }
 
@@ -308,7 +308,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
             {
                 Scope (PXSX)
                 {
-                    Name (_STR, Unicode ("Universal Serial Bus Controller"))  // _STR: Description String
+                    Name (_STR, Unicode ("VIA USB 3.0 eXtensible Host Controller - 1.0"))  // _STR: Description String
                 }
             }
 
@@ -461,7 +461,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
             Device (SATA)
             {
                 Name (_ADR, 0x00170000)  // _ADR: Address
-                Name (_STR, Unicode ("Storage Spaces Controller"))  // _STR: Description String
+                Name (_STR, Unicode ("Microsoft Storage Spaces Controller"))  // _STR: Description String
             }
 
             Scope (SBUS)
@@ -469,7 +469,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                 Device (BUS0)
                 {
                     Name (_CID, "smbus")  // _CID: Compatible ID
-                    Name (_STR, Unicode ("Universal Serial Bus Controller"))  // _STR: Description String
+                    Name (_STR, Unicode ("Intel SMBus"))  // _STR: Description String
                     Name (_ADR, 0x001F0004)  // _ADR: Address
                     Device (BLC0)
                     {
@@ -510,19 +510,19 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
             Device (THSS)
             {
                 Name (_ADR, 0x00140002)  // _ADR: Address
-                Name (_STR, Unicode ("Thermal Subsystem"))  // _STR: Description String
+                Name (_STR, Unicode ("Intel Thermal Subsystem"))  // _STR: Description String
             }
 
             Scope (XHC)
             {
-                Name (_STR, Unicode ("Universal Serial Bus Controller"))  // _STR: Description String
+                Name (_STR, Unicode ("Intel USB 3.0 eXtensible Host Controller - 1.0"))  // _STR: Description String
             }
         }
 
         Device (USBX)
         {
             Name (_ADR, Zero)  // _ADR: Address
-            Name (_STR, Unicode ("USB Power Controller"))  // _STR: Description String
+            Name (_STR, Unicode ("Intel USB Power Controller"))  // _STR: Description String
             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
             {
                 If ((Arg2 == Zero))
@@ -548,4 +548,3 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
         }
     }
 }
-
