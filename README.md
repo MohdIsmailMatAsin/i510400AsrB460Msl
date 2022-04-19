@@ -165,7 +165,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 
 <p align="justify">DSDT patching should be avoided. There are various reasons why DSDT patching is not recommended. Some forums/webpages (i.e., Olarila) state that it is a major solution. As a matter of knowledge, DSDT is the main table while SSDT is the secondary table (additional table). The difference is that DSDT cannot be tampered with or touched. Because it is the primary code to handle your machine with various devices. Meanwhile, SSDT is the secondary table, where we can change (modify), add, and drop. Although the language (code) used is the same, it has a different task or method. Reason? I'll explain why.</p>
 
-**DSDT Patching** may cause
+**DSDT Patching** may cause 
 
 1. Broken motherboard BIOS, or
 2. Inefficient device with the wrong injection, or
