@@ -86,7 +86,6 @@ The basic OpenCore folder structure. This folder contain several sub files and f
         │   └── SSDT-B460M-SL.aml
         ├── Drivers
         │   ├── HfsPlus.efi
-        │   ├── OpenCanopy.efi (Disable)
         │   └── OpenRuntime.efi
         ├── Kexts
         │   ├── AppleALC.kext
