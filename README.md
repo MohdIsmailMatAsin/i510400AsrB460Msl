@@ -19,14 +19,13 @@
 
 ## Tested MacOS
 
-- [x] MacOS Catalina requirement:<br>`Mindate: 20200306`|`MinVersion: 1412101001000000`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Disable`. Check [config](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/catalina_config.plist)
-- [x] MacOS BigSur requirement:<br>`Mindate: 0`| `MinVersion: 0`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Default`. Check [config](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/monterey-bigsur_config.plist)
-- [x] MacOS Monterey requirement:<br>`Mindate: 0`|`MinVersion: 0`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Default`. Check [config](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/monterey-bigsur_config.plist)
+| MacOS     | Mindate   | MInVersion       | SetApfsTrimTimeout | SecureBootModel       |
+|-----------|-----------|------------------|--------------------|-----------------------|
+| Catalina  | 20200306  | 1412101001000000 | Blank  (Native)    | j185-10.15.6 (19G2005)|
+| BigSur    | 0         | 0                | 0                  | j185-10.15.6 (19G2005)|
+| Monterey  | 0         | 0                | 0                  | j185-10.15.6 (19G2005)|
 
-<p align="justify">Remark: Quirk must set as processor codename. Refer OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error occur to config.plist is by your own responsibility. Manual setup is encourage. Please make a backup before using it. Link can be refer below:</p>
-
-- [OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html) - Recommended
-- [OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools) - Easy Setup (Not Recommended)\
+**Remark:** <p align="justify">Settings above may not the same as the recommended settings by Dortania. To find out more please check [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for more.</p> 
 
 <br>
 
@@ -342,6 +341,49 @@ Besides, a plist is often used to correct problems that a user may be having wit
 [OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-debug%20log.txt)
 
 <br>
+
+
+### 15. - Quirks Check
+
+<p align="justify">Quirk must set as processor codename. Refer OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error occur to config.plist is by your own responsibility. Manual setup is encourage. Please make a backup before using it. Link can be refer below:</p>
+
+- [OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html) - Recommended
+- [OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools) - Easy Setup (Not Recommended)
+
+<p align="justify">The list below is the Quirk settings for Comet Lake Processor:</p>
+
+**ACPI\Quirks**
+
+- None
+
+**Booter\Quirks**
+
+- AvoidRuntimeDefrag
+- DevirtualiseMmio
+- EnableSafeModeSlide
+- ProtectUefiServices
+- ProviceCustomSlide
+- RebuildAppleMemoryMap
+- SyncRuntimePermissions
+- ProvideMaxSlide = `0`
+- ResizeAppleGpuBars = `-1`
+
+**Kernel\Quirks**
+
+- CustomSMBIOSGuid
+- DisableIoMapper
+- DisableLinkeditJettison
+- PanicNoKextDump
+- PowerTimeoutKernelPanic
+- SetApfsTimeout = `0`
+
+**UEFI\Quirks**
+
+- EnableVectorAcceleration
+- RequestBootVarRouting
+- ExitBootServiceDelay = `0`
+- ResizeGPUBars = `-1`
+- TscSyncTieout = `0`
 
 ## Acknowledgements
 
