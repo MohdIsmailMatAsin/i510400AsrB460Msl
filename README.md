@@ -294,7 +294,7 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 
 1. Disable `CSM/ Enable UEFI`
 2. Disable `Secure Boot`
-3. Set `SATA` as `AHCI` (Do not install MacOS through Rapid Storage Technology/RST)
+3. Set `SATA` as `AHCI` (Do not install MacOS through `Rapid Storage Technology/RST`)
 4. Disable `CFG Lock`
 5. Disable `Fast Boot`
 6. Disable `Intel Virtualization Technology`
