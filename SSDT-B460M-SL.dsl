@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLu4B1zi.aml, Tue Apr 19 13:52:01 2022
+ * Disassembly of iASLQQDxbF.aml, Tue Apr 19 13:58:00 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000EA9 (3753)
+ *     Length           0x00000E93 (3731)
  *     Revision         0x02
- *     Checksum         0xD3
+ *     Checksum         0x44
  *     OEM ID           "Hack"
  *     OEM Table ID     "AsrockSL"
  *     OEM Revision     0x00000000 (0)
