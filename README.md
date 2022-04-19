@@ -19,9 +19,9 @@
 
 ## Tested MacOS
 
-- [x] MacOS Catalina requirement:<br>`Mindate: 20200306`|`MinVersion: 1412101001000000`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Disable`. [config](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/catalina_config.plist)
-- [x] MacOS BigSur requirement:<br>`Mindate: 0`| `MinVersion: 0`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Default`. [config](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/monterey-bigsur_config.plist)
-- [x] MacOS Monterey requirement:<br>`Mindate: 0`|`MinVersion: 0`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Default`. [config](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/monterey-bigsur_config.plist)
+- [x] MacOS Catalina requirement:<br>`Mindate: 20200306`|`MinVersion: 1412101001000000`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Disable`. Check [config](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/catalina_config.plist)
+- [x] MacOS BigSur requirement:<br>`Mindate: 0`| `MinVersion: 0`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Default`. Check [config](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/monterey-bigsur_config.plist)
+- [x] MacOS Monterey requirement:<br>`Mindate: 0`|`MinVersion: 0`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Default`. Check [config](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/monterey-bigsur_config.plist)
 
 <p align="justify">Remark: Quirk must set as processor codename. Refer OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error occur to config.plist is by your own responsibility. Manual setup is encourage. Please make a backup before using it. Link can be refer below:</p>
 
