@@ -15,7 +15,9 @@
 | Monitor   | Samsung U28E590 4K               | Storage 2   | 500GB Kingston A2000 NVMe                     |
 | SMBIOS    | iMac20,1                         | Board ID    | Mac-CFF7D910A743CAAF                          |
 
-**OS Tested:**
+<br>
+
+## Tested MacOS
 
 - [x] MacOS Catalina requirement:<br>`Mindate: 20200306`|`MinVersion: 1412101001000000`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Disable`.
 - [x] MacOS BigSur requirement:<br>`Mindate: 0`| `MinVersion: 0`|`SetApfsTrimTimeout: Blank (Trim is Native)`|`SecureBootModel: Default`.
@@ -26,8 +28,9 @@
 - [OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html) - Recommended
 - [OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools) - Easy Setup (Not Recommended)\
 
+<br>
 
-# Introduction
+## Introduction
 
 **What is `BIOS`?**
 
@@ -47,7 +50,9 @@
 
 <p align="justify">A boot-loader, also known as a boot program or bootstrap loader, is a special operating system software that loads into the working memory of a computer after start-up. For this purpose, immediately after a device starts, a boot-loader is generally launched by a bootable medium like a hard drive, a CD/DVD or a USB stick. The boot medium receives information from the computer’s firmware (e.g. BIOS) about where the boot-loader is. The whole process is also described as “booting”. OpenCore, Clover, rEFInd, reEFIt, Chameleon, and a few other names is known as boot-loaders. Mosts of these boot-loaders are capable as chain-loader/chain-loading. Chain-loader is similar to the use of overlays. Unlike overlays, chain-loader replaces the currently executing program in its entirety. Overlays usually replace only a portion of the running program. Like the use of overlays, the use of chain-loading increases the I/O load of an application.</p>
 
-**My Partition**<br>
+<br>
+
+## Partitioning
 
 - **Windows**
 
@@ -63,7 +68,9 @@
 
 <p align="justify">OpenCore is what we refer to as a boot-loader and also as chain-loader at the same time; it is a complex piece of software that we use to prepare our systems for MacOS, specifically by injecting new data for MacOS such as SMBIOS, ACPI tables, and kexts.</p>
 
-**OpenCore EFI Structure**
+<br>
+
+## EFI Structure
 
 The basic OpenCore folder structure. This folder contain several sub files and folders.
 
@@ -110,6 +117,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 ```
 **Remark:** Generally best to debug systems without* `OpenCanopy.efi`, if required make sure this file is from `DEBUG` else there will be virtually no debug information. `Picker` mode use `Built-In` menu.
 
+<br>
 
 ### 1.0 - EFI\BOOT
 
@@ -144,6 +152,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 
 <p align="justify">While OpenCore is just a boot-loader, this type of boot-loader is included with their own firmware, along with additional quirks for booting the MacOS partition. Furthermore, OpenCore has portable features that enable the chain-loader option to be used with other operating systems.</p>
 
+<br>
 
 ### 2.0 - OC\ACPI
 
@@ -212,6 +221,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 
 **Refer:** OpenCore [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)
 
+<br>
 
 ### 3.0 - OC\Drivers
 
@@ -223,6 +233,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 | OpenCanopy.efi  | OpenCore `Cosmetics Driver` for OpenCore boot menu (Disable on Debug Version)          |
 | OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Boot-loader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
 
+<br>
 
 ### 4.0 - OC\Kext
 
@@ -243,11 +254,13 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 
 **Remark:** All kext used are `DEBUG` versions.
 
+<br>
 
 ### 5.0 - OC\OpenCore.efi
 
 An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is include with [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/) and it is compulsory.
 
+<br>
 
 ### 6.0 - OC\Resources
 
@@ -255,11 +268,13 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 
 **Refer:** [OC Binary Resource](https://github.com/acidanthera/OcBinaryData)
 
+<br>
 
 ### 7.0 - OC\Tools
 
 <p align="justify">Nothing fancy, just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist. This tool is hiding via "hide auxiliary". Use "Spacebar" to reveal the function. I just include this tools as failsafe.</p>
 
+<br>
 
 ### 8.0 - OC\config.plist
 
@@ -267,6 +282,7 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 
 **Refer:** [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config.plist)
 
+<br>
 
 ### 9.0 - BIOS/UEFI Settings
 
@@ -280,6 +296,7 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 8. Enable` XHCI Hand-off`
 9. Disable `Legacy USB Support` (If Needed)
 
+<br>
 
 ### 10.0 - My Experience Rating Test
 
@@ -289,28 +306,33 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 | BigSur   | 6/10         | Stable        |
 | Catalina | 10/10        | Stable & Fast |
 
+<br>
 
 ### 11.0 - Windows
 
 <p align="center"><img width="774" alt="Screenshot 2022-04-07 235639" src="https://user-images.githubusercontent.com/72515939/162246264-bb17d21e-8580-496f-9cfc-72f0dfe82091.png"></p>
 
+<br>
 
 ### 12.0 - MacOS
 
 <p align="center"><img width="698" alt="1" src="https://user-images.githubusercontent.com/72515939/162583863-62d3883b-ad9e-4a2b-a7dc-b01ac62d960c.png"></p>
 
+<br>
 
 ### 13.0 - Ioreg
 
 [iHack20,1](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/iHack20%2C1.ioreg)
 
+<br>
 
 ### 14.0 - Debug Log
 
 [OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-debug%20log.txt)
 
+<br>
 
-# Acknowledgements
+## Acknowledgements
 
 I would like to thanks all folks in Hackintosh Community especially:
 
