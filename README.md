@@ -230,12 +230,11 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 
 ### 3.0 - OC\Drivers
 
-<p align="justify">Only use 3 basic driver types. HfsPlus.efi, OpenCanopy.efi and OpenRuntime.efi. These three files are essentially basic things to get driver support. Usage information is as follows:</p>
+<p align="justify">Only use 2 basic driver types. HfsPlus.efi and OpenRuntime.efi. Both files are essentially basic things to get driver support. Usage information is as follows:</p>
 
 | Driver          | Information                                                  |
 | --------------- | ------------------------------------------------------------ |
 | HfsPlus.efi     | Official `HFS+ Driver` Support for Apple MacOS               |
-| OpenCanopy.efi  | OpenCore `Cosmetics Driver` for OpenCore boot menu (Disable on Debug Version)          |
 | OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Boot-loader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
 
 <br>
