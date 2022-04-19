@@ -383,7 +383,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 - RequestBootVarRouting
 - ExitBootServiceDelay = `0`
 - ResizeGPUBars = `-1`
-- TscSyncTieout = `0`
+- TscSyncTimeout = `0`
 
 ## Acknowledgements
 
