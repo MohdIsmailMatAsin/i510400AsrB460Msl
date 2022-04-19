@@ -360,7 +360,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 ### 12.0 - Ioreg
 
-[iHack20,1](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/iHack20%2C1.ioreg)
+[iMac20,1-Hack](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/iMac20%2C1-Hack.ioreg)
 
 <br>
 
