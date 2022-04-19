@@ -308,6 +308,10 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 
 [iHack20,1](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/iHack20%2C1.ioreg)
 
+### 14.0 - Debug Log
+
+[OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-debug%20log.txt)
+
 
 # Acknowledgements
 
