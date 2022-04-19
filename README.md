@@ -10,7 +10,7 @@
 | OS 2      | MacOS Catalina 10.15.7           | Audio 2     | U-Phoria UM2 USB Audio Device                 |
 | Processor | Intel® Core(TM) i5-10400         | Motherboard | ASRock (B460M Steel Legend)                   |
 | GFX0      | Radeon RX 5500 XT 4GB            | PCI 1       | BCM94360 WiFi & Bluetooth                     |
-| IGPU      | Intel® UHD Graphics 630  1GB     | PCI 2       | ASM2142 USB 3.1 Host Controller + USB Type C  |
+| IGPU      | Intel® UHD Graphics 630  1GB     | PCI 2       | VIA USB 3.0 eXtensible Host Controller        |
 | Memory    | PNY XLR8 Gaming X Memory 3200MHz | Storage 1   | 500GB Kingston A2000 NVMe                     |
 | Monitor   | Samsung U28E590 4K               | Storage 2   | 500GB Kingston A2000 NVMe                     |
 | SMBIOS    | iMac20,1                         | Board ID    | Mac-CFF7D910A743CAAF                          |
@@ -66,6 +66,8 @@
 
 The basic OpenCore folder structure. This folder contain several sub files and folders.
 
+**OC 0.8.0 Release :**
+
 ```tree
 % cd /Volumes/EFI
 ↓
@@ -107,6 +109,52 @@ The basic OpenCore folder structure. This folder contain several sub files and f
         │   └── CleanNvram.efi
         └── config.plist
 ```
+
+**OC 0.8.0 Debug :**
+
+```tree
+% cd /Volumes/EFI
+↓
+% tree
+.
+└── EFI
+    ├── BOOT
+    │   └── BOOTx64.efi
+    └── OC
+        ├── ACPI
+        │   └── SSDT-B460M-SL.aml
+        ├── Drivers
+        │   ├── HfsPlus.efi
+        │   ├── OpenCanopy.efi (Disable)
+        │   └── OpenRuntime.efi
+        ├── Kexts
+        │   ├── AppleALC.kext
+        │   ├── Lilu.kext
+        │   ├── LucyRTL8125Ethernet.kext
+        │   ├── RadeonSensor.kext
+        │   ├── SMCLightSensor.kext
+        │   ├── SMCProcessor.kext
+        │   ├── SMCRadeonGPU.kext
+        │   ├── SMCSuperIO.kext
+        │   ├── USBMap.kext
+        │   ├── VirtualSMC.kext
+        │   └── WhateverGreen.kext
+        ├── OpenCore.efi
+        ├── Resources
+        │   ├── Audio
+        │   ├── Font
+        │   ├── Image
+        │   │   └── Acidanthera (Disable)
+        │   │       ├── Chardonnay (Disable)
+        │   │       ├── GoldenGate (Disable)
+        │   │       └── Syrah (Disable)
+        │   └── Label
+        ├── Tools
+        │   └── CleanNvram.efi
+        └── config.plist
+```
+**Remark:** Release PickerMode (External), Debug Picker Mode (Built-In)
+
 
 **Installer:**
 
