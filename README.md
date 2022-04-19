@@ -256,7 +256,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 | XHC    | Board `Comet Lake PCH-V USB Controller` device               |
 | ARPT   | Rename Broadcom device, BCM94360 `RP03,PXSX` to `RP03,ARPT`. Device is pointed to `M2- 3` Wifi Slot |
 | RTL0   | Rename `RTL8125 2.5GbE Controller` device as `RP04,PXSX` to `RP04,RTL0` |
-| PXSX   | ASMedia USB device, `ASM2142 USB 3.1 Host Controller` device |
+| PXSX   | PCIe USB card, `VIA USB 3.0 eXtensible Host Controller` device |
 | ANS0   | Rename Kingston A2000 NVMe, `RP09,PXSX` to `RP09,ANS0`. Device is pointed to `M2- 1` Slot. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
 | ANS2   | Rename Silicon Power MAP1001 NVMe, `RP20,PXSX` to `RP20,ANS2`. Device is pointed to `Slot- 2`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
 | ANS1   | Rename Kingston A2000 NVMe, `RP21,PXSX` to `RP21,ANS1`. Device is pointed to `M2- 2` Slot. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
@@ -274,7 +274,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 | Driver          | Information                                                  |
 | --------------- | ------------------------------------------------------------ |
 | HfsPlus.efi     | Official `HFS+ Driver` Support for Apple MacOS               |
-| OpenCanopy.efi  | OpenCore `Cosmetics Driver` for OpenCore boot menu           |
+| OpenCanopy.efi  | OpenCore `Cosmetics Driver` for OpenCore boot menu (Disable on Debug Version)          |
 | OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Boot-loader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
 
 
