@@ -108,7 +108,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
         │   └── CleanNvram.efi
         └── config.plist
 ```
-**Remark:** *Generally best to debug systems without* `OpenCanopy.efi`*, if required make sure this file is from DEBUG else there will be virtually no debug information. Debug Picker Mode (Built-In)*
+**Remark:** Generally best to debug systems without* `OpenCanopy.efi`, if required make sure this file is from `DEBUG` else there will be virtually no debug information. `Picker` mode use `Built-In` menu.
 
 
 **Installer:**
@@ -249,6 +249,8 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 | RadeonSensor        | To read the `GPU` temperature. `Lilu` is required            |
 | LucyRTL8125Ethernet | Ethernet device, `Realtek RTL8125 2.5G bit Ethernet Controllers` driver |
 | USBMap              | Kext to `route` selected `USB ports` to `Physical Ports` via USB port address. This is `compulsory to handle` `15 port limit` requirements by MacOS |
+
+**Remark:** All kext used are `DEBUG` versions.
 
 
 ### 5.0 - OpenCore.efi
