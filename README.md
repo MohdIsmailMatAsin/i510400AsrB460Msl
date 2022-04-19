@@ -123,7 +123,9 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 
 <p align="justify">Fallback boot-loader path. This is the only boot-loader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As a failsafe method, most firmware includes these drivers to prevent certain boot issues. There are 2 types of fallback. Details below explain the temporary and permanent methods, mostly used by specified UEFI firmware and operating system implementation.</p>
 
-**Temporary vs Permanent:**<br>`Temporary`
+**Temporary vs Permanent:**
+
+`Temporary`
 
 1. Can be ported to other GUID Partition
 2. As a solution to boot certain OS (Depending on Firmware i.e., OpenCore, Clover and rEFInd)
@@ -134,6 +136,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 2. Hard to modify
 
 **Other Operating System (OS) Implementation**
+
 `Windows`
 
 1. Temporary: `EFI\boot\bootx64.efi`
@@ -145,7 +148,9 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 2. Permanent: `EFI\Ubuntu\grubx64.efi` (No Secure Boot Support)
 3. Permanent: `EFI\Ubuntu\shimx64.efi` (Secure Boot Support)
 
-**OpenCore Implementation**<br>`OpenCore`
+**OpenCore Implementation**
+
+`OpenCore`
 
 1. Temporary: `EFI\BOOT\BOOTx64.efi` via USB Drive (Installation Device)
 2. Permanent: `EFI\BOOT\BOOTx64.efi` via HDD/SSD/NVMe (MacOS Drive)
