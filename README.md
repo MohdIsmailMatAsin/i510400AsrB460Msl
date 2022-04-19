@@ -294,56 +294,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <br>
 
-### 9.0 - BIOS/UEFI Settings
-
-1. Disable `CSM/ Enable UEFI`
-2. Disable `Secure Boot`
-3. Set `SATA` as `AHCI` (Do not install MacOS through `Rapid Storage Technology/RST`)
-4. Disable `CFG Lock`
-5. Disable `Fast Boot`
-6. Disable `Intel Virtualization Technology`
-7. Disable `VT-D`
-8. Enable` XHCI Hand-off`
-9. Disable `Legacy USB Support` (If Needed)
-
-<br>
-
-### 10.0 - My Experience Rating Test
-
-| MacOS    | Rating 10/10 | Review        |
-| -------- | ------------ | ------------- |
-| Monterey | 8/10         | Stable        |
-| BigSur   | 6/10         | Stable        |
-| Catalina | 10/10        | Stable & Fast |
-
-<br>
-
-### 11.0 - Windows
-
-<p align="center"><img width="774" alt="Screenshot 2022-04-07 235639" src="https://user-images.githubusercontent.com/72515939/162246264-bb17d21e-8580-496f-9cfc-72f0dfe82091.png"></p>
-
-<br>
-
-### 12.0 - MacOS
-
-<p align="center"><img width="698" alt="1" src="https://user-images.githubusercontent.com/72515939/162583863-62d3883b-ad9e-4a2b-a7dc-b01ac62d960c.png"></p>
-
-<br>
-
-### 13.0 - Ioreg
-
-[iHack20,1](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/iHack20%2C1.ioreg)
-
-<br>
-
-### 14.0 - Debug Log
-
-[OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-2022-04-19-153310.txt)
-
-<br>
-
-
-### 15. - Quirks Check
+### 9.0 - Quirks Check
 
 <p align="justify">Quirks must set as processor codename. Refer OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error occur to config.plist is by your own responsibility. Manual setup is encourage. Please make a backup before using it. Link can be refer below:</p>
 
@@ -384,6 +335,40 @@ Besides, a plist is often used to correct problems that a user may be having wit
 - ExitBootServiceDelay = `0`
 - ResizeGPUBars = `-1`
 - TscSyncTimeout = `0`
+
+<br>
+
+### 10.0 - BIOS/UEFI Settings
+
+1. Disable `CSM/ Enable UEFI`
+2. Disable `Secure Boot`
+3. Set `SATA` as `AHCI` (Do not install MacOS through `Rapid Storage Technology/RST`)
+4. Disable `CFG Lock`
+5. Disable `Fast Boot`
+6. Disable `Intel Virtualization Technology`
+7. Disable `VT-D`
+8. Enable` XHCI Hand-off`
+9. Disable `Legacy USB Support` (If Needed)
+
+<br>
+
+### 11.0 - Results
+
+<p align="center"><img width="698" alt="Screen Shot 2022-04-20 at 12 04 08 AM" src="https://user-images.githubusercontent.com/72515939/164047121-3dc4368c-9213-4d68-a83e-fd675a4f8097.png"></p>
+
+<br>
+
+### 12.0 - Ioreg
+
+[iHack20,1](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/iHack20%2C1.ioreg)
+
+<br>
+
+### 13.0 - Debug Log
+
+[OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-2022-04-19-153310.txt)
+
+<br>
 
 ## Acknowledgements
 
