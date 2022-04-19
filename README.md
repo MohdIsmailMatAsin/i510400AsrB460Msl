@@ -345,7 +345,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 ### 15. - Quirks Check
 
-<p align="justify">Quirk must set as processor codename. Refer OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error occur to config.plist is by your own responsibility. Manual setup is encourage. Please make a backup before using it. Link can be refer below:</p>
+<p align="justify">Quirks must set as processor codename. Refer OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error occur to config.plist is by your own responsibility. Manual setup is encourage. Please make a backup before using it. Link can be refer below:</p>
 
 - [OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html) - Recommended
 - [OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools) - Easy Setup (Not Recommended)
