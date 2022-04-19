@@ -288,9 +288,10 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 **Refer:**
 
-- OpenCore [catalina_config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/catalina_config.plist)
-- OpenCore [monterey-bigsur_config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/monterey-bigsur_config.plist)
-- Clover [clover_config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/clover_config.plist)
+- OpenCore [Catalina](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/catalina_config.plist)
+- OpenCore [Monterey/BigSur-Debug](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/dbg-monterey-bigsur_config.plist)
+- OpenCore [Monterey/BigSur](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/monterey-bigsur_config.plist)
+- Clover [Catalina](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/clover_config.plist) (Note: may not work on Monterey/BigSur)
 
 <br>
 
