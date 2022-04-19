@@ -156,15 +156,16 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 
 ### 2.0 - OC\ACPI
 
-**What is `DSDT`?**<br>*DSDT = Differentiated System Description Table*
+**What is `DSDT`?**
 
-<p align="justify">It Is a major ACPI table and is used to describe what peripherals the machine has. Also holds information on PCI IRQ mappings and power management.</p>
+<p align="justify">Differentiated System Description Table. It Is a major ACPI table and is used to describe what peripherals the machine has. Also holds information on PCI IRQ mappings and power management.</p>
 
-**What is `SSDT`?**<br>*SSDT = Secondary System Description Table*
+**What is `SSDT`?**
 
-<p align="justify">It is encoded in AML in exactly the same way as the DSDT. It acts as a supplement to the DSDT.</p>
+<p align="justify">Secondary System Description Table. It is encoded in AML in exactly the same way as the DSDT. It acts as a supplement to the DSDT. Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
-- Full information on DSDT and SSDT can be found at the link provided. Refer [DSDT](https://wiki.osdev.org/DSDT#:~:text=DSDT%20stands%20for%20Differentiated%20System,IRQ%20mappings%20and%20power%20management.) and [SSDT](https://wiki.osdev.org/SSDT#:~:text=The%20SSDT%20is%20an%20ACPI,a%20supplement%20to%20the%20DSDT.) for more info.
+- [DSDT](https://wiki.osdev.org/DSDT#:~:text=DSDT%20stands%20for%20Differentiated%20System,IRQ%20mappings%20and%20power%20management.)
+- [SSDT](https://wiki.osdev.org/SSDT#:~:text=The%20SSDT%20is%20an%20ACPI,a%20supplement%20to%20the%20DSDT.)
 
 **DSDT vs SSDT Patching**
 
