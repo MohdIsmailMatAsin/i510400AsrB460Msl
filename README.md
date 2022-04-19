@@ -111,7 +111,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 **Remark:** Generally best to debug systems without* `OpenCanopy.efi`, if required make sure this file is from `DEBUG` else there will be virtually no debug information. `Picker` mode use `Built-In` menu.
 
 
-### 1.0 - BOOT
+### 1.0 - EFI\BOOT
 
 <p align="justify">Fallback boot-loader path. This is the only boot-loader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As a failsafe method, most firmware includes these drivers to prevent certain boot issues. There are 2 types of fallback. Details below explain the temporary and permanent methods, mostly used by specified UEFI firmware and operating system implementation.</p>
 
