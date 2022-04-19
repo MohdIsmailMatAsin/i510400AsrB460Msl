@@ -338,7 +338,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 ### 14.0 - Debug Log
 
-[OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-debug%20log.txt)
+[OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-2022-04-19-153310.txt)
 
 <br>
 
