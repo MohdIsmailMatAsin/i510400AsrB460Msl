@@ -259,7 +259,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 
 **Remark:** All kext used are `DEBUG` versions.
 
-**Additional:** IOAHCIBlockStorage patch for SSD to enable `Trim` option via `Kernel\Patch`. Refer [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/dbg-monterey-bigsur_config.plist).
+**Additional:** `IOAHCIBlockStorage` patch for SSD to enable `Trim` option via `Kernel\Patch`. Refer [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/dbg-monterey-bigsur_config.plist).
 
 <br>
 
