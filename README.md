@@ -24,7 +24,8 @@
 <p align="justify">Remark: Quirk must set as processor codename. Refer OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error occur to config.plist is by your own responsibility. Manual setup is encourage. Please make a backup before using it. Link can be refer below:</p>
 
 - [OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html) - Recommended
-- [OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools) - Easy Setup (Not Recommended)
+- [OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools) - Easy Setup (Not Recommended)\
+
 
 # Introduction
 
@@ -66,52 +67,6 @@
 
 The basic OpenCore folder structure. This folder contain several sub files and folders.
 
-**OC 0.8.0 Release :**
-
-```tree
-% cd /Volumes/EFI
-↓
-% tree
-.
-└── EFI
-    ├── BOOT
-    │   └── BOOTx64.efi
-    └── OC
-        ├── ACPI
-        │   └── SSDT-B460M-SL.aml
-        ├── Drivers
-        │   ├── HfsPlus.efi
-        │   ├── OpenCanopy.efi
-        │   └── OpenRuntime.efi
-        ├── Kexts
-        │   ├── AppleALC.kext
-        │   ├── Lilu.kext
-        │   ├── LucyRTL8125Ethernet.kext
-        │   ├── RadeonSensor.kext
-        │   ├── SMCLightSensor.kext
-        │   ├── SMCProcessor.kext
-        │   ├── SMCRadeonGPU.kext
-        │   ├── SMCSuperIO.kext
-        │   ├── USBMap.kext
-        │   ├── VirtualSMC.kext
-        │   └── WhateverGreen.kext
-        ├── OpenCore.efi
-        ├── Resources
-        │   ├── Audio
-        │   ├── Font
-        │   ├── Image
-        │   │   └── Acidanthera
-        │   │       ├── Chardonnay
-        │   │       ├── GoldenGate
-        │   │       └── Syrah
-        │   └── Label
-        ├── Tools
-        │   └── CleanNvram.efi
-        └── config.plist
-```
-
-**OC 0.8.0 Debug :**
-
 ```tree
 % cd /Volumes/EFI
 ↓
@@ -144,16 +99,16 @@ The basic OpenCore folder structure. This folder contain several sub files and f
         │   ├── Audio
         │   ├── Font
         │   ├── Image
-        │   │   └── Acidanthera (Disable)
-        │   │       ├── Chardonnay (Disable)
-        │   │       ├── GoldenGate (Disable)
-        │   │       └── Syrah (Disable)
+        │   │   └── Acidanthera
+        │   │       ├── Chardonnay
+        │   │       ├── GoldenGate
+        │   │       └── Syrah
         │   └── Label
         ├── Tools
         │   └── CleanNvram.efi
         └── config.plist
 ```
-**Remark:** Release PickerMode (External), Debug Picker Mode (Built-In)
+**Remark:** *Generally best to debug systems without* `OpenCanopy.efi`*, if required make sure this file is from DEBUG else there will be virtually no debug information. Debug Picker Mode (Built-In)*
 
 
 **Installer:**
