@@ -145,7 +145,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 <p align="justify">While OpenCore is just a boot-loader, this type of boot-loader is included with their own firmware, along with additional quirks for booting the MacOS partition. Furthermore, OpenCore has portable features that enable the chain-loader option to be used with other operating systems.</p>
 
 
-### 2.0 - ACPI
+### 2.0 - OC\ACPI
 
 **What is `DSDT`?**<br>*DSDT = Differentiated System Description Table*
 
@@ -213,7 +213,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 **Refer:** OpenCore [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)
 
 
-### 3.0 - Drivers
+### 3.0 - OC\Drivers
 
 <p align="justify">Only use 3 basic driver types. HfsPlus.efi, OpenCanopy.efi and OpenRuntime.efi. These three files are essentially basic things to get driver support. Usage information is as follows:</p>
 
@@ -224,7 +224,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 | OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Boot-loader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
 
 
-### 4.0 - Kernel Extension
+### 4.0 - OC\Kext
 
 <p align="justify">Kernel extensions (kexts) let developers load code directly into the MacOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed function. The table below contains some kexts used to properly boot MacOS through OpenCore</p>
 
@@ -244,24 +244,24 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 **Remark:** All kext used are `DEBUG` versions.
 
 
-### 5.0 - OpenCore.efi
+### 5.0 - OC\OpenCore.efi
 
 An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is include with [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/) and it is compulsory.
 
 
-### 6.0 - Resources
+### 6.0 - OC\Resources
 
 <p align="justify">This folder is related to OpenCore Beauty Treatment and is used with the OpenCanopy.efi driver. It is up to you to do your own research for a custom boot menu.</p>
 
 **Refer:** [OC Binary Resource](https://github.com/acidanthera/OcBinaryData)
 
 
-### 7.0 - Tools
+### 7.0 - OC\Tools
 
 <p align="justify">Nothing fancy, just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist. This tool is hiding via "hide auxiliary". Use "Spacebar" to reveal the function. I just include this tools as failsafe.</p>
 
 
-### 8.0 - Config.plist
+### 8.0 - OC\config.plist
 
 <p align="justify">Property list based on xml code. Structured OpenCore method and upgraded injection function. A .plist is a "preference" file for the Application that it holds the preference settings for. By trashing and then relaunching an application you are getting rid of old user set preferences that may have become corrupt. This is often used to correct problems that a user may be having with an application.</p>
 
