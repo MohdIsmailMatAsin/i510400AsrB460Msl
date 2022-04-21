@@ -361,8 +361,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 ## Results
 
 <p align="center"><img width="697" alt="Screen Shot 2022-04-21 at 11 51 26 PM" src="https://user-images.githubusercontent.com/72515939/164501037-d74cc18f-05d2-4707-aa47-35957e5b283b.png"></p>
-<p align="center">![Screen Shot 2022-04-21 at 11 51 19 PM](https://user-images.githubusercontent.com/72515939/164501271-3374426f-8d5c-4ee9-a502-79e0565ef01d.jpg)</p>
-
+<p align="center"><img width="2560" alt="Screen Shot 2022-04-21 at 11 51 19 PM-min" src="https://user-images.githubusercontent.com/72515939/164502014-03a9f631-69b5-4035-b571-70a28c576ca2.png"></p>
 
 <br>
 
