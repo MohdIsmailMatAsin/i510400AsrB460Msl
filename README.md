@@ -360,7 +360,9 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 ## Results
 
-<p align="center"><img width="698" alt="Screen Shot 2022-04-21 at 9 52 51 PM" src="https://user-images.githubusercontent.com/72515939/164473368-648c8db7-19a0-4c69-a436-c5db197b88fa.png"></p>
+<p align="center"><img width="697" alt="Screen Shot 2022-04-21 at 11 51 26 PM" src="https://user-images.githubusercontent.com/72515939/164501037-d74cc18f-05d2-4707-aa47-35957e5b283b.png"></p>
+<p align="center">![Screen Shot 2022-04-21 at 11 51 19 PM](https://user-images.githubusercontent.com/72515939/164501271-3374426f-8d5c-4ee9-a502-79e0565ef01d.jpg)</p>
+
 
 <br>
 
