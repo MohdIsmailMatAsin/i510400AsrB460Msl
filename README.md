@@ -386,6 +386,6 @@ I would like to thanks all folks in Hackintosh Community especially:
 - [dhinakg](https://github.com/USBToolBox/tool) for developing easy Windows based USBmap, [USBToolBox](https://github.com/USBToolBox/tool) which inspired by CorpNewt USBMap
 - [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for knowledge sharing
 - [r/Hackintosh](https://www.reddit.com/r/hackintosh/) for an easy undocumented references
-- [daliansky](https://github.com/daliansky) for publishing his own OpenCore ACPI method, known as [OC-Little](https://github.com/daliansky/OC-little)
+- [daliansky](https://github.com/daliansky) for publishing his own [OpenCore](https://github.com/acidanthera/OpenCorePkg) [ACPI](https://kb.iu.edu/d/ahvl) method, known as [OC-Little](https://github.com/daliansky/OC-little)
 - [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating [daliansky](https://github.com/daliansky) [OC-Little](https://github.com/daliansky/OC-little) which known as [OC-Little Translate](https://github.com/5T33Z0/OC-Little-Translated). Also informative [Clover Crate](https://github.com/5T33Z0/Clover-Crate) for [Clover-bootloader](https://github.com/CloverHackyColor/CloverBootloader)
 - [rusty-bits](https://github.com/rusty-bits) for an easy EFI update using windows [Command Prompt](https://www.techtarget.com/whatis/definition/command-prompt), [Linux](https://opensource.com/article/21/8/linux-terminal) and [MacOS](https://en.wikipedia.org/wiki/Terminal_(macOS)) Terminal 
