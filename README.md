@@ -300,7 +300,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <br>
 
-### 9.0 - Quirks Check
+## Quirks Check
 
 <p align="justify">Quirks must set as processor codename. Refer OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error occur to config.plist is by your own responsibility. Manual setup is encourage. Please make a backup before using it. Link can be refer below:</p>
 
@@ -344,7 +344,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <br>
 
-### 10.0 - BIOS/UEFI Settings
+## BIOS/UEFI Settings
 
 1. Disable `CSM/ Enable UEFI`
 2. Disable `Secure Boot`
@@ -358,19 +358,19 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <br>
 
-### 11.0 - Results
+## Results
 
 <p align="center"><img width="698" alt="Screen Shot 2022-04-21 at 9 52 51 PM" src="https://user-images.githubusercontent.com/72515939/164473368-648c8db7-19a0-4c69-a436-c5db197b88fa.png"></p>
 
 <br>
 
-### 12.0 - Ioreg
+## Ioreg
 
 [iMac20,1-Hack](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/iMac20%2C1-Hack.ioreg)
 
 <br>
 
-### 13.0 - Debug Log
+## Debug Log
 
 [OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-2022-04-19-153310.txt)
 
