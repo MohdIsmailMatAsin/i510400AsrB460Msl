@@ -240,6 +240,9 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 | HfsPlus.efi     | Official `HFS+ Driver` Support for Apple MacOS               |
 | OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Boot-loader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
 
+<p align="center"><img width="1032" alt="Screen Shot 2022-04-22 at 12 02 22 AM" src="https://user-images.githubusercontent.com/72515939/164503478-e15e3795-6811-4197-8a20-7492e0a27151.png"></p>
+
+
 <br>
 
 ### 4.0 - OC\Kext
