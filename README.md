@@ -19,7 +19,7 @@
 
 <br>
 
-## Tested MacOS
+## Tested
 
 | MacOS     | Mindate   | MInVersion       | SetApfsTrimTimeout | SecureBootModel       |
 |-----------|-----------|------------------|--------------------|-----------------------|
