@@ -325,6 +325,8 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 - None
 
+<p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 14 41 AM" src="https://user-images.githubusercontent.com/72515939/164505309-65fb3904-a0ea-4c58-95a1-b786a793b726.png"></p>
+
 **Booter\Quirks**
 
 - AvoidRuntimeDefrag
@@ -337,6 +339,8 @@ Besides, a plist is often used to correct problems that a user may be having wit
 - ProvideMaxSlide = `0`
 - ResizeAppleGpuBars = `-1`
 
+<p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 05 AM" src="https://user-images.githubusercontent.com/72515939/164505410-32911711-727d-40f9-9d2a-f542700b5dcc.png"></p>
+
 **Kernel\Quirks**
 
 - CustomSMBIOSGuid
@@ -346,6 +350,8 @@ Besides, a plist is often used to correct problems that a user may be having wit
 - PowerTimeoutKernelPanic
 - SetApfsTimeout = `0`
 
+<p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 48 AM" src="https://user-images.githubusercontent.com/72515939/164505506-bc2e3705-8225-407d-a486-0b232f4a5fed.png"></p>
+
 **UEFI\Quirks**
 
 - EnableVectorAcceleration
@@ -353,6 +359,8 @@ Besides, a plist is often used to correct problems that a user may be having wit
 - ExitBootServiceDelay = `0`
 - ResizeGPUBars = `-1`
 - TscSyncTimeout = `0`
+
+<p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 26 AM" src="https://user-images.githubusercontent.com/72515939/164505602-4cf5069b-bdf2-4017-8a54-336f82464ad4.png"></p>
 
 <br>
 
