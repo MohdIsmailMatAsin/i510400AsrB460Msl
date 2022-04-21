@@ -157,6 +157,11 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 
 <p align="justify">While OpenCore is just a boot-loader, this type of boot-loader is included with their own firmware, along with additional quirks for booting the MacOS partition. Furthermore, OpenCore has portable features that enable the chain-loader option to be used with other operating systems.</p>
 
+<p align="center"><img width="1032" alt="Screen Shot 2022-04-22 at 12 19 09 AM" src="https://user-images.githubusercontent.com/72515939/164505934-60134e65-66ad-4168-99da-1c3f99ceda88.png"></p>
+<img width="1032" alt="Screen Shot 2022-04-22 at 12 19 13 AM" src="https://user-images.githubusercontent.com/72515939/164505945-eb9215b3-2c92-456d-a2b5-d9e89d2025af.png"></p>
+<img width="1032" alt="Screen Shot 2022-04-22 at 12 19 19 AM" src="https://user-images.githubusercontent.com/72515939/164505951-825429c4-fd91-4f15-931d-4c98df824010.png"></p>
+<img width="1032" alt="Screen Shot 2022-04-22 at 12 19 23 AM" src="https://user-images.githubusercontent.com/72515939/164505961-3b67bf7d-0d94-485a-9969-f8babfc8a8d4.png"></p>
+
 <br>
 
 ### 2.0 - OC\ACPI
