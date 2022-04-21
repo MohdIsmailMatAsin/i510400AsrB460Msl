@@ -1,6 +1,8 @@
 # Hackintosh: Intel i5 10400 & Asrock B460M Steel Legend
 
+###### **Reminder:** 
 
+###### <p align="justify">This is not 100% official method. Any errors from the information displayed are on an experimental basis. Some were taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others were taken from several other sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), you can refer to [Clover Crates](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0) as a guide.</p>
 
 ## Information 
 
