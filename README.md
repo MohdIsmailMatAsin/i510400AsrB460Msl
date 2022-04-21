@@ -170,9 +170,15 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 
 <p align="justify">Differentiated System Description Table. It Is a major ACPI table and is used to describe what peripherals the machine has. Also holds information on PCI IRQ mappings and power management.</p>
 
+<p align="center"><img width="1111" alt="Screen Shot 2022-04-22 at 12 22 32 AM" src="https://user-images.githubusercontent.com/72515939/164506898-66804fd4-987d-4b3d-886e-1312604f5991.png"></p>
+
 **What is `SSDT`?**
 
-<p align="justify">Secondary System Description Table. It is encoded in AML in exactly the same way as the DSDT. It acts as a supplement to the DSDT. Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
+<p align="justify">Secondary System Description Table. It is encoded in AML in exactly the same way as the DSDT. It acts as a supplement to the DSDT. 
+
+<p align="center"><img width="1160" alt="Screen Shot 2022-04-22 at 12 22 49 AM" src="https://user-images.githubusercontent.com/72515939/164506930-3ea0b1d6-65ed-4f05-9724-11cf51b07adf.png"></p>  
+
+Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
 - [DSDT](https://wiki.osdev.org/DSDT#:~:text=DSDT%20stands%20for%20Differentiated%20System,IRQ%20mappings%20and%20power%20management.)
 - [SSDT](https://wiki.osdev.org/SSDT#:~:text=The%20SSDT%20is%20an%20ACPI,a%20supplement%20to%20the%20DSDT.)
