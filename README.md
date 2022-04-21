@@ -227,6 +227,8 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 
 **Refer:** OpenCore [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)
 
+<p align="center"><img width="1015" alt="Screen Shot 2022-04-21 at 11 56 42 PM" src="https://user-images.githubusercontent.com/72515939/164502200-d2e8d65c-fc4f-486f-9e66-c83d4013c870.png"></p>
+
 <br>
 
 ### 3.0 - OC\Drivers
