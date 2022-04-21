@@ -2,7 +2,7 @@
 
 ###### **Reminder:** 
 
-###### <p align="justify">This is not 100% official method. Any errors from the information displayed are on an experimental basis. Some were taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others were taken from several other sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), you can refer to [Clover Crates](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0) as a guide.</p>
+###### <p align="justify">This is not 100% official method. Any errors from the information displayed are on an experimental basis. Some were taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others were taken from several other sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), you can refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0) as a guide.</p>
 
 ## Information 
 
@@ -387,5 +387,5 @@ I would like to thanks all folks in Hackintosh Community especially:
 - [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for knowledge sharing
 - [r/Hackintosh](https://www.reddit.com/r/hackintosh/) for an easy undocumented references
 - [daliansky](https://github.com/daliansky) for publishing his own OpenCore ACPI method (OC-Little) and implementation
-- [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky OC-Little
+- [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky OC-Little and informative [Clover Crate](https://github.com/5T33Z0/Clover-Crate)
 - [rusty-bits](https://github.com/rusty-bits) for an easy EFI update using windows "Command Prompt", Linux and MacOS Terminal 
