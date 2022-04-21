@@ -381,7 +381,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 I would like to thanks all folks in Hackintosh Community especially:
 
 - [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) for a great guide
-- [Acidanthera](https://github.com/acidanthera) for [OpenCore]((https://github.com/acidanthera/OpenCorePkg)) Boot-loader. KUDOS for them
+- [Acidanthera](https://github.com/acidanthera) for [OpenCore](https://github.com/acidanthera/OpenCorePkg) Boot-loader. KUDOS for them
 - [CorpNewt](https://github.com/corpnewt) for developing simple [USBmap](https://github.com/corpnewt/USBMap) tools
 - [dhinakg](https://github.com/USBToolBox/tool) for developing easy Windows based USBmap, [USBToolBox](https://github.com/USBToolBox/tool) which inspired by CorpNewt USBMap
 - [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for knowledge sharing
