@@ -381,11 +381,11 @@ Besides, a plist is often used to correct problems that a user may be having wit
 I would like to thanks all folks in Hackintosh Community especially:
 
 - [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) for a great guide
-- [Acidanthera](https://github.com/acidanthera) for a great work. KUDOS for them
-- [CorpNewt](https://github.com/corpnewt) for developing simple USB mapping tools
-- [dhinakg](https://github.com/USBToolBox/tool) for developing easy Windows based USB mapping tools inspired by CorpNewt USBMap
+- [Acidanthera](https://github.com/acidanthera) for [OpenCore]((https://github.com/acidanthera/OpenCorePkg)) Boot-loader. KUDOS for them
+- [CorpNewt](https://github.com/corpnewt) for developing simple [USBmap](https://github.com/corpnewt/USBMap) tools
+- [dhinakg](https://github.com/USBToolBox/tool) for developing easy Windows based USBmap, [USBToolBox](https://github.com/USBToolBox/tool) which inspired by CorpNewt USBMap
 - [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for knowledge sharing
 - [r/Hackintosh](https://www.reddit.com/r/hackintosh/) for an easy undocumented references
 - [daliansky](https://github.com/daliansky) for publishing his own OpenCore ACPI method (OC-Little) and implementation
-- [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky OC-Little and informative [Clover Crate](https://github.com/5T33Z0/Clover-Crate)
+- [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating daliansky [OC-Little](https://github.com/5T33Z0/OC-Little-Translated) and informative [Clover Crate](https://github.com/5T33Z0/Clover-Crate)
 - [rusty-bits](https://github.com/rusty-bits) for an easy EFI update using windows "Command Prompt", Linux and MacOS Terminal 
