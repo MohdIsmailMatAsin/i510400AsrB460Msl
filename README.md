@@ -2,7 +2,7 @@
 
 ###### **Reminder:** 
 
-###### <p align="justify">This is not 100% official method. Any errors from the information displayed are on an experimental basis. Some were taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others were taken from several other sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), you can refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0) as a guide.</p>
+###### <p align="justify">This is not 100% official method. All the information displayed is based on actual hardware and experimental basis. Half of the information is taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others were taken from several other sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), please refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0) as a guide.</p>
 
 ## Information 
 
