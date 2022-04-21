@@ -264,6 +264,13 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 
 **Remark:** All kext used are `DEBUG` versions.
 
+<p align="center"><img width="1032" alt="Screen Shot 2022-04-22 at 12 06 44 AM" src="https://user-images.githubusercontent.com/72515939/164503777-fce8443a-a61f-4e83-aacf-58b288d93cd7.png"></p>
+
+**Sort by Priorities:** All kext need to be arranged/sort in priority in order to give the impression of a better injection for the system.
+
+<p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 07 16 AM" src="https://user-images.githubusercontent.com/72515939/164503788-601ae833-9f59-47a2-a19b-3f32c2852446.png"></p>
+
+
 **Additional:** `IOAHCIBlockStorage` patch for SSD to enable `Trim` option via `Kernel\Patch`. Refer [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/dbg-monterey-bigsur_config.plist).
 
 <p align="center"><img width="1015" alt="Screen Shot 2022-04-20 at 12 28 18 AM" src="https://user-images.githubusercontent.com/72515939/164051402-d2743892-2cec-41aa-8415-4b3f41892fdc.png"></p>
