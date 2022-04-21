@@ -174,7 +174,7 @@ The basic OpenCore folder structure. This folder contain several sub files and f
 
 **What is `SSDT`?**
 
-<p align="justify">Secondary System Description Table. It is encoded in AML in exactly the same way as the DSDT. It acts as a supplement to the DSDT. 
+<p align="justify">Secondary System Description Table. It is encoded in AML in exactly the same way as the DSDT. It acts as a additional table to the DSDT. 
 
 <p align="center"><img width="1160" alt="Screen Shot 2022-04-22 at 12 22 49 AM" src="https://user-images.githubusercontent.com/72515939/164506930-3ea0b1d6-65ed-4f05-9724-11cf51b07adf.png"></p>  
 
