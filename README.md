@@ -21,7 +21,7 @@
 
 ## APFS Changes
 
-| MacOS     | Mindate   | MInVersion       | SetApfsTrimTimeout | SecureBootModel       |
+| MacOS     | Mindate   | MinVersion       | SetApfsTrimTimeout | SecureBootModel       |
 |-----------|-----------|------------------|--------------------|-----------------------|
 | Catalina  | 20200306  | 1412101001000000 | Blank  (Native)    | j185-10.15.6 (19G2005)|
 | BigSur    | 0         | 0                | 0                  | j185-10.15.6 (19G2005)|
