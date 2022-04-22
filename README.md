@@ -429,7 +429,6 @@ Besides, a plist is often used to correct problems that a user may be having wit
 **4k Youtube Test via Safari**
 
 <p align="center"><img width="1072" alt="Screen Shot 2022-04-22 at 10 42 16 PM" src="https://user-images.githubusercontent.com/72515939/164739678-50471942-c932-4e73-a7d1-cda66b55a027.png"></p>
-
 <p align="center"><img width="1973" alt="Screen Shot 2022-04-22 at 10 42 27 PM" src="https://user-images.githubusercontent.com/72515939/164739320-c938df8d-6121-4842-a619-042117ec5d31.png"></p>
 
 <br>
@@ -451,7 +450,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 ## Results
 
 <p align="center"><img width="697" alt="Screen Shot 2022-04-21 at 11 51 26 PM" src="https://user-images.githubusercontent.com/72515939/164501037-d74cc18f-05d2-4707-aa47-35957e5b283b.png"></p>
-<p align="center"><img width="549" alt="Screen Shot 2022-04-22 at 12 13 10 AM" src="https://user-images.githubusercontent.com/72515939/164504863-484cfd77-b5a6-472d-8b51-5a99d7e85521.png"></p>
+<p align="center"><img width="549" alt="Screen Shot 2022-04-22 at 10 54 33 PM" src="https://user-images.githubusercontent.com/72515939/164739859-435b0af5-a261-4062-a93c-6db17fbdd76f.png"></p>
 <p align="center"><img width="2560" alt="Screen Shot 2022-04-21 at 11 51 19 PM-min" src="https://user-images.githubusercontent.com/72515939/164502014-03a9f631-69b5-4035-b571-70a28c576ca2.png"></p>
 
 <br>
