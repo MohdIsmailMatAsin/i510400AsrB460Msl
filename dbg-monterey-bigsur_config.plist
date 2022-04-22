@@ -461,12 +461,20 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>
+				AwDFmw==
+				</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal</string>
+				<key>device_type</key>
+				<string>Display controller</string>
 				<key>enable-metal</key>
 				<data>
 				AQAAAA==
 				</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
 				<key>igfxfw</key>
 				<data>
 				AgAAAA==
