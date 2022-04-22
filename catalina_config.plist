@@ -482,24 +482,18 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>
-				AwDImw==
+				AwDFmw==
 				</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal</string>
-				<key>device-id</key>
-				<data>
-				mz4AAA==
-				</data>
 				<key>device_type</key>
-				<string>Other Display Controller</string>
-				<key>enable-hdmi20</key>
-				<data>
-				AQAAAA==
-				</data>
+				<string>Display controller</string>
 				<key>enable-metal</key>
 				<data>
 				AQAAAA==
 				</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
 				<key>igfxfw</key>
 				<data>
 				AgAAAA==
