@@ -375,6 +375,58 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <br>
 
+## Headless UHD Graphics 630 Settings
+
+```plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DeviceProperties</key>
+	<dict>
+		<key>Add</key>
+		<dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>
+				AwDFmw==
+				</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>Display controller</string>
+				<key>enable-metal</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>igfxfw</key>
+				<data>
+				AgAAAA==
+				</data>
+				<key>igfxonln</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>iommu-selection</key>
+				<data>
+				AAAAAA==
+				</data>
+				<key>rps-control</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>shikigva</key>
+				<integer>80</integer>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
+```
+
 ## BIOS/UEFI Settings
 
 1. Disable `CSM/ Enable UEFI`
