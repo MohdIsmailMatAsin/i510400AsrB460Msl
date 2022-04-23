@@ -465,7 +465,6 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 <p align="center"><img width="697" alt="Screen Shot 2022-04-21 at 11 51 26 PM" src="https://user-images.githubusercontent.com/72515939/164501037-d74cc18f-05d2-4707-aa47-35957e5b283b.png"></p>
 <p align="center"><img width="549" alt="Screen Shot 2022-04-22 at 10 54 33 PM" src="https://user-images.githubusercontent.com/72515939/164739859-435b0af5-a261-4062-a93c-6db17fbdd76f.png"></p>
 <p align="center"><img width="2560" alt="Screen Shot 2022-04-23 at 4 28 52 PM" src="https://user-images.githubusercontent.com/72515939/164886899-69d7b602-1ac0-4d15-afe1-63eb31958516.png"></p>
-<p align="center"><img width="911" alt="Screenshot 2022-04-23 205055" src="https://user-images.githubusercontent.com/72515939/164895337-7a7e86a5-ba88-4d24-a878-ddcea91707c6.png"></p>
 
 
 <br>
@@ -487,10 +486,11 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 I would like to thanks all folks in Hackintosh Community especially:
 
 - [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) for a great guide
-- [Acidanthera](https://github.com/acidanthera) for [OpenCore](https://github.com/acidanthera/OpenCorePkg) Boot-loader. KUDOS for them
+- [Acidanthera](https://github.com/acidanthera) for [OpenCore](https://github.com/acidanthera/OpenCorePkg) Boot-loader and powerful ACPI compiler, [MaciASL]https://github.com/acidanthera/MaciASL
 - [CorpNewt](https://github.com/corpnewt) for developing simple [USBmap](https://github.com/corpnewt/USBMap) tools
 - [dhinakg](https://github.com/USBToolBox/tool) for developing easy Windows based USBmap, [USBToolBox](https://github.com/USBToolBox/tool) which inspired by CorpNewt USBMap
 - [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for knowledge sharing
+- [Headkaze](https://github.com/headkaze) for The Swiss army knife of vanilla Hackintoshing, known as [Hackintool](https://github.com/headkaze/Hackintool)
 - [r/Hackintosh](https://www.reddit.com/r/hackintosh/) for an easy undocumented references
 - [daliansky](https://github.com/daliansky) for publishing his own [OpenCore](https://github.com/acidanthera/OpenCorePkg) [ACPI](https://kb.iu.edu/d/ahvl) method, known as [OC-Little](https://github.com/daliansky/OC-little)
 - [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating [daliansky](https://github.com/daliansky) [OC-Little](https://github.com/daliansky/OC-little) which known as [OC-Little Translate](https://github.com/5T33Z0/OC-Little-Translated). Also informative [Clover Crate](https://github.com/5T33Z0/Clover-Crate) for [Clover-bootloader](https://github.com/CloverHackyColor/CloverBootloader)
