@@ -87,6 +87,7 @@ mohdismailmatasin@Mohds-iMac EFI % tree
         │   └── SSDT-B460M-SL.aml
         ├── Drivers
         │   ├── HfsPlus.efi
+        │   ├── OpenCanopy.efi (Disable on Debug)
         │   └── OpenRuntime.efi
         ├── Kexts
         │   ├── AppleALC.kext
