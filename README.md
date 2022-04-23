@@ -142,6 +142,9 @@ mohdismailmatasin@Mohds-iMac EFI % tree
 1. Temporary: `EFI\boot\bootx64.efi`
 2. Permanent: `EFI\Microsoft\Boot\bootmgfw.efi` (Windows Boot Manager/UEFI which contain a GUID reference)
 
+<p align="justify"><img width="1032" alt="Screen Shot 2022-04-23 at 8 49 05 AM" src="https://user-images.githubusercontent.com/72515939/164843516-c3c52387-7232-4c54-a0b0-f2e2384d0d40.png"></p>
+<p align="justify"><img width="1032" alt="Screen Shot 2022-04-23 at 8 49 09 AM" src="https://user-images.githubusercontent.com/72515939/164843552-2cfbcf18-e1e4-4dc3-bf41-6b09d4f57b69.png"></p>
+
 `Linux`
 
 1. Temporary: `EFI\boot\bootx64.efi`
