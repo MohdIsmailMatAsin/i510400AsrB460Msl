@@ -115,7 +115,7 @@ mohdismailmatasin@Mohds-iMac EFI % tree
         │   └── CleanNvram.efi
         └── config.plist
 ```
-**Remark:** Generally best to debug systems without* `OpenCanopy.efi`, if required make sure this file is from `DEBUG` else there will be virtually no debug information. `Picker` mode use `Built-In` menu.
+**Remark:** Generally best to debug systems without `OpenCanopy.efi`, if required make sure this file is from `DEBUG` else there will be virtually no debug information. `Picker` mode use `Built-In` menu.
 
 <br>
 
