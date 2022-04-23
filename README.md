@@ -485,12 +485,12 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 I would like to thanks all folks in Hackintosh Community especially:
 
 - [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) for a great guide
-- [Acidanthera](https://github.com/acidanthera) for [OpenCore](https://github.com/acidanthera/OpenCorePkg) Boot-loader and powerful ACPI compiler, [MaciASL](https://github.com/acidanthera/MaciASL)
+- [acidanthera](https://github.com/acidanthera) for [OpenCore](https://github.com/acidanthera/OpenCorePkg) Boot-loader and powerful ACPI compiler, [MaciASL](https://github.com/acidanthera/MaciASL)
 - [corpNewt](https://github.com/corpnewt) for developing simple [USBmap](https://github.com/corpnewt/USBMap) tools
 - [dhinakg](https://github.com/USBToolBox/tool) for developing easy Windows based USBmap, [USBToolBox](https://github.com/USBToolBox/tool) which inspired by [corpNewt](https://github.com/corpnewt) [USBmap](https://github.com/corpnewt/USBMap)
-- [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) for knowledge sharing
+- [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/)
 - [headkaze](https://github.com/headkaze) for the Swiss Army Knife of Vanilla Hackintoshing, known as [Hackintool](https://github.com/headkaze/Hackintool) and [EFIAgent](https://github.com/headkaze/EFI-Agent)
-- [r/Hackintosh](https://www.reddit.com/r/hackintosh/) for an easy undocumented references
+- [r/Hackintosh](https://www.reddit.com/r/hackintosh/)
 - [daliansky](https://github.com/daliansky) for publishing his own [OpenCore](https://github.com/acidanthera/OpenCorePkg) [ACPI](https://kb.iu.edu/d/ahvl) method, known as [OC-Little](https://github.com/daliansky/OC-little)
 - [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) for translating [daliansky](https://github.com/daliansky) [OC-Little](https://github.com/daliansky/OC-little) which known as [OC-Little Translate](https://github.com/5T33Z0/OC-Little-Translated). Also informative [Clover Crate](https://github.com/5T33Z0/Clover-Crate) for [Clover-bootloader](https://github.com/CloverHackyColor/CloverBootloader)
-- [rusty-bits](https://github.com/rusty-bits) for an easy [cross platform](https://en.wikipedia.org/wiki/Cross-platform_software) OS EFI update , known as [octool](https://github.com/rusty-bits/octool)
+- [rusty-bits](https://github.com/rusty-bits) for [cross platform](https://en.wikipedia.org/wiki/Cross-platform_software) OS EFI update , known as [octool](https://github.com/rusty-bits/octool)
