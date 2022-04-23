@@ -2,7 +2,7 @@
 
 ###### **Reminder:** 
 
-###### <p align="justify">This is not 100% official method. All the information displayed is based on actual hardware and experimental basis. Half of the information is taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others were taken from several known sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), please refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0)</p>
+###### <p align="justify">This is not an official method. All the information displayed is based on actual hardware and an experimental basis. Half of the information is taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others are taken from several well-known sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), please refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0)</p>
 
 ## Information 
 
@@ -27,7 +27,7 @@
 | BigSur    | 0         | 0                | 0                  | j185-10.15.6 (19G2005)|
 | Monterey  | 0         | 0                | 0                  | j185-10.15.6 (19G2005)|
 
-**Remark:** <p align="justify">Settings above may not the same as the recommended settings by Dortania. To find out more please check [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for more.</p> 
+**Remark:** <p align="justify">The settings above may not be the same as the recommended settings by Dortania. To find out more please check [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for more.</p> 
 
 <br>
 
@@ -49,7 +49,7 @@
 
 **What is `Boot-loader`?**
 
-<p align="justify">A boot-loader, also known as a boot program or bootstrap loader, is a special operating system software that loads into the working memory of a computer after start-up. For this purpose, immediately after a device starts, a boot-loader is generally launched by a bootable medium like a hard drive, a CD/DVD or a USB stick. The boot medium receives information from the computer’s firmware (e.g. BIOS) about where the boot-loader is. The whole process is also described as “booting”. OpenCore, Clover, rEFInd, reEFIt, Chameleon, and a few other names is known as boot-loaders. Mosts of these boot-loaders are capable as chain-loader/chain-loading. Chain-loader is similar to the use of overlays. Unlike overlays, chain-loader replaces the currently executing program in its entirety. Overlays usually replace only a portion of the running program. Like the use of overlays, the use of chain-loading increases the I/O load of an application.</p>
+<p align="justify">A boot-loader, also known as a boot programme or bootstrap loader, is a special operating system software that loads into the working memory of a computer after start-up. For this purpose, immediately after a device starts, a boot-loader is generally launched by a bootable medium like a hard drive, a CD/DVD, or a USB stick. The boot medium receives information from the computer’s firmware (e.g., BIOS) about where the boot-loader is. The whole process is also described as "booting". OpenCore, Clover, rEFInd, reEFIt, Chameleon, and a few other names are known as boot-loaders. Most of these boot-loaders are capable of being chain-loaders or chain-loading. A chain-loader is similar to the use of overlays. Unlike overlays, chain-loaders replace the currently executing programme in its entirety. Overlays usually replace only a portion of the running program. Like the use of overlays, the use of chain-loading increases the I/O load of an application.</p>
 
 <br>
 
@@ -67,7 +67,7 @@
 
 <p align="center"><img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161431087-8fadbe79-bdc6-49fc-8721-eb149db7ede0.png"></p>
 
-<p align="justify">OpenCore is what we refer to as a boot-loader and also as chain-loader at the same time; it is a complex piece of software that we use to prepare our systems for MacOS, specifically by injecting new data for MacOS such as SMBIOS, ACPI tables, and kexts.</p>
+<p align="justify">OpenCore is what we refer to as a boot-loader and also a chain-loader at the same time; it is a complex piece of software that we use to prepare our systems for MacOS, specifically by injecting new data for MacOS such as SMBIOS, ACPI tables, and kexts.</p>
 
 <br>
 
