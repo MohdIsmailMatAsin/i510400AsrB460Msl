@@ -432,7 +432,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 **4k Youtube Test via Safari**
 
 <p align="center"><img width="1072" alt="Screen Shot 2022-04-22 at 10 42 16 PM" src="https://user-images.githubusercontent.com/72515939/164739678-50471942-c932-4e73-a7d1-cda66b55a027.png"></p>
-<p align="center"><img width="1973" alt="Screen Shot 2022-04-22 at 10 42 27 PM" src="https://user-images.githubusercontent.com/72515939/164739320-c938df8d-6121-4842-a619-042117ec5d31.png"></p>
+<p align="center"><img width="1973" alt="Screen Shot 2022-04-23 at 9 03 51 AM" src="https://user-images.githubusercontent.com/72515939/164845086-0fd421ec-9c34-48a3-b78e-5d84ddc92099.png"></p>
 
 <br>
 
