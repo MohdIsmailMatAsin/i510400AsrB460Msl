@@ -75,44 +75,43 @@
 
 The basic OpenCore folder structure. This folder contain several sub files and folders.
 
-```tree
-% cd /Volumes/EFI
-↓
-% tree
+```zsh
+mohdismailmatasin@Mohds-iMac ~ % cd /Volumes/EFI 
+mohdismailmatasin@Mohds-iMac EFI % tree
 .
 └── EFI
     ├── BOOT
-    │   └── BOOTx64.efi
+    │   └── BOOTx64.efi
     └── OC
         ├── ACPI
-        │   └── SSDT-B460M-SL.aml
+        │   └── SSDT-B460M-SL.aml
         ├── Drivers
-        │   ├── HfsPlus.efi
-        │   └── OpenRuntime.efi
+        │   ├── HfsPlus.efi
+        │   └── OpenRuntime.efi
         ├── Kexts
-        │   ├── AppleALC.kext
-        │   ├── Lilu.kext
-        │   ├── LucyRTL8125Ethernet.kext
-        │   ├── RadeonSensor.kext
-        │   ├── SMCLightSensor.kext
-        │   ├── SMCProcessor.kext
-        │   ├── SMCRadeonGPU.kext
-        │   ├── SMCSuperIO.kext
-        │   ├── USBMap.kext
-        │   ├── VirtualSMC.kext
-        │   └── WhateverGreen.kext
+        │   ├── AppleALC.kext
+        │   ├── Lilu.kext
+        │   ├── LucyRTL8125Ethernet.kext
+        │   ├── RadeonSensor.kext
+        │   ├── SMCLightSensor.kext
+        │   ├── SMCProcessor.kext
+        │   ├── SMCRadeonGPU.kext
+        │   ├── SMCSuperIO.kext
+        │   ├── USBMap.kext
+        │   ├── VirtualSMC.kext
+        │   └── WhateverGreen.kext
         ├── OpenCore.efi
         ├── Resources
-        │   ├── Audio
-        │   ├── Font
-        │   ├── Image
-        │   │   └── Acidanthera
-        │   │       ├── Chardonnay
-        │   │       ├── GoldenGate
-        │   │       └── Syrah
-        │   └── Label
+        │   ├── Audio
+        │   ├── Font
+        │   ├── Image
+        │   │   └── Acidanthera
+        │   │       ├── Chardonnay
+        │   │       ├── GoldenGate
+        │   │       └── Syrah
+        │   └── Label
         ├── Tools
-        │   └── CleanNvram.efi
+        │   └── CleanNvram.efi
         └── config.plist
 ```
 **Remark:** Generally best to debug systems without* `OpenCanopy.efi`, if required make sure this file is from `DEBUG` else there will be virtually no debug information. `Picker` mode use `Built-In` menu.
