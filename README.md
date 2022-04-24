@@ -465,6 +465,13 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 <p align="center"><img width="697" alt="Screen Shot 2022-04-21 at 11 51 26 PM" src="https://user-images.githubusercontent.com/72515939/164501037-d74cc18f-05d2-4707-aa47-35957e5b283b.png"></p>
 <p align="center"><img width="2560" alt="Screen Shot 2022-04-23 at 4 28 52 PM" src="https://user-images.githubusercontent.com/72515939/164886899-69d7b602-1ac0-4d15-afe1-63eb31958516.png"></p>
 
+<br>
+
+## Working DRM Based Player
+
+- [✓] AppleTV
+- [x] Test DRM](https://dortania.github.io/OpenCore-Post-Install/universal/drm.html#testing-drm) - [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view)
+- [✓] Netflix
 
 <br>
 
