@@ -380,6 +380,8 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 ## Headless UHD Graphics 630 Settings
 
+**XML**
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -429,6 +431,14 @@ Besides, a plist is often used to correct problems that a user may be having wit
 </dict>
 </plist>
 ```
+
+**plist**
+
+<p align="center"><img width="477" alt="Screen Shot 2022-04-24 at 11 29 58 PM" src="https://user-images.githubusercontent.com/72515939/164984010-95cbbf14-17e4-46ee-991b-e244b4a012da.png"></p>
+
+	
+<br>	
+
 **4k Youtube Test via Safari**
 
 <p align="center"><img width="1072" alt="Screen Shot 2022-04-22 at 10 42 16 PM" src="https://user-images.githubusercontent.com/72515939/164739678-50471942-c932-4e73-a7d1-cda66b55a027.png"></p>
@@ -467,10 +477,10 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 
 <br>
 
-## Working DRM Based Player
+## DRM Test
 
 - [✓] AppleTV
-- [✕] [Test DRM](https://dortania.github.io/OpenCore-Post-Install/universal/drm.html#testing-drm) - [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view)
+- [✕] OpenCore [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view)
 - [✓] Netflix
 
 **Remark:** Without shikigva patch.
