@@ -9,7 +9,7 @@
 | Info      | Details                          | Info        | Details                                       |
 | --------- | -------------------------------- | ----------- | --------------------------------------------- |
 | OS 1      | Microsoft Windows 11 Pro         | Audio 1     | 7.1 CH HD Audio (Realtek ALC1200 Audio Codec) |
-| OS 2      | MacOS Catalina 10.15.7           | Audio 2     | U-Phoria UM2 USB Audio Device                 |
+| OS 2      | MacOS Monterey                   | Audio 2     | U-Phoria UM2 USB Audio Device                 |
 | Processor | Intel® Core(TM) i5-10400         | Motherboard | ASRock (B460M Steel Legend)                   |
 | GFX0      | Radeon RX 5500 XT 4GB            | PCI 1       | BCM94360 WiFi & Bluetooth                     |
 | IGPU      | Intel® UHD Graphics 630  1GB     | PCI 2       | VIA USB 3.0 eXtensible Host Controller        |
