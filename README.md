@@ -473,6 +473,9 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 - [✕] [Test DRM](https://dortania.github.io/OpenCore-Post-Install/universal/drm.html#testing-drm) - [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view)
 - [✓] Netflix
 
+**Remark:** Without shikigva patch.
+
+
 <br>
 
 ## Ioreg
