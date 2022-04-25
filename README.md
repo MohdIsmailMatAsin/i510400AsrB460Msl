@@ -314,7 +314,7 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 
 ### 8.0 - OC\config.plist
 
-<p align="justify">Property list based on xml code. Structured OpenCore/Clover method and upgraded injection function. An Apple.Inc plist is a MacOS preference, also a file for the application that it holds the preference settings for. By trashing and then relaunching an application you are getting rid of old user set preferences that may have become corrupt. OpenCore use this kind of file to inject (match, overcome and manipulate) specicied information to unsupport hardware/device. 
+<p align="justify">Property list based on xml code. Structured OpenCore/Clover method and upgraded injection function. An Apple.Inc plist is a MacOS preference, also a file for the application that it holds the preference settings for. By trashing and then relaunching an application you are getting rid of old user set preferences that may have become corrupt. OpenCore use this kind of file to inject (match, overcome and manipulate) specified information to unsupport hardware/device. 
 Besides, a plist is often used to correct problems that a user may be having with an application.</p>
 
 **Refer:**
