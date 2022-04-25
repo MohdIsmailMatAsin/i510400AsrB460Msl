@@ -274,7 +274,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
 ### 4.0 - OC\Kext
 
-<p align="justify">Kernel extensions (kexts) let developers load code directly into the MacOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed function. The table below contains some kexts used to properly boot MacOS through OpenCore</p>
+<p align="justify">Kernel extensions (kexts) let users or developers load code directly into the MacOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed functions. The table below contains some kexts used to properly boot MacOS through OpenCore.</p>
 
 | Kext                | Information                                                  |
 | ------------------- | ------------------------------------------------------------ |
