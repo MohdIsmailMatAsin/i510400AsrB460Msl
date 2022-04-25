@@ -470,6 +470,8 @@ Besides, a plist is often used to correct problems that a user may be having wit
 <p align="center"><img width="1072" alt="Screen_Shot_2022-04-25_at_3_16_43_PM" src="https://user-images.githubusercontent.com/72515939/165040712-2b0e8ccb-59ad-4bca-ac4c-e9e453f5132a.png"></p>
 <p align="center"><img width="1329" alt="Screen_Shot_2022-04-25_at_3_17_33_PM" src="https://user-images.githubusercontent.com/72515939/165040238-e6f9c55f-dfdc-40a9-9893-9fe45f331fe3.png"></p>
 
+**Checkout Video Test** on [Youtube](https://youtu.be/dd3SwAZ3S_w)
+
 <br>
 
 ## Power Issues
