@@ -1,5 +1,7 @@
 # Hackintosh: Intel i5 10400 & Asrock B460M Steel Legend
 
+<p align="center"><img width="698" alt="Screen_Shot_2022-04-25_at_2_37_12_PM" src="https://user-images.githubusercontent.com/72515939/165034862-e026562b-ff8e-4ac0-b6ce-26c2b763443b.png"></p>
+
 ###### **Reminder:** 
 
 ###### <p align="justify">This is not an official method. All the information displayed is based on actual hardware and an experimental basis. Half of the information is taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others are taken from several well-known sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), please refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0)</p>
@@ -254,7 +256,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 | HfsPlus.efi     | Official `HFS+ Driver` Support for Apple MacOS               |
 | OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Boot-loader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
 
-<p align="center"><img width="1032" alt="Screen Shot 2022-04-22 at 12 02 22 AM" src="https://user-images.githubusercontent.com/72515939/164503478-e15e3795-6811-4197-8a20-7492e0a27151.png"></p>
+<p align="center"><img width="1036" alt="Screen_Shot_2022-04-25_at_2_41_37_PM" src="https://user-images.githubusercontent.com/72515939/165034935-9e54e24e-87fc-4d4a-93cd-79621119b41c.png"></p>
 
 
 <br>
