@@ -455,7 +455,9 @@ Besides, a plist is often used to correct problems that a user may be having wit
 	
 <br>	
 
-**How to measure IGPU and DGPU is optimized? 4k Youtube Test via Safari**
+**IGPU and DGPU Test. Is both Optimized? 4k Youtube Test via Safari**
+
+<p align="justify">We will conduct a 4K test via Safari (BigSur & Monterey). Use Launchpad > Other > ActivityMonitor. The use of boot-arg igfxonline = 1 or properties of the IGPU, i.e., igfxonline > data > 01000000, is to leave the IGPU in a state of always being online. To open additional GPU tabs on the activity monitor, igfxmetal = 1 or device properties on IGPU enable-metal > data > 01000000, AAPL, ig-platform-id, and AAPL, slot-name are required. Next, we can start the test as shown in the picture.</p>
 
 <p align="center"><img width="1072" alt="Screen_Shot_2022-04-25_at_3_16_43_PM" src="https://user-images.githubusercontent.com/72515939/165040712-2b0e8ccb-59ad-4bca-ac4c-e9e453f5132a.png"></p>
 <p align="center"><img width="1329" alt="Screen_Shot_2022-04-25_at_3_17_33_PM" src="https://user-images.githubusercontent.com/72515939/165040238-e6f9c55f-dfdc-40a9-9893-9fe45f331fe3.png"></p>
