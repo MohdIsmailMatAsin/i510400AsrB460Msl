@@ -280,7 +280,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
 <p align="center"><img width="1032" alt="Screen Shot 2022-04-22 at 12 06 44 AM" src="https://user-images.githubusercontent.com/72515939/164503777-fce8443a-a61f-4e83-aacf-58b288d93cd7.png"></p>
 
-**Sort by Priorities:** All kext need to be arranged/sort in priority in order to give the impression of a better injection for the system.
+**Sort by Priorities:** Select which kext, sort in priority to get better kext injection.
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 07 16 AM" src="https://user-images.githubusercontent.com/72515939/164503788-601ae833-9f59-47a2-a19b-3f32c2852446.png"></p>
 
