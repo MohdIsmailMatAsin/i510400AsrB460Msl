@@ -285,19 +285,17 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
 **Remark:** All kext used are `DEBUG` versions.
 
-<p align="center"><img width="1032" alt="Screen Shot 2022-04-22 at 12 06 44 AM" src="https://user-images.githubusercontent.com/72515939/164503777-fce8443a-a61f-4e83-aacf-58b288d93cd7.png"></p>
+<p align="center"><img width="1032" alt="Screen_Shot_2022-04-25_at_3_00_24_PM" src="https://user-images.githubusercontent.com/72515939/165037853-94893f7d-7950-447a-a57f-745e93fe9ce8.png"></p>
 
 **Sort by Priorities:** Select which kext, sort in priority to get better kext injection.
 
-<p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 07 16 AM" src="https://user-images.githubusercontent.com/72515939/164503788-601ae833-9f59-47a2-a19b-3f32c2852446.png"></p>
-
+<p align="center"><img width="1356" alt="Screen_Shot_2022-04-25_at_3_09_08_PM" src="https://user-images.githubusercontent.com/72515939/165038719-33ac2cca-1cf5-4aae-85de-7caa88c3ccff.png"></p>
 
 **Additional:** `IOAHCIBlockStorage` patch for SSD to enable `Trim` option via `Kernel\Patch`. Refer [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_debug.plist).
 
 <p align="center"><img width="1426" alt="Screen Shot 2022-04-25 at 1 00 18 PM" src="https://user-images.githubusercontent.com/72515939/165023853-616c5d80-dda3-4e94-b0e8-fbba3d226fcb.png"></p>
 
 <p align="center"><img width="1015" alt="Screen Shot 2022-04-20 at 12 28 18 AM" src="https://user-images.githubusercontent.com/72515939/164051402-d2743892-2cec-41aa-8415-4b3f41892fdc.png"></p>
-
 
 <br>
 
@@ -457,10 +455,10 @@ Besides, a plist is often used to correct problems that a user may be having wit
 	
 <br>	
 
-**4k Youtube Test via Safari**
+**How to measure IGPU and DGPU is optimized? 4k Youtube Test via Safari**
 
-<p align="center"><img width="1072" alt="Screen Shot 2022-04-22 at 10 42 16 PM" src="https://user-images.githubusercontent.com/72515939/164739678-50471942-c932-4e73-a7d1-cda66b55a027.png"></p>
-<p align="center"><img width="1973" alt="Screen Shot 2022-04-23 at 9 03 51 AM" src="https://user-images.githubusercontent.com/72515939/164845086-0fd421ec-9c34-48a3-b78e-5d84ddc92099.png"></p>
+<p align="center"><img width="1072" alt="Screen_Shot_2022-04-25_at_3_16_43_PM" src="https://user-images.githubusercontent.com/72515939/165040712-2b0e8ccb-59ad-4bca-ac4c-e9e453f5132a.png"></p>
+<p align="center"><img width="1329" alt="Screen_Shot_2022-04-25_at_3_17_33_PM" src="https://user-images.githubusercontent.com/72515939/165040238-e6f9c55f-dfdc-40a9-9893-9fe45f331fe3.png"></p>
 
 <br>
 
