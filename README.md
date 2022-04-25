@@ -463,7 +463,9 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 **IGPU and DGPU Test. Is both Optimized? 4k Youtube Test via Safari**
 
-<p align="justify">We will conduct a 4K test via Safari (BigSur & Monterey). Use "Launchpad > Other > ActivityMonitor" as our observation tool. Do note, the use of "igfxonline=1" or properties of the IGPU boot-arg, i.e., igfxonline > data > 01000000, is to leave our headless IGPU state to always being online. To get additional GPU tabs on the activity monitor, "igfxmetal=1" or device properties on IGPU, "enable-metal > data > 01000000", "AAPL,ig-platform-id", and "AAPL,slot-name" are required. Next, we can start the test as shown in the picture. Check [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_release.plist) provided as example.</p>
+<p align="justify">We will conduct a 4K test via Safari (BigSur & Monterey). Use "Launchpad > Other > ActivityMonitor" as our observation tool. Do note, the use of "igfxonline=1" or properties of the IGPU boot-arg, i.e., igfxonline > data > 01000000, is to leave our headless IGPU state to always being online. To get additional GPU tabs on the activity monitor, "igfxmetal=1" or device properties on IGPU, "enable-metal > data > 01000000", "AAPL,ig-platform-id", and "AAPL,slot-name" are required. Next, we can start the test as shown in the picture. 
+	
+**Remark:** Check [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_release.plist) provided as example.</p>
 
 <p align="center"><img width="1072" alt="Screen_Shot_2022-04-25_at_3_16_43_PM" src="https://user-images.githubusercontent.com/72515939/165040712-2b0e8ccb-59ad-4bca-ac4c-e9e453f5132a.png"></p>
 <p align="center"><img width="1329" alt="Screen_Shot_2022-04-25_at_3_17_33_PM" src="https://user-images.githubusercontent.com/72515939/165040238-e6f9c55f-dfdc-40a9-9893-9fe45f331fe3.png"></p>
