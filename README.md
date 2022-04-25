@@ -170,7 +170,7 @@ mohdismailmatasin@Mohds-iMac EFI % tree
 <p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 56 11 PM" src="https://user-images.githubusercontent.com/72515939/165036295-62968fcf-135c-4979-85db-9a71e9db4b09.png"></p>
 <p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 56 14 PM" src="https://user-images.githubusercontent.com/72515939/165036304-fb3a0561-70b0-4a71-b2c6-65cff8e2200e.png"></p>
 <p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 56 17 PM" src="https://user-images.githubusercontent.com/72515939/165036309-1a46324c-1011-4b00-867a-493cc89ed049.png"></p>
-<p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 56 27 PM" src="https://user-images.githubusercontent.com/72515939/165036322-35d2627e-3e04-4fd9-9e7d-d51144ec6edd.png"></p>
+<p align="center"><img width="1032" alt="Screen_Shot_2022-04-25_at_2_56_27_PM" src="https://user-images.githubusercontent.com/72515939/165036613-5667f4ad-e43f-4529-baed-0b326d8e13f1.png"></p>
 
 <br>
 
