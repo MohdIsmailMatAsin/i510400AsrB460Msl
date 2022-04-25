@@ -300,6 +300,8 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 
 <p align="center"><img width="882" alt="Screen Shot 2022-04-25 at 1 10 05 PM" src="https://user-images.githubusercontent.com/72515939/165024487-a626140e-fbf4-41b6-806f-7d1df76a95ec.png"></p>
 
+**Remark:** `OpenCore.efi` is extension based on `version`. `Different` version not work with different `config.plist`.
+
 <br>
 
 ### 6.0 - OC\Resources
