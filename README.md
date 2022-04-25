@@ -234,7 +234,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 | EC     | Fake Embedded Controller / EC drivers since `CML` don't have native support EC |
 | IGPU   | An Intel® Intergrated Graphics Unit device.`GFX0` to `IGPU` rename |
 | IMEI   | An Intel® Management Engine Interface.`HECI` to `IMEI` rename |
-| DRAM   | `Comet Lake-S 6c Host Bridge/DRAM Controller`. Come with `SBUS` patch to aids with correct temperature, fan, voltage, ICH, etc readings and proper memory reporting |
+| DRAM   | MCHC compatible. Come with `SBUS` patch to aids with correct temperature, fan, voltage, ICH, etc readings and proper memory reporting |
 | GFX0   | Display Output from `Dedicated Graphic Processor Unit / DGPU`. `_SUN` is added to get proper PCI Slot Number |
 | HDAU   | Audio Output device through HDMI, called as `High Definition Audio`. `_SUN` is added to get proper PCI Slot Number |
 | HDEF   | Audio device, known as `High Definition Audio System / HDAS` in actual `DSDT`, renamed with `HDEF` |
