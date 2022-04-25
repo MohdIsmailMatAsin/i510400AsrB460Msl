@@ -298,6 +298,8 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
 An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is include with [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/) and it is compulsory.
 
+<p align="center"><img width="882" alt="Screen Shot 2022-04-25 at 1 10 05 PM" src="https://user-images.githubusercontent.com/72515939/165024487-a626140e-fbf4-41b6-806f-7d1df76a95ec.png"></p>
+
 <br>
 
 ### 6.0 - OC\Resources
