@@ -137,15 +137,20 @@ mohdismailmatasin@Mohds-iMac EFI % tree
 1. Cannot be ported due to GUID info binding.
 2. Hard to modify
 
-**Other Operating System (OS) Implementation**
+**Windows & Linux Implementation**
 
 `Windows`
 
 1. Temporary: `EFI\boot\bootx64.efi`
-2. Permanent: `EFI\Microsoft\Boot\bootmgfw.efi` (Windows Boot Manager/UEFI which contain a GUID reference)
 
-<p align="justify"><img width="1032" alt="Screen Shot 2022-04-23 at 8 49 05 AM" src="https://user-images.githubusercontent.com/72515939/164843516-c3c52387-7232-4c54-a0b0-f2e2384d0d40.png"></p>
-<p align="justify"><img width="1032" alt="Screen Shot 2022-04-23 at 8 49 09 AM" src="https://user-images.githubusercontent.com/72515939/164843552-2cfbcf18-e1e4-4dc3-bf41-6b09d4f57b69.png"></p>
+<p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 49 56 PM" src="https://user-images.githubusercontent.com/72515939/165035398-e1f47b62-3dc5-4dd4-9fb8-22e740950d52.png">
+<p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 50 01 PM" src="https://user-images.githubusercontent.com/72515939/165035430-d2384e0a-8971-4aac-bad1-de9d2c616b7e.png">
+<p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 50 06 PM" src="https://user-images.githubusercontent.com/72515939/165035435-9b882eb2-dfc4-4101-85a4-10d37d700dd1.png">
+
+2. Permanent: `EFI\Microsoft\Boot\bootmgfw.efi` (Windows Boot Manager/UEFI which contain a GUID reference)
+	
+<p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 51 41 PM" src="https://user-images.githubusercontent.com/72515939/165035559-0f2fd41d-d143-4514-8ac6-cbdbe9a9fe72.png"></p>
+<p align="center"><img width="1032" alt="Screen_Shot_2022-04-25_at_2_51_46_PM" src="https://user-images.githubusercontent.com/72515939/165035929-1bad4e02-ca12-4394-9ce5-837f19ce8453.png"></p>
 
 `Linux`
 
