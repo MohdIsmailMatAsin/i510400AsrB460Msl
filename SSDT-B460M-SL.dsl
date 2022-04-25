@@ -27,7 +27,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
     External (_SB_.PCI0.HECI, DeviceObj)
     External (_SB_.PCI0.LPCB, DeviceObj)
     External (_SB_.PCI0.LPCB.EC__, DeviceObj)
-    External (_SB_.PCI0.MCHC, DeviceObj)
+    External (_SB_.PCI0.DRAM, DeviceObj)
     External (_SB_.PCI0.PEG0, DeviceObj)
     External (_SB_.PCI0.PEG0.PEGP, DeviceObj)
     External (_SB_.PCI0.PPMC, DeviceObj)
@@ -195,7 +195,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                 Name (_STR, Unicode ("Intel Management Engine Interface #1"))  // _STR: Description String
             }
 
-            Device (MCHC)
+            Device (DRAM)
             {
                 Name (_ADR, Zero)  // _ADR: Address
                 Method (_STA, 0, NotSerialized)  // _STA: Status
