@@ -228,29 +228,29 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
 | Device | Information                                                  |
 | ------ | ------------------------------------------------------------ |
-| AWAC   | To fix the `System Clocks` found on newer hardware           |
 | ALS0   | Optional/Not Needed. Normally, real `iMac` is include this device information. **Patch:** `smc-als` and `AppleLMUController`. These patch is only `Cosmetics`, nothing much we can do |
-| PLUG   | To allow the kernel's `XCPM / XNU's CPU Power Management` to manage CPU's power management |
-| EC     | Fake Embedded Controller / EC drivers since `CML` don't have native support EC |
-| IGPU   | An Intel® Intergrated Graphics Unit device.`GFX0` to `IGPU` rename |
-| IMEI   | An Intel® Management Engine Interface.`HECI` to `IMEI` rename |
-| DRAM   | MCHC compatible. Come with `SBUS` patch to aids with correct temperature, fan, voltage, ICH, etc readings and proper memory reporting |
-| GFX0   | Display Output from `Dedicated Graphic Processor Unit / DGPU`. `_SUN` is added to get proper PCI Slot Number |
-| HDAU   | Audio Output device through HDMI, called as `High Definition Audio`. `_SUN` is added to get proper PCI Slot Number |
-| HDEF   | Audio device, known as `High Definition Audio System / HDAS` in actual `DSDT`, renamed with `HDEF` |
-| LPCB   | Path of `Low Pin Count Bus` which is corresponding to Embed Controller/EC |
-| PPMC   | Classed as `Memory Controller` in `Comet Lake (CML)` platform. **Patch:** Compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, identical to `CML` device `pci8086,a3a1` |
-| TSUB   | Known as `Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB` |
-| XHC    | Board `Comet Lake PCH-V USB Controller` device               |
-| ARPT   | Rename Broadcom device, BCM94360 `RP03,PXSX` to `RP03,ARPT`. Device is pointed to `M2- 3` Wifi Slot |
-| RTL0   | Rename `RTL8125 2.5GbE Controller` device as `RP04,PXSX` to `RP04,RTL0` |
-| PXSX   | PCIe USB card, `VIA USB 3.0 eXtensible Host Controller` device |
 | ANS0   | Rename Kingston A2000 NVMe, `RP09,PXSX` to `RP09,ANS0`. Device is pointed to `M2- 1` Slot. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
 | ANS2   | Rename Silicon Power MAP1001 NVMe, `RP20,PXSX` to `RP20,ANS2`. Device is pointed to `Slot- 2`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
 | ANS1   | Rename Kingston A2000 NVMe, `RP21,PXSX` to `RP21,ANS1`. Device is pointed to `M2- 2` Slot. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
-| SATA   | Serial ATA Device. Rename `SATA` to `SAT0`                   |
+| ARPT   | Rename Broadcom device, BCM94360 `RP03,PXSX` to `RP03,ARPT`. Device is pointed to `M2- 3` Wifi Slot |
+| AWAC   | To fix the `System Clocks` found on newer hardware           |
+| DRAM   | Host bridge (DRAM), or Memory Controller Hub (MCHC). One of two chips comprising the core logic chipset architecture on a PC motherboard |
+| EC     | Fake Embedded Controller / EC drivers since `CML` don't have native support EC |
+| GFX0   | Display Output from `Dedicated Graphic Processor Unit / DGPU`. `_SUN` is added to get proper PCI Slot Number |
+| HDAU   | Audio Output device through HDMI, called as `High Definition Audio`. `_SUN` is added to get proper PCI Slot Number |
+| HDEF   | Audio device, known as `High Definition Audio System / HDAS` in actual `DSDT`, renamed with `HDEF` |
+| IGPU   | An Intel® Intergrated Graphics Unit device.`GFX0` to `IGPU` rename |
+| IMEI   | An Intel® Management Engine Interface.`HECI` to `IMEI` rename |
+| LPCB   | Path of `Low Pin Count Bus` which is corresponding to Embed Controller/EC |
+| PLUG   | To allow the kernel's `XCPM / XNU's CPU Power Management` to manage CPU's power management |
+| PPMC   | Classed as `Memory Controller` in `Comet Lake (CML)` platform. **Patch:** Compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, identical to `CML` device `pci8086,a3a1` |
+| PXSX   | PCIe USB card, `VIA USB 3.0 eXtensible Host Controller` device |
+| RTL0   | Rename `RTL8125 2.5GbE Controller` device as `RP04,PXSX` to `RP04,RTL0` |
 | SBUS   | Fix `AppleSMBus` support in MacOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc |
+| SATA   | Serial ATA Device. Rename `SATA` to `SAT0`                   |
+| TSUB   | Known as `Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB` |
 | USBX   | USB `Power Properties` for Skylake and newer motherboard generation |
+| XHC    | Board `Comet Lake PCH-V USB Controller` device               |
 
 **Refer:** OpenCore [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)
 
