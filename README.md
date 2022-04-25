@@ -321,7 +321,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 - OpenCore [Monterey/BigSur-Debug](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/files/8550006/v0.8.0D.zip)
 - OpenCore [Monterey/BigSur](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/files/8549999/BS.Mv0.8.0.zip)
-- Clover [Monterey/BigSur](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/files/8550002/v5146.zip) (Note: may not work on Monterey/BigSur)
+- Clover [Monterey/BigSur](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/files/8550002/v5146.zip) 
 
 <br>
 
