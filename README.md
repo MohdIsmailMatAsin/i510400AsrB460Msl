@@ -476,7 +476,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 
-<img width="1140" alt="Screen Shot 2022-04-23 at 4 54 13 PM" src="https://user-images.githubusercontent.com/72515939/164887926-4ddbd9e1-e673-49a1-9066-e4f04053db5a.png">
+<p align="center"><img width="1108" alt="Screen_Shot_2022-04-25_at_4_01_32_PM" src="https://user-images.githubusercontent.com/72515939/165046653-bdd95d61-c4eb-4f8b-bd8b-e13b3413af41.png"></p>
 
 <br>
 
