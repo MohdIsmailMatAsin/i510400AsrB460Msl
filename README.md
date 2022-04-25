@@ -71,7 +71,7 @@
 
 <p align="justify">OpenCore is what we refer to as a boot-loader and also a chain-loader at the same time; it is a complex piece of software that we use to prepare our systems for MacOS, specifically by injecting new data for MacOS such as SMBIOS, ACPI tables, and kexts.</p>
 
-**Remark:** <p align="justify">As an alternative, we can use [DiskGenius](https://www.diskgenius.com) to identify the storage structure. [DiskGenius](https://www.diskgenius.com)  is an application for Windows only, and it is very useful for manipulating drives and for various other purposes. You can select and click on the EFI partition to see the contents contained in the partition.</p> 
+**Remark:** <p align="justify">As an alternative, we can use [DiskGenius](https://www.diskgenius.com) to identify the storage structure. [DiskGenius](https://www.diskgenius.com) is an application for Windows only, and it is very useful for manipulating drives and for various other purposes. You can select and click on the EFI partition to see the contents contained in the partition.</p> 
 
 <p align="center"><img width="928" alt="Screenshot_2022-04-25_154348" src="https://user-images.githubusercontent.com/72515939/165044631-18ae41ca-e03a-4623-96af-a4549f1401f3.png"></p>
 <p align="center"><img width="927" alt="Screenshot_2022-04-25_154415" src="https://user-images.githubusercontent.com/72515939/165045187-c73b1669-016c-45c8-8fa0-10bbd741c423.png"></p>
