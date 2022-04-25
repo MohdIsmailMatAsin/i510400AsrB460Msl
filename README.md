@@ -167,10 +167,10 @@ mohdismailmatasin@Mohds-iMac EFI % tree
 
 <p align="justify">While OpenCore is just a boot-loader, this type of boot-loader is included with their own firmware, along with additional quirks for booting the MacOS partition. It is so special isn't it? Furthermore, OpenCore has portable features that enable the chain-loader option to be used with other operating systems.</p>
 
-<p align="center"><img width="1032" alt="Screen Shot 2022-04-22 at 12 19 09 AM" src="https://user-images.githubusercontent.com/72515939/164505934-60134e65-66ad-4168-99da-1c3f99ceda88.png"></p>
-<img width="1032" alt="Screen Shot 2022-04-22 at 12 19 13 AM" src="https://user-images.githubusercontent.com/72515939/164505945-eb9215b3-2c92-456d-a2b5-d9e89d2025af.png"></p>
-<img width="1032" alt="Screen Shot 2022-04-22 at 12 19 19 AM" src="https://user-images.githubusercontent.com/72515939/164505951-825429c4-fd91-4f15-931d-4c98df824010.png"></p>
-<img width="1032" alt="Screen Shot 2022-04-22 at 12 19 23 AM" src="https://user-images.githubusercontent.com/72515939/164505961-3b67bf7d-0d94-485a-9969-f8babfc8a8d4.png"></p>
+<p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 56 11 PM" src="https://user-images.githubusercontent.com/72515939/165036295-62968fcf-135c-4979-85db-9a71e9db4b09.png"></p>
+<p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 56 14 PM" src="https://user-images.githubusercontent.com/72515939/165036304-fb3a0561-70b0-4a71-b2c6-65cff8e2200e.png"></p>
+<p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 56 17 PM" src="https://user-images.githubusercontent.com/72515939/165036309-1a46324c-1011-4b00-867a-493cc89ed049.png"></p>
+<p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 56 27 PM" src="https://user-images.githubusercontent.com/72515939/165036322-35d2627e-3e04-4fd9-9e7d-d51144ec6edd.png"></p>
 
 <br>
 
