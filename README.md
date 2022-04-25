@@ -216,7 +216,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 | Device | Information                                                  |
 | ------ | ------------------------------------------------------------ |
 | AWAC   | To fix the `System Clocks` found on newer hardware           |
-| ALS0   | Optional/Not Needed. Normally, real `iMac` is include this device information. **Patch:** `smc-als` and `AppleLMUController`). These patch is only `Cosmetics`, nothing much we can do |
+| ALS0   | Optional/Not Needed. Normally, real `iMac` is include this device information. **Patch:** `smc-als` and `AppleLMUController`. These patch is only `Cosmetics`, nothing much we can do |
 | PLUG   | To allow the kernel's `XCPM / XNU's CPU Power Management` to manage CPU's power management |
 | EC     | Fake Embedded Controller / EC drivers since `CML` don't have native support EC |
 | IGPU   | An Intel® Intergrated Graphics Unit device.`GFX0` to `IGPU` rename |
