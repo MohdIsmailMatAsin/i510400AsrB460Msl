@@ -285,7 +285,9 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 07 16 AM" src="https://user-images.githubusercontent.com/72515939/164503788-601ae833-9f59-47a2-a19b-3f32c2852446.png"></p>
 
 
-**Additional:** `IOAHCIBlockStorage` patch for SSD to enable `Trim` option via `Kernel\Patch`. Refer [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/dbg-monterey-bigsur_config.plist).
+**Additional:** `IOAHCIBlockStorage` patch for SSD to enable `Trim` option via `Kernel\Patch`. Refer [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_debug.plist).
+
+<p align="center"><img width="1426" alt="Screen Shot 2022-04-25 at 1 00 18 PM" src="https://user-images.githubusercontent.com/72515939/165023853-616c5d80-dda3-4e94-b0e8-fbba3d226fcb.png"></p>
 
 <p align="center"><img width="1015" alt="Screen Shot 2022-04-20 at 12 28 18 AM" src="https://user-images.githubusercontent.com/72515939/164051402-d2743892-2cec-41aa-8415-4b3f41892fdc.png"></p>
 
