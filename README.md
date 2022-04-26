@@ -461,7 +461,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 	
 <br>	
 
-**IGPU and DGPU Test**
+**GPU Settings and Test**
 
 <p align="justify">We will conduct a "4K Video Test" via Safari on Monterey. Use "Launchpad > Other > ActivityMonitor" as our observation tool. Do note, the use of "igfxonline=1" or properties of the IGPU boot-arg, i.e., "igfxonline > data > 01000000", is to leave our headless IGPU state to always being online. To get additional GPU tabs on the activity monitor, "igfxmetal=1" or device properties on IGPU, "enable-metal > data > 01000000", "AAPL,ig-platform-id", and "AAPL,slot-name" are required. Next, we can start the test as shown in the picture. 
 	
