@@ -470,9 +470,15 @@ Besides, a plist is often used to correct problems that a user may be having wit
 <p align="center"><img width="1072" alt="Screen_Shot_2022-04-25_at_3_16_43_PM" src="https://user-images.githubusercontent.com/72515939/165040712-2b0e8ccb-59ad-4bca-ac4c-e9e453f5132a.png"></p>
 <p align="center"><img width="1329" alt="Screen_Shot_2022-04-25_at_3_17_33_PM" src="https://user-images.githubusercontent.com/72515939/165040238-e6f9c55f-dfdc-40a9-9893-9fe45f331fe3.png"></p>
 
-**Checkout Video Test** on [Youtube](https://youtu.be/dd3SwAZ3S_w)
+**IGPU Info**
+
+<p align="center"><img width="1239" alt="Screen_Shot_2022-04-27_at_1_05_05_AM" src="https://user-images.githubusercontent.com/72515939/165354830-6cdc4953-3081-44a0-812c-11b5b0bead78.png"></p>
+
+**DGPU Info**
 
 <p align="center"><img width="1239" alt="Screen Shot 2022-04-27 at 1 00 41 AM" src="https://user-images.githubusercontent.com/72515939/165354288-3be11774-1c5b-4a76-a55f-f8f7e100bba8.png"></p>
+
+**Checkout Video Test** on [Youtube](https://youtu.be/dd3SwAZ3S_w)
 
 <br>
 
