@@ -528,6 +528,12 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 
 <br>
 
+## EFI Update
+
+[Update Guide](https://www.youtube.com/watch?v=mcckKATpREE)
+
+<br>
+
 ## Acknowledgements
 
 I would like to thanks all folks in Hackintosh Community especially:
