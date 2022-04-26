@@ -472,6 +472,8 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 **Checkout Video Test** on [Youtube](https://youtu.be/dd3SwAZ3S_w)
 
+<p align="center"><img width="1239" alt="Screen Shot 2022-04-27 at 1 00 41 AM" src="https://user-images.githubusercontent.com/72515939/165354288-3be11774-1c5b-4a76-a55f-f8f7e100bba8.png"></p>
+
 <br>
 
 ## Power Issues
