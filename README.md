@@ -538,7 +538,7 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 
 ## EFI Update
 
-[Update Guide](https://www.youtube.com/watch?v=mcckKATpREE)
+[rusty-bits/octool](https://youtu.be/5KNzD08Hkxs) - Watch octool guide here
 
 <br>
 
