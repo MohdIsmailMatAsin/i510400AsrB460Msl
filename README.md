@@ -508,8 +508,7 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 
 ## Results
 
-<p align="center"><img width="697" alt="Screen Shot 2022-04-21 at 11 51 26 PM" src="https://user-images.githubusercontent.com/72515939/164501037-d74cc18f-05d2-4707-aa47-35957e5b283b.png"></p>
-<p align="center"><img width="2560" alt="Screen Shot 2022-04-23 at 4 28 52 PM" src="https://user-images.githubusercontent.com/72515939/164886899-69d7b602-1ac0-4d15-afe1-63eb31958516.png"></p>
+<p align="center"><img width="2560" alt="hehe" src="https://user-images.githubusercontent.com/72515939/165800541-8f74b8a1-fbcb-42b8-b3eb-647eafcb06a5.png"></p>
 
 <br>
 
