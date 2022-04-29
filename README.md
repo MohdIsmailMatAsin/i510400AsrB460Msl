@@ -256,6 +256,239 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
 <p align="center"><img width="1015" alt="Screen Shot 2022-04-21 at 11 56 42 PM" src="https://user-images.githubusercontent.com/72515939/164502200-d2e8d65c-fc4f-486f-9e66-c83d4013c870.png"></p>
 
+```text
+400 Series Chipset Family SATA AHCI Controller:
+
+  Name:	SATA
+  Type:	SATA controller
+  Driver Installed:	Yes
+  MSI:	Yes
+  Bus:	PCI
+  Slot:	Internal
+  Vendor ID:	0x8086
+  Device ID:	0xa382
+  Subsystem Vendor ID:	0x1849
+  Subsystem ID:	0xa382
+  Revision ID:	0x0000
+
+AMD Radeon RX 5500 XT:
+
+  Name:	ATY_GPU
+  Type:	gpu-controller
+  Driver Installed:	Yes
+  MSI:	Yes
+  Bus:	PCI
+  Slot:	Slot- 1
+  Vendor ID:	0x1002
+  Device ID:	0x7340
+  Subsystem Vendor ID:	0x1462
+  Subsystem ID:	0x3822
+  Revision ID:	0x00c5
+  Link Width:	x16
+  Link Speed:	16.0 GT/s
+
+AMD Radeon RX 5500 XT HDMI Audio:
+
+  Name:	HDAU
+  Type:	Audio device
+  Driver Installed:	Yes
+  MSI:	Yes
+  Bus:	PCI
+  Slot:	Slot- 1
+  Vendor ID:	0x1002
+  Device ID:	0xab38
+  Subsystem Vendor ID:	0x1462
+  Subsystem ID:	0x3822
+  Revision ID:	0x0000
+  Link Width:	x16
+  Link Speed:	16.0 GT/s
+
+BCM4360 802.11ac Wireless Network Adapter:
+
+  Name:	ARPT
+  Type:	Network controller
+  Driver Installed:	Yes
+  MSI:	Yes
+  Bus:	PCI
+  Slot:	M2_Wifi
+  Vendor ID:	0x14e4
+  Device ID:	0x43a0
+  Subsystem Vendor ID:	0x106b
+  Subsystem ID:	0x0111
+  Revision ID:	0x0003
+  Link Width:	x1
+  Link Speed:	2.5 GT/s
+
+Comet Lake PCH-V cAVS:
+
+  Name:	HDEF
+  Type:	Audio device
+  Driver Installed:	Yes
+  MSI:	Yes
+  Bus:	PCI
+  Slot:	Audio
+  Vendor ID:	0x8086
+  Device ID:	0xa3f0
+  Subsystem Vendor ID:	0x1849
+  Subsystem ID:	0x1203
+  Revision ID:	0x0000
+
+Comet Lake PCH-V HECI Controller:
+
+  Name:	IMEI
+  Type:	Communication controller
+  Driver Installed:	Yes
+  MSI:	Yes
+  Bus:	PCI
+  Slot:	Internal
+  Vendor ID:	0x8086
+  Device ID:	0xa3ba
+  Subsystem Vendor ID:	0x1849
+  Subsystem ID:	0xa3ba
+  Revision ID:	0x0000
+
+Comet Lake PCH-V Memory Controller:
+
+  Name:	PPMC
+  Type:	Memory controller
+  Driver Installed:	Yes
+  MSI:	Yes
+  Bus:	PCI
+  Slot:	Internal
+  Vendor ID:	0x8086
+  Device ID:	0xa3a1
+  Subsystem Vendor ID:	0x1849
+  Subsystem ID:	0xa3a1
+  Revision ID:	0x0000
+
+Comet Lake PCH-V SMBus Host Controller:
+
+  Name:	SBUS
+  Type:	SMBus
+  Driver Installed:	Yes
+  MSI:	Yes
+  Bus:	PCI
+  Slot:	Internal
+  Vendor ID:	0x8086
+  Device ID:	0xa3a3
+  Subsystem Vendor ID:	0x1849
+  Subsystem ID:	0xa3a3
+  Revision ID:	0x0000
+
+Comet Lake PCH-V USB Controller:
+
+  Name:	XHC
+  Type:	USB controller
+  Driver Installed:	Yes
+  MSI:	Yes
+  Bus:	PCI
+  Slot:	Internal
+  Vendor ID:	0x8086
+  Device ID:	0xa3af
+  Subsystem Vendor ID:	0x1849
+  Subsystem ID:	0xa3af
+  Revision ID:	0x0000
+
+Intel UHD Graphics 630:
+
+  Name:	display
+  Type:	Display controller
+  Driver Installed:	Yes
+  MSI:	Yes
+  Bus:	PCI
+  Slot:	Internal
+  Vendor ID:	0x8086
+  Device ID:	0x9bc5
+  Subsystem Vendor ID:	0x1849
+  Subsystem ID:	0x9bc5
+  Revision ID:	0x0005
+  Link Width:	x0
+
+Kingston A2000 NVMe SSD:
+
+  Name:	ANS1
+  Type:	Non-Volatile memory controller
+  Driver Installed:	Yes
+  MSI:	Yes
+  Bus:	PCI
+  Slot:	M2_2
+  Vendor ID:	0x144d
+  Device ID:	0xa806
+  Subsystem Vendor ID:	0x2646
+  Subsystem ID:	0x2263
+  Revision ID:	0x0003
+  Serial Number:	50026B7684638610
+  Link Width:	x4
+  Link Speed:	8.0 GT/s
+
+Kingston A2000 NVMe SSD:
+
+  Name:	ANS0
+  Type:	Non-Volatile memory controller
+  Driver Installed:	Yes
+  MSI:	Yes
+  Bus:	PCI
+  Slot:	M2_1
+  Vendor ID:	0x144d
+  Device ID:	0xa806
+  Subsystem Vendor ID:	0x2646
+  Subsystem ID:	0x2263
+  Revision ID:	0x0003
+  Serial Number:	50026B7684531C2E
+  Link Width:	x4
+  Link Speed:	8.0 GT/s
+
+Realtek RTL8125B PCI Express 2.5 Gigabit Ethernet:
+
+  Name:	RTL0
+  Type:	Ethernet controller
+  Driver Installed:	Yes
+  MSI:	Yes
+  Bus:	PCI
+  Slot:	Ethernet
+  Vendor ID:	0x10ec
+  Device ID:	0x8125
+  Subsystem Vendor ID:	0x1849
+  Subsystem ID:	0x8125
+  Revision ID:	0x0005
+  Link Width:	x1
+  Link Speed:	5.0 GT/s
+
+Silicon Power MAP1001 NVMe SSD:
+
+  Name:	ANS2
+  Type:	Non-Volatile memory controller
+  Driver Installed:	Yes
+  MSI:	Yes
+  Bus:	PCI
+  Slot:	Slot- 2
+  Vendor ID:	0x144d
+  Device ID:	0xa806
+  Subsystem Vendor ID:	0x1e4b
+  Subsystem ID:	0x1001
+  Revision ID:	0x0001
+  Serial Number:	30035363716
+  Link Width:	x1
+  Link Speed:	8.0 GT/s
+
+VIA USB 3.0 eXtensible Host Controller:
+
+  Name:	PXSX
+  Type:	USB controller
+  Driver Installed:	Yes
+  MSI:	Yes
+  Bus:	PCI
+  Slot:	Slot- 3
+  Vendor ID:	0x1106
+  Device ID:	0x3483
+  Subsystem Vendor ID:	0x1106
+  Subsystem ID:	0x3483
+  Revision ID:	0x0001
+  Link Width:	x1
+  Link Speed:	5.0 GT/s
+```
+
+
 <br>
 
 ### 3.0 - OC\Drivers
