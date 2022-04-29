@@ -634,7 +634,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 ## Headless UHD Graphics 630 Settings
 
-**XML**
+**AppleXML**
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -686,7 +686,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 </plist>
 ```
 
-**PLIST**
+**Plist**
 
 <p align="center"><img width="477" alt="Screen Shot 2022-04-24 at 11 29 58 PM" src="https://user-images.githubusercontent.com/72515939/164984010-95cbbf14-17e4-46ee-991b-e244b4a012da.png"></p>
 
