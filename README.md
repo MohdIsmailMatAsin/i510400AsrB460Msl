@@ -749,7 +749,7 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 ## DRM Test
 
 - [✓] AppleTV
-- [✕] OpenCore [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view)
+- [✕][Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view)
 - [✓] Netflix
 
 **Remark:** Without shikigva patch.
