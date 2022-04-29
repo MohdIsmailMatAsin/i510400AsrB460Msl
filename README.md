@@ -249,7 +249,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 | RTL0   | Rename `RTL8125 2.5GbE Controller` device as `RP04,PXSX` to `RP04,RTL0` |
 | SBUS   | Fix `AppleSMBus` support in MacOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc |
 | SATA   | Serial ATA Device. Rename `SATA` to `SAT0`                   |
-| TSUB   | Known as `Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB` |
+| TSUB/THSS   | Known as `Thermal Subsystem` rename which is not identical using `ioreg`. Rename `pci8086,a3b1` to `TSUB`. **Patch:** Compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, identical to `CML` device `pci8086,a3a1`. Patch can be added either on `PPMC or TSUB/THSS`. `Both` is possible via testing. Remain only one `AppleIntelPCHPMC` patch. Via `PPMC` is better. By default, TSUB/THSS is removed via my `config.plist` |
 | USBX   | USB `Power Properties` for Skylake and newer motherboard generation |
 | XHC    | Board `Comet Lake PCH-V USB Controller` device               |
 
