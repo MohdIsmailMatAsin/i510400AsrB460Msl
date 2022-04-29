@@ -743,14 +743,13 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 ### Enable
 
 - VT-x
-- Above 4G decoding
-- 2020+ BIOS Notes: When enabling Above4G, Resizable BAR Support may become an available on some Z490 and newer motherboards. Please ensure that Booter -> Quirks -> ResizeAppleGpuBars is set to 0 if this is enabled.
+- Above 4G decoding (When enabling Above4G, Resizable BAR Support may become an available on some Z490 and newer motherboards. Please ensure that Booter -> Quirks -> ResizeAppleGpuBars is set to 0 if this is enabled)
 - Hyper-Threading
 - Execute Disable Bit
 - EHCI/XHCI Hand-off
 - OS type: Windows 8.1/10 UEFI Mode
-- DVMT Pre-Allocated (iGPU Memory): 64MB / Auto.
-- SATA Mode: AHCI
+- DVMT Pre-Allocated (iGPU Memory) to 64MB / Auto
+- SATA Mode: Advanced Host Controller Interface (AHCI)
 
 <br>
 
