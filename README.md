@@ -741,7 +741,7 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 
 ## Results
 
-<p align="center"><img width="2560" alt="hehe" src="https://user-images.githubusercontent.com/72515939/165800541-8f74b8a1-fbcb-42b8-b3eb-647eafcb06a5.png"></p>
+<p align="center"><img width="2560" alt="Screen Shot 2022-04-29 at 11 42 14 PM" src="https://user-images.githubusercontent.com/72515939/165978322-61a3c1fd-0967-478c-88cb-c97b200e2ed5.png"></p>
 
 <br>
 
