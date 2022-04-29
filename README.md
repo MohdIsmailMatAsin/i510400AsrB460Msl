@@ -726,15 +726,31 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 
 ## BIOS/UEFI Settings
 
-1. Disable `CSM/ Enable UEFI`
-2. Disable `Secure Boot`
-3. Set `SATA` as `AHCI` (Do not install MacOS through `Rapid Storage Technology/RST`)
-4. Disable `CFG Lock`
-5. Disable `Fast Boot`
-6. Disable `Intel Virtualization Technology`
-7. Disable `VT-D`
-8. Enable` XHCI Hand-off`
-9. Disable `Legacy USB Support` (If Needed)
+# Disable
+
+- Fast Boot
+- Secure Boot
+- Serial/COM Port
+- Parallel Port
+- VT-d (can be enabled if you set DisableIoMapper to YES)
+- CSM
+- Thunderbolt(For initial install, as Thunderbolt can cause issues if not setup correctly)
+- Intel SGX
+- Intel Platform Trust
+- CFG Lock 
+- Rapid Storage Technology (RST)
+
+# Enable
+
+- VT-x
+- Above 4G decoding
+- 2020+ BIOS Notes: When enabling Above4G, Resizable BAR Support may become an available on some Z490 and newer motherboards. Please ensure that Booter -> Quirks -> ResizeAppleGpuBars is set to 0 if this is enabled.
+- Hyper-Threading
+- Execute Disable Bit
+- EHCI/XHCI Hand-off
+- OS type: Windows 8.1/10 UEFI Mode
+- DVMT Pre-Allocated (iGPU Memory): 64MB / Auto.
+- SATA Mode: AHCI
 
 <br>
 
@@ -748,7 +764,7 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 
 ## DRM Test
 
-AppleTV ✓, [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view) ✕, Netflix ✓
+AppleTV ✓ | [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view) ✕ | Netflix ✓
 
 
 **Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md). Shiki only applicable via Catalina and below.
