@@ -751,7 +751,7 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 AppleTV ✓, [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view) ✕, Netflix ✓
 
 
-**Remark:** Without shikigva patch.
+**Remark:** All patches is done without `Shiki`. `Shiki` only applicable on Catalina and below.
 
 
 <br>
