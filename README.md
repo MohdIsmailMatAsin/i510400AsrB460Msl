@@ -726,7 +726,7 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 
 ## BIOS/UEFI Settings
 
-# Disable
+### Disable
 
 - Fast Boot
 - Secure Boot
@@ -740,7 +740,7 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 - CFG Lock 
 - Rapid Storage Technology (RST)
 
-# Enable
+### Enable
 
 - VT-x
 - Above 4G decoding
