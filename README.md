@@ -175,13 +175,13 @@ mohdismailmatasin@Mohds-iMac EFI % tree
 
 <p align="justify">Differentiated System Description Table. It Is a major ACPI table and is used to describe what peripherals the machine has. Also holds information on PCI IRQ mappings and power management.</p>
 
-<p align="center"><img width="1111" alt="Screen Shot 2022-04-22 at 12 22 32 AM" src="https://user-images.githubusercontent.com/72515939/164506898-66804fd4-987d-4b3d-886e-1312604f5991.png"></p>
+<p align="center"><img width="1109" alt="Screen_Shot_2022-04-30_at_3_41_29_PM" src="https://user-images.githubusercontent.com/72515939/166096869-e6b7fe84-c465-4504-ab89-14b8887561ac.png"></p>
 
 **What is `SSDT`?**
 
 <p align="justify">Secondary System Description Table. It is encoded in AML which is exactly the same way as the DSDT. It acts as a additional table to the DSDT. 
 
-<p align="center"><img width="1160" alt="Screen Shot 2022-04-22 at 12 22 49 AM" src="https://user-images.githubusercontent.com/72515939/164506930-3ea0b1d6-65ed-4f05-9724-11cf51b07adf.png"></p>  
+<p align="center"><img width="1111" alt="Screen_Shot_2022-04-30_at_3_40_56_PM" src="https://user-images.githubusercontent.com/72515939/166096876-9d9d956e-80ed-477c-b7c3-0897d7c47abe.png"></p>  
 
 Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
