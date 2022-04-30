@@ -518,7 +518,7 @@ AppleTV ✓ | [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jv
 
 <br>
 
-**Trim Support:** 
+## Trim Support
 
 1. NVMe: `Kingston A2000 NVMe` trim support is working native. 
 
