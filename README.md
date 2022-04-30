@@ -31,7 +31,7 @@
 
 **Remark:** <p align="justify">The settings above may not be the same as the recommended settings by Dortania. In these case, `Kingston A2000 NVMe` trim support is working native. To find out more, please check [OpenCore Configuration](https://dortania.github.io/docs/release/Configuration.html) and [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for SecureBootModel selection.</p> 
 
-<img width="1232" alt="Screen_Shot_2022-04-30_at_10_42_09_AM" src="https://user-images.githubusercontent.com/72515939/166087468-f2e70c6c-8b98-47be-a3e5-73e5fc8fb8b4.png">
+<img width="1239" alt="Screen_Shot_2022-04-30_at_10_45_05_AM" src="https://user-images.githubusercontent.com/72515939/166087551-e52f35db-1e52-47e9-8455-e70a81fdbf20.png">
 
 <br>
 
