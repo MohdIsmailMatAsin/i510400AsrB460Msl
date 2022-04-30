@@ -502,14 +502,6 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 
 <br>
 
-## Results
-
-<p align="center"><img width="2560" alt="Screen Shot 2022-04-30 at 12 37 23 AM" src="https://user-images.githubusercontent.com/72515939/165986968-f6debb0f-8b5b-474b-850f-972afcc78621.png"></p>
-
-Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/Space.jpeg/file)
-
-<br>
-
 ## DRM Test
 
 AppleTV ✓ | [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view) ✕ | Netflix ✓
@@ -545,6 +537,14 @@ AppleTV ✓ | [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jv
 ## EFI Update
 
 [rusty-bits/octool](https://youtu.be/5KNzD08Hkxs) - Watch octool guide here
+
+<br>
+
+## Results
+
+<p align="center"><img width="2560" alt="Screen Shot 2022-04-30 at 12 37 23 AM" src="https://user-images.githubusercontent.com/72515939/165986968-f6debb0f-8b5b-474b-850f-972afcc78621.png"></p>
+
+Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/Space.jpeg/file)
 
 <br>
 
