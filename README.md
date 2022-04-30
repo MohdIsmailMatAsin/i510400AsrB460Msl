@@ -566,4 +566,3 @@ I would like to thanks all folks in Hackintosh Community especially:
 ## Follow Me on 
 
 - [u/mohdismailmatasin](https://www.reddit.com/user/mohdismailmatasin) on [reddit](https://www.reddit.com)
-- [mohdismail83](https://www.facebook.com/mohdismail83/) on [Facebook](https://www.facebook.com)
