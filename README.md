@@ -35,23 +35,28 @@
 
 ## Introduction
 
-**What is `BIOS`?**
+**What exactly is "BIOS"?**
 
-<p align="justify">BIOS stands for Basic Input/Output System, stored on an EPROM (Erasable Programmable Read-Only Memory), allowing the manufacturer to push out updates easily. It provides many helper functions that allow reading boot sectors of attached storage and printing things on screen. Asrock Motherboard can access BIOS during the initial phases of the boot procedure by pressing Del, F11 (Enter Setup).</p>
+<p align="justify">BIOS is "firmware", stored in a chip in a specific part of the motherboard, which is basically to help load the operating system. In this description, the motherboard BIOS for the Asrock B460M brand can be accessed during the initial boot phase via the Del and F11 (Enter Setup) keyboard keys.</p>
 
-**What is `EFI`?**
+**BIOS key: ASUS ➣ F8 | GIGABYTE ➣ F12 | MSI ➣ F11 | INTEL® ➣ F10 | ASROCK ➣ F11 | EVGA ➣ F7**
 
-<p align="justify">Stand for Extensible Firmware Interface. The EFI system partition (ESP), a small partition formatted with FAT32, is usually around 100MB for Windows™ and around 200MB for MacOS™, this is where the EFI boot loaders and applications used by the firmware at system during start-up are stored. If your hard drive is in the GUID Partition table (GPT) partition style, it will automatically generate an EFI system partition after you have installed your operating systems. Both Windows™ and Mac operating systems are supported.</p>
+
+**What is "EFI"?**
+
+<p align="justify">Refers to the "Extensible Firmware Interface" folder and file. Typically, files and folders are stored on the EFI/ESP Hard Disk (HDD), Non-Volatile Memory Express (NVMe), or Solid State Drive (SSD) system partition. It is in a small partition in FAT32 format. Typically, the partition size for Windows or Linux is around 100 MB, and for MacOS it is around 200 MB. If this partition is in the form of a GUID Partition Table, also known as GPT, the EFI partition will be created after the formatting process automatically.</p>
 
 ![efi-system-partition](https://user-images.githubusercontent.com/72515939/161425316-cb229e60-b2ad-4538-9b68-bbabb89a88a8.png)
 
-**What is `UEFI`?**
 
-<p align="justify">UEFI stands for "Unified Extensible Firmware Interface." The UEFI Specification defines a new model for the interface between personal-computer operating systems and platform firmware. The interface consists of data tables that contain platform-related information, plus boot and runtime service calls that are available to the operating system and its loader. Together, these provide a standard environment for booting an operating system and running pre-boot applications.</p>
+**What exactly is UEFI?**
 
-**What is `Boot-loader`?**
+<p align="justify">UEFI stands for 'Unified Extensible Firmware Interface'. It basically replaces the BIOS that the hardware uses to load and start the operating system on the current computer. Intel® created legacy UEFI for its Itanium-based servers. Originally, the main limitation of the BIOS is that it is 16-bit with only 1 MB of space provided and uses a Master Boot Record (MBR) on its partition. This type of legacy UEFI has a problem with the amount of RAM and also the number of HDDs that cannot exceed 2.2TB. To address this, Intel® launched the Intel® Boot Initiative, which includes a GUID Partition Table (GPT) that replaces the MBR form partition. Later, it was renamed UEFI Modern GPT for models that support Intel® and AMD processors and are compatible with Windows TM, Mac TM, and Linux.</p>
 
-<p align="justify">A boot-loader, also known as a boot programme or bootstrap loader, is a special operating system software that loads into the working memory of a computer after start-up. For this purpose, immediately after a device starts, a boot-loader is generally launched by a bootable medium like a hard drive, a CD/DVD, or a USB stick. The boot medium receives information from the computer’s firmware (e.g., BIOS) about where the boot-loader is. The whole process is also described as "booting". OpenCore, Clover, rEFInd, reEFIt, Chameleon, and a few other names are known as boot-loaders. Most of these boot-loaders are capable of being chain-loaders or chain-loading. A chain-loader is similar to the use of overlays. Unlike overlays, chain-loaders replace the currently executing programme in its entirety. Overlays usually replace only a portion of the running program. Like the use of overlays, the use of chain-loading increases the I/O load of an application.</p>
+
+**What is a "boot-loader"?**
+
+<p align="justify">A boot loader is a programme that is embedded in an operating system as a boot launcher or operating system caller that is on the hard disc or other boot media. For example, USB "flash drives" (e.g. GRUB, LILO, Clover, OpenCore, rEFInd, and rEFIt. A boot loader is usually used to select the operating system because the hard disc contains more than one operating system. This boot loader is loaded into the computer's BIOS, which is then used to invoke the kernel of an operating system. Most of these boot programmes are capable of acting as "chain-loaders." A Chain-Loader is a layer for other boot programmes to invoke an operating system.</p>
 
 <br>
 
@@ -69,9 +74,9 @@
 
 <p align="center"><img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161431087-8fadbe79-bdc6-49fc-8721-eb149db7ede0.png"></p>
 
-<p align="justify">OpenCore is what we refer to as a boot-loader and also a chain-loader at the same time; it is a complex piece of software that we use to prepare our systems for MacOS™, specifically by injecting new data for MacOS™ such as SMBIOS, ACPI tables, and kexts.</p>
+<p align="justify">OpenCore is referred to as a "boot-loader" and also a "chain-loader". At the same time, it is a complex software program, used to call the operating systems MacOS™, Linux, and Windows™. In addition, it also has the ability to inject new data into MacOS™ operating systems such as SMBIOS, Advanced Configuration Table and Power Interface (ACPI), and Kernel Extension (Kext).</p>
 
-**Remark:** <p align="justify">As an alternative, we can use [DiskGenius](https://www.diskgenius.com) to identify the storage structure. [DiskGenius](https://www.diskgenius.com) is an application for Windows™ only, and it is very useful for manipulating drives and for various other purposes. You can select and click on the EFI partition to see the contents contained in the partition.</p> 
+**Remark:** <p align="justify">Alternatively, [DiskGenius](https://www.diskgenius.com) can be used to identify the storage structure. It is a special application only for Windows ™ and it is very useful for manipulating drives and for various other purposes. By clicking on the EFI partition, the contents of the partition can be viewed and manipulated easily.</p> 
 
 ![Artboard 1](https://user-images.githubusercontent.com/72515939/166097226-b35e84ab-0498-419a-a3e6-0cf6e9c276e5.png)
 
