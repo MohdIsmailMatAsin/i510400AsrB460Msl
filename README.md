@@ -330,7 +330,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 - OpenCore [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_release.plist)
 - Clover [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_clover.plist) 
 
-Tools to edit config.plist
+**Tools to edit config.plist**
 
 - [ProperTree](https://github.com/corpnewt/ProperTree) ➣ Cross Platform (Mac™/Linux/Windows™)
 - [Xplist](https://github.com/ic005k/Xplist) ➣ Cross Platform (Mac™/Linux/Windows™)
