@@ -477,28 +477,28 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 
 ### Disable
 
-- Fast Boot
-- Secure Boot
-- Serial/COM Port
-- Parallel Port
-- VT-d (can be enabled if you set DisableIoMapper to YES)
-- CSM
-- Thunderbolt (For initial install, as Thunderbolt can cause issues if not setup correctly)
-- Intel Software Guard Extensions (SGX)
-- Intel Platform Trust. (Linux and Windows 10™.  Proper dual boot with Windows 11™ require TPM to be enable. Refer: [InsanelyMac Discussions](https://www.insanelymac.com/forum/topic/348202-how-to-opencore-070-071-differences/))
-- CFG Lock 
-- Rapid Storage Technology (RST)
+- Fast Boot ➣ Feature in BIOS that reduces your computer boot time.
+- Secure Boot ➣ Secure boot is a security standard developed by members of the PC industry
+- Serial/COM Port ➣ Serial port is a serial communication interface
+- Parallel Port ➣ An interface allowing a personal computer (PC) to transmit or receive data down multiple bundled cables to a peripheral device such as a printer
+- Intel Virtualization Technology (VT-d) ➣ Allows user to direct passthrough of devices. This option can be enabled if you set `DisableIoMapper` to `YES`
+- Compatibility Support Module (CSM) ➣ Compatibility Support Module
+- Thunderbolt ➣ New technology that supports high-resolution displays and high-performance data through one single port. For initial install, as Thunderbolt can cause issues if not setup correctly
+- Intel Software Guard Extensions (SGX) ➣ A set of security-related instruction codes that are built into some Intel central processing units (CPUs)
+- Intel Platform Trust (TPM) ➣ Trusted Platform Module, improves the security of your PC by securely creating and storing cryptographic keys. (`Linux` and `Windows 10™`.  Proper `dual-boot` with `Windows 11™` require TPM to be enable. **Refer:** [InsanelyMac Discussions](https://www.insanelymac.com/forum/topic/348202-how-to-opencore-070-071-differences/))
+- Config Lock (CFG Lock) ➣ Setting in your BIOS that allows for a specific register(in this case the MSR 0xE2) to be written to
+- Rapid Storage Technology (RST) ➣ Windows-based application that provides improved performance and reliability for computers that are equipped with SATA disks for desktop, mobile, and server platforms
 
 ### Enable
 
-- VT-x
+- Intel Virtualization Technology (VT-x) ➣ An actual hardware virtualisation assistance.
 - Above 4G decoding (When enabling Above4G, Resizable BAR Support may become an available on some Z490 and newer motherboards. Please ensure that Booter -> Quirks -> ResizeAppleGpuBars is set to 0 if this is enabled)
-- Hyper-Threading
-- Execute Disable Bit
-- EHCI/XHCI Hand-off
-- OS type: Windows 8.1/10 UEFI Mode
-- DVMT Pre-Allocated (iGPU Memory) to 64MB / Auto
-- SATA Mode: Advanced Host Controller Interface (AHCI)
+- Hyper-Threading ➣ An `Intel®` hardware innovation that allows multiple threads to run on each core, this means more work can be done in parallel
+- Execute Disable Bit ➣ An `Intel®` hardware-based security component.
+- EHCI/XHCI Hand-off ➣ USB functions are handled by the OS
+- OS type ➣ Windows 8.1/10 UEFI Mode
+- DVMT Pre ➣ The Intel HD Graphics driver for Windows. Please allocated (iGPU Memory) to 64MB / Auto
+- SATA Mode ➣ Advanced Host Controller Interface (AHCI)
 
 <br>
 
