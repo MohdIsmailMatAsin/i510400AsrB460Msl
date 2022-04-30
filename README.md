@@ -330,6 +330,11 @@ Besides, a plist is often used to correct problems that a user may be having wit
 - OpenCore [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_release.plist)
 - Clover [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_clover.plist) 
 
+Tools to edit config.plist
+
+- [ProperTree](https://github.com/corpnewt/ProperTree) ➣ Cross Platform (Mac™/Linux/Windows™)
+- [Xplist](https://github.com/ic005k/Xplist) ➣ Cross Platform (Mac™/Linux/Windows™)
+
 <br>
 
 ## Quirks Check
@@ -610,7 +615,7 @@ I would like to thanks all folks in Hackintosh Community especially:
 
 - [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) ➣ a great guide
 - [acidanthera](https://github.com/acidanthera) ➣ [OpenCore](https://github.com/acidanthera/OpenCorePkg) Boot-loader and powerful ACPI compiler, [MaciASL](https://github.com/acidanthera/MaciASL)
-- [corpNewt](https://github.com/corpnewt) ➣ developing simple [USBmap](https://github.com/corpnewt/USBMap) tools
+- [corpNewt](https://github.com/corpnewt) ➣ developing simple [USBmap](https://github.com/corpnewt/USBMap) tools and ProperTree](https://github.com/corpnewt/ProperTree) 
 - [dhinakg](https://github.com/USBToolBox/tool) ➣ developing easy Windows™ based USBmap, [USBToolBox](https://github.com/USBToolBox/tool) which inspired by [corpNewt](https://github.com/corpnewt) [USBmap](https://github.com/corpnewt/USBMap)
 - [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) ➣ an official [Facebook](https://www.facebook.com) community for Hackintosh
 - [headkaze](https://github.com/headkaze) ➣ the Swiss Army Knife of Vanilla Hackintoshing, known as [Hackintool](https://github.com/headkaze/Hackintool) and awesome EFI Mounter called as [EFIAgent](https://github.com/headkaze/EFI-Agent)
