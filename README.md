@@ -56,7 +56,7 @@
 
 **What is a "boot-loader"?**
 
-<p align="justify">A boot loader is a programme that is embedded in an operating system as a boot launcher or operating system caller that is on the hard disc or other boot media. For example, USB "flash drives" (e.g. GRUB, LILO, Clover, OpenCore, rEFInd, and rEFIt. A boot loader is usually used to select the operating system because the hard disc contains more than one operating system. This boot loader is loaded into the computer's BIOS, which is then used to invoke the kernel of an operating system. Most of these boot programmes are capable of acting as "chain-loaders". A "chain-loaders" is a layer for other boot programmes to invoke an operating system.</p>
+<p align="justify">A boot loader is a programme that is embedded in an operating system as a boot launcher or operating system caller that is on the hard disc or other boot media. For example, USB "flash drives". As example; "GRUB, LILO, Clover, OpenCore, rEFInd, and rEFIt". A boot loader is usually used to select the operating system because the hard disc contains more than one operating system. This boot loader is loaded into the computer's BIOS, which is then used to invoke the kernel of an operating system. Most of these boot programmes are capable of acting as "chain-loaders". A "chain-loaders" is a layer for other boot programmes to invoke an operating system.</p>
 
 <br>
 
