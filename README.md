@@ -618,6 +618,7 @@ I would like to thanks all folks in Hackintosh Community especially:
 - [daliansky](https://github.com/daliansky) ➣ publishing his own [OpenCore](https://github.com/acidanthera/OpenCorePkg) [ACPI](https://kb.iu.edu/d/ahvl) method, known as [OC-Little](https://github.com/daliansky/OC-little)
 - [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) ➣ translating [daliansky](https://github.com/daliansky) [OC-Little](https://github.com/daliansky/OC-little) which known as [OC-Little Translate](https://github.com/5T33Z0/OC-Little-Translated) + informative [Clover Crate](https://github.com/5T33Z0/Clover-Crate) for [Clover-bootloader](https://github.com/CloverHackyColor/CloverBootloader)
 - [rusty-bits](https://github.com/rusty-bits) ➣ [cross platform](https://en.wikipedia.org/wiki/Cross-platform_software) OpenCore EFI update , known as [octool](https://github.com/rusty-bits/octool)
+- [ic005k](https://github.com/ic005k) ➣ develop [Xiasl](https://github.com/ic005k/Xiasl), [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools), and [Xplist](https://github.com/ic005k/Xplist)
 
 ## Follow Me!
 
