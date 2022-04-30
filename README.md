@@ -381,6 +381,58 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <br>
 
+## Additional Framebuffer Settings for AMD Navi Based GPU
+
+### Framebuffers available in AMDRadeonX6000Framebuffer.kext >> Contents >> Info.plist.
+
+**5700 - Navi 10**
+AMDRadeonNavi10Controller
+device-id: 0x73101002 0x73121002 0x73181002 0x73191002 0x731A1002 0x731B1002 0x731F1002 0x73BF1002
+framebuffer: ATY,Adder / ATY,Ikaheka
+5600 - Navi 12
+AMDRadeonNavi12Controller
+device-id: 0x73601002 0x73621002
+framebuffer: ATY,Sunbeam
+
+**5500 - Navi 14**
+AMDRadeonNavi14Controller
+device-id: 0x73401002 0x73411002 0x73431002 0x73471002 0x734F1002
+framebuffer: ATY,Python / ATY,Keelback / ATY,Boa
+
+**6800 and 6900 - Navi 21**
+AMDRadeonNavi21Controller
+device-id: 0x73A01002 0x73A21002 0x73A31002 0x73AB1002 0x73AE1002 0x73AF1002 0x73BF1002
+framebuffer: ATY,Belknap / ATY,Carswell / ATY,Deepbay
+
+**6600 - Navi 23**
+AMDRadeonNavi23Controller
+device-id: 0x73E31002 0x73FF1002 0x73E01002
+framebuffer: ATY,Henbury
+
+**Device Properties sample settings**
+
+```xml
+<key>DeviceProperties</key>
+    <dict>
+        <key>Add</key>
+        <dict>
+            <key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
+            <dict>
+                <key>@0,name</key>
+                <string>ATY,Henbury</string>
+                <key>@1,name</key>
+                <string>ATY,Henbury</string>
+                <key>@2,name</key>
+                <string>ATY,Henbury</string>
+                <key>@3,name</key>
+                <string>ATY,Henbury</string>
+            </dict>
+        </dict>
+        <key>Delete</key>
+        <dict/>
+    </dict>
+```
+
 ## Headless UHD Graphics 630 Settings
 
 **AppleXML**
