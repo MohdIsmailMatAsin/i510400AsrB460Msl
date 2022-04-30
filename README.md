@@ -39,7 +39,7 @@
 
 <p align="justify">BIOS is "firmware", stored in a chip in a specific part of the motherboard, which is basically to help load the operating system. In this description, the motherboard BIOS for the Asrock B460M brand can be accessed during the initial boot phase via the Del and F11 (Enter Setup) keyboard keys.</p>
 
-**BIOS key: ASUS ➣ F8 | GIGABYTE ➣ F12 | MSI ➣ F11 | INTEL® ➣ F10 | ASROCK ➣ F11 | EVGA ➣ F7**
+**BIOS key: ASUS ➣ F8 | GIGABYTE ➣ F12 | MSI ➣ F11 | INTEL® ➣ F10 | ASROCK ➣ F11 | EVGA ➣ F7** 
 
 
 **What is "EFI"?**
