@@ -217,7 +217,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
 | Device | Information                                                  |
 | ------ | ------------------------------------------------------------ |
-| ALS0   | Optional/Not Needed. Normally, real `iMac` is include this device information. **Patch:** `smc-als` and `AppleLMUController`. These patch is only `Cosmetics`, nothing much we can do |
+| ALS0   | Optional/Not Needed. Normally, real `iMac` is include this device information. **Patch:** `smc-als` and `AppleLMUController`. These patch is only `Cosmetics` for Desktop, nothing much we can do |
 | ANS0   | Rename Kingston A2000 NVMe, `RP09,PXSX` to `RP09,ANS0`. Device is pointed to `M2- 1` Slot. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
 | ANS2   | Rename Silicon Power MAP1001 NVMe, `RP20,PXSX` to `RP20,ANS2`. Device is pointed to `Slot- 2`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
 | ANS1   | Rename Kingston A2000 NVMe, `RP21,PXSX` to `RP21,ANS1`. Device is pointed to `M2- 2` Slot. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
