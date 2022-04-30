@@ -10,8 +10,8 @@
 
 | Info      | Details                          | Info        | Details                                       |
 | --------- | -------------------------------- | ----------- | --------------------------------------------- |
-| OS 1      | Microsoft Windows 11 Pro         | Audio 1     | 7.1 CH HD Audio (Realtek ALC1200 Audio Codec) |
-| OS 2      | MacOS Monterey 12.3.1            | Audio 2     | U-Phoria UM2 USB Audio Device                 |
+| OS 1      | Microsoft Windows™ 11 Pro         | Audio 1     | 7.1 CH HD Audio (Realtek ALC1200 Audio Codec) |
+| OS 2      | MacOS™ Monterey 12.3.1            | Audio 2     | U-Phoria UM2 USB Audio Device                 |
 | Processor | Intel® Core(TM) i5-10400         | Motherboard | ASRock (B460M Steel Legend)                   |
 | GFX0      | Radeon RX 5500 XT 4GB            | PCI 1       | BCM94360 WiFi & Bluetooth                     |
 | IGPU      | Intel® UHD Graphics 630  1GB     | PCI 2       | VIA USB 3.0 eXtensible Host Controller        |
@@ -23,7 +23,7 @@
 
 ## APFS Changes
 
-| MacOS     | Mindate   | MinVersion       | SetApfsTrimTimeout | SecureBootModel       |
+| MacOS™     | Mindate   | MinVersion       | SetApfsTrimTimeout | SecureBootModel       |
 |-----------|-----------|------------------|--------------------|-----------------------|
 | Catalina  | 20200306  | 1412101001000000 | 0		        | j185-10.15.6 (19G2005)|
 | BigSur    | 0         | 0                | 0                  | j185-10.15.6 (19G2005)|
@@ -41,7 +41,7 @@
 
 **What is `EFI`?**
 
-<p align="justify">Stand for Extensible Firmware Interface. The EFI system partition (ESP), a small partition formatted with FAT32, is usually around 100MB for Windows and around 200MB for MacOS, this is where the EFI boot loaders and applications used by the firmware at system during start-up are stored. If your hard drive is in the GUID Partition table (GPT) partition style, it will automatically generate an EFI system partition after you have installed your operating systems. Both Windows and Mac operating systems are supported.</p>
+<p align="justify">Stand for Extensible Firmware Interface. The EFI system partition (ESP), a small partition formatted with FAT32, is usually around 100MB for Windows™ and around 200MB for MacOS™, this is where the EFI boot loaders and applications used by the firmware at system during start-up are stored. If your hard drive is in the GUID Partition table (GPT) partition style, it will automatically generate an EFI system partition after you have installed your operating systems. Both Windows™ and Mac operating systems are supported.</p>
 
 ![efi-system-partition](https://user-images.githubusercontent.com/72515939/161425316-cb229e60-b2ad-4538-9b68-bbabb89a88a8.png)
 
@@ -61,7 +61,7 @@
 
 <p align="center"><img width="827" alt="Screenshot 2022-04-03 133920" src="https://user-images.githubusercontent.com/72515939/161430959-f530d4a2-812f-43ec-9b78-6b54522f3a50.png"></p>
 
-- **MacOS**
+- **MacOS™**
 
 <p align="center"><img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161430979-9b890a71-a348-439b-98df-0e53e6a49da8.png"></p>
 
@@ -69,13 +69,11 @@
 
 <p align="center"><img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161431087-8fadbe79-bdc6-49fc-8721-eb149db7ede0.png"></p>
 
-<p align="justify">OpenCore is what we refer to as a boot-loader and also a chain-loader at the same time; it is a complex piece of software that we use to prepare our systems for MacOS, specifically by injecting new data for MacOS such as SMBIOS, ACPI tables, and kexts.</p>
+<p align="justify">OpenCore is what we refer to as a boot-loader and also a chain-loader at the same time; it is a complex piece of software that we use to prepare our systems for MacOS™, specifically by injecting new data for MacOS™ such as SMBIOS, ACPI tables, and kexts.</p>
 
-**Remark:** <p align="justify">As an alternative, we can use [DiskGenius](https://www.diskgenius.com) to identify the storage structure. [DiskGenius](https://www.diskgenius.com) is an application for Windows only, and it is very useful for manipulating drives and for various other purposes. You can select and click on the EFI partition to see the contents contained in the partition.</p> 
+**Remark:** <p align="justify">As an alternative, we can use [DiskGenius](https://www.diskgenius.com) to identify the storage structure. [DiskGenius](https://www.diskgenius.com) is an application for Windows™ only, and it is very useful for manipulating drives and for various other purposes. You can select and click on the EFI partition to see the contents contained in the partition.</p> 
 
-<p align="center"><img width="928" alt="Screenshot_2022-04-25_154348" src="https://user-images.githubusercontent.com/72515939/165044631-18ae41ca-e03a-4623-96af-a4549f1401f3.png"></p>
-<p align="center"><img width="927" alt="Screenshot_2022-04-25_154415" src="https://user-images.githubusercontent.com/72515939/165045187-c73b1669-016c-45c8-8fa0-10bbd741c423.png"></p>
-<p align="center"><img width="912" alt="Screenshot 2022-04-25 154456" src="https://user-images.githubusercontent.com/72515939/165045206-5be20c3a-f490-4409-8cbd-4743013e35c5.png"></p>
+![Artboard 1](https://user-images.githubusercontent.com/72515939/166097226-b35e84ab-0498-419a-a3e6-0cf6e9c276e5.png)
 
 <br>
 
@@ -88,40 +86,40 @@ mohdismailmatasin@Mohds-iMac ~ % cd /Volumes/EFI
 mohdismailmatasin@Mohds-iMac EFI % tree
 .
 └── EFI
-    ├── BOOT
-    │   └── BOOTx64.efi
-    └── OC
-        ├── ACPI
-        │   └── SSDT-B460M-SL.aml
-        ├── Drivers
-        │   ├── HfsPlus.efi
-        │   ├── OpenCanopy.efi (Disable on Debug)
-        │   └── OpenRuntime.efi
-        ├── Kexts
-        │   ├── AppleALC.kext
-        │   ├── Lilu.kext
-        │   ├── LucyRTL8125Ethernet.kext
-        │   ├── RadeonSensor.kext
-        │   ├── SMCLightSensor.kext
-        │   ├── SMCProcessor.kext
-        │   ├── SMCRadeonGPU.kext
-        │   ├── SMCSuperIO.kext
-        │   ├── USBMap.kext
-        │   ├── VirtualSMC.kext
-        │   └── WhateverGreen.kext
-        ├── OpenCore.efi
-        ├── Resources
-        │   ├── Audio
-        │   ├── Font
-        │   ├── Image
-        │   │   └── Acidanthera
-        │   │       ├── Chardonnay
-        │   │       ├── GoldenGate
-        │   │       └── Syrah
-        │   └── Label
-        ├── Tools
-        │   └── CleanNvram.efi
-        └── config.plist
+	├── BOOT
+	│   └── BOOTx64.efi
+	└── OC
+		├── ACPI
+		│   └── SSDT-B460M-SL.aml
+		├── Drivers
+		│   ├── HfsPlus.efi
+		│   ├── OpenCanopy.efi (Disable on Debug)
+		│   └── OpenRuntime.efi
+		├── Kexts
+		│   ├── AppleALC.kext
+		│   ├── Lilu.kext
+		│   ├── LucyRTL8125Ethernet.kext
+		│   ├── RadeonSensor.kext
+		│   ├── SMCLightSensor.kext
+		│   ├── SMCProcessor.kext
+		│   ├── SMCRadeonGPU.kext
+		│   ├── SMCSuperIO.kext
+		│   ├── USBMap.kext
+		│   ├── VirtualSMC.kext
+		│   └── WhateverGreen.kext
+		├── OpenCore.efi
+		├── Resources
+		│   ├── Audio
+		│   ├── Font
+		│   ├── Image
+		│   │   └── Acidanthera
+		│   │       ├── Chardonnay
+		│   │       ├── GoldenGate
+		│   │       └── Syrah
+		│   └── Label
+		├── Tools
+		│   └── CleanNvram.efi
+		└── config.plist
 ```
 **Remark:** Generally best to debug systems without `OpenCanopy.efi`, if required make sure this file is from `DEBUG` else there will be virtually no debug information. `Picker` mode use `Built-In` menu.
 
@@ -145,10 +143,10 @@ mohdismailmatasin@Mohds-iMac EFI % tree
 
 **Windows & Linux Implementation**
 
-`Windows`
+`Windows™`
 
 1. Temporary: `EFI\boot\bootx64.efi` via EFI (USB)
-2. Permanent: `EFI\Microsoft\Boot\bootmgfw.efi` (Windows Boot Manager/UEFI which contain a GUID reference) via EFI (HDD/SSD/NVMe)
+2. Permanent: `EFI\Microsoft\Boot\bootmgfw.efi` (Windows™ Boot Manager/UEFI which contain a GUID reference) via EFI (HDD/SSD/NVMe)
 
 `Linux`
 
@@ -161,9 +159,9 @@ mohdismailmatasin@Mohds-iMac EFI % tree
 `OpenCore`
 
 1. Temporary: `EFI\BOOT\BOOTx64.efi` via USB Drive (Installation Device)
-2. Permanent: `EFI\BOOT\BOOTx64.efi` via HDD/SSD/NVMe (MacOS Drive)
+2. Permanent: `EFI\BOOT\BOOTx64.efi` via HDD/SSD/NVMe (MacOS™ Drive)
 
-<p align="justify">While OpenCore is just a boot-loader, this type of boot-loader is included with their own firmware, along with additional quirks for booting the MacOS partition. Furthermore, OpenCore has portable features that enable the chain-loader option to be used with other operating systems.</p>
+<p align="justify">While OpenCore is just a boot-loader, this type of boot-loader is included with their own firmware, along with additional quirks for booting the MacOS™ partition. Furthermore, OpenCore has portable features that enable the chain-loader option to be used with other operating systems.</p>
 
 ![Artboard X](https://user-images.githubusercontent.com/72515939/166086925-5b6b1cae-d80e-4fcd-a18b-6d907f5d1b9a.png)
 
@@ -205,7 +203,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
 **SSDT Patching** may affect
 
-<p align="justify">ACPI Injection to Windows/Linux. Mostly, these issue may affect dual booting (Windows + MacOS). Luckily, there are settings via config.plist to prevent both issues, but this is only experimental. Do not assume this settings will work 100% on your machine. Settings is explained via table below:</p>
+<p align="justify">ACPI Injection to Windows™/Linux. Mostly, these issue may affect dual booting (Windows™ + MacOS™). Luckily, there are settings via config.plist to prevent both issues, but this is only experimental. Do not assume this settings will work 100% on your machine. Settings is explained via table below:</p>
 
 | Path         | Path       | Path             | Mode   |
 | ------------ | ---------- | ---------------- | ------ |
@@ -235,7 +233,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 | PPMC   | Classed as `Memory Controller` in `Comet Lake (CML)` platform. **Patch:** Compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, identical to `CML` device `pci8086,a3a1` |
 | PXSX   | PCIe USB card, `VIA USB 3.0 eXtensible Host Controller` device |
 | RTL0   | Rename `RTL8125 2.5GbE Controller` device as `RP04,PXSX` to `RP04,RTL0` |
-| SBUS   | Fix `AppleSMBus` support in MacOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc |
+| SBUS   | Fix `AppleSMBus` support in MacOS™.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc |
 | SATA   | Serial ATA Device. Rename `SATA` to `SAT0`                   |
 | TSUB/THSS   | Known as `Thermal Subsystem`. This device is renamed due to no identical/compatible data using `ioreg`. Rename `pci8086,a3b1` to `TSUB/THSS`. **Patch:** Compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, identical to `CML` device `pci8086,a3a1`. Patch can be added either on `PPMC` or `TSUB/THSS`. `Both` is possible via testing. Remain only one `AppleIntelPCHPMC` patch. Via `PPMC` is better. By default, `TSUB/THSS` is removed via my `config.plist` |
 | USBX   | USB `Power Properties` for Skylake and newer motherboard generation |
@@ -258,7 +256,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
 | Driver          | Information                                                  |
 | --------------- | ------------------------------------------------------------ |
-| HfsPlus.efi     | Official `HFS+ Driver` Support for Apple MacOS               |
+| HfsPlus.efi     | Official `HFS+ Driver` Support for Apple MacOS™              |
 | OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Boot-loader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
 
 <p align="center"><img width="1036" alt="Screen_Shot_2022-04-25_at_2_41_37_PM" src="https://user-images.githubusercontent.com/72515939/165034935-9e54e24e-87fc-4d4a-93cd-79621119b41c.png"></p>
@@ -268,20 +266,20 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
 ### 4.0 - OC\Kext
 
-<p align="justify">Kernel extensions (kexts) let users or developers load code directly into the MacOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed functions. The table below contains some kexts used to properly boot MacOS through OpenCore.</p>
+<p align="justify">Kernel extensions (kexts) let users or developers load code directly into the MacOS™ kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed functions. The table below contains some kexts used to properly boot MacOS™ through OpenCore.</p>
 
 | Kext                | Information                                                  |
 | ------------------- | ------------------------------------------------------------ |
-| Lilu                | `Arbitrary kext` and `process patching` on MacOS             |
+| Lilu                | `Arbitrary kext` and `process patching` on MacOS™             |
 | VirtualSMC          | `System Management Controller` (SMC) emulator layer          |
-| AppleALC            | Enabling `native MacOS HD audio` for unofficial codecs       |
+| AppleALC            | Enabling `native MacOS™ HD audio` for unofficial codecs       |
 | Whatevergreen       | `Various patches` necessary for certain `ATI`/`AMD`/`Intel`/`Nvidia` GPUs |
 | SMCProcessor        | Additional support for `VirtualSMC`. Used for monitoring `CPU` temperature |
 | SMCSuperIO          | Additional support for `VirtualSMC`. Used for monitoring `FAN` speed |
 | SMCRadeonGPU        | Based on `FakeSMCs`, `RadeonMonitor` to provide `GPU` temperature to a dedicated gadget |
 | RadeonSensor        | To read the `GPU` temperature. `Lilu` is required            |
 | LucyRTL8125Ethernet | Ethernet device, `Realtek RTL8125 2.5G bit Ethernet Controllers` driver |
-| USBMap              | Kext to `route` selected `USB ports` to `Physical Ports` via USB port address. This is `compulsory to handle` `15 port limit` requirements by MacOS |
+| USBMap              | Kext to `route` selected `USB ports` to `Physical Ports` via USB port address. This is `compulsory to handle` `15 port limit` requirements by MacOS™ |
 
 **Remark:** All kext used are `DEBUG` versions.
 
@@ -321,7 +319,7 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 
 ### 8.0 - OC\config.plist
 
-<p align="justify">Property list based on xml code. Structured OpenCore/Clover method and upgraded injection function. An Apple.Inc plist is a MacOS preference, also a file for the application that it holds the preference settings for. By trashing and then relaunching an application you are getting rid of old user set preferences that may have become corrupt. OpenCore use this kind of file to inject (match, overcome and manipulate) specified information to unsupport hardware/device. 
+<p align="justify">Property list based on xml code. Structured OpenCore/Clover method and upgraded injection function. An Apple.Inc plist is a MacOS™ preference, also a file for the application that it holds the preference settings for. By trashing and then relaunching an application you are getting rid of old user set preferences that may have become corrupt. OpenCore use this kind of file to inject (match, overcome and manipulate) specified information to unsupport hardware/device. 
 Besides, a plist is often used to correct problems that a user may be having with an application.</p>
 
 <p align="center"><img width="959" alt="Screen Shot 2022-04-25 at 1 19 39 PM" src="https://user-images.githubusercontent.com/72515939/165025284-c442cf30-0099-4f94-8634-19b9877d153a.png"></p>
@@ -419,24 +417,24 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 ```xml
 <key>DeviceProperties</key>
-    <dict>
-        <key>Add</key>
-        <dict>
-            <key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
-            <dict>
-                <key>@0,name</key>
-                <string>ATY,Henbury</string>
-                <key>@1,name</key>
-                <string>ATY,Henbury</string>
-                <key>@2,name</key>
-                <string>ATY,Henbury</string>
-                <key>@3,name</key>
-                <string>ATY,Henbury</string>
-            </dict>
-        </dict>
-        <key>Delete</key>
-        <dict/>
-    </dict>
+	<dict>
+		<key>Add</key>
+		<dict>
+			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>@0,name</key>
+				<string>ATY,Henbury</string>
+				<key>@1,name</key>
+				<string>ATY,Henbury</string>
+				<key>@2,name</key>
+				<string>ATY,Henbury</string>
+				<key>@3,name</key>
+				<string>ATY,Henbury</string>
+			</dict>
+		</dict>
+		<key>Delete</key>
+		<dict/>
+	</dict>
 ```
 
 ## Headless UHD Graphics 630 Settings
@@ -543,9 +541,9 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 - Compatibility Support Module (CSM) ➣ Compatibility Support Module
 - Thunderbolt ➣ New technology that supports `high-resolution displays` and `high-performance data` through one `single port`. For initial install, as Thunderbolt can cause issues if not setup correctly
 - Intel® Software Guard Extensions (SGX) ➣ A set of `security-related instruction codes` that are built into some Intel central processing units (CPUs)
-- Intel® Platform Trust (TPM) ➣ Trusted Platform Module, `improves the security` of your PC by securely creating and storing cryptographic keys. (`Linux` and `Windows 10™`.  Proper `dual-boot` with `Windows 11™` require TPM to be enable. **Refer:** [InsanelyMac Discussions](https://www.insanelymac.com/forum/topic/348202-how-to-opencore-070-071-differences/))
+- Intel® Platform Trust (TPM) ➣ Trusted Platform Module, `improves the security` of your PC by securely creating and storing cryptographic keys. (`Linux` and `Windows™ 10`.  Proper `dual-boot` with `Windows™ 11` require TPM to be enable. **Refer:** [InsanelyMac Discussions](https://www.insanelymac.com/forum/topic/348202-how-to-opencore-070-071-differences/))
 - Config Lock (CFG Lock) ➣ Setting in your BIOS that allows for a `specific register` (in this case the MSR 0xE2) to be written to
-- Intel® Rapid Storage Technology (RST) ➣ Windows-based application that provides `improved performance` and `reliability` for computers that are equipped with `SATA` disks for desktop, mobile, and server platforms
+- Intel® Rapid Storage Technology (RST) ➣ Windows™-based application that provides `improved performance` and `reliability` for computers that are equipped with `SATA` disks for desktop, mobile, and server platforms
 
 ### Enable
 
@@ -554,7 +552,7 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 - Hyper-Threading ➣ An `Intel®` hardware innovation that allows multiple threads to run on each core, this means more work can be done in parallel
 - Execute Disable Bit ➣ An `Intel®` hardware-based security component.
 - EHCI/XHCI Hand-off ➣ USB functions are handled by the OS
-- OS type ➣ `Windows 8.1™/10™` UEFI Mode
+- OS type ➣ `Windows™ 8.1/10` UEFI Mode
 - DVMT Pre ➣ The `Intel® HD/UHD Graphics driver` for `Windows™`. Please allocated (iGPU Memory) to `64MB` / `Auto`
 - SATA Mode ➣ Advanced Host Controller Interface (AHCI)
 
@@ -613,7 +611,7 @@ I would like to thanks all folks in Hackintosh Community especially:
 - [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) ➣ a great guide
 - [acidanthera](https://github.com/acidanthera) ➣ [OpenCore](https://github.com/acidanthera/OpenCorePkg) Boot-loader and powerful ACPI compiler, [MaciASL](https://github.com/acidanthera/MaciASL)
 - [corpNewt](https://github.com/corpnewt) ➣ developing simple [USBmap](https://github.com/corpnewt/USBMap) tools
-- [dhinakg](https://github.com/USBToolBox/tool) ➣ developing easy Windows based USBmap, [USBToolBox](https://github.com/USBToolBox/tool) which inspired by [corpNewt](https://github.com/corpnewt) [USBmap](https://github.com/corpnewt/USBMap)
+- [dhinakg](https://github.com/USBToolBox/tool) ➣ developing easy Windows™ based USBmap, [USBToolBox](https://github.com/USBToolBox/tool) which inspired by [corpNewt](https://github.com/corpnewt) [USBmap](https://github.com/corpnewt/USBMap)
 - [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) ➣ an official [Facebook](https://www.facebook.com) community for Hackintosh
 - [headkaze](https://github.com/headkaze) ➣ the Swiss Army Knife of Vanilla Hackintoshing, known as [Hackintool](https://github.com/headkaze/Hackintool) and awesome EFI Mounter called as [EFIAgent](https://github.com/headkaze/EFI-Agent)
 - [r/Hackintosh](https://www.reddit.com/r/hackintosh/) ➣ my favourite [reddit](https://www.reddit.com) Hackintosh discussion platform
