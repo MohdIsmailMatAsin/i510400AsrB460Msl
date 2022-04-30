@@ -273,7 +273,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 | Lilu                | `Arbitrary kext` and `process patching` on MacOS™             |
 | VirtualSMC          | `System Management Controller` (SMC) emulator layer          |
 | AppleALC            | Enabling `native MacOS™ HD audio` for unofficial codecs       |
-| Whatevergreen       | `Various patches` necessary for certain `ATI`/`AMD`/`Intel`/`Nvidia` GPUs |
+| Whatevergreen       | `Various patches` necessary for certain `ATI`/`AMD`/`Intel®`/`Nvidia` GPUs |
 | SMCProcessor        | Additional support for `VirtualSMC`. Used for monitoring `CPU` temperature |
 | SMCSuperIO          | Additional support for `VirtualSMC`. Used for monitoring `FAN` speed |
 | SMCRadeonGPU        | Based on `FakeSMCs`, `RadeonMonitor` to provide `GPU` temperature to a dedicated gadget |
@@ -540,7 +540,7 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 - Intel® Virtualization Technology (VT-d) ➣ Allows user to `direct passthrough of devices`. This option can be enabled if you set `DisableIoMapper` to `YES`
 - Compatibility Support Module (CSM) ➣ Compatibility Support Module
 - Thunderbolt ➣ New technology that supports `high-resolution displays` and `high-performance data` through one `single port`. For initial install, as Thunderbolt can cause issues if not setup correctly
-- Intel® Software Guard Extensions (SGX) ➣ A set of `security-related instruction codes` that are built into some Intel central processing units (CPUs)
+- Intel® Software Guard Extensions (SGX) ➣ A set of `security-related instruction codes` that are built into some Intel® central processing units (CPUs)
 - Intel® Platform Trust (TPM) ➣ Trusted Platform Module, `improves the security` of your PC by securely creating and storing cryptographic keys. (`Linux` and `Windows™ 10`.  Proper `dual-boot` with `Windows™ 11` require TPM to be enable. **Refer:** [InsanelyMac Discussions](https://www.insanelymac.com/forum/topic/348202-how-to-opencore-070-071-differences/))
 - Config Lock (CFG Lock) ➣ Setting in your BIOS that allows for a `specific register` (in this case the MSR 0xE2) to be written to
 - Intel® Rapid Storage Technology (RST) ➣ Windows™-based application that provides `improved performance` and `reliability` for computers that are equipped with `SATA` disks for desktop, mobile, and server platforms
