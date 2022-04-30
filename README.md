@@ -1,7 +1,6 @@
 # Hackintosh: Intel i5 10400 & Asrock B460M Steel Legend
 
-<p align="center"><img width="698" alt="xxxx" src="https://user-images.githubusercontent.com/72515939/165800878-c7db65a1-8ee3-45a4-b2f5-c41568834cd4.png"><img width="696" alt="Screen Shot 2022-04-30 at 12 03 16 AM" src="https://user-images.githubusercontent.com/72515939/165981763-8ee0dfd1-36e2-4e53-9729-388a8bbe4faa.png"></p>
-
+![Artboard 1](https://user-images.githubusercontent.com/72515939/166086285-c5c771ed-e4d4-409a-b2d5-2e3f4c4325ea.png)
 
 ###### **Reminder:** 
 
