@@ -483,9 +483,9 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 - Parallel Port
 - VT-d (can be enabled if you set DisableIoMapper to YES)
 - CSM
-- Thunderbolt(For initial install, as Thunderbolt can cause issues if not setup correctly)
-- Intel SGX
-- Intel Platform Trust
+- Thunderbolt (For initial install, as Thunderbolt can cause issues if not setup correctly)
+- Intel Software Guard Extensions (SGX)
+- Intel Platform Trust. (Linux and Windows 10™.  Proper dual boot with Windows 11™ require TPM to be enable. Refer: [InsanelyMac Discussions](https://www.insanelymac.com/forum/topic/348202-how-to-opencore-070-071-differences/))
 - CFG Lock 
 - Rapid Storage Technology (RST)
 
