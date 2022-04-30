@@ -148,12 +148,7 @@ mohdismailmatasin@Mohds-iMac EFI % tree
 `Windows`
 
 1. Temporary: `EFI\boot\bootx64.efi` via EFI (USB)
-
-![Artboard 2](https://user-images.githubusercontent.com/72515939/166086676-c7ebdbbc-762c-41bc-8758-6bccdab93d14.png)
-
 2. Permanent: `EFI\Microsoft\Boot\bootmgfw.efi` (Windows Boot Manager/UEFI which contain a GUID reference) via EFI (HDD/SSD/NVMe)
-	
-![Artboard 3](https://user-images.githubusercontent.com/72515939/166086778-06854a74-a9ae-45dd-a2fb-792f8b51a11c.png)
 
 `Linux`
 
@@ -170,10 +165,7 @@ mohdismailmatasin@Mohds-iMac EFI % tree
 
 <p align="justify">While OpenCore is just a boot-loader, this type of boot-loader is included with their own firmware, along with additional quirks for booting the MacOS partition. It is so special isn't it? Furthermore, OpenCore has portable features that enable the chain-loader option to be used with other operating systems.</p>
 
-<p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 56 11 PM" src="https://user-images.githubusercontent.com/72515939/165036295-62968fcf-135c-4979-85db-9a71e9db4b09.png"></p>
-<p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 56 14 PM" src="https://user-images.githubusercontent.com/72515939/165036304-fb3a0561-70b0-4a71-b2c6-65cff8e2200e.png"></p>
-<p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 56 17 PM" src="https://user-images.githubusercontent.com/72515939/165036309-1a46324c-1011-4b00-867a-493cc89ed049.png"></p>
-<p align="center"><img width="1032" alt="Screen_Shot_2022-04-25_at_2_56_27_PM" src="https://user-images.githubusercontent.com/72515939/165036613-5667f4ad-e43f-4529-baed-0b326d8e13f1.png"></p>
+![Artboard X](https://user-images.githubusercontent.com/72515939/166086925-5b6b1cae-d80e-4fcd-a18b-6d907f5d1b9a.png)
 
 <br>
 
