@@ -31,10 +31,6 @@
 
 **Remark:** <p align="justify">The settings above may not be the same as the recommended settings by Dortania. To find out more, please check [OpenCore Configuration](https://dortania.github.io/docs/release/Configuration.html) and [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for SecureBootModel selection.</p> 
 
-**NVMe Trim Support:** In these case, `Kingston A2000 NVMe` trim support is working native. 
-
-<img width="1239" alt="Screen_Shot_2022-04-30_at_10_45_05_AM" src="https://user-images.githubusercontent.com/72515939/166087551-e52f35db-1e52-47e9-8455-e70a81fdbf20.png">
-
 <br>
 
 ## Introduction
@@ -290,12 +286,6 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
 <p align="center"><img width="1356" alt="Screen_Shot_2022-04-25_at_3_09_08_PM" src="https://user-images.githubusercontent.com/72515939/165038719-33ac2cca-1cf5-4aae-85de-7caa88c3ccff.png"></p>
 
-**Additional:** `IOAHCIBlockStorage` patch for SSD to enable `Trim` option via `Kernel\Patch`. Refer [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_debug.plist).
-
-<p align="center"><img width="1426" alt="Screen Shot 2022-04-25 at 1 00 18 PM" src="https://user-images.githubusercontent.com/72515939/165023853-616c5d80-dda3-4e94-b0e8-fbba3d226fcb.png"></p>
-
-<p align="center"><img width="1015" alt="Screen Shot 2022-04-20 at 12 28 18 AM" src="https://user-images.githubusercontent.com/72515939/164051402-d2743892-2cec-41aa-8415-4b3f41892fdc.png"></p>
-
 <br>
 
 ### 5.0 - OC\OpenCore.efi
@@ -525,6 +515,20 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 AppleTV ✓ | [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view) ✕ | Netflix ✓
 
 **Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki only applicable via Catalina and below.
+
+<br>
+
+**Trim Support:** 
+
+1. NVMe: `Kingston A2000 NVMe` trim support is working native. 
+
+<img width="1239" alt="Screen_Shot_2022-04-30_at_10_45_05_AM" src="https://user-images.githubusercontent.com/72515939/166087551-e52f35db-1e52-47e9-8455-e70a81fdbf20.png">
+
+2. SSD: `IOAHCIBlockStorage` patch for SSD to enable `Trim` option via `Kernel\Patch`. Refer [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_debug.plist).
+
+<p align="center"><img width="1426" alt="Screen Shot 2022-04-25 at 1 00 18 PM" src="https://user-images.githubusercontent.com/72515939/165023853-616c5d80-dda3-4e94-b0e8-fbba3d226fcb.png"></p>
+
+<p align="center"><img width="1015" alt="Screen Shot 2022-04-20 at 12 28 18 AM" src="https://user-images.githubusercontent.com/72515939/164051402-d2743892-2cec-41aa-8415-4b3f41892fdc.png"></p>
 
 <br>
 
