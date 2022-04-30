@@ -560,7 +560,7 @@ I would like to thanks all folks in Hackintosh Community especially:
 - [headkaze](https://github.com/headkaze) ➣ the Swiss Army Knife of Vanilla Hackintoshing, known as [Hackintool](https://github.com/headkaze/Hackintool) and awesome EFI Mounter called as [EFIAgent](https://github.com/headkaze/EFI-Agent)
 - [r/Hackintosh](https://www.reddit.com/r/hackintosh/) ➣ my favourite [reddit](https://www.reddit.com) Hackintosh discussion platform
 - [daliansky](https://github.com/daliansky) ➣ publishing his own [OpenCore](https://github.com/acidanthera/OpenCorePkg) [ACPI](https://kb.iu.edu/d/ahvl) method, known as [OC-Little](https://github.com/daliansky/OC-little)
-- [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) ➣ translating [daliansky](https://github.com/daliansky) [OC-Little](https://github.com/daliansky/OC-little) which known as [OC-Little Translate](https://github.com/5T33Z0/OC-Little-Translated). Also informative [Clover Crate](https://github.com/5T33Z0/Clover-Crate) for [Clover-bootloader](https://github.com/CloverHackyColor/CloverBootloader)
+- [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) ➣ translating [daliansky](https://github.com/daliansky) [OC-Little](https://github.com/daliansky/OC-little) which known as [OC-Little Translate](https://github.com/5T33Z0/OC-Little-Translated) + informative [Clover Crate](https://github.com/5T33Z0/Clover-Crate) for [Clover-bootloader](https://github.com/CloverHackyColor/CloverBootloader)
 - [rusty-bits](https://github.com/rusty-bits) ➣ [cross platform](https://en.wikipedia.org/wiki/Cross-platform_software) OpenCore EFI update , known as [octool](https://github.com/rusty-bits/octool)
 
 ## Visit my profile on [reddit](https://www.reddit.com/user/mohdismailmatasin)
