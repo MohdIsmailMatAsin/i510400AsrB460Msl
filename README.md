@@ -536,7 +536,7 @@ AppleTV ✓ | [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jv
 
 ## EFI Update
 
-[rusty-bits/octool](https://youtu.be/5KNzD08Hkxs) - Watch octool guide here
+[rusty-bits/octool](https://youtu.be/5KNzD08Hkxs) - Watch octool guide [here](https://www.youtube.com/watch?v=5KNzD08Hkxs&t=4s)
 
 <br>
 
