@@ -149,14 +149,111 @@ mohdismailmatasin@Mohds-iMac EFI % tree
 
 1. Temporary: `EFI\boot\bootx64.efi`
 
-<p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 49 56 PM" src="https://user-images.githubusercontent.com/72515939/165035398-e1f47b62-3dc5-4dd4-9fb8-22e740950d52.png">
-<p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 50 01 PM" src="https://user-images.githubusercontent.com/72515939/165035430-d2384e0a-8971-4aac-bad1-de9d2c616b7e.png">
-<p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 50 06 PM" src="https://user-images.githubusercontent.com/72515939/165035435-9b882eb2-dfc4-4101-85a4-10d37d700dd1.png">
+<p align="center">![Artboard 2](https://user-images.githubusercontent.com/72515939/166086676-c7ebdbbc-762c-41bc-8758-6bccdab93d14.png)</p>
 
 2. Permanent: `EFI\Microsoft\Boot\bootmgfw.efi` (Windows Boot Manager/UEFI which contain a GUID reference)
 	
-<p align="center"><img width="1032" alt="Screen Shot 2022-04-25 at 2 51 41 PM" src="https://user-images.githubusercontent.com/72515939/165035559-0f2fd41d-d143-4514-8ac6-cbdbe9a9fe72.png"></p>
-<p align="center"><img width="1032" alt="Screen_Shot_2022-04-25_at_2_51_46_PM" src="https://user-images.githubusercontent.com/72515939/165035929-1bad4e02-ca12-4394-9ce5-837f19ce8453.png"></p>
+```text
+mohdismailmatasin@Mohds-iMac ~ % cd /Volumes/NO\ NAME/EFI
+mohdismailmatasin@Mohds-iMac EFI % tree
+.
+├── Boot
+│   └── bootx64.efi
+└── Microsoft
+    ├── Boot
+    │   ├── BCD
+    │   ├── BCD.LOG
+    │   ├── BCD.LOG1
+    │   ├── BCD.LOG2
+    │   ├── BOOTSTAT.DAT
+    │   ├── CIPolicies
+    │   │   └── Active
+    │   │       ├── {5DAC656C-21AD-4A02-AB49-649917162E70}.cip
+    │   │       ├── {82443e1e-8a39-4b4a-96a8-f40ddc00b9f3}.cip
+    │   │       └── {CDD5CB55-DB68-4D71-AA38-3DF2B6473A52}.cip
+    │   ├── Fonts
+    │   │   ├── chs_boot.ttf
+    │   │   ├── cht_boot.ttf
+    │   │   ├── jpn_boot.ttf
+    │   │   ├── kor_boot.ttf
+    │   │   ├── malgun_boot.ttf
+    │   │   ├── malgunn_boot.ttf
+    │   │   ├── meiryo_boot.ttf
+    │   │   ├── meiryon_boot.ttf
+    │   │   ├── msjh_boot.ttf
+    │   │   ├── msjhn_boot.ttf
+    │   │   ├── msyh_boot.ttf
+    │   │   ├── msyhn_boot.ttf
+    │   │   ├── segmono_boot.ttf
+    │   │   ├── segoe_slboot.ttf
+    │   │   ├── segoen_slboot.ttf
+    │   │   └── wgl4_boot.ttf
+    │   ├── Resources
+    │   │   ├── bootres.dll
+    │   │   └── en-US
+    │   │       └── bootres.dll.mui
+    │   ├── bg-BG
+    │   │   ├── bootmgfw.efi.mui
+    │   │   └── bootmgr.efi.mui
+    │   ├── boot.stl
+    │   ├── bootmgfw.efi
+    │   ├── bootmgr.efi
+    │   ├── cs-CZ
+    │   ├── da-DK
+    │   ├── de-DE
+    │   ├── el-GR
+    │   ├── en-GB
+    │   ├── en-US
+    │   ├── es-ES
+    │   ├── es-MX
+    │   ├── et-EE
+    │   ├── fi-FI
+    │   ├── fr-CA
+    │   ├── fr-FR
+    │   ├── hr-HR
+    │   ├── hu-HU
+    │   ├── it-IT
+    │   ├── ja-JP
+    │   ├── kd_02_10df.dll
+    │   ├── kd_02_10ec.dll
+    │   ├── kd_02_1137.dll
+    │   ├── kd_02_14e4.dll
+    │   ├── kd_02_15b3.dll
+    │   ├── kd_02_1969.dll
+    │   ├── kd_02_19a2.dll
+    │   ├── kd_02_1af4.dll
+    │   ├── kd_02_8086.dll
+    │   ├── kd_07_1415.dll
+    │   ├── kd_0C_8086.dll
+    │   ├── kdnet_uart16550.dll
+    │   ├── kdstub.dll
+    │   ├── ko-KR
+    │   ├── lt-LT
+    │   ├── lv-LV
+    │   ├── memtest.efi
+    │   ├── nb-NO
+    │   ├── nl-NL
+    │   ├── pl-PL
+    │   ├── pt-BR
+    │   ├── pt-PT
+    │   ├── qps-ploc
+    │   ├── ro-RO
+    │   ├── ru-RU
+    │   ├── sk-SK
+    │   ├── sl-SI
+    │   ├── sr-Latn-RS
+    │   ├── sv-SE
+    │   ├── tr-TR
+    │   ├── uk-UA
+    │   ├── winsipolicy.p7b
+    │   ├── zh-CN
+    │   └── zh-TW
+    └── Recovery
+        ├── BCD
+        ├── BCD.LOG
+        ├── BCD.LOG1
+        └── BCD.LOG2
+```
 
 `Linux`
 
