@@ -245,6 +245,11 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
 <p align="center"><img width="1239" alt="Screen Shot 2022-04-30 at 10 31 53 AM" src="https://user-images.githubusercontent.com/72515939/166087058-3f4572be-a047-41bd-859a-5da51220af26.png"></p>
 
+**Tools to edit iasl (aml/dsl)**
+
+- [MaciASL](https://github.com/acidanthera/MaciASL) ➣ MacOS™
+- [Xiasl](https://github.com/ic005k/Xiasl) ➣ Cross Platform (Mac™/Linux/Windows™)
+
 <br>
 
 ### 3.0 - OC\Drivers
