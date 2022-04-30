@@ -563,6 +563,6 @@ I would like to thanks all folks in Hackintosh Community especially:
 - [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) ➣ translating [daliansky](https://github.com/daliansky) [OC-Little](https://github.com/daliansky/OC-little) which known as [OC-Little Translate](https://github.com/5T33Z0/OC-Little-Translated) + informative [Clover Crate](https://github.com/5T33Z0/Clover-Crate) for [Clover-bootloader](https://github.com/CloverHackyColor/CloverBootloader)
 - [rusty-bits](https://github.com/rusty-bits) ➣ [cross platform](https://en.wikipedia.org/wiki/Cross-platform_software) OpenCore EFI update , known as [octool](https://github.com/rusty-bits/octool)
 
-## Follow Me on 
+## Follow Me!
 
 - [u/mohdismailmatasin](https://www.reddit.com/user/mohdismailmatasin) on [reddit](https://www.reddit.com)
