@@ -198,11 +198,13 @@ Below are the basic OpenCore folders and files used for this project:
 
 For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org/specs/ACPI/6.4/index.html)
 
+
 **ACPI Machine Language (AML)**
 
-<p align="justify">Pseudo-code for a virtual machine supported by an ACPI-compatible OS and in which ACPI control methods and objects are written. The AML encoding definition is provided in section 19:</p>
+<p align="justify">Pseudo-code for a virtual machine supported by an ACPI-compatible OS and in which ACPI control methods and objects are written. The AML encoding definition is provided in section 19:</p> 
 
-[ACPI Machine Language (AML) Specification](https://uefi.org/specs/ACPI/6.4/20_AML_Specification/AML_Specification.html)
+- [ACPI Machine Language (AML) Specification](https://uefi.org/specs/ACPI/6.4/20_AML_Specification/AML_Specification.html)
+
 
 **DSDT vs SSDT Patching**
 
@@ -223,14 +225,17 @@ For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org
 
 <p align="justify">ACPI Injection to Windows/Linux. Mostly, these issue may affect dual booting (Windows + MacOS). Luckily, there are settings via config.plist to prevent both issues, but this is only experimental. Do not assume this settings will work 100% on your machine. Settings is explained via table below:</p>
 
+
 | Path         | Path       | Path             | Mode   |
 | ------------ | ---------- | ---------------- | ------ |
 | PlatformInfo | SerialInfo | UpdateSMBIOSMode | Custom |
 | Kernel       | Quirks     | CustomSMBIOSGuid | True   |
 
+
 <p align="justify">SSDT patch is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. SSDT patch is minor modification and not affect the actual hardware performance.</p>
 
 <p align="justify">Thanks to CorpNewt [SSDTTime](https://github.com/corpnewt/SSDTTime) hotpatch tool. In this project, various SSDT's has been merged into one (i.e., SSDT-B460M-SL.dsl). With several other sources, additional code is injected to reduce the kext workload. As example, GFX0 to an IGPU rename which handled by Whatevergreen.kext.</p>
+
 
 | Device | Information                                                  |
 | ------ | ------------------------------------------------------------ |
