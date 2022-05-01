@@ -200,7 +200,9 @@ For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org
 
 **ACPI Machine Language (AML)**
 
-<p align="justify">Pseudo-code for a virtual machine supported by an ACPI-compatible OS and in which ACPI control methods and objects are written. The AML encoding definition is provided in section 19, [“ACPI Machine Language (AML) Specification.”](https://uefi.org/specs/ACPI/6.4/20_AML_Specification/AML_Specification.html)</p>
+<p align="justify">Pseudo-code for a virtual machine supported by an ACPI-compatible OS and in which ACPI control methods and objects are written. The AML encoding definition is provided in section 19:</p>
+
+[ACPI Machine Language (AML) Specification](https://uefi.org/specs/ACPI/6.4/20_AML_Specification/AML_Specification.html)
 
 **DSDT vs SSDT Patching**
 
