@@ -645,4 +645,3 @@ I would like to thanks all folks in Hackintosh Community especially:
 ## Follow Me!
 
 - [u/mohdismailmatasin](https://www.reddit.com/user/mohdismailmatasin) on [reddit](https://www.reddit.com)
-                                             							| 
