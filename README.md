@@ -234,7 +234,7 @@ For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org
 
 <p align="justify">SSDT patch is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. SSDT patch is minor modification and not affect the actual hardware performance.</p>
 
-<p align="justify">Thanks to CorpNewt [SSDTTime](https://github.com/corpnewt/SSDTTime) hotpatch tool. In this project, various SSDT's has been merged into one (i.e., SSDT-B460M-SL.dsl). With several other sources, additional code is injected to reduce the kext workload. As example, GFX0 to an IGPU rename which handled by Whatevergreen.kext.</p>
+Thanks to CorpNewt [SSDTTime](https://github.com/corpnewt/SSDTTime) hotpatch tool. In this project, various SSDT's has been merged into one (i.e., SSDT-B460M-SL.dsl). With several other sources, additional code is injected to reduce the kext workload. As example, GFX0 to an IGPU rename which handled by Whatevergreen.kext.
 
 
 | Device | Information                                                  |
