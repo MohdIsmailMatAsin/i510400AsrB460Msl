@@ -10,8 +10,8 @@
 
 | Info      | Details                          | Info        | Details                                       |
 | --------- | -------------------------------- | ----------- | --------------------------------------------- |
-| OS 1      | Microsoft Windows™ 11 Pro         | Audio 1     | 7.1 CH HD Audio (Realtek ALC1200 Audio Codec) |
-| OS 2      | MacOS™ Monterey 12.3.1            | Audio 2     | U-Phoria UM2 USB Audio Device                 |
+| OS 1      | Microsoft Windows 11 Pro         | Audio 1     | 7.1 CH HD Audio (Realtek ALC1200 Audio Codec) |
+| OS 2      | MacOS Monterey 12.3.1            | Audio 2     | U-Phoria UM2 USB Audio Device                 |
 | Processor | Intel® Core(TM) i5-10400         | Motherboard | ASRock (B460M Steel Legend)                   |
 | GFX0      | Radeon RX 5500 XT 4GB            | PCI 1       | BCM94360 WiFi & Bluetooth                     |
 | IGPU      | Intel® UHD Graphics 630  1GB     | PCI 2       | VIA USB 3.0 eXtensible Host Controller        |
@@ -23,7 +23,7 @@
 
 ## APFS Changes
 
-| MacOS™     | Mindate   | MinVersion       | SetApfsTrimTimeout | SecureBootModel       |
+| MacOS     | Mindate   | MinVersion       | SetApfsTrimTimeout | SecureBootModel       |
 |-----------|-----------|------------------|--------------------|-----------------------|
 | Catalina  | 20200306  | 1412101001000000 | 0		        | j185-10.15.6 (19G2005)|
 | BigSur    | 0         | 0                | 0                  | j185-10.15.6 (19G2005)|
@@ -35,28 +35,41 @@
 
 ## Introduction
 
-**What exactly is "BIOS"?**
+**Legacy BIOS**
 
-<p align="justify">BIOS is "firmware", stored in a chip in a specific part of the motherboard, which is basically to help load the operating system. In this description, the motherboard BIOS for the Asrock B460M brand can be accessed during the initial boot phase via the Del and F11 (Enter Setup) keyboard keys.</p>
+<p align="justify">Legacy Boot refers to the boot process used by the BIOS firmware to initialize hardware devices. The Legacy boot contains a selection of installed devices that get initialized as the computer performs the POST test during the boot process. The legacy boot will check for all connected devices for the Master Boot Record (MBR), usually in the first sector of a disk. When it can’t find a bootloader in the devices, Legacy switches to the next device in the list and keeps repeating this process until it finds a boot-loader, or if not, returns an error.</p>
+
+**Modern BIOS (UEFI)**
+
+<p align="justify">UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the boot process. UEFI is similar to Legacy, but the boot data is stored in a ".efi" file rather than the firmware. Most UEFIs can be entered by a special key.</p>
 
 **BIOS key: ASUS ➣ F8 | GIGABYTE ➣ F12 | MSI ➣ F11 | INTEL® ➣ F10 | ASROCK ➣ F11 | EVGA ➣ F7** 
 
+**UEFI vs Legacy**
 
-**What is "EFI"?**
+| UEFI BOOT MODE                       	| LEGACY BOOT MODE                                                                   							|   
+|---------------------------------------|------------------------------------------------------------------------------------------------------------	|	
+| UEFI provides a better User interface | Legacy Boot mode is traditional and very basic |   
+| It uses the GPT partitioning scheme | Legacy uses the MBR partition scheme |  
+| UEFI provides faster boot time | It is slower compared to UEFI |  
+| Since UEFI uses the GPT partitioning scheme, it can support up to 9 zettabytes of storage devices.| The MBR portioning scheme used by Legacy only supports up to 2 TB storage devices |  
+| UEFI runs in 32-bit and 64-bit, allowing support for mouse and touch navigation | Legacy runs in 16-bit mode that only supports keyboard navigation |  
+| It allows a secure boot that prevents the loading of unauthorized applications. It may also hinder dual boot because it treats operating systems (OS) as applications.| Legacy runs in 16-bit mode that only supports keyboard navigation |   
+| It has an easier update process | It is more complex compared to UEFI |
 
-<p align="justify">Refers to the "Extensible Firmware Interface" folder and file. Typically, files and folders are stored on the EFI/ESP Hard Disk (HDD), Non-Volatile Memory Express (NVMe), or Solid State Drive (SSD) system partition. It is in a small partition in FAT32 format. Typically, the partition size for Windows or Linux is around 100 MB, and for MacOS it is around 200 MB. If this partition is in the form of a GUID Partition Table, also known as GPT, the EFI partition will be created after the formatting process automatically.</p>
+**EFI**
+
+<p align="justify">The EFI (Extensible Firmware Interface) system partition, or ESP, is a partition on a data storage device (usually a hard disc drive or solid-state drive) that is used by computers having the Unified Extensible Firmware Interface (UEFI). When a computer is booted, UEFI firmware loads files stored on the ESP to start the installed operating systems and various utilities. The ESP contains the boot loaders or kernel images for all installed operating systems (which are contained in other partitions), device driver files for hardware devices present in a computer and used by the firmware at boot time, system utility programs that are intended to be run before an operating system is booted, and data files such as error logs.</p>
 
 ![efi-system-partition](https://user-images.githubusercontent.com/72515939/161425316-cb229e60-b2ad-4538-9b68-bbabb89a88a8.png)
 
+**Boot-Loader**
 
-**What exactly is UEFI?**
+<p align="justify">The term “boot-loader” is a shortened form of the words “bootstrap loader”. The term stems from the fact that the boot manager is the key component in starting up the computer, so it can be likened to the support of a bootstrap when putting a boot on. It is a special operating-system software that loads into the working memory of a computer after start-up. For this purpose, immediately after a device starts, a boot-loader is generally launched by a bootable medium like a hard drive, a CD/DVD or a USB stick. The boot medium receives information from the computer’s firmware (e.g. BIOS) about where the boot-loader is. The whole process is also described as “booting”.</p>
 
-<p align="justify">UEFI stands for 'Unified Extensible Firmware Interface'. It basically replaces the BIOS that the hardware uses to load and start the operating system on the current computer. Intel® created legacy UEFI for its Itanium-based servers. Originally, the main limitation of the BIOS is that it is 16-bit with only 1 MB of space provided and uses a Master Boot Record (MBR) on its partition. This type of legacy UEFI has a problem with the amount of RAM and also the number of HDDs that cannot exceed 2.2TB. To address this, Intel® launched the Intel® Boot Initiative, which includes a GUID Partition Table (GPT) that replaces the MBR form partition. Later, it was renamed UEFI Modern GPT for models that support Intel® and AMD processors and are compatible with Windows TM, Mac TM, and Linux.</p>
+**OpenCore**
 
-
-**What is a "boot-loader"?**
-
-<p align="justify">A boot loader is a programme that is embedded in an operating system as a boot launcher or operating system caller that is on the hard disc or other boot media. For example, USB "flash drives". As example; "GRUB, LILO, Clover, OpenCore, rEFInd, and rEFIt". A boot loader is usually used to select the operating system if the hard disc contains more than one operating system or separate drive install. This boot loader is loaded into the computer's BIOS, which is then used to invoke the kernel of an operating system. Most of these boot programmes are capable of acting as "chain-loaders". A "chain-loaders" is a layer for other boot programmes to invoke an operating system.</p>
+<p align="justify">OpenCore is referred to as a "boot-loader" and also a "chain-loader". At the same time, it is a complex software program, used to call the operating systems MacOS, Linux, and Windows. In addition, it also has the ability to inject new data into MacOS operating systems such as SMBIOS, Advanced Configuration Table and Power Interface (ACPI), and Kernel Extension (Kext).</p>
 
 <br>
 
@@ -66,17 +79,12 @@
 
 <p align="center"><img width="827" alt="Screenshot 2022-04-03 133920" src="https://user-images.githubusercontent.com/72515939/161430959-f530d4a2-812f-43ec-9b78-6b54522f3a50.png"></p>
 
-- **MacOS™**
+- **MacOS**
 
 <p align="center"><img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161430979-9b890a71-a348-439b-98df-0e53e6a49da8.png"></p>
 
-- **OpenCore**
 
-<p align="center"><img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161431087-8fadbe79-bdc6-49fc-8721-eb149db7ede0.png"></p>
-
-<p align="justify">OpenCore is referred to as a "boot-loader" and also a "chain-loader". At the same time, it is a complex software program, used to call the operating systems MacOS™, Linux, and Windows™. In addition, it also has the ability to inject new data into MacOS™ operating systems such as SMBIOS, Advanced Configuration Table and Power Interface (ACPI), and Kernel Extension (Kext).</p>
-
-**Remark:** <p align="justify">Alternatively, [DiskGenius](https://www.diskgenius.com) can be used to identify the storage structure. It is a special application only for Windows ™ and it is very useful for manipulating drives and for various other purposes. By clicking on the EFI partition, the contents of the partition can be viewed and manipulated easily.</p> 
+**Remark:** <p align="justify">Alternatively, [DiskGenius](https://www.diskgenius.com) can be used to identify the storage structure. It is a special application only for Windows and it is very useful for manipulating drives and for various other purposes. By clicking on the EFI partition, the contents of the partition can be viewed and manipulated easily.</p> 
 
 ![Artboard 1](https://user-images.githubusercontent.com/72515939/166097226-b35e84ab-0498-419a-a3e6-0cf6e9c276e5.png)
 
@@ -84,11 +92,9 @@
 
 ## EFI Structure
 
-The basic OpenCore folder structure. This folder contain several sub files and folders.
+Below are the basic OpenCore folders and files used for this project:
 
 ```zsh
-mohdismailmatasin@Mohds-iMac ~ % cd /Volumes/EFI 
-mohdismailmatasin@Mohds-iMac EFI % tree
 .
 └── EFI
 	├── BOOT
@@ -98,7 +104,7 @@ mohdismailmatasin@Mohds-iMac EFI % tree
 		│   └── SSDT-B460M-SL.aml
 		├── Drivers
 		│   ├── HfsPlus.efi
-		│   ├── OpenCanopy.efi (Disable on Debug)
+		│   ├── OpenCanopy.efi (Disable/Removed on Debug)
 		│   └── OpenRuntime.efi
 		├── Kexts
 		│   ├── AppleALC.kext
@@ -126,13 +132,13 @@ mohdismailmatasin@Mohds-iMac EFI % tree
 		│   └── CleanNvram.efi
 		└── config.plist
 ```
-**Remark:** Generally best to debug systems without `OpenCanopy.efi`, if required make sure this file is from `DEBUG` else there will be virtually no debug information. `Picker` mode use `Built-In` menu.
+**Remark:** Generally, for the "debugging" process, it is best not to use "OpenCanopy.efi".
 
 <br>
 
 ### 1.0 - EFI\BOOT
 
-<p align="justify">Fallback boot-loader path. This is the only boot-loader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings, so this is what you want to use on removable media. As a failsafe method, most firmware includes these drivers to prevent certain boot issues. There are 2 types of fallback. Details below explain the temporary and permanent methods, mostly used by specified UEFI firmware and operating system implementation.</p>
+<p align="justify">Fallback boot-loader path. This is the only boot-loader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings. "Booting" is a term used to refer to the initial loading process when we turn on the computer. BOOTx64.efi is a special file for the boot process that aims to link the "boot-loader" checked by the BIOS before the computer can be used. The boot programme and OpenCore.efi will be searched by the BIOS for UEFI on 64-bit X86 systems without any existing NVRAM boot settings. There are 2 boot types settings, temporary and permanent. The details below describe the files involved in the process.</p>
 
 **Temporary vs Permanent:**
 
@@ -148,10 +154,10 @@ mohdismailmatasin@Mohds-iMac EFI % tree
 
 **Windows & Linux Implementation**
 
-`Windows™`
+`Windows`
 
 1. Temporary: `EFI\boot\bootx64.efi` via EFI (USB)
-2. Permanent: `EFI\Microsoft\Boot\bootmgfw.efi` (Windows™ Boot Manager/UEFI which contain a GUID reference) via EFI (HDD/SSD/NVMe)
+2. Permanent: `EFI\Microsoft\Boot\bootmgfw.efi` (Windows Boot Manager/UEFI which contain a GUID reference) via EFI (HDD/SSD/NVMe)
 
 `Linux`
 
@@ -164,9 +170,9 @@ mohdismailmatasin@Mohds-iMac EFI % tree
 `OpenCore`
 
 1. Temporary: `EFI\BOOT\BOOTx64.efi` via USB Drive (Installation Device)
-2. Permanent: `EFI\BOOT\BOOTx64.efi` via HDD/SSD/NVMe (MacOS™ Drive)
+2. Permanent: `EFI\BOOT\BOOTx64.efi` via HDD/SSD/NVMe (MacOS Drive)
 
-<p align="justify">While OpenCore is just a boot-loader, this type of boot-loader is included with their own firmware, along with additional quirks for booting the MacOS™ partition. Furthermore, OpenCore has portable features that enable the chain-loader option to be used with other operating systems.</p>
+<p align="justify">While OpenCore is a "boot-loader", it is also capable of some other additional features. It has another mobile feature called "chain-loader," which aims to call different operating systems.</p>
 
 ![Artboard X](https://user-images.githubusercontent.com/72515939/166086925-5b6b1cae-d80e-4fcd-a18b-6d907f5d1b9a.png)
 
@@ -174,22 +180,23 @@ mohdismailmatasin@Mohds-iMac EFI % tree
 
 ### 2.0 - OC\ACPI
 
-**What is `DSDT`?**
+**Refer:** [ACPI Data Tables and Table Definition Language](https://uefi.org/specs/ACPI/6.4/21_ACPI_Data_Tables_and_Table_Def_Language/ACPI_Data_Tables.html#acpi-data-tables-and-table-definition-language)
 
-<p align="justify">Differentiated System Description Table. It Is a major ACPI table and is used to describe what peripherals the machine has. Also holds information on PCI IRQ mappings and power management.</p>
+**DSDT**
+
+<p align="justify">Differentiated System Description Table. It Is a major ACPI table and is used to describe what peripherals the machine has. Also holds information on PCI IRQ mappings and power management. In other mean, an OEM must supply a DSDT to an ACPI-compatible OS. The DSDT contains the Differentiated Definition Block, which supplies the implementation and configuration information about the base system. The OS always inserts the DSDT information into the ACPI Namespace at system boot time and never removes it.</p>
 
 <p align="center"><img width="1109" alt="Screen_Shot_2022-04-30_at_3_41_29_PM" src="https://user-images.githubusercontent.com/72515939/166096869-e6b7fe84-c465-4504-ab89-14b8887561ac.png"></p>
 
-**What is `SSDT`?**
+**SSDT**
 
-<p align="justify">Secondary System Description Table. It is encoded in AML which is exactly the same way as the DSDT. It acts as a additional table to the DSDT. 
+<p align="justify">Secondary System Description Table. SSDTs are a continuation of the DSDT. Multiple SSDTs can be used as part of a platform description. After the DSDT is loaded into the ACPI Namespace, each secondary description table listed in the RSDT/XSDT with a unique OEM Table ID is loaded. This allows the OEM to provide the base support in one table, while adding smaller system options in other tables.</p>
 
-<p align="center"><img width="1111" alt="Screen_Shot_2022-04-30_at_3_40_56_PM" src="https://user-images.githubusercontent.com/72515939/166096876-9d9d956e-80ed-477c-b7c3-0897d7c47abe.png"></p>  
+<p align="center"><img width="1111" alt="Screen_Shot_2022-04-30_at_3_40_56_PM" src="https://user-images.githubusercontent.com/72515939/166096876-9d9d956e-80ed-477c-b7c3-0897d7c47abe.png"></p> 
 
-Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
+**Refer:** [Definition of Terms](https://uefi.org/specs/ACPI/6.4/02_Definition_of_Terms/Definition_of_Terms.html)
 
-- [DSDT](https://wiki.osdev.org/DSDT#:~:text=DSDT%20stands%20for%20Differentiated%20System,IRQ%20mappings%20and%20power%20management.)
-- [SSDT](https://wiki.osdev.org/SSDT#:~:text=The%20SSDT%20is%20an%20ACPI,a%20supplement%20to%20the%20DSDT.)
+For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org/specs/ACPI/6.4/index.html)
 
 **DSDT vs SSDT Patching**
 
@@ -208,7 +215,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
 **SSDT Patching** may affect
 
-<p align="justify">ACPI Injection to Windows™/Linux. Mostly, these issue may affect dual booting (Windows™ + MacOS™). Luckily, there are settings via config.plist to prevent both issues, but this is only experimental. Do not assume this settings will work 100% on your machine. Settings is explained via table below:</p>
+<p align="justify">ACPI Injection to Windows/Linux. Mostly, these issue may affect dual booting (Windows + MacOS). Luckily, there are settings via config.plist to prevent both issues, but this is only experimental. Do not assume this settings will work 100% on your machine. Settings is explained via table below:</p>
 
 | Path         | Path       | Path             | Mode   |
 | ------------ | ---------- | ---------------- | ------ |
@@ -238,7 +245,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 | PPMC   | Classed as `Memory Controller` in `Comet Lake (CML)` platform. **Patch:** Compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, identical to `CML` device `pci8086,a3a1` |
 | PXSX   | PCIe USB card, `VIA USB 3.0 eXtensible Host Controller` device |
 | RTL0   | Rename `RTL8125 2.5GbE Controller` device as `RP04,PXSX` to `RP04,RTL0` |
-| SBUS   | Fix `AppleSMBus` support in MacOS™.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc |
+| SBUS   | Fix `AppleSMBus` support in MacOS.  i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` and `etc |
 | SATA   | Serial ATA Device. Rename `SATA` to `SAT0`                   |
 | TSUB/THSS   | Known as `Thermal Subsystem`. This device is renamed due to no identical/compatible data using `ioreg`. Rename `pci8086,a3b1` to `TSUB/THSS`. **Patch:** Compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, identical to `CML` device `pci8086,a3a1`. Patch can be added either on `PPMC` or `TSUB/THSS`. `Both` is possible via testing. Remain only one `AppleIntelPCHPMC` patch. Via `PPMC` is better. By default, `TSUB/THSS` is removed via my `config.plist` |
 | USBX   | USB `Power Properties` for Skylake and newer motherboard generation |
@@ -250,8 +257,8 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
 **Tools to edit iasl (aml/dsl)**
 
-- [MaciASL](https://github.com/acidanthera/MaciASL) ➣ MacOS™
-- [Xiasl](https://github.com/ic005k/Xiasl) ➣ Cross Platform (Mac™/Linux/Windows™)
+- [MaciASL](https://github.com/acidanthera/MaciASL) ➣ MacOS
+- [Xiasl](https://github.com/ic005k/Xiasl) ➣ Cross Platform (Mac/Linux/Windows)
 
 <br>
 
@@ -261,7 +268,7 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
 | Driver          | Information                                                  |
 | --------------- | ------------------------------------------------------------ |
-| HfsPlus.efi     | Official `HFS+ Driver` Support for Apple MacOS™              |
+| HfsPlus.efi     | Official `HFS+ Driver` Support for Apple MacOS              |
 | OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Boot-loader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
 
 <p align="center"><img width="1036" alt="Screen_Shot_2022-04-25_at_2_41_37_PM" src="https://user-images.githubusercontent.com/72515939/165034935-9e54e24e-87fc-4d4a-93cd-79621119b41c.png"></p>
@@ -271,20 +278,20 @@ Full information on DSDT and SSDT can be found at the link provided. Refer:</p>
 
 ### 4.0 - OC\Kext
 
-<p align="justify">Kernel extensions (kexts) let users or developers load code directly into the MacOS™ kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed functions. The table below contains some kexts used to properly boot MacOS™ through OpenCore.</p>
+<p align="justify">Kernel extensions (kexts) let users or developers load code directly into the MacOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed functions. The table below contains some kexts used to properly boot MacOS through OpenCore.</p>
 
 | Kext                | Information                                                  |
 | ------------------- | ------------------------------------------------------------ |
-| Lilu                | `Arbitrary kext` and `process patching` on MacOS™             |
+| Lilu                | `Arbitrary kext` and `process patching` on MacOS             |
 | VirtualSMC          | `System Management Controller` (SMC) emulator layer          |
-| AppleALC            | Enabling `native MacOS™ HD audio` for unofficial codecs       |
+| AppleALC            | Enabling `native MacOS HD audio` for unofficial codecs       |
 | Whatevergreen       | `Various patches` necessary for certain `ATI`/`AMD`/`Intel®`/`Nvidia` GPUs |
 | SMCProcessor        | Additional support for `VirtualSMC`. Used for monitoring `CPU` temperature |
 | SMCSuperIO          | Additional support for `VirtualSMC`. Used for monitoring `FAN` speed |
 | SMCRadeonGPU        | Based on `FakeSMCs`, `RadeonMonitor` to provide `GPU` temperature to a dedicated gadget |
 | RadeonSensor        | To read the `GPU` temperature. `Lilu` is required            |
 | LucyRTL8125Ethernet | Ethernet device, `Realtek RTL8125 2.5G bit Ethernet Controllers` driver |
-| USBMap              | Kext to `route` selected `USB ports` to `Physical Ports` via USB port address. This is `compulsory to handle` `15 port limit` requirements by MacOS™ |
+| USBMap              | Kext to `route` selected `USB ports` to `Physical Ports` via USB port address. This is `compulsory to handle` `15 port limit` requirements by MacOS |
 
 **Remark:** All kext used are `DEBUG` versions.
 
@@ -324,7 +331,7 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 
 ### 8.0 - OC\config.plist
 
-<p align="justify">Property list based on xml code. Structured OpenCore/Clover method and upgraded injection function. An Apple.Inc plist is a MacOS™ preference, also a file for the application that it holds the preference settings for. By trashing and then relaunching an application you are getting rid of old user set preferences that may have become corrupt. OpenCore use this kind of file to inject (match, overcome and manipulate) specified information to unsupport hardware/device. 
+<p align="justify">Property list based on xml code. Structured OpenCore/Clover method and upgraded injection function. An Apple.Inc plist is a MacOS preference, also a file for the application that it holds the preference settings for. By trashing and then relaunching an application you are getting rid of old user set preferences that may have become corrupt. OpenCore use this kind of file to inject (match, overcome and manipulate) specified information to unsupport hardware/device. 
 Besides, a plist is often used to correct problems that a user may be having with an application.</p>
 
 <p align="center"><img width="959" alt="Screen Shot 2022-04-25 at 1 19 39 PM" src="https://user-images.githubusercontent.com/72515939/165025284-c442cf30-0099-4f94-8634-19b9877d153a.png"></p>
@@ -337,8 +344,8 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 **Tools to edit config.plist**
 
-- [ProperTree](https://github.com/corpnewt/ProperTree) ➣ Cross Platform (Mac™/Linux/Windows™)
-- [Xplist](https://github.com/ic005k/Xplist) ➣ Cross Platform (Mac™/Linux/Windows™)
+- [ProperTree](https://github.com/corpnewt/ProperTree) ➣ Cross Platform (Mac/Linux/Windows)
+- [Xplist](https://github.com/ic005k/Xplist) ➣ Cross Platform (Mac/Linux/Windows)
 
 <br>
 
@@ -551,9 +558,9 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 - Compatibility Support Module (CSM) ➣ Compatibility Support Module
 - Thunderbolt ➣ New technology that supports `high-resolution displays` and `high-performance data` through one `single port`. For initial install, as Thunderbolt can cause issues if not setup correctly
 - Intel® Software Guard Extensions (SGX) ➣ A set of `security-related instruction codes` that are built into some Intel® central processing units (CPUs)
-- Intel® Platform Trust (TPM) ➣ Trusted Platform Module, `improves the security` of your PC by securely creating and storing cryptographic keys. (`Linux` and `Windows™ 10`.  Proper `dual-boot` with `Windows™ 11` require TPM to be enable. **Refer:** [InsanelyMac Discussions](https://www.insanelymac.com/forum/topic/348202-how-to-opencore-070-071-differences/))
+- Intel® Platform Trust (TPM) ➣ Trusted Platform Module, `improves the security` of your PC by securely creating and storing cryptographic keys. (`Linux` and `Windows 10`.  Proper `dual-boot` with `Windows 11` require TPM to be enable. **Refer:** [InsanelyMac Discussions](https://www.insanelymac.com/forum/topic/348202-how-to-opencore-070-071-differences/))
 - Config Lock (CFG Lock) ➣ Setting in your BIOS that allows for a `specific register` (in this case the MSR 0xE2) to be written to
-- Intel® Rapid Storage Technology (RST) ➣ Windows™-based application that provides `improved performance` and `reliability` for computers that are equipped with `SATA` disks for desktop, mobile, and server platforms
+- Intel® Rapid Storage Technology (RST) ➣ Windows-based application that provides `improved performance` and `reliability` for computers that are equipped with `SATA` disks for desktop, mobile, and server platforms
 
 ### Enable
 
@@ -562,8 +569,8 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 - Hyper-Threading ➣ An `Intel®` hardware innovation that allows multiple threads to run on each core, this means more work can be done in parallel
 - Execute Disable Bit ➣ An `Intel®` hardware-based security component.
 - EHCI/XHCI Hand-off ➣ USB functions are handled by the OS
-- OS type ➣ `Windows™ 8.1/10` UEFI Mode
-- DVMT Pre ➣ The `Intel® HD/UHD Graphics driver` for `Windows™`. Please allocated (iGPU Memory) to `64MB` / `Auto`
+- OS type ➣ `Windows 8.1/10` UEFI Mode
+- DVMT Pre ➣ The `Intel® HD/UHD Graphics driver` for `Windows`. Please allocated (iGPU Memory) to `64MB` / `Auto`
 - SATA Mode ➣ Advanced Host Controller Interface (AHCI)
 
 <br>
@@ -620,8 +627,8 @@ I would like to thanks all folks in Hackintosh Community especially:
 
 - [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) ➣ a great guide
 - [acidanthera](https://github.com/acidanthera) ➣ [OpenCore](https://github.com/acidanthera/OpenCorePkg) Boot-loader and powerful ACPI compiler, [MaciASL](https://github.com/acidanthera/MaciASL)
-- [corpNewt](https://github.com/corpnewt) ➣ developing simple [USBmap](https://github.com/corpnewt/USBMap) tools and ProperTree](https://github.com/corpnewt/ProperTree) 
-- [dhinakg](https://github.com/USBToolBox/tool) ➣ developing easy Windows™ based USBmap, [USBToolBox](https://github.com/USBToolBox/tool) which inspired by [corpNewt](https://github.com/corpnewt) [USBmap](https://github.com/corpnewt/USBMap)
+- [corpNewt](https://github.com/corpnewt) ➣ developing simple [USBmap](https://github.com/corpnewt/USBMap) tools and [ProperTree](https://github.com/corpnewt/ProperTree) 
+- [dhinakg](https://github.com/USBToolBox/tool) ➣ developing easy Windows based USBmap, [USBToolBox](https://github.com/USBToolBox/tool) which inspired by [corpNewt](https://github.com/corpnewt) [USBmap](https://github.com/corpnewt/USBMap)
 - [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) ➣ an official [Facebook](https://www.facebook.com) community for Hackintosh
 - [headkaze](https://github.com/headkaze) ➣ the Swiss Army Knife of Vanilla Hackintoshing, known as [Hackintool](https://github.com/headkaze/Hackintool) and awesome EFI Mounter called as [EFIAgent](https://github.com/headkaze/EFI-Agent)
 - [r/Hackintosh](https://www.reddit.com/r/hackintosh/) ➣ my favourite [reddit](https://www.reddit.com) Hackintosh discussion platform
@@ -633,3 +640,4 @@ I would like to thanks all folks in Hackintosh Community especially:
 ## Follow Me!
 
 - [u/mohdismailmatasin](https://www.reddit.com/user/mohdismailmatasin) on [reddit](https://www.reddit.com)
+                                             							| 
