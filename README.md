@@ -198,22 +198,26 @@ Below are the basic OpenCore folders and files used for this project:
 
 For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org/specs/ACPI/6.4/index.html)
 
+**ACPI Machine Language (AML)**
+
+<p align="justify">Pseudo-code for a virtual machine supported by an ACPI-compatible OS and in which ACPI control methods and objects are written. The AML encoding definition is provided in section 19, [“ACPI Machine Language (AML) Specification.”](https://uefi.org/specs/ACPI/6.4/20_AML_Specification/AML_Specification.html)</p>
+
 **DSDT vs SSDT Patching**
 
 <p align="justify">As documented by Dortania, "Do not add your DSDT to OpenCore; it's already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your configuration based on the architecture of your CPU".</p>
 
 **Refer:** [Dortania](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime)
 
-<p align="justify">DSDT patching should be avoided. There are various reasons why DSDT patching is not recommended. Some forums/webpages (i.e., Olarila) state that it is a major solution. As a matter of knowledge, DSDT is the main table while SSDT is the secondary table (additional table). The difference is that DSDT cannot be tampered with or touched. Because it is the primary code to handle your machine with various devices. Meanwhile, SSDT is the secondary table, where we can change (modify), add, and drop. Although the language (code) used is the same, it has a different task or method. Reason? I'll explain why.</p>
+<p align="justify">Some computers come with a broken DSDT. It is usually not recommended to patch/override DSDT. Overriding DSDT with garbage can do physical harm to computer. DSDT patches or sometimes called as override should be avoided. Some forums/webpages (i.e., Olarila) state that it is a major solution. While DSDT is the primary table, SSDT can be patched, modified (adding and dropping) the hardware properties which hook inside the machine. There are various reasons why DSDT patching is not recommended.</p>
 
-**DSDT Patching** may cause 
+**DSDT Patch** may cause 
 
 1. Broken motherboard BIOS, or
 2. Inefficient device with the wrong injection, or
 3. Cause malfunction device, or
 4. PC unable to boot properly due to an incorrect patch (difficult to reverse).
 
-**SSDT Patching** may affect
+**SSDT Patch** may affect
 
 <p align="justify">ACPI Injection to Windows/Linux. Mostly, these issue may affect dual booting (Windows + MacOS). Luckily, there are settings via config.plist to prevent both issues, but this is only experimental. Do not assume this settings will work 100% on your machine. Settings is explained via table below:</p>
 
@@ -222,8 +226,9 @@ For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org
 | PlatformInfo | SerialInfo | UpdateSMBIOSMode | Custom |
 | Kernel       | Quirks     | CustomSMBIOSGuid | True   |
 
-<p align="justify">From here, SSDT patching is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. The SSDT concept is only a patch of information and does not affect the existing hardware.</p>
-<p align="justify">Thanks to CorpNewt SSDTTime for the easy process. The entire SSDT has been merged into one file (i.e., SSDT-B460M-SL.dsl). There are also several other sources of properties that are injected to reduce the kext workload. For instance, renaming GFX0 to an IGPU that is managed by Whatevergreen.kext. The following is a list of devices that have been injected with specific properties:</p>
+<p align="justify">SSDT patch is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. SSDT patch is minor modification and not affect the actual hardware performance.</p>
+
+<p align="justify">Thanks to CorpNewt [SSDTTime](https://github.com/corpnewt/SSDTTime) hotpatch tool. In this project, various SSDT's has been merged into one (i.e., SSDT-B460M-SL.dsl). With several other sources, additional code is injected to reduce the kext workload. As example, GFX0 to an IGPU rename which handled by Whatevergreen.kext.</p>
 
 | Device | Information                                                  |
 | ------ | ------------------------------------------------------------ |
