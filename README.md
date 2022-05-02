@@ -468,7 +468,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 ## Headless UHD Graphics 630 Settings
 
-**AppleXML**
+**Basic IGPU settings (Apple XML)**
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -520,10 +520,67 @@ Besides, a plist is often used to correct problems that a user may be having wit
 </plist>
 ```
 
-**Plist**
+**Basic IGPU settings (Plist)**
 
 <p align="center"><img width="477" alt="Screen Shot 2022-04-24 at 11 29 58 PM" src="https://user-images.githubusercontent.com/72515939/164984010-95cbbf14-17e4-46ee-991b-e244b4a012da.png"></p>
 
+**Tips: How to choose better UHD630 Framebuffer? (Advance)**  
+
+<p align="justify">The keyword for the best headless settings for desktop is "mobile". For desktop (iMac SMBIOS), the framebuffer setting for the "mobile" variant is not required. Open "Hackintool > Patch > and find the Platform ID" option. Find any setting that is not related to the desktop. The purpose is to find a proper "AAPL,ig-platform-id". In this case, 0x3E910003 in hexadecimal, which is equal to 0300913E, 4 byte data hex swapped.</p>
+
+<p align="center"><img width="1176" alt="Screen_Shot_2022-05-02_at_5_10_03_PM" src="https://user-images.githubusercontent.com/72515939/166212509-9f300b98-66c5-43f0-abf9-e14dd5e610a2.png"></p>
+
+<p align="justify">To get the main card platform as headless injection, "device-id" is required to get the device name. Without naming, "Activity Monitor > Window > GPU History" or "Activity Monitor > GPU Tab" will display the IGPU name as "Intel® KBL Unknown". Use Hackintool as a guide by finding the appropriate device-id, not of the "mobile" type. In this case, "device-id" 9B3E0000 is used.</p>
+
+<p align="center"><img width="1172" alt="Screen_Shot_2022-05-02_at_5_27_16_PM" src="https://user-images.githubusercontent.com/72515939/166213623-407d87dd-5368-4430-b8e0-5fc87eb97be1.png"></p>
+
+```xml
+<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+<dict>
+	<key>AAPL,ig-platform-id</key>
+	<data>
+	AwCRPg==
+	</data>
+	<key>AAPL,slot-name</key>
+	<string>Internal</string>
+	<key>device-id</key>
+	<data>
+	mz4AAA==
+	</data>
+	<key>device_type</key>
+	<string>Display controller</string>
+	<key>enable-metal</key>
+	<data>
+	AQAAAA==
+	</data>
+	<key>hda-gfx</key>
+	<string>onboard-1</string>
+	<key>igfxfw</key>
+	<data>
+	AgAAAA==
+	</data>
+	<key>igfxonln</key>
+	<data>
+	AQAAAA==
+	</data>
+	<key>iommu-selection</key>
+	<data>
+	AAAAAA==
+	</data>
+	<key>rps-control</key>
+	<data>
+	AQAAAA==
+	</data>
+</dict>
+```
+
+<p align="justify">And, the result is....</p>
+
+<img width="1656" alt="Screen Shot 2022-05-02 at 5 01 41 PM" src="https://user-images.githubusercontent.com/72515939/166213796-e008aa77-c372-4aac-8ff2-45b8b06bc0d8.png">
+
+<p align="center"><img width="1365" alt="Screen Shot 2022-05-02 at 5 02 07 PM" src="https://user-images.githubusercontent.com/72515939/166213972-fb1aea41-ce2c-4a9f-a237-187e83faaf51.png"></p>
+
+<p align="center"><img width="549" alt="Screen Shot 2022-05-02 at 5 33 59 PM" src="https://user-images.githubusercontent.com/72515939/166214463-17182b3a-99f3-48a5-bd58-70d4720971e3.png"></p>
 	
 <br>	
 
