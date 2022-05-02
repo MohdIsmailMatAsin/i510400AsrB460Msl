@@ -524,7 +524,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <p align="center"><img width="477" alt="Screen Shot 2022-04-24 at 11 29 58 PM" src="https://user-images.githubusercontent.com/72515939/164984010-95cbbf14-17e4-46ee-991b-e244b4a012da.png"></p>
 
-**Tips: How to choose better UHD630 Framebuffer? (Advance)**  
+**Advance Tips: How to choose better UHD630 Framebuffer?**  
 
 <p align="justify">The keyword for the best headless settings for desktop is "mobile". For desktop (iMac SMBIOS), the framebuffer setting for the "mobile" variant is not required. Open "Hackintool > Patch > and find the Platform ID" option. Find any setting that is not related to the desktop. The purpose is to find a proper "AAPL,ig-platform-id". In this case, "0x3E910003" in hexadecimal, which is equal to "0300913E", 4 byte data hex swapped.</p>
 
