@@ -534,6 +534,8 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <p align="center"><img width="1172" alt="Screen_Shot_2022-05-02_at_5_27_16_PM" src="https://user-images.githubusercontent.com/72515939/166213623-407d87dd-5368-4430-b8e0-5fc87eb97be1.png"></p>
 
+<p align="center"><img width="551" alt="Screen Shot 2022-05-02 at 5 48 04 PM" src="https://user-images.githubusercontent.com/72515939/166215966-1f774c04-4c2a-4212-876e-dffba62567c3.png"></p>
+
 ```xml
 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 <dict>
@@ -578,7 +580,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <img width="1656" alt="Screen Shot 2022-05-02 at 5 01 41 PM" src="https://user-images.githubusercontent.com/72515939/166213796-e008aa77-c372-4aac-8ff2-45b8b06bc0d8.png">
 
-<p align="center"><img width="1365" alt="Screen Shot 2022-05-02 at 5 02 07 PM" src="https://user-images.githubusercontent.com/72515939/166213972-fb1aea41-ce2c-4a9f-a237-187e83faaf51.png"></p>
+<p align="center"><img width="1365" alt="Screen_Shot_2022-05-02_at_5_02_07_PM" src="https://user-images.githubusercontent.com/72515939/166215851-6690a3c6-366d-4308-9dbd-04a9c709025f.png"></p>
 
 <p align="center"><img width="549" alt="Screen Shot 2022-05-02 at 5 33 59 PM" src="https://user-images.githubusercontent.com/72515939/166214463-17182b3a-99f3-48a5-bd58-70d4720971e3.png"></p>
 	
