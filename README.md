@@ -446,24 +446,24 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 ```xml
 <key>DeviceProperties</key>
+<dict>
+	<key>Add</key>
 	<dict>
-		<key>Add</key>
+		<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>@0,name</key>
-				<string>ATY,Henbury</string>
-				<key>@1,name</key>
-				<string>ATY,Henbury</string>
-				<key>@2,name</key>
-				<string>ATY,Henbury</string>
-				<key>@3,name</key>
-				<string>ATY,Henbury</string>
-			</dict>
+			<key>@0,name</key>
+			<string>ATY,Henbury</string>
+			<key>@1,name</key>
+			<string>ATY,Henbury</string>
+			<key>@2,name</key>
+			<string>ATY,Henbury</string>
+			<key>@3,name</key>
+			<string>ATY,Henbury</string>
 		</dict>
-		<key>Delete</key>
-		<dict/>
 	</dict>
+	<key>Delete</key>
+	<dict/>
+</dict>
 ```
 
 ## Headless UHD Graphics 630 Settings
