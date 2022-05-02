@@ -526,11 +526,11 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 **Tips: How to choose better UHD630 Framebuffer? (Advance)**  
 
-<p align="justify">The keyword for the best headless settings for desktop is "mobile". For desktop (iMac SMBIOS), the framebuffer setting for the "mobile" variant is not required. Open "Hackintool > Patch > and find the Platform ID" option. Find any setting that is not related to the desktop. The purpose is to find a proper "AAPL,ig-platform-id". In this case, 0x3E910003 in hexadecimal, which is equal to 0300913E, 4 byte data hex swapped.</p>
+<p align="justify">The keyword for the best headless settings for desktop is "mobile". For desktop (iMac SMBIOS), the framebuffer setting for the "mobile" variant is not required. Open "Hackintool > Patch > and find the Platform ID" option. Find any setting that is not related to the desktop. The purpose is to find a proper "AAPL,ig-platform-id". In this case, "0x3E910003" in hexadecimal, which is equal to "0300913E", 4 byte data hex swapped.</p>
 
 <p align="center"><img width="1176" alt="Screen_Shot_2022-05-02_at_5_10_03_PM" src="https://user-images.githubusercontent.com/72515939/166212509-9f300b98-66c5-43f0-abf9-e14dd5e610a2.png"></p>
 
-<p align="justify">To get the main card platform as headless injection, "device-id" is required to get the device name. Without naming, "Activity Monitor > Window > GPU History" or "Activity Monitor > GPU Tab" will display the IGPU name as "Intel® KBL Unknown". Use Hackintool as a guide by finding the appropriate device-id, not of the "mobile" type. In this case, "device-id" 9B3E0000 is used.</p>
+<p align="justify">To get the main card platform as headless injection, "device-id" is required to get the device name. Without naming, "Activity Monitor > Window > GPU History" or "Activity Monitor > GPU Tab" will display the IGPU name as "Intel® KBL Unknown". Use Hackintool as a guide by finding the appropriate device-id, not of the "mobile" type. In this case, GPU "device-id" "0x3E9B8086" in Hexadecimal, which is equal to "9B3E0000" (9B3E8086) ,4 byte data hex swapped is used. (Note: Remove "8086" and change this value to "0000" to get "9B3E0000").</p>
 
 <p align="center"><img width="1172" alt="Screen_Shot_2022-05-02_at_5_27_16_PM" src="https://user-images.githubusercontent.com/72515939/166213623-407d87dd-5368-4430-b8e0-5fc87eb97be1.png"></p>
 
