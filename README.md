@@ -43,7 +43,11 @@
 
 <p align="justify">UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the boot process. UEFI is similar to Legacy, but the boot data is stored in a ".efi" file rather than the firmware. Most UEFIs can be entered by a special key.</p>
 
-**BIOS key: ASUS ➣ F8 | GIGABYTE ➣ F12 | MSI ➣ F11 | INTEL® ➣ F10 | ASROCK ➣ F11 | EVGA ➣ F7** 
+| **Manufacturer** | **BIOS Key**  |**Manufacturer** | **BIOS Key**  |
+|------------------|---------------|-----------------|---------------|
+| ASUS        	   | F8  	   | Intel           | F10  	     |
+| Gigabyte         | F12           | Asrock          | F11           |
+| MSI              | F11           | EVGA            | F7            |
 
 **UEFI vs Legacy**
 
