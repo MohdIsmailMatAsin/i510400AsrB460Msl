@@ -535,7 +535,8 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <p align="justify">To get the proper main card platform as headless injection, "device-id" is required to get the device name. On Intel 10th Gen is not necessary, but sometimes this patch may fix certain IGPU issues. As an example, find "Activity Monitor > Window > GPU History" or "Activity Monitor > GPU" extra tab, IGPU will display as "Intel® KBL Unknown". To proper rename, use "Hackintool" as a guide by finding the appropriate device-id, not in "mobile" mode (Mobile = No). In this case, GPU Hexadecimal "device-id" "0x3E9B8086" which is equal to 4 byte data hex swapped "9B3E0000" is injected via "config.plist" in IGPU "DeviceProperties" section. Below is an example:</p>
 
-**0x3E9B8086** = **9B3E0000**
+- **0x3E9B8086** = **9B3E8086**
+- **9B3E8086** = **9B3E0000** (8086 to 0000)
 - **Results** ➣ **device-id**=**9B3E0000**
 
 <p align="center"><img width="1172" alt="Screen_Shot_2022-05-02_at_5_27_16_PM" src="https://user-images.githubusercontent.com/72515939/166213623-407d87dd-5368-4430-b8e0-5fc87eb97be1.png"></p>
