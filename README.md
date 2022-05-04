@@ -829,4 +829,4 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 ## FOLLOW ME
 
-- ❤️	[reddit](https://www.reddit.com) - ⭐	[u/mohdismailmatasin](https://www.reddit.com/user/mohdismailmatasin)
+- ❤️	[reddit](https://www.reddit.com) ⭐ [u/mohdismailmatasin](https://www.reddit.com/user/mohdismailmatasin)
