@@ -780,19 +780,19 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 ## <ins>IOREG</ins>
 
-[iMac20,1-Hack](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/iMac20%2C1-Hack.ioreg)
+📀 [iMac20,1-Hack](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/iMac20%2C1-Hack.ioreg)
 
 </br>
 
 ## <ins>DEBUG LOG</ins>
 
-[OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-2022-04-19-153310.txt)
+📀 [OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-2022-04-19-153310.txt)
 
 </br>
 
 ## <ins>UPDATING EFI USING OCTOOL</ins>
 
-[rusty-bits/octool](https://youtu.be/5KNzD08Hkxs) - Watch octool<ins> guide [here](https://www.youtube.com/watch?v=5KNzD08Hkxs&t=4s)
+📀 Watch [rusty-bits/octool](https://github.com/rusty-bits/octool) guide via [Youtube](https://www.youtube.com/watch?v=5KNzD08Hkxs&t=4s)
 
 </br>
 
