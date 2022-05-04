@@ -1,4 +1,4 @@
-# Hackintosh: INTEL i5 10400 & ASROCK B460M STEEL LEGEND
+# <ins>Hackintosh: INTEL i5 10400 & ASROCK B460M STEEL LEGEND</ins>
 
 ![Artboard 1](https://user-images.githubusercontent.com/72515939/166086285-c5c771ed-e4d4-409a-b2d5-2e3f4c4325ea.png)
 
@@ -6,7 +6,7 @@
 
 ###### <p align="justify">This is not an official method. All the information displayed is based on actual hardware and an experimental basis. Half of the information is taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others are taken from several well-known sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), please refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0)</p>
 
-## <u>INFORMATION</u>
+## <ins>INFORMATION</ins>
 
 | Info      | Details                          | Info        | Details                                       |
 | --------- | -------------------------------- | ----------- | --------------------------------------------- |
@@ -21,7 +21,7 @@
 
 <br>
 
-## <u>APFS CHANGES</u>
+## <ins>APFS CHANGES</ins>
 
 | MacOS     | Mindate   | MinVersion       | SetApfsTrimTimeout | SecureBootModel       |
 |-----------|-----------|------------------|--------------------|-----------------------|
@@ -33,7 +33,7 @@
 
 <br>
 
-## <u>INTRODUCTION</u>
+## <ins>INTRODUCTION</ins>
 
 **Legacy BIOS**
 
@@ -87,7 +87,7 @@
 
 <br>
 
-## <u>PARTITIONING</u>
+## <ins>PARTITIONING</ins>
 
 - **Windows**
 
@@ -106,7 +106,7 @@
 
 <br>
 
-## <u>OPENCORE PACKAGE & PREPARATION</u>
+## <ins>OPENCORE PACKAGE & PREPARATION</ins>
 
 **Preparation Package**
 
@@ -174,7 +174,7 @@ Below are the basic OpenCore folders and files used for this project:
 
 <br>
 
-### <u>1.0 - EFI\BOOT</u>
+### <ins>1.0 - EFI\BOOT</ins>
 
 <p align="justify">Fallback boot-loader path. This is the only boot-loader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings. "Booting" is a term used to refer to the initial loading process when we turn on the computer. BOOTx64.efi is a special file for the boot process that aims to link the "boot-loader" checked by the BIOS before the computer can be used. The boot programme and OpenCore.efi will be searched by the BIOS for UEFI on 64-bit X86 systems without any existing NVRAM boot settings. There are 2 boot types settings, temporary and permanent. The details below describe the files involved in the process.</p>
 
@@ -222,7 +222,7 @@ Below are the basic OpenCore folders and files used for this project:
 
 <br>
 
-### <u>2.0 - OC\ACPI</u>
+### <ins>2.0 - OC\ACPI</ins>
 
 **Refer:** [ACPI Data Tables and Table Definition Language](https://uefi.org/specs/ACPI/6.4/21_ACPI_Data_Tables_and_Table_Def_Language/ACPI_Data_Tables.html#acpi-data-tables-and-table-definition-language)
 
@@ -334,7 +334,7 @@ Thanks to CorpNewt [SSDTTime](https://github.com/corpnewt/SSDTTime) hotpatch too
 
 <br>
 
-### <u>3.0 - OC\DRIVERS</u>
+### <ins>3.0 - OC\DRIVERS</ins>
 
 <p align="justify">Only use 2 basic driver types. HfsPlus.efi and OpenRuntime.efi. Both files are essentially basic things to get driver support. Usage information is as follows:</p>
 
@@ -347,7 +347,7 @@ Thanks to CorpNewt [SSDTTime](https://github.com/corpnewt/SSDTTime) hotpatch too
 
 <br>
 
-### <u>4.0 - OC\KEXT</u>
+### <ins>4.0 - OC\KEXT</ins>
 
 <p align="justify">Kernel extensions (kexts) let users or developers load code directly into the MacOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed functions. The table below contains some kexts used to properly boot MacOS through OpenCore.</p>
 
@@ -376,7 +376,7 @@ Thanks to CorpNewt [SSDTTime](https://github.com/corpnewt/SSDTTime) hotpatch too
 
 <br>
 
-### <u>5.0 - OC\OPENCORE.EFI</u>
+### <ins>5.0 - OC\OPENCORE.EFI</ins>
 
 An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is include with [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/) and it is compulsory.
 
@@ -384,7 +384,7 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 
 <br>
 
-### <u>6.0 - OC\RESOURCES</u>
+### <ins>6.0 - OC\RESOURCES</ins>
 
 <p align="justify">This folder is related to OpenCore Beauty Treatment and is used with the OpenCanopy.efi driver. It is up to you to do your own research for a custom boot menu.</p>
 
@@ -394,7 +394,7 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 
 <br>
 
-### <u>7.0 - OC\TOOLS</u>
+### <ins>7.0 - OC\TOOLS</ins>
 
 <p align="justify">Nothing fancy, just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist. This tool is hiding via "hide auxiliary". Use "Spacebar" to reveal the function. I just include this tools as failsafe.</p>
 
@@ -402,7 +402,7 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 
 <br>
 
-### <u>8.0 - OC\CONFIG.PLIST</u>
+### <ins>8.0 - OC\CONFIG.PLIST</ins>
 
 <p align="justify">Property list based on xml code. Structured OpenCore/Clover method and upgraded injection function. An Apple.Inc plist is a MacOS preference, also a file for the application that it holds the preference settings for. By trashing and then relaunching an application you are getting rid of old user set preferences that may have become corrupt. OpenCore use this kind of file to inject (match, overcome and manipulate) specified information to unsupport hardware/device. 
 Besides, a plist is often used to correct problems that a user may be having with an application.</p>
@@ -424,7 +424,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <br>
 
-## <u>QUIRKS CHECK</u>
+## <ins>QUIRKS CHECK</ins>
 
 <p align="justify">Quirks must set as processor codename. Refer OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error occur to config.plist is by your own responsibility. Manual setup is encourage. Please make a backup before using it. Link can be refer below:</p>
 
@@ -484,7 +484,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <br>
 
-## <u>ADDITIONAL FRAMEBUFFER FOR AMD NAVI GPU's</u>
+## <ins>ADDITIONAL FRAMEBUFFER FOR AMD NAVI GPU's</ins>
 
 ### Framebuffers available in AMDRadeonX6000Framebuffer.kext >> Contents >> Info.plist.
 
@@ -541,7 +541,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <br>
 
-## <u>UHD GRAPHICS 630 HEADLESS MODE</u>
+## <ins>UHD GRAPHICS 630 HEADLESS MODE</ins>
 
 **Basic IGPU settings (Apple XML)**
 
@@ -707,7 +707,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <br>
 
-## <u>POWER ISSUES</u>
+## <ins>POWER ISSUES</ins>
 
 <p align="justify">If there is a problem with power, use Hackintool to reset. The diagram below shows how to do this:</p>
 
@@ -717,7 +717,7 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 
 <br>
 
-## <u>BIOS/UEFI CONFIGURATION</u>
+## <ins>BIOS/UEFI CONFIGURATION</ins>
 
 ### Disable
 
@@ -748,7 +748,7 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 
 <br>
 
-## <u>DRM TESTING</u>
+## <ins>DRM TESTING</ins>
 
 AppleTV ✓ | [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view) ✕ | Netflix ✓
 
@@ -756,7 +756,7 @@ AppleTV ✓ | [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jv
 
 <br>
 
-## <u>TRIM</u>
+## <ins>TRIM</ins>
 
 1. NVMe: `Kingston A2000 NVMe` trim support is working native. 
 
@@ -768,25 +768,25 @@ AppleTV ✓ | [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jv
 
 <br>
 
-## <u>IOREG</u>
+## <ins>IOREG</ins>
 
 [iMac20,1-Hack](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/iMac20%2C1-Hack.ioreg)
 
 <br>
 
-## <u>DEBUG LOG</u>
+## <ins>DEBUG LOG</ins>
 
 [OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-2022-04-19-153310.txt)
 
 <br>
 
-## <u>UPDATING EFI USING OCTOOL</u>
+## <ins>UPDATING EFI USING OCTOOL</ins>
 
-[rusty-bits/octool](https://youtu.be/5KNzD08Hkxs) - Watch octool guide [here](https://www.youtube.com/watch?v=5KNzD08Hkxs&t=4s)
+[rusty-bits/octool](https://youtu.be/5KNzD08Hkxs) - Watch octool<ins> guide [here](https://www.youtube.com/watch?v=5KNzD08Hkxs&t=4s)
 
 <br>
 
-## <u>FINAL RESULTS</u>
+## <ins>FINAL RESULTS</ins>
 
 <p align="center"><img width="2560" alt="Screen Shot 2022-04-30 at 12 37 23 AM" src="https://user-images.githubusercontent.com/72515939/165986968-f6debb0f-8b5b-474b-850f-972afcc78621.png"></p>
 
@@ -794,7 +794,7 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 
 <br>
 
-## <u>ACKNOWLEGEMENT</u>
+## <ins>ACKNOWLEGEMENT</ins>
 
 I would like to thanks all folks in Hackintosh Community especially:
 
@@ -812,6 +812,6 @@ I would like to thanks all folks in Hackintosh Community especially:
 
 <br>
 
-## <u>FOLLOW ME</u>
+## <ins>FOLLOW ME</ins>
 
 - [reddit](https://www.reddit.com) - [u/mohdismailmatasin](https://www.reddit.com/user/mohdismailmatasin)
