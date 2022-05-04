@@ -233,7 +233,7 @@ Below are the basic OpenCore folders and files used for this project:
 
 <p align="center"><img width="1109" alt="Screen_Shot_2022-04-30_at_3_41_29_PM" src="https://user-images.githubusercontent.com/72515939/166096869-e6b7fe84-c465-4504-ab89-14b8887561ac.png"></p>
 
-<br>
+</br>
 
 **SSDT**
 
