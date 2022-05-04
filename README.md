@@ -806,7 +806,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-### <ins>ACKNOWLEGEMENT</ins>
+## <ins>ACKNOWLEGEMENT</ins>
 
 📌 I would like to thanks all folks in Hackintosh Community especially:
 
@@ -824,6 +824,6 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-### <ins>FOLLOW ME</ins>
+## <ins>FOLLOW ME</ins>
 
 - 💟 [reddit](https://www.reddit.com) - [u/mohdismailmatasin](https://www.reddit.com/user/mohdismailmatasin)
