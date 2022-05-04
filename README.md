@@ -1,4 +1,4 @@
-# <ins>HACKINTOSH: INTEL i5 10400 & ASROCK B460M STEEL LEGEND</ins>
+# HACKINTOSH: INTEL i5 10400 & ASROCK B460M STEEL LEGEND
 
 ![Artboard 1](https://user-images.githubusercontent.com/72515939/166086285-c5c771ed-e4d4-409a-b2d5-2e3f4c4325ea.png)
 
@@ -8,7 +8,7 @@ This is not an **official** method. All the information displayed is based on ac
 
 </br>
 
-## <ins>INFORMATION</ins>
+## INFORMATION
 
 | Info      | Details                          | Info        | Details                                       |
 | --------- | -------------------------------- | ----------- | --------------------------------------------- |
@@ -23,7 +23,7 @@ This is not an **official** method. All the information displayed is based on ac
 
 </br>
 
-## <ins>APFS CHANGES</ins>
+## APFS CHANGES
 
 | MacOS     | Mindate   | MinVersion       | SetApfsTrimTimeout | SecureBootModel       |
 |-----------|-----------|------------------|--------------------|-----------------------|
@@ -37,7 +37,7 @@ The settings above may not be the same as the recommended settings by Dortania. 
 
 </br>
 
-## <ins>INTRODUCTION</ins>
+## INTRODUCTION
 
 ### Legacy BIOS
 
@@ -101,7 +101,7 @@ The settings above may not be the same as the recommended settings by Dortania. 
 
 </br>
 
-## <ins>PARTITIONING</ins>
+## PARTITIONING
 
 ### Windows
 
@@ -125,7 +125,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 </br>
 
-## <ins>OPENCORE PACKAGE & PREPARATION</ins>
+## OPENCORE PACKAGE & PREPARATION
 
 ### Preparation Package (OpenCore v0.8.0)
 
@@ -189,7 +189,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 </br>
 
-### <ins>1.0 - EFI\BOOT</ins>
+### 1.0 - EFI\BOOT
 
 <p align="justify">
 📌 Fallback boot-loader path. This is the only boot-loader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings. "Booting" is a term used to refer to the initial loading process when we turn on the computer. BOOTx64.efi is a special file for the boot process that aims to link the "boot-loader" checked by the BIOS before the computer can be used. The boot programme and OpenCore.efi will be searched by the BIOS for UEFI on 64-bit X86 systems without any existing NVRAM boot settings. There are 2 boot types settings, temporary and permanent. The details below describe the files involved in the process.
@@ -241,7 +241,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 </br>
 
-### <ins>2.0 - OC\ACPI</ins>
+### 2.0 - OC\ACPI
 
 **Refer:** [ACPI Data Tables and Table Definition Language](https://uefi.org/specs/ACPI/6.4/21_ACPI_Data_Tables_and_Table_Def_Language/ACPI_Data_Tables.html#acpi-data-tables-and-table-definition-language)
 
@@ -375,7 +375,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 </br>
 
-### <ins>3.0 - OC\DRIVERS</ins>
+### 3.0 - OC\DRIVERS
 
 <p align="justify">
 📌 Only use 2 basic driver types. HfsPlus.efi and OpenRuntime.efi. Both files are essentially basic things to get driver support. Usage information is as follows:
@@ -392,7 +392,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 </br>
 
-### <ins>4.0 - OC\KEXT</ins>
+### 4.0 - OC\KEXT
 
 <p align="justify">
 📌 Kernel extensions (kexts) let users or developers load code directly into the MacOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed functions. The table below contains some kexts used to properly boot MacOS through OpenCore.
@@ -427,7 +427,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 </br>
 
-### <ins>5.0 - OC\OPENCORE.EFI</ins>
+### 5.0 - OC\OPENCORE.EFI
 
 <p align="justify">
 📌 An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is include with [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/) and it is compulsory.</p>
@@ -438,7 +438,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 </br>
 
-### <ins>6.0 - OC\RESOURCES</ins>
+### 6.0 - OC\RESOURCES
 
 <p align="justify">
 📌 This folder is related to OpenCore Beauty Treatment and is used with the OpenCanopy.efi driver. It is up to you to do your own research for a custom boot menu.
@@ -452,7 +452,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 </br>
 
-### <ins>7.0 - OC\TOOLS</ins>
+### 7.0 - OC\TOOLS
 
 <p align="justify">
 📌 Just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist. This tool is hiding via "hide auxiliary". Use "Spacebar" to reveal the function. I just include this tools as failsafe.
@@ -464,7 +464,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 </br>
 
-### <ins>8.0 - OC\CONFIG.PLIST</ins>
+### 8.0 - OC\CONFIG.PLIST
 
 <p align="justify">
 📌 Property list based on xml code. Structured OpenCore/Clover method and upgraded injection function. An Apple.Inc plist is a MacOS preference, also a file for the application that it holds the preference settings for. By trashing and then relaunching an application you are getting rid of old user set preferences that may have become corrupt. OpenCore use this kind of file to inject (match, overcome and manipulate) specified information to unsupport hardware/device. 
@@ -490,7 +490,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-## <ins>QUIRKS CHECK</ins>
+## QUIRKS CHECK
 
 <p align="justify">
 📌 Quirks must set as processor codename. Refer OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error occur to config.plist is by your own responsibility. Manual setup is encourage. Please make a backup before using it. Link can be refer below:
@@ -560,7 +560,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-## <ins>ADDITIONAL FRAMEBUFFER FOR AMD NAVI GPU's</ins>
+## ADDITIONAL FRAMEBUFFER FOR AMD NAVI GPU's
 
 ### Framebuffers available in AMDRadeonX6000Framebuffer.kext >> Contents >> Info.plist.
 
@@ -617,7 +617,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-## <ins>UHD GRAPHICS 630 HEADLESS MODE</ins>
+## UHD GRAPHICS 630 HEADLESS MODE
 
 ### AAPL,ig-platform-id
 
@@ -712,7 +712,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-## <ins>POWER ISSUES</ins>
+## POWER ISSUES
 
 <p align="justify">
 🔌 If there is a problem with power, use Hackintool to reset. The picture below shows how to do this:</p>
@@ -725,7 +725,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-## <ins>BIOS/UEFI CONFIGURATION</ins>
+## BIOS/UEFI CONFIGURATION
 
 ### Disable
 
@@ -756,7 +756,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-## <ins>DRM TESTING</ins>
+## DRM TESTING
 
 - ✔️ AppleTV 💯 working
 - ❌ [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view)
@@ -766,7 +766,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-## <ins>TRIM</ins>
+## TRIM
 
 📌 NVMe: `Kingston A2000 NVMe` trim support is working native. 
 
@@ -778,25 +778,25 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-## <ins>IOREG</ins>
+## IOREG
 
 📀 [iMac20,1-Hack](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/iMac20%2C1-Hack.ioreg)
 
 </br>
 
-## <ins>DEBUG LOG</ins>
+## DEBUG LOG
 
 📀 [OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-2022-04-19-153310.txt)
 
 </br>
 
-## <ins>UPDATING EFI USING OCTOOL</ins>
+## UPDATING EFI USING OCTOOL
 
 📀 Watch [rusty-bits/octool](https://github.com/rusty-bits/octool) guide via [Youtube](https://www.youtube.com/watch?v=5KNzD08Hkxs&t=4s)
 
 </br>
 
-## <ins>FINAL RESULTS</ins>
+## FINAL RESULTS
 
 <p align="center">
 <img width="2560" alt="Screen Shot 2022-04-30 at 12 37 23 AM" src="https://user-images.githubusercontent.com/72515939/165986968-f6debb0f-8b5b-474b-850f-972afcc78621.png">
@@ -806,7 +806,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-## <ins>ACKNOWLEGEMENT</ins>
+## ACKNOWLEGEMENT
 
 📌 I would like to thanks all folks in Hackintosh Community especially:
 
@@ -824,6 +824,6 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-## <ins>FOLLOW ME</ins>
+## FOLLOW ME
 
 - 💟 [reddit](https://www.reddit.com) - [u/mohdismailmatasin](https://www.reddit.com/user/mohdismailmatasin)
