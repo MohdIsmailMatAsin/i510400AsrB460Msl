@@ -19,7 +19,7 @@
 
 <br>
 
-##<ins>APFS CHANGES</ins>
+## <ins>APFS CHANGES</ins>
 
 | MacOS     | Mindate   | MinVersion       | SetApfsTrimTimeout | SecureBootModel       |
 |-----------|-----------|------------------|--------------------|-----------------------|
