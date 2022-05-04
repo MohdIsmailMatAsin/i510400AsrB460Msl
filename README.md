@@ -603,7 +603,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <br>
 
-**Advance Tips: How to choose better UHD630 Framebuffer?**  
+**Advance Tips!: Best Desktop Framebuffer**  
 
 **AAPL,ig-platform-id**
 
@@ -618,7 +618,11 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 **device-id**
 
-<p align="justify">To get the proper main card platform as headless injection, "device-id" is required to get the device name. On Intel 10th Gen is not necessary, but sometimes this patch may fix certain IGPU issues. As an example, find "Activity Monitor > Window > GPU History" or "Activity Monitor > GPU" extra tab, IGPU will display as "Intel® KBL Unknown". To proper rename, use "Hackintool" as a guide by finding the appropriate device-id, not in "mobile" mode (Mobile = No). In this case, GPU Hexadecimal "device-id" "0x3E9B8086" which is equal to 4 byte data hex swapped "9B3E0000" is injected via "config.plist" in IGPU "DeviceProperties" section. Below is an example:</p>
+To get the proper main card platform as headless injection, "device-id" is required to get the device name. On Intel 10th Gen is not necessary, but sometimes this patch may fix certain IGPU issues. As an example, find "Activity Monitor > Window > GPU History" or "Activity Monitor > GPU" extra tab, IGPU will display as "Intel® KBL Unknown".</p>
+	
+**Refer:** [Issues #1905](https://github.com/acidanthera/bugtracker/issues/1905).
+	
+<p align="justify">To proper rename, use "Hackintool" as a guide by finding the appropriate device-id, not in "mobile" mode (Mobile = No). In this case, GPU Hexadecimal "device-id" "0x3E9B8086" which is equal to 4 byte data hex swapped "9B3E0000" is injected via "config.plist" in IGPU "DeviceProperties" section. Below is an example:</p>
 
 - **0x3E9B8086** = **9B3E8086**
 - **9B3E8086** = **9B3E0000** (8086 to 0000)
@@ -626,47 +630,37 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <p align="center"><img width="1172" alt="Screen_Shot_2022-05-02_at_5_27_16_PM" src="https://user-images.githubusercontent.com/72515939/166213623-407d87dd-5368-4430-b8e0-5fc87eb97be1.png"></p>
 
-<p align="center"><img width="551" alt="Screen Shot 2022-05-02 at 5 48 04 PM" src="https://user-images.githubusercontent.com/72515939/166215966-1f774c04-4c2a-4212-876e-dffba62567c3.png"></p>
+<br>
 
-```xml
-<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-<dict>
-	<key>AAPL,ig-platform-id</key>
-	<data>
-	AwCRPg==
-	</data>
-	<key>AAPL,slot-name</key>
-	<string>Internal</string>
-	<key>device-id</key>
-	<data>
-	mz4AAA==
-	</data>
-	<key>device_type</key>
-	<string>Display controller</string>
-	<key>enable-metal</key>
-	<data>
-	AQAAAA==
-	</data>
-	<key>hda-gfx</key>
-	<string>onboard-1</string>
-	<key>igfxfw</key>
-	<data>
-	AgAAAA==
-	</data>
-	<key>igfxonln</key>
-	<data>
-	AQAAAA==
-	</data>
-	<key>iommu-selection</key>
-	<data>
-	AAAAAA==
-	</data>
-	<key>rps-control</key>
-	<data>
-	AQAAAA==
-	</data>
-</dict>
-```
+<p align="justify">"4K Video Test" is made via Safari on Monterey. Use "Launchpad > Other > ActivityMonitor" as our observation tool. Do note, additional data is needed via "config.plist". The purpose is to leave headless IGPU state to always being online and proper rename IGPU via Activity Monitior instead as "Intel KBL Unknown".</p>
+	
+Add additional info based on information below:	
+
+<br>
+	
+Compulsory:
+	
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `AAPL,ig-platform-id` > data > `0300913E`	
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `AAPL,slot-name` > string > `Internal`
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `device-id` > data > `9B3E0000 `
+	
+Other dditional Data (If Needed):
+
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = device_type` > string > `Display controller`
+	
+- `NVRAM` > `7C436110-AB2A-4BBB-A880-FE41995C9F82` > `boot-args` > string > `igfxonline=1` or 
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `igfxonln` > data > `01000000`
+	
+- `NVRAM` > `7C436110-AB2A-4BBB-A880-FE41995C9F82` > `boot-args` > string > `igfxmetal=1` or
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `enable-metal` > data > `01000000`
+
+- `NVRAM` > `7C436110-AB2A-4BBB-A880-FE41995C9F82` > `boot-args` > string > `igfxfw`
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `iommu-selection` > data > `00000000`
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `rps-control` > data > `01000000`
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `hda-gfx` > string > `onboard-1`
+
+
+Now, new additional "GPU tabs" on the MacOS "Activity Monitor" is added.
 
 <br>
 
@@ -679,17 +673,6 @@ Besides, a plist is often used to correct problems that a user may be having wit
 <p align="center"><img width="549" alt="Screen Shot 2022-05-02 at 5 33 59 PM" src="https://user-images.githubusercontent.com/72515939/166214463-17182b3a-99f3-48a5-bd58-70d4720971e3.png"></p>
 	
 <br>	
-
-**GPU Settings and Test**
-
-<p align="justify">We will conduct a "4K Video Test" via Safari on Monterey. Use "Launchpad > Other > ActivityMonitor" as our observation tool. Do note, the use of "igfxonline=1" or properties of the IGPU boot-arg, i.e., "igfxonline > data > 01000000", is to leave our headless IGPU state to always being online. To get additional GPU tabs on the activity monitor, "igfxmetal=1" or device properties on IGPU, "enable-metal > data > 01000000", "AAPL,ig-platform-id", and "AAPL,slot-name" are required. Next, we can start the test as shown in the picture. 
-	
-**Remark:** Check [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_release.plist) provided as example.</p>
-
-<p align="center"><img width="1072" alt="Screen_Shot_2022-04-25_at_3_16_43_PM" src="https://user-images.githubusercontent.com/72515939/165040712-2b0e8ccb-59ad-4bca-ac4c-e9e453f5132a.png"></p>
-<p align="center"><img width="1329" alt="Screen_Shot_2022-04-25_at_3_17_33_PM" src="https://user-images.githubusercontent.com/72515939/165040238-e6f9c55f-dfdc-40a9-9893-9fe45f331fe3.png"></p>
-
-<br>
 
 **IGPU Info**
 
