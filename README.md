@@ -543,68 +543,6 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 ## <ins>UHD GRAPHICS 630 HEADLESS MODE</ins>
 
-**Basic IGPU settings (Apple XML)**
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>DeviceProperties</key>
-	<dict>
-		<key>Add</key>
-		<dict>
-			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-			<dict>
-				<key>AAPL,ig-platform-id</key>
-				<data>
-				AwDFmw==
-				</data>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>Display controller</string>
-				<key>enable-metal</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-				<key>igfxfw</key>
-				<data>
-				AgAAAA==
-				</data>
-				<key>igfxonln</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>iommu-selection</key>
-				<data>
-				AAAAAA==
-				</data>
-				<key>rps-control</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>shikigva</key>
-				<integer>80</integer>
-			</dict>
-		</dict>
-	</dict>
-</dict>
-</plist>
-```
-
-<br>
-
-**Basic IGPU settings (Plist)**
-
-<p align="center"><img width="477" alt="Screen Shot 2022-04-24 at 11 29 58 PM" src="https://user-images.githubusercontent.com/72515939/164984010-95cbbf14-17e4-46ee-991b-e244b4a012da.png"></p>
-
-<br>
-
-**Advance Tips!: Best Desktop Framebuffer**  
-
 **AAPL,ig-platform-id**
 
 <p align="justify">The keyword for the best headless settings for desktop is "mobile". For desktop (iMac SMBIOS), the framebuffer setting for the "mobile" variant is not required. Open "Hackintool > Patch > Platform ID" option. Find any setting that is not related to the mobile (Mobile = No). The purpose is to find a proper "AAPL,ig-platform-id" for Desktop (iMac SMBIOS). In this case, "0x3E910003" in hexadecimal, which is equal to "0300913E", 4 byte data hex swapped. Below is an example:</p>
