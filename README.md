@@ -1,4 +1,4 @@
-# <ins>Hackintosh: INTEL i5 10400 & ASROCK B460M STEEL LEGEND</ins>
+# <ins>HACKINTOSH: INTEL i5 10400 & ASROCK B460M STEEL LEGEND</ins>
 
 ![Artboard 1](https://user-images.githubusercontent.com/72515939/166086285-c5c771ed-e4d4-409a-b2d5-2e3f4c4325ea.png)
 
