@@ -43,11 +43,11 @@
 
 <p align="justify">UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the boot process. UEFI is similar to Legacy, but the boot data is stored in a ".efi" file rather than the firmware. Most UEFIs can be entered by a special key.</p>
 
-| **Manufacturer** | **BIOS Key**  |**Manufacturer** | **BIOS Key**  |
-|------------------|---------------|-----------------|---------------|
-| ASUS        	   | F8  	   | Intel           | F10  	     |
-| Gigabyte         | F12           | Asrock          | F11           |
-| MSI              | F11           | EVGA            | F7            |
+| Manufacturer | BIOS Key  | Manufacturer  | BIOS Key |
+|--------------|-----------|---------------|----------|
+| ASUS         | F8  	   | Intel         | F10      |
+| Gigabyte     | F12       | Asrock        | F11      |
+| MSI          | F11       | EVGA          | F7       |
 
 <br>
 
@@ -96,7 +96,6 @@
 - **MacOS**
 
 <p align="center"><img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161430979-9b890a71-a348-439b-98df-0e53e6a49da8.png"></p>
-
 
 **Remark:** <p align="justify">For dual or triple booting PCs, this application is very useful to manage "Windows + MacOS" or "Windows + MacOS + Linux" partition. "[DiskGenius](https://www.diskgenius.com)" or currently "[Partition Guru](https://www.partitionguru.com)" is a versatile program packed with comprehensive functions for partition recovery, file recovery, disk management, data backup, disk utilities, etc. It manages storage space with high efficiency, recovers data lost due to disk corruption, formatting, deletion, virus attack, etc. In other mean, "DiskGenius/PartitionGuru" is a simple tool that allows users to manage the partitions on hard drive and to format them, create new ones, or delete. This utility is compatible and works well with virtual hard drives like VMware, VirtualBox and Virtual PC in addition to supporting SCSI, IDE, SATA and USB flash drives or memory cards. The best thing is, this app capable to view and manage EFI/ESP partition which made managing partition so easily if any file required to be edit, especially [OpenCore](https://github.com/acidanthera/OpenCorePkg) or [Clover](https://github.com/CloverHackyColor/CloverBootloader) "config.plist". However, "APFS" and "HFS+" is not fully supported. That's the weak spot of this application. To use APFS and HFS+ formats, [Paragon Hard Disk Manager™ Community Edition](https://www.paragon-software.com/free/pm-express/?msclkid=b2537d35cbb811ecbee6e7525f1ca4a9) can be used. Both combination support may improve user experience.</p> 
 
