@@ -138,6 +138,10 @@ Below are the basic OpenCore folders and files used for this project:
 ```
 **Remark:** Generally, for the "debugging" process, it is best not to use "OpenCanopy.efi".
 
+<br>
+
+## OpenCore Package and Setup
+
 **Preparation Package**
 
 - [OpenCore v0.8.0 - Debug](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-DEBUG.zip)
