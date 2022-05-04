@@ -329,7 +329,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 **Patch Applied**
 
 <p align="justify">
-📌 Thanks to CorpNewt SSDTTime hotpatch tool. In this project, various SSDT's has been merged into one (i.e., SSDT-B460M-SL.dsl). With several other sources, additional code is injected to reduce the kext workload. As example, GFX0 to an IGPU rename which handled by Whatevergreen.kext.
+📌 Thanks to CorpNewt cross platform SSDTTime hotpatch tool. In this project, various SSDT's has been merged into one (i.e., SSDT-B460M-SL.dsl). With several other sources, additional code is injected to reduce the kext workload. As example, GFX0 to an IGPU rename which handled by Whatevergreen.kext.
 </p>
 
 
@@ -369,9 +369,9 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 🔧 Tools: 
 
-- 🔨 [SSDTTime](https://github.com/corpnewt/SSDTTime) 
-- 🔨 [MaciASL](https://github.com/acidanthera/MaciASL) ➣ MacOS
-- 🔨 [Xiasl](https://github.com/ic005k/Xiasl) ➣ Cross Platform (Mac/Linux/Windows)
+- 🔨 [SSDTTime](https://github.com/corpnewt/SSDTTime) > Cross Platform (Mac/Linux/Windows)
+- 🔨 [MaciASL](https://github.com/acidanthera/MaciASL) > MacOS
+- 🔨 [Xiasl](https://github.com/ic005k/Xiasl) > Cross Platform (Mac/Linux/Windows)
 
 </br>
 
