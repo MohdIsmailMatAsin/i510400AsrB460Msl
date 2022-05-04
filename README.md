@@ -432,7 +432,8 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 ### 5.0 - OC\OPENCORE.EFI
 
 <p align="justify">
-📌	An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is include with [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/) and it is compulsory.</p>
+📌	An OpenCore Extensible Firmware Interface ".efi" format. Normally this file is include with OpenCorePkg and it is compulsory.
+</p>
 
 <p align="center">
 <img width="882" alt="Screen Shot 2022-04-25 at 1 10 05 PM" src="https://user-images.githubusercontent.com/72515939/165024487-a626140e-fbf4-41b6-806f-7d1df76a95ec.png">
