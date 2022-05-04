@@ -4,6 +4,8 @@
 
 **Reminder:** <p align="justify">This is not an official method. All the information displayed is based on actual hardware and an experimental basis. Half of the information is taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others are taken from several well-known sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), please refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0)</p>
 
+</br>
+
 ## <ins>INFORMATION</ins>
 
 | Info      | Details                          | Info        | Details                                       |
@@ -17,7 +19,7 @@
 | Monitor   | Samsung U28E590 4K               | Storage 2   | 500GB Kingston A2000 NVMe                     |
 | SMBIOS    | iMac20,1                         | Board ID    | Mac-CFF7D910A743CAAF                          |
 
-<br>
+</br>
 
 ## <ins>APFS CHANGES</ins>
 
@@ -29,7 +31,7 @@
 
 **Remark:** <p align="justify">The settings above may not be the same as the recommended settings by Dortania. To find out more, please check [OpenCore Configuration](https://dortania.github.io/docs/release/Configuration.html) and [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for SecureBootModel selection.</p> 
 
-<br>
+</br>
 
 ## <ins>INTRODUCTION</ins>
 
@@ -37,7 +39,7 @@
 
 <p align="justify">Legacy Boot refers to the boot process used by the BIOS firmware to initialize hardware devices. The Legacy boot contains a selection of installed devices that get initialized as the computer performs the POST test during the boot process. The legacy boot will check for all connected devices for the Master Boot Record (MBR), usually in the first sector of a disk. When it can’t find a bootloader in the devices, Legacy switches to the next device in the list and keeps repeating this process until it finds a boot-loader, or if not, returns an error.</p>
 
-<br>
+</br>
 
 **Modern BIOS (UEFI)**
 
@@ -49,7 +51,7 @@
 | Gigabyte     | F12       | Asrock        | F11      |
 | MSI          | F11       | EVGA          | F7       |
 
-<br>
+</br>
 
 **UEFI vs Legacy**
 
@@ -63,7 +65,7 @@
 | It allows a secure boot that prevents the loading of unauthorized applications. It may also hinder dual boot because it treats operating systems (OS) as applications.| Legacy runs in 16-bit mode that only supports keyboard navigation |   
 | It has an easier update process | It is more complex compared to UEFI |
 
-<br>
+</br>
 
 **EFI**
 
@@ -71,19 +73,19 @@
 
 ![efi-system-partition](https://user-images.githubusercontent.com/72515939/161425316-cb229e60-b2ad-4538-9b68-bbabb89a88a8.png)
 
-<br>
+</br>
 
 **Boot-Loader**
 
 <p align="justify">The term “boot-loader” is a shortened form of the words “bootstrap loader”. The term stems from the fact that the boot manager is the key component in starting up the computer, so it can be likened to the support of a bootstrap when putting a boot on. It is a special operating-system software that loads into the working memory of a computer after start-up. For this purpose, immediately after a device starts, a boot-loader is generally launched by a bootable medium like a hard drive, a CD/DVD or a USB stick. The boot medium receives information from the computer’s firmware (e.g. BIOS) about where the boot-loader is. The whole process is also described as “booting”.</p>
 
-<br>
+</br>
 
 **OpenCore**
 
 <p align="justify">OpenCore is referred to as a "boot-loader" and also a "chain-loader". At the same time, it is a complex software program, used to call the operating systems MacOS, Linux, and Windows. In addition, it also has the ability to inject new data into MacOS operating systems such as SMBIOS, Advanced Configuration Table and Power Interface (ACPI), and Kernel Extension (Kext).</p>
 
-<br>
+</br>
 
 ## <ins>PARTITIONING</ins>
 
@@ -91,7 +93,7 @@
 
 <p align="center"><img width="827" alt="Screenshot 2022-04-03 133920" src="https://user-images.githubusercontent.com/72515939/161430959-f530d4a2-812f-43ec-9b78-6b54522f3a50.png"></p>
 
-<br>
+</br>
 
 - **MacOS**
 
@@ -101,7 +103,7 @@
 
 ![Artboard 1](https://user-images.githubusercontent.com/72515939/166097226-b35e84ab-0498-419a-a3e6-0cf6e9c276e5.png)
 
-<br>
+</br>
 
 ## <ins>OPENCORE PACKAGE & PREPARATION</ins>
 
@@ -110,7 +112,7 @@
 - [OpenCore v0.8.0 - Debug](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-DEBUG.zip)
 - [OpenCore v0.8.0 - Release](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-RELEASE.zip)
 
-<br>
+</br>
 
 **v0.8.0**
 
@@ -123,7 +125,7 @@ Changes:
 - Added `Misc -> Serial` section to customise serial port properties
 - Added `CustomPciSerialDevice` quirk for XNU to correctly recognise customised `external serial devices`
 
-<br>
+</br>
 
 **Structure**
 
@@ -169,13 +171,13 @@ Below are the basic OpenCore folders and files used for this project:
 ```
 **Remark:** Generally, for the "debugging" process, it is best not to use "OpenCanopy.efi".
 
-<br>
+</br>
 
 ### <ins>1.0 - EFI\BOOT</ins>
 
 <p align="justify">Fallback boot-loader path. This is the only boot-loader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings. "Booting" is a term used to refer to the initial loading process when we turn on the computer. BOOTx64.efi is a special file for the boot process that aims to link the "boot-loader" checked by the BIOS before the computer can be used. The boot programme and OpenCore.efi will be searched by the BIOS for UEFI on 64-bit X86 systems without any existing NVRAM boot settings. There are 2 boot types settings, temporary and permanent. The details below describe the files involved in the process.</p>
 
-<br>
+</br>
 
 **Temporary vs Permanent:**
 
@@ -189,7 +191,7 @@ Below are the basic OpenCore folders and files used for this project:
 1. Cannot be ported due to GUID info binding.
 2. Hard to modify
 
-<br>
+</br>
 
 **Windows & Linux Implementation**
 
@@ -204,7 +206,7 @@ Below are the basic OpenCore folders and files used for this project:
 2. Permanent: `EFI\Ubuntu\grubx64.efi` (No Secure Boot Support)
 3. Permanent: `EFI\Ubuntu\shimx64.efi` (Secure Boot Support)
 
-<br>
+</br>
 
 **OpenCore Implementation**
 
@@ -217,13 +219,13 @@ Below are the basic OpenCore folders and files used for this project:
 
 ![Artboard X](https://user-images.githubusercontent.com/72515939/166086925-5b6b1cae-d80e-4fcd-a18b-6d907f5d1b9a.png)
 
-<br>
+</br>
 
 ### <ins>2.0 - OC\ACPI</ins>
 
 **Refer:** [ACPI Data Tables and Table Definition Language](https://uefi.org/specs/ACPI/6.4/21_ACPI_Data_Tables_and_Table_Def_Language/ACPI_Data_Tables.html#acpi-data-tables-and-table-definition-language)
 
-<br>
+</br>
 
 **DSDT**
 
@@ -243,7 +245,7 @@ Below are the basic OpenCore folders and files used for this project:
 
 For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org/specs/ACPI/6.4/index.html)
 
-<br>
+</br>
 
 **ACPI Machine Language (AML)**
 
@@ -251,7 +253,7 @@ For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org
 
 - [ACPI Machine Language (AML) Specification](https://uefi.org/specs/ACPI/6.4/20_AML_Specification/AML_Specification.html)
 
-<br>
+</br>
 
 **DSDT vs SSDT Patching**
 
@@ -261,7 +263,7 @@ For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org
 
 <p align="justify">Some computers come with a broken DSDT. It is usually not recommended to patch/override DSDT. Overriding DSDT with garbage can do physical harm to computer. DSDT patches or sometimes called as override should be avoided. Some forums/webpages (i.e., Olarila) state that it is a major solution. While DSDT is the primary table, SSDT can be patched, modified (adding and dropping) the hardware properties which hook inside the machine. There are various reasons why DSDT patching is not recommended.</p>
 
-<br>
+</br>
 
 **DSDT Patch** may cause 
 
@@ -270,7 +272,7 @@ For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org
 3. Cause malfunction device, or
 4. PC unable to boot properly due to an incorrect patch (difficult to reverse).
 
-<br>
+</br>
 
 **SSDT Patch** may affect
 
@@ -285,7 +287,7 @@ For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org
 
 <p align="justify">SSDT patch is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. SSDT patch is minor modification and not affect the actual hardware performance.</p>
 
-<br>
+</br>
 
 **Patch Applied**
 
@@ -322,14 +324,14 @@ Thanks to CorpNewt [SSDTTime](https://github.com/corpnewt/SSDTTime) hotpatch too
 
 <p align="center"><img width="1239" alt="Screen Shot 2022-04-30 at 10 31 53 AM" src="https://user-images.githubusercontent.com/72515939/166087058-3f4572be-a047-41bd-859a-5da51220af26.png"></p>
 
-<br>
+</br>
 
 **Tools to edit iasl (aml/dsl)**
 
 - [MaciASL](https://github.com/acidanthera/MaciASL) ➣ MacOS
 - [Xiasl](https://github.com/ic005k/Xiasl) ➣ Cross Platform (Mac/Linux/Windows)
 
-<br>
+</br>
 
 ### <ins>3.0 - OC\DRIVERS</ins>
 
@@ -342,7 +344,7 @@ Thanks to CorpNewt [SSDTTime](https://github.com/corpnewt/SSDTTime) hotpatch too
 
 <p align="center"><img width="1036" alt="Screen_Shot_2022-04-25_at_2_41_37_PM" src="https://user-images.githubusercontent.com/72515939/165034935-9e54e24e-87fc-4d4a-93cd-79621119b41c.png"></p>
 
-<br>
+</br>
 
 ### <ins>4.0 - OC\KEXT</ins>
 
@@ -365,13 +367,13 @@ Thanks to CorpNewt [SSDTTime](https://github.com/corpnewt/SSDTTime) hotpatch too
 
 <p align="center"><img width="1032" alt="Screen_Shot_2022-04-25_at_3_00_24_PM" src="https://user-images.githubusercontent.com/72515939/165037853-94893f7d-7950-447a-a57f-745e93fe9ce8.png"></p>
 
-<br>
+</br>
 
 **Sort by Priorities:** Select which kext, sort in priority to get better kext injection.
 
 <p align="center"><img width="1356" alt="Screen_Shot_2022-04-25_at_3_09_08_PM" src="https://user-images.githubusercontent.com/72515939/165038719-33ac2cca-1cf5-4aae-85de-7caa88c3ccff.png"></p>
 
-<br>
+</br>
 
 ### <ins>5.0 - OC\OPENCORE.EFI</ins>
 
@@ -389,7 +391,7 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 
 **Refer:** [OC Binary Resource](https://github.com/acidanthera/OcBinaryData)
 
-<br>
+</br>
 
 ### <ins>7.0 - OC\TOOLS</ins>
 
@@ -397,7 +399,7 @@ An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is i
 
 <p align="center"><img width="882" alt="Screen Shot 2022-04-25 at 1 18 58 PM" src="https://user-images.githubusercontent.com/72515939/165025190-86dd61a2-ebe6-4ad9-bec6-73da1f1ef9bc.png"></p>
 
-<br>
+</br>
 
 ### <ins>8.0 - OC\CONFIG.PLIST</ins>
 
@@ -412,14 +414,14 @@ Besides, a plist is often used to correct problems that a user may be having wit
 - OpenCore [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_release.plist)
 - Clover [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_clover.plist) 
 
-<br>
+</br>
 
 **Tools to edit config.plist**
 
 - [ProperTree](https://github.com/corpnewt/ProperTree) ➣ Cross Platform (Mac/Linux/Windows)
 - [Xplist](https://github.com/ic005k/Xplist) ➣ Cross Platform (Mac/Linux/Windows)
 
-<br>
+</br>
 
 ## <ins>QUIRKS CHECK</ins>
 
@@ -430,7 +432,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <p align="justify">The list below is the Quirk settings for Comet Lake Processor:</p>
 
-<br>
+</br>
 
 **ACPI\Quirks**
 
@@ -438,7 +440,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 14 41 AM" src="https://user-images.githubusercontent.com/72515939/164505309-65fb3904-a0ea-4c58-95a1-b786a793b726.png"></p>
 
-<br>
+</br>
 
 **Booter\Quirks**
 
@@ -454,7 +456,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 05 AM" src="https://user-images.githubusercontent.com/72515939/164505410-32911711-727d-40f9-9d2a-f542700b5dcc.png"></p>
 
-<br>
+</br>
 
 **Kernel\Quirks**
 
@@ -467,7 +469,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 48 AM" src="https://user-images.githubusercontent.com/72515939/164505506-bc2e3705-8225-407d-a486-0b232f4a5fed.png"></p>
 
-<br>
+</br>
 
 **UEFI\Quirks**
 
@@ -479,7 +481,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 26 AM" src="https://user-images.githubusercontent.com/72515939/164505602-4cf5069b-bdf2-4017-8a54-336f82464ad4.png"></p>
 
-<br>
+</br>
 
 ## <ins>ADDITIONAL FRAMEBUFFER FOR AMD NAVI GPU's</ins>
 
@@ -510,7 +512,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 - device-id: 0x73E31002 0x73FF1002 0x73E01002
 - framebuffer: `ATY,Henbury`
 
-<br>
+</br>
 
 **Device Properties sample settings**
 
@@ -536,7 +538,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 </dict>
 ```
 
-<br>
+</br>
 
 ## <ins>UHD GRAPHICS 630 HEADLESS MODE</ins>
 
@@ -549,7 +551,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 <p align="center"><img width="1176" alt="Screen_Shot_2022-05-02_at_5_10_03_PM" src="https://user-images.githubusercontent.com/72515939/166212509-9f300b98-66c5-43f0-abf9-e14dd5e610a2.png"></p>
 
-<br>
+</br>
 
 **device-id**
 
@@ -565,13 +567,13 @@ To get the proper main card platform as headless injection, "device-id" is requi
 
 <p align="center"><img width="1172" alt="Screen_Shot_2022-05-02_at_5_27_16_PM" src="https://user-images.githubusercontent.com/72515939/166213623-407d87dd-5368-4430-b8e0-5fc87eb97be1.png"></p>
 
-<br>
+</br>
 
 <p align="justify">"4K Video Test" is made via Safari on Monterey. Use "Launchpad > Other > ActivityMonitor" as our observation tool. Do note, additional data is needed via "config.plist". The purpose is to leave headless IGPU state to always being online and proper rename IGPU via Activity Monitior instead as "Intel KBL Unknown".</p>
 	
 Add additional info based on information below:	
 
-<br>
+</br>
 	
 Inject:
 	
@@ -588,7 +590,7 @@ Inject:
 
 Now, new additional "GPU tabs" on the MacOS "Activity Monitor" is added.
 
-<br>
+</br>
 
 <p align="justify">And, the result is....</p>
 
@@ -598,23 +600,23 @@ Now, new additional "GPU tabs" on the MacOS "Activity Monitor" is added.
 
 <p align="center"><img width="549" alt="Screen Shot 2022-05-02 at 5 33 59 PM" src="https://user-images.githubusercontent.com/72515939/166214463-17182b3a-99f3-48a5-bd58-70d4720971e3.png"></p>
 	
-<br>	
+</br>	
 
 **IGPU Info**
 
 <p align="center"><img width="1239" alt="Screen_Shot_2022-04-27_at_1_05_05_AM" src="https://user-images.githubusercontent.com/72515939/165354830-6cdc4953-3081-44a0-812c-11b5b0bead78.png"></p>
 
-<br>
+</br>
 
 **DGPU Info**
 
 <p align="center"><img width="1239" alt="Screen Shot 2022-04-27 at 1 00 41 AM" src="https://user-images.githubusercontent.com/72515939/165354288-3be11774-1c5b-4a76-a55f-f8f7e100bba8.png"></p>
 
-<br>
+</br>
 
 **Checkout Video Test** via [Youtube](https://youtu.be/dd3SwAZ3S_w)
 
-<br>
+</br>
 
 ## <ins>POWER ISSUES</ins>
 
@@ -624,7 +626,7 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 
 <p align="center"><img width="1108" alt="Screen_Shot_2022-04-25_at_4_01_32_PM" src="https://user-images.githubusercontent.com/72515939/165046653-bdd95d61-c4eb-4f8b-bd8b-e13b3413af41.png"></p>
 
-<br>
+</br>
 
 ## <ins>BIOS/UEFI CONFIGURATION</ins>
 
@@ -642,7 +644,7 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 - Config Lock (CFG Lock) ➣ Setting in your BIOS that allows for a `specific register` (in this case the MSR 0xE2) to be written to
 - Intel® Rapid Storage Technology (RST) ➣ Windows-based application that provides `improved performance` and `reliability` for computers that are equipped with `SATA` disks for desktop, mobile, and server platforms
 
-<br>
+</br>
 
 ### Enable
 
@@ -655,7 +657,7 @@ Tool: [Hackintool](https://github.com/headkaze/Hackintool)
 - DVMT Pre ➣ The `Intel® HD/UHD Graphics driver` for `Windows`. Please allocated (iGPU Memory) to `64MB` / `Auto`
 - SATA Mode ➣ Advanced Host Controller Interface (AHCI)
 
-<br>
+</br>
 
 ## <ins>DRM TESTING</ins>
 
@@ -663,7 +665,7 @@ AppleTV ✓ | [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jv
 
 **Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki only applicable via Catalina and below.
 
-<br>
+</br>
 
 ## <ins>TRIM</ins>
 
@@ -675,25 +677,25 @@ AppleTV ✓ | [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jv
 
 ![Artboard_1](https://user-images.githubusercontent.com/72515939/166087859-0511b56c-82a5-4ce3-8dbc-7d876b2925be.png)
 
-<br>
+</br>
 
 ## <ins>IOREG</ins>
 
 [iMac20,1-Hack](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/iMac20%2C1-Hack.ioreg)
 
-<br>
+</br>
 
 ## <ins>DEBUG LOG</ins>
 
 [OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-2022-04-19-153310.txt)
 
-<br>
+</br>
 
 ## <ins>UPDATING EFI USING OCTOOL</ins>
 
 [rusty-bits/octool](https://youtu.be/5KNzD08Hkxs) - Watch octool<ins> guide [here](https://www.youtube.com/watch?v=5KNzD08Hkxs&t=4s)
 
-<br>
+</br>
 
 ## <ins>FINAL RESULTS</ins>
 
@@ -701,7 +703,7 @@ AppleTV ✓ | [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jv
 
 Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/Space.jpeg/file)
 
-<br>
+</br>
 
 ## <ins>ACKNOWLEGEMENT</ins>
 
@@ -719,7 +721,7 @@ I would like to thanks all folks in Hackintosh Community especially:
 - [rusty-bits](https://github.com/rusty-bits) ➣ [cross platform](https://en.wikipedia.org/wiki/Cross-platform_software) OpenCore EFI update , known as [octool](https://github.com/rusty-bits/octool)
 - [ic005k](https://github.com/ic005k) ➣ develop [Xiasl](https://github.com/ic005k/Xiasl), [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools), and [Xplist](https://github.com/ic005k/Xplist)
 
-<br>
+</br>
 
 ## <ins>FOLLOW ME</ins>
 
