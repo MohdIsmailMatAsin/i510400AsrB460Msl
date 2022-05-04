@@ -2,9 +2,7 @@
 
 ![Artboard 1](https://user-images.githubusercontent.com/72515939/166086285-c5c771ed-e4d4-409a-b2d5-2e3f4c4325ea.png)
 
-###### **Reminder:**
-
-###### <p align="justify">This is not an official method. All the information displayed is based on actual hardware and an experimental basis. Half of the information is taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others are taken from several well-known sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), please refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0)</p>
+**Reminder:** <p align="justify">This is not an official method. All the information displayed is based on actual hardware and an experimental basis. Half of the information is taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others are taken from several well-known sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), please refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0)</p>
 
 ## <ins>INFORMATION</ins>
 
@@ -83,7 +81,7 @@
 
 **OpenCore**
 
-<p align="justify">OpenCore is referred to as a "boot-loader" and also a "chain-loader". At the same time, it is a complex software program, used to call the operating systems MacOS, Linux, and Windows. In addition, it also has the ability to inject new data into MacOS operating systems such as SMBIOS, Advanced Configuration Table and Power Interface (ACPI), and Kernel Extension (Kext).</p>
+<p align="justify">OpenCore is referred to as a "boot-loader" and also a "chain-loader". At the same time, it is a complex software program, used to call the operating systems MacOS, Linux, and Windows. In addition, it also has the ability to inject new data into MacOS operating systems such as SMBIOS, Advanced Configuration Table and Power Interface (ACPI), and Kernel Extension (Kext).</p>
 
 <br>
 
@@ -136,38 +134,38 @@ Below are the basic OpenCore folders and files used for this project:
 .
 └── EFI
 	├── BOOT
-	│   └── BOOTx64.efi
+	│   └── BOOTx64.efi
 	└── OC
 		├── ACPI
-		│   └── SSDT-B460M-SL.aml
+		│   └── SSDT-B460M-SL.aml
 		├── Drivers
-		│   ├── HfsPlus.efi
-		│   ├── OpenCanopy.efi (Disable/Removed on Debug)
-		│   └── OpenRuntime.efi
+		│   ├── HfsPlus.efi
+		│   ├── OpenCanopy.efi (Disable/Removed on Debug)
+		│   └── OpenRuntime.efi
 		├── Kexts
-		│   ├── AppleALC.kext
-		│   ├── Lilu.kext
-		│   ├── LucyRTL8125Ethernet.kext
-		│   ├── RadeonSensor.kext
-		│   ├── SMCLightSensor.kext
-		│   ├── SMCProcessor.kext
-		│   ├── SMCRadeonGPU.kext
-		│   ├── SMCSuperIO.kext
-		│   ├── USBMap.kext
-		│   ├── VirtualSMC.kext
-		│   └── WhateverGreen.kext
+		│   ├── AppleALC.kext
+		│   ├── Lilu.kext
+		│   ├── LucyRTL8125Ethernet.kext
+		│   ├── RadeonSensor.kext
+		│   ├── SMCLightSensor.kext
+		│   ├── SMCProcessor.kext
+		│   ├── SMCRadeonGPU.kext
+		│   ├── SMCSuperIO.kext
+		│   ├── USBMap.kext
+		│   ├── VirtualSMC.kext
+		│   └── WhateverGreen.kext
 		├── OpenCore.efi
 		├── Resources
-		│   ├── Audio
-		│   ├── Font
-		│   ├── Image
-		│   │   └── Acidanthera
-		│   │       ├── Chardonnay
-		│   │       ├── GoldenGate
-		│   │       └── Syrah
-		│   └── Label
+		│   ├── Audio
+		│   ├── Font
+		│   ├── Image
+		│   │   └── Acidanthera
+		│   │       ├── Chardonnay
+		│   │       ├── GoldenGate
+		│   │       └── Syrah
+		│   └── Label
 		├── Tools
-		│   └── CleanNvram.efi
+		│   └── CleanNvram.efi
 		└── config.plist
 ```
 **Remark:** Generally, for the "debugging" process, it is best not to use "OpenCanopy.efi".
@@ -556,7 +554,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 **device-id**
 
-To get the proper main card platform as headless injection, "device-id" is required to get the device name. On Intel 10th Gen is not necessary, but sometimes this patch may fix certain IGPU issues. As an example, find "Activity Monitor > Window > GPU History" or "Activity Monitor > GPU" extra tab, IGPU will display as "Intel® KBL Unknown".</p>
+To get the proper main card platform as headless injection, "device-id" is required to get the device name. On Intel 10th Gen is not necessary, but sometimes this patch may fix certain IGPU issues. As an example, find "Activity Monitor > Window > GPU History" or "Activity Monitor > GPU" extra tab, IGPU will display as "Intel® KBL Unknown".</p>
 	
 **Refer:** [Issues #1905](https://github.com/acidanthera/bugtracker/issues/1905).
 	
@@ -578,16 +576,16 @@ Add additional info based on information below:
 	
 Inject:
 	
-- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `AAPL,ig-platform-id` > data > `0300913E`	
-- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `AAPL,slot-name` > string > `Internal`
-- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `device-id` > data > `9B3E0000`
-- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `igfxonln` > data > `01000000`
-- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `device_type` > string > `Display controller`
-- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `enable-metal` > data > `01000000`
-- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `iommu-selection` > data > `00000000`
-- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `rps-control` > data > `01000000`
-- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `igfxfw` > data > `02000000`
-- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `hda-gfx` > string > `onboard-1`
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `AAPL,ig-platform-id` > data > `0300913E`	
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `AAPL,slot-name` > string > `Internal`
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `device-id` > data > `9B3E0000`
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `igfxonln` > data > `01000000`
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `device_type` > string > `Display controller`
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `enable-metal` > data > `01000000`
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `iommu-selection` > data > `00000000`
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `rps-control` > data > `01000000`
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `igfxfw` > data > `02000000`
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `hda-gfx` > string > `onboard-1`
 
 Now, new additional "GPU tabs" on the MacOS "Activity Monitor" is added.
 
