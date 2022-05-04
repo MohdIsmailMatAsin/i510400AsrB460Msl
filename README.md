@@ -189,7 +189,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 </br>
 
-#### <ins>1.0 - EFI\BOOT</ins>
+### <ins>1.0 - EFI\BOOT</ins>
 
 <p align="justify">
 📌 Fallback boot-loader path. This is the only boot-loader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings. "Booting" is a term used to refer to the initial loading process when we turn on the computer. BOOTx64.efi is a special file for the boot process that aims to link the "boot-loader" checked by the BIOS before the computer can be used. The boot programme and OpenCore.efi will be searched by the BIOS for UEFI on 64-bit X86 systems without any existing NVRAM boot settings. There are 2 boot types settings, temporary and permanent. The details below describe the files involved in the process.
@@ -241,7 +241,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 </br>
 
-#### <ins>2.0 - OC\ACPI</ins>
+### <ins>2.0 - OC\ACPI</ins>
 
 **Refer:** [ACPI Data Tables and Table Definition Language](https://uefi.org/specs/ACPI/6.4/21_ACPI_Data_Tables_and_Table_Def_Language/ACPI_Data_Tables.html#acpi-data-tables-and-table-definition-language)
 
@@ -375,7 +375,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 </br>
 
-#### <ins>3.0 - OC\DRIVERS</ins>
+### <ins>3.0 - OC\DRIVERS</ins>
 
 <p align="justify">
 📌 Only use 2 basic driver types. HfsPlus.efi and OpenRuntime.efi. Both files are essentially basic things to get driver support. Usage information is as follows:
@@ -392,7 +392,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 </br>
 
-#### <ins>4.0 - OC\KEXT</ins>
+### <ins>4.0 - OC\KEXT</ins>
 
 <p align="justify">
 📌 Kernel extensions (kexts) let users or developers load code directly into the MacOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed functions. The table below contains some kexts used to properly boot MacOS through OpenCore.
@@ -427,7 +427,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 </br>
 
-#### <ins>5.0 - OC\OPENCORE.EFI</ins>
+### <ins>5.0 - OC\OPENCORE.EFI</ins>
 
 <p align="justify">
 📌 An OpenCore Extensible Firmware Interface (.efi) format. Normally this file is include with [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases/) and it is compulsory.</p>
@@ -438,7 +438,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 </br>
 
-#### <ins>6.0 - OC\RESOURCES</ins>
+### <ins>6.0 - OC\RESOURCES</ins>
 
 <p align="justify">
 📌 This folder is related to OpenCore Beauty Treatment and is used with the OpenCanopy.efi driver. It is up to you to do your own research for a custom boot menu.
@@ -452,7 +452,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 </br>
 
-#### <ins>7.0 - OC\TOOLS</ins>
+### <ins>7.0 - OC\TOOLS</ins>
 
 <p align="justify">
 📌 Just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist. This tool is hiding via "hide auxiliary". Use "Spacebar" to reveal the function. I just include this tools as failsafe.
@@ -464,7 +464,7 @@ For dual or triple booting PCs, this application is very useful to manage "Windo
 
 </br>
 
-#### <ins>8.0 - OC\CONFIG.PLIST</ins>
+### <ins>8.0 - OC\CONFIG.PLIST</ins>
 
 <p align="justify">
 📌 Property list based on xml code. Structured OpenCore/Clover method and upgraded injection function. An Apple.Inc plist is a MacOS preference, also a file for the application that it holds the preference settings for. By trashing and then relaunching an application you are getting rid of old user set preferences that may have become corrupt. OpenCore use this kind of file to inject (match, overcome and manipulate) specified information to unsupport hardware/device. 
@@ -490,7 +490,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-### <ins>QUIRKS CHECK</ins>
+## <ins>QUIRKS CHECK</ins>
 
 <p align="justify">
 📌 Quirks must set as processor codename. Refer OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error occur to config.plist is by your own responsibility. Manual setup is encourage. Please make a backup before using it. Link can be refer below:
@@ -560,9 +560,9 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-### <ins>ADDITIONAL FRAMEBUFFER FOR AMD NAVI GPU's</ins>
+## <ins>ADDITIONAL FRAMEBUFFER FOR AMD NAVI GPU's</ins>
 
-#### Framebuffers available in AMDRadeonX6000Framebuffer.kext >> Contents >> Info.plist.
+### Framebuffers available in AMDRadeonX6000Framebuffer.kext >> Contents >> Info.plist.
 
 **5700 - Navi 10**
 - 🔑 AMDRadeonNavi10Controller
@@ -591,7 +591,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-#### Device Properties sample settings
+### Device Properties sample settings
 
 ```xml
 <key>DeviceProperties</key>
@@ -617,9 +617,9 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-### <ins>UHD GRAPHICS 630 HEADLESS MODE</ins>
+## <ins>UHD GRAPHICS 630 HEADLESS MODE</ins>
 
-#### AAPL,ig-platform-id
+### AAPL,ig-platform-id
 
 <p align="justify">
 📌 The keyword for the best headless settings for desktop is "mobile". For desktop (iMac SMBIOS), the framebuffer setting for the "mobile" variant is not required. Open "Hackintool > Patch > Platform ID" option. Find any setting that is not related to the mobile (Mobile = No). The purpose is to find a proper "AAPL,ig-platform-id" for Desktop (iMac SMBIOS). In this case, "0x3E910003" in hexadecimal, which is equal to "0300913E", 4 byte data hex swapped. Below is an example:
@@ -634,7 +634,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-#### device-id
+### device-id
 
 <p align="justify">
 📌 To get the proper main card platform as headless injection, "device-id" is required to get the device name. On Intel 10th Gen is not necessary, but sometimes this patch may fix certain IGPU issues. As an example, find "Activity Monitor > Window > GPU History" or "Activity Monitor > GPU" extra tab, IGPU will display as "Intel® KBL Unknown".</p>
@@ -698,7 +698,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 	
 </br>	
 
-#### IGPU Info
+### IGPU Info
 
 <p align="center">
 <img width="1239" alt="Screen_Shot_2022-04-27_at_1_05_05_AM" src="https://user-images.githubusercontent.com/72515939/165354830-6cdc4953-3081-44a0-812c-11b5b0bead78.png">
@@ -706,13 +706,13 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-#### DGPU Info
+### DGPU Info
 
 <p align="center"><img width="1239" alt="Screen Shot 2022-04-27 at 1 00 41 AM" src="https://user-images.githubusercontent.com/72515939/165354288-3be11774-1c5b-4a76-a55f-f8f7e100bba8.png"></p>
 
 </br>
 
-### <ins>POWER ISSUES</ins>
+## <ins>POWER ISSUES</ins>
 
 <p align="justify">
 🔌 If there is a problem with power, use Hackintool to reset. The picture below shows how to do this:</p>
@@ -725,9 +725,9 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-### <ins>BIOS/UEFI CONFIGURATION</ins>
+## <ins>BIOS/UEFI CONFIGURATION</ins>
 
-#### Disable
+### Disable
 
 - 💻 Fast Boot ➣ Feature in BIOS that `reduces` your computer boot time.
 - 💻 Secure Boot ➣ Secure boot is a `security standard` developed by members of the PC industry
@@ -743,7 +743,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-#### Enable
+### Enable
 
 - 💻 Intel® Virtualization Technology (VT-x) ➣ An `actual hardware virtualisation assistance`.
 - 💻 Above 4G decoding (When enabling Above4G, Resizable BAR Support may become an available on some Z490 and newer motherboards. Please ensure that `Booter -> Quirks -> ResizeAppleGpuBars` is set to `0` if this is enabled)
@@ -756,7 +756,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-### <ins>DRM TESTING</ins>
+## <ins>DRM TESTING</ins>
 
 - ✔️ AppleTV 💯 working
 - ❌ [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view)
@@ -766,7 +766,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-### <ins>TRIM</ins>
+## <ins>TRIM</ins>
 
 📌 NVMe: `Kingston A2000 NVMe` trim support is working native. 
 
@@ -778,25 +778,25 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 </br>
 
-### <ins>IOREG</ins>
+## <ins>IOREG</ins>
 
 [iMac20,1-Hack](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/iMac20%2C1-Hack.ioreg)
 
 </br>
 
-### <ins>DEBUG LOG</ins>
+## <ins>DEBUG LOG</ins>
 
 [OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-2022-04-19-153310.txt)
 
 </br>
 
-### <ins>UPDATING EFI USING OCTOOL</ins>
+## <ins>UPDATING EFI USING OCTOOL</ins>
 
 [rusty-bits/octool](https://youtu.be/5KNzD08Hkxs) - Watch octool<ins> guide [here](https://www.youtube.com/watch?v=5KNzD08Hkxs&t=4s)
 
 </br>
 
-### <ins>FINAL RESULTS</ins>
+## <ins>FINAL RESULTS</ins>
 
 <p align="center">
 <img width="2560" alt="Screen Shot 2022-04-30 at 12 37 23 AM" src="https://user-images.githubusercontent.com/72515939/165986968-f6debb0f-8b5b-474b-850f-972afcc78621.png">
