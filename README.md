@@ -576,27 +576,18 @@ Add additional info based on information below:
 
 <br>
 	
-Compulsory:
+Inject:
 	
 - `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `AAPL,ig-platform-id` > data > `0300913E`	
 - `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `AAPL,slot-name` > string > `Internal`
-- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `device-id` > data > `9B3E0000 `
-	
-Other dditional Data (If Needed):
-
-- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = device_type` > string > `Display controller`
-	
-- `NVRAM` > `7C436110-AB2A-4BBB-A880-FE41995C9F82` > `boot-args` > string > `igfxonline=1` or 
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `device-id` > data > `9B3E0000`
 - `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `igfxonln` > data > `01000000`
-	
-- `NVRAM` > `7C436110-AB2A-4BBB-A880-FE41995C9F82` > `boot-args` > string > `igfxmetal=1` or
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `device_type` > string > `Display controller`
 - `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `enable-metal` > data > `01000000`
-
-- `NVRAM` > `7C436110-AB2A-4BBB-A880-FE41995C9F82` > `boot-args` > string > `igfxfw`
 - `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `iommu-selection` > data > `00000000`
 - `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `rps-control` > data > `01000000`
+- `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `igfxfw` > data > `02000000`
 - `DeviceProperties` > `PciRoot(0x0)/Pci(0x2,0x0)` = `hda-gfx` > string > `onboard-1`
-
 
 Now, new additional "GPU tabs" on the MacOS "Activity Monitor" is added.
 
