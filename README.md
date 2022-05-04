@@ -140,8 +140,19 @@ Below are the basic OpenCore folders and files used for this project:
 
 **Preparation Package**
 
-- [OpenCore - Debug](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-DEBUG.zip)
-- [OpenCore - Release](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-RELEASE.zip)
+- [OpenCore v0.8.0 - Debug](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-DEBUG.zip)
+- [OpenCore v0.8.0 - Release](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-RELEASE.zip)
+
+**v0.8.**
+
+Changes:
+
+- Added support for `early log preservation`
+- Switched to `Python 3` in scripts (use python /path/to/script to force Python 2)
+- Added `ForceAquantiaEthernet` for Aquantia AQtion AQC-107s based 10GbE network cards support, thx @Mieze and @Shikumo
+- Updated builtin firmware versions for SMBIOS and the rest
+- Added `Misc -> Serial` section to customise serial port properties
+- Added `CustomPciSerialDevice` quirk for XNU to correctly recognise customised `external serial devices`
 
 <br>
 
