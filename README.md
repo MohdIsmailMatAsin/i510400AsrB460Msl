@@ -483,7 +483,7 @@ Below are the base OpenCore files and folders used for this project:
 
 ## UHD GRAPHICS 630 HEADLESS MODE
 
-**AAPL,ig-platform-id**<div align="justify">This is an important part. The keyword for the best headless settings for desktop is **mobile**. For desktop **(iMac SMBIOS)**, the framebuffer setting for the **mobile** variant is not needed. Open **Hackintool > Patch > Platform ID** option. Find any setting which is not related to the mobile **(Mobile = No)**. This guide is to find a proper **AAPL,ig-platform-id** for Desktop. In this case, **"0x3E910003** in hexadecimal, which is equal to **0300913E**, 4 byte data hex swapped. Below is an example:
+**AAPL,ig-platform-id**<div align="justify">This is an important part. The keyword for the best headless settings for desktop is **mobile**. For desktop **(iMac SMBIOS)**, the framebuffer setting for the **mobile** variant is not needed. Open **Hackintool > Patch > Platform ID** option. Find any setting which is not related to the mobile **(Mobile = No)**. This guide is to find a proper **AAPL,ig-platform-id** for Desktop. In this case, **0x3E910003** in hexadecimal, which is equal to **0300913E**, 4 byte data hex swapped. Below is an example:
 </div>
 
 - 🚀	0x3E910003 = 0300913E
