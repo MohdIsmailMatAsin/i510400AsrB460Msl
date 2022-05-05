@@ -378,8 +378,7 @@ Below are the base OpenCore files and folders used for this project:
 - None
 
 <p align="center">
-<img width="1227" alt="Screen Shot 2022-04-22 at 12 14 41 AM" src="https://user-images.githubusercontent.com/72515939/164505309-65fb3904-a0ea-4c58-95a1-b786a793b726.png">
-</div>
+<img width="1227" alt="Screen Shot 2022-04-22 at 12 14 41 AM" src="https://user-images.githubusercontent.com/72515939/164505309-65fb3904-a0ea-4c58-95a1-b786a793b726.png"></div>
 
 </br>
 
@@ -416,9 +415,9 @@ Below are the base OpenCore files and folders used for this project:
 
 - 🚀	EnableVectorAcceleration
 - 🚀	RequestBootVarRouting
-- 🚀	ExitBootServiceDelay = `0`
-- 🚀	ResizeGPUBars = `-1`
-- 🚀	TscSyncTimeout = `0`
+- 🚀	ExitBootServiceDelay = **0**
+- 🚀	ResizeGPUBars = **-1**
+- 🚀	TscSyncTimeout = **0**
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 26 AM" src="https://user-images.githubusercontent.com/72515939/164505602-4cf5069b-bdf2-4017-8a54-336f82464ad4.png"></div>
 
