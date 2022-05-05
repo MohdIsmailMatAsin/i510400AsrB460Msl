@@ -243,11 +243,11 @@ Below are the base OpenCore files and folders used for this project:
 
 | Device | Information                                                  |
 | ------ | ------------------------------------------------------------ |
-| ALS0   | Optional/Not Needed. Normally, real iMac is include this device information. **Patch:** smc-als and AppleLMUController. These patch is only Cosmetics for Desktop, nothing much we can do |
-| ANS0   | Rename Kingston A2000 NVMe, RP09,PXSX` to RP09,ANS0. Device is pointed to `M2- 1` Slot. **Patch:** Spoof Generic NVMe as `Apple SSD Controller` |
-| ANS2   | Rename Silicon Power MAP1001 NVMe, `RP20,PXSX` to `RP20,ANS2`. Device is pointed to `Slot- 2`. **Patch:** Spoof `Generic NVMe` as `Apple SSD Controller` |
+| ALS0   | Optional/Not Needed. Normally, real iMac is include this device information. Patch: smc-als and AppleLMUController. These patch is only Cosmetics for Desktop, nothing much we can do |
+| ANS0   | Rename Kingston A2000 NVMe, RP09,PXSX to RP09,ANS0. Device is pointed to M2- 1 Slot. Patch: Spoof Generic NVMe as Apple SSD Controller |
+| ANS2   | Rename Silicon Power MAP1001 NVMe, RP20,PXSX to RP20,ANS2. Device is pointed to Slot- 2. Patch: Spoof Generic NVMe as Apple SSD Controller |
 | ANS1   | Rename Kingston A2000 NVMe, RP21,PXSX to RP21,ANS1. Device is pointed to M2- 2 Slot. Patch: Spoof Generic NVMe as Apple SSD Controller |
-| ARPT   | Rename Broadcom device, BCM94360 RP03,PXSX to RP03,ARPT. Device is pointed to M2- 3 Wifi Slot |
+| ARPT   | Rename Broadcom device, BCM94360 RP03, PXSX to RP03,ARPT. Device is pointed to M2- 3 Wifi Slot |
 | AWAC   | To fix the System Clocks found on newer hardware           |
 | DRAM   | Host bridge (DRAM), or Memory Controller Hub (MCHC). One of two chips comprising the core logic chipset architecture on a PC motherboard |
 | EC     | Fake Embedded Controller / EC drivers since CML don't have native support EC |
@@ -266,6 +266,7 @@ Below are the base OpenCore files and folders used for this project:
 | TSUB/THSS   | Known as Thermal Subsystem. This device is renamed due to no identical/compatible data using ioreg. Rename pci8086,a3b1 to TSUB/THSS. Patch: Compatible AppleIntelPCHPMC support pci8086,a2a1, identical to CML device pci8086,a3a1. Patch can be added either on PPMC or TSUB/THSS. Both is possible via testing. Remain only one AppleIntelPCHPMC patch. Via PPMC is better. By default, TSUB/THSS is removed via my config.plist |
 | USBX   | USB Power Properties for Skylake and newer motherboard generation |
 | XHC    | Board Comet Lake PCH-V USB Controller device |
+
 
 <p align="center"><img width="1239" alt="Screen Shot 2022-04-30 at 10 31 53 AM" src="https://user-images.githubusercontent.com/72515939/166087058-3f4572be-a047-41bd-859a-5da51220af26.png"></div>
 
@@ -359,8 +360,8 @@ Below are the base OpenCore files and folders used for this project:
 
 **Tools for editing:** 
 
-- 🚀	[ProperTree](https://github.com/corpnewt/ProperTree) > `Cross Platform (Mac/Linux/Windows)`
-- 🚀	[Xplist](https://github.com/ic005k/Xplist) > `Cross Platform (Mac/Linux/Windows)`
+- 🚀	[ProperTree](https://github.com/corpnewt/ProperTree) > Cross Platform (Mac/Linux/Windows)
+- 🚀	[Xplist](https://github.com/ic005k/Xplist) > Cross Platform (Mac/Linux/Windows)
 
 </br>
 
