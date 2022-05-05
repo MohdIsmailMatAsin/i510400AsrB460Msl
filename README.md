@@ -565,7 +565,7 @@ Below are the base OpenCore files and folders used for this project:
 **Enable**
 
 - 🚀	Intel® Virtualization Technology (VT-x) > An actual hardware virtualisation assistance.
-- 🚀	Above 4G decoding > When enabling Above4G, Resizable BAR Support may become an available on some Z490 and newer motherboards. Please ensure that Booter -> Quirks -> ResizeAppleGpuBars is set to 0 if this is enabled
+- 🚀	Above 4G decoding > When enabling Above4G, Resizable BAR Support may become an available on some Z490 and newer motherboards. Please ensure that **Booter > Quirks > ResizeAppleGpuBars** is set to 0 if this is enabled
 - 🚀	Hyper-Threading > An Intel® hardware innovation that allows multiple threads to run on each core, this means more work can be done in parallel
 - 🚀	Execute Disable Bit > An Intel® hardware-based security component.
 - 🚀	EHCI/XHCI Hand-off > USB functions are handled by the OS
