@@ -127,9 +127,9 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 </br>
 
-**openCore Structure**
+**OpenCore Structure**
 
-📌	Below are the base OpenCore files and folders used for this project:
+Below are the base OpenCore files and folders used for this project:
 
 ```zsh
 .
@@ -177,9 +177,9 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 **BOOT**<div align="justify">Fallback boot-loader path. This is the only boot-loader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings. "Booting" is a term used to refer to the initial loading process when we turn on the computer. BOOTx64.efi is a special file for the boot process that aims to link the "boot-loader" checked by the BIOS before the computer can be used. The boot programme and OpenCore.efi will be searched by the BIOS for UEFI on 64-bit X86 systems without any existing NVRAM boot settings.</div>
 
-**Secure Boot**<div align="justify">Basically MacOS implements the same boot instruction as any other Operating System. But through a different approach. Mac computers equipped with a [T2 chip](https://en.wikipedia.org/wiki/Apple_T2) have an added feature called secure boot. It prevents unsigned operating systems from running on your Mac. Secure boot helps protect against bootkits, or malware that infects the master boot record (MBR) on your computer. Please refer [Apple Support](https://support.apple.com/en-us/HT208862) for more info.</div>
+**Secure Boot**<div align="justify">Basically MacOS implements the same boot instruction as any other Operating System. But, secure boot works in a different approach. Mac computers equipped with a [T2 chip](https://en.wikipedia.org/wiki/Apple_T2) have an added feature called secure boot. It prevents unsigned operating systems from running on your Mac. Secure boot helps protect against bootkits, or malware that infects the master boot record (MBR) on your computer. Please refer [Apple Support](https://support.apple.com/en-us/HT208862) for more info.</div>
 
-<div align="justify">OpenCore capable of some other additional features. It has another mobile feature called "chain-loader," which aims to call different operating systems. The best thig is, OpenCore support [Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#what-is-apple-secure-boot)!</div>
+**Chain-Loader**<div align="justify">OpenCore capable of some other additional features. It has another mobile feature called "chain-loader," which aims to call different operating systems.</div>
 
 ![Artboard X](https://user-images.githubusercontent.com/72515939/166086925-5b6b1cae-d80e-4fcd-a18b-6d907f5d1b9a.png)
 
@@ -187,27 +187,17 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 ## ACPI
 
-**Refer:** [ACPI Data Tables and Table Definition Language](https://uefi.org/specs/ACPI/6.4/21_ACPI_Data_Tables_and_Table_Def_Language/ACPI_Data_Tables.html#acpi-data-tables-and-table-definition-language)
+**Refer:**[ACPI Data Tables and Table Definition Language](https://uefi.org/specs/ACPI/6.4/21_ACPI_Data_Tables_and_Table_Def_Language/ACPI_Data_Tables.html#acpi-data-tables-and-table-definition-language)
 
 </br>
 
-**DSDT**
+**DSDT**<div align="justify">Differentiated System Description Table. It Is a major ACPI table and is used to describe what peripherals the machine has. Also holds information on PCI IRQ mappings and power management. In other mean, an OEM must supply a DSDT to an ACPI-compatible OS. The DSDT contains the Differentiated Definition Block, which supplies the implementation and configuration information about the base system. The OS always inserts the DSDT information into the ACPI Namespace at system boot time and never removes it.</div>
 
-<div align="justify">
-📌	Differentiated System Description Table. It Is a major ACPI table and is used to describe what peripherals the machine has. Also holds information on PCI IRQ mappings and power management. In other mean, an OEM must supply a DSDT to an ACPI-compatible OS. The DSDT contains the Differentiated Definition Block, which supplies the implementation and configuration information about the base system. The OS always inserts the DSDT information into the ACPI Namespace at system boot time and never removes it.
-</div>
-
-<p align="center">
-<img width="1109" alt="Screen_Shot_2022-04-30_at_3_41_29_PM" src="https://user-images.githubusercontent.com/72515939/166096869-e6b7fe84-c465-4504-ab89-14b8887561ac.png">
-</div>
+<p align="center"><img width="1109" alt="Screen_Shot_2022-04-30_at_3_41_29_PM" src="https://user-images.githubusercontent.com/72515939/166096869-e6b7fe84-c465-4504-ab89-14b8887561ac.png"></div>
 
 </br>
 
-**SSDT**
-
-<div align="justify">
-📌	Secondary System Description Table. SSDTs are a continuation of the DSDT. Multiple SSDTs can be used as part of a platform description. After the DSDT is loaded into the ACPI Namespace, each secondary description table listed in the RSDT/XSDT with a unique OEM Table ID is loaded. This allows the OEM to provide the base support in one table, while adding smaller system options in other tables.
-</div>
+**SSDT**<div align="justify">In ACPI, peripheral devices and system hardware features on the platform are described in the Differentiated System Description Table (DSDT), which is loaded at boot, or in Secondary System Description Tables (SSDTs), which are loaded at boot or loaded dynamically at run time. For SoCs (System on Chip), the platform configuration is typically static, so the DSDT might be sufficient, although SSDTs can also be used to improve the modularity of the platform description. Secondary System Description Table. SSDTs are a continuation of the DSDT. Multiple SSDTs can be used as part of a platform description. After the DSDT is loaded into the ACPI Namespace, each secondary description table listed in the RSDT/XSDT with a unique OEM Table ID is loaded. This allows the OEM to provide the base support in one table, while adding smaller system options in other tables. Refer [Differentiated System Description Table](https://docs.microsoft.com/en-us/windows-hardware/drivers/bringup/acpi-system-description-tables#differentiated-system-description-table-dsdt) for more info.</div>
 
 <p align="center">
 <img width="1111" alt="Screen_Shot_2022-04-30_at_3_40_56_PM" src="https://user-images.githubusercontent.com/72515939/166096876-9d9d956e-80ed-477c-b7c3-0897d7c47abe.png">
@@ -217,27 +207,11 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 </br>
 
-**ACPI Machine Language (AML)**
-
-<div align="justify">
-📌	Pseudo-code for a virtual machine supported by an ACPI-compatible OS and in which ACPI control methods and objects are written. The AML encoding definition is provided in section 19.
-</div> 
-
-**Refer:** [ACPI Machine Language (AML) Specification](https://uefi.org/specs/ACPI/6.4/20_AML_Specification/AML_Specification.html)
+**ACPI Machine Language (AML)**<div align="justify">Pseudo-code for a virtual machine supported by an ACPI-compatible OS and in which ACPI control methods and objects are written. The AML encoding definition is provided in section 19, [ACPI Machine Language (AML) Specification](https://uefi.org/specs/ACPI/6.4/20_AML_Specification/AML_Specification.html)</div>
 
 </br>
 
-**DSDT vs SSDT Patching**
-
-<div align="justify">
-📌	As documented by Dortania, "Do not add your DSDT to OpenCore; it's already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your configuration based on the architecture of your CPU".
-</div>
-
-**Refer:** [Dortania](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime)
-
-<div align="justify">
-📌	Some computers come with a broken DSDT. It is usually not recommended to patch/override DSDT. Overriding DSDT with garbage can do physical harm to computer. DSDT patches or sometimes called as override should be avoided. Some forums/webpages (i.e., Olarila) state that it is a major solution. While DSDT is the primary table, SSDT can be patched, modified (adding and dropping) the hardware properties which hook inside the machine. There are various reasons why DSDT patching is not recommended.
-</div>
+**DSDT or SSDT?**<div align="justify">As documented by [Dortania](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) , "Do not add your DSDT to OpenCore; it's already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your configuration based on the architecture of your CPU". Some computers come with a broken DSDT. It is usually not recommended to patch/override DSDT. Overriding DSDT with garbage can do physical harm to computer. DSDT patches or sometimes called as override should be avoided. Some forums/webpages (i.e., Olarila) state that it is a major solution. While DSDT is the primary table, SSDT can be patched, modified (adding and dropping) the hardware properties which hook inside the machine. There are various reasons why DSDT patching is not recommended.</div>
 
 </br>
 
@@ -254,9 +228,7 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 - ⚡	ACPI Injection to Windows/Linux. 
 
-<div align="justify">
-📌	Mostly, these issue may affect dual booting (Windows + MacOS). Luckily, there are settings via config.plist to prevent both issues, but this is only experimental. Do not assume this settings will work 100% on your machine. Settings is explained via table below:
-</div>
+**Bypass ACPI Injection On Other OS**<div align="justify">Mostly, these issue may affect dual booting (Windows + MacOS). Luckily, there are settings via config.plist to prevent both issues, but this is only experimental. Do not assume this settings will work 💯 on your machine. Settings is explained via table below:</div>
 
 | Path         | Path       | Path             | Mode   |
 | ------------ | ---------- | ---------------- | ------ |
@@ -264,18 +236,11 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 | Kernel       | Quirks     | CustomSMBIOSGuid | True   |
 
 
-<div align="justify">
-📌	SSDT patch is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. SSDT patch is minor modification and not affect the actual hardware performance.
-</div>
+**Solution**<div align="justify">SSDT patch is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. SSDT patch is minor modification and not affect the actual hardware performance. Using openCore debug, there are several other tables that work with OpenCore. However, modifications to other tables are not necessary. The purpose of the SSDT is designed as described in this section. Be reminded, only SSDT can be modified. The rest is no.</div>
 
 </br>
 
-**Patch Applied**
-
-<div align="justify">
-📌	Thanks to CorpNewt cross platform SSDTTime hotpatch tool. In this project, various SSDT's has been merged into one (i.e., SSDT-B460M-SL.dsl). With several other sources, additional code is injected to reduce the kext workload. As example, GFX0 to an IGPU rename which handled by Whatevergreen.kext.
-</div>
-
+**Patch Applied**<div align="justify">Thanks to CorpNewt cross platform SSDTTime hotpatch tool. In this project, various SSDT's has been merged into one (i.e., SSDT-B460M-SL.dsl). With several other sources, additional code is injected to reduce the kext workload. As example, GFX0 to an IGPU rename which handled by Whatevergreen.kext.</div>
 
 | Device | Information                                                  |
 | ------ | ------------------------------------------------------------ |
@@ -303,44 +268,36 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 | USBX   | USB `Power Properties` for Skylake and newer motherboard generation |
 | XHC    | Board `Comet Lake PCH-V USB Controller` device               |
 
-**Refer:** OpenCore [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)
+**Refer:**OpenCore [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)
 
-<p align="center">
-<img width="1239" alt="Screen Shot 2022-04-30 at 10 31 53 AM" src="https://user-images.githubusercontent.com/72515939/166087058-3f4572be-a047-41bd-859a-5da51220af26.png">
-</div>
+<p align="center"><img width="1239" alt="Screen Shot 2022-04-30 at 10 31 53 AM" src="https://user-images.githubusercontent.com/72515939/166087058-3f4572be-a047-41bd-859a-5da51220af26.png"></div>
 
 </br>
 
-🔧	Tools: 
+**Tools used:** 
 
-- 🔨	[SSDTTime](https://github.com/corpnewt/SSDTTime) > Cross Platform (Mac/Linux/Windows)
-- 🔨	[MaciASL](https://github.com/acidanthera/MaciASL) > MacOS
-- 🔨	[Xiasl](https://github.com/ic005k/Xiasl) > Cross Platform (Mac/Linux/Windows)
+- 🚀	[SSDTTime](https://github.com/corpnewt/SSDTTime) > Cross Platform (Mac/Linux/Windows)
+- 🚀	[MaciASL](https://github.com/acidanthera/MaciASL) > MacOS
+- 🚀	[Xiasl](https://github.com/ic005k/Xiasl) > Cross Platform (Mac/Linux/Windows)
 
 </br>
 
-### 3.0 - OC\DRIVERS
+## DRIVERS
 
-<div align="justify">
-📌	Only use 2 basic driver types. HfsPlus.efi and OpenRuntime.efi. Both files are essentially basic things to get driver support. Usage information is as follows:
-</div>
+**Basic Drivers**<div align="justify">Only 2 basic driver types are needed here using the debug package. OpenRuntime.efi and HfsPlus.efi. Both files are essentially basic drivers to make this project work. Usage information is as follows:</div>
 
 | Driver          | Information                                                  |
 | --------------- | ------------------------------------------------------------ |
-| HfsPlus.efi     | Official `HFS+ Driver` Support for Apple MacOS              |
+| HfsPlus.efi     | Official `HFS+ Driver` Support for Apple MacOS               |
 | OpenRuntime.efi | `AptioMemoryFix.efi` (Clover Boot-loader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
 
-<p align="center">
-<img width="1036" alt="Screen_Shot_2022-04-25_at_2_41_37_PM" src="https://user-images.githubusercontent.com/72515939/165034935-9e54e24e-87fc-4d4a-93cd-79621119b41c.png">
-</div>
+<p align="center"><img width="1036" alt="Screen_Shot_2022-04-25_at_2_41_37_PM" src="https://user-images.githubusercontent.com/72515939/165034935-9e54e24e-87fc-4d4a-93cd-79621119b41c.png"></div>
 
 </br>
 
-### 4.0 - OC\KEXT
+## KEXT
 
-<div align="justify">
-📌	Kernel extensions (kexts) let users or developers load code directly into the MacOS kernel. However, the kext used is not an official kext. This is some community effort for the use of Hackintosh users. The kext used is mostly a layer emulator, driver, and sensor. The rest is to improve other needed functions. The table below contains some kexts used to properly boot MacOS through OpenCore.
-</div>
+**Kernel Extensions**<div align="justify">Apple regularly introduces innovative solutions and improvements to macOS. However, not all improved tools can fully replace their predecessors. This is what happened with kernel extensions and their successors, System Extensions and DriverKit. Kernel extensions (kexts) let users or developers load code directly into the MacOS kernel. The table below contains some kexts in this project used to properly boot MacOS through OpenCore.</div>
 
 | Kext                | Information                                                  |
 | ------------------- | ------------------------------------------------------------ |
@@ -355,98 +312,66 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 | LucyRTL8125Ethernet | Ethernet device, `Realtek RTL8125 2.5G bit Ethernet Controllers` driver |
 | USBMap              | Kext to `route` selected `USB ports` to `Physical Ports` via USB port address. This is `compulsory to handle` `15 port limit` requirements by MacOS |
 
-**Remark:** All kext used are `DEBUG` versions.
-
-<p align="center">
-<img width="1032" alt="Screen_Shot_2022-04-25_at_3_00_24_PM" src="https://user-images.githubusercontent.com/72515939/165037853-94893f7d-7950-447a-a57f-745e93fe9ce8.png">
-</div>
+<p align="center"><img width="1032" alt="Screen_Shot_2022-04-25_at_3_00_24_PM" src="https://user-images.githubusercontent.com/72515939/165037853-94893f7d-7950-447a-a57f-745e93fe9ce8.png"></div>
 
 </br>
 
-**Sort by Priorities:** Select which kext, sort in priority to get better kext injection.
+**Priorities:** The order of kexts is important, they are loaded in this order. Plugins for other kexts should always come after the main kext. Lilu should be first, then Lilu plugins like WhateverGreen and VirtualSMC. Sort in priority to get a better kext injection.
 
-<p align="center">
-<img width="1356" alt="Screen_Shot_2022-04-25_at_3_09_08_PM" src="https://user-images.githubusercontent.com/72515939/165038719-33ac2cca-1cf5-4aae-85de-7caa88c3ccff.png">
-</div>
+<p align="center"><img width="1356" alt="Screen_Shot_2022-04-25_at_3_09_08_PM" src="https://user-images.githubusercontent.com/72515939/165038719-33ac2cca-1cf5-4aae-85de-7caa88c3ccff.png"></div>
 
 </br>
 
-### 5.0 - OC\OPENCORE.EFI
+## OPENCORE.EFI
 
-<div align="justify">
-📌	An OpenCore Extensible Firmware Interface ".efi" format. Normally this file is include with OpenCorePkg and it is compulsory.
-</div>
+**Firmware Interface**<div align="justify">An Extensive Firmware Interface (.efi) file is a system file used by Intel-based computer systems and computer devices such as AppleTVs. It contains system-level data that executes between the operating system and the firmware. An OpenCore Extensible Firmware Interface files are used for staging firmware updates, booting operating systems, and running pre-boot programs. Normally this file is include with OpenCorePkg and it is compulsory.</div>
 
-<p align="center">
-<img width="882" alt="Screen Shot 2022-04-25 at 1 10 05 PM" src="https://user-images.githubusercontent.com/72515939/165024487-a626140e-fbf4-41b6-806f-7d1df76a95ec.png">
-</div>
+<p align="center"><img width="882" alt="Screen Shot 2022-04-25 at 1 10 05 PM" src="https://user-images.githubusercontent.com/72515939/165024487-a626140e-fbf4-41b6-806f-7d1df76a95ec.png"></div>
 
 </br>
 
-### 6.0 - OC\RESOURCES
+## RESOURCES
 
-<div align="justify">
-📌	This folder is related to OpenCore Beauty Treatment and is used with the OpenCanopy.efi driver. It is up to you to do your own research for a custom boot menu.
-</div>
+**Audio, Font, Image & Label**<div align="justify">An OpenCore theme folder which is related to beauty treatment. These files and folders only work with the OpenCanopy.efi driver. For a more detailed guide, see [OpenCore Beauty treatment](https://github.com/dortania/OpenCore-Post-Install/blob/master/cosmetic/gui.md). This section can be skipped and can be done post-install. The package can be download [here](https://github.com/acidanthera/OcBinaryData).</div>
 
-<p align="center">
-<img width="882" alt="Screen Shot 2022-04-25 at 1 18 08 PM" src="https://user-images.githubusercontent.com/72515939/165025116-3361c542-d1bb-4730-8792-bc247e83f543.png">
-</div>
-
-**Refer:** [OC Binary Resource](https://github.com/acidanthera/OcBinaryData)
+<p align="center"><img width="882" alt="Screen Shot 2022-04-25 at 1 18 08 PM" src="https://user-images.githubusercontent.com/72515939/165025116-3361c542-d1bb-4730-8792-bc247e83f543.png"></div>
 
 </br>
 
-### 7.0 - OC\TOOLS
+## TOOLS
 
-<div align="justify">
-📌	Just additional tool "CleanNvram.efi" which is ResetNVRAM alternative bundled as a standalone tool, available when included into Tools folder and config.plist. This tool is hiding via "hide auxiliary". Use "Spacebar" to reveal the function. I just include this tools as failsafe.
-</div>
+**Auxiliary**<div align="justify">An additional auxiliary tool for OpenCore. Most of the tools are available in OpenCore packages. It is up to the user to figure out how to make the most of the tools provided. The tools are in `.efi` format. Here, `CleanNvram.efi`, which is a `ResetNVRAM` alternative bundled as a standalone tool, is used as an example. This tool will likely be used to remove any corruption of data in the NVRAM, whilst the resetnvram is used to wipe and clear (empty) the NVRAM. Other tools are designed according to a specific purpose. **Reminder:** Press `spacebar` on the boot menu to reveal CleanNvram.efi since it is set as an auxiliary.</div>
 
-<p align="center">
-<img width="882" alt="Screen Shot 2022-04-25 at 1 18 58 PM" src="https://user-images.githubusercontent.com/72515939/165025190-86dd61a2-ebe6-4ad9-bec6-73da1f1ef9bc.png">
-</div>
+<p align="center"><img width="882" alt="Screen Shot 2022-04-25 at 1 18 58 PM" src="https://user-images.githubusercontent.com/72515939/165025190-86dd61a2-ebe6-4ad9-bec6-73da1f1ef9bc.png"></div>
 
 </br>
 
-### 8.0 - OC\CONFIG.PLIST
+## CONFIG.PLIST
 
-<div align="justify">
-📌	Property list based on xml code. Structured OpenCore/Clover method and upgraded injection function. An Apple.Inc plist is a MacOS preference, also a file for the application that it holds the preference settings for. By trashing and then relaunching an application you are getting rid of old user set preferences that may have become corrupt. OpenCore use this kind of file to inject (match, overcome and manipulate) specified information to unsupport hardware/device. 
-Besides, a plist is often used to correct problems that a user may be having with an application.
-</div>
+**Configuration**<div align="justify">A PLIST file is a settings file, also known as a `properties file`, used by MacOS applications. It contains properties and configuration settings for various programs. PLIST files are formatted in XML and based on Apple's Core Foundation DTD. OpenCore/Clover benefit `.plist` to inject MacOS preference, also an information for the application that it holds the preference settings. Other than that, it's a markup language that shares a lot of similarities with HTML. This means you've got a few different data types available to you, and most of the structure revolves around keeping track of opening and closing tags. Besides, a plist is often used to correct problems that a user may be having with an application or devices.</div>
 
-<p align="center">
-<img width="959" alt="Screen Shot 2022-04-25 at 1 19 39 PM" src="https://user-images.githubusercontent.com/72515939/165025284-c442cf30-0099-4f94-8634-19b9877d153a.png">
-</div>
+<p align="center"><img width="959" alt="Screen Shot 2022-04-25 at 1 19 39 PM" src="https://user-images.githubusercontent.com/72515939/165025284-c442cf30-0099-4f94-8634-19b9877d153a.png"></div>
 
-**Refer:**
+**Example:** Below is an example of config.plist:
 
-- 💿	OpenCore [Monterey/BigSur-Debug](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_debug.plist)
-- 💿	OpenCore [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_release.plist)
-- 💿	Clover [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_clover.plist) 
+- 🚀	OpenCore [Monterey/BigSur-Debug](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_debug.plist)
+- 🚀	OpenCore [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_release.plist)
+- 🚀	Clover [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_clover.plist) 
 
 </br>
 
-🔧	Tools:
+**Tools for editing:** 
 
-- 🔨	[ProperTree](https://github.com/corpnewt/ProperTree) > `Cross Platform (Mac/Linux/Windows)`
-- 🔨	[Xplist](https://github.com/ic005k/Xplist) > `Cross Platform (Mac/Linux/Windows)`
+- 🚀	[ProperTree](https://github.com/corpnewt/ProperTree) > `Cross Platform (Mac/Linux/Windows)`
+- 🚀	[Xplist](https://github.com/ic005k/Xplist) > `Cross Platform (Mac/Linux/Windows)`
 
 </br>
+
+# OTHERS: ADDITIONAL INFO
 
 ## QUIRKS CHECK
 
-<div align="justify">
-📌	Quirks must set as processor codename. Refer OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error occur to config.plist is by your own responsibility. Manual setup is encourage. Please make a backup before using it. Link can be refer below:
-</div>
-
-- 🔨	[OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html) > `Recommended`
-- 🔨	[OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools) -> `Not Recommended`
-
-<div align="justify">
-📌	The list below is the Quirk settings for Comet Lake Processor:
-</div>
+**Read and Settings**<div align="justify">Quirks is based on processor codename. Refer to OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error that occurs in config.plist is your own responsibility. Manual setup is encouraged. Please make a backup before using it. While the quirks are set by processor code name, please read [OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html) for recommendations. Use [ProperTree](https://github.com/corpnewt/ProperTree) or [Xplist](https://github.com/ic005k/Xplist) to manually edit quirks settings via config.plist. There is an easy way by using [OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools). However, it is not recommended and may break the `.plist`.
 
 </br>
 
@@ -472,9 +397,7 @@ Besides, a plist is often used to correct problems that a user may be having wit
 - 🚀	ProvideMaxSlide = `0`
 - 🚀	ResizeAppleGpuBars = `-1`
 
-<p align="center">
-<img width="1227" alt="Screen Shot 2022-04-22 at 12 15 05 AM" src="https://user-images.githubusercontent.com/72515939/164505410-32911711-727d-40f9-9d2a-f542700b5dcc.png">
-</div>
+<p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 05 AM" src="https://user-images.githubusercontent.com/72515939/164505410-32911711-727d-40f9-9d2a-f542700b5dcc.png"></div>
 
 </br>
 
@@ -499,44 +422,42 @@ Besides, a plist is often used to correct problems that a user may be having wit
 - 🚀	ResizeGPUBars = `-1`
 - 🚀	TscSyncTimeout = `0`
 
-<p align="center">
-<img width="1227" alt="Screen Shot 2022-04-22 at 12 15 26 AM" src="https://user-images.githubusercontent.com/72515939/164505602-4cf5069b-bdf2-4017-8a54-336f82464ad4.png">
-</div>
+<p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 26 AM" src="https://user-images.githubusercontent.com/72515939/164505602-4cf5069b-bdf2-4017-8a54-336f82464ad4.png"></div>
 
 </br>
 
 ## ADDITIONAL FRAMEBUFFER FOR AMD NAVI GPU's
 
-### Framebuffers available in AMDRadeonX6000Framebuffer.kext >> Contents >> Info.plist.
+**Framebuffers** available in **AMDRadeonX6000Framebuffer.kext >> Contents >> Info.plist**.
 
 **5700 - Navi 10**
-- 🔑	AMDRadeonNavi10Controller
-- 🔑	device-id: 0x73101002 0x73121002 0x73181002 0x73191002 0x731A1002 0x731B1002 0x731F1002 0x73BF1002
-- 🔑	framebuffer: `ATY,Adder` / `ATY,Ikaheka`
+- 🚀	AMDRadeonNavi10Controller
+- 🚀	device-id: 0x73101002 0x73121002 0x73181002 0x73191002 0x731A1002 0x731B1002 0x731F1002 0x73BF1002
+- 🚀	framebuffer: `ATY,Adder` / `ATY,Ikaheka`
 
 **5600 - Navi 12**
-- 🔑	AMDRadeonNavi12Controller
-- 🔑	device-id: 0x73601002 0x73621002
-- 🔑	framebuffer: `ATY,Sunbeam`
+- 🚀	AMDRadeonNavi12Controller
+- 🚀	device-id: 0x73601002 0x73621002
+- 🚀	framebuffer: `ATY,Sunbeam`
 
 **5500 - Navi 14**
-- 🔑	AMDRadeonNavi14Controller
-- 🔑	device-id: 0x73401002 0x73411002 0x73431002 0x73471002 0x734F1002
-- 🔑	framebuffer: `ATY,Python` / `ATY,Keelback` / `ATY,Boa`
+- 🚀	AMDRadeonNavi14Controller
+- 🚀	device-id: 0x73401002 0x73411002 0x73431002 0x73471002 0x734F1002
+- 🚀	framebuffer: `ATY,Python` / `ATY,Keelback` / `ATY,Boa`
 
 **6800 and 6900 - Navi 21**
-- 🔑	AMDRadeonNavi21Controller
-- 🔑	device-id: 0x73A01002 0x73A21002 0x73A31002 0x73AB1002 0x73AE1002 0x73AF1002 0x73BF1002
-- 🔑	framebuffer: `ATY,Belknap` / `ATY,Carswell` / `ATY,Deepbay`
+- 🚀	AMDRadeonNavi21Controller
+- 🚀	device-id: 0x73A01002 0x73A21002 0x73A31002 0x73AB1002 0x73AE1002 0x73AF1002 0x73BF1002
+- 🚀	framebuffer: `ATY,Belknap` / `ATY,Carswell` / `ATY,Deepbay`
 
 **6600 - Navi 23**
-- 🔑	AMDRadeonNavi23Controller
-- 🔑	device-id: 0x73E31002 0x73FF1002 0x73E01002
-- 🔑	framebuffer: `ATY,Henbury`
+- 🚀	AMDRadeonNavi23Controller
+- 🚀	device-id: 0x73E31002 0x73FF1002 0x73E01002
+- 🚀	framebuffer: `ATY,Henbury`
 
 </br>
 
-### Device Properties sample settings
+**ATY,GPU (DGPU)**
 
 ```xml
 <key>DeviceProperties</key>
@@ -564,196 +485,135 @@ Besides, a plist is often used to correct problems that a user may be having wit
 
 ## UHD GRAPHICS 630 HEADLESS MODE
 
-### AAPL,ig-platform-id
-
-<div align="justify">
-📌	The keyword for the best headless settings for desktop is "mobile". For desktop (iMac SMBIOS), the framebuffer setting for the "mobile" variant is not required. Open "Hackintool > Patch > Platform ID" option. Find any setting that is not related to the mobile (Mobile = No). The purpose is to find a proper "AAPL,ig-platform-id" for Desktop (iMac SMBIOS). In this case, "0x3E910003" in hexadecimal, which is equal to "0300913E", 4 byte data hex swapped. Below is an example:
+**AAPL,ig-platform-id**<div align="justify">This is an important part. The keyword for the best headless settings for desktop is **mobile**. For desktop **(iMac SMBIOS)**, the framebuffer setting for the **mobile** variant is not needed. Open **Hackintool > Patch > Platform ID** option. Find any setting which is not related to the mobile **(Mobile = No)**. This guide is to find a proper **AAPL,ig-platform-id** for Desktop. In this case, **"0x3E910003** in hexadecimal, which is equal to **0300913E**, 4 byte data hex swapped. Below is an example:
 </div>
 
-- 📍	0x3E910003 = 0300913E
-- 📍	AAPL,ig-platform-id = 0300913E
+- 🚀	0x3E910003 = 0300913E
+- 🚀	AAPL,ig-platform-id = 0300913E
 
-<p align="center">
-<img width="1176" alt="Screen_Shot_2022-05-02_at_5_10_03_PM" src="https://user-images.githubusercontent.com/72515939/166212509-9f300b98-66c5-43f0-abf9-e14dd5e610a2.png">
-</div>
+<p align="center"><img width="1176" alt="Screen_Shot_2022-05-02_at_5_10_03_PM" src="https://user-images.githubusercontent.com/72515939/166212509-9f300b98-66c5-43f0-abf9-e14dd5e610a2.png"></div>
 
 </br>
 
-### device-id
+**device-id**<div align="justify">To get the proper main card platform as `headless` injection, `device-id` is required to get the device name. On `Intel 10th Gen` processor, it is not necessary, but sometimes this patch may fix certain IGPU issues. As an example, find **Activity Monitor > Window > GPU History** or **Activity Monitor > GPU** extra tab, IGPU will display as **Intel® KBL Unknown**. Ckeckout [Issues #1905](https://github.com/acidanthera/bugtracker/issues/1905). To proper rename, use **Hackintool** as a guide by finding the appropriate **device-id**, not in "mobile" mode (Mobile = No). In this case, GPU Hexadecimal "device-id" "0x3E9B8086" which is equal to 4 byte data hex swapped "9B3E0000" is injected via "config.plist" in IGPU "DeviceProperties" section. Below is an example:</div>
 
-<div align="justify">
-📌	To get the proper main card platform as headless injection, "device-id" is required to get the device name. On Intel 10th Gen is not necessary, but sometimes this patch may fix certain IGPU issues. As an example, find "Activity Monitor > Window > GPU History" or "Activity Monitor > GPU" extra tab, IGPU will display as "Intel® KBL Unknown".</div>
-	
-**Refer:** [Issues #1905](https://github.com/acidanthera/bugtracker/issues/1905).
-	
-<div align="justify">
-📌	To proper rename, use "Hackintool" as a guide by finding the appropriate device-id, not in "mobile" mode (Mobile = No). In this case, GPU Hexadecimal "device-id" "0x3E9B8086" which is equal to 4 byte data hex swapped "9B3E0000" is injected via "config.plist" in IGPU "DeviceProperties" section. Below is an example:
-</div>
+- 🚀	0x3E9B8086 = 9B3E8086
+- 🚀	9B3E8086 = 9B3E0000 (8086 to 0000)
+- 🚀	device-id = 9B3E0000
 
-- 📍	0x3E9B8086 = 9B3E8086
-- 📍	9B3E8086 = 9B3E0000 (8086 to 0000)
-- 📍	device-id = 9B3E0000
-
-<p align="center">
-<img width="1172" alt="Screen_Shot_2022-05-02_at_5_27_16_PM" src="https://user-images.githubusercontent.com/72515939/166213623-407d87dd-5368-4430-b8e0-5fc87eb97be1.png">
-</div>
+<p align="center"><img width="1172" alt="Screen_Shot_2022-05-02_at_5_27_16_PM" src="https://user-images.githubusercontent.com/72515939/166213623-407d87dd-5368-4430-b8e0-5fc87eb97be1.png"></div>
 
 </br>
 
-<div align="justify">
-📹	4K Video Test is made via Safari on Monterey. Use "Launchpad > Other > ActivityMonitor" as our observation tool. Do note, additional data is needed via "config.plist". The purpose is to leave headless IGPU state to always being online and proper rename IGPU via Activity Monitior instead as "Intel KBL Unknown".
-</div>
+**Inject**<div align="justify">Other additional information to be inject:</div>	
 	
-💁	Add additional info based on information below:	
+- 🚀	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `AAPL,ig-platform-id` > data > `0300913E`	
+- 🚀	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `AAPL,slot-name` > string > `Internal`
+- 🚀	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `device-id` > data > `9B3E0000`
+- 🚀	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `igfxonln` > data > `01000000`
+- 🚀	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `device_type` > string > `Display controller`
+- 🚀	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `enable-metal` > data > `01000000`
+- 🚀	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `iommu-selection` > data > `00000000`
+- 🚀	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `rps-control` > data > `01000000`
+- 🚀	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `igfxfw` > data > `02000000`
+- 🚀	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `hda-gfx` > string > `onboard-1`
 
-</br>
-	
-**Inject:**
-	
-- 📍	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `AAPL,ig-platform-id` > data > `0300913E`	
-- 📍	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `AAPL,slot-name` > string > `Internal`
-- 📍	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `device-id` > data > `9B3E0000`
-- 📍	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `igfxonln` > data > `01000000`
-- 📍	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `device_type` > string > `Display controller`
-- 📍	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `enable-metal` > data > `01000000`
-- 📍	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `iommu-selection` > data > `00000000`
-- 📍	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `rps-control` > data > `01000000`
-- 📍	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `igfxfw` > data > `02000000`
-- 📍	DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = `hda-gfx` > string > `onboard-1`
-
-📌	Now, new additional "GPU tabs" on the MacOS "Activity Monitor" is added.
-
-</br>
-
-<div align="justify">
-📌 And, the result is....
-</div>
+**GPU Tab**<div align="justify">Now, new additional "GPU tabs" on the MacOS "Activity Monitor" is added. And, the result is....</div>
 
 <img width="1656" alt="Screen Shot 2022-05-02 at 5 01 41 PM" src="https://user-images.githubusercontent.com/72515939/166213796-e008aa77-c372-4aac-8ff2-45b8b06bc0d8.png">
 
-<p align="center">
-<img width="1365" alt="Screen_Shot_2022-05-02_at_5_02_07_PM" src="https://user-images.githubusercontent.com/72515939/166215851-6690a3c6-366d-4308-9dbd-04a9c709025f.png">
-</div>
+<p align="center"><img width="1365" alt="Screen_Shot_2022-05-02_at_5_02_07_PM" src="https://user-images.githubusercontent.com/72515939/166215851-6690a3c6-366d-4308-9dbd-04a9c709025f.png"></div>
 
-<p align="center">
-<img width="549" alt="Screen Shot 2022-05-02 at 5 33 59 PM" src="https://user-images.githubusercontent.com/72515939/166214463-17182b3a-99f3-48a5-bd58-70d4720971e3.png">
-</div>
+<p align="center"><img width="549" alt="Screen Shot 2022-05-02 at 5 33 59 PM" src="https://user-images.githubusercontent.com/72515939/166214463-17182b3a-99f3-48a5-bd58-70d4720971e3.png"></div>
 
-🎥	IQSV Test: [Youtube](https://youtu.be/dd3SwAZ3S_w)
-	
-</br>	
-
-### IGPU Info
-
-<p align="center">
-<img width="1239" alt="Screen_Shot_2022-04-27_at_1_05_05_AM" src="https://user-images.githubusercontent.com/72515939/165354830-6cdc4953-3081-44a0-812c-11b5b0bead78.png">
-</div>
-
-</br>
-
-### DGPU Info
-
-<p align="center"><img width="1239" alt="Screen Shot 2022-04-27 at 1 00 41 AM" src="https://user-images.githubusercontent.com/72515939/165354288-3be11774-1c5b-4a76-a55f-f8f7e100bba8.png"></div>
-
-</br>
-
-## POWER ISSUES
-
-<div align="justify">
-🔌	If there is a problem with power, use Hackintool to reset. The picture below shows how to do this:</div>
-
-<p align="center">
-<img width="1108" alt="Screen_Shot_2022-04-25_at_4_01_32_PM" src="https://user-images.githubusercontent.com/72515939/165046653-bdd95d61-c4eb-4f8b-bd8b-e13b3413af41.png">
-</div>
-
-🔧	Tools: [Hackintool](https://github.com/headkaze/Hackintool)
-
-</br>
-
-## BIOS/UEFI CONFIGURATION
-
-### Disable
-
-- 💻	Fast Boot ➡️ Feature in BIOS that `reduces` your computer boot time.
-- 💻	Secure Boot ➡️ Secure boot is a `security standard` developed by members of the PC industry
-- 💻	Serial/COM Port ➡️ Serial port is a `serial communication interface`
-- 💻	Parallel Port ➡️ An interface allowing a personal computer (PC) to `transmit` or `receive` data down multiple bundled cables to a peripheral device such as a printer
-- 💻	Intel® Virtualization Technology (VT-d) ➡️ Allows user to `direct passthrough of devices`. This option can be enabled if you set `DisableIoMapper` to `YES`
-- 💻	Compatibility Support Module (CSM) ➡️ Compatibility Support Module
-- 💻	Thunderbolt ➡️ New technology that supports `high-resolution displays` and `high-performance data` through one `single port`. For initial install, as Thunderbolt can cause issues if not setup correctly
-- 💻	Intel® Software Guard Extensions (SGX) ➡️ A set of `security-related instruction codes` that are built into some Intel® central processing units (CPUs)
-- 💻	Intel® Platform Trust (TPM) ➡️ Trusted Platform Module, `improves the security` of your PC by securely creating and storing cryptographic keys. (`Linux` and `Windows 10`.  Proper `dual-boot` with `Windows 11` require TPM to be enable. **Refer:** [InsanelyMac Discussions](https://www.insanelymac.com/forum/topic/348202-how-to-opencore-070-071-differences/))
-- 💻 Config Lock (CFG Lock) ➡️ Setting in your BIOS that allows for a `specific register` (in this case the MSR 0xE2) to be written to
-- 💻 Intel® Rapid Storage Technology (RST) ➡️ Windows-based application that provides `improved performance` and `reliability` for computers that are equipped with `SATA` disks for desktop, mobile, and server platforms
-
-</br>
-
-### Enable
-
-- 💻	Intel® Virtualization Technology (VT-x) ➡️ An `actual hardware virtualisation assistance`.
-- 💻	Above 4G decoding ➡️ When enabling Above4G, Resizable BAR Support may become an available on some Z490 and newer motherboards. Please ensure that `Booter -> Quirks -> ResizeAppleGpuBars` is set to `0` if this is enabled
-- 💻	Hyper-Threading ➡️ An `Intel®` hardware innovation that allows multiple threads to run on each core, this means more work can be done in parallel
-- 💻	Execute Disable Bit ➡️ An `Intel®` hardware-based security component.
-- 💻	EHCI/XHCI Hand-off ➡️ USB functions are handled by the OS
-- 💻	OS type ➡️ `Windows 8.1/10` UEFI Mode
-- 💻	DVMT Pre ➡️ The `Intel® HD/UHD Graphics driver` for `Windows`. Please allocated (iGPU Memory) to `64MB` / `Auto`
-- 💻	SATA Mode ➡️ Advanced Host Controller Interface or `AHCI`
-
-</br>
-
-## DRM TESTING
+**DRM Test**
 
 - ✔️ AppleTV 💯 working
 - ❌ [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view)
 - ✔️ Netflix 💯 working
 
-**Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki only applicable via Catalina and below.
+**IQSV Test** Checkout this [link](https://youtu.be/dd3SwAZ3S_w)
+
+**Remark:**<div align="center">All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki patch only applicable via Catalina and below.</div>
+	
+</br>	
+
+## POWER ISSUES
+
+**Reset via Hackintool**<div align="justify">If there is a problem with power, use [Hackintool](https://github.com/headkaze/Hackintool) to reset. The picture below shows how to do this:</div>
+
+<p align="center"><img width="1108" alt="Screen_Shot_2022-04-25_at_4_01_32_PM" src="https://user-images.githubusercontent.com/72515939/165046653-bdd95d61-c4eb-4f8b-bd8b-e13b3413af41.png"></div>
+
+</br>
+
+## BIOS/UEFI CONFIGURATION
+
+**Disable**
+
+- 🚀	Fast Boot > Feature in BIOS that `reduces` your computer boot time.
+- 🚀	Secure Boot > Secure boot is a `security standard` developed by members of the PC industry
+- 🚀	Serial/COM Port > Serial port is a `serial communication interface`
+- 🚀	Parallel Port > An interface allowing a personal computer (PC) to `transmit` or `receive` data down multiple bundled cables to a peripheral device such as a printer
+- 🚀	Intel® Virtualization Technology (VT-d) > Allows user to `direct passthrough of devices`. This option can be enabled if you set `DisableIoMapper` to `YES`
+- 🚀	Compatibility Support Module (CSM) > Compatibility Support Module
+- 🚀	Thunderbolt > New technology that supports `high-resolution displays` and `high-performance data` through one `single port`. For initial install, as Thunderbolt can cause issues if not setup correctly
+- 🚀	Intel® Software Guard Extensions (SGX) > A set of `security-related instruction codes` that are built into some Intel® central processing units (CPUs)
+- 🚀	Intel® Platform Trust (TPM) > Trusted Platform Module, `improves the security` of your PC by securely creating and storing cryptographic keys. (`Linux` and `Windows 10`.  Proper `dual-boot` with `Windows 11` require TPM to be enable. **Refer:** [InsanelyMac Discussions](https://www.insanelymac.com/forum/topic/348202-how-to-opencore-070-071-differences/))
+- 🚀	Config Lock (CFG Lock) > Setting in your BIOS that allows for a `specific register` (in this case the MSR 0xE2) to be written to
+- 🚀	Intel® Rapid Storage Technology (RST) > Windows-based application that provides `improved performance` and `reliability` for computers that are equipped with `SATA` disks for desktop, mobile, and server platforms
+
+</br>
+
+**Enable**
+
+- 🚀	Intel® Virtualization Technology (VT-x) > An `actual hardware virtualisation assistance`.
+- 🚀	Above 4G decoding > When enabling Above4G, Resizable BAR Support may become an available on some Z490 and newer motherboards. Please ensure that `Booter -> Quirks -> ResizeAppleGpuBars` is set to `0` if this is enabled
+- 🚀	Hyper-Threading > An `Intel®` hardware innovation that allows multiple threads to run on each core, this means more work can be done in parallel
+- 🚀	Execute Disable Bit > An `Intel®` hardware-based security component.
+- 🚀	EHCI/XHCI Hand-off > USB functions are handled by the OS
+- 🚀	OS type > `Windows 8.1/10` UEFI Mode
+- 🚀	DVMT Pre > The `Intel® HD/UHD Graphics driver` for `Windows`. Please allocated (iGPU Memory) to `64MB` / `Auto`
+- 🚀	SATA Mode > Advanced Host Controller Interface or `AHCI`
 
 </br>
 
 ## TRIM
 
-📌	NVMe: `Kingston A2000 NVMe` trim support is working native. 
+**NVMe:** `Kingston A2000 NVMe` trim support is working **native**. 
 
 <img width="1239" alt="Screen_Shot_2022-04-30_at_10_45_05_AM" src="https://user-images.githubusercontent.com/72515939/166087551-e52f35db-1e52-47e9-8455-e70a81fdbf20.png">
 
-📌	SSD: `IOAHCIBlockStorage` patch for SSD to enable `Trim` support via `Kernel\Patch`. Refer [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_debug.plist).
+**SSD:** `IOAHCIBlockStorage` patch for SSD to enable `Trim` support via **Kernel\Patch**. Refer [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_debug.plist).
 
 ![Artboard_1](https://user-images.githubusercontent.com/72515939/166087859-0511b56c-82a5-4ce3-8dbc-7d876b2925be.png)
 
 </br>
 
-## IOREG
+## DEBUG
 
-📀	[iMac20,1-Hack](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/iMac20%2C1-Hack.ioreg)
-
-</br>
-
-## DEBUG LOG
-
-📀	[OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-2022-04-19-153310.txt)
+**Log**[OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-2022-04-19-153310.txt)
 
 </br>
 
-## UPDATING EFI USING OCTOOL
+## UPDATING
 
-📀	Watch [rusty-bits/octool](https://github.com/rusty-bits/octool) guide via [Youtube](https://www.youtube.com/watch?v=5KNzD08Hkxs&t=4s)
+**OCTool**Watch [rusty-bits/octool](https://github.com/rusty-bits/octool) guide via [Youtube](https://www.youtube.com/watch?v=5KNzD08Hkxs&t=4s)
 
 </br>
 
 ## FINAL RESULTS
 
-<p align="center">
-<img width="2560" alt="Screen Shot 2022-04-30 at 12 37 23 AM" src="https://user-images.githubusercontent.com/72515939/165986968-f6debb0f-8b5b-474b-850f-972afcc78621.png">
-</div>
+<p align="center"><img width="2560" alt="Screen Shot 2022-04-30 at 12 37 23 AM" src="https://user-images.githubusercontent.com/72515939/165986968-f6debb0f-8b5b-474b-850f-972afcc78621.png"></div>
 
-🎪	Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/Space.jpeg/file)
+## Others
+
+Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/Space.jpeg/file)
 
 </br>
 
 ## ACKNOWLEGEMENT
 
-📌	I would like to thanks all folks in Hackintosh Community especially:
+I would like to thanks all folks in Hackintosh Community especially:
 
 - 💠	[Dortania](https://dortania.github.io/OpenCore-Install-Guide/) 😍 a great guide
 - 💠	[acidanthera](https://github.com/acidanthera) 😊 [OpenCore](https://github.com/acidanthera/OpenCorePkg) Boot-loader and powerful ACPI compiler, [MaciASL](https://github.com/acidanthera/MaciASL)
