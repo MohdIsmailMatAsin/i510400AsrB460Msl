@@ -532,7 +532,7 @@ Below are the base OpenCore files and folders used for this project:
 
 **IQSV Test** Checkout this [link](https://youtu.be/dd3SwAZ3S_w)
 
-**Remark:**<div align="center">All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki patch only applicable via Catalina and below.</div>
+**Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki patch only applicable via Catalina and below.
 	
 </br>	
 
