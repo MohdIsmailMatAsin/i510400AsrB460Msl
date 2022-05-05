@@ -493,7 +493,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-**device-id**<div align="justify">To get the proper main card platform as `headless` injection, `device-id` is required to get the device name. On `Intel 10th Gen` processor, it is not necessary, but sometimes this patch may fix certain IGPU issues. As an example, find **Activity Monitor > Window > GPU History** or **Activity Monitor > GPU** extra tab, IGPU will display as **Intel® KBL Unknown**. Ckeckout [Issues #1905](https://github.com/acidanthera/bugtracker/issues/1905). To proper rename, use **Hackintool** as a guide by finding the appropriate **device-id**, not in "mobile" mode (Mobile = No). In this case, GPU Hexadecimal "device-id" "0x3E9B8086" which is equal to 4 byte data hex swapped "9B3E0000" is injected via "config.plist" in IGPU "DeviceProperties" section. Below is an example:</div>
+**device-id**<div align="justify">To get the proper main card platform as `headless` injection, `device-id` is required to get the device name. On `Intel 10th Gen` processor, it is not necessary, but sometimes this patch may fix certain IGPU issues. As an example, find **Activity Monitor > Window > GPU History** or **Activity Monitor > GPU** extra tab, IGPU will display as **Intel® KBL Unknown**. Checkout [Issues #1905](https://github.com/acidanthera/bugtracker/issues/1905). To proper rename, use **Hackintool** as a guide by finding the appropriate **device-id**, not in "mobile" mode (Mobile = No). In this case, GPU Hexadecimal "device-id" "0x3E9B8086" which is equal to 4 byte data hex swapped "9B3E0000" is injected via "config.plist" in IGPU "DeviceProperties" section. Below is an example:</div>
 
 - 🚀	0x3E9B8086 = 9B3E8086
 - 🚀	9B3E8086 = 9B3E0000 (8086 to 0000)
