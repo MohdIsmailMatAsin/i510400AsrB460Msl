@@ -240,7 +240,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-**Patch Applied**<div align="justify">Thanks to CorpNewt cross platform SSDTTime hotpatch tool. In this project, various SSDT's has been merged into one (i.e., SSDT-B460M-SL.dsl). With several other sources, additional code is injected to reduce the kext workload. As example, GFX0 to an IGPU rename which handled by Whatevergreen.kext.</div>
+**Patch Applied**<div align="justify">Thanks to CorpNewt cross platform SSDTTime hotpatch tool. In this project, various SSDT's has been merged into one (i.e., [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)). With several other sources, additional code is injected to reduce the kext workload. As example, GFX0 to an IGPU rename which handled by Whatevergreen.kext.</div>
 
 | Device | Information                                                  |
 | ------ | ------------------------------------------------------------ |
@@ -266,9 +266,7 @@ Below are the base OpenCore files and folders used for this project:
 | SATA   | Serial ATA Device. Rename `SATA` to `SAT0`                   |
 | TSUB/THSS   | Known as `Thermal Subsystem`. This device is renamed due to no identical/compatible data using `ioreg`. Rename `pci8086,a3b1` to `TSUB/THSS`. **Patch:** Compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, identical to `CML` device `pci8086,a3a1`. Patch can be added either on `PPMC` or `TSUB/THSS`. `Both` is possible via testing. Remain only one `AppleIntelPCHPMC` patch. Via `PPMC` is better. By default, `TSUB/THSS` is removed via my `config.plist` |
 | USBX   | USB `Power Properties` for Skylake and newer motherboard generation |
-| XHC    | Board `Comet Lake PCH-V USB Controller` device               |
-
-**Refer:**OpenCore [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)
+| XHC    | Board `Comet Lake PCH-V USB Controller` device |
 
 <p align="center"><img width="1239" alt="Screen Shot 2022-04-30 at 10 31 53 AM" src="https://user-images.githubusercontent.com/72515939/166087058-3f4572be-a047-41bd-859a-5da51220af26.png"></div>
 
