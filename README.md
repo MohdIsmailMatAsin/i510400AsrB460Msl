@@ -342,7 +342,7 @@ So, it should be...
 
 ## Quirks Check
 
-**Read and Settings**<div align="justify">Quirks is based on processor codename. Refer to OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error that occurs in config.plist is your own responsibility. Manual setup is encouraged. Please make a backup before using it. While the quirks are set by processor code name, please read [OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html) for recommendations. Use [ProperTree](https://github.com/corpnewt/ProperTree) or [Xplist](https://github.com/ic005k/Xplist) to manually edit quirks settings via config.plist. There is an easy way by using [OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools). However, it is not recommended and may break the .plist.
+**Read and Settings**<div align="justify">Quirks is depending on processor type (codename). Different type has different settings. Refer to OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error that occurs in config.plist is your own responsibility. Manual setup is encouraged. Please make a backup before using it. While the quirks are set by processor code name, please read [OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html) for recommendations. Use [ProperTree](https://github.com/corpnewt/ProperTree) or [Xplist](https://github.com/ic005k/Xplist) to manually edit quirks settings via config.plist. There is an easy way by using [OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools). However, it is not recommended and may break the .plist.
 
 </br>
 
