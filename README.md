@@ -130,7 +130,7 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 Below are the base OpenCore files and folders used for this project:
 
-![EFI Tree](https://user-images.githubusercontent.com/72515939/167190845-1e9ef68a-6660-4d5a-9e92-aac763ec7c0e.png)
+![EFI Tree](https://user-images.githubusercontent.com/72515939/167191784-0c675d0d-2ea3-432b-af3a-eab1b20f7767.png)
 
 **Remark:** For the [debugging](https://economictimes.indiatimes.com/definition/debugging) process, it is best not to use [OpenCanopy.efi](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html).
 
