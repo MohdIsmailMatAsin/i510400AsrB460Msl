@@ -6,7 +6,7 @@
 
 </br>
 
-## HARDWARE & DEVICES
+## Hardware and Device
 
 | Info      | Details                          | Info        | Details                                       |
 | --------- | -------------------------------- | ----------- | --------------------------------------------- |
@@ -21,7 +21,7 @@
 
 </br>
 
-## APFS CHANGES
+## APFS Changes
 
 | MacOS    | Mindate  | MinVersion       | SetApfsTrimTimeout | SecureBootModel        |
 | -------- | -------- | ---------------- | ------------------ | ---------------------- |
@@ -33,7 +33,7 @@
 
 </br>
 
-## INTRODUCTION
+## BIOS
 
 **Legacy BIOS**<div align="justify">Legacy Boot refers to the boot process used by the BIOS firmware to initialize hardware devices. The Legacy boot contains a selection of installed devices that get initialized as the computer performs the POST test during the boot process. The legacy boot will check for all connected devices for the Master Boot Record (MBR), usually in the first sector of a disk. When it can’t find a bootloader in the devices, Legacy switches to the next device in the list and keeps repeating this process until it finds a boot-loader, or if not, returns an error.</div>
 
@@ -50,17 +50,18 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 </br>
 
-**UEFI vs Legacy**
+**Legacy vs Modern**
 
-| UEFI BOOT MODE                                                                                                                                                         | LEGACY BOOT MODE                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| UEFI provides a better User interface                                                                                                                                  | Legacy Boot mode is traditional and very basic                                    |
-| It uses the GPT partitioning scheme                                                                                                                                    | Legacy uses the MBR partition scheme                                              |
-| UEFI provides faster boot time                                                                                                                                         | It is slower compared to UEFI                                                     |
-| Since UEFI uses the GPT partitioning scheme, it can support up to 9 zettabytes of storage devices.                                                                     | The MBR portioning scheme used by Legacy only supports up to 2 TB storage devices |
-| UEFI runs in 32-bit and 64-bit, allowing support for mouse and touch navigation                                                                                        | Legacy runs in 16-bit mode that only supports keyboard navigation                 |
-| It allows a secure boot that prevents the loading of unauthorized applications. It may also hinder dual boot because it treats operating systems (OS) as applications. | Legacy runs in 16-bit mode that only supports keyboard navigation                 |
-| It has an easier update process                                                                                                                                        | It is more complex compared to UEFI                                               |
+| LEGACY                                                                                                                              | MODERN (UEFI)                                                                                                                                                          |
+|-------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Legacy Boot mode is traditional and very basic                                                                                      | UEFI provides a better User interface                                                                                                                                  |
+| Legacy uses the MBR partition scheme                                                                                                | It uses the GPT partitioning scheme                                                                                                                                    |
+| It is slower compared to UEFI                                                                                                       | UEFI provides faster boot time                                                                                                                                         |
+| The MBR portioning scheme used by Legacy only supports up to 2 TB storage devices                                                   | Since UEFI uses the GPT partitioning scheme, it can support up to 9 zettabytes of storage devices.                                                                     |
+| Legacy runs in 16-bit mode that only supports keyboard navigation                                                                   | UEFI runs in 32-bit and 64-bit, allowing support for mouse and touch navigation                                                                                        |
+| It does not provide a secure boot method, which allows for the loading 
+of unauthorized applications, making dual-booting possible. | It allows a secure boot that prevents the loading of unauthorized applications. It may also hinder dual boot because it treats operating systems (OS) as applications. |
+| It is more complex compared to UEFI.                                                                                                | It has an easier update process.                                                                                                                                       |
 
 </br>
 
@@ -74,7 +75,7 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 </br>
 
-## PARTITIONING
+## Partitioning
 
 **Windows**<p align="center"><img width="827" alt="Screenshot 2022-04-03 133920" src="https://user-images.githubusercontent.com/72515939/161430959-f530d4a2-812f-43ec-9b78-6b54522f3a50.png"></div>
 
@@ -88,7 +89,7 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 </br>
 
-## OPENCORE PACKAGE & PREPARATION
+## OpenCore Package & Preparation
 
 **What is OpenCore**<div align="justify">Referred to as a package of boot-loader and also a [chain-loading](https://en.wikipedia.org/wiki/Chain_loadings) software. It is a complex software program, used to call the operating systems MacOS, Linux, and Windows. In addition, it also has the ability to inject new data into MacOS operating systems such as SMBIOS, Advanced Configuration Table and Power Interface (ACPI), and Kernel Extension (Kext). The package contains additional UEFI support common libraries shared by other projects in [Acidanthera](https://github.com/acidanthera). The primary purpose of the library set is to provide supplemental functionality for Apple-specific UEFI drivers. Key features:</div>
 
@@ -242,7 +243,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-### DRIVERS
+### Drivers
 
 **Basic Drivers**<div align="justify">Only 2 basic driver types are needed here using the debug package. OpenRuntime.efi and HfsPlus.efi. Both files are essentially basic drivers to make this project work. Usage information is as follows:</div>
 
@@ -255,7 +256,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-### KEXT
+### Kext
 
 **Kernel Extensions**<div align="justify">Apple regularly introduces innovative solutions and improvements to macOS. However, not all improved tools can fully replace their predecessors. This is what happened with kernel extensions and their successors, System Extensions and DriverKit. Kernel extensions (kexts) let users or developers load code directly into the MacOS kernel. The table below contains some kexts in this project used to properly boot MacOS through OpenCore.</div>
 
@@ -282,7 +283,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-### OPENCORE.EFI
+### OpenCore.efi
 
 **Firmware Interface**<div align="justify">An Extensive Firmware Interface (.efi) file is a system file used by Intel-based computer systems and computer devices such as AppleTVs. It contains system-level data that executes between the operating system and the firmware. An OpenCore Extensible Firmware Interface files are used for staging firmware updates, booting operating systems, and running pre-boot programs. Normally this file is include with OpenCorePkg and it is compulsory </div>
 
@@ -290,7 +291,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-### RESOURCES
+### Resources
 
 **Audio, Font, Image & Label**<div align="justify">An OpenCore theme folder which is related to beauty treatment. These files and folders only work with the OpenCanopy.efi driver. For a more detailed guide, see [OpenCore Beauty treatment](https://github.com/dortania/OpenCore-Post-Install/blob/master/cosmetic/gui.md). This section can be skipped and can be done post-install. The package can be download [here](https://github.com/acidanthera/OcBinaryData).</div>
 
@@ -298,7 +299,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-### TOOLS
+### Tools
 
 **Auxiliary**<div align="justify">An additional auxiliary tool for OpenCore. Most of the tools are available in OpenCore packages. It is up to the user to figure out how to make the most of the tools provided. The tools are in .efi format. Here, CleanNvram.efi, which is a ResetNVRAM alternative bundled as a standalone tool, is used as an example. This tool will likely be used to remove any corruption of data in the NVRAM, whilst the resetnvram is used to wipe and clear (empty) the NVRAM. Other tools are designed according to a specific purpose. **Reminder:** Press spacebar on the boot menu to reveal CleanNvram.efi since it is set as an auxiliary.</div>
 
@@ -306,7 +307,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-### CONFIG.PLIST
+### Config.plist
 
 **Configuration**<div align="justify">A plist file is a settings file, also known as a properties file, used by MacOS applications. It contains properties and configuration settings for various programs. Plist files are formatted in **XML** and **based on Apple's Core Foundation DTD**. OpenCore/Clover benefit **.plist** to inject MacOS preference, also an information for the application that it holds the preference settings. Other than that, it's a markup language that shares a lot of similarities with HTML. This means you've got a few different data types available to you, and most of the structure revolves around keeping track of opening and closing tags. Besides, a plist is often used to correct problems that a user may be having with an application or devices.</div>
 
@@ -329,7 +330,7 @@ Below are the base OpenCore files and folders used for this project:
 
 # OTHERS: ADDITIONAL INFO
 
-## QUIRKS CHECK
+## Quirks Check
 
 **Read and Settings**<div align="justify">Quirks is based on processor codename. Refer to OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error that occurs in config.plist is your own responsibility. Manual setup is encouraged. Please make a backup before using it. While the quirks are set by processor code name, please read [OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html) for recommendations. Use [ProperTree](https://github.com/corpnewt/ProperTree) or [Xplist](https://github.com/ic005k/Xplist) to manually edit quirks settings via config.plist. There is an easy way by using [OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools). However, it is not recommended and may break the .plist.
 
@@ -385,7 +386,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-## ADDITIONAL FRAMEBUFFER FOR AMD NAVI GPU's
+## Additional Framebuffer for AMD Navi GPU's
 
 **Framebuffers** available in **AMDRadeonX6000Framebuffer.kext >> Contents >> Info.plist**.
 
@@ -447,7 +448,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-## UHD GRAPHICS 630 HEADLESS MODE
+## UHD Graphics 630 (Headless)
 
 **AAPL,ig-platform-id**<div align="justify">This is an important part. The keyword for the best headless settings for desktop is **mobile**. For desktop **(iMac SMBIOS)**, the framebuffer setting for the **mobile** variant is not needed. Open **Hackintool > Patch > Platform ID** option. Find any setting which is not related to the mobile **(Mobile = No)**. This guide is to find a proper **AAPL,ig-platform-id** for Desktop. In this case, **0x3E910003** in hexadecimal, which is equal to **0300913E**, 4 byte data hex swapped. Below is an example:
 
@@ -502,7 +503,7 @@ Below are the base OpenCore files and folders used for this project:
 **Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki patch only applicable via Catalina and below.
 </br>
 
-## POWER ISSUES
+## Power
 
 **Reset via Hackintool**<div align="justify">If there is a problem with power, use [Hackintool](https://github.com/headkaze/Hackintool) to reset. The picture below shows how to do this:</div>
 
@@ -510,7 +511,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-## BIOS/UEFI CONFIGURATION
+## BIOS/UEFI Configuration
 
 **Disable**
 
@@ -541,7 +542,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-## TRIM
+## Trim Support
 
 **NVMe:** Kingston A2000 NVMe trim support is working **native**.
 
@@ -553,25 +554,36 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-## DEBUG
+## Debugging
 
 **Log**<div align="justify">[OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-2022-04-19-153310.txt)</div>
 
 </br>
 
-## UPDATING
+## Update
 
 **OCTool**<div align="justify"> Watch [rusty-bits/octool](https://github.com/rusty-bits/octool) guide via [Youtube](https://www.youtube.com/watch?v=5KNzD08Hkxs&t=4s)</div>
 
 </br>
 
-## FINAL RESULTS
+## Final Results
 
 <p align="center"><img width="2560" alt="Screen Shot 2022-04-30 at 12 37 23 AM" src="https://user-images.githubusercontent.com/72515939/165986968-f6debb0f-8b5b-474b-850f-972afcc78621.png"></div>
 
 ## Others
 
 Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/Space.jpeg/file)
+
+</br>
+
+## Changelog
+
+Current Version = OpenCore v0.8.0
+
+- Improve language so that information is easy to understand
+- Additional information related to Navi GPU patch
+- Latest picture
+- Specific patch for ACPI patch
 
 </br>
 
