@@ -196,10 +196,13 @@ Below are the base OpenCore files and folders used for this project:
 
 **Bypass ACPI Injection On Other OS**<div align="justify">Most of these issues may affect dual booting (Windows + MacOS). Luckily, there are settings via config.plist to prevent this issue, but this is only experimental. Do not assume these settings will work 💯 on your machine. Certain users report the settings are not working, but some report the settings work as well. These settings are actually used only for Dell machines. But it is worth a try. Settings are explained via the table below.</div>
 
-| Path         | Path       | Path             | Mode   |
-| ------------ | ---------- | ---------------- | ------ |
-| PlatformInfo | SerialInfo | UpdateSMBIOSMode | Custom |
-| Kernel       | Quirks     | CustomSMBIOSGuid | True   |
+| **SETTINGS**     | **Mode** | **DETAIL**                                                                                                                                                                                                                                                                                                                               |
+|------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| UpdateSMBIOSMode | Create   | Replace the tables with newly allocated EfiReservedMemoryType, use Custom on Dell laptops requiring CustomSMBIOSGuid quirk Setting to Custom with CustomSMBIOSGuid quirk enabled can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk |
+| CustomSMBIOSGuid | NO       | Performs GUID patching for UpdateSMBIOSMode set to Custom. Usually relevant for Dell laptops. Enabling this quirk with UpdateSMBIOSMode Custom mode can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk                           |                              |
+
+- UpdateSMBIOSMode = Custom
+- CustomSMBIOSGuid = Custom
 
 **Solution**<div align="justify">SSDT patch is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. SSDT patch is minor modification and not affect the actual hardware performance. Using openCore debug, there are several other tables that work with OpenCore. However, modifications to other tables are not necessary. The purpose of the SSDT is designed as described in this section. Be reminded, only SSDT can be modified. The rest is no.</div>
 
