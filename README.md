@@ -205,7 +205,7 @@ Below are the base OpenCore files and folders used for this project:
 So, it should be...
 
 - UpdateSMBIOSMode = **Custom**
-- CustomSMBIOSGuid = **Custom**
+- CustomSMBIOSGuid = **Yes**
 
 </br>
 
