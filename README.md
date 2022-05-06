@@ -12,9 +12,9 @@
 | --------- | -------------------------------- | ----------- | --------------------------------------------- |
 | OS 1      | Microsoft Windows 11 Pro         | Audio 1     | 7.1 CH HD Audio (Realtek ALC1200 Audio Codec) |
 | OS 2      | MacOS Monterey 12.3.1            | Audio 2     | U-Phoria UM2 USB Audio Device                 |
-| Processor | Intel® Core(TM) i5-10400         | Motherboard | ASRock (B460M Steel Legend)                   |
+| Processor | Intel Core(TM) i5-10400         | Motherboard | ASRock (B460M Steel Legend)                   |
 | GFX0      | Radeon RX 5500 XT 4GB            | PCI 1       | BCM94360 WiFi & Bluetooth                     |
-| IGPU      | Intel® UHD Graphics 630 1GB      | PCI 2       | VIA USB 3.0 eXtensible Host Controller        |
+| IGPU      | Intel UHD Graphics 630 1GB      | PCI 2       | VIA USB 3.0 eXtensible Host Controller        |
 | Memory    | PNY XLR8 Gaming X Memory 3200MHz | Storage 1   | 500GB Kingston A2000 NVMe                     |
 | Monitor   | Samsung U28E590 4K               | Storage 2   | 500GB Kingston A2000 NVMe                     |
 | SMBIOS    | iMac20,1                         | Board ID    | Mac-CFF7D910A743CAAF                          |
@@ -92,37 +92,37 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 **What is OpenCore**<div align="justify">Referred to as a package of boot-loader and also a [chain-loading](https://en.wikipedia.org/wiki/Chain_loadings) software. It is a complex software program, used to call the operating systems MacOS, Linux, and Windows. In addition, it also has the ability to inject new data into MacOS operating systems such as SMBIOS, Advanced Configuration Table and Power Interface (ACPI), and Kernel Extension (Kext). The package contains additional UEFI support common libraries shared by other projects in [Acidanthera](https://github.com/acidanthera). The primary purpose of the library set is to provide supplemental functionality for Apple-specific UEFI drivers. Key features:</div>
 
-- 🚀 Apple disk image loading support
-- 🚀 Apple keyboard input aggregation
-- 🚀 Apple PE image signature verification
-- 🚀 Apple UEFI secure boot supplemental code
-- 🚀 Audio management with screen reading support
-- 🚀 Basic ACPI and SMBIOS manipulation
-- 🚀 CPU information gathering with timer support
-- 🚀 Cryptographic primitives (SHA-256, RSA, etc.)
-- 🚀 Decompression primitives (zlib, lzss, lzvn, etc.)
-- 🚀 Helper code for ACPI reads and modifications
-- 🚀 Higher level abstractions for files, strings, UEFI variables
-- 🚀 Overflow checking arithmetics
-- 🚀 PE image loading with no UEFI Secure Boot conflict
-- 🚀 Plist configuration format parsing
-- 🚀 PNG image manipulation
-- 🚀 Text output and graphics output implementations
-- 🚀 XNU kernel driver injection and patch engine
+- Apple disk image loading support
+- Apple keyboard input aggregation
+- Apple PE image signature verification
+- Apple UEFI secure boot supplemental code
+- Audio management with screen reading support
+- Basic ACPI and SMBIOS manipulation
+- CPU information gathering with timer support
+- Cryptographic primitives (SHA-256, RSA, etc.)
+- Decompression primitives (zlib, lzss, lzvn, etc.)
+- Helper code for ACPI reads and modifications
+- Higher level abstractions for files, strings, UEFI variables
+- Overflow checking arithmetics
+- PE image loading with no UEFI Secure Boot conflict
+- Plist configuration format parsing
+- PNG image manipulation
+- Text output and graphics output implementations
+- XNU kernel driver injection and patch engine
 
 **Package**
 
-- 🚀 [OpenCore v0.8.0 - Debug](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-DEBUG.zip)
-- 🚀 [OpenCore v0.8.0 - Release](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-RELEASE.zip)
+- [OpenCore v0.8.0 - Debug](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-DEBUG.zip)
+- [OpenCore v0.8.0 - Release](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-RELEASE.zip)
 
 **Change Log:**
 
-- 🚀 Added support for early log preservation
-- 🚀 Switched to Python 3 in scripts (use python /path/to/script to force Python 2)
-- 🚀 Added ForceAquantiaEthernet for Aquantia AQtion AQC-107s based 10GbE network cards support, thx @Mieze and @Shikumo
-- 🚀 Updated builtin firmware versions for SMBIOS and the rest
-- 🚀 Added Misc -> Serial section to customise serial port properties
-- 🚀 Added CustomPciSerialDevice quirk for XNU to correctly recognise customised external serial devices
+- Added support for early log preservation
+- Switched to Python 3 in scripts (use python /path/to/script to force Python 2)
+- Added ForceAquantiaEthernet for Aquantia AQtion AQC-107s based 10GbE network cards support, thx @Mieze and @Shikumo
+- Updated builtin firmware versions for SMBIOS and the rest
+- Added Misc -> Serial section to customise serial port properties
+- Added CustomPciSerialDevice quirk for XNU to correctly recognise customised external serial devices
 
 </br>
 
@@ -136,7 +136,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-## EFI
+### EFI
 
 **Boot**<div align="justify">Fallback boot-loader path. This is the only boot-loader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings. Booting is a term used to refer to the initial loading process when we turn on the computer. BOOTx64.efi is a special file for the boot process that aims to link the boot-loader checked by the BIOS before the computer can be used. The boot programme and OpenCore.efi will be searched by the BIOS for UEFI on 64-bit X86 systems without any existing NVRAM boot settings.</div>
 
@@ -148,7 +148,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-## ACPI
+### ACPI
 
 **Refer:** [ACPI Data Tables and Table Definition Language](https://uefi.org/specs/ACPI/6.4/21_ACPI_Data_Tables_and_Table_Def_Language/ACPI_Data_Tables.html#acpi-data-tables-and-table-definition-language)
 
@@ -217,8 +217,8 @@ Below are the base OpenCore files and folders used for this project:
 | GFX0      | Display Output from Dedicated Graphic Processor Unit / DGPU. \_SUN is added to get proper PCI Slot Number                                                                                                                                                                                                                                                                                                                           |
 | HDAU      | Audio Output device through HDMI, called as High Definition Audio. \_SUN is added to get proper PCI Slot Number                                                                                                                                                                                                                                                                                                                     |
 | HDEF      | Audio device, known as High Definition Audio System / HDAS in actual DSDT, renamed with HDEF                                                                                                                                                                                                                                                                                                                                        |
-| IGPU      | An Intel® Intergrated Graphics Unit device. GFX0 to IGPU rename                                                                                                                                                                                                                                                                                                                                                                     |
-| IMEI      | An Intel® Management Engine Interface. HECI to IMEI rename                                                                                                                                                                                                                                                                                                                                                                          |
+| IGPU      | An Intel Intergrated Graphics Unit device. GFX0 to IGPU rename                                                                                                                                                                                                                                                                                                                                                                     |
+| IMEI      | An Intel Management Engine Interface. HECI to IMEI rename                                                                                                                                                                                                                                                                                                                                                                          |
 | LPCB      | Path of Low Pin Count Bus which is corresponding to Embed Controller/EC                                                                                                                                                                                                                                                                                                                                                             |
 | PLUG      | To allow the kernel's XCPM / XNU's CPU Power Management to manage CPU's power management                                                                                                                                                                                                                                                                                                                                            |
 | PPMC      | Classed as Memory Controller in Comet Lake (CML) platform. Patch: Compatible AppleIntelPCHPMC support pci8086,a2a1, identical to CML device pci8086,a3a1                                                                                                                                                                                                                                                                            |
@@ -236,13 +236,13 @@ Below are the base OpenCore files and folders used for this project:
 
 **Tools used:**
 
-- 🚀 [SSDTTime](https://github.com/corpnewt/SSDTTime) > Cross Platform (Mac/Linux/Windows)
-- 🚀 [MaciASL](https://github.com/acidanthera/MaciASL) > MacOS
-- 🚀 [Xiasl](https://github.com/ic005k/Xiasl) > Cross Platform (Mac/Linux/Windows)
+- [SSDTTime](https://github.com/corpnewt/SSDTTime) > Cross Platform (Mac/Linux/Windows)
+- [MaciASL](https://github.com/acidanthera/MaciASL) > MacOS
+- [Xiasl](https://github.com/ic005k/Xiasl) > Cross Platform (Mac/Linux/Windows)
 
 </br>
 
-## DRIVERS
+### DRIVERS
 
 **Basic Drivers**<div align="justify">Only 2 basic driver types are needed here using the debug package. OpenRuntime.efi and HfsPlus.efi. Both files are essentially basic drivers to make this project work. Usage information is as follows:</div>
 
@@ -255,7 +255,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-## KEXT
+### KEXT
 
 **Kernel Extensions**<div align="justify">Apple regularly introduces innovative solutions and improvements to macOS. However, not all improved tools can fully replace their predecessors. This is what happened with kernel extensions and their successors, System Extensions and DriverKit. Kernel extensions (kexts) let users or developers load code directly into the MacOS kernel. The table below contains some kexts in this project used to properly boot MacOS through OpenCore.</div>
 
@@ -264,7 +264,7 @@ Below are the base OpenCore files and folders used for this project:
 | Lilu                | Arbitrary kext and process patching on MacOS                                                                                              |
 | VirtualSMC          | System Management Controller (SMC) emulator layer                                                                                         |
 | AppleALC            | Enabling native MacOS HD audio for unofficial codecs                                                                                      |
-| Whatevergreen       | Various patches necessary for certain ATI/AMD/Intel®/Nvidia GPUs                                                                          |
+| Whatevergreen       | Various patches necessary for certain ATI/AMD/Intel/Nvidia GPUs                                                                          |
 | SMCProcessor        | Additional support for VirtualSMC. Used for monitoring CPU temperature                                                                    |
 | SMCSuperIO          | Additional support for VirtualSMC. Used for monitoring `FAN` speed                                                                        |
 | SMCRadeonGPU        | Based on FakeSMCs, RadeonMonitor to provide GPU temperature to a dedicated gadget                                                         |
@@ -282,7 +282,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-## OPENCORE.EFI
+### OPENCORE.EFI
 
 **Firmware Interface**<div align="justify">An Extensive Firmware Interface (.efi) file is a system file used by Intel-based computer systems and computer devices such as AppleTVs. It contains system-level data that executes between the operating system and the firmware. An OpenCore Extensible Firmware Interface files are used for staging firmware updates, booting operating systems, and running pre-boot programs. Normally this file is include with OpenCorePkg and it is compulsory </div>
 
@@ -290,7 +290,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-## RESOURCES
+### RESOURCES
 
 **Audio, Font, Image & Label**<div align="justify">An OpenCore theme folder which is related to beauty treatment. These files and folders only work with the OpenCanopy.efi driver. For a more detailed guide, see [OpenCore Beauty treatment](https://github.com/dortania/OpenCore-Post-Install/blob/master/cosmetic/gui.md). This section can be skipped and can be done post-install. The package can be download [here](https://github.com/acidanthera/OcBinaryData).</div>
 
@@ -298,7 +298,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-## TOOLS
+### TOOLS
 
 **Auxiliary**<div align="justify">An additional auxiliary tool for OpenCore. Most of the tools are available in OpenCore packages. It is up to the user to figure out how to make the most of the tools provided. The tools are in .efi format. Here, CleanNvram.efi, which is a ResetNVRAM alternative bundled as a standalone tool, is used as an example. This tool will likely be used to remove any corruption of data in the NVRAM, whilst the resetnvram is used to wipe and clear (empty) the NVRAM. Other tools are designed according to a specific purpose. **Reminder:** Press spacebar on the boot menu to reveal CleanNvram.efi since it is set as an auxiliary.</div>
 
@@ -306,7 +306,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-## CONFIG.PLIST
+### CONFIG.PLIST
 
 **Configuration**<div align="justify">A plist file is a settings file, also known as a properties file, used by MacOS applications. It contains properties and configuration settings for various programs. Plist files are formatted in **XML** and **based on Apple's Core Foundation DTD**. OpenCore/Clover benefit **.plist** to inject MacOS preference, also an information for the application that it holds the preference settings. Other than that, it's a markup language that shares a lot of similarities with HTML. This means you've got a few different data types available to you, and most of the structure revolves around keeping track of opening and closing tags. Besides, a plist is often used to correct problems that a user may be having with an application or devices.</div>
 
@@ -314,16 +314,16 @@ Below are the base OpenCore files and folders used for this project:
 
 **Example:** Below is an example of config.plist:
 
-- 🚀 OpenCore [Monterey/BigSur-Debug](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_debug.plist)
-- 🚀 OpenCore [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_release.plist)
-- 🚀 Clover [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_clover.plist)
+- OpenCore [Monterey/BigSur-Debug](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_debug.plist)
+- OpenCore [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_release.plist)
+- Clover [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_clover.plist)
 
 </br>
 
 **Tools for editing:**
 
-- 🚀 [ProperTree](https://github.com/corpnewt/ProperTree) > Cross Platform (Mac/Linux/Windows)
-- 🚀 [Xplist](https://github.com/ic005k/Xplist) > Cross Platform (Mac/Linux/Windows)
+- [ProperTree](https://github.com/corpnewt/ProperTree) > Cross Platform (Mac/Linux/Windows)
+- [Xplist](https://github.com/ic005k/Xplist) > Cross Platform (Mac/Linux/Windows)
 
 </br>
 
@@ -346,15 +346,15 @@ Below are the base OpenCore files and folders used for this project:
 
 **Booter\Quirks**
 
-- 🚀 AvoidRuntimeDefrag
-- 🚀 DevirtualiseMmio
-- 🚀 EnableSafeModeSlide
-- 🚀 ProtectUefiServices
-- 🚀 ProviceCustomSlide
-- 🚀 RebuildAppleMemoryMap
-- 🚀 SyncRuntimePermissions
-- 🚀 ProvideMaxSlide = **0**
-- 🚀 ResizeAppleGpuBars = **-1**
+- AvoidRuntimeDefrag
+- DevirtualiseMmio
+- EnableSafeModeSlide
+- ProtectUefiServices
+- ProviceCustomSlide
+- RebuildAppleMemoryMap
+- SyncRuntimePermissions
+- ProvideMaxSlide = **0**
+- ResizeAppleGpuBars = **-1**
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 05 AM" src="https://user-images.githubusercontent.com/72515939/164505410-32911711-727d-40f9-9d2a-f542700b5dcc.png"></div>
 
@@ -362,12 +362,12 @@ Below are the base OpenCore files and folders used for this project:
 
 **Kernel\Quirks**
 
-- 🚀 CustomSMBIOSGuid
-- 🚀 DisableIoMapper
-- 🚀 DisableLinkeditJettison
-- 🚀 PanicNoKextDump
-- 🚀 PowerTimeoutKernelPanic
-- 🚀 SetApfsTimeout = **0**
+- CustomSMBIOSGuid
+- DisableIoMapper
+- DisableLinkeditJettison
+- PanicNoKextDump
+- PowerTimeoutKernelPanic
+- SetApfsTimeout = **0**
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 48 AM" src="https://user-images.githubusercontent.com/72515939/164505506-bc2e3705-8225-407d-a486-0b232f4a5fed.png"></div>
 
@@ -375,11 +375,11 @@ Below are the base OpenCore files and folders used for this project:
 
 **UEFI\Quirks**
 
-- 🚀 EnableVectorAcceleration
-- 🚀 RequestBootVarRouting
-- 🚀 ExitBootServiceDelay = **0**
-- 🚀 ResizeGPUBars = **-1**
-- 🚀 TscSyncTimeout = **0**
+- EnableVectorAcceleration
+- RequestBootVarRouting
+- ExitBootServiceDelay = **0**
+- ResizeGPUBars = **-1**
+- TscSyncTimeout = **0**
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 26 AM" src="https://user-images.githubusercontent.com/72515939/164505602-4cf5069b-bdf2-4017-8a54-336f82464ad4.png"></div>
 
@@ -391,33 +391,33 @@ Below are the base OpenCore files and folders used for this project:
 
 **5700 - Navi 10**
 
-- 🚀 AMDRadeonNavi10Controller
-- 🚀 device-id: 0x73101002 0x73121002 0x73181002 0x73191002 0x731A1002 0x731B1002 0x731F1002 0x73BF1002
-- 🚀 framebuffer: ATY,Adder / ATY,Ikaheka
+- AMDRadeonNavi10Controller
+- device-id: 0x73101002 0x73121002 0x73181002 0x73191002 0x731A1002 0x731B1002 0x731F1002 0x73BF1002
+- framebuffer: ATY,Adder / ATY,Ikaheka
 
 **5600 - Navi 12**
 
-- 🚀 AMDRadeonNavi12Controller
-- 🚀 device-id: 0x73601002 0x73621002
-- 🚀 framebuffer: ATY,Sunbeam
+- AMDRadeonNavi12Controller
+- device-id: 0x73601002 0x73621002
+- framebuffer: ATY,Sunbeam
 
 **5500 - Navi 14**
 
-- 🚀 AMDRadeonNavi14Controller
-- 🚀 device-id: 0x73401002 0x73411002 0x73431002 0x73471002 0x734F1002
-- 🚀 framebuffer: ATY,Python / ATY,Keelback / ATY,Boa
+- AMDRadeonNavi14Controller
+- device-id: 0x73401002 0x73411002 0x73431002 0x73471002 0x734F1002
+- framebuffer: ATY,Python / ATY,Keelback / ATY,Boa
 
 **6800 and 6900 - Navi 21**
 
-- 🚀 AMDRadeonNavi21Controller
-- 🚀 device-id: 0x73A01002 0x73A21002 0x73A31002 0x73AB1002 0x73AE1002 0x73AF1002 0x73BF1002
-- 🚀 framebuffer: ATY,Belknap / ATY,Carswell / ATY,Deepbay
+- AMDRadeonNavi21Controller
+- device-id: 0x73A01002 0x73A21002 0x73A31002 0x73AB1002 0x73AE1002 0x73AF1002 0x73BF1002
+- framebuffer: ATY,Belknap / ATY,Carswell / ATY,Deepbay
 
 **6600 - Navi 23**
 
-- 🚀 AMDRadeonNavi23Controller
-- 🚀 device-id: 0x73E31002 0x73FF1002 0x73E01002
-- 🚀 framebuffer: ATY,Henbury
+- AMDRadeonNavi23Controller
+- device-id: 0x73E31002 0x73FF1002 0x73E01002
+- framebuffer: ATY,Henbury
 
 </br>
 
@@ -453,18 +453,18 @@ Below are the base OpenCore files and folders used for this project:
 
 </div>
 
-- 🚀 0x3E910003 = 0300913E
-- 🚀 AAPL,ig-platform-id = 0300913E
+- 0x3E910003 = 0300913E
+- AAPL,ig-platform-id = 0300913E
 
 <p align="center"><img width="1176" alt="Screen_Shot_2022-05-02_at_5_10_03_PM" src="https://user-images.githubusercontent.com/72515939/166212509-9f300b98-66c5-43f0-abf9-e14dd5e610a2.png"></div>
 
 </br>
 
-**device-id**<div align="justify">To get the proper main card platform as `headless` injection, `device-id` is required to get the device name. On `Intel 10th Gen` processor, it is not necessary, but sometimes this patch may fix certain IGPU issues. As an example, find **Activity Monitor > Window > GPU History** or **Activity Monitor > GPU** extra tab, IGPU will display as **Intel® KBL Unknown**. Checkout [Issues #1905](https://github.com/acidanthera/bugtracker/issues/1905). To proper rename, use **Hackintool** as a guide by finding the appropriate **device-id**, not in mobile mode (Mobile = No). In this case, GPU Hexadecimal device-id 0x3E9B8086 which is equal to 4 byte data hex swapped 9B3E0000 is injected via config.plist in IGPU DeviceProperties section. Below is an example:</div>
+**device-id**<div align="justify">To get the proper main card platform as `headless` injection, `device-id` is required to get the device name. On `Intel 10th Gen` processor, it is not necessary, but sometimes this patch may fix certain IGPU issues. As an example, find **Activity Monitor > Window > GPU History** or **Activity Monitor > GPU** extra tab, IGPU will display as **Intel KBL Unknown**. Checkout [Issues #1905](https://github.com/acidanthera/bugtracker/issues/1905). To proper rename, use **Hackintool** as a guide by finding the appropriate **device-id**, not in mobile mode (Mobile = No). In this case, GPU Hexadecimal device-id 0x3E9B8086 which is equal to 4 byte data hex swapped 9B3E0000 is injected via config.plist in IGPU DeviceProperties section. Below is an example:</div>
 
-- 🚀 0x3E9B8086 = 9B3E8086
-- 🚀 9B3E8086 = 9B3E0000 (8086 to 0000)
-- 🚀 device-id = 9B3E0000
+- 0x3E9B8086 = 9B3E8086
+- 9B3E8086 = 9B3E0000 (8086 to 0000)
+- device-id = 9B3E0000
 
 <p align="center"><img width="1172" alt="Screen_Shot_2022-05-02_at_5_27_16_PM" src="https://user-images.githubusercontent.com/72515939/166213623-407d87dd-5368-4430-b8e0-5fc87eb97be1.png"></div>
 
@@ -472,16 +472,16 @@ Below are the base OpenCore files and folders used for this project:
 
 **Inject**<div align="justify">Other additional information to be inject:</div>
 
-- 🚀 DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = AAPL,ig-platform-id > data > 0300913E
-- 🚀 DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = AAPL,slot-name > string > Internal
-- 🚀 DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = device-id > data > 9B3E0000
-- 🚀 DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = igfxonln > data > 01000000
-- 🚀 DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = device_type > string > Display controller
-- 🚀 DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = enable-metal > data > 01000000
-- 🚀 DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = iommu-selection > data > 00000000
-- 🚀 DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = rps-control > data > 01000000
-- 🚀 DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = igfxfw > data > 02000000
-- 🚀 DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = hda-gfx > string > onboard-1
+- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = AAPL,ig-platform-id > data > 0300913E
+- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = AAPL,slot-name > string > Internal
+- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = device-id > data > 9B3E0000
+- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = igfxonln > data > 01000000
+- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = device_type > string > Display controller
+- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = enable-metal > data > 01000000
+- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = iommu-selection > data > 00000000
+- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = rps-control > data > 01000000
+- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = igfxfw > data > 02000000
+- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = hda-gfx > string > onboard-1
 
 **GPU Tab**<div align="justify">Now, new additional GPU tabs on the MacOS Activity Monitor is added. And, the result is....</div>
 
@@ -514,30 +514,30 @@ Below are the base OpenCore files and folders used for this project:
 
 **Disable**
 
-- 🚀 Fast Boot > Feature in BIOS that reduces your computer boot time.
-- 🚀 Secure Boot > Secure boot is a security standard developed by members of the PC industry
-- 🚀 Serial/COM Port > Serial port is a serial communication interface
-- 🚀 Parallel Port > An interface allowing a personal computer (PC) to transmit or receive data down multiple bundled cables to a peripheral device such as a printer
-- 🚀 Intel® Virtualization Technology (VT-d) > Allows user to direct passthrough of devices. This option can be enabled if you set DisableIoMapper to YES
-- 🚀 Compatibility Support Module (CSM) > Compatibility Support Module
-- 🚀 Thunderbolt > New technology that supports high-resolution displays and high-performance data through one single port. For initial install, as Thunderbolt can cause issues if not setup correctly
-- 🚀 Intel® Software Guard Extensions (SGX) > A set of security-related instruction codes that are built into some Intel® central processing units (CPUs)
-- 🚀 Intel® Platform Trust (TPM) > Trusted Platform Module, improves the security of your PC by securely creating and storing cryptographic keys. (Linux and Windows 10. Proper dual-boot with Windows 11 require TPM to be enable. **Refer:** [InsanelyMac Discussions](https://www.insanelymac.com/forum/topic/348202-how-to-opencore-070-071-differences/)
-- 🚀 Config Lock (CFG Lock) > Setting in your BIOS that allows for a specific register (in this case the MSR 0xE2) to be written to
-- 🚀 Intel® Rapid Storage Technology (RST) > Windows-based application that provides improved performance and reliability for computers that are equipped with SATA disks for desktop, mobile, and server platforms
+- Fast Boot > Feature in BIOS that reduces your computer boot time.
+- Secure Boot > Secure boot is a security standard developed by members of the PC industry
+- Serial/COM Port > Serial port is a serial communication interface
+- Parallel Port > An interface allowing a personal computer (PC) to transmit or receive data down multiple bundled cables to a peripheral device such as a printer
+- Intel Virtualization Technology (VT-d) > Allows user to direct passthrough of devices. This option can be enabled if you set DisableIoMapper to YES
+- Compatibility Support Module (CSM) > Compatibility Support Module
+- Thunderbolt > New technology that supports high-resolution displays and high-performance data through one single port. For initial install, as Thunderbolt can cause issues if not setup correctly
+- Intel Software Guard Extensions (SGX) > A set of security-related instruction codes that are built into some Intel central processing units (CPUs)
+- Intel Platform Trust (TPM) > Trusted Platform Module, improves the security of your PC by securely creating and storing cryptographic keys. (Linux and Windows 10. Proper dual-boot with Windows 11 require TPM to be enable. **Refer:** [InsanelyMac Discussions](https://www.insanelymac.com/forum/topic/348202-how-to-opencore-070-071-differences/)
+- Config Lock (CFG Lock) > Setting in your BIOS that allows for a specific register (in this case the MSR 0xE2) to be written to
+- Intel Rapid Storage Technology (RST) > Windows-based application that provides improved performance and reliability for computers that are equipped with SATA disks for desktop, mobile, and server platforms
 
 </br>
 
 **Enable**
 
-- 🚀 Intel® Virtualization Technology (VT-x) > An actual hardware virtualisation assistance.
-- 🚀 Above 4G decoding > When enabling Above4G, Resizable BAR Support may become an available on some Z490 and newer motherboards. Please ensure that **Booter > Quirks > ResizeAppleGpuBars** is set to 0 if this is enabled
-- 🚀 Hyper-Threading > An Intel® hardware innovation that allows multiple threads to run on each core, this means more work can be done in parallel
-- 🚀 Execute Disable Bit > An Intel® hardware-based security component.
-- 🚀 EHCI/XHCI Hand-off > USB functions are handled by the OS
-- 🚀 OS type > Windows 8.1/10 UEFI Mode
-- 🚀 DVMT Pre > The Intel® HD/UHD Graphics driver for Windows. Please allocated (iGPU Memory) to 64MB / Auto
-- 🚀 SATA Mode > Advanced Host Controller Interface or AHCI
+- Intel Virtualization Technology (VT-x) > An actual hardware virtualisation assistance.
+- Above 4G decoding > When enabling Above4G, Resizable BAR Support may become an available on some Z490 and newer motherboards. Please ensure that **Booter > Quirks > ResizeAppleGpuBars** is set to 0 if this is enabled
+- Hyper-Threading > An Intel hardware innovation that allows multiple threads to run on each core, this means more work can be done in parallel
+- Execute Disable Bit > An Intel hardware-based security component.
+- EHCI/XHCI Hand-off > USB functions are handled by the OS
+- OS type > Windows 8.1/10 UEFI Mode
+- DVMT Pre > The Intel HD/UHD Graphics driver for Windows. Please allocated (iGPU Memory) to 64MB / Auto
+- SATA Mode > Advanced Host Controller Interface or AHCI
 
 </br>
 
@@ -575,7 +575,7 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 
 </br>
 
-## ACKNOWLEGEMENT
+# ACKNOWLEGEMENT
 
 I would like to thanks all folks in Hackintosh Community especially:
 
@@ -592,8 +592,6 @@ I would like to thanks all folks in Hackintosh Community especially:
 - 💠 [ic005k](https://github.com/ic005k) 😗 develop [Xiasl](https://github.com/ic005k/Xiasl), [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools), and [Xplist](https://github.com/ic005k/Xplist)
 
 </br>
-
-## FOLLOW ME
 
 - ❤️ [reddit](https://www.reddit.com) ⭐ [u/mohdismailmatasin](https://www.reddit.com/user/mohdismailmatasin)
 
