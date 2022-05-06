@@ -42,25 +42,28 @@
 **Modern BIOS (UEFI)**<div align="justify">
 UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the boot process. UEFI is similar to Legacy, but the boot data is stored in a .efi file rather than the firmware. Most UEFIs can be entered by a special key. Below is common key used for certain motherboard manufacturer:</div>
 
-| MANUFACTURER | BIOS KEY | MANUFACTURER | BIOS KEY |
-| ------------ | -------- | ------------ | -------- |
-| ASUS         | F8       | Intel        | F10      |
-| Gigabyte     | F12      | Asrock       | F11      |
-| MSI          | F11      | EVGA         | F7       |
+| **MANUFACTURER** | **BIOS KEY** | **MANUFACTURER** | **BIOS KEY** |
+| ---------------- | ------------ | ---------------- | ------------ |
+| ASUS             | F8           | Intel            | F10          |
+| Gigabyte         | F12          | Asrock           | F11          |
+| MSI              | F11          | EVGA             | F7           |
+
+**Remark:**<div align="justify">BIOS key in the table above is not entirely correct. The key is depending on how the manufacturer designs the board. Please pay attention. This is basic knowledge to understand how your motherboard works. It is better to refer to any source, especially your motherboard manufacturer, for a better understanding.</div>
+
 
 </br>
 
 **Legacy vs Modern**
 
-|                                                                                                                                    |                                                                                                                                                                        |
-|------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Legacy Boot mode is traditional and very basic                                                                                     | UEFI provides a better User interface                                                                                                                                  |
-| Legacy uses the MBR partition scheme                                                                                               | It uses the GPT partitioning scheme                                                                                                                                    |
-| It is slower compared to UEFI                                                                                                      | UEFI provides faster boot time                                                                                                                                         |
-| The MBR portioning scheme used by Legacy only supports up to 2 TB storage devices                                                  | Since UEFI uses the GPT partitioning scheme, it can support up to 9 zettabytes of storage devices.                                                                     |
-| Legacy runs in 16-bit mode that only supports keyboard navigation                                                                  | UEFI runs in 32-bit and 64-bit, allowing support for mouse and touch navigation                                                                                        |
-|  It does not provide a secure boot method, which allows for the loading of unauthorized applications, making dual-booting possible |  It allows a secure boot that prevents the loading of unauthorized applications. It may also hinder dual boot because it treats operating systems (OS) as applications |
-| It is more complex compared to UEFI                                                                                                | It has an easier update process                                                                                                                                        |
+| **LEGACY** | **MODERN** |
+|---|---|
+| Legacy Boot mode is traditional and very basic | UEFI provides a better User interface |
+| Legacy uses the MBR partition scheme | It uses the GPT partitioning scheme |
+| It is slower compared to UEFI | UEFI provides faster boot time |
+| The MBR portioning scheme used by Legacy only supports up to 2 TB storage devices | Since UEFI uses the GPT partitioning scheme, it can support up to 9 zettabytes of storage devices. |
+| Legacy runs in 16-bit mode that only supports keyboard navigation | UEFI runs in 32-bit and 64-bit, allowing support for mouse and touch navigation |
+| It does not provide a secure boot method, which allows for the loading of unauthorized applications, making dual-booting possible | It allows a secure boot that prevents the loading of unauthorized applications. It may also hinder dual boot because it treats operating systems (OS) as applications |
+| It is more complex compared to UEFI | It has an easier update process |                                                                                                                                       |
 
 </br>
 
