@@ -303,7 +303,7 @@ So, it should be...
 
 ### OC\Resources
 
-**Audio, Font, Image & Label**<div align="justify">An OpenCore theme folder which is related to beauty treatment, contain audio for boot-chime, image, font, and label for boot menu GUI experience. These files and folders only work with the OpenCanopy.efi driver. For a more detailed guide, see [OpenCore Beauty treatment](https://github.com/dortania/OpenCore-Post-Install/blob/master/cosmetic/gui.md). This section can be skipped and can be done post-install. The package can be download [here](https://github.com/acidanthera/OcBinaryData).</div>
+**Audio, Font, Image & Label**<div align="justify">An OpenCore theme folder which is related to beauty treatment, contain audio (boot-chime), image (wallpaper/icon), font, and label for boot menu GUI experience. These files and folders only work with the OpenCanopy.efi driver. For a more detailed guide, see [OpenCore Beauty treatment](https://github.com/dortania/OpenCore-Post-Install/blob/master/cosmetic/gui.md). This section can be skipped and can be done post-install. The package can be download [here](https://github.com/acidanthera/OcBinaryData).</div>
 
 <p align="center"><img width="882" alt="Screen Shot 2022-04-25 at 1 18 08 PM" src="https://user-images.githubusercontent.com/72515939/165025116-3361c542-d1bb-4730-8792-bc247e83f543.png"></div>
 
