@@ -583,7 +583,7 @@ Current Version = OpenCore v0.8.0
 - Improve language so that information is easy to understand
 - Additional information related to Navi GPU patch
 - Latest picture
-- Specific patch for ACPI patch
+- Specific information for ACPI patch
 
 </br>
 
