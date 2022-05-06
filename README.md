@@ -201,8 +201,10 @@ Below are the base OpenCore files and folders used for this project:
 | UpdateSMBIOSMode | Create   | Replace the tables with newly allocated EfiReservedMemoryType, use Custom on Dell laptops requiring CustomSMBIOSGuid quirk Setting to Custom with CustomSMBIOSGuid quirk enabled can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk |
 | CustomSMBIOSGuid | NO       | Performs GUID patching for UpdateSMBIOSMode set to Custom. Usually relevant for Dell laptops. Enabling this quirk with UpdateSMBIOSMode Custom mode can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk                           |                              |
 
-- UpdateSMBIOSMode = Custom
-- CustomSMBIOSGuid = Custom
+So, it should be...
+
+- UpdateSMBIOSMode = **Custom**
+- CustomSMBIOSGuid = **Custom**
 
 **Solution**<div align="justify">SSDT patch is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. SSDT patch is minor modification and not affect the actual hardware performance. Using openCore debug, there are several other tables that work with OpenCore. However, modifications to other tables are not necessary. The purpose of the SSDT is designed as described in this section. Be reminded, only SSDT can be modified. The rest is no.</div>
 
