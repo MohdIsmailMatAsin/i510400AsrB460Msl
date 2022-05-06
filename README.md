@@ -139,7 +139,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-### EFI
+### OC\EFI
 
 **Boot**<div align="justify">Fallback boot-loader path. This is the only boot-loader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings. Booting is a term used to refer to the initial loading process when we turn on the computer. BOOTx64.efi is a special file for the boot process that aims to link the boot-loader checked by the BIOS before the computer can be used. The boot programme and OpenCore.efi will be searched by the BIOS for UEFI on 64-bit X86 systems without any existing NVRAM boot settings.</div>
 
@@ -151,7 +151,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-### ACPI
+### OC\ACPI
 
 **Refer:** [ACPI Data Tables and Table Definition Language](https://uefi.org/specs/ACPI/6.4/21_ACPI_Data_Tables_and_Table_Def_Language/ACPI_Data_Tables.html#acpi-data-tables-and-table-definition-language)
 
@@ -245,7 +245,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-### Drivers
+### OC\Drivers
 
 **Basic Drivers**<div align="justify">Only 2 basic driver types are needed here using the debug package. OpenRuntime.efi and HfsPlus.efi. Both files are essentially basic drivers to make this project work. Usage information is as follows:</div>
 
@@ -258,7 +258,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-### Kext
+### OC\Kext
 
 **Kernel Extensions**<div align="justify">Apple regularly introduces innovative solutions and improvements to macOS. However, not all improved tools can fully replace their predecessors. This is what happened with kernel extensions and their successors, System Extensions and DriverKit. Kernel extensions (kexts) let users or developers load code directly into the MacOS kernel. The table below contains some kexts in this project used to properly boot MacOS through OpenCore.</div>
 
@@ -285,7 +285,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-### OpenCore.efi
+### OC\OpenCore.efi
 
 **Firmware Interface**<div align="justify">An Extensive Firmware Interface (.efi) file is a system file used by Intel-based computer systems and computer devices such as AppleTVs. It contains system-level data that executes between the operating system and the firmware. An OpenCore Extensible Firmware Interface files are used for staging firmware updates, booting operating systems, and running pre-boot programs. Normally this file is include with OpenCorePkg and it is compulsory </div>
 
@@ -293,7 +293,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-### Resources
+### OC\Resources
 
 **Audio, Font, Image & Label**<div align="justify">An OpenCore theme folder which is related to beauty treatment. These files and folders only work with the OpenCanopy.efi driver. For a more detailed guide, see [OpenCore Beauty treatment](https://github.com/dortania/OpenCore-Post-Install/blob/master/cosmetic/gui.md). This section can be skipped and can be done post-install. The package can be download [here](https://github.com/acidanthera/OcBinaryData).</div>
 
@@ -301,7 +301,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-### Tools
+### OC\Tools
 
 **Auxiliary**<div align="justify">An additional auxiliary tool for OpenCore. Most of the tools are available in OpenCore packages. It is up to the user to figure out how to make the most of the tools provided. The tools are in .efi format. Here, CleanNvram.efi, which is a ResetNVRAM alternative bundled as a standalone tool, is used as an example. This tool will likely be used to remove any corruption of data in the NVRAM, whilst the resetnvram is used to wipe and clear (empty) the NVRAM. Other tools are designed according to a specific purpose. **Reminder:** Press spacebar on the boot menu to reveal CleanNvram.efi since it is set as an auxiliary.</div>
 
@@ -309,7 +309,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-### Config.plist
+### OC\Config.plist
 
 **Configuration**<div align="justify">A plist file is a settings file, also known as a properties file, used by MacOS applications. It contains properties and configuration settings for various programs. Plist files are formatted in **XML** and **based on Apple's Core Foundation DTD**. OpenCore/Clover benefit **.plist** to inject MacOS preference, also an information for the application that it holds the preference settings. Other than that, it's a markup language that shares a lot of similarities with HTML. This means you've got a few different data types available to you, and most of the structure revolves around keeping track of opening and closing tags. Besides, a plist is often used to correct problems that a user may be having with an application or devices.</div>
 
