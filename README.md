@@ -24,7 +24,7 @@
 ## APFS Changes
 
 | MacOS    | Mindate  | MinVersion       | SetApfsTrimTimeout | SecureBootModel        |
-| -------- | -------- | ---------------- | ------------------ | ---------------------- |
+|----------|----------|------------------|--------------------|------------------------|
 | Catalina | 20200306 | 1412101001000000 | 0                  | j185-10.15.6 (19G2005) |
 | BigSur   | 0        | 0                | 0                  | j185-10.15.6 (19G2005) |
 | Monterey | 0        | 0                | 0                  | j185-10.15.6 (19G2005) |
@@ -52,17 +52,16 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 **Legacy vs Modern**
 
-| LEGACY                                                                                                                              | MODERN (UEFI)                                                                                                                                                          |
-|-------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Legacy Boot mode is traditional and very basic                                                                                      | UEFI provides a better User interface                                                                                                                                  |
-| Legacy uses the MBR partition scheme                                                                                                | It uses the GPT partitioning scheme                                                                                                                                    |
-| It is slower compared to UEFI                                                                                                       | UEFI provides faster boot time                                                                                                                                         |
-| The MBR portioning scheme used by Legacy only supports up to 2 TB storage devices                                                   | Since UEFI uses the GPT partitioning scheme, it can support up to 9 zettabytes of storage devices.                                                                     |
-| Legacy runs in 16-bit mode that only supports keyboard navigation                                                                   | UEFI runs in 32-bit and 64-bit, allowing support for mouse and touch navigation                                                                                        |
-| It does not provide a secure boot method, which allows for the loading 
-of unauthorized applications, making dual-booting possible. | It allows a secure boot that prevents the loading of unauthorized applications. It may also hinder dual boot because it treats operating systems (OS) as applications. |
-| It is more complex compared to UEFI.                                                                                                | It has an easier update process.                                                                                                                                       |
 
+|                                                                                                                                    |                                                                                                                                                                        |
+|------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Legacy Boot mode is traditional and very basic                                                                                     | UEFI provides a better User interface                                                                                                                                  |
+| Legacy uses the MBR partition scheme                                                                                               | It uses the GPT partitioning scheme                                                                                                                                    |
+| It is slower compared to UEFI                                                                                                      | UEFI provides faster boot time                                                                                                                                         |
+| The MBR portioning scheme used by Legacy only supports up to 2 TB storage devices                                                  | Since UEFI uses the GPT partitioning scheme, it can support up to 9 zettabytes of storage devices.                                                                     |
+| Legacy runs in 16-bit mode that only supports keyboard navigation                                                                  | UEFI runs in 32-bit and 64-bit, allowing support for mouse and touch navigation                                                                                        |
+|  It does not provide a secure boot method, which allows for the loading of unauthorized applications, making dual-booting possible |  It allows a secure boot that prevents the loading of unauthorized applications. It may also hinder dual boot because it treats operating systems (OS) as applications |
+| It is more complex compared to UEFI                                                                                                | It has an easier update process                                                                                                                                        |
 </br>
 
 **EFI**<div align="justify">Extensible Firmware Interface system partition, or ESP, is a partition on a data storage device (usually a hard disc drive or solid-state drive) that is used by computers having the Unified Extensible Firmware Interface (UEFI). When a computer is booted, UEFI firmware loads files stored on the ESP to start the installed operating systems and various utilities. The ESP contains the boot loaders or kernel images for all installed operating systems (which are contained in other partitions), device driver files for hardware devices present in a computer and used by the firmware at boot time, system utility programs that are intended to be run before an operating system is booted, and data files such as error logs.</div>
@@ -83,7 +82,7 @@ of unauthorized applications, making dual-booting possible. | It allows a secure
 
 **MacOS**<p align="center"><img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161430979-9b890a71-a348-439b-98df-0e53e6a49da8.png"></div>
 
-**Remark:**<div align="justify">For dual or triple booting PCs, this application is very useful to manage Windows + MacOS or Windows + MacOS + Linux partition. [DiskGenius](https://www.diskgenius.com) or previously [Partition Guru](https://www.partitionguru.com) is a versatile program packed with comprehensive functions for partition recovery, file recovery, disk management, data backup, disk utilities, etc. It manages storage space with high efficiency, recovers data lost due to disk corruption, formatting, deletion, virus attack, etc. In other mean, DiskGenius is a simple tool that allows users to manage the partitions on hard drive and to format them, create new ones, or delete. This utility is compatible and works well with virtual hard drives like VMware, VirtualBox and Virtual PC in addition to supporting SCSI, IDE, SATA and USB flash drives or memory cards. The best thing is, this app capable to view and manage EFI/ESP partition which made managing partition so easily if any file required to be edit, especially [OpenCore](https://github.com/acidanthera/OpenCorePkg) or [Clover](https://github.com/CloverHackyColor/CloverBootloader) config.plist. However, APFS and HFS+ is not fully supported. That's the weak spot of this application. To use APFS and HFS+ formats, [Paragon Hard Disk Manager™ Community Edition](https://www.paragon-software.com/free/pm-express/?msclkid=b2537d35cbb811ecbee6e7525f1ca4a9) can be used. Both combination support may improve user experience.</div>
+**Remark:**<div align="justify">For dual or triple booting PCs, this application is very useful to manage Windows + MacOS or Windows + MacOS + Linux partition. [DiskGenius](https://www.diskgenius.com) or currently [Partition Guru](https://www.partitionguru.com) is a versatile program packed with comprehensive functions for partition recovery, file recovery, disk management, data backup, disk utilities, etc. It manages storage space with high efficiency, recovers data lost due to disk corruption, formatting, deletion, virus attack, etc. In other mean, DiskGenius/PartitionGuru is a simple tool that allows users to manage the partitions on hard drive and to format them, create new ones, or delete. This utility is compatible and works well with virtual hard drives like VMware, VirtualBox and Virtual PC in addition to supporting SCSI, IDE, SATA and USB flash drives or memory cards. The best thing is, this app capable to view and manage EFI/ESP partition which made managing partition so easily if any file required to be edit, especially [OpenCore](https://github.com/acidanthera/OpenCorePkg) or [Clover](https://github.com/CloverHackyColor/CloverBootloader) config.plist. However, APFS and HFS+ is not fully supported. That's the weak spot of this application. To use APFS and HFS+ formats, [Paragon Hard Disk Manager™ Community Edition](https://www.paragon-software.com/free/pm-express/?msclkid=b2537d35cbb811ecbee6e7525f1ca4a9) can be used. Both combination support may improve user experience.</div>
 
 ![Artboard 1](https://user-images.githubusercontent.com/72515939/166097226-b35e84ab-0498-419a-a3e6-0cf6e9c276e5.png)
 
@@ -250,7 +249,7 @@ Below are the base OpenCore files and folders used for this project:
 | Driver          | Information                                                                                                                                                        |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | HfsPlus.efi     | Official HFS+ Driver Support for Apple MacOS                                                                                                                       |
-| OpenRuntime.efi | AptioMemoryFix.efi replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
+| OpenRuntime.efi | AptioMemoryFix.efi (Clover Boot-loader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
 
 <p align="center"><img width="1036" alt="Screen_Shot_2022-04-25_at_2_41_37_PM" src="https://user-images.githubusercontent.com/72515939/165034935-9e54e24e-87fc-4d4a-93cd-79621119b41c.png"></div>
 
@@ -573,6 +572,8 @@ Below are the base OpenCore files and folders used for this project:
 ## Others
 
 Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/Space.jpeg/file)
+
+</br>
 
 </br>
 
