@@ -64,7 +64,6 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 | Legacy runs in 16-bit mode that only supports keyboard navigation | UEFI runs in 32-bit and 64-bit, allowing support for mouse and touch navigation |
 | It does not provide a secure boot method, which allows for the loading of unauthorized applications, making dual-booting possible | It allows a secure boot that prevents the loading of unauthorized applications. It may also hinder dual boot because it treats operating systems (OS) as applications |
 | It is more complex compared to UEFI | It has an easier update process |                                                                                                                                       |
-
 </br>
 
 **EFI**<div align="justify">Extensible Firmware Interface system partition, or ESP, is a partition on a data storage device (usually a hard disc drive or solid-state drive) that is used by computers having the Unified Extensible Firmware Interface (UEFI). When a computer is booted, UEFI firmware loads files stored on the ESP to start the installed operating systems and various utilities. The ESP contains the boot loaders or kernel images for all installed operating systems (which are contained in other partitions), device driver files for hardware devices present in a computer and used by the firmware at boot time, system utility programs that are intended to be run before an operating system is booted, and data files such as error logs.</div>
@@ -201,10 +200,14 @@ Below are the base OpenCore files and folders used for this project:
 | UpdateSMBIOSMode | Create   | Replace the tables with newly allocated EfiReservedMemoryType, use Custom on Dell laptops requiring CustomSMBIOSGuid quirk Setting to Custom with CustomSMBIOSGuid quirk enabled can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk |
 | CustomSMBIOSGuid | NO       | Performs GUID patching for UpdateSMBIOSMode set to Custom. Usually relevant for Dell laptops. Enabling this quirk with UpdateSMBIOSMode Custom mode can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk                           |                              |
 
+</br>
+
 So, it should be...
 
 - UpdateSMBIOSMode = **Custom**
 - CustomSMBIOSGuid = **Custom**
+
+</br>
 
 **Solution**<div align="justify">SSDT patch is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. SSDT patch is minor modification and not affect the actual hardware performance. Using openCore debug, there are several other tables that work with OpenCore. However, modifications to other tables are not necessary. The purpose of the SSDT is designed as described in this section. Be reminded, only SSDT can be modified. The rest is no.</div>
 
