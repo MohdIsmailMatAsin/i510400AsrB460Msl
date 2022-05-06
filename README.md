@@ -52,7 +52,6 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 **Legacy vs Modern**
 
-
 |                                                                                                                                    |                                                                                                                                                                        |
 |------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Legacy Boot mode is traditional and very basic                                                                                     | UEFI provides a better User interface                                                                                                                                  |
@@ -62,6 +61,7 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 | Legacy runs in 16-bit mode that only supports keyboard navigation                                                                  | UEFI runs in 32-bit and 64-bit, allowing support for mouse and touch navigation                                                                                        |
 |  It does not provide a secure boot method, which allows for the loading of unauthorized applications, making dual-booting possible |  It allows a secure boot that prevents the loading of unauthorized applications. It may also hinder dual boot because it treats operating systems (OS) as applications |
 | It is more complex compared to UEFI                                                                                                | It has an easier update process                                                                                                                                        |
+
 </br>
 
 **EFI**<div align="justify">Extensible Firmware Interface system partition, or ESP, is a partition on a data storage device (usually a hard disc drive or solid-state drive) that is used by computers having the Unified Extensible Firmware Interface (UEFI). When a computer is booted, UEFI firmware loads files stored on the ESP to start the installed operating systems and various utilities. The ESP contains the boot loaders or kernel images for all installed operating systems (which are contained in other partitions), device driver files for hardware devices present in a computer and used by the firmware at boot time, system utility programs that are intended to be run before an operating system is booted, and data files such as error logs.</div>
