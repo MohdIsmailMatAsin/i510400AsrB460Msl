@@ -130,44 +130,7 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 Below are the base OpenCore files and folders used for this project:
 
-```zsh
-.
-└── EFI
-	├── BOOT
-	│   └── BOOTx64.efi
-	└── OC
-		├── ACPI
-		│   └── SSDT-B460M-SL.aml
-		├── Drivers
-		│   ├── HfsPlus.efi
-		│   ├── OpenCanopy.efi (Disable/Removed on Debug)
-		│   └── OpenRuntime.efi
-		├── Kexts
-		│   ├── AppleALC.kext
-		│   ├── Lilu.kext
-		│   ├── LucyRTL8125Ethernet.kext
-		│   ├── RadeonSensor.kext
-		│   ├── SMCLightSensor.kext
-		│   ├── SMCProcessor.kext
-		│   ├── SMCRadeonGPU.kext
-		│   ├── SMCSuperIO.kext
-		│   ├── USBMap.kext
-		│   ├── VirtualSMC.kext
-		│   └── WhateverGreen.kext
-		├── OpenCore.efi
-		├── Resources
-		│   ├── Audio
-		│   ├── Font
-		│   ├── Image
-		│   │   └── Acidanthera
-		│   │       ├── Chardonnay
-		│   │       ├── GoldenGate
-		│   │       └── Syrah
-		│   └── Label
-		├── Tools
-		│   └── CleanNvram.efi
-		└── config.plist
-```
+![EFI Tree](https://user-images.githubusercontent.com/72515939/167189649-9dc43d64-0399-4a69-bd98-eb301e416945.png)
 
 **Remark:** For the [debugging](https://economictimes.indiatimes.com/definition/debugging) process, it is best not to use [OpenCanopy.efi](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html).
 
