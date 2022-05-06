@@ -8,13 +8,13 @@
 
 ## Hardware and Device
 
-| Info      | Details                          | Info        | Details                                       |
-| --------- | -------------------------------- | ----------- | --------------------------------------------- |
+| **INFO**  | **DETAIL**                       | **INFO**    | **DETAIL**                                    |
+|-----------|----------------------------------|-------------|-----------------------------------------------|
 | OS 1      | Microsoft Windows 11 Pro         | Audio 1     | 7.1 CH HD Audio (Realtek ALC1200 Audio Codec) |
 | OS 2      | MacOS Monterey 12.3.1            | Audio 2     | U-Phoria UM2 USB Audio Device                 |
-| Processor | Intel Core(TM) i5-10400         | Motherboard | ASRock (B460M Steel Legend)                   |
+| Processor | Intel Core(TM) i5-10400          | Motherboard | ASRock (B460M Steel Legend)                   |
 | GFX0      | Radeon RX 5500 XT 4GB            | PCI 1       | BCM94360 WiFi & Bluetooth                     |
-| IGPU      | Intel UHD Graphics 630 1GB      | PCI 2       | VIA USB 3.0 eXtensible Host Controller        |
+| IGPU      | Intel UHD Graphics 630 1GB       | PCI 2       | VIA USB 3.0 eXtensible Host Controller        |
 | Memory    | PNY XLR8 Gaming X Memory 3200MHz | Storage 1   | 500GB Kingston A2000 NVMe                     |
 | Monitor   | Samsung U28E590 4K               | Storage 2   | 500GB Kingston A2000 NVMe                     |
 | SMBIOS    | iMac20,1                         | Board ID    | Mac-CFF7D910A743CAAF                          |
@@ -23,11 +23,11 @@
 
 ## APFS Changes
 
-| MacOS    | Mindate  | MinVersion       | SetApfsTrimTimeout | SecureBootModel        |
-|----------|----------|------------------|--------------------|------------------------|
-| Catalina | 20200306 | 1412101001000000 | 0                  | j185-10.15.6 (19G2005) |
-| BigSur   | 0        | 0                | 0                  | j185-10.15.6 (19G2005) |
-| Monterey | 0        | 0                | 0                  | j185-10.15.6 (19G2005) |
+| **MacOS**    | **Mindate**  | **MinVersion**       | **SetApfsTrimTimeout** | **SecureBootModel**        |
+|--------------|--------------|----------------------|------------------------|----------------------------|
+| Catalina     | 20200306     | 1412101001000000     | 0                      | j185-10.15.6 (19G2005)     |
+| BigSur       | 0            | 0                    | 0                      | j185-10.15.6 (19G2005)     |
+| Monterey     | 0            | 0                    | 0                      | j185-10.15.6 (19G2005)     |
 
 **Remark:**<div align="justify">The settings above may not be the same as the recommended settings by Dortania. To find out more, please check [OpenCore Configuration](https://dortania.github.io/docs/release/Configuration.html) and [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for SecureBootModel selection.</div>
 
