@@ -35,7 +35,7 @@
 
 ## BIOS
 
-**Legacy BIOS**<div align="justify">Legacy Boot refers to the boot process used by the BIOS firmware to initialize hardware devices. The Legacy boot contains a selection of installed devices that get initialized as the computer performs the POST test during the boot process. The legacy boot will check for all connected devices for the Master Boot Record (MBR), usually in the first sector of a disk. When it can’t find a bootloader in the devices, Legacy switches to the next device in the list and keeps repeating this process until it finds a boot-loader, or if not, returns an error.</div>
+**Legacy BIOS**<div align="justify">Legacy Boot refers to the boot process used by the BIOS firmware to initialize hardware devices. The Legacy boot contains a selection of installed devices that get initialized as the computer performs the **Post-Test** during the boot process. The legacy boot will check for all connected devices for the Master Boot Record (MBR), usually in the first sector of a disk. When it can’t find a bootloader in the devices, Legacy switches to the next device in the list and keeps repeating this process until it finds a boot-loader, or if not, returns an error.</div>
 
 </br>
 
