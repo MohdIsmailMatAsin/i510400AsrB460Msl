@@ -12,7 +12,7 @@
 |-----------|----------------------------------|-------------|-----------------------------------------------|
 | OS 1      | Microsoft Windows 11 Pro         | Audio 1     | 7.1 CH HD Audio (Realtek ALC1200 Audio Codec) |
 | OS 2      | MacOS Monterey 12.3.1            | Audio 2     | U-Phoria UM2 USB Audio Device                 |
-| Processor | Intel Core(TM) i5-10400          | Motherboard | ASRock (B460M Steel Legend)                   |
+| Processor | [Intel Core(TM) i5-10400](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/CPUInfo.txt)          | Motherboard | ASRock (B460M Steel Legend)                   |
 | GFX0      | Radeon RX 5500 XT 4GB            | PCI 1       | BCM94360 WiFi & Bluetooth                     |
 | IGPU      | Intel UHD Graphics 630 1GB       | PCI 2       | VIA USB 3.0 eXtensible Host Controller        |
 | Memory    | PNY XLR8 Gaming X Memory 3200MHz | Storage 1   | 500GB Kingston A2000 NVMe                     |
@@ -213,7 +213,7 @@ So, it should be...
 
 </br>
 
-**Patch Applied**<div align="justify">Thanks to CorpNewt cross platform SSDTTime hotpatch tool. In this project, various SSDT's has been merged into one. i.e., [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl). With several other sources, additional code is injected to reduce the kext workload. As example, GFX0 to an IGPU rename which handled by Whatevergreen.kext.</div>
+**Patch Applied**<div align="justify">Thanks to CorpNewt cross platform SSDTTime hotpatch tool. In this project, various SSDT's has been merged into [one](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/PCIInfo.txt). i.e., [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl). With several other sources, additional code is injected to reduce the kext workload. As example, GFX0 to an IGPU rename which handled by Whatevergreen.kext.</div>
 
 | Device    | Information                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
