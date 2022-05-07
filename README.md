@@ -566,9 +566,14 @@ So, it should be...
 
 </br>
 
-## Debugging
+## Debugging (Boot Log)
 
-**Log**<div align="justify">[OpenCore Debug Log](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-2022-04-19-153310.txt)</div>
+Tested: Pass
+
+Test : 1535PM
+Date: 7th May 2022
+
+**Log**<div align="justify">[v0.8.0](hhttps://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-2022-05-07-075132.txt)</div>
 
 </br>
 
