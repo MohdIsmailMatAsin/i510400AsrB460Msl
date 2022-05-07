@@ -636,8 +636,6 @@ _**hda-gfx:** An onboard properties to HDAU, IGPU, HDEF objects_
 
 ## Debug
 
-**Log**
-
 > _**[v0.8.0](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/commit/521f387a8bbfe912c0168be196ac6029dc96fe3d)**_
 >> _**Result:** Pass_
 >>> _**Time:** 1535PM_
