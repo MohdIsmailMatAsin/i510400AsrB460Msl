@@ -400,35 +400,35 @@ So, it should be...
 
 **Framebuffers** available in **AMDRadeonX6000Framebuffer.kext >> Contents >> Info.plist**.
 
-**5700 - Navi 10**
+_**5700 - Navi 10**_
 
-> AMDRadeonNavi10Controller
->> device-id: 0x73101002 0x73121002 0x73181002 0x73191002 0x731A1002 0x731B1002 0x731F1002 0x73BF1002
->>> framebuffer: ATY,Adder / ATY,Ikaheka
+> _**AMDRadeonNavi10Controller**_
+>> _**device-id:** 0x73101002 0x73121002 0x73181002 0x73191002 0x731A1002 0x731B1002 0x731F1002 0x73BF1002_
+>>> _**framebuffer:** ATY,Adder / ATY,Ikaheka_
 
-**5600 - Navi 12**
+_**5600 - Navi 12**_
 
-> AMDRadeonNavi12Controller
->> device-id: 0x73601002 0x73621002
->>> framebuffer: ATY,Sunbeam
+> _**AMDRadeonNavi12Controller**_
+>> _**device-id:** 0x73601002 0x73621002_
+>>> _**framebuffer:** ATY,Sunbeam_
 
-**5500 - Navi 14**
+_**5500 - Navi 14**_
 
-> AMDRadeonNavi14Controller
->> device-id: 0x73401002 0x73411002 0x73431002 0x73471002 0x734F1002
->>> framebuffer: ATY,Python / ATY,Keelback / ATY,Boa
+> **AMDRadeonNavi14Controller**
+>> _**device-id:** 0x73401002 0x73411002 0x73431002 0x73471002 0x734F1002
+>>> _**framebuffer:** ATY,Python / ATY,Keelback / ATY,Boa
 
-**6800 and 6900 - Navi 21**
+_**6800 and 6900 - Navi 21**_
 
-> AMDRadeonNavi21Controller
->> device-id: 0x73A01002 0x73A21002 0x73A31002 0x73AB1002 0x73AE1002 0x73AF1002 0x73BF1002
->>> framebuffer: ATY,Belknap / ATY,Carswell / ATY,Deepbay
+> **AMDRadeonNavi21Controller**
+>> _**device-id:** 0x73A01002 0x73A21002 0x73A31002 0x73AB1002 0x73AE1002 0x73AF1002 0x73BF1002
+>>> _**framebuffer:** ATY,Belknap / ATY,Carswell / ATY,Deepbay
 
-**6600 - Navi 23**
+_**6600 - Navi 23**_
 
-> AMDRadeonNavi23Controller
->> device-id: 0x73E31002 0x73FF1002 0x73E01002
->>> framebuffer: ATY,Henbury
+> **AMDRadeonNavi23Controller**_
+>> _**device-id:** 0x73E31002 0x73FF1002 0x73E01002_
+>>> _**framebuffer:** ATY,Henbury_
 
 </br>
 
