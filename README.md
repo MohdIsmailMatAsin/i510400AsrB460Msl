@@ -17,7 +17,7 @@
 | IGPU      | Intel UHD Graphics 630 1GB       | PCI 2       | VIA USB 3.0 eXtensible Host Controller        |
 | Memory    | PNY XLR8 Gaming X Memory 3200MHz | Storage 1   | 500GB Kingston A2000 NVMe                     |
 | Monitor   | Samsung U28E590 4K               | Storage 2   | 500GB Kingston A2000 NVMe                     |
-| SMBIOS    | [iMac20,1](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/info.txt))                         | Board ID    | Mac-CFF7D910A743CAAF                          |
+| SMBIOS    | [iMac20,1](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/info.txt)                        | Board ID    | Mac-CFF7D910A743CAAF                          |
 
 </br>
 
