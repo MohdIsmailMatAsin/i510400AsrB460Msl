@@ -568,12 +568,12 @@ So, it should be...
 
 ## Debugging (Boot Log)
 
+**Log**<div align="justify">[v0.8.0](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/commit/521f387a8bbfe912c0168be196ac6029dc96fe3d)</div>
+
 Tested: Pass
 
 Test : 1535PM
 Date: 7th May 2022
-
-**Log**<div align="justify">[v0.8.0](hhttps://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/opencore-2022-05-07-075132.txt)</div>
 
 </br>
 
