@@ -596,7 +596,7 @@ Current Version = OpenCore v0.8.0
 
 - Improve language so that information is easy to understand
 - Additional information related to Navi GPU patch
-- Add PNLF. Most real Mac has this device. It is working or not. Not sure.
+- Add PNLF. Most real Macs have this device. Is it working or not? Not sure.
 - Add DTGP method (Not compulsory, remove when unneeded. Check [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl))
 - Updated [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)
 - Latest picture
