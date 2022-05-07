@@ -587,7 +587,7 @@ Input:
 
 `-o x.y.z` is to select OpenCore version. e.g. `-o 0.7.4`
 
-Without this option octool will make a quick guess as to which version to use based on the INPUT config.plist, if no INPUT config.plist is provided, **octool ** will default to the latest version of OpenCore. Read more on [rusty-bits/octool](https://github.com/rusty-bits/octool)
+Without this option **octool** will make a "quick guess" as to which version to use based on the INPUT config.plist, if no INPUT config.plist is provided, **octool** will default to the latest version of OpenCore. Read more on [rusty-bits/octool](https://github.com/rusty-bits/octool)
 
 </br>
 
