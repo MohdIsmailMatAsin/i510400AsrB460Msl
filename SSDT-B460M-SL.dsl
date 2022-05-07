@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLj53gd3.aml, Sat May  7 08:28:02 2022
+ * Disassembly of iASLuwoq4i.aml, Sat May  7 16:40:08 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000F28 (3880)
+ *     Length           0x00000EF3 (3827)
  *     Revision         0x02
- *     Checksum         0x9D
+ *     Checksum         0x58
  *     OEM ID           "Hack"
  *     OEM Table ID     "AsrockSL"
  *     OEM Revision     0x00000000 (0)
@@ -53,7 +53,6 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
     External (_SB_.PCI0.SBUS, DeviceObj)
     External (_SB_.PCI0.TSUB, DeviceObj)
     External (_SB_.PCI0.XHC_, DeviceObj)
-    External (_SB_.PNLF, DeviceObj)
     External (_SB_.PR00, ProcessorObj)
     External (_SB_.USBX, DeviceObj)
     External (LHIH, IntObj)
@@ -98,15 +97,6 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
             {
                 STAS = One
             }
-        }
-
-        Device (PNLF)
-        {
-            Name (_ADR, Zero)  // _ADR: Address
-            Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
-            Name (_CID, "backlight")  // _CID: Compatible ID
-            Name (_UID, 0x0A)  // _UID: Unique ID
-            Name (_STA, 0x0B)  // _STA: Status
         }
 
         Scope (PR00)
