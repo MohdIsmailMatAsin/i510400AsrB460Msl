@@ -2,7 +2,7 @@
 
 ![Artboard 1](https://user-images.githubusercontent.com/72515939/166086285-c5c771ed-e4d4-409a-b2d5-2e3f4c4325ea.png)
 
-> _**Reminder:**<div align="justify">This is not an **official** method. All the information displayed is based on actual hardware and an experimental basis. Half of the information is taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others are taken from several well-known sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), Refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0)_</div>
+> **Reminder:**<div align="justify">This is not an **official** method. All the information displayed is based on actual hardware and an experimental basis. Half of the information is taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others are taken from several well-known sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), Refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0)</div>
 
 </br>
 
@@ -29,7 +29,7 @@
 | BigSur       | 0            | 0                    | 0                      | j185-10.15.6 (19G2005)     |
 | Monterey     | 0            | 0                    | 0                      | j185-10.15.6 (19G2005)     |
 
-> _**Remark:**<div align="justify">The settings above may not be the same as the recommended settings by Dortania. To find out more, please check [OpenCore Configuration](https://dortania.github.io/docs/release/Configuration.html), [Acidanthera Update : August 2021](https://dortania.github.io/hackintosh/updates/2021/08/02/acidanthera-august.html) and [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for SecureBootModel selection._</div>
+> **Remark:**<div align="justify">The settings above may not be the same as the recommended settings by Dortania. To find out more, please check [OpenCore Configuration](https://dortania.github.io/docs/release/Configuration.html), [Acidanthera Update : August 2021](https://dortania.github.io/hackintosh/updates/2021/08/02/acidanthera-august.html) and [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for SecureBootModel selection.</div>
 
 </br>
 
@@ -48,7 +48,7 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 | Gigabyte         | F12          | Asrock           | F11          |
 | MSI              | F11          | EVGA             | F7           |
 
-> _**Remark:**<div align="justify">BIOS key in the table above is not entirely correct. The key is depending on how the manufacturer designs the board. Please pay attention. This is basic knowledge to understand how your motherboard works. It is better to refer to any source, especially your motherboard manufacturer, for a better understanding._</div>
+> **Remark:**<div align="justify">BIOS key in the table above is not entirely correct. The key is depending on how the manufacturer designs the board. Please pay attention. This is basic knowledge to understand how your motherboard works. It is better to refer to any source, especially your motherboard manufacturer, for a better understanding.</div>
 
 
 </br>
@@ -85,7 +85,7 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 **MacOS**<p align="center"><img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161430979-9b890a71-a348-439b-98df-0e53e6a49da8.png"></div>
 
-> _**Remark:**<div align="justify">For dual or triple booting PCs, this application is very useful to manage Windows + MacOS or Windows + MacOS + Linux partition. [DiskGenius](https://www.diskgenius.com) or previously [Partition Guru](https://www.partitionguru.com) is a versatile program packed with comprehensive functions for partition recovery, file recovery, disk management, data backup, disk utilities, etc. It manages storage space with high efficiency, recovers data lost due to disk corruption, formatting, deletion, virus attack, etc. In other mean, DiskGenius is a simple tool that allows users to manage the partitions on hard drive and to format them, create new ones, or delete. This utility is compatible and works well with virtual hard drives like VMware, VirtualBox and Virtual PC in addition to supporting SCSI, IDE, SATA and USB flash drives or memory cards. The best thing is, this app capable to view and manage EFI/ESP partition which made managing partition so easily if any file required to be edit, especially [OpenCore](https://github.com/acidanthera/OpenCorePkg) or [Clover](https://github.com/CloverHackyColor/CloverBootloader) config.plist. However, APFS and HFS+ is not fully supported. That's the weak spot of this application. To use APFS and HFS+ formats on windows, [Paragon Hard Disk Manager™ Community Edition](https://www.paragon-software.com/free/pm-express/?msclkid=b2537d35cbb811ecbee6e7525f1ca4a9) is adequate. Both combination support may improve user experience._</div>
+> **Remark:**<div align="justify">For dual or triple booting PCs, this application is very useful to manage Windows + MacOS or Windows + MacOS + Linux partition. [DiskGenius](https://www.diskgenius.com) or previously [Partition Guru](https://www.partitionguru.com) is a versatile program packed with comprehensive functions for partition recovery, file recovery, disk management, data backup, disk utilities, etc. It manages storage space with high efficiency, recovers data lost due to disk corruption, formatting, deletion, virus attack, etc. In other mean, DiskGenius is a simple tool that allows users to manage the partitions on hard drive and to format them, create new ones, or delete. This utility is compatible and works well with virtual hard drives like VMware, VirtualBox and Virtual PC in addition to supporting SCSI, IDE, SATA and USB flash drives or memory cards. The best thing is, this app capable to view and manage EFI/ESP partition which made managing partition so easily if any file required to be edit, especially [OpenCore](https://github.com/acidanthera/OpenCorePkg) or [Clover](https://github.com/CloverHackyColor/CloverBootloader) config.plist. However, APFS and HFS+ is not fully supported. That's the weak spot of this application. To use APFS and HFS+ formats on windows, [Paragon Hard Disk Manager™ Community Edition](https://www.paragon-software.com/free/pm-express/?msclkid=b2537d35cbb811ecbee6e7525f1ca4a9) is adequate. Both combination support may improve user experience.</div>
 
 ![Artboard 1](https://user-images.githubusercontent.com/72515939/166097226-b35e84ab-0498-419a-a3e6-0cf6e9c276e5.png)
 
@@ -93,30 +93,30 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 ## OpenCore Package & Preparation
 
-**What is OpenCore**<div align="justify">Referred to as a package of boot-loader and also a [chain-loading](https://en.wikipedia.org/wiki/Chain_loadings) software. It is a complex software program, used to call the operating systems MacOS, Linux, and Windows. In addition, it also has the ability to inject new data into MacOS operating systems such as SMBIOS, Advanced Configuration Table and Power Interface (ACPI), and Kernel Extension (Kext). The package contains additional UEFI support common libraries shared by other projects in [Acidanthera](https://github.com/acidanthera). The primary purpose of the library set is to provide supplemental functionality for Apple-specific UEFI drivers. Key features:</div>
+**What is OpenCore**<div align="justify">Referred to as a package of boot-loader and also a [chain-loading](https://en.wikipedia.org/wiki/Chainloadings) software. It is a complex software program, used to call the operating systems MacOS, Linux, and Windows. In addition, it also has the ability to inject new data into MacOS operating systems such as SMBIOS, Advanced Configuration Table and Power Interface (ACPI), and Kernel Extension (Kext). The package contains additional UEFI support common libraries shared by other projects in [Acidanthera](https://github.com/acidanthera). The primary purpose of the library set is to provide supplemental functionality for Apple-specific UEFI drivers. Key features:</div>
 
-- _Apple disk image loading support_
-- _Apple keyboard input aggregation_
-- _Apple PE image signature verification_
-- _Apple UEFI secure boot supplemental code_
-- _Audio management with screen reading support_
-- _Basic ACPI and SMBIOS manipulation_
-- _CPU information gathering with timer support_
-- _Cryptographic primitives (SHA-256, RSA, etc.)_
-- _Decompression primitives (zlib, lzss, lzvn, etc.)_
-- _Helper code for ACPI reads and modifications_
-- _Higher level abstractions for files, strings, UEFI variables_
-- _Overflow checking arithmetics_
-- _PE image loading with no UEFI Secure Boot conflict_
-- _Plist configuration format parsing_
-- _PNG image manipulation_
-- -Text output and graphics output implementations_
-- _XNU kernel driver injection and patch engine_
+- Apple disk image loading support
+- Apple keyboard input aggregation
+- Apple PE image signature verification
+- Apple UEFI secure boot supplemental code
+- Audio management with screen reading support
+- Basic ACPI and SMBIOS manipulation
+- CPU information gathering with timer support
+- Cryptographic primitives (SHA-256, RSA, etc.)
+- Decompression primitives (zlib, lzss, lzvn, etc.)
+- Helper code for ACPI reads and modifications
+- Higher level abstractions for files, strings, UEFI variables
+- Overflow checking arithmetics
+- PE image loading with no UEFI Secure Boot conflict
+- Plist configuration format parsing
+- PNG image manipulation
+- -Text output and graphics output implementations
+- XNU kernel driver injection and patch engine
 
 **Package**
 
-- _[OpenCore v0.8.0 - Debug](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-DEBUG.zip)_
-- _[OpenCore v0.8.0 - Release](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-RELEASE.zip)_
+- [OpenCore v0.8.0 - Debug](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-DEBUG.zip)
+- [OpenCore v0.8.0 - Release](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-RELEASE.zip)
 
 **Change Log:**
 
@@ -135,7 +135,7 @@ Below are the base OpenCore files and folders used for this project:
 
 [![rmCD5f.png](https://i.im.ge/2022/05/07/rmCD5f.png)](https://im.ge/i/efi-tree.rmCD5f)
 
-> _**Remark:** For the [debugging](https://economictimes.indiatimes.com/definition/debugging) process, it is best not to use [OpenCanopy.efi](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html)._
+> **Remark:** For the [debugging](https://economictimes.indiatimes.com/definition/debugging) process, it is best not to use [OpenCanopy.efi](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html).
 
 </br>
 
@@ -143,7 +143,7 @@ Below are the base OpenCore files and folders used for this project:
 
 **Boot**<div align="justify">Fallback boot-loader path. This is the only boot-loader pathname that the UEFI firmware on 64-bit X86 systems will look for without any pre-existing NVRAM boot settings. Booting is a term used to refer to the initial loading process when we turn on the computer. BOOTx64.efi is a special file for the boot process that aims to link the boot-loader checked by the BIOS before the computer can be used. The boot programme and OpenCore.efi will be searched by the BIOS for UEFI on 64-bit X86 systems without any existing NVRAM boot settings.</div>
 
-**Secure Boot**<div align="justify">Basically MacOS implements the same boot instruction as any other Operating System. But, secure boot works in a different approach. Mac computers equipped with a [T2 chip](https://en.wikipedia.org/wiki/Apple_T2) have an added feature called secure boot. It prevents unsigned operating systems from running on your Mac. Secure boot helps protect against bootkits, or malware that infects the master boot record (MBR) on your computer. Please refer [Apple Support](https://support.apple.com/en-us/HT208862) for more info.</div>
+**Secure Boot**<div align="justify">Basically MacOS implements the same boot instruction as any other Operating System. But, secure boot works in a different approach. Mac computers equipped with a [T2 chip](https://en.wikipedia.org/wiki/AppleT2) have an added feature called secure boot. It prevents unsigned operating systems from running on your Mac. Secure boot helps protect against bootkits, or malware that infects the master boot record (MBR) on your computer. Please refer [Apple Support](https://support.apple.com/en-us/HT208862) for more info.</div>
 
 **Chain-Loader**<div align="justify">OpenCore capable of some other additional features. It has another mobile feature called chain-loader, which aims to call different operating systems.</div>
 
@@ -153,27 +153,27 @@ Below are the base OpenCore files and folders used for this project:
 
 ### OC\ACPI
 
-> _**Refer:** [ACPI Data Tables and Table Definition Language](https://uefi.org/specs/ACPI/6.4/21_ACPI_Data_Tables_and_Table_Def_Language/ACPI_Data_Tables.html#acpi-data-tables-and-table-definition-language)_
+> **Refer:** [ACPI Data Tables and Table Definition Language](https://uefi.org/specs/ACPI/6.4/21ACPIDataTablesandTableDefLanguage/ACPIDataTables.html#acpi-data-tables-and-table-definition-language)
 
 </br>
 
 **DSDT**<div align="justify">Differentiated System Description Table. It Is a major ACPI table and is used to describe what peripherals the machine has. Also holds information on PCI IRQ mappings and power management. In other mean, an OEM must supply a DSDT to an ACPI-compatible OS. The DSDT contains the Differentiated Definition Block, which supplies the implementation and configuration information about the base system. The OS always inserts the DSDT information into the ACPI Namespace at system boot time and never removes it.</div>
 
-<p align="center"><img width="1109" alt="Screen_Shot_2022-04-30_at_3_41_29_PM" src="https://user-images.githubusercontent.com/72515939/166096869-e6b7fe84-c465-4504-ab89-14b8887561ac.png"></div>
+<p align="center"><img width="1109" alt="ScreenShot2022-04-30at34129PM" src="https://user-images.githubusercontent.com/72515939/166096869-e6b7fe84-c465-4504-ab89-14b8887561ac.png"></div>
 
 </br>
 
 **SSDT**<div align="justify">In ACPI, peripheral devices and system hardware features on the platform are described in the Differentiated System Description Table (DSDT), which is loaded at boot, or in Secondary System Description Tables (SSDTs), which are loaded at boot or loaded dynamically at run time. For SoCs (System on Chip), the platform configuration is typically static, so the DSDT might be sufficient, although SSDTs can also be used to improve the modularity of the platform description. Secondary System Description Table (SSDT) are a continuation of the DSDT. Multiple SSDTs can be used as part of a platform description. After the DSDT is loaded into the ACPI Namespace, each secondary description table listed in the RSDT/XSDT with a unique OEM Table ID is loaded. This allows the OEM to provide the base support in one table, while adding smaller system options in other tables. Refer [Differentiated System Description Table](https://docs.microsoft.com/en-us/windows-hardware/drivers/bringup/acpi-system-description-tables#differentiated-system-description-table-dsdt) for more info.</div>
 
 <p align="center">
-<img width="1111" alt="Screen_Shot_2022-04-30_at_3_40_56_PM" src="https://user-images.githubusercontent.com/72515939/166096876-9d9d956e-80ed-477c-b7c3-0897d7c47abe.png">
+<img width="1111" alt="ScreenShot2022-04-30at34056PM" src="https://user-images.githubusercontent.com/72515939/166096876-9d9d956e-80ed-477c-b7c3-0897d7c47abe.png">
 </div>
 
-> _**Refer:** [Definition of Terms](https://uefi.org/specs/ACPI/6.4/02_Definition_of_Terms/Definition_of_Terms.html). For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org/specs/ACPI/6.4/index.html)_
+> **Refer:** [Definition of Terms](https://uefi.org/specs/ACPI/6.4/02DefinitionofTerms/DefinitionofTerms.html). For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org/specs/ACPI/6.4/index.html)
 
 </br>
 
-**ACPI Machine Language (AML)**<div align="justify">Pseudo-code for a virtual machine supported by an ACPI-compatible OS and in which ACPI control methods and objects are written. The AML encoding definition is provided in section 19, [ACPI Machine Language (AML) Specification](https://uefi.org/specs/ACPI/6.4/20_AML_Specification/AML_Specification.html)</div>
+**ACPI Machine Language (AML)**<div align="justify">Pseudo-code for a virtual machine supported by an ACPI-compatible OS and in which ACPI control methods and objects are written. The AML encoding definition is provided in section 19, [ACPI Machine Language (AML) Specification](https://uefi.org/specs/ACPI/6.4/20AMLSpecification/AMLSpecification.html)</div>
 
 </br>
 
@@ -183,16 +183,16 @@ Below are the base OpenCore files and folders used for this project:
 
 **DSDT Patch** may cause
 
-- _⚠️ Broken motherboard BIOS, or_
-- _⚠️ Inefficient device with the wrong injection, or_
-- _⚠️ Cause malfunction device, or_
-- _⚠️ PC unable to boot properly due to an incorrect patch (difficult to reverse)._
+- ⚠️ Broken motherboard BIOS, or
+- ⚠️ Inefficient device with the wrong injection, or
+- ⚠️ Cause malfunction device, or
+- ⚠️ PC unable to boot properly due to an incorrect patch (difficult to reverse).
 
 </br>
 
 **SSDT Patch** may affect
 
-- _⚡ ACPI Injection to Windows/Linux._
+- ⚡ ACPI Injection to Windows/Linux.
 
 **On Other Operating Systems, Avoid ACPI Injection**<div align="justify">Most of these issues may affect dual booting (Windows + MacOS). Luckily, there are settings via config.plist to prevent this issue, but this is only experimental. Do not assume these settings will work 💯 on your machine. Certain users report the settings are not working, but some report the settings work as well. These settings are actually used only for Dell machines. But it is worth a try. Settings are explained via the table below.</div>
 
@@ -205,8 +205,8 @@ Below are the base OpenCore files and folders used for this project:
 
 So, it should be...
 
-- _UpdateSMBIOSMode = **Custom**_
-- _CustomSMBIOSGuid = **Yes**_
+- UpdateSMBIOSMode = **Custom**
+- CustomSMBIOSGuid = **Yes**
 
 </br>
 
@@ -227,8 +227,8 @@ So, it should be...
 | DRAM      | Host bridge (DRAM), or Memory Controller Hub (MCHC). One of two chips comprising the core logic chipset architecture on a PC motherboard                                                                                                                                                                                                                                                                                            	|
 | DTGP      | An original ACPI Method from actual Apple DSDTs which contains this logic to figure out what to return                                                                                                                                                                                                                                                                                            									|
 | EC        | Fake Embedded Controller / EC drivers since CML don't have native support EC                                                                                                                                                                                                                                                                                                                                                       	|
-| GFX0      | Display Output from Dedicated Graphic Processor Unit / DGPU. \_SUN is added to get proper PCI Slot Number                                                                                                                                                                                                                                                                                                                          	|
-| HDAU      | Audio Output device through HDMI, called as High Definition Audio. \_SUN is added to get proper PCI Slot Number                                                                                                                                                                                                                                                                                                                     	|
+| GFX0      | Display Output from Dedicated Graphic Processor Unit / DGPU. \SUN is added to get proper PCI Slot Number                                                                                                                                                                                                                                                                                                                          	|
+| HDAU      | Audio Output device through HDMI, called as High Definition Audio. \SUN is added to get proper PCI Slot Number                                                                                                                                                                                                                                                                                                                     	|
 | HDEF      | Audio device, known as High Definition Audio System / HDAS in actual DSDT, renamed with HDEF                                                                                                                                                                                                                                                                                                                                        	|
 | IGPU      | An Intel Intergrated Graphics Unit device. GFX0 to IGPU rename                                                                                                                                                                                                                                                                                                                                                                     	|
 | IMEI      | An Intel Management Engine Interface. HECI to IMEI rename                                                                                                                                                                                                                                                                                                                                                                          	|
@@ -249,9 +249,9 @@ So, it should be...
 
 **Tools used:**
 
-- _[SSDTTime](https://github.com/corpnewt/SSDTTime) > Cross Platform (Mac/Linux/Windows)_
-- _[MaciASL](https://github.com/acidanthera/MaciASL) > MacOS_
-- _[Xiasl](https://github.com/ic005k/Xiasl) > Cross Platform (Mac/Linux/Windows)_
+- [SSDTTime](https://github.com/corpnewt/SSDTTime) > Cross Platform (Mac/Linux/Windows)
+- [MaciASL](https://github.com/acidanthera/MaciASL) > MacOS
+- [Xiasl](https://github.com/ic005k/Xiasl) > Cross Platform (Mac/Linux/Windows)
 
 </br>
 
@@ -264,7 +264,7 @@ So, it should be...
 | HfsPlus.efi     | Official HFS+ Driver Support for Apple MacOS                                                                                                                       |
 | OpenRuntime.efi | AptioMemoryFix.efi (Clover Boot-loader) replacement. Used as an extension for OpenCore to help with patching boot.efi for NVRAM fixes and better memory management |
 
-<p align="center"><img width="1036" alt="Screen_Shot_2022-04-25_at_2_41_37_PM" src="https://user-images.githubusercontent.com/72515939/165034935-9e54e24e-87fc-4d4a-93cd-79621119b41c.png"></div>
+<p align="center"><img width="1036" alt="ScreenShot2022-04-25at24137PM" src="https://user-images.githubusercontent.com/72515939/165034935-9e54e24e-87fc-4d4a-93cd-79621119b41c.png"></div>
 
 </br>
 
@@ -285,13 +285,13 @@ So, it should be...
 | LucyRTL8125Ethernet | Ethernet device, Realtek RTL8125 2.5G bit Ethernet Controllers driver                                                                     	|
 | USBMap              | Kext to route selected USB ports to Physical Ports via USB port address. This is compulsory to handle 15 port limit requirements by MacOS 	|
 
-<p align="center"><img width="1032" alt="Screen_Shot_2022-04-25_at_3_00_24_PM" src="https://user-images.githubusercontent.com/72515939/165037853-94893f7d-7950-447a-a57f-745e93fe9ce8.png"></div>
+<p align="center"><img width="1032" alt="ScreenShot2022-04-25at30024PM" src="https://user-images.githubusercontent.com/72515939/165037853-94893f7d-7950-447a-a57f-745e93fe9ce8.png"></div>
 
 </br>
 
 **Priorities:** The order of kexts is important, they are loaded in this order. Plugins for other kexts should always come after the main kext. Lilu should be first, then Lilu plugins like WhateverGreen and VirtualSMC. Sort in priority to get a better kext injection.
 
-<p align="center"><img width="1356" alt="Screen_Shot_2022-04-25_at_3_09_08_PM" src="https://user-images.githubusercontent.com/72515939/165038719-33ac2cca-1cf5-4aae-85de-7caa88c3ccff.png"></div>
+<p align="center"><img width="1356" alt="ScreenShot2022-04-25at30908PM" src="https://user-images.githubusercontent.com/72515939/165038719-33ac2cca-1cf5-4aae-85de-7caa88c3ccff.png"></div>
 
 </br>
 
@@ -327,14 +327,14 @@ So, it should be...
 
 **Example:** Below is an example of config.plist:
 
-- _OpenCore [Monterey/BigSur-Debug](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_debug.plist)_
-- _OpenCore [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_release.plist)_
-- _Clover [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_clover.plist)_
+- OpenCore [Monterey/BigSur-Debug](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/configdebug.plist)
+- OpenCore [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/configrelease.plist)
+- Clover [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/configclover.plist)
 
 **Tools for editing:**
 
-- _[ProperTree](https://github.com/corpnewt/ProperTree) > Cross Platform (Mac/Linux/Windows)_
-- _[Xplist](https://github.com/ic005k/Xplist) > Cross Platform (Mac/Linux/Windows)_
+- [ProperTree](https://github.com/corpnewt/ProperTree) > Cross Platform (Mac/Linux/Windows)
+- [Xplist](https://github.com/ic005k/Xplist) > Cross Platform (Mac/Linux/Windows)
 
 </br>
 
@@ -357,15 +357,15 @@ So, it should be...
 
 **Booter\Quirks**
 
-- _AvoidRuntimeDefrag_
-- _DevirtualiseMmio_
-- _EnableSafeModeSlide_
-- _ProtectUefiServices_
-- _ProviceCustomSlide_
-- _RebuildAppleMemoryMap_
-- _SyncRuntimePermissions_
-- _ProvideMaxSlide = **0**_
-- _ResizeAppleGpuBars = **-1**_
+- AvoidRuntimeDefrag
+- DevirtualiseMmio
+- EnableSafeModeSlide
+- ProtectUefiServices
+- ProviceCustomSlide
+- RebuildAppleMemoryMap
+- SyncRuntimePermissions
+- ProvideMaxSlide = **0**
+- ResizeAppleGpuBars = **-1**
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 05 AM" src="https://user-images.githubusercontent.com/72515939/164505410-32911711-727d-40f9-9d2a-f542700b5dcc.png"></div>
 
@@ -373,12 +373,12 @@ So, it should be...
 
 **Kernel\Quirks**
 
-- _CustomSMBIOSGuid_
-- _DisableIoMapper_
-- _DisableLinkeditJettison_
-- _PanicNoKextDump_
-- _PowerTimeoutKernelPanic_
-- _SetApfsTimeout = **0**_
+- CustomSMBIOSGuid
+- DisableIoMapper
+- DisableLinkeditJettison
+- PanicNoKextDump
+- PowerTimeoutKernelPanic
+- SetApfsTimeout = **0**
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 48 AM" src="https://user-images.githubusercontent.com/72515939/164505506-bc2e3705-8225-407d-a486-0b232f4a5fed.png"></div>
 
@@ -386,11 +386,11 @@ So, it should be...
 
 **UEFI\Quirks**
 
-- _EnableVectorAcceleration_
-- _RequestBootVarRouting_
-- _ExitBootServiceDelay = **0**_
-- _ResizeGPUBars = **-1**_
-- _TscSyncTimeout = **0**_
+- EnableVectorAcceleration
+- RequestBootVarRouting
+- ExitBootServiceDelay = **0**
+- ResizeGPUBars = **-1**
+- TscSyncTimeout = **0**
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 26 AM" src="https://user-images.githubusercontent.com/72515939/164505602-4cf5069b-bdf2-4017-8a54-336f82464ad4.png"></div>
 
@@ -401,29 +401,29 @@ So, it should be...
 **Framebuffers** available in **AMDRadeonX6000Framebuffer.kext >> Contents >> Info.plist**.
 
 **5700 - Navi 10**
-> _**AMDRadeonNavi10Controller**_
->> _**device-id:** 0x73101002 0x73121002 0x73181002 0x73191002 0x731A1002 0x731B1002 0x731F1002 0x73BF1002_
->>> _**framebuffer:** ATY,Adder / ATY,Ikaheka_
+> **AMDRadeonNavi10Controller**
+>> **device-id:** 0x73101002 0x73121002 0x73181002 0x73191002 0x731A1002 0x731B1002 0x731F1002 0x73BF1002
+>>> **framebuffer:** ATY,Adder / ATY,Ikaheka
 
 **5600 - Navi 12**
-> _**AMDRadeonNavi12Controller**_
->> _**device-id:** 0x73601002 0x73621002_
->>> _**framebuffer:** ATY,Sunbeam_
+> **AMDRadeonNavi12Controller**
+>> **device-id:** 0x73601002 0x73621002
+>>> **framebuffer:** ATY,Sunbeam
 
 **5500 - Navi 14**
 > **AMDRadeonNavi14Controller**
->> _**device-id:** 0x73401002 0x73411002 0x73431002 0x73471002 0x734F1002
->>> _**framebuffer:** ATY,Python / ATY,Keelback / ATY,Boa
+>> **device-id:** 0x73401002 0x73411002 0x73431002 0x73471002 0x734F1002
+>>> **framebuffer:** ATY,Python / ATY,Keelback / ATY,Boa
 
 **6800 and 6900 - Navi 21**
 > **AMDRadeonNavi21Controller**
->> _**device-id:** 0x73A01002 0x73A21002 0x73A31002 0x73AB1002 0x73AE1002 0x73AF1002 0x73BF1002
->>> _**framebuffer:** ATY,Belknap / ATY,Carswell / ATY,Deepbay
+>> **device-id:** 0x73A01002 0x73A21002 0x73A31002 0x73AB1002 0x73AE1002 0x73AF1002 0x73BF1002
+>>> **framebuffer:** ATY,Belknap / ATY,Carswell / ATY,Deepbay
 
 **6600 - Navi 23**
-> **AMDRadeonNavi23Controller**_
->> _**device-id:** 0x73E31002 0x73FF1002 0x73E01002_
->>> _**framebuffer:** ATY,Henbury_
+> **AMDRadeonNavi23Controller**
+>> **device-id:** 0x73E31002 0x73FF1002 0x73E01002
+>>> **framebuffer:** ATY,Henbury
 
 </br>
 
@@ -457,101 +457,101 @@ So, it should be...
 
 **AAPL,ig-platform-id**<div align="justify">This is an important part. The keyword for the best headless settings for desktop is **mobile**. For desktop **(iMac SMBIOS)**, the framebuffer setting for the **mobile** variant is not needed. Open **Hackintool > Patch > Platform ID** option. Find any setting which is not related to the mobile **(Mobile = No)**. This guide is to find a proper **AAPL,ig-platform-id** for Desktop. In this case, **0x3E910003** in hexadecimal, which is equal to **0300913E**, 4 byte data hex swapped. Below is an example:</div>
 
-- _0x3E910003 = 0300913E_
-- _AAPL,ig-platform-id = 0300913E_
+- 0x3E910003 = 0300913E
+- AAPL,ig-platform-id = 0300913E
 
-<p align="center"><img width="1176" alt="Screen_Shot_2022-05-02_at_5_10_03_PM" src="https://user-images.githubusercontent.com/72515939/166212509-9f300b98-66c5-43f0-abf9-e14dd5e610a2.png"></div>
+<p align="center"><img width="1176" alt="ScreenShot2022-05-02at51003PM" src="https://user-images.githubusercontent.com/72515939/166212509-9f300b98-66c5-43f0-abf9-e14dd5e610a2.png"></div>
 
 </br>
 
 **device-id**<div align="justify">To get the proper main card platform as `headless` injection, `device-id` is required to get the device name. On `Intel 10th Gen` processor, it is not necessary, but sometimes this patch may fix certain IGPU issues. As an example, find **Activity Monitor > Window > GPU History** or **Activity Monitor > GPU** extra tab, IGPU will display as **Intel KBL Unknown**. Checkout **[Issues #1905](https://github.com/acidanthera/bugtracker/issues/1905)**. To proper rename, use **Hackintool** as a guide by finding the appropriate **device-id**, not in mobile mode (Mobile = No). In this case, GPU Hexadecimal device-id **0x3E9B8086** which is equal to 4 byte data hex swapped **9B3E0000** is injected via config.plist in IGPU DeviceProperties section. Below is an example:</div>
 
-- _0x3E9B8086 = 9B3E8086_
-- _9B3E8086 = 9B3E0000 (8086 to 0000)_
-- _device-id = 9B3E0000_
+- 0x3E9B8086 = 9B3E8086
+- 9B3E8086 = 9B3E0000 (8086 to 0000)
+- device-id = 9B3E0000
 
-<p align="center"><img width="1172" alt="Screen_Shot_2022-05-02_at_5_27_16_PM" src="https://user-images.githubusercontent.com/72515939/166213623-407d87dd-5368-4430-b8e0-5fc87eb97be1.png"></div>
+<p align="center"><img width="1172" alt="ScreenShot2022-05-02at52716PM" src="https://user-images.githubusercontent.com/72515939/166213623-407d87dd-5368-4430-b8e0-5fc87eb97be1.png"></div>
 
 </br>
 
 **Inject**<div align="justify">Other additional information to be inject:</div>
 
 **AAPL,ig-platform-id:** Property used by macOS to determine the framebuffer profile with Ivy Bridge and newer
-- > _**DeviceProperties**_
-- >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
-- >>> _**AAPL,ig-platform-id**_
-- >>>> _**data**_
-- >>>>> _**0300913E**_
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **AAPL,ig-platform-id**
+- >>>> **data**
+- >>>>> **0300913E**
 
 **AAPL,slot-name:** To show/set PCI Cards on System Profiler
-- > _**DeviceProperties**_
-- >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
-- >>> _**AAPL,slot-name**_
-- >>>> _**string**_
-- >>>>> _**Internal**_
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **AAPL,slot-name**
+- >>>> **string**
+- >>>>> **Internal**
 
 
 **device-id:** Device id number
-- > _**DeviceProperties**_
-- >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
-- >>> -**device-id**_ 
-- >>>> _**data**_ 
-- >>>>> _**9B3E0000**_
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> -**device-id** 
+- >>>> **data** 
+- >>>>> **9B3E0000**
 
 **igfxonln:** To force-online device property or to force online status on all displays
-- > _**DeviceProperties**_
-- >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
-- >>> _**igfxonln**_
-- >>>> _**data**_ 
-- >>>>> _**01000000**_
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **igfxonln**
+- >>>> **data** 
+- >>>>> **01000000**
 
-**device_type:** Type of device
-- > _**DeviceProperties**_
-- >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
-- >>> _**device_type**_ 
-- >>>> _**string**_ 
-- >>>>> _**Display controller**_
+**devicetype:** Type of device
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **devicetype** 
+- >>>> **string** 
+- >>>>> **Display controller**
 
 **enable-metal:** To enable-metal property or force enable Metal support on Intel for offline rendering
-- > _**DeviceProperties**_
-- >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
-- >>> _**enable-metal**_ 
-- >>>> _**data**_ 
-- >>>>> _**01000000**_
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **enable-metal** 
+- >>>> **data** 
+- >>>>> **01000000**
  
 **iommu-selection:** Allows VMs to directly use peripheral devices through direct memory access (DMA)
-- > _**DeviceProperties**_
-- >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
-- >>> _**iommu-selection**_ 
-- >>>> _**data**_ 
-- >>>>> _**00000000**_
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **iommu-selection** 
+- >>>> **data** 
+- >>>>> **00000000**
 
 **rps-control:** To enable RPS control patch (improves IGPU performance)
-- > _**DeviceProperties**_
-- >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
-- >>> _**rps-control**_ 
-- >>>> _**data**_
-- >>>>> _**01000000**_
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **rps-control** 
+- >>>> **data**
+- >>>>> **01000000**
 
 **igfxfw:** To force loading of Apple GuC firmware
-- > _**DeviceProperties**_
-- >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
-- >>> _**igfxfw**_ 
-- >>>> _**data**_ 
-- >>>>> _**02000000**_
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **igfxfw** 
+- >>>> **data** 
+- >>>>> **02000000**
  
 **hda-gfx:** An onboard properties to HDAU, IGPU, HDEF objects
-- > _**DeviceProperties**_
-- >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
-- >>> _**hda-gfx**_
-- >>>> _**string**_
-- >>>>> _**onboard-1**_
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **hda-gfx**
+- >>>> **string**
+- >>>>> **onboard-1**
 
 **GPU Tab**<div align="justify">Now, new additional GPU tabs on the MacOS Activity Monitor is added. And, the result is....</div>
 
 <img width="1656" alt="Screen Shot 2022-05-02 at 5 01 41 PM" src="https://user-images.githubusercontent.com/72515939/166213796-e008aa77-c372-4aac-8ff2-45b8b06bc0d8.png">
 
-<p align="center"><img width="1365" alt="Screen_Shot_2022-05-02_at_5_02_07_PM" src="https://user-images.githubusercontent.com/72515939/166215851-6690a3c6-366d-4308-9dbd-04a9c709025f.png"></div>
+<p align="center"><img width="1365" alt="ScreenShot2022-05-02at50207PM" src="https://user-images.githubusercontent.com/72515939/166215851-6690a3c6-366d-4308-9dbd-04a9c709025f.png"></div>
 
 <p align="center"><img width="549" alt="Screen Shot 2022-05-02 at 5 33 59 PM" src="https://user-images.githubusercontent.com/72515939/166214463-17182b3a-99f3-48a5-bd58-70d4720971e3.png"></div>
 
@@ -563,16 +563,16 @@ So, it should be...
 
 **com.apple.WebKit.GPU dump** [link](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/Sample%20of%20com.apple.WebKit.GPU.txt)
 
-**IQSV Test** Checkout this [link](https://youtu.be/dd3SwAZ3S_w)
+**IQSV Test** Checkout this [link](https://youtu.be/dd3SwAZ3Sw)
 
-> _**Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki patch only applicable via Catalina and below._
+> **Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki patch only applicable via Catalina and below.
 </br>
 
 ## Power
 
 **Reset via Hackintool**<div align="justify">If there is a problem with power, use [Hackintool](https://github.com/headkaze/Hackintool) to reset. The picture below shows how to do this:</div>
 
-<p align="center"><img width="1108" alt="Screen_Shot_2022-04-25_at_4_01_32_PM" src="https://user-images.githubusercontent.com/72515939/165046653-bdd95d61-c4eb-4f8b-bd8b-e13b3413af41.png"></div>
+<p align="center"><img width="1108" alt="ScreenShot2022-04-25at40132PM" src="https://user-images.githubusercontent.com/72515939/165046653-bdd95d61-c4eb-4f8b-bd8b-e13b3413af41.png"></div>
 
 </br>
 
@@ -611,20 +611,20 @@ So, it should be...
 
 **NVMe:** Kingston A2000 NVMe trim support is working **native**.
 
-<img width="1239" alt="Screen_Shot_2022-04-30_at_10_45_05_AM" src="https://user-images.githubusercontent.com/72515939/166087551-e52f35db-1e52-47e9-8455-e70a81fdbf20.png">
+<img width="1239" alt="ScreenShot2022-04-30at104505AM" src="https://user-images.githubusercontent.com/72515939/166087551-e52f35db-1e52-47e9-8455-e70a81fdbf20.png">
 
-**SSD:** IOAHCIBlockStorage patch for SSD to enable Trim support via **Kernel\Patch**. Refer [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_debug.plist).
+**SSD:** IOAHCIBlockStorage patch for SSD to enable Trim support via **Kernel\Patch**. Refer [config.plist](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/configdebug.plist).
 
-![Artboard_1](https://user-images.githubusercontent.com/72515939/166087859-0511b56c-82a5-4ce3-8dbc-7d876b2925be.png)
+![Artboard1](https://user-images.githubusercontent.com/72515939/166087859-0511b56c-82a5-4ce3-8dbc-7d876b2925be.png)
 
 </br>
 
 ## Debug
 
-> _**[v0.8.0](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/commit/521f387a8bbfe912c0168be196ac6029dc96fe3d)**_
->> _**Result:** Pass_
->>> _**Time:** 1535PM_
->>>> _**Date:** 7th May 2022_
+> **[v0.8.0](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/commit/521f387a8bbfe912c0168be196ac6029dc96fe3d)**
+>> **Result:** Pass
+>>> **Time:** 1535PM
+>>>> **Date:** 7th May 2022
 
 </br>
 
@@ -634,13 +634,13 @@ So, it should be...
 
 Input:
 
-_`./octool`_ [options] _`-o x.y.z`_ [config.plist]
+`./octool` [options] `-o x.y.z` [config.plist]
 
-_`-d`_ to use debug versions for EFI instead of release versions
+`-d` to use debug versions for EFI instead of release versions
 
-_`-h`_ to print help/usage message
+`-h` to print help/usage message
 
-_`-o x.y.z`_ is to select OpenCore version. e.g. _`-o 0.7.4`_
+`-o x.y.z` is to select OpenCore version. e.g. `-o 0.7.4`
 
 Without this option **octool** will make a "quick guess" as to which version to use based on the INPUT config.plist, if no INPUT config.plist is provided, **octool** will default to the latest version of OpenCore. Read more on [rusty-bits/octool](https://github.com/rusty-bits/octool)
 
@@ -659,13 +659,13 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 ## Changelog
 
 **Add additional info related:**
-> _Main [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/info.txt)_
->> _CPU [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/CPUInfo.txt) from debug boot log_
->>> _PCI [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/PCIInfo.txt) from debug boot log_
->>>> _Additional Framebuffer [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend#additional-framebuffer-for-amd-navi-gpus) for AMD Navi GPU_
+> Main [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/info.txt)
+>> CPU [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/CPUInfo.txt) from debug boot log
+>>> PCI [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/PCIInfo.txt) from debug boot log
+>>>> Additional Framebuffer [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend#additional-framebuffer-for-amd-navi-gpus) for AMD Navi GPU
 
 **Add Method:**
-> _DTGP. **Refer:** [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)_
+> DTGP. **Refer:** [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)
 
 </br>
 
@@ -682,7 +682,7 @@ I would like to thanks all folks in Hackintosh Community especially:
 - 💠 [r/Hackintosh](https://www.reddit.com/r/hackintosh/) 😘 my favourite [reddit](https://www.reddit.com) Hackintosh discussion platform
 - 💠 [daliansky](https://github.com/daliansky) ☺️ publishing his own [OpenCore](https://github.com/acidanthera/OpenCorePkg) [ACPI](https://kb.iu.edu/d/ahvl) method, known as [OC-Little](https://github.com/daliansky/OC-little)
 - 💠 [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) 😆 translating [daliansky](https://github.com/daliansky) [OC-Little](https://github.com/daliansky/OC-little) which known as [OC-Little Translate](https://github.com/5T33Z0/OC-Little-Translated) + informative [Clover Crate](https://github.com/5T33Z0/Clover-Crate) for [Clover-bootloader](https://github.com/CloverHackyColor/CloverBootloader)
-- 💠 [rusty-bits](https://github.com/rusty-bits) 😁 [cross platform](https://en.wikipedia.org/wiki/Cross-platform_software) OpenCore EFI update , known as [octool](https://github.com/rusty-bits/octool)
+- 💠 [rusty-bits](https://github.com/rusty-bits) 😁 [cross platform](https://en.wikipedia.org/wiki/Cross-platformsoftware) OpenCore EFI update , known as [octool](https://github.com/rusty-bits/octool)
 - 💠 [ic005k](https://github.com/ic005k) 😗 develop [Xiasl](https://github.com/ic005k/Xiasl), [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools), and [Xplist](https://github.com/ic005k/Xplist)
 
 </br>
