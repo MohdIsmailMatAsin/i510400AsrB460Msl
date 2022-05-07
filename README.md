@@ -403,32 +403,32 @@ So, it should be...
 **5700 - Navi 10**
 
 > AMDRadeonNavi10Controller
-- device-id: 0x73101002 0x73121002 0x73181002 0x73191002 0x731A1002 0x731B1002 0x731F1002 0x73BF1002
-- framebuffer: ATY,Adder / ATY,Ikaheka
+>> device-id: 0x73101002 0x73121002 0x73181002 0x73191002 0x731A1002 0x731B1002 0x731F1002 0x73BF1002
+>>> framebuffer: ATY,Adder / ATY,Ikaheka
 
 **5600 - Navi 12**
 
 > AMDRadeonNavi12Controller
-- device-id: 0x73601002 0x73621002
-- framebuffer: ATY,Sunbeam
+>> device-id: 0x73601002 0x73621002
+>>> framebuffer: ATY,Sunbeam
 
 **5500 - Navi 14**
 
 > AMDRadeonNavi14Controller
-- device-id: 0x73401002 0x73411002 0x73431002 0x73471002 0x734F1002
-- framebuffer: ATY,Python / ATY,Keelback / ATY,Boa
+>> device-id: 0x73401002 0x73411002 0x73431002 0x73471002 0x734F1002
+>>> framebuffer: ATY,Python / ATY,Keelback / ATY,Boa
 
 **6800 and 6900 - Navi 21**
 
 > AMDRadeonNavi21Controller
-- device-id: 0x73A01002 0x73A21002 0x73A31002 0x73AB1002 0x73AE1002 0x73AF1002 0x73BF1002
-- framebuffer: ATY,Belknap / ATY,Carswell / ATY,Deepbay
+>> device-id: 0x73A01002 0x73A21002 0x73A31002 0x73AB1002 0x73AE1002 0x73AF1002 0x73BF1002
+>>> framebuffer: ATY,Belknap / ATY,Carswell / ATY,Deepbay
 
 **6600 - Navi 23**
 
 > AMDRadeonNavi23Controller
-- device-id: 0x73E31002 0x73FF1002 0x73E01002
-- framebuffer: ATY,Henbury
+>> device-id: 0x73E31002 0x73FF1002 0x73E01002
+>>> framebuffer: ATY,Henbury
 
 </br>
 
@@ -481,16 +481,86 @@ So, it should be...
 
 **Inject**<div align="justify">Other additional information to be inject:</div>
 
-- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = AAPL,ig-platform-id > data > 0300913E
-- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = AAPL,slot-name > string > Internal
-- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = device-id > data > 9B3E0000
-- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = igfxonln > data > 01000000
-- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = device_type > string > Display controller
-- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = enable-metal > data > 01000000
-- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = iommu-selection > data > 00000000
-- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = rps-control > data > 01000000
-- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = igfxfw > data > 02000000
-- DeviceProperties > PciRoot(0x0)/Pci(0x2,0x0) = hda-gfx > string > onboard-1
+**AAPL,ig-platform-id:** Property used by macOS to determine the framebuffer profile with Ivy Bridge and newer.
+
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **AAPL,ig-platform-id**
+- >>>> **data**
+- >>>>> **0300913E**
+
+**AAPL,slot-name:** To show/set PCI Cards on System Profiler
+
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **AAPL,slot-name**
+- >>>> **string**
+- >>>>> **Internal**
+
+
+**device-id:** Devide id number
+
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **device-id** 
+- >>>> data 
+- >>>>> **9B3E0000**
+
+**igfxonln:** To force-online device property or to force online status on all displays
+
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **igfxonln**
+- >>>> data 
+- >>>>> **01000000**
+
+**device_type:** Type of device
+
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **device_type** 
+- >>>> string 
+- >>>>> **Display controller**
+
+**enable-metal:** To enable-metal property or force enable Metal support on Intel for offline rendering
+
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **enable-metal** 
+- >>>> data 
+- >>>>> **01000000**
+ 
+**iommu-selection:** Allows VMs to directly use peripheral devices through direct memory access (DMA)
+
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **iommu-selection** 
+- >>>> data 
+- >>>>> **00000000**
+
+**rps-control:** To enable RPS control patch (improves IGPU performance)
+
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **rps-control** 
+- >>>> data
+- >>>>> **01000000**
+
+**igfxfw:** To force loading of Apple GuC firmware
+
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **igfxfw** 
+- >>>> data 
+- >>>>> **02000000**
+ 
+**hda-gfx:** An onboard properties to HDAU, IGPU, HDEF objects.
+
+- > **DeviceProperties**
+- >> **PciRoot(0x0)/Pci(0x2,0x0)**
+- >>> **hda-gfx** 
+- >>>> string 
+- >>>>> **onboard-1**
 
 **GPU Tab**<div align="justify">Now, new additional GPU tabs on the MacOS Activity Monitor is added. And, the result is....</div>
 
