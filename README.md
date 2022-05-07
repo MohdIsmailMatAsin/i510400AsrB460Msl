@@ -29,7 +29,7 @@
 | BigSur       | 0            | 0                    | 0                      | j185-10.15.6 (19G2005)     |
 | Monterey     | 0            | 0                    | 0                      | j185-10.15.6 (19G2005)     |
 
-> **Remark:**<div align="justify">The settings above may not be the same as the recommended settings by Dortania. To find out more, please check [OpenCore Configuration](https://dortania.github.io/docs/release/Configuration.html) and [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for SecureBootModel selection.</div>
+> **Remark:**<div align="justify">The settings above may not be the same as the recommended settings by Dortania. To find out more, please check [OpenCore Configuration](https://dortania.github.io/docs/release/Configuration.html), [Acidanthera Update : August 2021](https://dortania.github.io/hackintosh/updates/2021/08/02/acidanthera-august.html) and [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for SecureBootModel selection.</div>
 
 </br>
 
