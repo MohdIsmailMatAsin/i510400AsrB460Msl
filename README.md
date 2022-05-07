@@ -400,31 +400,31 @@ So, it should be...
 
 **Framebuffers** available in **AMDRadeonX6000Framebuffer.kext >> Contents >> Info.plist**.
 
-_**5700 - Navi 10**_
+**5700 - Navi 10**
 
 > _**AMDRadeonNavi10Controller**_
 >> _**device-id:** 0x73101002 0x73121002 0x73181002 0x73191002 0x731A1002 0x731B1002 0x731F1002 0x73BF1002_
 >>> _**framebuffer:** ATY,Adder / ATY,Ikaheka_
 
-_**5600 - Navi 12**_
+**5600 - Navi 12**
 
 > _**AMDRadeonNavi12Controller**_
 >> _**device-id:** 0x73601002 0x73621002_
 >>> _**framebuffer:** ATY,Sunbeam_
 
-_**5500 - Navi 14**_
+**5500 - Navi 14**
 
 > **AMDRadeonNavi14Controller**
 >> _**device-id:** 0x73401002 0x73411002 0x73431002 0x73471002 0x734F1002
 >>> _**framebuffer:** ATY,Python / ATY,Keelback / ATY,Boa
 
-_**6800 and 6900 - Navi 21**_
+**6800 and 6900 - Navi 21**
 
 > **AMDRadeonNavi21Controller**
 >> _**device-id:** 0x73A01002 0x73A21002 0x73A31002 0x73AB1002 0x73AE1002 0x73AF1002 0x73BF1002
 >>> _**framebuffer:** ATY,Belknap / ATY,Carswell / ATY,Deepbay
 
-_**6600 - Navi 23**_
+**6600 - Navi 23**
 
 > **AMDRadeonNavi23Controller**_
 >> _**device-id:** 0x73E31002 0x73FF1002 0x73E01002_
@@ -649,13 +649,13 @@ _**hda-gfx:** An onboard properties to HDAU, IGPU, HDEF objects_
 
 Input:
 
-`./octool` [options] `-o x.y.z` [config.plist]
+_`./octool`_ [options] _`-o x.y.z`_ [config.plist]
 
-`-d` to use debug versions for EFI instead of release versions
+_`-d`_ to use debug versions for EFI instead of release versions
 
-`-h` to print help/usage message
+_`-h`_ to print help/usage message
 
-`-o x.y.z` is to select OpenCore version. e.g. `-o 0.7.4`
+_`-o x.y.z`_ is to select OpenCore version. e.g. _`-o 0.7.4`_
 
 Without this option **octool** will make a "quick guess" as to which version to use based on the INPUT config.plist, if no INPUT config.plist is provided, **octool** will default to the latest version of OpenCore. Read more on [rusty-bits/octool](https://github.com/rusty-bits/octool)
 
@@ -673,11 +673,11 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 
 ## Changelog
 
-> _**Add additional info related:**_
->> _Main [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/info.txt)_
->>> _CPU [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/CPUInfo.txt) from debug boot log_
->>>> _PCI [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/PCIInfo.txt) from debug boot log_
->>>>> _Additional Framebuffer [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend#additional-framebuffer-for-amd-navi-gpus) for AMD Navi GPU_
+ _**Add additional info related:**_
+> _Main [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/info.txt)_
+>> _CPU [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/CPUInfo.txt) from debug boot log_
+>>> _PCI [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/PCIInfo.txt) from debug boot log_
+>>>> _Additional Framebuffer [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend#additional-framebuffer-for-amd-navi-gpus) for AMD Navi GPU_
 
 > _**Add Method:**_
 >> _DTGP. **Refer:** [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)_
