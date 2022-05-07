@@ -2,7 +2,7 @@
 
 ![Artboard 1](https://user-images.githubusercontent.com/72515939/166086285-c5c771ed-e4d4-409a-b2d5-2e3f4c4325ea.png)
 
-> **Reminder:**<div align="justify">This is not an **official** method. All the information displayed is based on actual hardware and an experimental basis. Half of the information is taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others are taken from several well-known sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), please refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0)</div>
+> **Reminder:**<div align="justify">This is not an **official** method. All the information displayed is based on actual hardware and an experimental basis. Half of the information is taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others are taken from several well-known sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), Refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0)</div>
 
 </br>
 
@@ -29,7 +29,7 @@
 | BigSur       | 0            | 0                    | 0                      | j185-10.15.6 (19G2005)     |
 | Monterey     | 0            | 0                    | 0                      | j185-10.15.6 (19G2005)     |
 
->> **Remark:**<div align="justify">The settings above may not be the same as the recommended settings by Dortania. To find out more, please check [OpenCore Configuration](https://dortania.github.io/docs/release/Configuration.html) and [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for SecureBootModel selection.</div>
+> **Remark:**<div align="justify">The settings above may not be the same as the recommended settings by Dortania. To find out more, please check [OpenCore Configuration](https://dortania.github.io/docs/release/Configuration.html) and [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for SecureBootModel selection.</div>
 
 </br>
 
@@ -48,7 +48,7 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 | Gigabyte         | F12          | Asrock           | F11          |
 | MSI              | F11          | EVGA             | F7           |
 
->> **Remark:**<div align="justify">BIOS key in the table above is not entirely correct. The key is depending on how the manufacturer designs the board. Please pay attention. This is basic knowledge to understand how your motherboard works. It is better to refer to any source, especially your motherboard manufacturer, for a better understanding.</div>
+> **Remark:**<div align="justify">BIOS key in the table above is not entirely correct. The key is depending on how the manufacturer designs the board. Please pay attention. This is basic knowledge to understand how your motherboard works. It is better to refer to any source, especially your motherboard manufacturer, for a better understanding.</div>
 
 
 </br>
@@ -84,7 +84,7 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 **MacOS**<p align="center"><img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161430979-9b890a71-a348-439b-98df-0e53e6a49da8.png"></div>
 
->> **Remark:**<div align="justify">For dual or triple booting PCs, this application is very useful to manage Windows + MacOS or Windows + MacOS + Linux partition. [DiskGenius](https://www.diskgenius.com) or previously [Partition Guru](https://www.partitionguru.com) is a versatile program packed with comprehensive functions for partition recovery, file recovery, disk management, data backup, disk utilities, etc. It manages storage space with high efficiency, recovers data lost due to disk corruption, formatting, deletion, virus attack, etc. In other mean, DiskGenius is a simple tool that allows users to manage the partitions on hard drive and to format them, create new ones, or delete. This utility is compatible and works well with virtual hard drives like VMware, VirtualBox and Virtual PC in addition to supporting SCSI, IDE, SATA and USB flash drives or memory cards. The best thing is, this app capable to view and manage EFI/ESP partition which made managing partition so easily if any file required to be edit, especially [OpenCore](https://github.com/acidanthera/OpenCorePkg) or [Clover](https://github.com/CloverHackyColor/CloverBootloader) config.plist. However, APFS and HFS+ is not fully supported. That's the weak spot of this application. To use APFS and HFS+ formats on windows, [Paragon Hard Disk Manager™ Community Edition](https://www.paragon-software.com/free/pm-express/?msclkid=b2537d35cbb811ecbee6e7525f1ca4a9) is adequate. Both combination support may improve user experience.</div>
+> **Remark:**<div align="justify">For dual or triple booting PCs, this application is very useful to manage Windows + MacOS or Windows + MacOS + Linux partition. [DiskGenius](https://www.diskgenius.com) or previously [Partition Guru](https://www.partitionguru.com) is a versatile program packed with comprehensive functions for partition recovery, file recovery, disk management, data backup, disk utilities, etc. It manages storage space with high efficiency, recovers data lost due to disk corruption, formatting, deletion, virus attack, etc. In other mean, DiskGenius is a simple tool that allows users to manage the partitions on hard drive and to format them, create new ones, or delete. This utility is compatible and works well with virtual hard drives like VMware, VirtualBox and Virtual PC in addition to supporting SCSI, IDE, SATA and USB flash drives or memory cards. The best thing is, this app capable to view and manage EFI/ESP partition which made managing partition so easily if any file required to be edit, especially [OpenCore](https://github.com/acidanthera/OpenCorePkg) or [Clover](https://github.com/CloverHackyColor/CloverBootloader) config.plist. However, APFS and HFS+ is not fully supported. That's the weak spot of this application. To use APFS and HFS+ formats on windows, [Paragon Hard Disk Manager™ Community Edition](https://www.paragon-software.com/free/pm-express/?msclkid=b2537d35cbb811ecbee6e7525f1ca4a9) is adequate. Both combination support may improve user experience.</div>
 
 ![Artboard 1](https://user-images.githubusercontent.com/72515939/166097226-b35e84ab-0498-419a-a3e6-0cf6e9c276e5.png)
 
@@ -134,7 +134,7 @@ Below are the base OpenCore files and folders used for this project:
 
 [![rmCD5f.png](https://i.im.ge/2022/05/07/rmCD5f.png)](https://im.ge/i/efi-tree.rmCD5f)
 
->> **Remark:** For the [debugging](https://economictimes.indiatimes.com/definition/debugging) process, it is best not to use [OpenCanopy.efi](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html).
+> **Remark:** For the [debugging](https://economictimes.indiatimes.com/definition/debugging) process, it is best not to use [OpenCanopy.efi](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html).
 
 </br>
 
@@ -152,7 +152,7 @@ Below are the base OpenCore files and folders used for this project:
 
 ### OC\ACPI
 
->> **Refer:** [ACPI Data Tables and Table Definition Language](https://uefi.org/specs/ACPI/6.4/21_ACPI_Data_Tables_and_Table_Def_Language/ACPI_Data_Tables.html#acpi-data-tables-and-table-definition-language)
+> **Refer:** [ACPI Data Tables and Table Definition Language](https://uefi.org/specs/ACPI/6.4/21_ACPI_Data_Tables_and_Table_Def_Language/ACPI_Data_Tables.html#acpi-data-tables-and-table-definition-language)
 
 </br>
 
@@ -168,7 +168,7 @@ Below are the base OpenCore files and folders used for this project:
 <img width="1111" alt="Screen_Shot_2022-04-30_at_3_40_56_PM" src="https://user-images.githubusercontent.com/72515939/166096876-9d9d956e-80ed-477c-b7c3-0897d7c47abe.png">
 </div>
 
->> **Refer:** [Definition of Terms](https://uefi.org/specs/ACPI/6.4/02_Definition_of_Terms/Definition_of_Terms.html). For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org/specs/ACPI/6.4/index.html)
+> **Refer:** [Definition of Terms](https://uefi.org/specs/ACPI/6.4/02_Definition_of_Terms/Definition_of_Terms.html). For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org/specs/ACPI/6.4/index.html)
 
 </br>
 
@@ -509,7 +509,7 @@ So, it should be...
 
 **IQSV Test** Checkout this [link](https://youtu.be/dd3SwAZ3S_w)
 
->> **Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki patch only applicable via Catalina and below.
+> **Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki patch only applicable via Catalina and below.
 </br>
 
 ## Power
