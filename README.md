@@ -575,7 +575,19 @@ So, it should be...
 
 ## Update
 
-**OCTool**<div align="justify"> A small project from the **Rust** language provides better OpenCore update features. Users can build from the included source by running **cargo build** --release or use the **binary** from the releases section on GitHub. This tool does not automatically update itself to the latest version. Watch [rusty-bits/octool](https://github.com/rusty-bits/octool) guide via [Youtube](https://www.youtube.com/watch?v=5KNzD08Hkxs&t=4s)</div>
+**OCTool**<div align="justify"> A small project from the **Rust** language provides better OpenCore update features. Users can build from the included source by running **cargo build** --release or use the **binary** from the releases section on GitHub. This tool does not automatically update itself to the latest version. Watch [octool](https://github.com/rusty-bits/octool) guide via [Youtube](https://www.youtube.com/watch?v=5KNzD08Hkxs&t=4s)</div>
+
+Input:
+
+`./octool` [options] `-o x.y.z` [config.plist]
+
+`-d` to use debug versions for EFI instead of release versions
+
+`-h` to print help/usage message
+
+`-o x.y.z` is to select OpenCore version. e.g. `-o 0.7.4`
+
+Without this option octool will make a quick guess as to which version to use based on the INPUT config.plist, if no INPUT config.plist is provided, **octool ** will default to the latest version of OpenCore. Read more on [rusty-bits/octool](https://github.com/rusty-bits/octool)
 
 </br>
 
