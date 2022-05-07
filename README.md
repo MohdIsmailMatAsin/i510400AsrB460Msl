@@ -575,7 +575,7 @@ So, it should be...
 
 ## Update
 
-**OCTool**<div align="justify"> Watch [rusty-bits/octool](https://github.com/rusty-bits/octool) guide via [Youtube](https://www.youtube.com/watch?v=5KNzD08Hkxs&t=4s)</div>
+**OCTool**<div align="justify"> A small project from the **Rust** language provides better OpenCore update features. Users can build from the included source by running **cargo build** --release or use the **binary** from the releases section on GitHub. This tool does not automatically update itself to the latest version. Watch [rusty-bits/octool](https://github.com/rusty-bits/octool) guide via [Youtube](https://www.youtube.com/watch?v=5KNzD08Hkxs&t=4s)</div>
 
 </br>
 
