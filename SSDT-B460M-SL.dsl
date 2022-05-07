@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLQQDxbF.aml, Tue Apr 19 13:58:00 2022
+ * Disassembly of iASLj53gd3.aml, Sat May  7 08:28:02 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000E93 (3731)
+ *     Length           0x00000F28 (3880)
  *     Revision         0x02
- *     Checksum         0x44
+ *     Checksum         0x9D
  *     OEM ID           "Hack"
  *     OEM Table ID     "AsrockSL"
  *     OEM Revision     0x00000000 (0)
@@ -22,12 +22,12 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
 {
     External (_SB_.PCI0, DeviceObj)
     External (_SB_.PCI0.ALS0, DeviceObj)
+    External (_SB_.PCI0.DRAM, DeviceObj)
     External (_SB_.PCI0.GFX0, DeviceObj)
     External (_SB_.PCI0.HDAS, DeviceObj)
     External (_SB_.PCI0.HECI, DeviceObj)
     External (_SB_.PCI0.LPCB, DeviceObj)
     External (_SB_.PCI0.LPCB.EC__, DeviceObj)
-    External (_SB_.PCI0.DRAM, DeviceObj)
     External (_SB_.PCI0.PEG0, DeviceObj)
     External (_SB_.PCI0.PEG0.PEGP, DeviceObj)
     External (_SB_.PCI0.PPMC, DeviceObj)
@@ -53,11 +53,41 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
     External (_SB_.PCI0.SBUS, DeviceObj)
     External (_SB_.PCI0.TSUB, DeviceObj)
     External (_SB_.PCI0.XHC_, DeviceObj)
+    External (_SB_.PNLF, DeviceObj)
     External (_SB_.PR00, ProcessorObj)
     External (_SB_.USBX, DeviceObj)
     External (LHIH, IntObj)
     External (LLOW, IntObj)
     External (STAS, IntObj)
+
+    Method (DTGP, 5, NotSerialized)
+    {
+        If ((Arg0 == ToUUID ("a0b5b7c6-1318-441c-b0c9-fe695eaf949b") /* Unknown UUID */))
+        {
+            If ((Arg1 == One))
+            {
+                If ((Arg2 == Zero))
+                {
+                    Arg4 = Buffer (One)
+                        {
+                             0x03                                             // .
+                        }
+                    Return (One)
+                }
+
+                If ((Arg2 == One))
+                {
+                    Return (One)
+                }
+            }
+        }
+
+        Arg4 = Buffer (One)
+            {
+                 0x00                                             // .
+            }
+        Return (Zero)
+    }
 
     Scope (\_SB)
     {
@@ -68,6 +98,15 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
             {
                 STAS = One
             }
+        }
+
+        Device (PNLF)
+        {
+            Name (_ADR, Zero)  // _ADR: Address
+            Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
+            Name (_CID, "backlight")  // _CID: Compatible ID
+            Name (_UID, 0x0A)  // _UID: Unique ID
+            Name (_STA, 0x0B)  // _STA: Status
         }
 
         Scope (PR00)
@@ -140,37 +179,25 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                 })
             }
 
+            Device (DRAM)
+            {
+                Name (_ADR, Zero)  // _ADR: Address
+                Method (_STA, 0, NotSerialized)  // _STA: Status
+                {
+                    If (_OSI ("Darwin"))
+                    {
+                        Return (0x0F)
+                    }
+                    Else
+                    {
+                        Return (Zero)
+                    }
+                }
+            }
+
             Scope (GFX0)
             {
                 Name (_STA, Zero)  // _STA: Status
-            }
-
-            Device (IGPU)
-            {
-                Name (_ADR, 0x00020000)  // _ADR: Address
-                Name (_STR, Unicode ("Intel UHD Graphics"))  // _STR: Description String
-            }
-
-            Scope (LPCB)
-            {
-                Name (_STR, Unicode ("Intel LPC Controller"))  // _STR: Description String
-                Device (EC)
-                {
-                    Name (_HID, "PNP0C09" /* Embedded Controller Device */)  // _HID: Hardware ID
-                    Name (_UID, One)  // _UID: Unique ID
-                    Name (_STR, Unicode ("Embedded Controller"))  // _STR: Description String
-                    Method (_STA, 0, Serialized)  // _STA: Status
-                    {
-                        If (_OSI ("Darwin"))
-                        {
-                            Return (0x0F)
-                        }
-                        Else
-                        {
-                            Return (Zero)
-                        }
-                    }
-                }
             }
 
             Scope (HDAS)
@@ -195,18 +222,30 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                 Name (_STR, Unicode ("Intel Management Engine Interface #1"))  // _STR: Description String
             }
 
-            Device (DRAM)
+            Device (IGPU)
             {
-                Name (_ADR, Zero)  // _ADR: Address
-                Method (_STA, 0, NotSerialized)  // _STA: Status
+                Name (_ADR, 0x00020000)  // _ADR: Address
+                Name (_STR, Unicode ("Intel UHD Graphics"))  // _STR: Description String
+            }
+
+            Scope (LPCB)
+            {
+                Name (_STR, Unicode ("B460 Chipset LPC/eSPI Controller"))  // _STR: Description String
+                Device (EC)
                 {
-                    If (_OSI ("Darwin"))
+                    Name (_HID, "PNP0C09" /* Embedded Controller Device */)  // _HID: Hardware ID
+                    Name (_UID, One)  // _UID: Unique ID
+                    Name (_STR, Unicode ("Embedded Controller"))  // _STR: Description String
+                    Method (_STA, 0, Serialized)  // _STA: Status
                     {
-                        Return (0x0F)
-                    }
-                    Else
-                    {
-                        Return (Zero)
+                        If (_OSI ("Darwin"))
+                        {
+                            Return (0x0F)
+                        }
+                        Else
+                        {
+                            Return (Zero)
+                        }
                     }
                 }
             }
@@ -361,11 +400,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                             }, 
 
                             "name", 
-                            Buffer (0x05)
-                            {
-                                "ANS0"
-                            }, 
-
+                            "ANS0", 
                             "vendor-id", 
                             Buffer (0x04)
                             {
@@ -439,11 +474,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                             }, 
 
                             "name", 
-                            Buffer (0x05)
-                            {
-                                "ANS1"
-                            }, 
-
+                            "ANS1", 
                             "vendor-id", 
                             Buffer (0x04)
                             {
