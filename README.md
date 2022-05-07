@@ -498,7 +498,7 @@ So, it should be...
 - >>>>> **Internal**
 
 
-**device-id:** Devide id number
+**device-id:** Device id number
 
 - > **DeviceProperties**
 - >> **PciRoot(0x0)/Pci(0x2,0x0)**
