@@ -598,6 +598,8 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 ## Changelog
 
 - Improve language so that information is easy to understand
+- Add CPU Info from debug boot log
+- Add PCI Info freom debug boot log
 - Additional information related to Navi GPU patch
 - Add PNLF. Most real Macs have this device. Is it working or not? Not sure.
 - Add DTGP method (Not compulsory, remove when unneeded. Check [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl))
