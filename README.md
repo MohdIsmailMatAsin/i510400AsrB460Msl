@@ -567,7 +567,7 @@ So, it should be...
 
 **Log**<div align="justify">[v0.8.0](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/commit/521f387a8bbfe912c0168be196ac6029dc96fe3d)</div>
 
-> **Tested:** Pass
+> **Result:** Pass
 >> **Time:** 1535PM
 >>> **Date:** 7th May 2022
 
