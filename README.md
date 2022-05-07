@@ -95,28 +95,28 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 **What is OpenCore**<div align="justify">Referred to as a package of boot-loader and also a [chain-loading](https://en.wikipedia.org/wiki/Chain_loadings) software. It is a complex software program, used to call the operating systems MacOS, Linux, and Windows. In addition, it also has the ability to inject new data into MacOS operating systems such as SMBIOS, Advanced Configuration Table and Power Interface (ACPI), and Kernel Extension (Kext). The package contains additional UEFI support common libraries shared by other projects in [Acidanthera](https://github.com/acidanthera). The primary purpose of the library set is to provide supplemental functionality for Apple-specific UEFI drivers. Key features:</div>
 
-- Apple disk image loading support
-- Apple keyboard input aggregation
-- Apple PE image signature verification
-- Apple UEFI secure boot supplemental code
-- Audio management with screen reading support
-- Basic ACPI and SMBIOS manipulation
-- CPU information gathering with timer support
-- Cryptographic primitives (SHA-256, RSA, etc.)
-- Decompression primitives (zlib, lzss, lzvn, etc.)
-- Helper code for ACPI reads and modifications
-- Higher level abstractions for files, strings, UEFI variables
-- Overflow checking arithmetics
-- PE image loading with no UEFI Secure Boot conflict
-- Plist configuration format parsing
-- PNG image manipulation
-- Text output and graphics output implementations
-- XNU kernel driver injection and patch engine
+- _Apple disk image loading support_
+- _Apple keyboard input aggregation_
+- _Apple PE image signature verification_
+- _Apple UEFI secure boot supplemental code_
+- _Audio management with screen reading support_
+- _Basic ACPI and SMBIOS manipulation_
+- _CPU information gathering with timer support_
+- _Cryptographic primitives (SHA-256, RSA, etc.)_
+- _Decompression primitives (zlib, lzss, lzvn, etc.)_
+- _Helper code for ACPI reads and modifications_
+- _Higher level abstractions for files, strings, UEFI variables_
+- _Overflow checking arithmetics_
+- _PE image loading with no UEFI Secure Boot conflict_
+- _Plist configuration format parsing_
+- _PNG image manipulation_
+- -Text output and graphics output implementations_
+- _XNU kernel driver injection and patch engine_
 
 **Package**
 
-- [OpenCore v0.8.0 - Debug](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-DEBUG.zip)
-- [OpenCore v0.8.0 - Release](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-RELEASE.zip)
+- _[OpenCore v0.8.0 - Debug](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-DEBUG.zip)_
+- _[OpenCore v0.8.0 - Release](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-RELEASE.zip)_
 
 **Change Log:**
 
@@ -183,16 +183,16 @@ Below are the base OpenCore files and folders used for this project:
 
 **DSDT Patch** may cause
 
-- ⚠️ Broken motherboard BIOS, or
-- ⚠️ Inefficient device with the wrong injection, or
-- ⚠️ Cause malfunction device, or
-- ⚠️ PC unable to boot properly due to an incorrect patch (difficult to reverse).
+- _⚠️ Broken motherboard BIOS, or_
+- _⚠️ Inefficient device with the wrong injection, or_
+- _⚠️ Cause malfunction device, or_
+- _⚠️ PC unable to boot properly due to an incorrect patch (difficult to reverse)._
 
 </br>
 
 **SSDT Patch** may affect
 
-- ⚡ ACPI Injection to Windows/Linux.
+- _⚡ ACPI Injection to Windows/Linux._
 
 **On Other Operating Systems, Avoid ACPI Injection**<div align="justify">Most of these issues may affect dual booting (Windows + MacOS). Luckily, there are settings via config.plist to prevent this issue, but this is only experimental. Do not assume these settings will work 💯 on your machine. Certain users report the settings are not working, but some report the settings work as well. These settings are actually used only for Dell machines. But it is worth a try. Settings are explained via the table below.</div>
 
@@ -205,8 +205,8 @@ Below are the base OpenCore files and folders used for this project:
 
 So, it should be...
 
-- UpdateSMBIOSMode = **Custom**
-- CustomSMBIOSGuid = **Yes**
+- _UpdateSMBIOSMode = **Custom**_
+- _CustomSMBIOSGuid = **Yes**_
 
 </br>
 
@@ -249,9 +249,9 @@ So, it should be...
 
 **Tools used:**
 
-- [SSDTTime](https://github.com/corpnewt/SSDTTime) > Cross Platform (Mac/Linux/Windows)
-- [MaciASL](https://github.com/acidanthera/MaciASL) > MacOS
-- [Xiasl](https://github.com/ic005k/Xiasl) > Cross Platform (Mac/Linux/Windows)
+- _[SSDTTime](https://github.com/corpnewt/SSDTTime) > Cross Platform (Mac/Linux/Windows)_
+- _[MaciASL](https://github.com/acidanthera/MaciASL) > MacOS_
+- _[Xiasl](https://github.com/ic005k/Xiasl) > Cross Platform (Mac/Linux/Windows)_
 
 </br>
 
@@ -327,14 +327,14 @@ So, it should be...
 
 **Example:** Below is an example of config.plist:
 
-- OpenCore [Monterey/BigSur-Debug](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_debug.plist)
-- OpenCore [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_release.plist)
-- Clover [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_clover.plist)
+- _OpenCore [Monterey/BigSur-Debug](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_debug.plist)_
+- _OpenCore [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_release.plist)_
+- _Clover [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_clover.plist)_
 
 **Tools for editing:**
 
-- [ProperTree](https://github.com/corpnewt/ProperTree) > Cross Platform (Mac/Linux/Windows)
-- [Xplist](https://github.com/ic005k/Xplist) > Cross Platform (Mac/Linux/Windows)
+- _[ProperTree](https://github.com/corpnewt/ProperTree) > Cross Platform (Mac/Linux/Windows)_
+- _[Xplist](https://github.com/ic005k/Xplist) > Cross Platform (Mac/Linux/Windows)_
 
 </br>
 
@@ -357,15 +357,15 @@ So, it should be...
 
 **Booter\Quirks**
 
-- AvoidRuntimeDefrag
-- DevirtualiseMmio
-- EnableSafeModeSlide
-- ProtectUefiServices
-- ProviceCustomSlide
-- RebuildAppleMemoryMap
-- SyncRuntimePermissions
-- ProvideMaxSlide = **0**
-- ResizeAppleGpuBars = **-1**
+- _AvoidRuntimeDefrag_
+- _DevirtualiseMmio_
+- _EnableSafeModeSlide_
+- _ProtectUefiServices_
+- _ProviceCustomSlide_
+- _RebuildAppleMemoryMap_
+- _SyncRuntimePermissions_
+- _ProvideMaxSlide = **0**_
+- _ResizeAppleGpuBars = **-1**_
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 05 AM" src="https://user-images.githubusercontent.com/72515939/164505410-32911711-727d-40f9-9d2a-f542700b5dcc.png"></div>
 
@@ -373,12 +373,12 @@ So, it should be...
 
 **Kernel\Quirks**
 
-- CustomSMBIOSGuid
-- DisableIoMapper
-- DisableLinkeditJettison
-- PanicNoKextDump
-- PowerTimeoutKernelPanic
-- SetApfsTimeout = **0**
+- _CustomSMBIOSGuid_
+- _DisableIoMapper_
+- _DisableLinkeditJettison_
+- _PanicNoKextDump_
+- _PowerTimeoutKernelPanic_
+- _SetApfsTimeout = **0**_
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 48 AM" src="https://user-images.githubusercontent.com/72515939/164505506-bc2e3705-8225-407d-a486-0b232f4a5fed.png"></div>
 
@@ -386,11 +386,11 @@ So, it should be...
 
 **UEFI\Quirks**
 
-- EnableVectorAcceleration
-- RequestBootVarRouting
-- ExitBootServiceDelay = **0**
-- ResizeGPUBars = **-1**
-- TscSyncTimeout = **0**
+- _EnableVectorAcceleration_
+- _RequestBootVarRouting_
+- _ExitBootServiceDelay = **0**_
+- _ResizeGPUBars = **-1**_
+- _TscSyncTimeout = **0**_
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 26 AM" src="https://user-images.githubusercontent.com/72515939/164505602-4cf5069b-bdf2-4017-8a54-336f82464ad4.png"></div>
 
@@ -401,31 +401,26 @@ So, it should be...
 **Framebuffers** available in **AMDRadeonX6000Framebuffer.kext >> Contents >> Info.plist**.
 
 **5700 - Navi 10**
-
 > _**AMDRadeonNavi10Controller**_
 >> _**device-id:** 0x73101002 0x73121002 0x73181002 0x73191002 0x731A1002 0x731B1002 0x731F1002 0x73BF1002_
 >>> _**framebuffer:** ATY,Adder / ATY,Ikaheka_
 
 **5600 - Navi 12**
-
 > _**AMDRadeonNavi12Controller**_
 >> _**device-id:** 0x73601002 0x73621002_
 >>> _**framebuffer:** ATY,Sunbeam_
 
 **5500 - Navi 14**
-
 > **AMDRadeonNavi14Controller**
 >> _**device-id:** 0x73401002 0x73411002 0x73431002 0x73471002 0x734F1002
 >>> _**framebuffer:** ATY,Python / ATY,Keelback / ATY,Boa
 
 **6800 and 6900 - Navi 21**
-
 > **AMDRadeonNavi21Controller**
 >> _**device-id:** 0x73A01002 0x73A21002 0x73A31002 0x73AB1002 0x73AE1002 0x73AF1002 0x73BF1002
 >>> _**framebuffer:** ATY,Belknap / ATY,Carswell / ATY,Deepbay
 
 **6600 - Navi 23**
-
 > **AMDRadeonNavi23Controller**_
 >> _**device-id:** 0x73E31002 0x73FF1002 0x73E01002_
 >>> _**framebuffer:** ATY,Henbury_
@@ -462,18 +457,18 @@ So, it should be...
 
 **AAPL,ig-platform-id**<div align="justify">This is an important part. The keyword for the best headless settings for desktop is **mobile**. For desktop **(iMac SMBIOS)**, the framebuffer setting for the **mobile** variant is not needed. Open **Hackintool > Patch > Platform ID** option. Find any setting which is not related to the mobile **(Mobile = No)**. This guide is to find a proper **AAPL,ig-platform-id** for Desktop. In this case, **0x3E910003** in hexadecimal, which is equal to **0300913E**, 4 byte data hex swapped. Below is an example:</div>
 
-- 0x3E910003 = 0300913E
-- AAPL,ig-platform-id = 0300913E
+- _0x3E910003 = 0300913E_
+- _AAPL,ig-platform-id = 0300913E_
 
 <p align="center"><img width="1176" alt="Screen_Shot_2022-05-02_at_5_10_03_PM" src="https://user-images.githubusercontent.com/72515939/166212509-9f300b98-66c5-43f0-abf9-e14dd5e610a2.png"></div>
 
 </br>
 
-**device-id**<div align="justify">To get the proper main card platform as `headless` injection, `device-id` is required to get the device name. On `Intel 10th Gen` processor, it is not necessary, but sometimes this patch may fix certain IGPU issues. As an example, find **Activity Monitor > Window > GPU History** or **Activity Monitor > GPU** extra tab, IGPU will display as **Intel KBL Unknown**. Checkout [Issues #1905](https://github.com/acidanthera/bugtracker/issues/1905). To proper rename, use **Hackintool** as a guide by finding the appropriate **device-id**, not in mobile mode (Mobile = No). In this case, GPU Hexadecimal device-id 0x3E9B8086 which is equal to 4 byte data hex swapped 9B3E0000 is injected via config.plist in IGPU DeviceProperties section. Below is an example:</div>
+**device-id**<div align="justify">To get the proper main card platform as `headless` injection, `device-id` is required to get the device name. On `Intel 10th Gen` processor, it is not necessary, but sometimes this patch may fix certain IGPU issues. As an example, find **Activity Monitor > Window > GPU History** or **Activity Monitor > GPU** extra tab, IGPU will display as **Intel KBL Unknown**. Checkout **[Issues #1905](https://github.com/acidanthera/bugtracker/issues/1905)**. To proper rename, use **Hackintool** as a guide by finding the appropriate **device-id**, not in mobile mode (Mobile = No). In this case, GPU Hexadecimal device-id **0x3E9B8086** which is equal to 4 byte data hex swapped **9B3E0000** is injected via config.plist in IGPU DeviceProperties section. Below is an example:</div>
 
-- 0x3E9B8086 = 9B3E8086
-- 9B3E8086 = 9B3E0000 (8086 to 0000)
-- device-id = 9B3E0000
+- _0x3E9B8086 = 9B3E8086_
+- _9B3E8086 = 9B3E0000 (8086 to 0000)_
+- _device-id = 9B3E0000_
 
 <p align="center"><img width="1172" alt="Screen_Shot_2022-05-02_at_5_27_16_PM" src="https://user-images.githubusercontent.com/72515939/166213623-407d87dd-5368-4430-b8e0-5fc87eb97be1.png"></div>
 
@@ -481,16 +476,14 @@ So, it should be...
 
 **Inject**<div align="justify">Other additional information to be inject:</div>
 
-_**AAPL,ig-platform-id:** Property used by macOS to determine the framebuffer profile with Ivy Bridge and newer_
-
+**AAPL,ig-platform-id:** Property used by macOS to determine the framebuffer profile with Ivy Bridge and newer
 - > _**DeviceProperties**_
 - >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
 - >>> _**AAPL,ig-platform-id**_
 - >>>> _**data**_
 - >>>>> _**0300913E**_
 
-_**AAPL,slot-name:** To show/set PCI Cards on System Profiler_
-
+**AAPL,slot-name:** To show/set PCI Cards on System Profiler
 - > _**DeviceProperties**_
 - >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
 - >>> _**AAPL,slot-name**_
@@ -498,64 +491,56 @@ _**AAPL,slot-name:** To show/set PCI Cards on System Profiler_
 - >>>>> _**Internal**_
 
 
-_**device-id:** Device id number_
-
+**device-id:** Device id number
 - > _**DeviceProperties**_
 - >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
 - >>> -**device-id**_ 
 - >>>> _**data**_ 
 - >>>>> _**9B3E0000**_
 
-_**igfxonln:** To force-online device property or to force online status on all displays_
-
+**igfxonln:** To force-online device property or to force online status on all displays
 - > _**DeviceProperties**_
 - >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
 - >>> _**igfxonln**_
 - >>>> _**data**_ 
 - >>>>> _**01000000**_
 
-_**device_type:** Type of device_
-
+**device_type:** Type of device
 - > _**DeviceProperties**_
 - >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
 - >>> _**device_type**_ 
 - >>>> _**string**_ 
 - >>>>> _**Display controller**_
 
-_**enable-metal:** To enable-metal property or force enable Metal support on Intel for offline rendering_
-
+**enable-metal:** To enable-metal property or force enable Metal support on Intel for offline rendering
 - > _**DeviceProperties**_
 - >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
 - >>> _**enable-metal**_ 
 - >>>> _**data**_ 
 - >>>>> _**01000000**_
  
-_**iommu-selection:** Allows VMs to directly use peripheral devices through direct memory access (DMA)_
-
+**iommu-selection:** Allows VMs to directly use peripheral devices through direct memory access (DMA)
 - > _**DeviceProperties**_
 - >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
 - >>> _**iommu-selection**_ 
 - >>>> _**data**_ 
 - >>>>> _**00000000**_
 
-_**rps-control:** To enable RPS control patch (improves IGPU performance)_
-
+**rps-control:** To enable RPS control patch (improves IGPU performance)
 - > _**DeviceProperties**_
 - >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
 - >>> _**rps-control**_ 
 - >>>> _**data**_
 - >>>>> _**01000000**_
 
-_**igfxfw:** To force loading of Apple GuC firmware_
-
+**igfxfw:** To force loading of Apple GuC firmware
 - > _**DeviceProperties**_
 - >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
 - >>> _**igfxfw**_ 
 - >>>> _**data**_ 
 - >>>>> _**02000000**_
  
-_**hda-gfx:** An onboard properties to HDAU, IGPU, HDEF objects_
-
+**hda-gfx:** An onboard properties to HDAU, IGPU, HDEF objects
 - > _**DeviceProperties**_
 - >> _**PciRoot(0x0)/Pci(0x2,0x0)**_
 - >>> _**hda-gfx**_
@@ -673,14 +658,14 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 
 ## Changelog
 
- _**Add additional info related:**_
+**Add additional info related:**
 > _Main [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/info.txt)_
 >> _CPU [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/CPUInfo.txt) from debug boot log_
 >>> _PCI [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/PCIInfo.txt) from debug boot log_
 >>>> _Additional Framebuffer [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend#additional-framebuffer-for-amd-navi-gpus) for AMD Navi GPU_
 
-> _**Add Method:**_
->> _DTGP. **Refer:** [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)_
+**Add Method:**
+> _DTGP. **Refer:** [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)_
 
 </br>
 
