@@ -17,7 +17,7 @@
 | IGPU      | Intel UHD Graphics 630 1GB       | PCI 2       | VIA USB 3.0 eXtensible Host Controller        |
 | Memory    | PNY XLR8 Gaming X Memory 3200MHz | Storage 1   | 500GB Kingston A2000 NVMe                     |
 | Monitor   | Samsung U28E590 4K               | Storage 2   | 500GB Kingston A2000 NVMe                     |
-| SMBIOS    | iMac20,1                         | Board ID    | Mac-CFF7D910A743CAAF                          |
+| SMBIOS    | [iMac20,1]([Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/info.txt))                         | Board ID    | Mac-CFF7D910A743CAAF                          |
 
 </br>
 
@@ -598,6 +598,7 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 ## Changelog
 
 - Improve language so that information is easy to understand
+- Add [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/info.txt)
 - Add [CPU Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/CPUInfo.txt) from debug boot log
 - Add [PCI Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/PCIInfo.txt) freom debug boot log
 - Additional information related to Navi GPU patch
