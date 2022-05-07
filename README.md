@@ -597,8 +597,6 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 
 ## Changelog
 
-Current Version = OpenCore v0.8.0
-
 - Improve language so that information is easy to understand
 - Additional information related to Navi GPU patch
 - Add PNLF. Most real Macs have this device. Is it working or not? Not sure.
