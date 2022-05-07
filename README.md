@@ -519,7 +519,7 @@ So, it should be...
 - >>>> **data** 
 - >>>>> **01000000**
  
-**iommu-selection:** Allows VMs to directly use peripheral devices through direct memory access (DMA)
+**iommu-selection:** Allows VMs to directly use peripheral devices through direct memory access (DMA). Refer: [Apple Platform Security](https://support.apple.com/lt-lt/guide/security/seca4960c2b5/web)
 - > **DeviceProperties**
 - >> **PciRoot(0x0)/Pci(0x2,0x0)**
 - >>> **iommu-selection** 
