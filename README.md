@@ -509,6 +509,8 @@ So, it should be...
 - ❌ [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view)
 - ✔️ Netflix 💯 working
 
+**com.apple.WebKit.GPU Dump** [Dump](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/Sample%20of%20com.apple.WebKit.GPU.txt)
+
 **IQSV Test** Checkout this [link](https://youtu.be/dd3SwAZ3S_w)
 
 **Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki patch only applicable via Catalina and below.
