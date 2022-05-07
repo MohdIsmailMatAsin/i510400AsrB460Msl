@@ -2,7 +2,7 @@
 
 ![Artboard 1](https://user-images.githubusercontent.com/72515939/166086285-c5c771ed-e4d4-409a-b2d5-2e3f4c4325ea.png)
 
-**Reminder:**<div align="justify">This is not an **official** method. All the information displayed is based on actual hardware and an experimental basis. Half of the information is taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others are taken from several well-known sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), please refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0)</div>
+> **Reminder:**<div align="justify">This is not an **official** method. All the information displayed is based on actual hardware and an experimental basis. Half of the information is taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others are taken from several well-known sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), please refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0)</div>
 
 </br>
 
@@ -29,7 +29,7 @@
 | BigSur       | 0            | 0                    | 0                      | j185-10.15.6 (19G2005)     |
 | Monterey     | 0            | 0                    | 0                      | j185-10.15.6 (19G2005)     |
 
-**Remark:**<div align="justify">The settings above may not be the same as the recommended settings by Dortania. To find out more, please check [OpenCore Configuration](https://dortania.github.io/docs/release/Configuration.html) and [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for SecureBootModel selection.</div>
+>> **Remark:**<div align="justify">The settings above may not be the same as the recommended settings by Dortania. To find out more, please check [OpenCore Configuration](https://dortania.github.io/docs/release/Configuration.html) and [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for SecureBootModel selection.</div>
 
 </br>
 
@@ -48,7 +48,7 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 | Gigabyte         | F12          | Asrock           | F11          |
 | MSI              | F11          | EVGA             | F7           |
 
-**Remark:**<div align="justify">BIOS key in the table above is not entirely correct. The key is depending on how the manufacturer designs the board. Please pay attention. This is basic knowledge to understand how your motherboard works. It is better to refer to any source, especially your motherboard manufacturer, for a better understanding.</div>
+>> **Remark:**<div align="justify">BIOS key in the table above is not entirely correct. The key is depending on how the manufacturer designs the board. Please pay attention. This is basic knowledge to understand how your motherboard works. It is better to refer to any source, especially your motherboard manufacturer, for a better understanding.</div>
 
 
 </br>
@@ -84,7 +84,7 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 **MacOS**<p align="center"><img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161430979-9b890a71-a348-439b-98df-0e53e6a49da8.png"></div>
 
-**Remark:**<div align="justify">For dual or triple booting PCs, this application is very useful to manage Windows + MacOS or Windows + MacOS + Linux partition. [DiskGenius](https://www.diskgenius.com) or previously [Partition Guru](https://www.partitionguru.com) is a versatile program packed with comprehensive functions for partition recovery, file recovery, disk management, data backup, disk utilities, etc. It manages storage space with high efficiency, recovers data lost due to disk corruption, formatting, deletion, virus attack, etc. In other mean, DiskGenius is a simple tool that allows users to manage the partitions on hard drive and to format them, create new ones, or delete. This utility is compatible and works well with virtual hard drives like VMware, VirtualBox and Virtual PC in addition to supporting SCSI, IDE, SATA and USB flash drives or memory cards. The best thing is, this app capable to view and manage EFI/ESP partition which made managing partition so easily if any file required to be edit, especially [OpenCore](https://github.com/acidanthera/OpenCorePkg) or [Clover](https://github.com/CloverHackyColor/CloverBootloader) config.plist. However, APFS and HFS+ is not fully supported. That's the weak spot of this application. To use APFS and HFS+ formats on windows, [Paragon Hard Disk Manager™ Community Edition](https://www.paragon-software.com/free/pm-express/?msclkid=b2537d35cbb811ecbee6e7525f1ca4a9) is adequate. Both combination support may improve user experience.</div>
+>> **Remark:**<div align="justify">For dual or triple booting PCs, this application is very useful to manage Windows + MacOS or Windows + MacOS + Linux partition. [DiskGenius](https://www.diskgenius.com) or previously [Partition Guru](https://www.partitionguru.com) is a versatile program packed with comprehensive functions for partition recovery, file recovery, disk management, data backup, disk utilities, etc. It manages storage space with high efficiency, recovers data lost due to disk corruption, formatting, deletion, virus attack, etc. In other mean, DiskGenius is a simple tool that allows users to manage the partitions on hard drive and to format them, create new ones, or delete. This utility is compatible and works well with virtual hard drives like VMware, VirtualBox and Virtual PC in addition to supporting SCSI, IDE, SATA and USB flash drives or memory cards. The best thing is, this app capable to view and manage EFI/ESP partition which made managing partition so easily if any file required to be edit, especially [OpenCore](https://github.com/acidanthera/OpenCorePkg) or [Clover](https://github.com/CloverHackyColor/CloverBootloader) config.plist. However, APFS and HFS+ is not fully supported. That's the weak spot of this application. To use APFS and HFS+ formats on windows, [Paragon Hard Disk Manager™ Community Edition](https://www.paragon-software.com/free/pm-express/?msclkid=b2537d35cbb811ecbee6e7525f1ca4a9) is adequate. Both combination support may improve user experience.</div>
 
 ![Artboard 1](https://user-images.githubusercontent.com/72515939/166097226-b35e84ab-0498-419a-a3e6-0cf6e9c276e5.png)
 
@@ -134,7 +134,7 @@ Below are the base OpenCore files and folders used for this project:
 
 [![rmCD5f.png](https://i.im.ge/2022/05/07/rmCD5f.png)](https://im.ge/i/efi-tree.rmCD5f)
 
-**Remark:** For the [debugging](https://economictimes.indiatimes.com/definition/debugging) process, it is best not to use [OpenCanopy.efi](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html).
+>> **Remark:** For the [debugging](https://economictimes.indiatimes.com/definition/debugging) process, it is best not to use [OpenCanopy.efi](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html).
 
 </br>
 
@@ -152,7 +152,7 @@ Below are the base OpenCore files and folders used for this project:
 
 ### OC\ACPI
 
-**Refer:** [ACPI Data Tables and Table Definition Language](https://uefi.org/specs/ACPI/6.4/21_ACPI_Data_Tables_and_Table_Def_Language/ACPI_Data_Tables.html#acpi-data-tables-and-table-definition-language)
+>> **Refer:** [ACPI Data Tables and Table Definition Language](https://uefi.org/specs/ACPI/6.4/21_ACPI_Data_Tables_and_Table_Def_Language/ACPI_Data_Tables.html#acpi-data-tables-and-table-definition-language)
 
 </br>
 
@@ -168,7 +168,7 @@ Below are the base OpenCore files and folders used for this project:
 <img width="1111" alt="Screen_Shot_2022-04-30_at_3_40_56_PM" src="https://user-images.githubusercontent.com/72515939/166096876-9d9d956e-80ed-477c-b7c3-0897d7c47abe.png">
 </div>
 
-**Refer:** [Definition of Terms](https://uefi.org/specs/ACPI/6.4/02_Definition_of_Terms/Definition_of_Terms.html). For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org/specs/ACPI/6.4/index.html)
+>> **Refer:** [Definition of Terms](https://uefi.org/specs/ACPI/6.4/02_Definition_of_Terms/Definition_of_Terms.html). For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org/specs/ACPI/6.4/index.html)
 
 </br>
 
@@ -330,8 +330,6 @@ So, it should be...
 - OpenCore [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_release.plist)
 - Clover [Monterey/BigSur-Release](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/config_clover.plist)
 
-</br>
-
 **Tools for editing:**
 
 - [ProperTree](https://github.com/corpnewt/ProperTree) > Cross Platform (Mac/Linux/Windows)
@@ -403,31 +401,31 @@ So, it should be...
 
 **5700 - Navi 10**
 
-- AMDRadeonNavi10Controller
+> AMDRadeonNavi10Controller
 - device-id: 0x73101002 0x73121002 0x73181002 0x73191002 0x731A1002 0x731B1002 0x731F1002 0x73BF1002
 - framebuffer: ATY,Adder / ATY,Ikaheka
 
 **5600 - Navi 12**
 
-- AMDRadeonNavi12Controller
+> AMDRadeonNavi12Controller
 - device-id: 0x73601002 0x73621002
 - framebuffer: ATY,Sunbeam
 
 **5500 - Navi 14**
 
-- AMDRadeonNavi14Controller
+> AMDRadeonNavi14Controller
 - device-id: 0x73401002 0x73411002 0x73431002 0x73471002 0x734F1002
 - framebuffer: ATY,Python / ATY,Keelback / ATY,Boa
 
 **6800 and 6900 - Navi 21**
 
-- AMDRadeonNavi21Controller
+> AMDRadeonNavi21Controller
 - device-id: 0x73A01002 0x73A21002 0x73A31002 0x73AB1002 0x73AE1002 0x73AF1002 0x73BF1002
 - framebuffer: ATY,Belknap / ATY,Carswell / ATY,Deepbay
 
 **6600 - Navi 23**
 
-- AMDRadeonNavi23Controller
+> AMDRadeonNavi23Controller
 - device-id: 0x73E31002 0x73FF1002 0x73E01002
 - framebuffer: ATY,Henbury
 
@@ -461,9 +459,7 @@ So, it should be...
 
 ## UHD Graphics 630 (Headless)
 
-**AAPL,ig-platform-id**<div align="justify">This is an important part. The keyword for the best headless settings for desktop is **mobile**. For desktop **(iMac SMBIOS)**, the framebuffer setting for the **mobile** variant is not needed. Open **Hackintool > Patch > Platform ID** option. Find any setting which is not related to the mobile **(Mobile = No)**. This guide is to find a proper **AAPL,ig-platform-id** for Desktop. In this case, **0x3E910003** in hexadecimal, which is equal to **0300913E**, 4 byte data hex swapped. Below is an example:
-
-</div>
+**AAPL,ig-platform-id**<div align="justify">This is an important part. The keyword for the best headless settings for desktop is **mobile**. For desktop **(iMac SMBIOS)**, the framebuffer setting for the **mobile** variant is not needed. Open **Hackintool > Patch > Platform ID** option. Find any setting which is not related to the mobile **(Mobile = No)**. This guide is to find a proper **AAPL,ig-platform-id** for Desktop. In this case, **0x3E910003** in hexadecimal, which is equal to **0300913E**, 4 byte data hex swapped. Below is an example:</div>
 
 - 0x3E910003 = 0300913E
 - AAPL,ig-platform-id = 0300913E
@@ -513,7 +509,7 @@ So, it should be...
 
 **IQSV Test** Checkout this [link](https://youtu.be/dd3SwAZ3S_w)
 
-**Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki patch only applicable via Catalina and below.
+>> **Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki patch only applicable via Catalina and below.
 </br>
 
 ## Power
@@ -571,10 +567,9 @@ So, it should be...
 
 **Log**<div align="justify">[v0.8.0](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/commit/521f387a8bbfe912c0168be196ac6029dc96fe3d)</div>
 
-Tested: Pass
-
-Test : 1535PM
-Date: 7th May 2022
+> **Tested:** Pass
+>> **Time:** 1535PM
+>>> **Date:** 7th May 2022
 
 </br>
 
@@ -594,19 +589,15 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 
 </br>
 
-</br>
-
 ## Changelog
 
-- Improve language so that information is easy to understand
-- Add [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/info.txt)
-- Add [CPU Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/CPUInfo.txt) from debug boot log
-- Add [PCI Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/PCIInfo.txt) freom debug boot log
-- Additional information related to Navi GPU patch
-- Add DTGP method (Not compulsory, remove when unneeded. Check [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl))
-- Updated [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)
-- Latest picture
-- Specific information for ACPI patch
+> Add additional info related:
+>> Main [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/info.txt)
+>>> CPU [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/CPUInfo.txt) from debug boot log
+>>>> PCI [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/PCIInfo.txt) from debug boot log
+>>>> & Navi GPU patch
+
+> Add DTGP method, Refer: [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)
 
 </br>
 
