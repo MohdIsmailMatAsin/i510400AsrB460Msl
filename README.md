@@ -557,7 +557,7 @@ So, it should be...
 
 **Patched:**
 
-<img width="1817" alt="Screen Shot 2022-05-08 at 8 16 05 AM" src="https://user-images.githubusercontent.com/72515939/167276356-87f8caaf-28de-4a7e-bfea-1a41cf91dc78.png">
+<img width="921" alt="Screen Shot 2022-05-08 at 8 17 48 AM" src="https://user-images.githubusercontent.com/72515939/167276383-95e0c6fe-4a7a-4b1f-98df-c0184ab5b606.png">
 
 **GPU Tab**<div align="justify">Now, new additional GPU tabs on the MacOS Activity Monitor is added. And, the result is....</div>
 
