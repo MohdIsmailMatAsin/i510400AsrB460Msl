@@ -660,7 +660,7 @@ Without this option **octool** will make a "quick guess" as to which version to 
 
 </br>
 
-## Fix Time on Dual Boot (Windows + MacOS)
+## Real Time Clock and Coordinated Universal Time (Windows + MacOS)
 
 **How to fix this issus?**<div align="justify">There is a time maintained by the system board called the **RTC** (Real Time Clock). This is the clock that is maintained by the small battery present on your motherboard. **Windows** expects this time to indicate local time, whereas MacOS expects this time to represent **UTC**. For all practical purposes, **GMT** and **UTC** are the same and local times are a time relative to **GMT/UTC**. The **RealTimeIsUniversal** simply causes **Windows** to treat the **BIOS/RTC** time as **UTC**, just like **MacOS**.</div>
 
