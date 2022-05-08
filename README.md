@@ -328,7 +328,7 @@ So, it should be...
 
 ### OC\Config.plist
 
-**Configuration**<div align="justify">A plist file is a settings file, also known as a properties file, used by MacOS applications. It contains properties and configuration settings for various programs. Plist files are formatted in **XML** and **based on Apple's Core Foundation DTD**. OpenCore/Clover benefit **.plist** to inject MacOS preference, also an information for the application that it holds the preference settings. Other than that, it's a markup language that shares a lot of similarities with HTML. This means you've got a few different data types available to you, and most of the structure revolves around keeping track of opening and closing tags. Besides, a plist is often used to correct problems that a user may be having with an application or devices.</div>
+**Configuration**<div align="justify">A plist file is a settings file, also known as a properties file, used by MacOS applications. It contains properties and configuration settings for various programs. Based on Apple's Core Foundation DTD**, OpenCore/Clover benefit **.plist** to inject MacOS preference, also an information for the application that it holds the preference settings. Other than that, it's a markup language that shares a lot of similarities with HTML. Few different data types available, and most of the structure revolves around keeping track of opening and closing tags. Besides, a plist is often used to correct problems that a user may be having with an application or devices.</div>
 
 <p align="center"><img width="959" alt="Screen Shot 2022-04-25 at 1 19 39 PM" src="https://user-images.githubusercontent.com/72515939/165025284-c442cf30-0099-4f94-8634-19b9877d153a.png"></div>
 
