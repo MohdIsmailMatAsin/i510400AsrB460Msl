@@ -570,7 +570,7 @@ So, it should be...
 **DRM Test**
 
 - ✔️ AppleTV 💯 working
-- ❌ [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view)
+- ❌ [Fairplay Test](https://drive.google.com/file/d/12pQ5FFpdHdGOVV6jvbqEq2wmkpMKxsOF/view) Refer: [Issues #131](https://github.com/osy/HaC-Mini/issues/131)
 - ✔️ Netflix 💯 working
 
 **com.apple.WebKit.GPU dump** [link](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/Sample%20of%20com.apple.WebKit.GPU.txt)
