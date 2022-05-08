@@ -45,7 +45,7 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 | ASUS             | F8           | Intel            | F10          |
 | Gigabyte         | F12          | Asrock           | F11          |
 | MSI              | F11          | EVGA             | F7           |
-> **Remark:**<div align="justify">BIOS key in the table above is not entirely correct. The key is depending on how the manufacturer designs the board. Please pay attention. This is basic knowledge to understand how your motherboard works. It is better to refer to any source, especially your motherboard manufacturer, for a better understanding.</div>
+> _**Remark:**<div align="justify">BIOS key in the table above is not entirely correct. The key is depending on how the manufacturer designs the board. Please pay attention. This is basic knowledge to understand how your motherboard works. It is better to refer to any source, especially your motherboard manufacturer, for a better understanding.</div>_
 
 </br>
 
