@@ -481,6 +481,96 @@ So, it should be...
 
 </br>
 
+**AGDP (Apple Graphics Device Policy)**
+
+**agdpmod=pikera**<div align="justify">Renames **board-id** to **board-ix** effectively disabling boardID checks, this is based off of [Pike.R.A's](https://github.com/Piker-Alpha)[work](https://pikeralpha.wordpress.com/2015/11/23/patching-applegraphicsdevicepolicy-kext/). Most **AMD Navi GPUs** require this patch to overcome the [black screen issue](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/extended/kernel-issues.html#black-screen-after-ioconsoleusers-gioscreenlock-on-navi) on boot. There are two methods, the first is through **Method 1: boot-args**, while the second is via **Method 2: DeviceProperties**. Below is a description regarding this patch:</div>
+
+- Hex = `70696B65726100`
+- Base64 = `cGlrZXJhAA==`
+- ASCII = pikera
+
+</br>
+
+**Method 1 (Temporary)**<div align="justify">Require [Whatevergreen.kext](https://github.com/acidanthera/WhateverGreen). This boot-arg must be added to **config.plist** through the **NVRAM** section. Below is an example:</div>
+
+> NVRAM
+> > Add
+> > > 7C436110-AB2A-4BBB-A880-FE41995C9F82
+> > > > boot-args
+> > > > > `agdpmod=pikera`	
+
+</br>
+
+**Method 2 (Permanent)**<div align="justify">Require [Whatevergreen.kext](https://github.com/acidanthera/WhateverGreen). Hex information is required to inject through the **DeviceProperties** section. The required format is:</div>
+
+> DeviceProperties
+> PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)
+> > agdpmod
+> > > data
+> > > > `70696B65726100`
+
+</br>
+
+**Full Example**<div align="justify">Below is an example of **agdpmod=pikera** with **ATY,Keelback** framebuffer patch:</div>
+
+```xml
+<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
+<dict>
+	<key>@0,AAPL,boot-display</key>
+	<data>
+	AQAAAA==
+	</data>
+	<key>@0,ATY,EFIDisplay</key>
+	<string>DP1</string>
+	<key>@0,name</key>
+	<string>ATY,Keelback</string>
+	<key>@1,name</key>
+	<string>ATY,Keelback</string>
+	<key>@2,name</key>
+	<string>ATY,Keelback</string>
+	<key>@3,name</key>
+	<string>ATY,Keelback</string>
+	<key>AAPL,slot-name</key>
+	<string>Slot- 1</string>
+	<key>AAPL00,DualLink</key>
+	<data>
+	AQAAAA==
+	</data>
+	<key>ATY,EFIEnabledMode</key>
+	<data>
+	AQ==
+	</data>
+	<key>ATY,EFIVersion</key>
+	<data>
+	MzAuMC4xMDEuMTM0MA==
+	</data>
+	<key>ATY,EFIVersionB</key>
+	<data>
+	MDE3LjAwMi4wMDAuMDAwLjAzNzYzNg==
+	</data>
+	<key>ATY,copyright</key>
+	<data>
+	Q29weXJpZ2h0IEFNRCBJbmMuIEFsbCBSaWdodHMgUmVz
+	ZXJ2ZWQuIDIwMDUtMjAxOQ==
+	</data>
+	<key>CFG,CFG_USE_AGDC</key>
+	<data>
+	AQ==
+	</data>
+	<key>agdpmod</key>
+	<data>
+	cGlrZXJhAA==
+	</data>
+	<key>device_type</key>
+	<string>VGA compatible controller</string>
+	<key>hda-gfx</key>
+	<string>onboard-2</string>
+</dict>	
+
+```
+
+</br>
+
 ## UHD Graphics 630 (Headless)
 
 **AAPL,ig-platform-id**<div align="justify">This is an important part. The keyword for the best headless settings for desktop is **mobile**. For desktop **(iMac SMBIOS)**, the framebuffer setting for the **mobile** variant is not needed. Open **Hackintool > Patch > Platform ID** option. Find any setting which is not related to the mobile **(Mobile = No)**. This guide is to find a proper **AAPL,ig-platform-id** for Desktop. In this case, **0x3E910003** in hexadecimal, which is equal to **0300913E**, 4 byte data hex swapped. Below is an example:</div>
