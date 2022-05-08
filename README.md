@@ -721,27 +721,70 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 
 I would like to thanks all folks in Hackintosh Community especially:
 
->> [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) OpenCore Guide
->> [acidanthera](https://github.com/acidanthera) [OpenCore](https://github.com/acidanthera/OpenCorePkg) Boot-loader
->>> [MaciASL](https://github.com/acidanthera/MaciASL) Powerful ACPI Compiler 
->> [corpNewt](https://github.com/corpnewt) USB Mapping Tool [USBmap](https://github.com/corpnewt/USBMap)
->>> [ProperTree](https://github.com/corpnewt/ProperTree) Cross Platform Plist Editor 
->> [dhinakg](https://github.com/USBToolBox/tool) Windows based USBmap, [USBToolBox]
->> [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) An official Malaysia [Facebook](https://www.facebook.com) Community for Hackintosh
->> [headkaze](https://github.com/headkaze) The Swiss Army Knife of Vanilla Hackintoshing [Hackintool](https://github.com/headkaze/Hackintool)
->>> [EFIAgent](https://github.com/headkaze/EFI-Agent) EFI Mounter 
->> [r/Hackintosh](https://www.reddit.com/r/hackintosh/) The Hackintosh Discussion Platform [reddit](https://www.reddit.com)
->> [daliansky](https://github.com/daliansky) [OC-Little](https://github.com/daliansky/OC-little) ACPI Guide
->> [5T33Z0](https://github.com/5T33Z0/OC-Little-Translated) Translating [OC-Little Translate](https://github.com/5T33Z0/OC-Little-Translated)
->>> [Clover Crate](https://github.com/5T33Z0/Clover-Crate) Clover Guide [Clover-bootloader](https://github.com/CloverHackyColor/CloverBootloader)
->> rusty-bits](https://github.com/rusty-bits) Cross Platform OpenCore Update Tool [octool](https://github.com/rusty-bits/octool)
->> [ic005k](https://github.com/ic005k) ACPI Compiler [Xiasl](https://github.com/ic005k/Xiasl)
->>> [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools) OCAuxiliary Tool 
->>>> [Xplist](https://github.com/ic005k/Xplist) Cross Platform Plist Editor 
+**[Dortania](https://dortania.github.io/OpenCore-Install-Guide/)** 
+> [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) MacOS Install Guide via OpenCore Boot-loader
 
 </br>
 
-> [u/mohdismailmatasin](https://www.reddit.com/user/mohdismailmatasin) on [reddit](https://www.reddit.com)
+**[acidanthera](https://github.com/acidanthera)** 
+> [OpenCore](https://github.com/acidanthera/OpenCorePkg) Boot-loader
+>> [MaciASL](https://github.com/acidanthera/MaciASL) Powerful ACPI Compiler 
+
+</br>
+
+**[corpNewt](https://github.com/corpnewt)** 
+> [USBmap](https://github.com/corpnewt/USBMap) MacOS USB Mapping Tool 
+>> [ProperTree](https://github.com/corpnewt/ProperTree) Cross Platform Plist Editor 
+
+</br>
+
+**[dhinakg](https://github.com/USBToolBox/tool)**
+>> [USBToolBox](https://github.com/USBToolBox/tool) Windows based USBmap
+
+</br>
+
+**[Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/)**
+> [Facebook](https://www.facebook.com) An Official Malaysia Hackintosh Community
+
+</br>
+
+**[headkaze](https://github.com/headkaze)**
+> [Hackintool](https://github.com/headkaze/Hackintool) The Swiss Army Knife of Vanilla Hackintoshing 
+>> [EFIAgent](https://github.com/headkaze/EFI-Agent) EFI Mounter 
+
+</br>
+
+**[r/Hackintosh](https://www.reddit.com/r/hackintosh/)** 
+> [reddit](https://www.reddit.com) The Hackintosh Discussion Platform 
+
+</br>
+
+**[daliansky](https://github.com/daliansky)**
+> [OC-Little](https://github.com/daliansky/OC-little) ACPI Guide (Chinese Language)
+
+</br>
+
+**[5T33Z0](https://github.com/5T33Z0/OC-Little-Translated)**
+>[OC-Little Translate](https://github.com/5T33Z0/OC-Little-Translated) An English [OC-Little](https://github.com/daliansky/OC-little) Translation
+>> [Clover Crate](https://github.com/5T33Z0/Clover-Crate)
+>>> [Clover-bootloader](https://github.com/CloverHackyColor/CloverBootloader) Clover Guide 
+
+</br>
+
+**[rusty-bits](https://github.com/rusty-bits)**
+>[octool](https://github.com/rusty-bits/octool) Cross Platform OpenCore Update Tool 
+
+</br>
+
+**[ic005k](https://github.com/ic005k)**
+> [Xiasl](https://github.com/ic005k/Xiasl) Cross Platform ACPI Compiler 
+>> [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools) Cross Platform OpenCore OCAuxiliary Tool 
+>>> [Xplist](https://github.com/ic005k/Xplist) Cross Platform Plist Editor 
+
+</br>
+
+**[reddit](https://www.reddit.com)**
+> [u/mohdismailmatasin](https://www.reddit.com/user/mohdismailmatasin)
 
 <!---------------------------
 Intel i5 10400 & Asrock B460M Steel Legend.md
