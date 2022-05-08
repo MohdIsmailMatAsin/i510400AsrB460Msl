@@ -490,7 +490,6 @@ So, it should be...
 - >>>> **string**
 - >>>>> **Internal**
 
-
 **device-id:** Device id number
 - > **DeviceProperties**
 - >> **PciRoot(0x0)/Pci(0x2,0x0)**
@@ -519,7 +518,7 @@ So, it should be...
 - >>>> **data** 
 - >>>>> **01000000**
  
-**iommu-selection:** Allows VMs to directly use peripheral devices through direct memory access (DMA). Refer: [Apple Platform Security](https://support.apple.com/lt-lt/guide/security/seca4960c2b5/web)
+**iommu-selection:** Allows VMs to directly use peripheral devices through direct memory access (DMA). Value 01000000 may enable IOMMU. Refer: [Apple Platform Security](https://support.apple.com/lt-lt/guide/security/seca4960c2b5/web)
 - > **DeviceProperties**
 - >> **PciRoot(0x0)/Pci(0x2,0x0)**
 - >>> **iommu-selection** 
@@ -546,6 +545,10 @@ So, it should be...
 - >>> **hda-gfx**
 - >>>> **string**
 - >>>>> **onboard-1**
+
+**From the original iMac20,1 ioreg:**
+
+<img width="1025" alt="Screen Shot 2022-05-08 at 8 01 33 AM" src="https://user-images.githubusercontent.com/72515939/167276037-91f85019-7c65-48f1-bf55-112de4442784.png">
 
 **GPU Tab**<div align="justify">Now, new additional GPU tabs on the MacOS Activity Monitor is added. And, the result is....</div>
 
