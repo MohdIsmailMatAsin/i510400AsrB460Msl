@@ -755,7 +755,7 @@ I would like to thanks all folks in Hackintosh Community especially:
 </br>
 
 **[reddit](https://www.reddit.com)** 
-> [r/Hackintosh](https://www.reddit.com/r/hackintosh/)Hackintosh Discussion Platform 
+> [r/Hackintosh](https://www.reddit.com/r/hackintosh/) Hackintosh Discussion Platform 
 
 </br>
 
