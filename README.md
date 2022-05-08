@@ -743,19 +743,19 @@ I would like to thanks all folks in Hackintosh Community especially:
 
 </br>
 
-**[Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/)**
-> [Facebook](https://www.facebook.com) An Official Malaysia Hackintosh Community
-
-</br>
-
 **[headkaze](https://github.com/headkaze)**
 > [Hackintool](https://github.com/headkaze/Hackintool) The Swiss Army Knife of Vanilla Hackintoshing 
 >> [EFIAgent](https://github.com/headkaze/EFI-Agent) EFI Mounter 
 
 </br>
 
-**[r/Hackintosh](https://www.reddit.com/r/hackintosh/)** 
-> [reddit](https://www.reddit.com) The Hackintosh Discussion Platform 
+**[Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/)**
+> [Facebook](https://www.facebook.com) An Official Malaysia Hackintosh Community
+
+</br>
+
+**[reddit](https://www.reddit.com)** 
+> [r/Hackintosh](https://www.reddit.com/r/hackintosh/)Hackintosh Discussion Platform 
 
 </br>
 
