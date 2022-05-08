@@ -173,13 +173,13 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-**AML Disassembler**<div align="justify">The AML Disassembler has the capability of reverse translating any binary AML table back to nearly the original ASL code. These are typically DSDTs and SSDTs. It can also disassemble and format all other known non-AML data tables.</div>
-
 **Input Files**<div align="justify">The AML Disassembler accepts binary ACPI tables that contain valid AML code. These tables are the DSDT and any SSDTs. These files may be obtained via the acpidump/acpixtract utilities, or some other host-specific tools.</div>
 
 **Output Files**<div align="justify">The output is disassembled (or de-compiled) ASL code. The file extension used for these output files is .DSL, meaning “disassembled ASL”. As opposed to original ASL source code files which typically have the extension **.ASL**.</div>
 
 > **Refer:** [ASL Compiler](https://acpica.org/sites/acpica/files/aslcompiler_10.pdf) for more info.
+
+**AML Disassembler**<div align="justify">The AML Disassembler has the capability of reverse translating any binary AML table back to nearly the original ASL code. These are typically DSDTs and SSDTs. It can also disassemble and format all other known non-AML data tables.</div>
 
 **ACPI Machine Language**<div align="justify">Pseudo-code for a virtual machine supported by an ACPI-compatible OS and in which ACPI control methods and objects are written. The AML encoding definition is provided in section 19, [ACPI Machine Language (AML) Specification](https://uefi.org/specs/ACPI/6.4/20AMLSpecification/AMLSpecification.html). The converted ASL source code .**DSL** files which typically have the extension **.AML**.</div>
 
