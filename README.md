@@ -1,8 +1,7 @@
 # HACKINTOSH: INTEL i5 10400 & ASROCK B460M STEEL LEGEND
 
 ![Artboard 1](https://user-images.githubusercontent.com/72515939/166086285-c5c771ed-e4d4-409a-b2d5-2e3f4c4325ea.png)
-
-> **Reminder:**<div align="justify">This is not an **official** method. All the information displayed is based on actual hardware and an experimental basis. Half of the information is taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others are taken from several well-known sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), Refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0)</div>
+> _**Reminder:**<div align="justify">This is not an **official** method. All the information displayed is based on actual hardware and an experimental basis. Half of the information is taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others are taken from several well-known sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), Refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0)</div>_
 
 </br>
 
@@ -28,8 +27,7 @@
 | Catalina     | 20200306     | 1412101001000000     | 0                      | j185-10.15.6 (19G2005)     |
 | BigSur       | 0            | 0                    | 0                      | j185-10.15.6 (19G2005)     |
 | Monterey     | 0            | 0                    | 0                      | j185-10.15.6 (19G2005)     |
-
-> **Remark:**<div align="justify">The settings above may not be the same as the recommended settings by Dortania. To find out more, please check [OpenCore Configuration](https://dortania.github.io/docs/release/Configuration.html), [Acidanthera Update : August 2021](https://dortania.github.io/hackintosh/updates/2021/08/02/acidanthera-august.html) and [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for SecureBootModel selection.</div>
+> _**Remark:**<div align="justify">The settings above may not be the same as the recommended settings by Dortania. To find out more, please check [OpenCore Configuration](https://dortania.github.io/docs/release/Configuration.html), [Acidanthera Update : August 2021](https://dortania.github.io/hackintosh/updates/2021/08/02/acidanthera-august.html) and [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for SecureBootModel selection.</div>_
 
 </br>
 
@@ -47,9 +45,7 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 | ASUS             | F8           | Intel            | F10          |
 | Gigabyte         | F12          | Asrock           | F11          |
 | MSI              | F11          | EVGA             | F7           |
-
 > **Remark:**<div align="justify">BIOS key in the table above is not entirely correct. The key is depending on how the manufacturer designs the board. Please pay attention. This is basic knowledge to understand how your motherboard works. It is better to refer to any source, especially your motherboard manufacturer, for a better understanding.</div>
-
 
 </br>
 
@@ -64,7 +60,6 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 | Legacy runs in 16-bit mode that only supports keyboard navigation 																| UEFI runs in 32-bit and 64-bit, allowing support for mouse and touch navigation 																						|
 | It does not provide a secure boot method, which allows for the loading of unauthorized applications, making dual-booting possible | It allows a secure boot that prevents the loading of unauthorized applications. It may also hinder dual boot because it treats operating systems (OS) as applications |
 | It is more complex compared to UEFI 																								| It has an easier update process 																																		|                                                     
-
 </br>
 
 **EFI**<div align="justify">Extensible Firmware Interface system partition, or ESP, is a partition on a data storage device (usually a hard disc drive or solid-state drive) that is used by computers having the Unified Extensible Firmware Interface (UEFI). When a computer is booted, UEFI firmware loads files stored on the ESP to start the installed operating systems and various utilities. The ESP contains the boot loaders or kernel images for all installed operating systems (which are contained in other partitions), device driver files for hardware devices present in a computer and used by the firmware at boot time, system utility programs that are intended to be run before an operating system is booted, and data files such as error logs.</div>
@@ -85,7 +80,7 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 **MacOS**<p align="center"><img width="830" alt="Screenshot 2022-04-03 134003" src="https://user-images.githubusercontent.com/72515939/161430979-9b890a71-a348-439b-98df-0e53e6a49da8.png"></div>
 
-> **Remark:**<div align="justify">For dual or triple booting PCs, this application is very useful to manage Windows + MacOS or Windows + MacOS + Linux partition. [DiskGenius](https://www.diskgenius.com) or previously [Partition Guru](https://www.partitionguru.com) is a versatile program packed with comprehensive functions for partition recovery, file recovery, disk management, data backup, disk utilities, etc. It manages storage space with high efficiency, recovers data lost due to disk corruption, formatting, deletion, virus attack, etc. In other mean, DiskGenius is a simple tool that allows users to manage the partitions on hard drive and to format them, create new ones, or delete. This utility is compatible and works well with virtual hard drives like VMware, VirtualBox and Virtual PC in addition to supporting SCSI, IDE, SATA and USB flash drives or memory cards. The best thing is, this app capable to view and manage EFI/ESP partition which made managing partition so easily if any file required to be edit, especially [OpenCore](https://github.com/acidanthera/OpenCorePkg) or [Clover](https://github.com/CloverHackyColor/CloverBootloader) config.plist. However, APFS and HFS+ is not fully supported. That's the weak spot of this application. To use APFS and HFS+ formats on windows, [Paragon Hard Disk Manager™ Community Edition](https://www.paragon-software.com/free/pm-express/?msclkid=b2537d35cbb811ecbee6e7525f1ca4a9) is adequate. Both combination support may improve user experience.</div>
+> _**Remark:**<div align="justify">For dual or triple booting PCs, this application is very useful to manage Windows + MacOS or Windows + MacOS + Linux partition. [DiskGenius](https://www.diskgenius.com) or previously [Partition Guru](https://www.partitionguru.com) is a versatile program packed with comprehensive functions for partition recovery, file recovery, disk management, data backup, disk utilities, etc. It manages storage space with high efficiency, recovers data lost due to disk corruption, formatting, deletion, virus attack, etc. In other mean, DiskGenius is a simple tool that allows users to manage the partitions on hard drive and to format them, create new ones, or delete. This utility is compatible and works well with virtual hard drives like VMware, VirtualBox and Virtual PC in addition to supporting SCSI, IDE, SATA and USB flash drives or memory cards. The best thing is, this app capable to view and manage EFI/ESP partition which made managing partition so easily if any file required to be edit, especially [OpenCore](https://github.com/acidanthera/OpenCorePkg) or [Clover](https://github.com/CloverHackyColor/CloverBootloader) config.plist. However, APFS and HFS+ is not fully supported. That's the weak spot of this application. To use APFS and HFS+ formats on windows, [Paragon Hard Disk Manager™ Community Edition](https://www.paragon-software.com/free/pm-express/?msclkid=b2537d35cbb811ecbee6e7525f1ca4a9) is adequate. Both combination support may improve user experience.</div>_
 
 ![Artboard 1](https://user-images.githubusercontent.com/72515939/166097226-b35e84ab-0498-419a-a3e6-0cf6e9c276e5.png)
 
@@ -135,7 +130,7 @@ Below are the base OpenCore files and folders used for this project:
 
 [![rmCD5f.png](https://i.im.ge/2022/05/07/rmCD5f.png)](https://im.ge/i/efi-tree.rmCD5f)
 
-> **Remark:** For the [debugging](https://economictimes.indiatimes.com/definition/debugging) process, it is best not to use [OpenCanopy.efi](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html).
+> _**Remark:** For the [debugging](https://economictimes.indiatimes.com/definition/debugging) process, it is best not to use [OpenCanopy.efi](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html)._
 
 </br>
 
@@ -153,7 +148,7 @@ Below are the base OpenCore files and folders used for this project:
 
 ### OC\ACPI
 
-> **Refer:** [ACPI Data Tables and Table Definition Language](https://uefi.org/specs/ACPI/6.4/21ACPIDataTablesandTableDefLanguage/ACPIDataTables.html#acpi-data-tables-and-table-definition-language)
+> _**Refer:** [ACPI Data Tables and Table Definition Language](https://uefi.org/specs/ACPI/6.4/21ACPIDataTablesandTableDefLanguage/ACPIDataTables.html#acpi-data-tables-and-table-definition-language)_
 
 </br>
 
@@ -169,7 +164,7 @@ Below are the base OpenCore files and folders used for this project:
 <img width="1111" alt="ScreenShot2022-04-30at34056PM" src="https://user-images.githubusercontent.com/72515939/166096876-9d9d956e-80ed-477c-b7c3-0897d7c47abe.png">
 </div>
 
-> **Refer:** [Definition of Terms](https://uefi.org/specs/ACPI/6.4/02DefinitionofTerms/DefinitionofTerms.html). For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org/specs/ACPI/6.4/index.html)
+> _**Refer:** [Definition of Terms](https://uefi.org/specs/ACPI/6.4/02DefinitionofTerms/DefinitionofTerms.html). For full information on DSDT and SSDT, see [ACPI Specification](https://uefi.org/specs/ACPI/6.4/index.html)_
 
 </br>
 
@@ -177,7 +172,7 @@ Below are the base OpenCore files and folders used for this project:
 
 **Output Files**<div align="justify">The output is disassembled (or de-compiled) ASL code. The file extension used for these output files is .DSL, meaning “disassembled ASL”. As opposed to original ASL source code files which typically have the extension **.ASL**.</div>
 
-> **Refer:** [ASL Compiler](https://acpica.org/sites/acpica/files/aslcompiler_10.pdf) for more info.
+> _**Refer:** [ASL Compiler](https://acpica.org/sites/acpica/files/aslcompiler_10.pdf) for more info._
 
 **AML Disassembler**<div align="justify">The AML Disassembler has the capability of reverse translating any binary AML table back to nearly the original ASL code. These are typically DSDTs and SSDTs. It can also disassemble and format all other known non-AML data tables.</div>
 
@@ -204,10 +199,10 @@ Below are the base OpenCore files and folders used for this project:
 
 **On Other Operating Systems, Avoid ACPI Injection**<div align="justify">Most of these issues may affect dual booting (Windows + MacOS). Luckily, there are settings via config.plist to prevent this issue, but this is only experimental. Do not assume these settings will work 💯 on your machine. Certain users report the settings are not working, but some report the settings work as well. These settings are actually used only for Dell machines. But it is worth a try. Settings are explained via the table below.</div>
 
-| **SETTINGS**     | **Mode** | **DETAIL**                                                                                                                                                                                                                                                                                                                               |
-|------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| UpdateSMBIOSMode | Create   | Replace the tables with newly allocated EfiReservedMemoryType, use Custom on Dell laptops requiring CustomSMBIOSGuid quirk.  Setting to Custom with CustomSMBIOSGuid quirk enabled can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk |
-| CustomSMBIOSGuid | NO       | Performs GUID patching for UpdateSMBIOSMode set to Custom. Usually relevant for Dell laptops. Enabling this quirk with UpdateSMBIOSMode. Custom mode can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk                           |                              |
+| **SETTINGS**     | **Mode** | **DETAIL**                                                                                                                                                                                                                                                                                                                               	|
+|------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| UpdateSMBIOSMode | Create   | Replace the tables with newly allocated EfiReservedMemoryType, use Custom on Dell laptops requiring CustomSMBIOSGuid quirk.  Setting to Custom with CustomSMBIOSGuid quirk enabled can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk 	|
+| CustomSMBIOSGuid | NO       | Performs GUID patching for UpdateSMBIOSMode set to Custom. Usually relevant for Dell laptops. Enabling this quirk with UpdateSMBIOSMode. Custom mode can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk                           		|
 
 </br>
 
@@ -250,7 +245,6 @@ So, it should be...
 | THSS      | Known as Thermal Subsystem. This device is renamed due to no identical/compatible data using ioreg. Rename pci8086,a3b1 to TSUB/THSS. Patch: Compatible AppleIntelPCHPMC support pci8086,a2a1, identical to CML device pci8086,a3a1. Patch can be added either on PPMC or TSUB/THSS. Both is possible via testing. Remain only one AppleIntelPCHPMC patch. Via PPMC is better. By default, TSUB/THSS is removed via my config.plist 	|
 | USBX      | USB Power Properties for Skylake and newer motherboard generation                                                                                                                                                                                                                                                                                                                                                                   	|
 | XHC       | Board Comet Lake PCH-V USB Controller device                                                                                                                                                                                                                                                                                                                                                                                        	|
-
 <p align="center"><img width="1239" alt="Screen Shot 2022-04-30 at 10 31 53 AM" src="https://user-images.githubusercontent.com/72515939/166087058-3f4572be-a047-41bd-859a-5da51220af26.png"></div>
 
 </br>
@@ -292,12 +286,11 @@ So, it should be...
 | RadeonSensor        | To read the GPU temperature. Lilu is required                                                                                             	|
 | LucyRTL8125Ethernet | Ethernet device, Realtek RTL8125 2.5G bit Ethernet Controllers driver                                                                     	|
 | USBMap              | Kext to route selected USB ports to Physical Ports via USB port address. This is compulsory to handle 15 port limit requirements by MacOS 	|
-
 <p align="center"><img width="1032" alt="ScreenShot2022-04-25at30024PM" src="https://user-images.githubusercontent.com/72515939/165037853-94893f7d-7950-447a-a57f-745e93fe9ce8.png"></div>
 
 </br>
 
-**Priorities:** The order of kexts is important, they are loaded in this order. Plugins for other kexts should always come after the main kext. Lilu should be first, then Lilu plugins like WhateverGreen and VirtualSMC. Sort in priority to get a better kext injection.
+_**Remark:**<div align="justify">The order of kexts is important, they are loaded in this order. Plugins for other kexts should always come after the main kext. Lilu should be first, then Lilu plugins like WhateverGreen and VirtualSMC. Sort in priority to get a better kext injection.</div>_
 
 <p align="center"><img width="1356" alt="ScreenShot2022-04-25at30908PM" src="https://user-images.githubusercontent.com/72515939/165038719-33ac2cca-1cf5-4aae-85de-7caa88c3ccff.png"></div>
 
@@ -458,6 +451,7 @@ So, it should be...
 	<dict/>
 </dict>
 ```
+
 </br>
 
 **ATY,Keelback:**
@@ -585,7 +579,7 @@ So, it should be...
 
 **IQSV Test** Checkout this [link](https://youtu.be/dd3SwAZ3Sw)
 
-> **Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki patch only applicable via Catalina and below.
+> _**Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki patch only applicable via Catalina and below._
 </br>
 
 ## Power
@@ -685,7 +679,7 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 >>>> Additional Framebuffer [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend#additional-framebuffer-for-amd-navi-gpus) for AMD Navi GPU
 
 **Add Method:**
-> DTGP. **Refer:** [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)
+> [DTGP Method](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl). This is just an example. [Refer:](https://www.reddit.com/r/hackintosh/comments/l0t6fl/anyone_knows_what_ssdtdtgp_is/)
 
 </br>
 
