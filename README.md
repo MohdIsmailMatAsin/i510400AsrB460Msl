@@ -464,8 +464,8 @@ So, it should be...
 
 **AAPL,ig-platform-id**<div align="justify">This is an important part. The keyword for the best headless settings for desktop is **mobile**. For desktop **(iMac SMBIOS)**, the framebuffer setting for the **mobile** variant is not needed. Open **Hackintool > Patch > Platform ID** option. Find any setting which is not related to the mobile **(Mobile = No)**. This guide is to find a proper **AAPL,ig-platform-id** for Desktop. In this case, **0x3E910003** in hexadecimal, which is equal to **0300913E**, 4 byte data hex swapped. Below is an example:</div>
 
-- 0x3E910003 = 0300913E
-- AAPL,ig-platform-id = 0300913E
+- 0x3E910003 = `0300913E`
+- AAPL,ig-platform-id = `0300913E`
 
 <p align="center"><img width="1176" alt="ScreenShot2022-05-02at51003PM" src="https://user-images.githubusercontent.com/72515939/166212509-9f300b98-66c5-43f0-abf9-e14dd5e610a2.png"></div>
 
@@ -473,9 +473,9 @@ So, it should be...
 
 **device-id**<div align="justify">To get the proper main card platform as `headless` injection, `device-id` is required to get the device name. On `Intel 10th Gen` processor, it is not necessary, but sometimes this patch may fix certain IGPU issues. As an example, find **Activity Monitor > Window > GPU History** or **Activity Monitor > GPU** extra tab, IGPU will display as **Intel KBL Unknown**. Checkout **[Issues #1905](https://github.com/acidanthera/bugtracker/issues/1905)**. To proper rename, use **Hackintool** as a guide by finding the appropriate **device-id**, not in mobile mode (Mobile = No). In this case, GPU Hexadecimal device-id **0x3E9B8086** which is equal to 4 byte data hex swapped **9B3E0000** is injected via config.plist in IGPU DeviceProperties section. Below is an example:</div>
 
-- 0x3E9B8086 = 9B3E8086
-- 9B3E8086 = 9B3E0000 (8086 to 0000)
-- device-id = 9B3E0000
+- 0x3E9B8086 = `9B3E8086`
+- 9B3E8086 = `9B3E0000` (8086 to 0000)
+- device-id = `9B3E0000`
 
 <p align="center"><img width="1172" alt="ScreenShot2022-05-02at52716PM" src="https://user-images.githubusercontent.com/72515939/166213623-407d87dd-5368-4430-b8e0-5fc87eb97be1.png"></div>
 
