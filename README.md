@@ -596,83 +596,83 @@ So, it should be...
 
 **AAPL,ig-platform-id:** Property used by macOS to determine the framebuffer profile with Ivy Bridge and newer
 
-- > **DeviceProperties**
-- > > **PciRoot(0x0)/Pci(0x2,0x0)**
-- > > > **`AAPL,ig-platform-id`**
-- > > > > **data**
-- > > > > > **`0300913E`**
+> **DeviceProperties**
+> > **PciRoot(0x0)/Pci(0x2,0x0)**
+> > > **`AAPL,ig-platform-id`**
+> > > > **data**
+> > > > > **`0300913E`**
 
 **AAPL,slot-name:** To show/set PCI Cards on System Profiler
 
-- > **DeviceProperties**
-- > > **PciRoot(0x0)/Pci(0x2,0x0)**
-- > > > **`AAPL,slot-name`**
-- > > > > **string**
-- > > > > > **`Internal`**
+> **DeviceProperties**
+> > **PciRoot(0x0)/Pci(0x2,0x0)**
+> > > **`AAPL,slot-name`**
+> > > > **string**
+> > > > > **`Internal`**
 
 **device-id:** Device id number
 
-- > **DeviceProperties**
-- > > **PciRoot(0x0)/Pci(0x2,0x0)**
-- > > > **`device-id`**
-- > > > > **data**
-- > > > > > **`9B3E0000`**
+> **DeviceProperties**
+> > **PciRoot(0x0)/Pci(0x2,0x0)**
+> > > **`device-id`**
+> > > > **data**
+> > > > > **`9B3E0000`**
 
 **igfxonln:** To force-online device property or to force online status on all displays
 
-- > **DeviceProperties**
-- > > **PciRoot(0x0)/Pci(0x2,0x0)**
-- > > > **`igfxonln`**
-- > > > > **data**
-- > > > > > **`01000000`**
+> **DeviceProperties**
+> > **PciRoot(0x0)/Pci(0x2,0x0)**
+> > > **`igfxonln`**
+> > > > **data**
+> > > > > **`01000000`**
 
 **devicetype:** Type of device
 
-- > **DeviceProperties**
-- > > **PciRoot(0x0)/Pci(0x2,0x0)**
-- > > > **`devicetype`**
-- > > > > **string**
-- > > > > > **`Display controller`**
+> **DeviceProperties**
+> > **PciRoot(0x0)/Pci(0x2,0x0)**
+> > > **`devicetype`**
+> > > > **string**
+> > > > > **`Display controller`**
 
 **enable-metal:** To enable-metal property or force enable Metal support on Intel for offline rendering
 
-- > **DeviceProperties**
-- > > **PciRoot(0x0)/Pci(0x2,0x0)**
-- > > > **`enable-metal`**
-- > > > > **data**
-- > > > > > **`01000000`**
+> **DeviceProperties**
+> > **PciRoot(0x0)/Pci(0x2,0x0)**
+> > > **`enable-metal`**
+> > > > **data**
+> > > > > **`01000000`**
 
 **iommu-selection:** Allows VMs to directly use peripheral devices through direct memory access (DMA). Value 01000000 may enable IOMMU. Refer: [Apple Platform Security](https://support.apple.com/lt-lt/guide/security/seca4960c2b5/web)
 
-- > **DeviceProperties**
-- > > **PciRoot(0x0)/Pci(0x2,0x0)**
-- > > > **`iommu-selection`**
-- > > > > **data**
-- > > > > > **`00000000`**
+> **DeviceProperties**
+> > **PciRoot(0x0)/Pci(0x2,0x0)**
+> > > **`iommu-selection`**
+> > > > **data**
+> > > > > **`00000000`**
 
 **rps-control:** To enable RPS control patch (improves IGPU performance)
 
-- > **DeviceProperties**
-- > > **PciRoot(0x0)/Pci(0x2,0x0)**
-- > > > **`rps-control`**
-- > > > > **data**
-- > > > > > **`01000000`**
+> **DeviceProperties**
+> > **PciRoot(0x0)/Pci(0x2,0x0)**
+> > > **`rps-control`**
+> > > > **data**
+> > > > > **`01000000`**
 
 **igfxfw:** To force loading of Apple GuC firmware
 
-- > **DeviceProperties**
-- > > **PciRoot(0x0)/Pci(0x2,0x0)**
-- > > > **`igfxfw`**
-- > > > > **data**
-- > > > > > **`02000000`**
+> **DeviceProperties**
+> > **PciRoot(0x0)/Pci(0x2,0x0)**
+> > > **`igfxfw`**
+> > > > **data**
+> > > > > **`02000000`**
 
 **hda-gfx:** An onboard properties to HDAU, IGPU, HDEF objects
 
-- > **DeviceProperties**
-- > > **PciRoot(0x0)/Pci(0x2,0x0)**
-- > > > **`hda-gfx`**
-- > > > > **string**
-- > > > > > **`onboard-1`**
+> **DeviceProperties**
+> > **PciRoot(0x0)/Pci(0x2,0x0)**
+> > > **`hda-gfx`**
+> > > > **string**
+> > > > > **`onboard-1`**
 
 **From the original iMac20,1 ioreg:**
 
