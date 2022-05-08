@@ -1,32 +1,34 @@
-# HACKINTOSH: INTEL i5 10400 & ASROCK B460M STEEL LEGEND
+# Hackintosh: Intel I5 10400 & Asrock B460M Steel Legend
 
 ![Artboard 1](https://user-images.githubusercontent.com/72515939/166086285-c5c771ed-e4d4-409a-b2d5-2e3f4c4325ea.png)
+
 > _**Reminder:**<div align="justify">This is not an **official** method. All the information displayed is based on actual hardware and an experimental basis. Half of the information is taken from [Dortania](https://dortania.github.io/OpenCore-Install-Guide/), while others are taken from several well-known sources. This is an informative explanation related to [OpenCore](https://github.com/acidanthera/OpenCorePkg). For [Clover](https://github.com/CloverHackyColor/CloverBootloader), Refer to [Clover Crate](https://github.com/5T33Z0/Clover-Crate) by [5T33Z0](https://github.com/5T33Z0)</div>_
 
 </br>
 
 ## Hardware and Device
 
-| **INFO**  | **DETAIL**                       | **INFO**    | **DETAIL**                                    |
-| --------- | -------------------------------- | ----------- | --------------------------------------------- |
-| OS 1      | Microsoft Windows 11 Pro         | Audio 1     | 7.1 CH HD Audio (Realtek ALC1200 Audio Codec) |
-| OS 2      | MacOS Monterey 12.3.1            | Audio 2     | U-Phoria UM2 USB Audio Device                 |
-| Processor | [Intel Core(TM) i5-10400](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/CPUInfo.txt)	| Motherboard | ASRock (B460M Steel Legend)                   |
-| GFX0      | Radeon RX 5500 XT 4GB            | PCI 1       | BCM94360 WiFi & Bluetooth                     |
-| IGPU      | Intel UHD Graphics 630 1GB       | PCI 2       | VIA USB 3.0 eXtensible Host Controller        |
-| Memory    | PNY XLR8 Gaming X Memory 3200MHz | Storage 1   | 500GB Kingston A2000 NVMe                     |
-| Monitor   | Samsung U28E590 4K               | Storage 2   | 500GB Kingston A2000 NVMe                     |
-| SMBIOS    | [iMac20,1](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/info.txt)	| Board ID    | Mac-CFF7D910A743CAAF                          |
+| **INFO**  | **DETAIL**                                                                                                          | **INFO**    | **DETAIL**                                    |
+| --------- | ------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------- |
+| OS 1      | Microsoft Windows 11 Pro                                                                                            | Audio 1     | 7.1 CH HD Audio (Realtek ALC1200 Audio Codec) |
+| OS 2      | MacOS Monterey 12.3.1                                                                                               | Audio 2     | U-Phoria UM2 USB Audio Device                 |
+| Processor | [Intel Core(TM) i5-10400](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/CPUInfo.txt) | Motherboard | ASRock (B460M Steel Legend)                   |
+| GFX0      | Radeon RX 5500 XT 4GB                                                                                               | PCI 1       | BCM94360 WiFi & Bluetooth                     |
+| IGPU      | Intel UHD Graphics 630 1GB                                                                                          | PCI 2       | VIA USB 3.0 eXtensible Host Controller        |
+| Memory    | PNY XLR8 Gaming X Memory 3200MHz                                                                                    | Storage 1   | 500GB Kingston A2000 NVMe                     |
+| Monitor   | Samsung U28E590 4K                                                                                                  | Storage 2   | 500GB Kingston A2000 NVMe                     |
+| SMBIOS    | [iMac20,1](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/info.txt)                   | Board ID    | Mac-CFF7D910A743CAAF                          |
 
 </br>
 
 ## APFS Changes
 
-| **MacOS**    | **Mindate**  | **MinVersion**       | **SetApfsTrimTimeout** | **SecureBootModel**        |
-|--------------|--------------|----------------------|------------------------|----------------------------|
-| Catalina     | 20200306     | 1412101001000000     | 0                      | j185-10.15.6 (19G2005)     |
-| BigSur       | 0            | 0                    | 0                      | j185-10.15.6 (19G2005)     |
-| Monterey     | 0            | 0                    | 0                      | j185-10.15.6 (19G2005)     |
+| **MacOS** | **Mindate** | **MinVersion**   | **SetApfsTrimTimeout** | **SecureBootModel**    |
+| --------- | ----------- | ---------------- | ---------------------- | ---------------------- |
+| Catalina  | 20200306    | 1412101001000000 | 0                      | j185-10.15.6 (19G2005) |
+| BigSur    | 0           | 0                | 0                      | j185-10.15.6 (19G2005) |
+| Monterey  | 0           | 0                | 0                      | j185-10.15.6 (19G2005) |
+
 > _**Remark:**<div align="justify">The settings above may not be the same as the recommended settings by Dortania. To find out more, please check [OpenCore Configuration](https://dortania.github.io/docs/release/Configuration.html), [Acidanthera Update : August 2021](https://dortania.github.io/hackintosh/updates/2021/08/02/acidanthera-august.html) and [Dortania, Apple Secure Boot](https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel) for SecureBootModel selection.</div>_
 
 </br>
@@ -42,24 +44,26 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 | **MANUFACTURER** | **BIOS KEY** | **MANUFACTURER** | **BIOS KEY** |
 | ---------------- | ------------ | ---------------- | ------------ |
-| ASUS             | F8           | Intel            | F10          |
-| Gigabyte         | F12          | Asrock           | F11          |
-| MSI              | F11          | EVGA             | F7           |
+| ASUS             | F8           | Asrock           | F11          |
+| EVGA             | F7           | Gigabyte         | F12          |
+| Intel            | F10          | MSI              | F11          |
+
 > _**Remark:**<div align="justify">BIOS key in the table above is not entirely correct. The key is depending on how the manufacturer designs the board. Please pay attention. This is basic knowledge to understand how your motherboard works. It is better to refer to any source, especially your motherboard manufacturer, for a better understanding.</div>_
 
 </br>
 
 **Legacy vs Modern**
 
-| **LEGACY** 																														| **MODERN** 																																							|
+| **LEGACY**                                                                                                                        | **MODERN**                                                                                                                                                            |
 | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Legacy Boot mode is traditional and very basic 																					| UEFI provides a better User interface 																																|
-| Legacy uses the MBR partition scheme 																								| It uses the GPT partitioning scheme 																																	|
-| It is slower compared to UEFI 																									| UEFI provides faster boot time 																																		|
-| The MBR portioning scheme used by Legacy only supports up to 2 TB storage devices 												| Since UEFI uses the GPT partitioning scheme, it can support up to 9 zettabytes of storage devices. 																	|
-| Legacy runs in 16-bit mode that only supports keyboard navigation 																| UEFI runs in 32-bit and 64-bit, allowing support for mouse and touch navigation 																						|
+| Legacy Boot mode is traditional and very basic                                                                                    | UEFI provides a better User interface                                                                                                                                 |
+| Legacy uses the MBR partition scheme                                                                                              | It uses the GPT partitioning scheme                                                                                                                                   |
+| It is slower compared to UEFI                                                                                                     | UEFI provides faster boot time                                                                                                                                        |
+| The MBR portioning scheme used by Legacy only supports up to 2 TB storage devices                                                 | Since UEFI uses the GPT partitioning scheme, it can support up to 9 zettabytes of storage devices.                                                                    |
+| Legacy runs in 16-bit mode that only supports keyboard navigation                                                                 | UEFI runs in 32-bit and 64-bit, allowing support for mouse and touch navigation                                                                                       |
 | It does not provide a secure boot method, which allows for the loading of unauthorized applications, making dual-booting possible | It allows a secure boot that prevents the loading of unauthorized applications. It may also hinder dual boot because it treats operating systems (OS) as applications |
-| It is more complex compared to UEFI 																								| It has an easier update process 																																		|                                                     
+| It is more complex compared to UEFI                                                                                               | It has an easier update process                                                                                                                                       |
+
 </br>
 
 **EFI**<div align="justify">Extensible Firmware Interface system partition, or ESP, is a partition on a data storage device (usually a hard disc drive or solid-state drive) that is used by computers having the Unified Extensible Firmware Interface (UEFI). When a computer is booted, UEFI firmware loads files stored on the ESP to start the installed operating systems and various utilities. The ESP contains the boot loaders or kernel images for all installed operating systems (which are contained in other partitions), device driver files for hardware devices present in a computer and used by the firmware at boot time, system utility programs that are intended to be run before an operating system is booted, and data files such as error logs.</div>
@@ -180,7 +184,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-**DSDT or SSDT?**<div align="justify">As documented by [Dortania](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) , *"Do not add your DSDT to OpenCore; it's already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your configuration based on the architecture of your CPU"*. Some computers come with a broken DSDT. It is usually not recommended to patch/override DSDT. Patching DSDT with garbage can do physical harm to computer. DSDT patches should be avoided. Some forums/websites (i.e., Olarila) state that it is a major solution. But, that reality isn't true. Since DSDT is the primary table, SSDT is the best way to make hackintosh PCs near as Mac. SSDT can be patched, modified (adding and dropping) the hardware properties which hook inside the machine. There are various reasons why DSDT patching is not recommended.</div>
+**DSDT or SSDT?**<div align="justify">As documented by [Dortania](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) , _"Do not add your DSDT to OpenCore; it's already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your configuration based on the architecture of your CPU"_. Some computers come with a broken DSDT. It is usually not recommended to patch/override DSDT. Patching DSDT with garbage can do physical harm to computer. DSDT patches should be avoided. Some forums/websites (i.e., Olarila) state that it is a major solution. But, that reality isn't true. Since DSDT is the primary table, SSDT is the best way to make hackintosh PCs near as Mac. SSDT can be patched, modified (adding and dropping) the hardware properties which hook inside the machine. There are various reasons why DSDT patching is not recommended.</div>
 
 </br>
 
@@ -199,10 +203,10 @@ Below are the base OpenCore files and folders used for this project:
 
 **On Other Operating Systems, Avoid ACPI Injection**<div align="justify">Most of these issues may affect dual booting (Windows + MacOS). Luckily, there are settings via config.plist to prevent this issue, but this is only experimental. Do not assume these settings will work 💯 on your machine. Certain users report the settings are not working, but some report the settings work as well. These settings are actually used only for Dell machines. But it is worth a try. Settings are explained via the table below.</div>
 
-| **SETTINGS**     | **Mode** | **DETAIL**                                                                                                                                                                                                                                                                                                                               	|
-|------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| UpdateSMBIOSMode | Create   | Replace the tables with newly allocated EfiReservedMemoryType, use Custom on Dell laptops requiring CustomSMBIOSGuid quirk.  Setting to Custom with CustomSMBIOSGuid quirk enabled can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk 	|
-| CustomSMBIOSGuid | NO       | Performs GUID patching for UpdateSMBIOSMode set to Custom. Usually relevant for Dell laptops. Enabling this quirk with UpdateSMBIOSMode. Custom mode can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk                           		|
+| **SETTINGS**     | **Mode** | **DETAIL**                                                                                                                                                                                                                                                                                                                                |
+| ---------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| UpdateSMBIOSMode | Create   | Replace the tables with newly allocated EfiReservedMemoryType, use Custom on Dell laptops requiring CustomSMBIOSGuid quirk. Setting to Custom with CustomSMBIOSGuid quirk enabled can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk |
+| CustomSMBIOSGuid | NO       | Performs GUID patching for UpdateSMBIOSMode set to Custom. Usually relevant for Dell laptops. Enabling this quirk with UpdateSMBIOSMode. Custom mode can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk                              |
 
 </br>
 
@@ -219,32 +223,33 @@ So, it should be...
 
 **Patch Applied**<div align="justify">Thanks to CorpNewt cross platform SSDTTime hotpatch tool. In this project, various SSDT's has been merged into [one](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/PCIInfo.txt). i.e., [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl). With several other sources, additional code is injected to reduce the kext workload. As example, GFX0 to an IGPU rename which handled by Whatevergreen.kext.</div>
 
-| Device    | Information                                                                                                                                                                                                                                                                                                                                                                                                                         	|
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ALS0      | Optional/Not Needed. Normally, real iMac is include this device information. Patch: smc-als and AppleLMUController. These patch is only Cosmetics for Desktop, nothing much we can do                                                                                                                                                                                                                                               	|
-| ANS0      | Rename Kingston A2000 NVMe, RP09,PXSX to RP09,ANS0. Device is pointed to M2- 1 Slot. Patch: Spoof Generic NVMe as Apple SSD Controller                                                                                                                                                                                                                                                                                              	|
-| ANS1      | Rename Kingston A2000 NVMe, RP21,PXSX to RP21,ANS1. Device is pointed to M2- 2 Slot. Patch: Spoof Generic NVMe as Apple SSD Controller                                                                                                                                                                                                                                                                                              	|
-| ANS2      | Rename Silicon Power MAP1001 NVMe, RP20,PXSX to RP20,ANS2. Device is pointed to Slot- 2. Patch: Spoof Generic NVMe as Apple SSD Controller                                                                                                                                                                                                                                                                                          	|
-| ARPT      | Rename Broadcom device, BCM94360 RP03, PXSX to RP03,ARPT. Device is pointed to M2- 3 Wifi Slot                                                                                                                                                                                                                                                                                                                                      	|
-| AWAC      | To fix the System Clocks found on newer hardware                                                                                                                                                                                                                                                                                                                                                                                    	|
-| DRAM      | Host bridge (DRAM), or Memory Controller Hub (MCHC). One of two chips comprising the core logic chipset architecture on a PC motherboard                                                                                                                                                                                                                                                                                            	|
-| DTGP      | An original ACPI Method from actual Apple DSDTs which contains this logic to figure out what to return                                                                                                                                                                                                                                                                                            									|
-| EC        | Fake Embedded Controller / EC drivers since CML don't have native support EC                                                                                                                                                                                                                                                                                                                                                       	|
-| GFX0      | Display Output from Dedicated Graphic Processor Unit / DGPU. \SUN is added to get proper PCI Slot Number                                                                                                                                                                                                                                                                                                                          	|
-| HDAU      | Audio Output device through HDMI, called as High Definition Audio. \SUN is added to get proper PCI Slot Number                                                                                                                                                                                                                                                                                                                     	|
-| HDEF      | Audio device, known as High Definition Audio System / HDAS in actual DSDT, renamed with HDEF                                                                                                                                                                                                                                                                                                                                        	|
-| IGPU      | An Intel Intergrated Graphics Unit device. GFX0 to IGPU rename                                                                                                                                                                                                                                                                                                                                                                     	|
-| IMEI      | An Intel Management Engine Interface. HECI to IMEI rename                                                                                                                                                                                                                                                                                                                                                                          	|
-| LPCB      | Path of Low Pin Count Bus which is corresponding to Embed Controller/EC                                                                                                                                                                                                                                                                                                                                                             	|
-| PLUG      | To allow the kernel's XCPM / XNU's CPU Power Management to manage CPU's power management                                                                                                                                                                                                                                                                                                                                            	|
-| PPMC      | Classed as Memory Controller in Comet Lake (CML) platform. Patch: Compatible AppleIntelPCHPMC support pci8086,a2a1, identical to CML device pci8086,a3a1                                                                                                                                                                                                                                                                            	|
-| PXSX      | PCIe USB card, VIA USB 3.0 eXtensible Host Controller device                                                                                                                                                                                                                                                                                                                                                                        	|
-| RTL0      | Rename RTL8125 2.5GbE Controller device as RP04,PXSX to RP04,RTL0                                                                                                                                                                                                                                                                                                                                                                   	|
-| SBUS      | Fix AppleSMBus support in MacOS. i.e: AppleSMBusController, AppleSMBusPCI, Memory Reporting and etc                                                                                                                                                                                                                                                                                                                                 	|
-| SATA      | Serial ATA Device. Rename SATA to SAT0                                                                                                                                                                                                                                                                                                                                                                                              	|
-| THSS      | Known as Thermal Subsystem. This device is renamed due to no identical/compatible data using ioreg. Rename pci8086,a3b1 to TSUB/THSS. Patch: Compatible AppleIntelPCHPMC support pci8086,a2a1, identical to CML device pci8086,a3a1. Patch can be added either on PPMC or TSUB/THSS. Both is possible via testing. Remain only one AppleIntelPCHPMC patch. Via PPMC is better. By default, TSUB/THSS is removed via my config.plist (#) 	|
-| USBX      | USB Power Properties for Skylake and newer motherboard generation                                                                                                                                                                                                                                                                                                                                                                   	|
-| XHC       | Board Comet Lake PCH-V USB Controller device                                                                                                                                                                                                                                                                                                                                                                                        	|
+| Device | Information                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ALS0   | Optional/Not Needed. Normally, real iMac is include this device information. Patch: smc-als and AppleLMUController. These patch is only Cosmetics for Desktop, nothing much we can do                                                                                                                                                                                                                                                   |
+| ANS0   | Rename Kingston A2000 NVMe, RP09,PXSX to RP09,ANS0. Device is pointed to M2- 1 Slot. Patch: Spoof Generic NVMe as Apple SSD Controller                                                                                                                                                                                                                                                                                                  |
+| ANS1   | Rename Kingston A2000 NVMe, RP21,PXSX to RP21,ANS1. Device is pointed to M2- 2 Slot. Patch: Spoof Generic NVMe as Apple SSD Controller                                                                                                                                                                                                                                                                                                  |
+| ANS2   | Rename Silicon Power MAP1001 NVMe, RP20,PXSX to RP20,ANS2. Device is pointed to Slot- 2. Patch: Spoof Generic NVMe as Apple SSD Controller                                                                                                                                                                                                                                                                                              |
+| ARPT   | Rename Broadcom device, BCM94360 RP03, PXSX to RP03,ARPT. Device is pointed to M2- 3 Wifi Slot                                                                                                                                                                                                                                                                                                                                          |
+| AWAC   | To fix the System Clocks found on newer hardware                                                                                                                                                                                                                                                                                                                                                                                        |
+| DRAM   | Host bridge (DRAM), or Memory Controller Hub (MCHC). One of two chips comprising the core logic chipset architecture on a PC motherboard                                                                                                                                                                                                                                                                                                |
+| DTGP   | An original ACPI Method from actual Apple DSDTs which contains this logic to figure out what to return                                                                                                                                                                                                                                                                                                                                  |
+| EC     | Fake Embedded Controller / EC drivers since CML don't have native support EC                                                                                                                                                                                                                                                                                                                                                            |
+| GFX0   | Display Output from Dedicated Graphic Processor Unit / DGPU. \SUN is added to get proper PCI Slot Number                                                                                                                                                                                                                                                                                                                                |
+| HDAU   | Audio Output device through HDMI, called as High Definition Audio. \SUN is added to get proper PCI Slot Number                                                                                                                                                                                                                                                                                                                          |
+| HDEF   | Audio device, known as High Definition Audio System / HDAS in actual DSDT, renamed with HDEF                                                                                                                                                                                                                                                                                                                                            |
+| IGPU   | An Intel Intergrated Graphics Unit device. GFX0 to IGPU rename                                                                                                                                                                                                                                                                                                                                                                          |
+| IMEI   | An Intel Management Engine Interface. HECI to IMEI rename                                                                                                                                                                                                                                                                                                                                                                               |
+| LPCB   | Path of Low Pin Count Bus which is corresponding to Embed Controller/EC                                                                                                                                                                                                                                                                                                                                                                 |
+| PLUG   | To allow the kernel's XCPM / XNU's CPU Power Management to manage CPU's power management                                                                                                                                                                                                                                                                                                                                                |
+| PPMC   | Classed as Memory Controller in Comet Lake (CML) platform. Patch: Compatible AppleIntelPCHPMC support pci8086,a2a1, identical to CML device pci8086,a3a1                                                                                                                                                                                                                                                                                |
+| PXSX   | PCIe USB card, VIA USB 3.0 eXtensible Host Controller device                                                                                                                                                                                                                                                                                                                                                                            |
+| RTL0   | Rename RTL8125 2.5GbE Controller device as RP04,PXSX to RP04,RTL0                                                                                                                                                                                                                                                                                                                                                                       |
+| SBUS   | Fix AppleSMBus support in MacOS. i.e: AppleSMBusController, AppleSMBusPCI, Memory Reporting and etc                                                                                                                                                                                                                                                                                                                                     |
+| SATA   | Serial ATA Device. Rename SATA to SAT0                                                                                                                                                                                                                                                                                                                                                                                                  |
+| THSS   | Known as Thermal Subsystem. This device is renamed due to no identical/compatible data using ioreg. Rename pci8086,a3b1 to TSUB/THSS. Patch: Compatible AppleIntelPCHPMC support pci8086,a2a1, identical to CML device pci8086,a3a1. Patch can be added either on PPMC or TSUB/THSS. Both is possible via testing. Remain only one AppleIntelPCHPMC patch. Via PPMC is better. By default, TSUB/THSS is removed via my config.plist (#) |
+| USBX   | USB Power Properties for Skylake and newer motherboard generation                                                                                                                                                                                                                                                                                                                                                                       |
+| XHC    | Board Comet Lake PCH-V USB Controller device                                                                                                                                                                                                                                                                                                                                                                                            |
+
 <p align="center"><img width="1239" alt="Screen Shot 2022-04-30 at 10 31 53 AM" src="https://user-images.githubusercontent.com/72515939/166087058-3f4572be-a047-41bd-859a-5da51220af26.png"></div>
 
 </br>
@@ -274,18 +279,19 @@ So, it should be...
 
 **Kernel Extensions**<div align="justify">Apple regularly introduces innovative solutions and improvements to macOS. However, not all improved tools can fully replace their predecessors. This is what happened with kernel extensions and their successors, System Extensions and DriverKit. Kernel extensions (kexts) let users or developers load code directly into the MacOS kernel. The table below contains some kexts in this project used to properly boot MacOS through OpenCore.</div>
 
-| Kext                | Information                                                                                                                              	|
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Lilu                | Arbitrary kext and process patching on MacOS                                                                                              	|
-| VirtualSMC          | System Management Controller (SMC) emulator layer                                                                                         	|
-| AppleALC            | Enabling native MacOS HD audio for unofficial codecs                                                                                      	|
-| Whatevergreen       | Various patches necessary for certain ATI/AMD/Intel/Nvidia GPUs                                                                          	|
-| SMCProcessor        | Additional support for VirtualSMC. Used for monitoring CPU temperature                                                                    	|
-| SMCSuperIO          | Additional support for VirtualSMC. Used for monitoring `FAN` speed                                                                        	|
-| SMCRadeonGPU        | Based on FakeSMCs, RadeonMonitor to provide GPU temperature to a dedicated gadget                                                         	|
-| RadeonSensor        | To read the GPU temperature. Lilu is required                                                                                             	|
-| LucyRTL8125Ethernet | Ethernet device, Realtek RTL8125 2.5G bit Ethernet Controllers driver                                                                     	|
-| USBMap              | Kext to route selected USB ports to Physical Ports via USB port address. This is compulsory to handle 15 port limit requirements by MacOS 	|
+| Kext                | Information                                                                                                                               |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Lilu                | Arbitrary kext and process patching on MacOS                                                                                              |
+| VirtualSMC          | System Management Controller (SMC) emulator layer                                                                                         |
+| AppleALC            | Enabling native MacOS HD audio for unofficial codecs                                                                                      |
+| Whatevergreen       | Various patches necessary for certain ATI/AMD/Intel/Nvidia GPUs                                                                           |
+| SMCProcessor        | Additional support for VirtualSMC. Used for monitoring CPU temperature                                                                    |
+| SMCSuperIO          | Additional support for VirtualSMC. Used for monitoring `FAN` speed                                                                        |
+| SMCRadeonGPU        | Based on FakeSMCs, RadeonMonitor to provide GPU temperature to a dedicated gadget                                                         |
+| RadeonSensor        | To read the GPU temperature. Lilu is required                                                                                             |
+| LucyRTL8125Ethernet | Ethernet device, Realtek RTL8125 2.5G bit Ethernet Controllers driver                                                                     |
+| USBMap              | Kext to route selected USB ports to Physical Ports via USB port address. This is compulsory to handle 15 port limit requirements by MacOS |
+
 <p align="center"><img width="1032" alt="ScreenShot2022-04-25at30024PM" src="https://user-images.githubusercontent.com/72515939/165037853-94893f7d-7950-447a-a57f-745e93fe9ce8.png"></div>
 
 </br>
@@ -339,11 +345,11 @@ So, it should be...
 
 </br>
 
-# OTHERS: ADDITIONAL INFO
+# Others: Additional Info
 
 ## Quirks Check
 
-**Read and Settings**<div align="justify">Quirks is depending on processor type (codename). Different type has different settings. Refer to OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error that occurs in config.plist is your own responsibility. Manual setup is encouraged. Please make a backup before using it. While the quirks are set by processor code name, please read [OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html) for recommendations. Use [ProperTree](https://github.com/corpnewt/ProperTree) or [Xplist](https://github.com/ic005k/Xplist) to manually edit quirks settings via config.plist. There is an easy way by using [OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools). However, it is not recommended and may break the .plist.
+**Read and Settings**<div align="justify">Quirks is depending on processor type (codename). Different type has different settings. Refer to OpenCore Getting Started and head to Configs. For easy settings, use OCAuxiliaryTools. However, this is not recommended. Any error that occurs in config.plist is your own responsibility. Manual setup is encouraged. Please make a backup before using it. While the quirks are set by processor code name, please read [OpenCore Getting Started](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html) for recommendations. Use [ProperTree](https://github.com/corpnewt/ProperTree) or [Xplist](https://github.com/ic005k/Xplist) to manually edit quirks settings via config.plist. There is an easy way by using [OCAuxilliaryTools](https://github.com/ic005k/OCAuxiliaryTools). However, it is not recommended and may break the .plist.</div>
 
 </br>
 
@@ -402,29 +408,44 @@ So, it should be...
 **Framebuffers** available in **AMDRadeonX6000Framebuffer.kext >> Contents >> Info.plist**.
 
 **5700 - Navi 10**
+
 > **AMDRadeonNavi10Controller**
->> **device-id:** 0x73101002 0x73121002 0x73181002 0x73191002 0x731A1002 0x731B1002 0x731F1002 0x73BF1002
->>> **framebuffer:** `ATY,Adder / ATY,Ikaheka`
+>
+> > **device-id:** 0x73101002 0x73121002 0x73181002 0x73191002 0x731A1002 0x731B1002 0x731F1002 0x73BF1002
+> >
+> > > **framebuffer:** `ATY,Adder / ATY,Ikaheka`
 
 **5600 - Navi 12**
+
 > **AMDRadeonNavi12Controller**
->> **device-id:** 0x73601002 0x73621002
->>> **framebuffer:** `ATY,Sunbeam`
+>
+> > **device-id:** 0x73601002 0x73621002
+> >
+> > > **framebuffer:** `ATY,Sunbeam`
 
 **5500 - Navi 14**
+
 > **AMDRadeonNavi14Controller**
->> **device-id:** 0x73401002 0x73411002 0x73431002 0x73471002 0x734F1002
->>> **framebuffer:** `ATY,Python / ATY,Keelback / ATY,Boa`
+>
+> > **device-id:** 0x73401002 0x73411002 0x73431002 0x73471002 0x734F1002
+> >
+> > > **framebuffer:** `ATY,Python / ATY,Keelback / ATY,Boa`
 
 **6800 and 6900 - Navi 21**
+
 > **AMDRadeonNavi21Controller**
->> **device-id:** 0x73A01002 0x73A21002 0x73A31002 0x73AB1002 0x73AE1002 0x73AF1002 0x73BF1002
->>> **framebuffer:** `ATY,Belknap / ATY,Carswell / ATY,Deepbay`
+>
+> > **device-id:** 0x73A01002 0x73A21002 0x73A31002 0x73AB1002 0x73AE1002 0x73AF1002 0x73BF1002
+> >
+> > > **framebuffer:** `ATY,Belknap / ATY,Carswell / ATY,Deepbay`
 
 **6600 - Navi 23**
+
 > **AMDRadeonNavi23Controller**
->> **device-id:** 0x73E31002 0x73FF1002 0x73E01002
->>> **framebuffer:** `ATY,Henbury`
+>
+> > **device-id:** 0x73E31002 0x73FF1002 0x73E01002
+> >
+> > > **framebuffer:** `ATY,Henbury`
 
 </br>
 
@@ -484,74 +505,84 @@ So, it should be...
 **Inject**<div align="justify">Other additional information to be inject:</div>
 
 **AAPL,ig-platform-id:** Property used by macOS to determine the framebuffer profile with Ivy Bridge and newer
+
 - > **DeviceProperties**
-- >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **`AAPL,ig-platform-id`**
-- >>>> **data**
-- >>>>> **`0300913E`**
+- > > **PciRoot(0x0)/Pci(0x2,0x0)**
+- > > > **`AAPL,ig-platform-id`**
+- > > > > **data**
+- > > > > > **`0300913E`**
 
 **AAPL,slot-name:** To show/set PCI Cards on System Profiler
+
 - > **DeviceProperties**
-- >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **`AAPL,slot-name`**
-- >>>> **string**
-- >>>>> **`Internal`**
+- > > **PciRoot(0x0)/Pci(0x2,0x0)**
+- > > > **`AAPL,slot-name`**
+- > > > > **string**
+- > > > > > **`Internal`**
 
 **device-id:** Device id number
+
 - > **DeviceProperties**
-- >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **`device-id`** 
-- >>>> **data** 
-- >>>>> **`9B3E0000`**
+- > > **PciRoot(0x0)/Pci(0x2,0x0)**
+- > > > **`device-id`**
+- > > > > **data**
+- > > > > > **`9B3E0000`**
 
 **igfxonln:** To force-online device property or to force online status on all displays
+
 - > **DeviceProperties**
-- >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **`igfxonln`**
-- >>>> **data** 
-- >>>>> **`01000000`**
+- > > **PciRoot(0x0)/Pci(0x2,0x0)**
+- > > > **`igfxonln`**
+- > > > > **data**
+- > > > > > **`01000000`**
 
 **devicetype:** Type of device
+
 - > **DeviceProperties**
-- >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **`devicetype`** 
-- >>>> **string** 
-- >>>>> **`Display controller`**
+- > > **PciRoot(0x0)/Pci(0x2,0x0)**
+- > > > **`devicetype`**
+- > > > > **string**
+- > > > > > **`Display controller`**
 
 **enable-metal:** To enable-metal property or force enable Metal support on Intel for offline rendering
+
 - > **DeviceProperties**
-- >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **`enable-metal`** 
-- >>>> **data** 
-- >>>>> **`01000000`**
- 
+- > > **PciRoot(0x0)/Pci(0x2,0x0)**
+- > > > **`enable-metal`**
+- > > > > **data**
+- > > > > > **`01000000`**
+
 **iommu-selection:** Allows VMs to directly use peripheral devices through direct memory access (DMA). Value 01000000 may enable IOMMU. Refer: [Apple Platform Security](https://support.apple.com/lt-lt/guide/security/seca4960c2b5/web)
+
 - > **DeviceProperties**
-- >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **`iommu-selection`** 
-- >>>> **data** 
-- >>>>> **`00000000`**
+- > > **PciRoot(0x0)/Pci(0x2,0x0)**
+- > > > **`iommu-selection`**
+- > > > > **data**
+- > > > > > **`00000000`**
 
 **rps-control:** To enable RPS control patch (improves IGPU performance)
+
 - > **DeviceProperties**
-- >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **`rps-control`** 
-- >>>> **data**
-- >>>>> **`01000000`**
+- > > **PciRoot(0x0)/Pci(0x2,0x0)**
+- > > > **`rps-control`**
+- > > > > **data**
+- > > > > > **`01000000`**
 
 **igfxfw:** To force loading of Apple GuC firmware
+
 - > **DeviceProperties**
-- >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **`igfxfw`** 
-- >>>> **data** 
-- >>>>> **`02000000`**
- 
+- > > **PciRoot(0x0)/Pci(0x2,0x0)**
+- > > > **`igfxfw`**
+- > > > > **data**
+- > > > > > **`02000000`**
+
 **hda-gfx:** An onboard properties to HDAU, IGPU, HDEF objects
+
 - > **DeviceProperties**
-- >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **`hda-gfx`**
-- >>>> **string**
-- >>>>> **`onboard-1`**
+- > > **PciRoot(0x0)/Pci(0x2,0x0)**
+- > > > **`hda-gfx`**
+- > > > > **string**
+- > > > > > **`onboard-1`**
 
 **From the original iMac20,1 ioreg:**
 
@@ -579,8 +610,7 @@ So, it should be...
 
 **IQSV Test** Checkout this [link](https://youtu.be/dd3SwAZ3Sw)
 
-> _**Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki patch only applicable via Catalina and below._
-</br>
+> _**Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki patch only applicable via Catalina and below._ > </br>
 
 ## Power
 
@@ -636,9 +666,12 @@ So, it should be...
 ## Debug
 
 > **[v0.8.0](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/commit/521f387a8bbfe912c0168be196ac6029dc96fe3d)**
->> **Result:** Pass
->>> **Time:** 1535PM
->>>> **Date:** 7th May 2022
+>
+> > **Result:** Pass
+> >
+> > > **Time:** 1535PM
+> > >
+> > > > **Date:** 7th May 2022
 
 </br>
 
@@ -704,88 +737,113 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 ## Changelog
 
 **Add additional info related:**
+
 > Main [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/info.txt)
->> CPU [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/CPUInfo.txt) from debug boot log
->>> PCI [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/PCIInfo.txt) from debug boot log
->>>> Additional Framebuffer [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend#additional-framebuffer-for-amd-navi-gpus) for AMD Navi GPU
+>
+> > CPU [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/CPUInfo.txt) from debug boot log
+> >
+> > > PCI [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/PCIInfo.txt) from debug boot log
+> > >
+> > > > Additional Framebuffer [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend#additional-framebuffer-for-amd-navi-gpus) for AMD Navi GPU
 
 **Add Method:**
+
 > [DTGP Method](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl). This is just an example. Refer this [link](https://www.tonymacx86.com/threads/modify-dsdt-for-lpcb-ionamematch.210070/#post-1395509) if you are not sure about this.
 
 **Add Others:**
+
 > Dual Boot [Time Fix](https://www.tonymacx86.com/threads/fix-incorrect-time-in-windows-osx-dual-boot.133719/)
 
 </br>
 
-# ACKNOWLEGEMENT
+# Acknowlegement
 
 I would like to thanks all folks in Hackintosh Community especially:
 
-**[Dortania](https://dortania.github.io/OpenCore-Install-Guide/)** 
+**[Dortania](https://dortania.github.io/OpenCore-Install-Guide/)**
+
 > [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) MacOS Install Guide via OpenCore Boot-loader
 
 </br>
 
-**[acidanthera](https://github.com/acidanthera)** 
+**[acidanthera](https://github.com/acidanthera)**
+
 > [OpenCore](https://github.com/acidanthera/OpenCorePkg) Boot-loader
->> [MaciASL](https://github.com/acidanthera/MaciASL) Powerful ACPI Compiler 
+>
+> > [MaciASL](https://github.com/acidanthera/MaciASL) Powerful ACPI Compiler
 
 </br>
 
-**[corpNewt](https://github.com/corpnewt)** 
-> [USBmap](https://github.com/corpnewt/USBMap) MacOS USB Mapping Tool 
->> [ProperTree](https://github.com/corpnewt/ProperTree) Cross Platform Plist Editor 
+**[corpNewt](https://github.com/corpnewt)**
+
+> [USBmap](https://github.com/corpnewt/USBMap) MacOS USB Mapping Tool
+>
+> > [ProperTree](https://github.com/corpnewt/ProperTree) Cross Platform Plist Editor
 
 </br>
 
 **[dhinakg](https://github.com/USBToolBox/tool)**
->> [USBToolBox](https://github.com/USBToolBox/tool) Windows based USBmap
+
+> > [USBToolBox](https://github.com/USBToolBox/tool) Windows based USBmap
 
 </br>
 
 **[headkaze](https://github.com/headkaze)**
-> [Hackintool](https://github.com/headkaze/Hackintool) The Swiss Army Knife of Vanilla Hackintoshing 
->> [EFIAgent](https://github.com/headkaze/EFI-Agent) EFI Mounter 
+
+> [Hackintool](https://github.com/headkaze/Hackintool) The Swiss Army Knife of Vanilla Hackintoshing
+>
+> > [EFIAgent](https://github.com/headkaze/EFI-Agent) EFI Mounter
 
 </br>
 
 **[Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/)**
+
 > [Facebook](https://www.facebook.com) An Official Malaysia Hackintosh Community
 
 </br>
 
-**[reddit](https://www.reddit.com)** 
-> [r/Hackintosh](https://www.reddit.com/r/hackintosh/) Hackintosh Discussion Platform 
+**[reddit](https://www.reddit.com)**
+
+> [r/Hackintosh](https://www.reddit.com/r/hackintosh/) Hackintosh Discussion Platform
 
 </br>
 
 **[daliansky](https://github.com/daliansky)**
+
 > [OC-Little](https://github.com/daliansky/OC-little) ACPI Guide (Chinese Language)
 
 </br>
 
 **[5T33Z0](https://github.com/5T33Z0/OC-Little-Translated)**
->[OC-Little Translate](https://github.com/5T33Z0/OC-Little-Translated) An English [OC-Little](https://github.com/daliansky/OC-little) Translation
->> [Clover Crate](https://github.com/5T33Z0/Clover-Crate)
->>> [Clover-bootloader](https://github.com/CloverHackyColor/CloverBootloader) Clover Guide 
+
+> [OC-Little Translate](https://github.com/5T33Z0/OC-Little-Translated) An English [OC-Little](https://github.com/daliansky/OC-little) Translation
+>
+> > [Clover Crate](https://github.com/5T33Z0/Clover-Crate)
+> >
+> > > [Clover-bootloader](https://github.com/CloverHackyColor/CloverBootloader) Clover Guide
 
 </br>
 
 **[rusty-bits](https://github.com/rusty-bits)**
->[octool](https://github.com/rusty-bits/octool) Cross Platform OpenCore Update Tool 
+
+> [octool](https://github.com/rusty-bits/octool) Cross Platform OpenCore Update Tool
 
 </br>
 
 **[ic005k](https://github.com/ic005k)**
-> [Xiasl](https://github.com/ic005k/Xiasl) Cross Platform ACPI Compiler 
->> [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools) Cross Platform OpenCore OCAuxiliary Tool 
->>> [Xplist](https://github.com/ic005k/Xplist) Cross Platform Plist Editor 
+
+> [Xiasl](https://github.com/ic005k/Xiasl) Cross Platform ACPI Compiler
+>
+> > [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools) Cross Platform OpenCore OCAuxiliary Tool
+> >
+> > > [Xplist](https://github.com/ic005k/Xplist) Cross Platform Plist Editor
 
 </br>
 
-# FIND ME
+# Find Me
 
 **[reddit](https://www.reddit.com)**
+
 > [u/mohdismailmatasin](https://www.reddit.com/user/mohdismailmatasin)
 
 <!---------------------------
