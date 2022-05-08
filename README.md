@@ -660,6 +660,22 @@ Without this option **octool** will make a "quick guess" as to which version to 
 
 </br>
 
+## Fix Time on Dual Boot (Windows + MacOS)
+
+**How to fix this issus?**<div align="justify">It's quite simple really. All you need to do is set Windows to use UTC instead of GMT. To do this - we need to perform a simple registry edit. Go perform this - hold down the 'Windows' button, and at the same time press R (Win + R) this will bring up a new window titled 'RUN'.</div>
+
+**<div align="justify">In this window type the command 'regedit'. UAC will popup asking for admin permission. Click accept and the registry editor will open. Now that were in regedit, navigate to...</div>
+
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation`
+
+**<div align="justify">Left click on 'TimeZoneInformation' and on the left it will display all the current values attributed to this registry key. On the left right click anywhere and choose 'Create new D-WORD'. You will now see a new entry at the bottom of the list</div>
+
+**<div align="justify">Right click on this new entry and choose 'Modify'. Rename the key 'RealTimeIsUniversal' and change it's value to '1'. Click save, and now the entry should say 'RealTimeIsUniversal - 0x0000001'</div>
+
+**<div align="justify">Reboot, and sync the windows clock - now your time settings will be universal</div>
+
+</br>
+
 ## Final Results
 
 <p align="center"><img width="2560" alt="Screen Shot 2022-04-30 at 12 37 23 AM" src="https://user-images.githubusercontent.com/72515939/165986968-f6debb0f-8b5b-474b-850f-972afcc78621.png"></div>
