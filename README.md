@@ -500,7 +500,7 @@ So, it should be...
 **device-id:** Device id number
 - > **DeviceProperties**
 - >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> -**`device-id`** 
+- >>> **`device-id`** 
 - >>>> **data** 
 - >>>>> **`9B3E0000`**
 
