@@ -667,7 +667,7 @@ Without this option **octool** will make a "quick guess" as to which version to 
 **GMT:** `Greenwich Mean Time`
 **UTC:** `Coordinated Universal Time`
 
-Think of **UTC** time as a way to represent the current time based on a standard location irrespective of local conventions (irrespective of local time, daylight savings time, etc).
+<div align="justify">Think of **UTC** time as a way to represent the current time based on a standard location irrespective of local conventions (irrespective of local time, daylight savings time, etc).</div>
 
 > _**Refer:** See here for further descriptions: [GMT](http://en.wikipedia.org/wiki/Greenwich_Mean_Time) & [UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time)_
 
