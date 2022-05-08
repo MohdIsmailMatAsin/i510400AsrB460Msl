@@ -673,6 +673,8 @@ Without this option **octool** will make a "quick guess" as to which version to 
 
 <div align="justify">Although many technical people think it is silly that by default Windows expects BIOS time to be local time, it is retained for backward compatibility and the 99.9% of people that don't dual boot and would be confused by BIOS showing UTC vs. Windows showing local time.</div>
 	
+</br>
+
 **Step 1:**<div align="justify"> It's quite simple really. All you need to do is set **Windows** to use **UTC** instead of **GMT**. To do this, we need to perform a simple registry edit. Go perform this, hold down the Windows button, and at the same time **Win + R** this will bring up a new window titled **RUN**.</div>
 
 **Step 2:**<div align="justify">In this window type the command **regedit**. **UAC** will popup asking for admin permission. Click accept and the registry editor will open. Now that were in regedit, navigate to...</div>
