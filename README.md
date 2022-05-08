@@ -208,8 +208,8 @@ Below are the base OpenCore files and folders used for this project:
 
 So, it should be...
 
-- UpdateSMBIOSMode = **Custom**
-- CustomSMBIOSGuid = **Yes**
+- UpdateSMBIOSMode = **`Custom`**
+- CustomSMBIOSGuid = **`Yes`**
 
 </br>
 
@@ -366,7 +366,7 @@ _**Remark:**<div align="justify">The order of kexts is important, they are loade
 - RebuildAppleMemoryMap
 - SyncRuntimePermissions
 - ProvideMaxSlide = **0**
-- ResizeAppleGpuBars = **-1**
+- ResizeAppleGpuBars = **`-1`**
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 05 AM" src="https://user-images.githubusercontent.com/72515939/164505410-32911711-727d-40f9-9d2a-f542700b5dcc.png"></div>
 
@@ -379,7 +379,7 @@ _**Remark:**<div align="justify">The order of kexts is important, they are loade
 - DisableLinkeditJettison
 - PanicNoKextDump
 - PowerTimeoutKernelPanic
-- SetApfsTimeout = **0**
+- SetApfsTimeout = **`0`**
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 48 AM" src="https://user-images.githubusercontent.com/72515939/164505506-bc2e3705-8225-407d-a486-0b232f4a5fed.png"></div>
 
@@ -389,9 +389,9 @@ _**Remark:**<div align="justify">The order of kexts is important, they are loade
 
 - EnableVectorAcceleration
 - RequestBootVarRouting
-- ExitBootServiceDelay = **0**
-- ResizeGPUBars = **-1**
-- TscSyncTimeout = **0**
+- ExitBootServiceDelay = **`0`**
+- ResizeGPUBars = **`-1`**
+- TscSyncTimeout = **`0`**
 
 <p align="center"><img width="1227" alt="Screen Shot 2022-04-22 at 12 15 26 AM" src="https://user-images.githubusercontent.com/72515939/164505602-4cf5069b-bdf2-4017-8a54-336f82464ad4.png"></div>
 
@@ -404,27 +404,27 @@ _**Remark:**<div align="justify">The order of kexts is important, they are loade
 **5700 - Navi 10**
 > **AMDRadeonNavi10Controller**
 >> **device-id:** 0x73101002 0x73121002 0x73181002 0x73191002 0x731A1002 0x731B1002 0x731F1002 0x73BF1002
->>> **framebuffer:** ATY,Adder / ATY,Ikaheka
+>>> **framebuffer:** `ATY,Adder / ATY,Ikaheka`
 
 **5600 - Navi 12**
 > **AMDRadeonNavi12Controller**
 >> **device-id:** 0x73601002 0x73621002
->>> **framebuffer:** ATY,Sunbeam
+>>> **framebuffer:** `ATY,Sunbeam`
 
 **5500 - Navi 14**
 > **AMDRadeonNavi14Controller**
 >> **device-id:** 0x73401002 0x73411002 0x73431002 0x73471002 0x734F1002
->>> **framebuffer:** ATY,Python / ATY,Keelback / ATY,Boa
+>>> **framebuffer:** `ATY,Python / ATY,Keelback / ATY,Boa`
 
 **6800 and 6900 - Navi 21**
 > **AMDRadeonNavi21Controller**
 >> **device-id:** 0x73A01002 0x73A21002 0x73A31002 0x73AB1002 0x73AE1002 0x73AF1002 0x73BF1002
->>> **framebuffer:** ATY,Belknap / ATY,Carswell / ATY,Deepbay
+>>> **framebuffer:** `ATY,Belknap / ATY,Carswell / ATY,Deepbay`
 
 **6600 - Navi 23**
 > **AMDRadeonNavi23Controller**
 >> **device-id:** 0x73E31002 0x73FF1002 0x73E01002
->>> **framebuffer:** ATY,Henbury
+>>> **framebuffer:** `ATY,Henbury`
 
 </br>
 
@@ -486,72 +486,72 @@ _**Remark:**<div align="justify">The order of kexts is important, they are loade
 **AAPL,ig-platform-id:** Property used by macOS to determine the framebuffer profile with Ivy Bridge and newer
 - > **DeviceProperties**
 - >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **AAPL,ig-platform-id**
+- >>> **`AAPL,ig-platform-id`**
 - >>>> **data**
-- >>>>> **0300913E**
+- >>>>> **`0300913E`**
 
 **AAPL,slot-name:** To show/set PCI Cards on System Profiler
 - > **DeviceProperties**
 - >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **AAPL,slot-name**
+- >>> **`AAPL,slot-name`**
 - >>>> **string**
-- >>>>> **Internal**
+- >>>>> **`Internal`**
 
 **device-id:** Device id number
 - > **DeviceProperties**
 - >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> -**device-id** 
+- >>> -**`device-id`** 
 - >>>> **data** 
-- >>>>> **9B3E0000**
+- >>>>> **`9B3E0000`**
 
 **igfxonln:** To force-online device property or to force online status on all displays
 - > **DeviceProperties**
 - >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **igfxonln**
+- >>> **`igfxonln`**
 - >>>> **data** 
-- >>>>> **01000000**
+- >>>>> **`01000000`**
 
 **devicetype:** Type of device
 - > **DeviceProperties**
 - >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **devicetype** 
+- >>> **`devicetype`** 
 - >>>> **string** 
-- >>>>> **Display controller**
+- >>>>> **`Display controller`**
 
 **enable-metal:** To enable-metal property or force enable Metal support on Intel for offline rendering
 - > **DeviceProperties**
 - >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **enable-metal** 
+- >>> **`enable-metal`** 
 - >>>> **data** 
-- >>>>> **01000000**
+- >>>>> **`01000000`**
  
 **iommu-selection:** Allows VMs to directly use peripheral devices through direct memory access (DMA). Value 01000000 may enable IOMMU. Refer: [Apple Platform Security](https://support.apple.com/lt-lt/guide/security/seca4960c2b5/web)
 - > **DeviceProperties**
 - >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **iommu-selection** 
+- >>> **`iommu-selection`** 
 - >>>> **data** 
-- >>>>> **00000000**
+- >>>>> **`00000000`**
 
 **rps-control:** To enable RPS control patch (improves IGPU performance)
 - > **DeviceProperties**
 - >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **rps-control** 
+- >>> **`rps-control`** 
 - >>>> **data**
-- >>>>> **01000000**
+- >>>>> **`01000000`**
 
 **igfxfw:** To force loading of Apple GuC firmware
 - > **DeviceProperties**
 - >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **igfxfw** 
+- >>> **`igfxfw`** 
 - >>>> **data** 
-- >>>>> **02000000**
+- >>>>> **`02000000`**
  
 **hda-gfx:** An onboard properties to HDAU, IGPU, HDEF objects
 - > **DeviceProperties**
 - >> **PciRoot(0x0)/Pci(0x2,0x0)**
-- >>> **hda-gfx**
+- >>> **`hda-gfx`**
 - >>>> **string**
-- >>>>> **onboard-1**
+- >>>>> **`onboard-1`**
 
 **From the original iMac20,1 ioreg:**
 
@@ -594,30 +594,30 @@ _**Remark:**<div align="justify">The order of kexts is important, they are loade
 
 **Disable**
 
-- Fast Boot > Feature in BIOS that reduces your computer boot time.
-- Secure Boot > Secure boot is a security standard developed by members of the PC industry
-- Serial/COM Port > Serial port is a serial communication interface
-- Parallel Port > An interface allowing a personal computer (PC) to transmit or receive data down multiple bundled cables to a peripheral device such as a printer
-- Intel Virtualization Technology (VT-d) > Allows user to direct passthrough of devices. This option can be enabled if you set DisableIoMapper to YES
-- Compatibility Support Module (CSM) > Compatibility Support Module
-- Thunderbolt > New technology that supports high-resolution displays and high-performance data through one single port. For initial install, as Thunderbolt can cause issues if not setup correctly
-- Intel Software Guard Extensions (SGX) > A set of security-related instruction codes that are built into some Intel central processing units (CPUs)
-- Intel Platform Trust (TPM) > Trusted Platform Module, improves the security of your PC by securely creating and storing cryptographic keys. (Linux and Windows 10. Proper dual-boot with Windows 11 require TPM to be enable. **Refer:** [InsanelyMac Discussions](https://www.insanelymac.com/forum/topic/348202-how-to-opencore-070-071-differences/)
-- Config Lock (CFG Lock) > Setting in your BIOS that allows for a specific register (in this case the MSR 0xE2) to be written to
-- Intel Rapid Storage Technology (RST) > Windows-based application that provides improved performance and reliability for computers that are equipped with SATA disks for desktop, mobile, and server platforms
+- `Fast Boot` > Feature in BIOS that reduces your computer boot time.
+- `Secure Boot` > Secure boot is a security standard developed by members of the PC industry
+- `Serial/COM Port` > Serial port is a serial communication interface
+- `Parallel Port`> An interface allowing a personal computer (PC) to transmit or receive data down multiple bundled cables to a peripheral device such as a printer
+- `Intel Virtualization Technology (VT-d)` > Allows user to direct passthrough of devices. This option can be enabled if you set DisableIoMapper to YES
+- `Compatibility Support Module (CSM)` > Compatibility Support Module
+- `Thunderbolt` > New technology that supports high-resolution displays and high-performance data through one single port. For initial install, as Thunderbolt can cause issues if not setup correctly
+- `Intel Software Guard Extensions (SGX)` > A set of security-related instruction codes that are built into some Intel central processing units (CPUs)
+- `Intel Platform Trust (TPM)`> Trusted Platform Module, improves the security of your PC by securely creating and storing cryptographic keys. (Linux and Windows 10. Proper dual-boot with Windows 11 require TPM to be enable. **Refer:** [InsanelyMac Discussions](https://www.insanelymac.com/forum/topic/348202-how-to-opencore-070-071-differences/)
+- `Config Lock (CFG Lock)` > Setting in your BIOS that allows for a specific register (in this case the MSR 0xE2) to be written to
+- `Intel Rapid Storage Technology` (RST) > Windows-based application that provides improved performance and reliability for computers that are equipped with SATA disks for desktop, mobile, and server platforms
 
 </br>
 
 **Enable**
 
-- Intel Virtualization Technology (VT-x) > An actual hardware virtualisation assistance.
-- Above 4G decoding > When enabling Above4G, Resizable BAR Support may become an available on some Z490 and newer motherboards. Please ensure that **Booter > Quirks > ResizeAppleGpuBars** is set to 0 if this is enabled
-- Hyper-Threading > An Intel hardware innovation that allows multiple threads to run on each core, this means more work can be done in parallel
-- Execute Disable Bit > An Intel hardware-based security component.
-- EHCI/XHCI Hand-off > USB functions are handled by the OS
-- OS type > Windows 8.1/10 UEFI Mode
-- DVMT Pre > The Intel HD/UHD Graphics driver for Windows. Please allocated (iGPU Memory) to 64MB / Auto
-- SATA Mode > Advanced Host Controller Interface or AHCI
+- `Intel Virtualization Technology (VT-x)` > An actual hardware virtualisation assistance.
+- `Above 4G decoding` > When enabling Above4G, Resizable BAR Support may become an available on some Z490 and newer motherboards. Please ensure that **Booter > Quirks > ResizeAppleGpuBars** is set to 0 if this is enabled
+- `Hyper-Threading` > An Intel hardware innovation that allows multiple threads to run on each core, this means more work can be done in parallel
+- `Execute Disable Bit` > An Intel hardware-based security component.
+- `EHCI/XHCI Hand-off` > USB functions are handled by the OS
+- `OS type` > Windows 8.1/10 UEFI Mode
+- `DVMT Pre` > The Intel HD/UHD Graphics driver for Windows. Please allocated (iGPU Memory) to 64MB / Auto
+- `SATA Mode` > Advanced Host Controller Interface or AHCI
 
 </br>
 
