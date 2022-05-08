@@ -687,7 +687,7 @@ Without this option **octool** will make a "quick guess" as to which version to 
 
 **Step 3:**<div align="justify"> Left click on **TimeZoneInformation** and on the left it will display all the current values attributed to this registry key. On the left right click anywhere and choose Create new **`D-WORD`**. You will now see a new entry at the bottom of the list</div>
 
-**Step 4:**<div align="justify"> Right click on this new entry and choose Modify. Rename the key RealTimeIsUniversal and change it's value to `**1**`. Click **save**, and now the entry should say **RealTimeIsUniversal** - **`0x0000001`**. **Reboot**, and sync the windows clock.</div>
+**Step 4:**<div align="justify"> Right click on this new entry and choose Modify. Rename the key RealTimeIsUniversal and change it's value to **`1`**. Click **save**, and now the entry should say **RealTimeIsUniversal** - **`0x0000001`**. **Reboot**, and sync the windows clock.</div>
 
 </br>
 
