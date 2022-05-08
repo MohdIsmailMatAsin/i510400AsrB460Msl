@@ -679,7 +679,7 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 >>>> Additional Framebuffer [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend#additional-framebuffer-for-amd-navi-gpus) for AMD Navi GPU
 
 **Add Method:**
-> [DTGP Method](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl). This is just an example. Refer this [link](https://www.reddit.com/r/hackintosh/comments/l0t6fl/anyone_knows_what_ssdtdtgp_is/) if you are not sure about this.
+> [DTGP Method](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl). This is just an example. Refer this [link](https://www.tonymacx86.com/threads/modify-dsdt-for-lpcb-ionamematch.210070/#post-1395509) if you are not sure about this.
 
 </br>
 
