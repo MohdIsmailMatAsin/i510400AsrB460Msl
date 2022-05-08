@@ -175,6 +175,14 @@ Below are the base OpenCore files and folders used for this project:
 
 **ACPI Machine Language (AML)**<div align="justify">Pseudo-code for a virtual machine supported by an ACPI-compatible OS and in which ACPI control methods and objects are written. The AML encoding definition is provided in section 19, [ACPI Machine Language (AML) Specification](https://uefi.org/specs/ACPI/6.4/20AMLSpecification/AMLSpecification.html)</div>
 
+**AML Disassembler**<div align="justify">The AML Disassembler has the capability of reverse translating any binary AML table back to nearly the original ASL code. These are typically DSDTs and SSDTs. It can also disassemble and format all other known non-AML data tables.</div>
+
+**Input Files**<div align="justify">The AML Disassembler accepts binary ACPI tables that contain valid AML code. These tables are the DSDT and any SSDTs. These files may be obtained via the acpidump/acpixtract utilities, or some other host-specific tools.</div>
+
+**Output Files**<div align="justify">The output is disassembled (or de-compiled) ASL code. The file extension used for these output files is .DSL, meaning “disassembled ASL”. As opposed to original ASL source code files which typically have the extension **.ASL**.</div>
+
+> **Refer:** [ASL Compiler](https://acpica.org/sites/acpica/files/aslcompiler_10.pdf) for more info.
+
 </br>
 
 **DSDT or SSDT?**<div align="justify">As documented by [Dortania](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime) , *"Do not add your DSDT to OpenCore; it's already in your firmware. If you are unsure what this is referring to, go back to the OpenCore guide and select your configuration based on the architecture of your CPU"*. Some computers come with a broken DSDT. It is usually not recommended to patch/override DSDT. Patching DSDT with garbage can do physical harm to computer. DSDT patches should be avoided. Some forums/websites (i.e., Olarila) state that it is a major solution. But, that reality isn't true. Since DSDT is the primary table, SSDT is the best way to make hackintosh PCs near as Mac. SSDT can be patched, modified (adding and dropping) the hardware properties which hook inside the machine. There are various reasons why DSDT patching is not recommended.</div>
