@@ -483,7 +483,7 @@ So, it should be...
 
 **AGDP (Apple Graphics Device Policy)**
 
-**agdpmod=pikera**<div align="justify">Renames **board-id** to **board-ix** effectively disabling boardID checks, this is based off of [Pike.R.A's](https://github.com/Piker-Alpha)[work](https://pikeralpha.wordpress.com/2015/11/23/patching-applegraphicsdevicepolicy-kext/). Most **AMD Navi GPUs** require this patch to overcome the [black screen issue](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/extended/kernel-issues.html#black-screen-after-ioconsoleusers-gioscreenlock-on-navi) on boot. There are two methods, the first is through **Method 1: boot-args**, while the second is via **Method 2: DeviceProperties**. Below is a description regarding this patch:</div>
+**agdpmod=pikera**<div align="justify">Renames **board-id** to **board-ix** effectively disabling boardID checks, this is based off of [Pike.R.A's](https://github.com/Piker-Alpha)[work](https://pikeralpha.wordpress.com/2015/11/23/patching-applegraphicsdevicepolicy-kext/). Most **AMD Navi GPUs** require this patch to overcome the [black screen issue](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/extended/kernel-issues.html#black-screen-after-ioconsoleusers-gioscreenlock-on-navi) on boot. There are two methods, the first is through **boot-args**, while the second is via **DeviceProperties**. Below is a description regarding this patch:</div>
 
 - Hex = `70696B65726100`
 - Base64 = `cGlrZXJhAA==`
