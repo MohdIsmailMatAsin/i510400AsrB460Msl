@@ -553,11 +553,11 @@ So, it should be...
 
 **From the original iMac20,1 ioreg:**
 
-<img width="1025" alt="Screen Shot 2022-05-08 at 8 01 33 AM" src="https://user-images.githubusercontent.com/72515939/167276037-91f85019-7c65-48f1-bf55-112de4442784.png">
+<img width="1183" alt="Screen Shot 2022-05-08 at 8 19 19 AM" src="https://user-images.githubusercontent.com/72515939/167276417-15a5344e-60bf-4c63-a1e0-aeb8e89a337d.png">
 
 **Patched:**
 
-<img width="921" alt="Screen Shot 2022-05-08 at 8 17 48 AM" src="https://user-images.githubusercontent.com/72515939/167276383-95e0c6fe-4a7a-4b1f-98df-c0184ab5b606.png">
+<img width="1183" alt="Screen Shot 2022-05-08 at 8 19 38 AM" src="https://user-images.githubusercontent.com/72515939/167276420-fe056c83-0c07-425a-9eaa-02f950a49be7.png">
 
 **GPU Tab**<div align="justify">Now, new additional GPU tabs on the MacOS Activity Monitor is added. And, the result is....</div>
 
