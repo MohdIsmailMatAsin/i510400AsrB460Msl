@@ -290,7 +290,7 @@ So, it should be...
 
 </br>
 
-_**Remark:**<div align="justify">The order of kexts is important, they are loaded in this order. Plugins for other kexts should always come after the main kext. Lilu should be first, then Lilu plugins like WhateverGreen and VirtualSMC. Sort in priority to get a better kext injection.</div>_
+> _**Remark:**<div align="justify">The order of kexts is important, they are loaded in this order. Plugins for other kexts should always come after the main kext. Lilu should be first, then Lilu plugins like WhateverGreen and VirtualSMC. Sort in priority to get a better kext injection.</div>_
 
 <p align="center"><img width="1356" alt="ScreenShot2022-04-25at30908PM" src="https://user-images.githubusercontent.com/72515939/165038719-33ac2cca-1cf5-4aae-85de-7caa88c3ccff.png"></div>
 
@@ -669,9 +669,7 @@ Without this option **octool** will make a "quick guess" as to which version to 
 
 Think of **UTC** time as a way to represent the current time based on a standard location irrespective of local conventions (irrespective of local time, daylight savings time, etc).
 
-_**Refer:** See here for further descriptions:_
-- _[GMT](http://en.wikipedia.org/wiki/Greenwich_Mean_Time)_
-- _[UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time)_
+> _**Refer:** See here for further descriptions: [GMT](http://en.wikipedia.org/wiki/Greenwich_Mean_Time) & [UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time)_
 
 <div align="justify">Although many technical people think it is silly that by default Windows expects BIOS time to be local time, it is retained for backward compatibility and the 99.9% of people that don't dual boot and would be confused by BIOS showing UTC vs. Windows showing local time.</div>
 	
