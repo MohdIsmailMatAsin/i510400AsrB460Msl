@@ -711,7 +711,9 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 
 **Add Method:**
 > [DTGP Method](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl). This is just an example. Refer this [link](https://www.tonymacx86.com/threads/modify-dsdt-for-lpcb-ionamematch.210070/#post-1395509) if you are not sure about this.
->> Dual Boot [Time Fix](https://www.tonymacx86.com/threads/fix-incorrect-time-in-windows-osx-dual-boot.133719/)
+
+**Others:**
+> Dual Boot [Time Fix](https://www.tonymacx86.com/threads/fix-incorrect-time-in-windows-osx-dual-boot.133719/)
 
 </br>
 
