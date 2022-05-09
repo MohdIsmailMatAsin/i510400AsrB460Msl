@@ -851,81 +851,63 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 I would like to thanks all folks in Hackintosh Community especially:
 
 **[Dortania](https://dortania.github.io/OpenCore-Install-Guide/)**
-
 > [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) MacOS Install Guide via OpenCore Boot-loader
 
 </br>
 
 **[acidanthera](https://github.com/acidanthera)**
-
 > [OpenCore](https://github.com/acidanthera/OpenCorePkg) Boot-loader
->
 > > [MaciASL](https://github.com/acidanthera/MaciASL) Powerful ACPI Compiler
 
 </br>
 
 **[corpNewt](https://github.com/corpnewt)**
-
 > [USBmap](https://github.com/corpnewt/USBMap) MacOS USB Mapping Tool
->
 > > [ProperTree](https://github.com/corpnewt/ProperTree) Cross Platform Plist Editor
 
 </br>
 
 **[dhinakg](https://github.com/USBToolBox/tool)**
-
-> > [USBToolBox](https://github.com/USBToolBox/tool) Windows based USBmap
+> [USBToolBox](https://github.com/USBToolBox/tool) Windows based USBmap
 
 </br>
 
 **[headkaze](https://github.com/headkaze)**
-
 > [Hackintool](https://github.com/headkaze/Hackintool) The Swiss Army Knife of Vanilla Hackintoshing
->
 > > [EFIAgent](https://github.com/headkaze/EFI-Agent) EFI Mounter
 
 </br>
 
-**[Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/)**
-
-> [Facebook](https://www.facebook.com) An Official Malaysia Hackintosh Community
+**[Facebook](https://www.facebook.com)**
+> [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) An Official Malaysia Hackintosh Community
 
 </br>
 
 **[reddit](https://www.reddit.com)**
-
 > [r/Hackintosh](https://www.reddit.com/r/hackintosh/) Hackintosh Discussion Platform
 
 </br>
 
 **[daliansky](https://github.com/daliansky)**
-
 > [OC-Little](https://github.com/daliansky/OC-little) ACPI Guide (Chinese Language)
 
 </br>
 
 **[5T33Z0](https://github.com/5T33Z0/OC-Little-Translated)**
-
 > [OC-Little Translate](https://github.com/5T33Z0/OC-Little-Translated) An English [OC-Little](https://github.com/daliansky/OC-little) Translation
->
 > > [Clover Crate](https://github.com/5T33Z0/Clover-Crate)
-> >
 > > > [Clover-bootloader](https://github.com/CloverHackyColor/CloverBootloader) Clover Guide
 
 </br>
 
 **[rusty-bits](https://github.com/rusty-bits)**
-
 > [octool](https://github.com/rusty-bits/octool) Cross Platform OpenCore Update Tool
 
 </br>
 
 **[ic005k](https://github.com/ic005k)**
-
 > [Xiasl](https://github.com/ic005k/Xiasl) Cross Platform ACPI Compiler
->
 > > [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools) Cross Platform OpenCore OCAuxiliary Tool
-> >
 > > > [Xplist](https://github.com/ic005k/Xplist) Cross Platform Plist Editor
 
 </br>
@@ -933,7 +915,6 @@ I would like to thanks all folks in Hackintosh Community especially:
 # Find Me
 
 **[reddit](https://www.reddit.com)**
-
 > [u/mohdismailmatasin](https://www.reddit.com/user/mohdismailmatasin)
 
 <!---------------------------
