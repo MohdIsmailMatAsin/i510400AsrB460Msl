@@ -5,20 +5,20 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLuwoq4i.aml, Sat May  7 16:40:08 2022
+ * Disassembly of iASLLzjcy6.aml, Tue May 10 23:05:08 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00000EF3 (3827)
+ *     Length           0x0000125C (4700)
  *     Revision         0x02
- *     Checksum         0x58
+ *     Checksum         0x5A
  *     OEM ID           "Hack"
  *     OEM Table ID     "AsrockSL"
- *     OEM Revision     0x00000000 (0)
+ *     OEM Revision     0x01000001 (16777217)
  *     Compiler ID      "INTL"
  *     Compiler Version 0x20200925 (538970405)
  */
-DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
+DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x01000001)
 {
     External (_SB_.PCI0, DeviceObj)
     External (_SB_.PCI0.ALS0, DeviceObj)
@@ -90,7 +90,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
 
     Scope (\_SB)
     {
-        Name (_STR, Unicode ("System Bus"))  // _STR: Description String
+        Name (_STR, Unicode ("Asrock B460M SL System Bus"))  // _STR: Description String
         Method (_INI, 0, Serialized)  // _INI: Initialize
         {
             If (_OSI ("Darwin"))
@@ -101,7 +101,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
 
         Scope (PR00)
         {
-            Name (_STR, Unicode ("CPU #1"))  // _STR: Description String
+            Name (_STR, Unicode ("HexaCore Intel Core i5-10400, 872 MHz (40 x 22)"))  // _STR: Description String
             If (_OSI ("Darwin"))
             {
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
@@ -129,7 +129,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
             {
                 Name (_HID, "ACPI0008" /* Ambient Light Sensor Device */)  // _HID: Hardware ID
                 Name (_CID, "smc-als")  // _CID: Compatible ID
-                Name (_STR, Unicode ("Light Sensor"))  // _STR: Description String
+                Name (_STR, Unicode ("Intel Comet Lake Ambient Light Sensor"))  // _STR: Description String
                 Method (_ALI, 0, NotSerialized)  // _ALI: Ambient Light Illuminance
                 {
                     Return (((LHIH << 0x08) | LLOW))
@@ -172,6 +172,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
             Device (DRAM)
             {
                 Name (_ADR, Zero)  // _ADR: Address
+                Name (_STR, Unicode ("Intel Comet Lake-S 6C - Host Bridge/DRAM Controller"))  // _STR: Description String
                 Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
                     If (_OSI ("Darwin"))
@@ -190,6 +191,12 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                 Name (_STA, Zero)  // _STA: Status
             }
 
+            Device (IGPU)
+            {
+                Name (_ADR, 0x00020000)  // _ADR: Address
+                Name (_STR, Unicode ("Intel Comet Lake-S GT2 - Integrated Graphics Controller [P0/P1/Q0]"))  // _STR: Description String
+            }
+
             Scope (HDAS)
             {
                 Name (_STA, Zero)  // _STA: Status
@@ -198,7 +205,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
             Device (HDEF)
             {
                 Name (_ADR, 0x001F0003)  // _ADR: Address
-                Name (_STR, Unicode ("Realtek Digital Output"))  // _STR: Description String
+                Name (_STR, Unicode ("Intel Comet Point-V PCH - cAVS (Audio, Voice, Speech)"))  // _STR: Description String
             }
 
             Scope (HECI)
@@ -209,18 +216,12 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
             Device (IMEI)
             {
                 Name (_ADR, 0x00160000)  // _ADR: Address
-                Name (_STR, Unicode ("Intel Management Engine Interface #1"))  // _STR: Description String
-            }
-
-            Device (IGPU)
-            {
-                Name (_ADR, 0x00020000)  // _ADR: Address
-                Name (_STR, Unicode ("Intel UHD Graphics"))  // _STR: Description String
+                Name (_STR, Unicode ("Intel Comet Point-V PCH - CSME: HECI Controller 1"))  // _STR: Description String
             }
 
             Scope (LPCB)
             {
-                Name (_STR, Unicode ("B460 Chipset LPC/eSPI Controller"))  // _STR: Description String
+                Name (_STR, Unicode ("Intel B460M Chipset - LPC/eSPI Controller"))  // _STR: Description String
                 Device (EC)
                 {
                     Name (_HID, "PNP0C09" /* Embedded Controller Device */)  // _HID: Hardware ID
@@ -260,7 +261,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                 Device (EGP0)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("AMD PCI Express Upstream Switch Port"))  // _STR: Description String
+                    Name (_STR, Unicode ("AMD Navi 10 - PCI Express Upstream Switch Port"))  // _STR: Description String
                     Method (_STA, 0, NotSerialized)  // _STA: Status
                     {
                         If (_OSI ("Darwin"))
@@ -276,7 +277,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                     Device (EGP1)
                     {
                         Name (_ADR, Zero)  // _ADR: Address
-                        Name (_STR, Unicode ("AMD PCI Express Downsteam Switch Port"))  // _STR: Description String
+                        Name (_STR, Unicode ("AMD Navi 10 - PCI Express Downstream Switch Port"))  // _STR: Description String
                         Method (_STA, 0, NotSerialized)  // _STA: Status
                         {
                             If (_OSI ("Darwin"))
@@ -292,14 +293,14 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                         Device (GFX0)
                         {
                             Name (_ADR, Zero)  // _ADR: Address
-                            Name (_STR, Unicode ("AMD Radeon RX 5500XT"))  // _STR: Description String
+                            Name (_STR, Unicode ("MSI RX 5500 XT (MS-V382) Video Adapter"))  // _STR: Description String
                             Name (_SUN, One)  // _SUN: Slot User Number
                         }
 
                         Device (HDAU)
                         {
                             Name (_ADR, One)  // _ADR: Address
-                            Name (_STR, Unicode ("AMD Radeon RX 5500XT High Definition Audio Device"))  // _STR: Description String
+                            Name (_STR, Unicode ("AMD Navi 10 - High Definition Audio Controller"))  // _STR: Description String
                             Name (_SUN, One)  // _SUN: Slot User Number
                         }
                     }
@@ -316,7 +317,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                 Device (ARPT)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("Broadcom 802.11ac Network Adapter"))  // _STR: Description String
+                    Name (_STR, Unicode ("Broadcom BCM4360 802.11ac Wireless Network Adapter"))  // _STR: Description String
                 }
             }
 
@@ -338,7 +339,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
             {
                 Scope (PXSX)
                 {
-                    Name (_STR, Unicode ("VIA USB 3.0 eXtensible Host Controller - 1.0"))  // _STR: Description String
+                    Name (_STR, Unicode ("VIA USB 3.0 eXtensible Host Controller"))  // _STR: Description String
                 }
             }
 
@@ -352,7 +353,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                 Device (ANS0)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("Standard NVM Express Controller"))  // _STR: Description String
+                    Name (_STR, Unicode ("Kingston PCIe 3.0 x4 NVMe 1.3 SSD Controller"))  // _STR: Description String
                     Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
@@ -384,9 +385,9 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                             }, 
 
                             "model", 
-                            Buffer (0x18)
+                            Buffer (0x16)
                             {
-                                "Kingston A2000 NVMe SSD"
+                                "KINGSTON SA2000M8500G"
                             }, 
 
                             "name", 
@@ -411,7 +412,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                 Device (ANS2)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("Standard NVM Express Controller"))  // _STR: Description String
+                    Name (_STR, Unicode ("Maxio MAP1001 NVMe SSD Controller"))  // _STR: Description String
                     Name (_SUN, 0x02)  // _SUN: Slot User Number
                 }
             }
@@ -426,7 +427,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                 Device (ANS1)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("Standard NVM Express Controller"))  // _STR: Description String
+                    Name (_STR, Unicode ("Kingston PCIe 3.0 x4 NVMe 1.3 SSD Controller"))  // _STR: Description String
                     Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
@@ -458,9 +459,9 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                             }, 
 
                             "model", 
-                            Buffer (0x18)
+                            Buffer (0x16)
                             {
-                                "Kingston A2000 NVMe SSD"
+                                "KINGSTON SA2000M8500G"
                             }, 
 
                             "name", 
@@ -483,7 +484,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
             Device (SATA)
             {
                 Name (_ADR, 0x00170000)  // _ADR: Address
-                Name (_STR, Unicode ("Microsoft Storage Spaces Controller"))  // _STR: Description String
+                Name (_STR, Unicode ("Intel Comet Point-V PCH - SATA AHCI Controller"))  // _STR: Description String
             }
 
             Scope (SBUS)
@@ -491,9 +492,9 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
                 Device (BUS0)
                 {
                     Name (_CID, "smbus")  // _CID: Compatible ID
-                    Name (_STR, Unicode ("Intel SMBus"))  // _STR: Description String
+                    Name (_STR, Unicode ("Intel Comet Point-V PCH - SMBus Controller"))  // _STR: Description String
                     Name (_ADR, 0x001F0004)  // _ADR: Address
-                    Device (BLC0)
+                    Device (BLCK)
                     {
                         Name (_ADR, 0x57)  // _ADR: Address
                         Name (_CID, "smbus-blc")  // _CID: Compatible ID
@@ -532,19 +533,19 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x00000000)
             Device (THSS)
             {
                 Name (_ADR, 0x00140002)  // _ADR: Address
-                Name (_STR, Unicode ("Intel Thermal Subsystem"))  // _STR: Description String
+                Name (_STR, Unicode ("Intel Comet Point-V PCH - Thermal Controller"))  // _STR: Description String
             }
 
             Scope (XHC)
             {
-                Name (_STR, Unicode ("Intel USB 3.0 eXtensible Host Controller - 1.0"))  // _STR: Description String
+                Name (_STR, Unicode ("Intel Comet Point-V PCH - USB 3.2 Gen 1x1 (5 Gb/s) xHCI Host Controller"))  // _STR: Description String
             }
         }
 
         Device (USBX)
         {
             Name (_ADR, Zero)  // _ADR: Address
-            Name (_STR, Unicode ("Intel USB Power Controller"))  // _STR: Description String
+            Name (_STR, Unicode ("Intel Comet Point-V PCH - USB 3.2 Gen 1x1 xHCI Power Controller"))  // _STR: Description String
             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
             {
                 If ((Arg2 == Zero))
