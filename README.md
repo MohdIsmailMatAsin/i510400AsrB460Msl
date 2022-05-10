@@ -700,7 +700,57 @@ So, it should be...
 
 **IQSV Test** Checkout this [link](https://youtu.be/dd3SwAZ3Sw)
 
-> _**Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki patch only applicable via Catalina and below._ > </br>
+> _**Remark:** All patches is done without [Shiki](https://github.com/acidanthera/WhateverGreen/blob/master/Manual/FAQ.Shiki.en.md) via [Whatevergreen](https://github.com/acidanthera/WhateverGreen). Shiki patch only applicable via Catalina and below._</br>
+
+</br>
+
+**Boot Without Whatevergreen**<div align="justify">There are several ways to boot without Whatevergreen.kext. However, only native DGPU and IGPU are capable. Here the explanation is quite simple. When the setting I have described using Whatevergreen is successful, you can try removing it. This technique is available on **agdpmod = pikera** itself. 
+
+1. Do not remove **agdpmod = pikera** info on DGPU properties.
+2. If you are using **UHD630 IGPU**. You can delete some other information. **Below** is an example:
+
+```xml
+<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+<dict>
+	<key>AAPL,ig-platform-id</key>
+	<data>
+	AwCRPg==
+	</data>
+	<key>AAPL,slot-name</key>
+	<string>Internal</string>
+	<key>device-id</key>
+	<data>
+	mz4AAA==
+	</data>
+	<key>device_type</key>
+	<string>Display controller</string>
+	<key>hda-gfx</key>
+	<string>onboard-1</string>
+	<key>iommu-selection</key>
+	<data>
+	AAAAAA==
+	</data>
+</dict>
+```
+
+3. Save config.plist and reboot. Additional GPU tabs will no longer be available after this. 
+> _**Refer:** Proper headless IGPUs will appear as original iMac 20.1 with CFL framebuffer._
+
+<p align="center"><img width="1105" alt="Screen Shot 2022-05-11 at 7 39 15 AM" src="https://user-images.githubusercontent.com/72515939/167741812-18910d7d-939c-4404-add1-115fd911d7d1.png"></p>
+
+<p align="center"><img width="559" alt="Screen Shot 2022-05-11 at 7 39 24 AM" src="https://user-images.githubusercontent.com/72515939/167741758-aea42364-7d1c-4da2-ac8e-ab18cea1fc9c.png"></p>
+
+**From the original iMac20,1 ioreg:**
+
+<img width="1183" alt="Screen Shot 2022-05-08 at 8 19 19 AM" src="https://user-images.githubusercontent.com/72515939/167276417-15a5344e-60bf-4c63-a1e0-aeb8e89a337d.png">
+
+**Patched:**
+
+<p align="center"><img width="1182" alt="Screen Shot 2022-05-11 at 7 43 12 AM" src="https://user-images.githubusercontent.com/72515939/167742032-f9a623e4-4bf5-42a6-a0c4-2288b4e739ed.png"></p>
+	
+3. Now, ready to boot macOS without Whatevergreen.kext	
+
+</br>
 
 ## Power
 
