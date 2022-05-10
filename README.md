@@ -704,10 +704,10 @@ So, it should be...
 
 </br>
 
-**Boot Without Whatevergreen**<div align="justify">There are several ways to boot without Whatevergreen.kext. However, only native DGPU and IGPU are capable. Here the explanation is quite simple. When the setting I have described using Whatevergreen is successful, you can try removing it. This technique is available on **agdpmod = pikera** itself. 
+**Boot Without Whatevergreen**<div align="justify">There are several ways to boot without Whatevergreen.kext. However, only native DGPU and IGPU are capable. Here, the explanation is quite simple. If the settings above (using Whatevergreen.kext) are successful, try removing/disabling it. This method will handle **agdpmod=pikera** directly using AppleGraphiceDevicePolicy.kext. 
 
-1. Do not remove **agdpmod = pikera** info on DGPU properties.
-2. If you are using **UHD630 IGPU**. You can delete some other information. **Below** is an example:
+1. Do not remove **agdpmod=pikera** info on DGPU properties.
+2. If **Headless UHD630 IGPU** exists in config.plist, delete some other information. **Below** is an example:
 
 ```xml
 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
@@ -733,7 +733,7 @@ So, it should be...
 </dict>
 ```
 
-3. Save config.plist and reboot. Additional GPU tabs will no longer be available after this. 
+3.Save the config.plist and reboot. Additional** GPU tabs** will no longer be available after this. 
 > _**Refer:** Proper headless IGPUs will appear as original iMac 20.1 with CFL framebuffer._
 
 <p align="center"><img width="1105" alt="Screen Shot 2022-05-11 at 7 39 15 AM" src="https://user-images.githubusercontent.com/72515939/167741812-18910d7d-939c-4404-add1-115fd911d7d1.png"></p>
