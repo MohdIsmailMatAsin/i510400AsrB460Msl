@@ -744,11 +744,13 @@ So, it should be...
 
 <img width="1183" alt="Screen Shot 2022-05-08 at 8 19 19 AM" src="https://user-images.githubusercontent.com/72515939/167276417-15a5344e-60bf-4c63-a1e0-aeb8e89a337d.png">
 
+</br>
+
 **Patched:**
 
 <p align="center"><img width="1182" alt="Screen Shot 2022-05-11 at 7 43 12 AM" src="https://user-images.githubusercontent.com/72515939/167742032-f9a623e4-4bf5-42a6-a0c4-2288b4e739ed.png"></p>
 	
-3. Now, ready to boot macOS without Whatevergreen.kext	
+3. Now, ready to boot MacOS without Whatevergreen.kext	
 
 </br>
 
