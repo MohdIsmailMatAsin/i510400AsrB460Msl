@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLc4lfzt.aml, Thu May 12 05:38:24 2022
+ * Disassembly of iASL7PSCgw.aml, Thu May 12 05:56:04 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00001266 (4710)
+ *     Length           0x00001234 (4660)
  *     Revision         0x02
- *     Checksum         0x63
+ *     Checksum         0x4E
  *     OEM ID           "Hack"
  *     OEM Table ID     "AsrockSL"
  *     OEM Revision     0x01000001 (16777217)
@@ -190,17 +190,6 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x01000001)
                     Name (_HID, "PNP0C09" /* Embedded Controller Device */)  // _HID: Hardware ID
                     Name (_UID, One)  // _UID: Unique ID
                     Name (_STR, Unicode ("Embedded Controller"))  // _STR: Description String
-                    Method (_STA, 0, Serialized)  // _STA: Status
-                    {
-                        If (_OSI ("Darwin"))
-                        {
-                            Return (0x0F)
-                        }
-                        Else
-                        {
-                            Return (Zero)
-                        }
-                    }
                 }
             }
 
@@ -208,17 +197,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x01000001)
             {
                 Scope (PEGP)
                 {
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
-                    {
-                        If (_OSI ("Darwin"))
-                        {
-                            Return (Zero)
-                        }
-                        Else
-                        {
-                            Return (0x0F)
-                        }
-                    }
+                    Name (_STA, Zero)  // _STA: Status
                 }
 
                 Device (EGP0)
