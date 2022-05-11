@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLPhCONE.aml, Thu May 12 05:25:38 2022
+ * Disassembly of iASLc4lfzt.aml, Thu May 12 05:38:24 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x0000123D (4669)
+ *     Length           0x00001266 (4710)
  *     Revision         0x02
- *     Checksum         0xCF
+ *     Checksum         0x63
  *     OEM ID           "Hack"
  *     OEM Table ID     "AsrockSL"
  *     OEM Revision     0x01000001 (16777217)
@@ -234,6 +234,26 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x01000001)
                             Name (_ADR, Zero)  // _ADR: Address
                             Name (_STR, Unicode ("MSI RX 5500 XT (MS-V382) Video Adapter"))  // _STR: Description String
                             Name (_SUN, One)  // _SUN: Slot User Number
+                            Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+                            {
+                                If ((Arg2 == Zero))
+                                {
+                                    Return (Buffer (One)
+                                    {
+                                         0x03                                             // .
+                                    })
+                                }
+
+                                Return (Package (0x02)
+                                {
+                                    "agdpmod", 
+                                    Buffer (0x07)
+                                    {
+                                        "pikera"
+                                    }
+                                })
+                            }
+
                             Device (PNLF)
                             {
                                 Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
