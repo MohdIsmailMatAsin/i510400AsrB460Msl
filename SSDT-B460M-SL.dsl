@@ -5,20 +5,20 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASL7PSCgw.aml, Thu May 12 05:56:04 2022
+ * Disassembly of iASLy9yUsd.aml, Thu May 12 06:32:34 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00001234 (4660)
+ *     Length           0x000012D1 (4817)
  *     Revision         0x02
- *     Checksum         0x4E
- *     OEM ID           "Hack"
- *     OEM Table ID     "AsrockSL"
- *     OEM Revision     0x01000001 (16777217)
+ *     Checksum         0x31
+ *     OEM ID           "Asrock"
+ *     OEM Table ID     "B460MSL"
+ *     OEM Revision     0x42343630 (1110718000)
  *     Compiler ID      "INTL"
  *     Compiler Version 0x20200925 (538970405)
  */
-DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x01000001)
+DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
 {
     External (_SB_.PCI0, DeviceObj)
     External (_SB_.PCI0.ALS0, DeviceObj)
@@ -64,7 +64,7 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x01000001)
 
     Scope (\_SB)
     {
-        Name (_STR, Unicode ("Asrock B460M SL System Bus"))  // _STR: Description String
+        Name (_STR, Unicode ("Asrock B460M System Bus"))  // _STR: Description String
         Method (_INI, 0, Serialized)  // _INI: Initialize
         {
             If (_OSI ("Darwin"))
@@ -99,6 +99,33 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x01000001)
 
         Scope (PCI0)
         {
+            Name (_STR, Unicode ("Asrock B460M PCI Express Bus"))  // _STR: Description String
+            Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+            {
+                If ((Arg2 == Zero))
+                {
+                    Return (Buffer (One)
+                    {
+                         0x03                                             // .
+                    })
+                }
+
+                Return (Package (0x04)
+                {
+                    "device_type", 
+                    Buffer (0x1D)
+                    {
+                        "PCI Express Bus"
+                    }, 
+
+                    "model", 
+                    Buffer (0x1D)
+                    {
+                        "Asrock B460M PCI Express Bus"
+                    }
+                })
+            }
+
             Device (ALS0)
             {
                 Name (_HID, "ACPI0008" /* Ambient Light Sensor Device */)  // _HID: Hardware ID
