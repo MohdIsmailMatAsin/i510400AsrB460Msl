@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLLzjcy6.aml, Tue May 10 23:05:08 2022
+ * Disassembly of iASLPhCONE.aml, Thu May 12 05:25:38 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x0000125C (4700)
+ *     Length           0x0000123D (4669)
  *     Revision         0x02
- *     Checksum         0x5A
+ *     Checksum         0xCF
  *     OEM ID           "Hack"
  *     OEM Table ID     "AsrockSL"
  *     OEM Revision     0x01000001 (16777217)
@@ -30,6 +30,9 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x01000001)
     External (_SB_.PCI0.LPCB.EC__, DeviceObj)
     External (_SB_.PCI0.PEG0, DeviceObj)
     External (_SB_.PCI0.PEG0.PEGP, DeviceObj)
+    External (_SB_.PCI0.PEG0.PEGP.EGP1, DeviceObj)
+    External (_SB_.PCI0.PEG0.PEGP.EGP1.GFX0, DeviceObj)
+    External (_SB_.PCI0.PEG0.PEGP.EGP1.GFX0.PNLF, DeviceObj)
     External (_SB_.PCI0.PPMC, DeviceObj)
     External (_SB_.PCI0.RP03, DeviceObj)
     External (_SB_.PCI0.RP03.PXSX, DeviceObj)
@@ -58,35 +61,6 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x01000001)
     External (LHIH, IntObj)
     External (LLOW, IntObj)
     External (STAS, IntObj)
-
-    Method (DTGP, 5, NotSerialized)
-    {
-        If ((Arg0 == ToUUID ("a0b5b7c6-1318-441c-b0c9-fe695eaf949b") /* Unknown UUID */))
-        {
-            If ((Arg1 == One))
-            {
-                If ((Arg2 == Zero))
-                {
-                    Arg4 = Buffer (One)
-                        {
-                             0x03                                             // .
-                        }
-                    Return (One)
-                }
-
-                If ((Arg2 == One))
-                {
-                    Return (One)
-                }
-            }
-        }
-
-        Arg4 = Buffer (One)
-            {
-                 0x00                                             // .
-            }
-        Return (Zero)
-    }
 
     Scope (\_SB)
     {
@@ -173,17 +147,6 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x01000001)
             {
                 Name (_ADR, Zero)  // _ADR: Address
                 Name (_STR, Unicode ("Intel Comet Lake-S 6C - Host Bridge/DRAM Controller"))  // _STR: Description String
-                Method (_STA, 0, NotSerialized)  // _STA: Status
-                {
-                    If (_OSI ("Darwin"))
-                    {
-                        Return (0x0F)
-                    }
-                    Else
-                    {
-                        Return (Zero)
-                    }
-                }
             }
 
             Scope (GFX0)
@@ -262,39 +225,22 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x01000001)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
                     Name (_STR, Unicode ("AMD Navi 10 - PCI Express Upstream Switch Port"))  // _STR: Description String
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
-                    {
-                        If (_OSI ("Darwin"))
-                        {
-                            Return (0x0F)
-                        }
-                        Else
-                        {
-                            Return (Zero)
-                        }
-                    }
-
                     Device (EGP1)
                     {
                         Name (_ADR, Zero)  // _ADR: Address
                         Name (_STR, Unicode ("AMD Navi 10 - PCI Express Downstream Switch Port"))  // _STR: Description String
-                        Method (_STA, 0, NotSerialized)  // _STA: Status
-                        {
-                            If (_OSI ("Darwin"))
-                            {
-                                Return (0x0F)
-                            }
-                            Else
-                            {
-                                Return (Zero)
-                            }
-                        }
-
                         Device (GFX0)
                         {
                             Name (_ADR, Zero)  // _ADR: Address
                             Name (_STR, Unicode ("MSI RX 5500 XT (MS-V382) Video Adapter"))  // _STR: Description String
                             Name (_SUN, One)  // _SUN: Slot User Number
+                            Device (PNLF)
+                            {
+                                Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
+                                Name (_CID, "backlight")  // _CID: Compatible ID
+                                Name (_UID, Zero)  // _UID: Unique ID
+                                Name (_STA, Zero)  // _STA: Status
+                            }
                         }
 
                         Device (HDAU)
@@ -367,31 +313,19 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x01000001)
                         Return (Package (0x0C)
                         {
                             "AAPL,slot-name", 
-                            Buffer (0x05)
-                            {
-                                "M2_1"
-                            }, 
-
+                            "M2_1", 
+                            "device_type", 
+                            "Non-Volatile memory controller", 
+                            "model", 
+                            "KINGSTON SA2000M8500G", 
+                            "name", 
+                            "ANS0", 
                             "device-id", 
                             Buffer (0x04)
                             {
                                  0x06, 0xA8, 0x00, 0x00                           // ....
                             }, 
 
-                            "device_type", 
-                            Buffer (0x1F)
-                            {
-                                "Non-Volatile memory controller"
-                            }, 
-
-                            "model", 
-                            Buffer (0x16)
-                            {
-                                "KINGSTON SA2000M8500G"
-                            }, 
-
-                            "name", 
-                            "ANS0", 
                             "vendor-id", 
                             Buffer (0x04)
                             {
@@ -441,31 +375,19 @@ DefinitionBlock ("", "SSDT", 2, "Hack", "AsrockSL", 0x01000001)
                         Return (Package (0x0C)
                         {
                             "AAPL,slot-name", 
-                            Buffer (0x05)
-                            {
-                                "M2_2"
-                            }, 
-
+                            "M2_2", 
+                            "device_type", 
+                            "Non-Volatile memory controller", 
+                            "model", 
+                            "KINGSTON SA2000M8500G", 
+                            "name", 
+                            "ANS1", 
                             "device-id", 
                             Buffer (0x04)
                             {
                                  0x06, 0xA8, 0x00, 0x00                           // ....
                             }, 
 
-                            "device_type", 
-                            Buffer (0x1F)
-                            {
-                                "Non-Volatile memory controller"
-                            }, 
-
-                            "model", 
-                            Buffer (0x16)
-                            {
-                                "KINGSTON SA2000M8500G"
-                            }, 
-
-                            "name", 
-                            "ANS1", 
                             "vendor-id", 
                             Buffer (0x04)
                             {
