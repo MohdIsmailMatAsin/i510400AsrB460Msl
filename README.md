@@ -750,7 +750,7 @@ So, it should be...
 
 <p align="center"><img width="1182" alt="Screen Shot 2022-05-11 at 7 43 12 AM" src="https://user-images.githubusercontent.com/72515939/167742032-f9a623e4-4bf5-42a6-a0c4-2288b4e739ed.png"></p>
 	
-3. Now, ready to boot MacOS without Whatevergreen.kext	
+3. Now, ready to boot MacOS without Whatevergreen.kext. If any issue occur, back to the previous state (with Whatevergreen.kext)	
 
 </br>
 
