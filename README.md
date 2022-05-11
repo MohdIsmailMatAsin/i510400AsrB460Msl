@@ -132,7 +132,7 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 Below are the base OpenCore files and folders used for this project:
 
-[![rmCD5f.png](https://i.im.ge/2022/05/07/rmCD5f.png)](https://im.ge/i/efi-tree.rmCD5f)
+<p align="center"><img width="611" alt="Screenshot 2022-05-11 193014" src="https://user-images.githubusercontent.com/72515939/167839236-87ef154a-5f72-45d1-a408-f272eda616ab.png"></p>
 
 > _**Remark:** For the [debugging](https://economictimes.indiatimes.com/definition/debugging) process, it is best not to use [OpenCanopy.efi](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html)._
 
