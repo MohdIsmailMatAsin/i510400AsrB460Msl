@@ -32,7 +32,6 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
     External (_SB_.PCI0.PEG0.PEGP, DeviceObj)
     External (_SB_.PCI0.PEG0.PEGP.EGP1, DeviceObj)
     External (_SB_.PCI0.PEG0.PEGP.EGP1.GFX0, DeviceObj)
-    External (_SB_.PCI0.PEG0.PEGP.EGP1.GFX0.PNLF, DeviceObj)
     External (_SB_.PCI0.PPMC, DeviceObj)
     External (_SB_.PCI0.RP03, DeviceObj)
     External (_SB_.PCI0.RP03.PXSX, DeviceObj)
@@ -240,33 +239,6 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                             Name (_ADR, Zero)  // _ADR: Address
                             Name (_STR, Unicode ("MSI RX 5500 XT (MS-V382) Video Adapter"))  // _STR: Description String
                             Name (_SUN, One)  // _SUN: Slot User Number
-                            Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
-                            {
-                                If ((Arg2 == Zero))
-                                {
-                                    Return (Buffer (One)
-                                    {
-                                         0x03                                             // .
-                                    })
-                                }
-
-                                Return (Package (0x02)
-                                {
-                                    "agdpmod", 
-                                    Buffer (0x07)
-                                    {
-                                        "pikera"
-                                    }
-                                })
-                            }
-
-                            Device (PNLF)
-                            {
-                                Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
-                                Name (_CID, "backlight")  // _CID: Compatible ID
-                                Name (_UID, Zero)  // _UID: Unique ID
-                                Name (_STA, Zero)  // _STA: Status
-                            }
                         }
 
                         Device (HDAU)
