@@ -965,6 +965,11 @@ I would like to thanks all folks in Hackintosh Community especially:
 
 </br>
 
+**[k33yb0rd](https://github.com/k33yb0rd/k33yb0rd)**
+> Updated [Asrock B460M SL SSDT](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/commit/657a7336370ad57357e565a734084f9a78439b00)
+
+</br>
+
 # Find Me
 
 **[reddit](https://www.reddit.com)**
