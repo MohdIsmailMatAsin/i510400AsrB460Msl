@@ -11,7 +11,7 @@ Intel Generation               Coffee Lake
 Platform ID                    0x3E910003
 Board ID                       Mac-CFF7D910A743CAAF�
 FW Version                     1731.100.130.0.0�
-Serial Number                  C02CN0C4PN5T
+Serial Number                  XXXXXXXXXXXXXX
 Hardware UUID                  XXXXXXXXPLEASEXGENERATEXITXBYXXXXXXX
 System ID                      XXXXXXXXYOURXSELFXXXXXXXXXXXXXXXXXXX
 ROM                            003EE1ED12FE
