@@ -810,7 +810,7 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                     })
                 }
 
-                Return (Package (0x08)
+                Return (Package ()
                 {
                     "kUSBSleepPowerSupply", 
                     0x13EC, 
