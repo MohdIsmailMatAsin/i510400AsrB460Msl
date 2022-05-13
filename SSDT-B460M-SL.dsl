@@ -74,7 +74,7 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
 
         Scope (PR00)
         {
-            Name (_STR, Unicode ("HexaCore Intel Core i5-10400, 872 MHz (40 x 22)"))  // _STR: Description String
+            Name (_STR, Unicode ("HexaCore Intel Core i5-10400 Processor"))  // _STR: Description String
             If (_OSI ("Darwin"))
             {
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
