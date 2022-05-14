@@ -221,34 +221,61 @@ So, it should be...
 
 </br>
 
-**Patch Applied**<div align="justify">Thanks to CorpNewt cross platform SSDTTime hotpatch tool. In this project, various SSDT's has been merged into [one](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/PCIInfo.txt). i.e., [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl). With several other sources, additional code is injected to reduce the kext workload. As example, GFX0 to an IGPU rename which handled by Whatevergreen.kext.</div>
+**Patch Applied**<div align="justify">Thanks to CorpNewt cross platform SSDTTime hotpatch tool. In this project, various SSDT's has been merged into [one](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/PCIInfo.txt). i.e., [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl). With several other sources, additional code is injected to reduce the kext workload. Below are the patches applied:</div>
+                                                                                                                                   
+**via SSDT**
 
-| Device | Information                                                                                                                                                                                                                                                                                                                     |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ALS0   | Optional/Not Needed. Normally, real iMac is include this device information. Patch: smc-als and AppleLMUController. These patch is only Cosmetics for Desktop, nothing much we can do                                                                                                                                           |
-| ANS0   | Rename Kingston A2000 NVMe, `RP09,PXSX` to `RP09,ANS0`. Device is pointed to `M2- 1` Slot. Patch: Spoof Generic NVMe as `Apple SSD Controller`                                                                                                                                                                                  |
-| ANS1   | Rename Kingston A2000 NVMe, `RP21,PXSX` to `RP21,ANS1`. Device is pointed to `M2- 2` Slot. Patch: Spoof Generic NVMe as `Apple SSD Controller`                                                                                                                                                                                  |
-| ANS2   | Rename Silicon Power MAP1001 NVMe, `RP20,PXSX` to `RP20,ANS2`. Device is pointed to `Slot- 2`. Patch: Spoof Generic NVMe as `Apple SSD Controller`                                                                                                                                                                              |
-| ARPT   | Rename Broadcom device, BCM94360 RP03, `RP03,PXSX` to `RP03,ARPT`. Device is pointed to `M2- 3` Wifi Slot                                                                                                                                                                                                                       |
-| AWAC   | To fix the `System Clocks` found on newer hardware                                                                                                                                                                                                                                                                              |
-| DRAM   | Host bridge (DRAM), or Memory Controller Hub `MCHC`. One of two chips comprising the core logic chipset architecture on a PC motherboard                                                                                                                                                                                        |
-| DTGP   | An original `ACPI Method` from actual Apple DSDTs which contains this `logic` to figure out what to return                                                                                                                                                                                                                      |
-| EC     | Fake Embedded Controller / `EC` drivers since CML don't have native support `EC`                                                                                                                                                                                                                                                |
-| GFX0   | Display Output from Dedicated Graphic Processor Unit / `DGPU`. `_SUN` is added to get proper PCI Slot Number and `agdpmod=pikera`                                                                                                                                                                                               |
-| HDAU   | Audio Output device through HDMI, called as High Definition Audio. `_SUN` is added to get proper PCI Slot Number                                                                                                                                                                                                                |
-| HDEF   | Audio device, known as High Definition Audio System / `HDAS` in actual DSDT, renamed with `HDEF`                                                                                                                                                                                                                                |
-| IGPU   | An Intel Intergrated Graphics Unit device. `GFX0` to `IGPU` rename                                                                                                                                                                                                                                                              |
-| IMEI   | An Intel Management Engine Interface. `HECI` to `IMEI` rename                                                                                                                                                                                                                                                                   |
-| LPCB   | Path of `Low Pin Count Bus` which is corresponding to Embed Controller/EC                                                                                                                                                                                                                                                       |
-| PLUG   | To allow the kernel's `XCPM` / XNU's CPU Power Management to manage CPU's power management                                                                                                                                                                                                                                      |
-| PPMC   | Classed as Memory Controller in Comet Lake (CML) platform. Patch: Compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, identical to CML device `pci8086,a3a1`                                                                                                                                                                  |
-| XHC1   | PCIe `USB card`, VIA USB 3.0 eXtensible Host Controller device                                                                                                                                                                                                                                                                  |
-| RTLK   | Rename RTL8125 2.5GbE Controller device as `RP04,PXSX` to `RP04,RTL0`                                                                                                                                                                                                                                                           |
-| SBUS   | Fix `AppleSMBus` support in MacOS. i.e: `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` (BLCK) and etc                                                                                                                                                                                                              |
-| SATA   | Serial ATA Device. Rename `SATA` to `SAT0`                                                                                                                                                                                                                                                                                      |
-| THSS   | Known as Thermal Subsystem. This device is renamed due to no identical/compatible data using ioreg. Rename pci8086,a3b1 to `THSS`. Patch: Compatible `AppleIntelPCHPMC` support `pci8086,a2a1`, identical to CML device `pci8086,a3a1`. Patch via PPMC is better. By default, `THSS` is removed via my config.plist (using #)   |
-| USBX   | `USB Power` Properties for Skylake and newer motherboard generation                                                                                                                                                                                                                                                             |
-| XHC0    | Board Comet Lake PCH-V `USB Controller` device                                                                                                                                                                                                                                                                                  |
+- **ALS0** = Normally, a real iMac20,1 includes compatibility with smc-als and AppleLMUController. These patches are only cosmetics on regular PC's.       
+
+- **ANS0** = Rename KINGSTON SA2000M8500G NVme, `RP09,PXSX` to `RP09,ANS0` and pointed to Slot: `M2- 1`. Patch `Generic NVMe` to spoof as `Apple SSD Controller`                                                                                                                                               
+
+- **ANS1** = Rename KINGSTON SA2000M8500G NVme, `RP21,PXSX` to `RP21,ANS1` and pointed to Slot: `M2- 2`. Patch `Generic NVMe` to spoof as `Apple SSD Controller`                    
+
+- **ANS2** = Rename Maxio MAP1001 NVMe SSD, `RP20,PXSX` to `RP20,ANS2` and pointed to Slot: `Slot- 2`. Patch `Generic NVMe` to spoof as `Apple SSD Controller` as built-in                                                                                                                                   
+
+- **ARPT** = Rename Broadcom BCM94360, `RP03,PXSX` to `RP03,ARPT `and pointed to Slot: `M2_Wifi`. Since the device works **OOB**, no additional patches have been applied
+ 
+- **AWAC** = **AWAC/RTC0** purpose is to fix the `system clocks` found on newer hardware. Mostly on 300 Series, 400 Series, 495 Series(Ice Lake), X99 and X299 Motherboard                                                                                                                                           
+
+- **DRAM** = Host bridge (DRAM) or mostly known to Memory Controller Hub `MCHC`, is one of two chips comprising the `core logic chipset` architecture on a PC motherboard 
+ 
+- **EC** = Patched `Embedded Controller` or `EC`. An EC is a microcontroller in computers that handles various system tasks that the operating system does not handle. Most generic PC motherboards lack native EC support since Apple Macs require `boot-ec` not `PNP0C09`                                           
+ 
+- **GFX0** = Display out from a Dedicated Graphic Processor Unit (DGPU). Patch `_SUN` enabled Slot Number and `agdpmod=pikera` with `other improvement config`                                                                                                                            
+
+- **HDAU** = High Definition Audio. Patch `_SUN` enabled Slot Number and `layout-id` data
+
+- **HDEF** = Another High Definition Audio device with AC'97 support. Renamed `HDAS` to `HDEF` 
+
+- **IGPU** = Intel Intergrated Graphics Unit device renamed from `GFX0` to `IGPU` with other `required patches` as `Headless` graphic support 
+
+- **IMEI** = Intel Management Engine Interface. Rename `HECI` to `IMEI` with other required info    
+
+- **LPCB** = Low Pin Count LPC Bus, may also work as PPC. An interface allows the legacy I/O motherboard components, typically integrated in a Super I/O chip, to migrate from the ISA/X-bus to the LPC Interface
+
+- **PLUG** = To allow the kernel's `XCPM` / XNU's CPU Power Management to manage CPU's power management 
+
+- **RTLK** = Rename RTL8125 2.5GbE Controller, rename `RP04,PXSX` to `RP04,RTLK`   
+
+- **SATA** = Serial ATA Device (SATA). Rename `SATA` to `SAT0` and patch compatibe 400 Series SATA Family to `pci8086,a352` iMac's compatible (Cosmetics)
+
+- **USBX** = USB Power Properties on Skylake mothermoard and new generation
+
+- **XHC0** = The `Platform Controller Hub` (PCH) for Intel Comet Lake family single-chip chipsets known as `Intel Comet Lake PCH-V USB Controller`. Because this build has two different USB Host Controllers, rename `XHC` to `XHC0`
+
+- **XHC1** = VIA USB 3.0 eXtensible PCIe Host Controller, `RP05,PXSX` to `RP05,XHC1` and pointed to Slot: `Slot- 3`       
+
+</br>
+
+**via config.plist**
+
+- **PPMC** = Classed as Memory Controller in Comet Lake (CML) platform. Patch compatible supported Comet Lake `pci8086,a3a1` on `AppleIntelPCHPMC`, which is identical to Intel 200 Series/Z370 Chipset Family Power Management Controller `pci8086,a2a1`
+
+- **RP0n** = Root Port (RPn) and added simple information. "`n` is numeric
+
+- **SBUS** = `AppleSMBus` support effort to fix Sistem Management Bus `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` (**BLCK/BLC0** - `smc-blc` or **DVL0** - `diagsvault`), etc
+
+- **THSS** = Thermal Subsystem. Fix unrecognize pciXXXX,XXXX which not identical using Mac's. Rename pci8086,a3b1 to `THSS`
 
 <p align="center"><img width="1239" alt="Screen Shot 2022-04-30 at 10 31 53 AM" src="https://user-images.githubusercontent.com/72515939/166087058-3f4572be-a047-41bd-859a-5da51220af26.png"></div>
 
