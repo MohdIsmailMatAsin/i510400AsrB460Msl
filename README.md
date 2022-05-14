@@ -225,8 +225,7 @@ So, it should be...
                                                                                                                                    
 **via SSDT**
 
-- **ALS0** = Normally, a real iMac20,1 includes compatibility with smc-als and AppleLMUController. These patches are only cosmetics on regular PC's.       
-
+- **ALS0** = Normally, a real iMac20,1 includes compatibility with `smc-als` and `AppleLMUController`. These patches are only cosmetics on regular PC's.       
 - **ANS0** = Rename KINGSTON SA2000M8500G NVme, `RP09,PXSX` to `RP09,ANS0` and pointed to Slot: `M2- 1`. Patch `Generic NVMe` to spoof as `Apple SSD Controller`                                                                                                                                               
 
 - **ANS1** = Rename KINGSTON SA2000M8500G NVme, `RP21,PXSX` to `RP21,ANS1` and pointed to Slot: `M2- 2`. Patch `Generic NVMe` to spoof as `Apple SSD Controller`                    
@@ -236,11 +235,9 @@ So, it should be...
 - **ARPT** = Rename Broadcom BCM94360, `RP03,PXSX` to `RP03,ARPT `and pointed to Slot: `M2_Wifi`. Since the device works **OOB**, no additional patches have been applied
  
 - **AWAC** = **AWAC/RTC0** purpose is to fix the `system clocks` found on newer hardware. Mostly on 300 Series, 400 Series, 495 Series(Ice Lake), X99 and X299 Motherboard                                                                                                                                           
-
 - **DRAM** = Host bridge (DRAM) or mostly known to Memory Controller Hub `MCHC`, is one of two chips comprising the `core logic chipset` architecture on a PC motherboard 
  
 - **EC** = Patched `Embedded Controller` or `EC`. An EC is a microcontroller in computers that handles various system tasks that the operating system does not handle. Most generic PC motherboards lack native EC support since Apple Macs require `boot-ec` not `PNP0C09`                                           
- 
 - **GFX0** = Display out from a Dedicated Graphic Processor Unit (DGPU). Patch `_SUN` enabled Slot Number and `agdpmod=pikera` with `other improvement config`                                                                                                                            
 
 - **HDAU** = High Definition Audio. Patch `_SUN` enabled Slot Number and `layout-id` data
