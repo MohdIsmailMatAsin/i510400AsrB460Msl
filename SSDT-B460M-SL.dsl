@@ -706,7 +706,7 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                             "device_type", 
                             "Non-Volatile memory controller", 
                             "model", 
-                            "Maxio MAP1001 NVMe SSD Controllerr", 
+                            "Maxio MAP1001 NVMe SSD Controller", 
                             "name", 
                             "ANS2", 
                             "built-in", 
