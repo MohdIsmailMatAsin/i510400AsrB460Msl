@@ -893,10 +893,6 @@ Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/
 > > >
 > > > > Additional Framebuffer [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend#additional-framebuffer-for-amd-navi-gpus) for AMD Navi GPU
 
-**Add Method:**
-
-> [DTGP Method](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl). This is just an example. Refer this [link](https://www.tonymacx86.com/threads/modify-dsdt-for-lpcb-ionamematch.210070/#post-1395509) if you are not sure about this.
-
 **Add Others:**
 
 > Dual Boot [Time Fix](https://www.tonymacx86.com/threads/fix-incorrect-time-in-windows-osx-dual-boot.133719/)
@@ -970,7 +966,7 @@ I would like to thanks all folks in Hackintosh Community especially:
 </br>
 
 **[k33yb0rd](https://github.com/k33yb0rd/k33yb0rd)**
-> Updated [SSDT-B460M-SL](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl)
+> Updated [SSDT-B460M-SL](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl) Fix certain ACPI method
 
 </br>
 
