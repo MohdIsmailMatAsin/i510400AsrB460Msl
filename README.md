@@ -251,7 +251,7 @@ So, it should be...
 **via config.plist**
 
 - **PPMC**<div align="justify">💲 Classed as Memory Controller in Comet Lake (CML) platform. Patch compatible supported Comet Lake `pci8086,a3a1` on `AppleIntelPCHPMC`, which is identical to Intel 200 Series/Z370 Chipset Family Power Management Controller `pci8086,a2a1`</div>
-- **RP0n**<div align="justify">💲 Root Port (RPn) and added simple information. "`n` is numeric</div>
+- **RPn**<div align="justify">💲 Root Port (RPn) and added simple information. "`n` is numeric</div>
 - **SBUS**<div align="justify">💲 ACPI Method to fix Sistem Management Bus `AppleSMBus`, `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` (**BLCK/BLC0** - `smc-blc` or **DVL0** - `diagsvault`), etc</div>
 - **THSS**<div align="justify">💲 Thermal Subsystem. Fix unrecognize pciXXXX,XXXX which not identical properly on Mac's. Rename pci8086,a3b1 to `THSS`</div>
 
