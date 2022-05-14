@@ -858,7 +858,7 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                         "model", 
                         "Intel Comet Point-V PCH - USB 3.2 Gen 1x1 (5 Gb/s) xHCI Host Controller", 
                         "name", 
-                        "XHC0", 
+                        "XHC", 
                         "acpi-wake-type", 
                         One
                     })
