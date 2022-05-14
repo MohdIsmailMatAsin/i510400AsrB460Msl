@@ -835,7 +835,7 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 Name (_STA, Zero)  // _STA: Status
             }
 
-            Device (XHC0)
+            Device (XHC)
             {
                 Name (_ADR, 0x00140000)  // _ADR: Address
                 Name (_STR, Unicode ("Intel Comet Point-V PCH - USB 3.2 Gen 1x1 (5 Gb/s) xHCI Host Controller"))  // _STR: Description String
