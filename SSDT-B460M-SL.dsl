@@ -596,37 +596,7 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
             {
                 Scope (PXSX)
                 {
-                    Name (_STA, Zero)  // _STA: Status
-                }
-
-                Device (XHC1)
-                {
-                    Name (_ADR, Zero)  // _ADR: Address
                     Name (_STR, Unicode ("VIA USB 3.0 eXtensible Host Controller"))  // _STR: Description String
-                    Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
-                    {
-                        If ((Arg2 == Zero))
-                        {
-                            Return (Buffer ()
-                            {
-                                 0x03                                             // .
-                            })
-                        }
-
-                        Return (Package ()
-                        {
-                            "AAPL,slot-name", 
-                            "Slot- 3", 
-                            "device_type", 
-                            "USB controller", 
-                            "model", 
-                            "VIA USB 3.0 eXtensible Host Controller", 
-                            "name", 
-                            "XHC1", 
-                            "acpi-wake-type", 
-                            One
-                        })
-                    }
                 }
             }
 
