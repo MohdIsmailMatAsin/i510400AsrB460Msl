@@ -817,11 +817,11 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 {
                     Name (_CID, "smbus")  // _CID: Compatible ID
                     Name (_STR, Unicode ("Intel Comet Point-V PCH - SMBus Controller"))  // _STR: Description String
-                    Name (_ADR, 0x001F0004)  // _ADR: Address
-                    Device (BLCK)
+                    Name (_ADR, Zero)  // _ADR: Address
+                    Device (DVL0)
                     {
                         Name (_ADR, 0x57)  // _ADR: Address
-                        Name (_CID, "smbus-blc")  // _CID: Compatible ID
+                        Name (_CID, "diagsvault")  // _CID: Compatible ID
                         Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                         {
                             If (!Arg2)
