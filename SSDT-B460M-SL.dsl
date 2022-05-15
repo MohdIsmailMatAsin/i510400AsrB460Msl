@@ -1,24 +1,24 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20200925 (64-bit version)
- * Copyright (c) 2000 - 2020 Intel Corporation
+ * AML/ASL+ Disassembler version 20210930 (32-bit version)
+ * Copyright (c) 2000 - 2021 Intel Corporation
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLSw6rra.aml, Sun May 15 08:16:24 2022
+ * Disassembly of D:/Storage/Tools/Windows/OpenCore/OC_v0.8.0-Mod/EFI/OC/ACPI/SSDT-B460MASL.aml, Mon May 16 00:17:26 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00001CF9 (7417)
+ *     Length           0x00001D14 (7444)
  *     Revision         0x02
- *     Checksum         0x38
+ *     Checksum         0x73
  *     OEM ID           "Asrock"
  *     OEM Table ID     "B460MSL"
  *     OEM Revision     0x42343630 (1110718000)
  *     Compiler ID      "INTL"
- *     Compiler Version 0x20200925 (538970405)
+ *     Compiler Version 0x20210930 (539035952)
  */
-DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
+DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x00000000)
 {
     External (_SB_.PCI0, DeviceObj)
     External (_SB_.PCI0.ALS0, DeviceObj)
@@ -63,7 +63,6 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
 
     Scope (\_SB)
     {
-        Name (_STR, Unicode ("Asrock B460M System Bus"))  // _STR: Description String
         Method (_INI, 0, Serialized)  // _INI: Initialize
         {
             If (_OSI ("Darwin"))
@@ -74,20 +73,19 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
 
         Scope (PR00)
         {
-            Name (_STR, Unicode ("HexaCore Intel Core i5-10400, 872 MHz (40 x 22)"))  // _STR: Description String
             If (_OSI ("Darwin"))
             {
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
                     If (!Arg2)
                     {
-                        Return (Buffer (One)
+                        Return (Buffer ()
                         {
                              0x03                                             // .
                         })
                     }
 
-                    Return (Package (0x02)
+                    Return (Package ()
                     {
                         "plugin-type", 
                         One
@@ -98,29 +96,28 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
 
         Scope (PCI0)
         {
-            Name (_STR, Unicode ("B460M PCI Express Bus"))  // _STR: Description String
             Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
             {
                 If ((Arg2 == Zero))
                 {
-                    Return (Buffer (One)
+                    Return (Buffer ()
                     {
                          0x03                                             // .
                     })
                 }
 
-                Return (Package (0x04)
+                Return (Package ()
                 {
                     "device_type", 
                     Buffer (0x1D)
                     {
-                        "PCI Express Bus"
+                        "PCIe Bus"
                     }, 
 
                     "model", 
-                    Buffer (0x2A)
+                    Buffer ()
                     {
-                        "Asrock B460M Steel Legend PCI Express Bus"
+                        "Asrock B460M Steel Legend PCIe Bus"
                     }
                 })
             }
@@ -129,39 +126,38 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
             {
                 Name (_HID, "ACPI0008" /* Ambient Light Sensor Device */)  // _HID: Hardware ID
                 Name (_CID, "smc-als")  // _CID: Compatible ID
-                Name (_STR, Unicode ("Intel Comet Lake Ambient Light Sensor"))  // _STR: Description String
                 Method (_ALI, 0, NotSerialized)  // _ALI: Ambient Light Illuminance
                 {
                     Return (((LHIH << 0x08) | LLOW))
                 }
 
-                Name (_ALR, Package (0x05)  // _ALR: Ambient Light Response
+                Name (_ALR, Package ()  // _ALR: Ambient Light Response
                 {
-                    Package (0x02)
+                    Package ()
                     {
                         0x46, 
                         Zero
                     }, 
 
-                    Package (0x02)
+                    Package ()
                     {
                         0x49, 
                         0x0A
                     }, 
 
-                    Package (0x02)
+                    Package ()
                     {
                         0x55, 
                         0x50
                     }, 
 
-                    Package (0x02)
+                    Package ()
                     {
                         0x64, 
                         0x012C
                     }, 
 
-                    Package (0x02)
+                    Package ()
                     {
                         0x96, 
                         0x03E8
@@ -172,18 +168,17 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
             Device (DRAM)
             {
                 Name (_ADR, Zero)  // _ADR: Address
-                Name (_STR, Unicode ("Intel Comet Lake-S 6C - Host Bridge/DRAM Controller"))  // _STR: Description String
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
                     If ((Arg2 == Zero))
                     {
-                        Return (Buffer (One)
+                        Return (Buffer ()
                         {
                              0x03                                             // .
                         })
                     }
 
-                    Return (Package (0x08)
+                    Return (Package ()
                     {
                         "AAPL,slot-name", 
                         "Internal", 
@@ -205,21 +200,20 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
             Device (IGPU)
             {
                 Name (_ADR, 0x00020000)  // _ADR: Address
-                Name (_STR, Unicode ("Intel Comet Lake-S GT2 - Integrated Graphics Controller [P0/P1/Q0]"))  // _STR: Description String
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
                     If ((Arg2 == Zero))
                     {
-                        Return (Buffer (One)
+                        Return (Buffer ()
                         {
                              0x03                                             // .
                         })
                     }
 
-                    Return (Package (0x16)
+                    Return (Package ()
                     {
                         "AAPL,slot-name", 
-                        "Graphics", 
+                        "Display", 
                         "device_type", 
                         "Display controller", 
                         "hda-gfx", 
@@ -237,7 +231,7 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                         "rps-control", 
                         One, 
                         "AAPL,ig-platform-id", 
-                        Buffer (0x04)
+                        Buffer ()
                         {
                              0x03, 0x00, 0x91, 0x3E                           // ...>
                         }, 
@@ -259,18 +253,17 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
             Device (HDEF)
             {
                 Name (_ADR, 0x001F0003)  // _ADR: Address
-                Name (_STR, Unicode ("Intel Comet Point-V PCH - cAVS (Audio, Voice, Speech)"))  // _STR: Description String
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
                     If ((Arg2 == Zero))
                     {
-                        Return (Buffer (One)
+                        Return (Buffer ()
                         {
                              0x03                                             // .
                         })
                     }
 
-                    Return (Package (0x0A)
+                    Return (Package ()
                     {
                         "AAPL,slot-name", 
                         "Audio", 
@@ -297,18 +290,17 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
             Device (IMEI)
             {
                 Name (_ADR, 0x00160000)  // _ADR: Address
-                Name (_STR, Unicode ("Intel Comet Point-V PCH - CSME: HECI Controller 1"))  // _STR: Description String
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
                     If ((Arg2 == Zero))
                     {
-                        Return (Buffer (One)
+                        Return (Buffer ()
                         {
                              0x03                                             // .
                         })
                     }
 
-                    Return (Package (0x08)
+                    Return (Package ()
                     {
                         "AAPL,slot-name", 
                         "Internal", 
@@ -324,18 +316,27 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
 
             Scope (LPCB)
             {
-                Name (_STR, Unicode ("Intel B460M Chipset - LPC/eSPI Controller"))  // _STR: Description String
                 Device (EC)
                 {
                     Name (_HID, "PNP0C09" /* Embedded Controller Device */)  // _HID: Hardware ID
                     Name (_UID, One)  // _UID: Unique ID
-                    Name (_STR, Unicode ("Embedded Controller"))  // _STR: Description String
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    {
+                        If (_OSI ("Darwin"))
+                        {
+                            Return (0x0F)
+                        }
+                        Else
+                        {
+                            Return (Zero)
+                        }
+                    }
                 }
             }
 
             Scope (PEG0)
             {
-                Scope (PEGP)
+				Scope (PEGP)
                 {
                     Name (_STA, Zero)  // _STA: Status
                 }
@@ -343,18 +344,17 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 Device (EGP0)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("AMD Navi 10 - PCI Express Upstream Switch Port"))  // _STR: Description String
                     Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
                         {
-                            Return (Buffer (One)
+                            Return (Buffer ()
                             {
                                  0x03                                             // .
                             })
                         }
 
-                        Return (Package (0x08)
+                        Return (Package ()
                         {
                             "AAPL,slot-name", 
                             "Slot- 1", 
@@ -370,18 +370,17 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                     Device (EGP1)
                     {
                         Name (_ADR, Zero)  // _ADR: Address
-                        Name (_STR, Unicode ("AMD Navi 10 - PCI Express Downstream Switch Port"))  // _STR: Description String
                         Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                         {
                             If ((Arg2 == Zero))
                             {
-                                Return (Buffer (One)
+                                Return (Buffer ()
                                 {
                                      0x03                                             // .
                                 })
                             }
 
-                            Return (Package (0x08)
+                            Return (Package ()
                             {
                                 "AAPL,slot-name", 
                                 "Slot- 1", 
@@ -397,19 +396,18 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                         Device (GFX0)
                         {
                             Name (_ADR, Zero)  // _ADR: Address
-                            Name (_STR, Unicode ("MSI RX 5500 XT (MS-V382) Video Adapter"))  // _STR: Description String
                             Name (_SUN, One)  // _SUN: Slot User Number
                             Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
                             {
                                 If ((Arg2 == Zero))
                                 {
-                                    Return (Buffer (One)
+                                    Return (Buffer ()
                                     {
                                          0x03                                             // .
                                     })
                                 }
 
-                                Return (Package (0x20)
+                                Return (Package ()
                                 {
                                     "agdpmod", 
                                     "pikera", 
@@ -475,7 +473,7 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                                     "ATY,EFIEnabledMode", 
                                     One, 
                                     "CFG,CFG_USE_AGDC", 
-                                    One
+                                    Zero
                                 })
                             }
 
@@ -491,19 +489,18 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                         Device (HDAU)
                         {
                             Name (_ADR, One)  // _ADR: Address
-                            Name (_STR, Unicode ("AMD Navi 10 - High Definition Audio Controller"))  // _STR: Description String
                             Name (_SUN, One)  // _SUN: Slot User Number
                             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                             {
                                 If ((Arg2 == Zero))
                                 {
-                                    Return (Buffer (One)
+                                    Return (Buffer ()
                                     {
                                          0x03                                             // .
                                     })
                                 }
 
-                                Return (Package (0x08)
+                                Return (Package ()
                                 {
                                     "AAPL,slot-name", 
                                     "Slot- 1", 
@@ -530,18 +527,17 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 Device (ARPT)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("Broadcom BCM4360 802.11ac Wireless Network Adapter"))  // _STR: Description String
                     Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
                         {
-                            Return (Buffer (One)
+                            Return (Buffer ()
                             {
                                  0x03                                             // .
                             })
                         }
 
-                        Return (Package (0x08)
+                        Return (Package ()
                         {
                             "AAPL,slot-name", 
                             "M2_Wifi", 
@@ -566,18 +562,17 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 Device (RTLK)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("Realtek Gaming 2.5GbE Family Controller"))  // _STR: Description String
                     Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
                         {
-                            Return (Buffer (One)
+                            Return (Buffer ()
                             {
                                  0x03                                             // .
                             })
                         }
 
-                        Return (Package (0x08)
+                        Return (Package ()
                         {
                             "AAPL,slot-name", 
                             "Internal", 
@@ -602,18 +597,17 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 Device (XHC1)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("VIA USB 3.0 eXtensible Host Controller"))  // _STR: Description String
                     Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
                         {
-                            Return (Buffer (One)
+                            Return (Buffer ()
                             {
                                  0x03                                             // .
                             })
                         }
 
-                        Return (Package (0x0A)
+                        Return (Package ()
                         {
                             "AAPL,slot-name", 
                             "Slot- 3", 
@@ -640,7 +634,6 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 Device (ANS0)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("Kingston PCIe 3.0 x4 NVMe 1.3 SSD Controller"))  // _STR: Description String
                     Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
@@ -651,7 +644,7 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                             })
                         }
 
-                        Return (Package (0x0C)
+                        Return (Package ()
                         {
                             "AAPL,slot-name", 
                             "M2_1", 
@@ -662,13 +655,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                             "name", 
                             "ANS0", 
                             "device-id", 
-                            Buffer (0x04)
+                            Buffer ()
                             {
                                  0x06, 0xA8, 0x00, 0x00                           // ....
                             }, 
 
                             "vendor-id", 
-                            Buffer (0x04)
+                            Buffer ()
                             {
                                  0x4D, 0x14, 0x00, 0x00                           // M...
                             }
@@ -687,19 +680,18 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 Device (ANS2)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("Maxio MAP1001 NVMe SSD Controller"))  // _STR: Description String
                     Name (_SUN, 0x02)  // _SUN: Slot User Number
                     Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
                         {
-                            Return (Buffer (One)
+                            Return (Buffer ()
                             {
                                  0x03                                             // .
                             })
                         }
 
-                        Return (Package (0x0E)
+                        Return (Package ()
                         {
                             "AAPL,slot-name", 
                             "Slot- 2", 
@@ -737,18 +729,17 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 Device (ANS1)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
-                    Name (_STR, Unicode ("Kingston PCIe 3.0 x4 NVMe 1.3 SSD Controller"))  // _STR: Description String
                     Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
                     {
                         If ((Arg2 == Zero))
                         {
-                            Return (Buffer (One)
+                            Return (Buffer ()
                             {
                                  0x03                                             // .
                             })
                         }
 
-                        Return (Package (0x0C)
+                        Return (Package ()
                         {
                             "AAPL,slot-name", 
                             "M2_2", 
@@ -759,13 +750,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                             "name", 
                             "ANS1", 
                             "device-id", 
-                            Buffer (0x04)
+                            Buffer ()
                             {
                                  0x06, 0xA8, 0x00, 0x00                           // ....
                             }, 
 
                             "vendor-id", 
-                            Buffer (0x04)
+                            Buffer ()
                             {
                                  0x4D, 0x14, 0x00, 0x00                           // M...
                             }
@@ -782,18 +773,17 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
             Device (SATA)
             {
                 Name (_ADR, 0x00170000)  // _ADR: Address
-                Name (_STR, Unicode ("Intel Comet Point-V PCH - SATA AHCI Controller"))  // _STR: Description String
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
                     If ((Arg2 == Zero))
                     {
-                        Return (Buffer (One)
+                        Return (Buffer ()
                         {
                              0x03                                             // .
                         })
                     }
 
-                    Return (Package (0x0C)
+                    Return (Package ()
                     {
                         "AAPL,slot-name", 
                         "SATA3", 
@@ -816,7 +806,6 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 Device (BUS0)
                 {
                     Name (_CID, "smbus")  // _CID: Compatible ID
-                    Name (_STR, Unicode ("Intel Comet Point-V PCH - SMBus Controller"))  // _STR: Description String
                     Name (_ADR, 0x001F0004)  // _ADR: Address
                     Device (DVL0)
                     {
@@ -826,13 +815,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                         {
                             If (!Arg2)
                             {
-                                Return (Buffer (One)
+                                Return (Buffer ()
                                 {
                                      0x03                                             // .
                                 })
                             }
 
-                            Return (Package (0x02)
+                            Return (Package ()
                             {
                                 "address", 
                                 Zero
@@ -845,7 +834,6 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
             Device (THSS)
             {
                 Name (_ADR, 0x00140002)  // _ADR: Address
-                Name (_STR, Unicode ("Intel Comet Point-V PCH - Thermal Controller"))  // _STR: Description String
             }
 
             Scope (XHC)
@@ -856,18 +844,17 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
             Device (XHC0)
             {
                 Name (_ADR, 0x00140000)  // _ADR: Address
-                Name (_STR, Unicode ("Intel Comet Point-V PCH - USB 3.2 Gen 1x1 (5 Gb/s) xHCI Host Controller"))  // _STR: Description String
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
                 {
                     If ((Arg2 == Zero))
                     {
-                        Return (Buffer (One)
+                        Return (Buffer ()
                         {
                              0x03                                             // .
                         })
                     }
 
-                    Return (Package (0x0A)
+                    Return (Package ()
                     {
                         "AAPL,slot-name", 
                         "USB", 
@@ -887,7 +874,6 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
         Device (USBX)
         {
             Name (_ADR, Zero)  // _ADR: Address
-            Name (_STR, Unicode ("Intel Comet Point-V PCH - USB 3.2 Gen 1x1 xHCI Power Controller"))  // _STR: Description String
             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
             {
                 If ((Arg2 == Zero))
@@ -898,7 +884,7 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                     })
                 }
 
-                Return (Package (0x08)
+                Return (Package ()
                 {
                     "kUSBSleepPowerSupply", 
                     0x13EC, 
