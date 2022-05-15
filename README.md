@@ -904,7 +904,8 @@ I would like to thanks all folks in Hackintosh Community especially:
 - `https://github.com/daliansky/OC-little` ACPI Guide (Chinese Language)
 
 👍 **[5T33Z0](https://github.com/5T33Z0/OC-Little-Translated)**
-- `https://github.com/5T33Z0/OC-Little-Translated` An English [OC-Little](https://github.com/daliansky/OC-little) Translation > `https://github.com/CloverHackyColor/CloverBootloader)` Clover Guide
+- `https://github.com/5T33Z0/OC-Little-Translated` An English [OC-Little](https://github.com/daliansky/OC-little) Translation 
+- `https://github.com/CloverHackyColor/CloverBootloader)` Clover Guide
 
 👍 **[rusty-bits](https://github.com/rusty-bits)**
 - `https://github.com/rusty-bits/octool` Cross Platform OpenCore Update Tool
