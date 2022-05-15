@@ -8,11 +8,11 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Asrock B460M Steel Legend ACPI Patch</string>
+				<string>Patched Asrock B460M Steel Legend ACPI Machine Language</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-B460M-SL.aml</string>
+				<string>SSDT-B460MASL.aml</string>
 			</dict>
 		</array>
 		<key>Delete</key>
@@ -96,21 +96,12 @@
 				<key>#device_type</key>
 				<string>Signal processing controller</string>
 				<key>#model</key>
-				<string>Comet Lake PCH-V Thermal Subsystem</string>
+				<string>Intel Comet Point-V PCH - Thermal Controller</string>
 				<key>#name</key>
 				<string>THSS</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>Host bridge</string>
-				<key>model</key>
-				<string>Comet Lake-S 6c Host Bridge/DRAM Controller</string>
-				<key>name</key>
-				<string>DRAM</string>
-			</dict>
+			<dict/>
 			<key>PciRoot(0x0)/Pci(0x1,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -118,182 +109,24 @@
 				<key>device_type</key>
 				<string>PCI bridge</string>
 				<key>model</key>
-				<string>6th-10th Gen Core Processor PCIe Controller (x16)</string>
+				<string>Intel Comet Lake - PCI Express x16 Controller</string>
 				<key>name</key>
 				<string>PEG0</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Slot- 1</string>
-				<key>device_type</key>
-				<string>PCI bridge</string>
-				<key>model</key>
-				<string>Navi 10 XL Upstream Port of PCI Express Switch</string>
-				<key>name</key>
-				<string>EGP0</string>
-			</dict>
+			<dict/>
 			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Slot- 1</string>
-				<key>device_type</key>
-				<string>PCI bridge</string>
-				<key>model</key>
-				<string>Navi 10 XL Downstream Port of PCI Express Switch</string>
-				<key>name</key>
-				<string>EGP1</string>
-			</dict>
+			<dict/>
 			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>@0,AAPL,boot-display</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>@0,ATY,EFIDisplay</key>
-				<string>DP1</string>
-				<key>@0,name</key>
-				<string>ATY,Keelback</string>
-				<key>@1,name</key>
-				<string>ATY,Keelback</string>
-				<key>@2,name</key>
-				<string>ATY,Keelback</string>
-				<key>@3,name</key>
-				<string>ATY,Keelback</string>
-				<key>AAPL,slot-name</key>
-				<string>Slot- 1</string>
-				<key>AAPL00,DualLink</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>ATY,EFIEnabledMode</key>
-				<data>
-				AQ==
-				</data>
-				<key>ATY,EFIVersion</key>
-				<data>
-				MzAuMC4xMDEuMTM0MA==
-				</data>
-				<key>ATY,EFIVersionB</key>
-				<data>
-				MDE3LjAwMi4wMDAuMDAwLjAzNzYzNg==
-				</data>
-				<key>ATY,copyright</key>
-				<data>
-				Q29weXJpZ2h0IEFNRCBJbmMuIEFsbCBSaWdodHMgUmVz
-				ZXJ2ZWQuIDIwMDUtMjAxOQ==
-				</data>
-				<key>CFG,CFG_USE_AGDC</key>
-				<data>
-				AQ==
-				</data>
-				<key>PP_PhmSoftPowerPlayTable</key>
-				<data>
-				igYMAAHiAT0JAACUOwAAfQAIAAAAGwAAAAAAAAAAAABx
-				AAAAAAAAAAAAAAAAAAEAAAAKAAAAbAcAAPMEAAA+BAAA
-				8wQAAPMEAABrAwAA8wQAAAQFAAAEBQAAKgMAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAACwBAAAwAQAAMAEAADAB
-				AAAwAQAAZAAAADABAAA0AQAALAEAACwBAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAACAAAAADgAAAB4AAAABAQEB
-				AQEBAQEAAQEBAQAAAAAAAAAAAAAAAAAAAAAAANAHAADQ
-				BwAA0AcAAH4EAADQBwAAfgQAANAHAAB+BAAAogMAAAoA
-				AACADAAAgAwAAFAAAABpAAAAAgAAAAAAAAABAAAAAQAA
-				AAEAAABkAAAAZAAAAGQAAABkAAAAZAAAAGQAAABkAAAA
-				ZAAAAGQAAABkAAAAAAAAAAAAAAAAAAAA9AEAAPQBAAD0
-				AQAAvAIAAPQBAAC8AgAA9AEAALwCAABxAgAAMgAAAOgD
-				AADoAwAAGQAAADIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				ABkAAAAjAAAAGQAAACMAAAAZAAAAIwAAABkAAAAjAAAA
-				GQAAACMAAAAAAAAAAAAAAAAAAAAIAAAA++//pyMGAAB9
-				AAAAAAAAAAAAAAAAAAAAfQAAAAAAAAAAAAAAAAAAAA8A
-				AACCAAAAbgBpAGkAcwBzAHMAcwAAAAAAAAAAAAAAAAAA
-				APxwAAD/AQAASwBLAAAAAAAAAAAApQqlCvAK8Ar4EWgQ
-				gAAAAAAAAgAAAAAAAAAAAA3gTT783qa9dJgnPwAAAgAA
-				AIA/AAAAAAzlJD6M2wg+4UUHPwEBBAAAAIA/AAAAAAzl
-				JD6M2wg+4UUHPwEAAgAiiZI/vTWwPPd1IL4nMYA/HTjn
-				PQEAAgAzG2Q/yO8NPgAAAABKewM/2qy6PgEAAgC62lo/
-				nOFGPnZPrj/oagPAMZnCPwEAAgB7oF0/uw8APjlFxz14
-				C6Q+AADAPgIAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA
-				AgAAAAAAAAAAAAAAAAAAAAAAAAAAACwBbAfoA+gD6APo
-				A+gD6APoA+gD6APoA+gD6APoA+gDMAHzBOgD6APoA+gD
-				6APoAzABPgSwBLAEsASwBLAEsAQwAfME6APoA+gD6APo
-				A+gDZAD0AXECawMwAfME6APoA+gD6APoA+gDNAEEBegD
-				6APoA+gD6APoAywBBAXoA+gD6APoA+gD6AMsASoDIAMg
-				AyADIAMgAyAD0AHQAdAB0AHQAdAB0AHQAdAB0AHQAdAB
-				0AHQAdAB0AHQAdAB0AHQAdAB0AHQAdAB0AHQAdAB0AHQ
-				AdAB0AHQAWwH8wRrAz4E8wTzBAQFBAUqA9ABAAMDAzAB
-				+wHwCvAKKApIDUgNSA2IExgVGBUYFfQB9AH0AQAAAADQ
-				AQAAAQIAAFsAAAgAAAADBARRAGsCAAAAAAAAAAAyADwA
-				AACQAZABkAGQAZABkAGQAZABkAEZAGAJ8AqADFAA3AUB
-				AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAA7EyhPG7A5zyBeF09c2N6
-				PVg5NLwTYcM8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAwBDAEBAQAAAAAAAAwBDAEA
-				AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAQAAAB4ARgAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAMsAAAAAAAAAAAAAAAAAAAAAAAAAGQAZAG8GAADF
-				BgAANQcAAG8GAADFBgAANQcAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				</data>
-				<key>device_type</key>
-				<string>VGA compatible controller</string>
-			</dict>
+			<dict/>
 			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x1)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Slot- 1</string>
-				<key>device_type</key>
-				<string>Audio device</string>
-				<key>model</key>
-				<string>Radeon RX 5500 XT HDMI Audio</string>
-				<key>name</key>
-				<string>HDAU</string>
-			</dict>
+			<dict/>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>acpi-wake-type</key>
-				<data>
-				AQ==
-				</data>
-				<key>device_type</key>
-				<string>USB controller</string>
-				<key>model</key>
-				<string>Comet Lake PCH-V USB Controller</string>
-				<key>name</key>
-				<string>XHC</string>
-			</dict>
+			<dict/>
 			<key>PciRoot(0x0)/Pci(0x16,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>Communication controller</string>
-				<key>model</key>
-				<string>Comet Lake PCH-V HECI Controller</string>
-				<key>name</key>
-				<string>IMEI</string>
-			</dict>
+			<dict/>
 			<key>PciRoot(0x0)/Pci(0x17,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>compatible</key>
-				<string>pci8086,a352</string>
-				<key>device_type</key>
-				<string>SATA controller</string>
-				<key>model</key>
-				<string>400 Series Chipset Family SATA AHCI Controller</string>
-				<key>name</key>
-				<string>SATA</string>
-			</dict>
+			<dict/>
 			<key>PciRoot(0x0)/Pci(0x1B,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -301,33 +134,12 @@
 				<key>device_type</key>
 				<string>PCI bridge</string>
 				<key>model</key>
-				<string>Comet Lake PCI Express Root Port #20</string>
+				<string>Intel Comet Point-V PCH - PCI Express Root Port 20</string>
 				<key>name</key>
 				<string>RP20</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1B,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Slot- 2</string>
-				<key>built-in</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>device-id</key>
-				<data>
-				BqgAAA==
-				</data>
-				<key>device_type</key>
-				<string>Non-Volatile memory controller</string>
-				<key>model</key>
-				<string>Silicon Power MAP1001 NVMe SSD</string>
-				<key>name</key>
-				<string>ANS2</string>
-				<key>vendor-id</key>
-				<data>
-				TRQAAA==
-				</data>
-			</dict>
+			<dict/>
 			<key>PciRoot(0x0)/Pci(0x1B,0x4)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -335,7 +147,7 @@
 				<key>device_type</key>
 				<string>PCI bridge</string>
 				<key>model</key>
-				<string>Comet Lake PCI Express Root Port #21</string>
+				<string>Intel Comet Point-V PCH - PCI Express Root Port 21</string>
 				<key>name</key>
 				<string>RP21</string>
 			</dict>
@@ -348,21 +160,12 @@
 				<key>device_type</key>
 				<string>PCI bridge</string>
 				<key>model</key>
-				<string>Comet Lake PCI Express Root Port #3</string>
+				<string>Intel Comet Point-V PCH - PCI Express Root Port 3</string>
 				<key>name</key>
 				<string>RP03</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>M2_Wifi</string>
-				<key>device_type</key>
-				<string>Network controller</string>
-				<key>model</key>
-				<string>BCM4360 802.11ac Wireless Network Adapter</string>
-				<key>name</key>
-				<string>ARPT</string>
-			</dict>
+			<dict/>
 			<key>PciRoot(0x0)/Pci(0x1C,0x3)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -370,21 +173,12 @@
 				<key>device_type</key>
 				<string>PCI bridge</string>
 				<key>model</key>
-				<string>Comet Lake PCI Express Root Port #4</string>
+				<string>Intel Comet Point-V PCH - PCI Express Root Port 4</string>
 				<key>name</key>
 				<string>RP04</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Ethernet</string>
-				<key>device_type</key>
-				<string>Ethernet controller</string>
-				<key>model</key>
-				<string>RTL8125 2.5GbE Controller</string>
-				<key>name</key>
-				<string>RTL0</string>
-			</dict>
+			<dict/>
 			<key>PciRoot(0x0)/Pci(0x1C,0x4)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -392,25 +186,12 @@
 				<key>device_type</key>
 				<string>PCI bridge</string>
 				<key>model</key>
-				<string>Comet Lake PCI Express Root Port #05</string>
+				<string>Intel Comet Point-V PCH - PCI Express Root Port 5</string>
 				<key>name</key>
 				<string>RP05</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Slot- 3</string>
-				<key>acpi-wake-type</key>
-				<data>
-				AQ==
-				</data>
-				<key>device_type</key>
-				<string>USB controller</string>
-				<key>model</key>
-				<string>VIA USB 3.0 eXtensible Host Controller</string>
-				<key>name</key>
-				<string>PXSX</string>
-			</dict>
+			<dict/>
 			<key>PciRoot(0x0)/Pci(0x1D,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -418,7 +199,7 @@
 				<key>device_type</key>
 				<string>PCI bridge</string>
 				<key>model</key>
-				<string>Comet Lake PCI Express Root Port #9</string>
+				<string>Intel Comet Point-V PCH - PCI Express Root Port 9</string>
 				<key>name</key>
 				<string>RP09</string>
 			</dict>
@@ -431,7 +212,7 @@
 				<key>device_type</key>
 				<string>ISA bridge</string>
 				<key>model</key>
-				<string>B460 Chipset LPC/eSPI Controller</string>
+				<string>Intel B460 Chipset - LPC/eSPI Controller</string>
 				<key>name</key>
 				<string>LPCB</string>
 			</dict>
@@ -446,25 +227,12 @@
 				<key>device_type</key>
 				<string>Memory controller</string>
 				<key>model</key>
-				<string>Comet Lake PCH-V Memory Controller</string>
+				<string>Intel Comet Point-V PCH - Power Management Controller (PMC)</string>
 				<key>name</key>
 				<string>PPMC</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Audio</string>
-				<key>device_type</key>
-				<string>Audio device</string>
-				<key>layout-id</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>model</key>
-				<string>Comet Lake PCH-V cAVS</string>
-				<key>name</key>
-				<string>HDEF</string>
-			</dict>
+			<dict/>
 			<key>PciRoot(0x0)/Pci(0x1F,0x4)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -474,43 +242,12 @@
 				<key>device_type</key>
 				<string>SMBus</string>
 				<key>model</key>
-				<string>Comet Lake PCH-V SMBus Host Controller</string>
+				<string>Intel Comet Point-V PCH - SMBus Controller</string>
 				<key>name</key>
 				<string>SBUS</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-			<dict>
-				<key>AAPL,ig-platform-id</key>
-				<data>
-				AwDFmw==
-				</data>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>Display controller</string>
-				<key>enable-metal</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-				<key>igfxfw</key>
-				<data>
-				AgAAAA==
-				</data>
-				<key>igfxonln</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>iommu-selection</key>
-				<data>
-				AAAAAA==
-				</data>
-				<key>rps-control</key>
-				<data>
-				AQAAAA==
-				</data>
-			</dict>
+			<dict/>
 		</dict>
 		<key>Delete</key>
 		<dict/>
