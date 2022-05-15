@@ -876,54 +876,53 @@ Without this option **octool** will make a "quick guess" as to which version to 
 
 I would like to thanks all folks in Hackintosh Community especially:
 
-💲 **[Dortania](https://dortania.github.io/OpenCore-Install-Guide/)**
-- [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) MacOS Install Guide via OpenCore Boot-loader
+👍 **[Dortania](https://dortania.github.io/OpenCore-Install-Guide/)**
+- `https://dortania.github.io/OpenCore-Install-Guide/` MacOS Install Guide via OpenCore Boot-loader
 
-💲 **[acidanthera](https://github.com/acidanthera)**
-- [OpenCore](https://github.com/acidanthera/OpenCorePkg) Boot-loader
-- [MaciASL](https://github.com/acidanthera/MaciASL) Powerful ACPI Compiler
+👍 **[acidanthera](https://github.com/acidanthera)**
+- `https://github.com/acidanthera/OpenCorePkg` Boot-loader
+- `https://github.com/acidanthera/MaciASL` Powerful ACPI Compiler
 
-💲 **[corpNewt](https://github.com/corpnewt)**
-- [USBmap](https://github.com/corpnewt/USBMap) MacOS USB Mapping Tool
-- [ProperTree](https://github.com/corpnewt/ProperTree) Cross Platform Plist Editor
+👍 **[corpNewt](https://github.com/corpnewt)**
+- `https://github.com/corpnewt/USBMap` MacOS USB Mapping Tool
+- `https://github.com/corpnewt/ProperTree` Cross Platform Plist Editor
 
-💲 **[dhinakg](https://github.com/USBToolBox/tool)**
-- [USBToolBox](https://github.com/USBToolBox/tool) Windows based USBmap
+👍 **[dhinakg](https://github.com/USBToolBox/tool)**
+- `USBToolBox](https://github.com/USBToolBox/tool` Windows based USBmap
 
-💲 **[headkaze](https://github.com/headkaze)**
-- [Hackintool](https://github.com/headkaze/Hackintool) The Swiss Army Knife of Vanilla Hackintoshing
-- [EFIAgent](https://github.com/headkaze/EFI-Agent) EFI Mounter
+👍 **[headkaze](https://github.com/headkaze)**
+- `https://github.com/headkaze/Hackintool` The Swiss Army Knife of Vanilla Hackintoshing
+- `https://github.com/headkaze/EFI-Agent` EFI Mounter
 
-💲 **[Facebook](https://www.facebook.com)**
-- [Hackintosh Malaysia](https://www.facebook.com/groups/HackintoshMalaysia/about/) An Official Malaysia Hackintosh Community
+👍 **[Facebook](https://www.facebook.com)**
+- `https://www.facebook.com/groups/HackintoshMalaysia/about/` An Official Malaysia Hackintosh Community
 
-💲 **[reddit](https://www.reddit.com)**
-- [r/Hackintosh](https://www.reddit.com/r/hackintosh/) Hackintosh Discussion Platform
+👍 **[reddit](https://www.reddit.com)**
+- `https://www.reddit.com/r/hackintosh/` Hackintosh Discussion Platform
 
-💲 **[daliansky](https://github.com/daliansky)**
-- [OC-Little](https://github.com/daliansky/OC-little) ACPI Guide (Chinese Language)
+👍 **[daliansky](https://github.com/daliansky)**
+- `https://github.com/daliansky/OC-little` ACPI Guide (Chinese Language)
 
-💲 **[5T33Z0](https://github.com/5T33Z0/OC-Little-Translated)**
-- [OC-Little Translate](https://github.com/5T33Z0/OC-Little-Translated) An English [OC-Little](https://github.com/daliansky/OC-little) Translation > [Clover Crate](https://github.com/5T33Z0/Clover-Crate)
-- [Clover-bootloader](https://github.com/CloverHackyColor/CloverBootloader) Clover Guide
+👍 **[5T33Z0](https://github.com/5T33Z0/OC-Little-Translated)**
+- `https://github.com/5T33Z0/OC-Little-Translated` An English [OC-Little](https://github.com/daliansky/OC-little) Translation > `https://github.com/CloverHackyColor/CloverBootloader)` Clover Guide
 
-💲 **[rusty-bits](https://github.com/rusty-bits)**
-- [octool](https://github.com/rusty-bits/octool) Cross Platform OpenCore Update Tool
+👍 **[rusty-bits](https://github.com/rusty-bits)**
+- `https://github.com/rusty-bits/octool` Cross Platform OpenCore Update Tool
 
-💲 **[ic005k](https://github.com/ic005k)**
-- [Xiasl](https://github.com/ic005k/Xiasl) Cross Platform ACPI Compiler
-- [OCAuxiliaryTools](https://github.com/ic005k/OCAuxiliaryTools) Cross Platform OpenCore OCAuxiliary Tool
-- [Xplist](https://github.com/ic005k/Xplist) Cross Platform Plist Editor
+👍 **[ic005k](https://github.com/ic005k)**
+- `https://github.com/ic005k/Xiasl` Cross Platform ACPI Compiler
+- `https://github.com/ic005k/OCAuxiliaryTools)` Cross Platform OpenCore OCAuxiliary Tool
+- `https://github.com/ic005k/Xplist` Cross Platform Plist Editor
 
-💲 **[k33yb0rd](https://github.com/k33yb0rd/k33yb0rd)**
-- [SSDT-B460M-SL](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl) Fix certain ACPI method
+👍 **[k33yb0rd](https://github.com/k33yb0rd/k33yb0rd)**
+- `https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl` Fix certain ACPI method
 
 </br>
 
 # Find Me
 
-💲 **[reddit](https://www.reddit.com)**
-- [u/mohdismailmatasin](https://www.reddit.com/user/mohdismailmatasin)
+✌️ **[reddit](https://www.reddit.com)**
+- `https://www.reddit.com/user/mohdismailmatasin` @ u/mohdismailmatasin
 
 <!---------------------------
 Intel i5 10400 & Asrock B460M Steel Legend.md
