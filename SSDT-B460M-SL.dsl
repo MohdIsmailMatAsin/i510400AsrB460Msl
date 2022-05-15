@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of iASLfWGDkG.aml, Sat May 14 09:02:38 2022
+ * Disassembly of iASLSw6rra.aml, Sun May 15 08:16:24 2022
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x00001D15 (7445)
+ *     Length           0x00001CF9 (7417)
  *     Revision         0x02
- *     Checksum         0xCA
+ *     Checksum         0x38
  *     OEM ID           "Asrock"
  *     OEM Table ID     "B460MSL"
  *     OEM Revision     0x42343630 (1110718000)
@@ -81,13 +81,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 {
                     If (!Arg2)
                     {
-                        Return (Buffer ()
+                        Return (Buffer (One)
                         {
                              0x03                                             // .
                         })
                     }
 
-                    Return (Package ()
+                    Return (Package (0x02)
                     {
                         "plugin-type", 
                         One
@@ -98,18 +98,18 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
 
         Scope (PCI0)
         {
-            Name (_STR, Unicode ("Asrock B460M PCI Express Bus"))  // _STR: Description String
+            Name (_STR, Unicode ("B460M PCI Express Bus"))  // _STR: Description String
             Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
             {
                 If ((Arg2 == Zero))
                 {
-                    Return (Buffer ()
+                    Return (Buffer (One)
                     {
                          0x03                                             // .
                     })
                 }
 
-                Return (Package ()
+                Return (Package (0x04)
                 {
                     "device_type", 
                     Buffer (0x1D)
@@ -118,9 +118,9 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                     }, 
 
                     "model", 
-                    Buffer (0x1D)
+                    Buffer (0x2A)
                     {
-                        "Asrock B460M PCI Express Bus"
+                        "Asrock B460M Steel Legend PCI Express Bus"
                     }
                 })
             }
@@ -135,33 +135,33 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                     Return (((LHIH << 0x08) | LLOW))
                 }
 
-                Name (_ALR, Package ()  // _ALR: Ambient Light Response
+                Name (_ALR, Package (0x05)  // _ALR: Ambient Light Response
                 {
-                    Package ()
+                    Package (0x02)
                     {
                         0x46, 
                         Zero
                     }, 
 
-                    Package ()
+                    Package (0x02)
                     {
                         0x49, 
                         0x0A
                     }, 
 
-                    Package ()
+                    Package (0x02)
                     {
                         0x55, 
                         0x50
                     }, 
 
-                    Package ()
+                    Package (0x02)
                     {
                         0x64, 
                         0x012C
                     }, 
 
-                    Package ()
+                    Package (0x02)
                     {
                         0x96, 
                         0x03E8
@@ -177,13 +177,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 {
                     If ((Arg2 == Zero))
                     {
-                        Return (Buffer ()
+                        Return (Buffer (One)
                         {
                              0x03                                             // .
                         })
                     }
 
-                    Return (Package ()
+                    Return (Package (0x08)
                     {
                         "AAPL,slot-name", 
                         "Internal", 
@@ -210,13 +210,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 {
                     If ((Arg2 == Zero))
                     {
-                        Return (Buffer ()
+                        Return (Buffer (One)
                         {
                              0x03                                             // .
                         })
                     }
 
-                    Return (Package ()
+                    Return (Package (0x16)
                     {
                         "AAPL,slot-name", 
                         "Graphics", 
@@ -237,13 +237,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                         "rps-control", 
                         One, 
                         "AAPL,ig-platform-id", 
-                        Buffer ()
+                        Buffer (0x04)
                         {
                              0x03, 0x00, 0x91, 0x3E                           // ...>
                         }, 
 
                         "device-id", 
-                        Buffer ()
+                        Buffer (0x04)
                         {
                              0x9B, 0x3E, 0x00, 0x00                           // .>..
                         }
@@ -264,13 +264,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 {
                     If ((Arg2 == Zero))
                     {
-                        Return (Buffer ()
+                        Return (Buffer (One)
                         {
                              0x03                                             // .
                         })
                     }
 
-                    Return (Package ()
+                    Return (Package (0x0A)
                     {
                         "AAPL,slot-name", 
                         "Audio", 
@@ -281,7 +281,7 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                         "name", 
                         "HDEF", 
                         "layout-id", 
-                        Buffer ()
+                        Buffer (0x04)
                         {
                              0x01, 0x00, 0x00, 0x00                           // ....
                         }
@@ -302,13 +302,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 {
                     If ((Arg2 == Zero))
                     {
-                        Return (Buffer ()
+                        Return (Buffer (One)
                         {
                              0x03                                             // .
                         })
                     }
 
-                    Return (Package ()
+                    Return (Package (0x08)
                     {
                         "AAPL,slot-name", 
                         "Internal", 
@@ -348,13 +348,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                     {
                         If ((Arg2 == Zero))
                         {
-                            Return (Buffer ()
+                            Return (Buffer (One)
                             {
                                  0x03                                             // .
                             })
                         }
 
-                        Return (Package ()
+                        Return (Package (0x08)
                         {
                             "AAPL,slot-name", 
                             "Slot- 1", 
@@ -375,13 +375,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                         {
                             If ((Arg2 == Zero))
                             {
-                                Return (Buffer ()
+                                Return (Buffer (One)
                                 {
                                      0x03                                             // .
                                 })
                             }
 
-                            Return (Package ()
+                            Return (Package (0x08)
                             {
                                 "AAPL,slot-name", 
                                 "Slot- 1", 
@@ -403,13 +403,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                             {
                                 If ((Arg2 == Zero))
                                 {
-                                    Return (Buffer ()
+                                    Return (Buffer (One)
                                     {
                                          0x03                                             // .
                                     })
                                 }
 
-                                Return (Package ()
+                                Return (Package (0x20)
                                 {
                                     "agdpmod", 
                                     "pikera", 
@@ -428,25 +428,25 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                                     "hda-gfx", 
                                     "onboard-2", 
                                     "@0,AAPL,boot-display", 
-                                    Buffer ()
+                                    Buffer (0x04)
                                     {
                                          0x01, 0x00, 0x00, 0x00                           // ....
                                     }, 
 
                                     "@0,ATY,EFIDisplay", 
-                                    Buffer ()
+                                    Buffer (0x04)
                                     {
                                         "DP1"
                                     }, 
 
                                     "AAPL00,DualLink", 
-                                    Buffer ()
+                                    Buffer (0x04)
                                     {
                                          0x01, 0x00, 0x00, 0x00                           // ....
                                     }, 
 
                                     "ATY,copyright", 
-                                    Buffer ()
+                                    Buffer (0x31)
                                     {
                                         /* 0000 */  0x43, 0x6F, 0x70, 0x79, 0x72, 0x69, 0x67, 0x68,  // Copyrigh
                                         /* 0008 */  0x74, 0x20, 0x41, 0x4D, 0x44, 0x20, 0x49, 0x6E,  // t AMD In
@@ -458,14 +458,14 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                                     }, 
 
                                     "ATY,EFIVersion", 
-                                    Buffer ()
+                                    Buffer (0x0D)
                                     {
                                         /* 0000 */  0x33, 0x30, 0x2E, 0x30, 0x2E, 0x31, 0x30, 0x31,  // 30.0.101
                                         /* 0008 */  0x2E, 0x31, 0x33, 0x34, 0x30                     // .1340
                                     }, 
 
                                     "ATY,EFIVersionB", 
-                                    Buffer ()
+                                    Buffer (0x16)
                                     {
                                         /* 0000 */  0x30, 0x31, 0x37, 0x2E, 0x30, 0x30, 0x32, 0x2E,  // 017.002.
                                         /* 0008 */  0x30, 0x30, 0x30, 0x2E, 0x30, 0x30, 0x30, 0x2E,  // 000.000.
@@ -497,13 +497,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                             {
                                 If ((Arg2 == Zero))
                                 {
-                                    Return (Buffer ()
+                                    Return (Buffer (One)
                                     {
                                          0x03                                             // .
                                     })
                                 }
 
-                                Return (Package ()
+                                Return (Package (0x08)
                                 {
                                     "AAPL,slot-name", 
                                     "Slot- 1", 
@@ -535,13 +535,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                     {
                         If ((Arg2 == Zero))
                         {
-                            Return (Buffer ()
+                            Return (Buffer (One)
                             {
                                  0x03                                             // .
                             })
                         }
 
-                        Return (Package ()
+                        Return (Package (0x08)
                         {
                             "AAPL,slot-name", 
                             "M2_Wifi", 
@@ -571,13 +571,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                     {
                         If ((Arg2 == Zero))
                         {
-                            Return (Buffer ()
+                            Return (Buffer (One)
                             {
                                  0x03                                             // .
                             })
                         }
 
-                        Return (Package ()
+                        Return (Package (0x08)
                         {
                             "AAPL,slot-name", 
                             "Internal", 
@@ -596,7 +596,37 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
             {
                 Scope (PXSX)
                 {
+                    Name (_STA, Zero)  // _STA: Status
+                }
+
+                Device (XHC1)
+                {
+                    Name (_ADR, Zero)  // _ADR: Address
                     Name (_STR, Unicode ("VIA USB 3.0 eXtensible Host Controller"))  // _STR: Description String
+                    Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                    {
+                        If ((Arg2 == Zero))
+                        {
+                            Return (Buffer (One)
+                            {
+                                 0x03                                             // .
+                            })
+                        }
+
+                        Return (Package (0x0A)
+                        {
+                            "AAPL,slot-name", 
+                            "Slot- 3", 
+                            "device_type", 
+                            "USB controller", 
+                            "model", 
+                            "VIA USB 3.0 eXtensible Host Controller", 
+                            "name", 
+                            "XHC1", 
+                            "acpi-wake-type", 
+                            One
+                        })
+                    }
                 }
             }
 
@@ -615,13 +645,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                     {
                         If ((Arg2 == Zero))
                         {
-                            Return (Buffer ()
+                            Return (Buffer (One)
                             {
                                  0x03                                             // .
                             })
                         }
 
-                        Return (Package ()
+                        Return (Package (0x0C)
                         {
                             "AAPL,slot-name", 
                             "M2_1", 
@@ -632,13 +662,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                             "name", 
                             "ANS0", 
                             "device-id", 
-                            Buffer ()
+                            Buffer (0x04)
                             {
                                  0x06, 0xA8, 0x00, 0x00                           // ....
                             }, 
 
                             "vendor-id", 
-                            Buffer ()
+                            Buffer (0x04)
                             {
                                  0x4D, 0x14, 0x00, 0x00                           // M...
                             }
@@ -663,32 +693,32 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                     {
                         If ((Arg2 == Zero))
                         {
-                            Return (Buffer ()
+                            Return (Buffer (One)
                             {
                                  0x03                                             // .
                             })
                         }
 
-                        Return (Package ()
+                        Return (Package (0x0E)
                         {
                             "AAPL,slot-name", 
                             "Slot- 2", 
                             "device_type", 
                             "Non-Volatile memory controller", 
                             "model", 
-                            "Maxio MAP1001 NVMe SSD Controller", 
+                            "Maxio MAP1001 NVMe SSD Controllerr", 
                             "name", 
                             "ANS2", 
                             "built-in", 
                             One, 
                             "device-id", 
-                            Buffer ()
+                            Buffer (0x04)
                             {
                                  0x06, 0xA8, 0x00, 0x00                           // ....
                             }, 
 
                             "vendor-id", 
-                            Buffer ()
+                            Buffer (0x04)
                             {
                                  0x4D, 0x14, 0x00, 0x00                           // M...
                             }
@@ -712,13 +742,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                     {
                         If ((Arg2 == Zero))
                         {
-                            Return (Buffer ()
+                            Return (Buffer (One)
                             {
                                  0x03                                             // .
                             })
                         }
 
-                        Return (Package ()
+                        Return (Package (0x0C)
                         {
                             "AAPL,slot-name", 
                             "M2_2", 
@@ -729,13 +759,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                             "name", 
                             "ANS1", 
                             "device-id", 
-                            Buffer ()
+                            Buffer (0x04)
                             {
                                  0x06, 0xA8, 0x00, 0x00                           // ....
                             }, 
 
                             "vendor-id", 
-                            Buffer ()
+                            Buffer (0x04)
                             {
                                  0x4D, 0x14, 0x00, 0x00                           // M...
                             }
@@ -757,13 +787,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 {
                     If ((Arg2 == Zero))
                     {
-                        Return (Buffer ()
+                        Return (Buffer (One)
                         {
                              0x03                                             // .
                         })
                     }
 
-                    Return (Package ()
+                    Return (Package (0x0C)
                     {
                         "AAPL,slot-name", 
                         "SATA3", 
@@ -787,7 +817,7 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 {
                     Name (_CID, "smbus")  // _CID: Compatible ID
                     Name (_STR, Unicode ("Intel Comet Point-V PCH - SMBus Controller"))  // _STR: Description String
-                    Name (_ADR, Zero)  // _ADR: Address
+                    Name (_ADR, 0x001F0004)  // _ADR: Address
                     Device (DVL0)
                     {
                         Name (_ADR, 0x57)  // _ADR: Address
@@ -796,29 +826,17 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                         {
                             If (!Arg2)
                             {
-                                Return (Buffer ()
+                                Return (Buffer (One)
                                 {
                                      0x03                                             // .
                                 })
                             }
 
-                            Return (Package ()
+                            Return (Package (0x02)
                             {
                                 "address", 
                                 Zero
                             })
-                        }
-                    }
-
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
-                    {
-                        If (_OSI ("Darwin"))
-                        {
-                            Return (0x0F)
-                        }
-                        Else
-                        {
-                            Return (Zero)
                         }
                     }
                 }
@@ -835,7 +853,7 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 Name (_STA, Zero)  // _STA: Status
             }
 
-            Device (XHC)
+            Device (XHC0)
             {
                 Name (_ADR, 0x00140000)  // _ADR: Address
                 Name (_STR, Unicode ("Intel Comet Point-V PCH - USB 3.2 Gen 1x1 (5 Gb/s) xHCI Host Controller"))  // _STR: Description String
@@ -843,13 +861,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                 {
                     If ((Arg2 == Zero))
                     {
-                        Return (Buffer ()
+                        Return (Buffer (One)
                         {
                              0x03                                             // .
                         })
                     }
 
-                    Return (Package ()
+                    Return (Package (0x0A)
                     {
                         "AAPL,slot-name", 
                         "USB", 
@@ -858,7 +876,7 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
                         "model", 
                         "Intel Comet Point-V PCH - USB 3.2 Gen 1x1 (5 Gb/s) xHCI Host Controller", 
                         "name", 
-                        "XHC", 
+                        "XHC0", 
                         "acpi-wake-type", 
                         One
                     })
@@ -874,13 +892,13 @@ DefinitionBlock ("", "SSDT", 2, "Asrock", "B460MSL", 0x42343630)
             {
                 If ((Arg2 == Zero))
                 {
-                    Return (Buffer ()
+                    Return (Buffer (One)
                     {
                          0x03                                             // .
                     })
                 }
 
-                Return (Package ()
+                Return (Package (0x08)
                 {
                     "kUSBSleepPowerSupply", 
                     0x13EC, 
