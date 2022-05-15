@@ -240,6 +240,7 @@ So, it should be...
 - **IMEI**<div align="justify">💲 Intel Management Engine Interface. Rename `HECI` to `IMEI` with other required info</div>    
 - **LPCB**<div align="justify">💲 Low Pin Count LPC Bus, may also work as PPC. An interface allows the legacy I/O motherboard components, typically integrated in a Super I/O chip, to migrate from the ISA/X-bus to the LPC Interface</div>
 - **PLUG**<div align="justify">💲 To allow the kernel's `XCPM` / XNU's CPU Power Management to manage CPU's power management</div> 
+- **PNLF**<div align="justify">💲 Fake backlight device for macOS to play with, specifically one with a hardware ID of APP0002. Normally, a real iMac20,1 includes compatibility. This is only a cosmetic patch with zero config.</div>
 - **RTLK**<div align="justify">💲 Rename RTL8125 2.5GbE Controller, rename `RP04,PXSX` to `RP04,RTLK`</div>   
 - **SATA**<div align="justify">💲 Serial ATA Device (SATA). Rename `SATA` to `SAT0` and patch compatibe 400 Series SATA Family to `pci8086,a352` iMac's compatible (cosmetics)</div>
 - **USBX**<div align="justify">💲 USB Power Properties on Skylake mothermoard and new generation</div>
@@ -874,28 +875,6 @@ Without this option **octool** will make a "quick guess" as to which version to 
 ## Final Results
 
 <p align="center"><img width="2560" alt="Screen Shot 2022-04-30 at 12 37 23 AM" src="https://user-images.githubusercontent.com/72515939/165986968-f6debb0f-8b5b-474b-850f-972afcc78621.png"></div>
-
-## Others
-
-Like this wallpaper? Grab [here](https://www.mediafire.com/file/ik570ko7cz8qyxs/Space.jpeg/file)
-
-</br>
-
-## Changelog
-
-**Add additional info related:**
-
-> Main [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/info.txt)
->
-> > CPU [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/CPUInfo.txt) from debug boot log
-> >
-> > > PCI [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/PCIInfo.txt) from debug boot log
-> > >
-> > > > Additional Framebuffer [Info](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend#additional-framebuffer-for-amd-navi-gpus) for AMD Navi GPU
-
-**Add Others:**
-
-> Dual Boot [Time Fix](https://www.tonymacx86.com/threads/fix-incorrect-time-in-windows-osx-dual-boot.133719/)
 
 </br>
 
