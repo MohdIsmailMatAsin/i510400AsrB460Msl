@@ -109,7 +109,7 @@
 				<key>device_type</key>
 				<string>PCI bridge</string>
 				<key>model</key>
-				<string>Intel Skylake - PCI Express x16 Controller</string>
+				<string>Intel Comet Lake - PCI Express x16 Controller</string>
 				<key>name</key>
 				<string>PEG0</string>
 			</dict>
@@ -118,70 +118,11 @@
 			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
 			<dict/>
 			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>@0,AAPL,boot-display</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>@0,ATY,EFIDisplay</key>
-				<string>DP1</string>
-				<key>@0,name</key>
-				<string>ATY,Keelback</string>
-				<key>@1,name</key>
-				<string>ATY,Keelback</string>
-				<key>@2,name</key>
-				<string>ATY,Keelback</string>
-				<key>@3,name</key>
-				<string>ATY,Keelback</string>
-				<key>AAPL,slot-name</key>
-				<string>Slot- 1</string>
-				<key>AAPL00,DualLink</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>ATY,EFIEnabledMode</key>
-				<data>
-				AQ==
-				</data>
-				<key>ATY,EFIVersion</key>
-				<data>
-				MzAuMC4xMDEuMTM0MA==
-				</data>
-				<key>ATY,EFIVersionB</key>
-				<data>
-				MDE3LjAwMi4wMDAuMDAwLjAzNzYzNg==
-				</data>
-				<key>ATY,copyright</key>
-				<data>
-				Q29weXJpZ2h0IEFNRCBJbmMuIEFsbCBSaWdodHMgUmVz
-				ZXJ2ZWQuIDIwMDUtMjAxOQ==
-				</data>
-				<key>CFG,CFG_USE_AGDC</key>
-				<data>
-				AQ==
-				</data>
-				<key>device_type</key>
-				<string>VGA compatible controller</string>
-				<key>hda-gfx</key>
-				<string>onboard-2</string>
-			</dict>
+			<dict/>
 			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x1)</key>
 			<dict/>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>acpi-wake-type</key>
-				<data>
-				AQ==
-				</data>
-				<key>device_type</key>
-				<string>USB controller</string>
-				<key>model</key>
-				<string>Intel Comet Point-V PCH - USB 3.2 Gen 1x1 (5 Gb/s) xHCI Host Controller</string>
-				<key>name</key>
-				<string>XHC</string>
-			</dict>
+			<dict/>
 			<key>PciRoot(0x0)/Pci(0x16,0x0)</key>
 			<dict/>
 			<key>PciRoot(0x0)/Pci(0x17,0x0)</key>
@@ -219,7 +160,7 @@
 				<key>device_type</key>
 				<string>PCI bridge</string>
 				<key>model</key>
-				<string>Comet Lake PCI Express Root Port #3</string>
+				<string>Intel Comet Point-V PCH - PCI Express Root Port 3</string>
 				<key>name</key>
 				<string>RP03</string>
 			</dict>
@@ -250,20 +191,7 @@
 				<string>RP05</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Slot- 3</string>
-				<key>acpi-wake-type</key>
-				<data>
-				AQ==
-				</data>
-				<key>device_type</key>
-				<string>USB controller</string>
-				<key>model</key>
-				<string>VIA USB 3.0 eXtensible Host Controller</string>
-				<key>name</key>
-				<string>PXSX</string>
-			</dict>
+			<dict/>
 			<key>PciRoot(0x0)/Pci(0x1D,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -789,7 +717,7 @@
 			<key>EnablePassword</key>
 			<false/>
 			<key>ExposeSensitiveData</key>
-			<integer>6</integer>
+			<integer>3</integer>
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
 			<key>PasswordHash</key>
@@ -801,7 +729,7 @@
 			<key>ScanPolicy</key>
 			<integer>2694915</integer>
 			<key>SecureBootModel</key>
-			<string>j185f</string>
+			<string>j185</string>
 			<key>Vault</key>
 			<string>Optional</string>
 		</dict>
@@ -820,7 +748,7 @@
 				<key>Auxiliary</key>
 				<true/>
 				<key>Comment</key>
-				<string>CleanNvram.efi</string>
+				<string>Alternative to ResetNVRAM included as a standalone tool</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Flavour</key>
@@ -941,14 +869,14 @@
 			<key>AdviseFeatures</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02016404GUPHC1JC</string>
+			<string>C02004108GUPHC1A8</string>
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>ROM</key>
 			<data>
-			AD7h7RL+
+			YMVHLh/L
 			</data>
 			<key>SpoofVendor</key>
 			<true/>
@@ -957,9 +885,9 @@
 			<key>SystemProductName</key>
 			<string>iMac20,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02CN0C4PN5T</string>
+			<string>C02C50SMPN5T</string>
 			<key>SystemUUID</key>
-			<string>1E2C91FF-2F2C-42BB-90C9-A665E531DE13</string>
+			<string>94F4C0DD-2E6F-47C4-AD73-00E3BAC0BC39</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
