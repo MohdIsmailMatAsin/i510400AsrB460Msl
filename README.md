@@ -226,23 +226,23 @@ So, it should be...
 **via SSDT**
 
 - **ALS0**<div align="justify">💲 Normally, a real iMac20,1 includes compatibility with `smc-als` and `AppleLMUController`. These patches are only cosmetics on regular PC's</div>      
-- **ANS0**<div align="justify">💲 Rename KINGSTON **SA2000M8500G** NVme, `RP09,PXSX` to `RP09,ANS0` and pointed to Slot: `M2- 1`. Patch `Generic NVMe` to spoof as `Apple SSD Controller`</div>                                                                                                                     
-- **ANS1**<div align="justify">💲Rename KINGSTON **SA2000M8500G** NVme, `RP21,PXSX` to `RP21,ANS1` and pointed to Slot: `M2- 2`. Patch `Generic NVMe` to spoof as `Apple SSD Controller`</div> 
+- **ANS0**<div align="justify">💲 Rename KINGSTON SA2000M8500G NVme, `RP09,PXSX` to `RP09,ANS0` and pointed to Slot: `M2- 1`. Patch `Generic NVMe` to spoof as `Apple SSD Controller`</div>                                                                                                                     
+- **ANS1**<div align="justify">💲Rename KINGSTON SA2000M8500G NVme, `RP21,PXSX` to `RP21,ANS1` and pointed to Slot: `M2- 2`. Patch `Generic NVMe` to spoof as `Apple SSD Controller`</div> 
 - **ANS2**<div align="justify">💲 Rename Maxio MAP1001 NVMe SSD, `RP20,PXSX` to `RP20,ANS2` and pointed to Slot: `Slot- 2`. Patch `Generic NVMe` to spoof as `Apple SSD Controller` as built-in</div>                                                                                                               
-- **ARPT**<div align="justify">💲 Rename Broadcom **BCM94360**, `RP03,PXSX` to `RP03,ARPT `and pointed to Slot: `M2_Wifi`. Since the device works **OOB**, no additional patches have been applied</div>
-- **AWAC**<div align="justify">💲 AWAC/RTC0 purpose is to fix the `system clocks` found on newer hardware. Mostly on **300** Series, **400** Series, **495** Series(Ice Lake), **X99** and **X299** Motherboard</div>                                                                                           
+- **ARPT**<div align="justify">💲 Rename Broadcom BCM94360, `RP03,PXSX` to `RP03,ARPT `and pointed to Slot: `M2_Wifi`. Since the device works **OOB**, no additional patches have been applied</div>
+- **AWAC**<div align="justify">💲 AWAC/RTC0 purpose is to fix the `system clocks` found on newer hardware. Mostly on 300 Series, 400 Series, 495 Series(Ice Lake), X99 and X299 Motherboard</div>                                                                                           
 - **DRAM**<div align="justify">💲 Host bridge (DRAM) or mostly known to Memory Controller Hub `MCHC`, is one of two chips comprising the `core logic chipset` architecture on a PC motherboard</div> 
 - **EC**<div align="justify">💲 Patched `Embedded Controller` or `EC`. An EC is a microcontroller in computers that handles various system tasks that the operating system does not handle. Most generic PC motherboards lack native EC support since Apple Macs require `boot-ec` not `PNP0C09`</div>             
 - **GFX0**<div align="justify">💲 Display out from a Dedicated Graphic Processor Unit (DGPU). Patch `_SUN` enabled Slot Number and `agdpmod=pikera` with `other improvement config`</div> 
 - **HDAU**<div align="justify">💲 High Definition Audio. Patch `_SUN` enabled Slot Number and `layout-id` data</div>
-- **HDEF**<div align="justify">💲 Another High Definition Audio device with AC'97 support. Renamed `HDAS` to `HDEF`</div> 
+- **HDEF**<div align="justify">💲 Another High Definition Audio device with `AC'97` support. Renamed `HDAS` to `HDEF`</div> 
 - **IGPU**<div align="justify">💲 Intel Intergrated Graphics Unit device renamed from `GFX0` to `IGPU` with other `required patches` as `Headless` graphic support</div>
 - **IMEI**<div align="justify">💲 Intel Management Engine Interface. Rename `HECI` to `IMEI` with other required info</div>    
 - **LPCB**<div align="justify">💲 Low Pin Count Bus, may also work as `PPC`. An interface allows the legacy I/O motherboard components, typically integrated in a `Super I/O chip`, to migrate from the `ISA/X-bu`s to the `LPC Interface`</div>
 - **PLUG**<div align="justify">💲 To allow the kernel's `XCPM` / XNU's CPU Power Management to manage CPU's power management</div> 
 - **PNLF**<div align="justify">💲 Fake backlight device for macOS to play with, specifically one with a hardware ID of `APP0002`. Normally, a real iMac20,1 includes compatibility. This is only a cosmetic patch with zero config.</div>
-- **RTLK**<div align="justify">💲 Rename **RTL8125** 2.5GbE Controller, rename `RP04,PXSX` to `RP04,RTLK`</div>   
-- **SATA**<div align="justify">💲 Serial ATA Device, **SATA**. Rename `SATA` to `SAT0` and patch compatibe 400 Series SATA Family to `pci8086,a352` iMac's compatible (cosmetics)</div>
+- **RTLK**<div align="justify">💲 Rename RTL8125 2.5GbE Controller, rename `RP04,PXSX` to `RP04,RTLK`</div>   
+- **SATA**<div align="justify">💲 Serial ATA Device, SATA. Rename `SATA` to `SAT0` and patch compatibe 400 Series SATA Family to `pci8086,a352` iMac's compatible (cosmetics)</div>
 - **USBX**<div align="justify">💲 USB Power Properties on Skylake mothermoard and new generation</div>
 - **XHC0**<div align="justify">💲 The `Platform Controller Hub` (PCH) for Intel Comet Lake family single-chip chipsets known as `Intel Comet Lake PCH-V USB Controller`. Because this build has two different USB Host Controllers, rename `XHC` to `XHC0`</div>      
 
@@ -252,8 +252,8 @@ So, it should be...
 
 - **PPMC**<div align="justify">💲 Classed as Memory Controller in Comet Lake (CML) platform. Patch compatible supported Comet Lake `pci8086,a3a1` on `AppleIntelPCHPMC`, which is identical to Intel 200 Series/Z370 Chipset Family Power Management Controller `pci8086,a2a1`</div>
 - **PXSX**<div align="justify">💲 VIA USB 3.0 eXtensible PCIe Host Controller. Pointed to Slot: `Slot- 3`</div> 
-- **RPn**<div align="justify">💲 Root Port (RPn) and added simple information. "`n` is numeric</div>
-- **SBUS**<div align="justify">💲 ACPI Method to fix Sistem Management Bus `AppleSMBus`, `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` (**BLCK/BLC0** - `smc-blc` or **DVL0** - `diagsvault`), etc</div>
+- **RPn**<div align="justify">💲 Root Port `RPn` (`n` = numeric) and added simple information</div>
+- **SBUS**<div align="justify">💲 ACPI Method to fix Sistem Management Bus `AppleSMBus`, `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` (BLCK/BLC0 - `smc-blc` or DVL0 - `diagsvault`), etc</div>
 - **THSS**<div align="justify">💲 Thermal Subsystem. Fix unrecognize `pciXXXX,XXXX` which not identical properly on Mac's. Rename `pci8086,a3b1` to `THSS`</div>
 
 <p align="center"><img width="1239" alt="Screen Shot 2022-04-30 at 10 31 53 AM" src="https://user-images.githubusercontent.com/72515939/166087058-3f4572be-a047-41bd-859a-5da51220af26.png"></div>
