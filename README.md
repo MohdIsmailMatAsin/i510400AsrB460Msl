@@ -223,8 +223,9 @@ So, it should be...
 
 **Patch Applied**<div align="justify">Thanks to CorpNewt cross platform SSDTTime hotpatch tool. In this project, various SSDT's has been merged into [one](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/PCIInfo.txt). i.e., [SSDT-B460M-SL.dsl](https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl). With several other sources, additional code is injected to reduce the kext workload. Below are the patches applied:</div>
                                                                                                                                    
-**via SSDT**
+</br>
 
+**Patch**
 - **ALS0**<div align="justify">💲 Normally, a real iMac20,1 includes compatibility with `smc-als` and `AppleLMUController`. These patches are only cosmetics on regular PC's</div>      
 - **ANS0**<div align="justify">💲 Rename KINGSTON SA2000M8500G NVme, `RP09,PXSX` to `RP09,ANS0` and pointed to Slot: `M2- 1`. Patch `Generic NVMe` to spoof as `Apple SSD Controller`</div>                                                                                                                     
 - **ANS1**<div align="justify">💲Rename KINGSTON SA2000M8500G NVme, `RP21,PXSX` to `RP21,ANS1` and pointed to Slot: `M2- 2`. Patch `Generic NVMe` to spoof as `Apple SSD Controller`</div> 
@@ -240,21 +241,20 @@ So, it should be...
 - **IMEI**<div align="justify">💲 Intel Management Engine Interface. Rename `HECI` to `IMEI` with other required info</div>    
 - **LPCB**<div align="justify">💲 Low Pin Count Bus, may also work as `PPC`. An interface allows the legacy I/O motherboard components, typically integrated in a `Super I/O chip`, to migrate from the `ISA/X-bu`s to the `LPC Interface`</div>
 - **PLUG**<div align="justify">💲 To allow the kernel's `XCPM` / XNU's CPU Power Management to manage CPU's power management</div> 
-- **PNLF**<div align="justify">💲 Fake backlight device for macOS to play with, specifically one with a hardware ID of `APP0002`. Normally, a real iMac20,1 includes compatibility. This is only a cosmetic patch with zero config.</div>
-- **RTLK**<div align="justify">💲 Rename RTL8125 2.5GbE Controller, rename `RP04,PXSX` to `RP04,RTLK`</div>   
-- **SATA**<div align="justify">💲 Serial ATA Device, SATA. Rename `SATA` to `SAT0` and patch compatibe 400 Series SATA Family to `pci8086,a352` iMac's compatible (cosmetics)</div>
-- **USBX**<div align="justify">💲 USB Power Properties on Skylake mothermoard and new generation</div>
-- **XHC0**<div align="justify">💲 The `Platform Controller Hub` (PCH) for Intel Comet Lake family single-chip chipsets known as `Intel Comet Lake PCH-V USB Controller`. Because this build has two different USB Host Controllers, rename `XHC` to `XHC0`</div>      
-
-</br>
-
-**via config.plist**
-
 - **PPMC**<div align="justify">💲 Classed as Memory Controller in Comet Lake (CML) platform. Patch compatible supported Comet Lake `pci8086,a3a1` on `AppleIntelPCHPMC`, which is identical to Intel 200 Series/Z370 Chipset Family Power Management Controller `pci8086,a2a1`</div>
 - **PXSX**<div align="justify">💲 VIA USB 3.0 eXtensible PCIe Host Controller. Pointed to Slot: `Slot- 3`</div> 
+- **PNLF**<div align="justify">💲 Fake backlight device for macOS to play with, specifically one with a hardware ID of `APP0002`. Normally, a real iMac20,1 includes compatibility. This is only a cosmetic patch with zero config.</div>
 - **RPn**<div align="justify">💲 Root Port `RPn` (`n` = numeric) and added simple information</div>
+- **RTLK**<div align="justify">💲 Rename RTL8125 2.5GbE Controller, rename `RP04,PXSX` to `RP04,RTLK`</div>   
+- **SATA**<div align="justify">💲 Serial ATA Device, SATA. Rename `SATA` to `SAT0` and patch compatibe 400 Series SATA Family to `pci8086,a352` iMac's compatible (cosmetics)</div>
 - **SBUS**<div align="justify">💲 ACPI Method to fix Sistem Management Bus `AppleSMBus`, `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` (BLCK/BLC0 - `smc-blc` or DVL0 - `diagsvault`), etc</div>
 - **THSS**<div align="justify">💲 Thermal Subsystem. Fix unrecognize `pciXXXX,XXXX` which not identical properly on Mac's. Rename `pci8086,a3b1` to `THSS`</div>
+- **USBX**<div align="justify">💲 USB Power Properties on Skylake mothermoard and new generation</div>
+- **XHC0**<div align="justify">💲 The `Platform Controller Hub` (PCH) for Intel Comet Lake family single-chip chipsets known as `Intel Comet Lake PCH-V USB Controller`. Because this build has two different USB Host Controllers, rename `XHC` to `XHC0`</div>  
+
+
+
+
 
 <p align="center"><img width="1115" alt="Screen Shot 2022-05-16 at 12 44 52 PM" src="https://user-images.githubusercontent.com/72515939/168521417-7d17f33e-85a0-45ce-ae77-ca639b218658.png"></div>
 
