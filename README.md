@@ -116,6 +116,9 @@ The Unified Extensible Firmware Interface, or UEFI, is a new approach to the boo
 
 - [OpenCore v0.8.0 - Debug](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-DEBUG.zip)
 - [OpenCore v0.8.0 - Release](https://github.com/acidanthera/OpenCorePkg/releases/download/0.8.0/OpenCore-0.8.0-RELEASE.zip)
+- [OpenCore-Mod-0.8.1-DEBUG.zip](https://github.com/MohdIsmailMatAsin/i510400AsrB460Msl/files/8698330/OpenCore-Mod-0.8.1-DEBUG.zip)
+- [OpenCore-Mod-0.8.1-RELEASE.zip](https://github.com/MohdIsmailMatAsin/i510400AsrB460Msl/files/8698332/OpenCore-Mod-0.8.1-RELEASE.zip)
+
 
 **Change Log:**
 
