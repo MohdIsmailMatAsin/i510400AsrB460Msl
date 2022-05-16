@@ -239,7 +239,7 @@ So, it should be...
 - **HDEF**<div align="justify">💲 Another High Definition Audio device with `AC'97` support. Renamed `HDAS` to `HDEF`</div> 
 - **IGPU**<div align="justify">💲 Intel Intergrated Graphics Unit device renamed from `GFX0` to `IGPU` with other `required patches` as `Headless` graphic support</div>
 - **IMEI**<div align="justify">💲 Intel Management Engine Interface. Rename `HECI` to `IMEI` with other required info</div>    
-- **LPCB**<div align="justify">💲 Low Pin Count Bus, may also work as `PPC`. An interface allows the legacy I/O motherboard components, typically integrated in a `Super I/O chip`, to migrate from the `ISA/X-bu`s to the `LPC Interface`</div>
+- **LPCB**<div align="justify">💲 Low Pin Count Bus, may also work as `PPC`. An interface allows the legacy I/O motherboard components, typically integrated in a `Super I/O` chip, ie; `Nuvoton NCT6796D-E`, to migrate from the `ISA/X-bus` to the `LPC Interface`</div>
 - **PLUG**<div align="justify">💲 To allow the kernel's `XCPM` / XNU's CPU Power Management to manage CPU's power management</div> 
 - **PPMC**<div align="justify">💲 Classed as Memory Controller in Comet Lake (CML) platform. Patch compatible supported Comet Lake `pci8086,a3a1` on `AppleIntelPCHPMC`, which is identical to Intel 200 Series/Z370 Chipset Family Power Management Controller `pci8086,a2a1`</div>
 - **PXSX**<div align="justify">💲 VIA USB 3.0 eXtensible PCIe Host Controller. Pointed to Slot: `Slot- 3`</div> 
@@ -250,7 +250,7 @@ So, it should be...
 - **SBUS**<div align="justify">💲 ACPI Method to fix Sistem Management Bus `AppleSMBus`, `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` (BLCK/BLC0 - `smc-blc` or DVL0 - `diagsvault`), etc</div>
 - **THSS**<div align="justify">💲 Thermal Subsystem. Fix unrecognize `pciXXXX,XXXX` which not identical properly on Mac's. Rename `pci8086,a3b1` to `THSS`. Only for Ioreg</div>
 - **USBX**<div align="justify">💲 USB Power Properties on Skylake mothermoard and new generation</div>
-- **XHC0**<div align="justify">💲 The `Platform Controller Hub` (PCH) for Intel Comet Lake family single-chip chipsets known as `Intel Comet Lake PCH-V USB Controller`. Because this build has two different USB Host Controllers, rename `XHC` to `XHC0`</div>  
+- **XHC**<div align="justify">💲 The `Platform Controller Hub` (PCH) for Intel Comet Lake family single-chip chipsets known as `Intel Comet Lake PCH-V USB Controller`. Because this build has two different USB Host Controllers</div>  
 
 <p align="center"><img width="1115" alt="Screen Shot 2022-05-16 at 12 44 52 PM" src="https://user-images.githubusercontent.com/72515939/168521417-7d17f33e-85a0-45ce-ae77-ca639b218658.png"></div>
 
