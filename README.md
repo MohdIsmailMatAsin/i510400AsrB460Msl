@@ -35,12 +35,12 @@
 
 ## BIOS
 
-**Legacy BIOS**<div align="justify">Legacy Boot refers to the boot process used by the BIOS firmware to initialize hardware devices. The Legacy boot contains a selection of installed devices that get initialized as the computer performs the **Post-Test** during the boot process. The legacy boot will check for all connected devices for the Master Boot Record (MBR), usually in the first sector of a disk. When it can’t find a bootloader in the devices, Legacy switches to the next device in the list and keeps repeating this process until it finds a boot-loader, or if not, returns an error.</div>
+**Legacy BIOS**<div align="justify">Legacy Boot refers to the BIOS firmware's boot mechanism for initialising hardware devices. As the computer executes the Post-Test during the boot process, the Legacy boot has a selection of installed devices that are initialised. The legacy boot will look for the Master Boot Record (MBR), which is normally found in the first sector of a disc, on all connected devices. When Legacy is unable to locate a bootloader among the devices, it moves on to the next device in the list and repeats the procedure until it locates a bootloader or returns an error.</div>
 
 </br>
 
 **Modern BIOS (UEFI)**<div align="justify">
-UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the boot process. UEFI is similar to Legacy, but the boot data is stored in a .efi file rather than the firmware. Most UEFIs can be entered by a special key. Below is common key used for certain motherboard manufacturer:</div>
+The Unified Extensible Firmware Interface, or UEFI, is a new approach to the boot process. UEFI is identical to Legacy, however instead of firmware, the boot data is kept in an.efi file. A unique key is required to access most UEFIs. A common key for certain motherboard manufacturers is listed below:</div>
 
 | **MANUFACTURER** | **BIOS KEY** | **MANUFACTURER** | **BIOS KEY** |
 | ---------------- | ------------ | ---------------- | ------------ |
@@ -66,13 +66,13 @@ UEFI, or Unified Extensible Firmware Interface, is a modern way of handling the 
 
 </br>
 
-**EFI**<div align="justify">Extensible Firmware Interface system partition, or ESP, is a partition on a data storage device (usually a hard disc drive or solid-state drive) that is used by computers having the Unified Extensible Firmware Interface (UEFI). When a computer is booted, UEFI firmware loads files stored on the ESP to start the installed operating systems and various utilities. The ESP contains the boot loaders or kernel images for all installed operating systems (which are contained in other partitions), device driver files for hardware devices present in a computer and used by the firmware at boot time, system utility programs that are intended to be run before an operating system is booted, and data files such as error logs.</div>
+**EFI**<div align="justify">The Extensible Firmware Interface system partition, or ESP, is a partition on a data storage device (typically a hard disc drive or solid-state drive) used by computers that support the Unified Extensible Firmware Interface (UEFI). When a computer is turned on, the UEFI firmware loads files from the ESP to launch the operating system and other applications. The ESP contains the boot loaders or kernel images for all installed operating systems (which are contained in other partitions), device driver files for hardware devices in a computer that are used by the firmware at boot time, system utility programmes that are intended to be run before an operating system is booted, and data files like error logs.</div>
 
 ![efi-system-partition](https://user-images.githubusercontent.com/72515939/161425316-cb229e60-b2ad-4538-9b68-bbabb89a88a8.png)
 
 </br>
 
-**Boot-Loader**<div align="justify">The term boot-loader is a shortened form of the words [bootstrap loader](https://www.ionos.com/digitalguide/server/configuration/what-is-a-bootloader/). The term stems from the fact that the boot manager is the key component in starting up the computer, so it can be likened to the support of a bootstrap when putting a boot on. It is a special operating-system software that loads into the working memory of a computer after start-up. For this purpose, immediately after a device starts, a boot-loader is generally launched by a bootable medium like a hard drive, a CD/DVD or a USB stick. The boot medium receives information from the computer’s firmware (e.g. BIOS) about where the boot-loader is. The whole process is also described as booting.</div>
+**Boot-Loader**<div align="justify">The term [bootstrap loader](https://www.ionos.com/digitalguide/server/configuration/what-is-a-bootloader/) is a shorter form of the words. The phrase comes from the fact that the boot manager is a critical component in beginning the computer, and it can be compared to the help provided by a bootstrap when putting on a boot. It is a type of operating system software that loads into a computer's working memory when it boots up. A boot-loader is often launched shortly after a device starts, via a bootable medium such as a hard disc, a CD/DVD, or a USB stick. The boot medium receives information about the boot-location loader's from the computer's firmware (e.g. BIOS). The entire procedure is known as booting.</div>
 
 </br>
 
