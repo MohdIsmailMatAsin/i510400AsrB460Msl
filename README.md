@@ -256,7 +256,7 @@ Below are the base OpenCore files and folders used for this project:
 - **SATA**<div align="justify">💲 Serial ATA Device, SATA. Rename `SATA` to `SAT0` and patch compatibe 400 Series SATA Family to `pci8086,a352` iMac's compatible (cosmetics)</div>
 - **SBUS**<div align="justify">💲 ACPI Method to fix Sistem Management Bus `AppleSMBus`, `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` (BLCK/BLC0 - `smc-blc` or DVL0 - `diagsvault`), etc</div>
 - **THSS**<div align="justify">💲 Thermal Subsystem. Fix unrecognize `pciXXXX,XXXX` which not identical properly on Mac's. Rename `pci8086,a3b1` to `THSS`. Only for Ioreg</div>
-- **USBX**<div align="justify">💲 USB Power Properties on Skylake mothermoard and new generation</div>
+- **USBX**<div align="justify">💲 USB Power Properties on Skylake motherboard and new generation</div>
 - **XHC**<div align="justify">💲 The `Platform Controller Hub` (PCH) for Intel Comet Lake family single-chip chipsets known as `Intel Comet Lake PCH-V USB Controller`. Because this build has two different USB Host Controllers</div>
 
 <p align="center"><img width="1115" alt="Screen Shot 2022-05-16 at 12 44 52 PM" src="https://user-images.githubusercontent.com/72515939/168521417-7d17f33e-85a0-45ce-ae77-ca639b218658.png"></div>
