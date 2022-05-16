@@ -239,7 +239,7 @@ So, it should be...
 - **HDEF**<div align="justify">💲 Another High Definition Audio device with `AC'97` support. Renamed `HDAS` to `HDEF`</div> 
 - **IGPU**<div align="justify">💲 Intel Intergrated Graphics Unit device renamed from `GFX0` to `IGPU` with other `required patches` as `Headless` graphic support</div>
 - **IMEI**<div align="justify">💲 Intel Management Engine Interface. Rename `HECI` to `IMEI` with other required info</div>    
-- **LPCB**<div align="justify">💲 Low Pin Count Bus, may also work as `PPC`. An interface allows the legacy I/O motherboard components, typically integrated in a `Super I/O` chip, ie; `Nuvoton NCT6796D-E`, to migrate from the `ISA/X-bus` to the `LPC Interface`</div>
+- **LPCB**<div align="justify">💲 Low Pin Count Bus, may also work as `PPC`. An interface allows the legacy I/O motherboard components, typically integrated in a `Super I/O` chip ie; `Nuvoton NCT6796D-E`, to migrate from the `ISA/X-bus` to the `LPC Interface`</div>
 - **PLUG**<div align="justify">💲 To allow the kernel's `XCPM` / XNU's CPU Power Management to manage CPU's power management</div> 
 - **PPMC**<div align="justify">💲 Classed as Memory Controller in Comet Lake (CML) platform. Patch compatible supported Comet Lake `pci8086,a3a1` on `AppleIntelPCHPMC`, which is identical to Intel 200 Series/Z370 Chipset Family Power Management Controller `pci8086,a2a1`</div>
 - **PXSX**<div align="justify">💲 VIA USB 3.0 eXtensible PCIe Host Controller. Pointed to Slot: `Slot- 3`</div> 
