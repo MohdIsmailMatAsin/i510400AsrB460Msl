@@ -527,7 +527,7 @@ Below are the base OpenCore files and folders used for this project:
 
 </br>
 
-**Full Example**<div align="justify">Below is an example of **agdpmod=pikera** with **ATY,Keelback** framebuffer patch:</div>
+**Full Example**<div align="justify">Below is an example **ATY,Keelback** framebuffer patch:</div>
 
 ```xml
 <key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
