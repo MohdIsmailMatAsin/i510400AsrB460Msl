@@ -101,7 +101,16 @@
 				<string>THSS</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x0,0x0)</key>
-			<dict/>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>Host bridge</string>
+				<key>model</key>
+				<string>Intel Comet Lake Host Bridge/DRAM Controller</string>
+				<key>name</key>
+				<string>DRAM</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -109,24 +118,130 @@
 				<key>device_type</key>
 				<string>PCI bridge</string>
 				<key>model</key>
-				<string>Intel Comet Lake - PCI Express x16 Controller</string>
+				<string>Intel Comet Lakem PCI Express x16 Controller</string>
 				<key>name</key>
 				<string>PEG0</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)</key>
-			<dict/>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Slot- 1</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>AMD Navi 10 PCI Express Upstream Switch Port</string>
+				<key>name</key>
+				<string>EGP0</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
-			<dict/>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Slot- 1</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>AMD Navi 10 PCI Express Downstream Switch Port</string>
+				<key>name</key>
+				<string>EGP1</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
-			<dict/>
+			<dict>
+				<key>@0,AAPL,boot-display</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>@0,ATY,EFIDisplay</key>
+				<string>DP1</string>
+				<key>@0,name</key>
+				<string>ATY,Keelback</string>
+				<key>@1,name</key>
+				<string>ATY,Keelback</string>
+				<key>@2,name</key>
+				<string>ATY,Keelback</string>
+				<key>@3,name</key>
+				<string>ATY,Keelback</string>
+				<key>AAPL,slot-name</key>
+				<string>Slot- 1</string>
+				<key>AAPL00,DualLink</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>ATY,EFIEnabledMode</key>
+				<data>
+				AQ==
+				</data>
+				<key>ATY,EFIVersion</key>
+				<data>
+				MzAuMC4xMDEuMTM0MA==
+				</data>
+				<key>ATY,EFIVersionB</key>
+				<data>
+				MDE3LjAwMi4wMDAuMDAwLjAzNzYzNg==
+				</data>
+				<key>ATY,copyright</key>
+				<data>
+				Q29weXJpZ2h0IEFNRCBJbmMuIEFsbCBSaWdodHMgUmVz
+				ZXJ2ZWQuIDIwMDUtMjAxOQ==
+				</data>
+				<key>CFG,CFG_USE_AGDC</key>
+				<data>
+				AQ==
+				</data>
+				<key>device_type</key>
+				<string>VGA compatible controller</string>
+				<key>hda-gfx</key>
+				<string>onboard-2</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x1)</key>
-			<dict/>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Slot- 1</string>
+				<key>device_type</key>
+				<string>Audio device</string>
+				<key>model</key>
+				<string>AMD Navi 10 PCI Express High Definition Audio Controller</string>
+				<key>name</key>
+				<string>HDAU</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
-			<dict/>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>acpi-wake-type</key>
+				<data>
+				AQ==
+				</data>
+				<key>device_type</key>
+				<string>USB controller</string>
+				<key>model</key>
+				<string>Intel Comet Lake USB 3.2 xHCI Host Controller</string>
+				<key>name</key>
+				<string>XHC</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x16,0x0)</key>
-			<dict/>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>Communication controller</string>
+				<key>model</key>
+				<string>Intel Comet Lake HECI Controller</string>
+				<key>name</key>
+				<string>IMEI</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x17,0x0)</key>
-			<dict/>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>compatible</key>
+				<string>pci8086,a352</string>
+				<key>device_type</key>
+				<string>SATA controller</string>
+				<key>model</key>
+				<string>Intel Comet Lake SATA/AHCI Controller</string>
+				<key>name</key>
+				<string>SATA</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1B,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -134,7 +249,7 @@
 				<key>device_type</key>
 				<string>PCI bridge</string>
 				<key>model</key>
-				<string>Intel Comet Point-V PCH - PCI Express Root Port 20</string>
+				<string>Intel Comet Lake PCI Express Root Port 20</string>
 				<key>name</key>
 				<string>RP20</string>
 			</dict>
@@ -147,7 +262,7 @@
 				<key>device_type</key>
 				<string>PCI bridge</string>
 				<key>model</key>
-				<string>Intel Comet Point-V PCH - PCI Express Root Port 21</string>
+				<string>Intel Comet Lake PCI Express Root Port 21</string>
 				<key>name</key>
 				<string>RP21</string>
 			</dict>
@@ -160,12 +275,25 @@
 				<key>device_type</key>
 				<string>PCI bridge</string>
 				<key>model</key>
-				<string>Intel Comet Point-V PCH - PCI Express Root Port 3</string>
+				<string>Intel Comet Lake PCI Express Root Port 3</string>
 				<key>name</key>
 				<string>RP03</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x0)/Pci(0x0,0x0)</key>
-			<dict/>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>M2_Wifi</string>
+				<key>built-in</key>
+				<data>
+				AQ==
+				</data>
+				<key>device_type</key>
+				<string>Network controller</string>
+				<key>model</key>
+				<string>Broadcom BCM4360 802.11ac Wireless Network Adapter</string>
+				<key>name</key>
+				<string>ARPT</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x3)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -173,12 +301,25 @@
 				<key>device_type</key>
 				<string>PCI bridge</string>
 				<key>model</key>
-				<string>Intel Comet Point-V PCH - PCI Express Root Port 4</string>
+				<string>Intel Comet Lake PCI Express Root Port 4</string>
 				<key>name</key>
 				<string>RP04</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)</key>
-			<dict/>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Ethernet</string>
+				<key>built-in</key>
+				<data>
+				AQ==
+				</data>
+				<key>device_type</key>
+				<string>Ethernet controller</string>
+				<key>model</key>
+				<string>Realtek RTL8125 Gaming 2.5GbE Family Ethernet Controller</string>
+				<key>name</key>
+				<string>RTLK</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x4)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -186,12 +327,25 @@
 				<key>device_type</key>
 				<string>PCI bridge</string>
 				<key>model</key>
-				<string>Intel Comet Point-V PCH - PCI Express Root Port 5</string>
+				<string>Intel Comet Lake PCI Express Root Port 5</string>
 				<key>name</key>
 				<string>RP05</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x4)/Pci(0x0,0x0)</key>
-			<dict/>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Slot- 3</string>
+				<key>acpi-wake-type</key>
+				<data>
+				AQ==
+				</data>
+				<key>device_type</key>
+				<string>USB controller</string>
+				<key>model</key>
+				<string>VIA USB 3.0 eXtensible Host Controller</string>
+				<key>name</key>
+				<string>PXSX</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1D,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -199,7 +353,7 @@
 				<key>device_type</key>
 				<string>PCI bridge</string>
 				<key>model</key>
-				<string>Intel Comet Point-V PCH - PCI Express Root Port 9</string>
+				<string>Intel Comet Lake PCI Express Root Port 9</string>
 				<key>name</key>
 				<string>RP09</string>
 			</dict>
@@ -212,7 +366,7 @@
 				<key>device_type</key>
 				<string>ISA bridge</string>
 				<key>model</key>
-				<string>Intel B460 Chipset - LPC/eSPI Controller</string>
+				<string>Intel B460 Chipset LPC/eSPI Controller</string>
 				<key>name</key>
 				<string>LPCB</string>
 			</dict>
@@ -227,12 +381,25 @@
 				<key>device_type</key>
 				<string>Memory controller</string>
 				<key>model</key>
-				<string>Intel Comet Point-V PCH - Power Management Controller (PMC)</string>
+				<string>Intel Comet Lake Power Management Controller (PMC)</string>
 				<key>name</key>
 				<string>PPMC</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
-			<dict/>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Audio</string>
+				<key>device_type</key>
+				<string>Audio device</string>
+				<key>layout-id</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>model</key>
+				<string>Intel Comet Lake cAVS</string>
+				<key>name</key>
+				<string>HDEF</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x4)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -242,12 +409,51 @@
 				<key>device_type</key>
 				<string>SMBus</string>
 				<key>model</key>
-				<string>Intel Comet Point-V PCH - SMBus Controller</string>
+				<string>Intel Comet Lake SMBus Controller</string>
 				<key>name</key>
 				<string>SBUS</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-			<dict/>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>
+				AwCRPg==
+				</data>
+				<key>AAPL,slot-name</key>
+				<string>Display</string>
+				<key>built-in</key>
+				<data>
+				AQ==
+				</data>
+				<key>device-id</key>
+				<data>
+				mz4AAA==
+				</data>
+				<key>device_type</key>
+				<string>Display controller</string>
+				<key>enable-metal</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>igfxfw</key>
+				<data>
+				AgAAAA==
+				</data>
+				<key>igfxonln</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>iommu-selection</key>
+				<data>
+				AAAAAA==
+				</data>
+				<key>rps-control</key>
+				<data>
+				AQAAAA==
+				</data>
+			</dict>
 		</dict>
 		<key>Delete</key>
 		<dict/>
@@ -375,24 +581,6 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AppleALC</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>SMCLightSensor.kext</string>
-				<key>Comment</key>
-				<string>V1.2.9 | SMCLightSensor.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/SMCLightSensor</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -717,7 +905,7 @@
 			<key>EnablePassword</key>
 			<false/>
 			<key>ExposeSensitiveData</key>
-			<integer>6</integer>
+			<integer>3</integer>
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
 			<key>PasswordHash</key>
@@ -794,7 +982,7 @@
 				Rg==
 				</data>
 				<key>boot-args</key>
-				<string>agdpmod=pikera -liludbgall -v -vsmcdbg  -vsmcrpt -vsmccomp -wegdbg</string>
+				<string>-liludbgall -v -vsmcdbg  -vsmcrpt -vsmccomp -wegdbg</string>
 				<key>csr-active-config</key>
 				<data>
 				AAAAAA==
@@ -895,23 +1083,23 @@
 			<key>SystemProductName</key>
 			<string>iMac20,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02G50AEPN5T</string>
+			<string>C02GLKZBPN5T</string>
 			<key>SystemUUID</key>
-			<string>F15875BF-7D3C-485A-9A51-686BB85EB10D</string>
+			<string>32C5A72C-BB8B-485E-9305-10B72E9C9BEC</string>
 		</dict>
 		<key>Generic</key>
 		<dict>
 			<key>AdviseFeatures</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02131403GUPHC1AD</string>
+			<string>C02143600CDPHC1UE</string>
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>ROM</key>
 			<data>
-			AD7h7RL+
+			ACUAYUoE
 			</data>
 			<key>SpoofVendor</key>
 			<true/>
@@ -920,9 +1108,9 @@
 			<key>SystemProductName</key>
 			<string>iMac20,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02G50AEPN5T</string>
+			<string>C02GLKZBPN5T</string>
 			<key>SystemUUID</key>
-			<string>F15875BF-7D3C-485A-9A51-686BB85EB10D</string>
+			<string>32C5A72C-BB8B-485E-9305-10B72E9C9BEC</string>
 		</dict>
 		<key>PlatformNVRAM</key>
 		<dict>
@@ -937,15 +1125,15 @@
 			/////wgAAAA=
 			</data>
 			<key>MLB</key>
-			<string>C02131403GUPHC1AD</string>
+			<string>C02143600CDPHC1UE</string>
 			<key>ROM</key>
 			<data>
-			AD7h7RL+
+			ACUAYUoE
 			</data>
 			<key>SystemSerialNumber</key>
-			<string>C02G50AEPN5T</string>
+			<string>C02GLKZBPN5T</string>
 			<key>SystemUUID</key>
-			<string>F15875BF-7D3C-485A-9A51-686BB85EB10D</string>
+			<string>32C5A72C-BB8B-485E-9305-10B72E9C9BEC</string>
 		</dict>
 		<key>SMBIOS</key>
 		<dict>
@@ -1003,9 +1191,9 @@
 			<key>SystemSKUNumber</key>
 			<string>System SKU#</string>
 			<key>SystemSerialNumber</key>
-			<string>C02G50AEPN5T</string>
+			<string>C02GLKZBPN5T</string>
 			<key>SystemUUID</key>
-			<string>F15875BF-7D3C-485A-9A51-686BB85EB10D</string>
+			<string>32C5A72C-BB8B-485E-9305-10B72E9C9BEC</string>
 			<key>SystemVersion</key>
 			<string>1.0</string>
 		</dict>
