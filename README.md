@@ -206,27 +206,21 @@ Below are the base OpenCore files and folders used for this project:
 **On Other Operating Systems, Avoid ACPI Injection**<div align="justify">Most of these issues may affect dual booting (Windows + MacOS). Luckily, there are settings via config.plist to prevent this issue, but this is only experimental. Do not assume these settings will work 💯 on your machine. Certain users report the settings are not working, but some report the settings work as well. These settings are actually used only for Dell machines. But it is worth a try. Settings are explained via the table below.</div>
 
 - UpdateSMBIOSMode = `Create`
-> _Replace the tables with newly allocated EfiReservedMemoryType, use Custom on Dell laptops requiring CustomSMBIOSGuid quirk. Setting to Custom with CustomSMBIOSGuid quirk enabled can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk_
+  > _Replace the tables with newly allocated EfiReservedMemoryType, use Custom on Dell laptops requiring CustomSMBIOSGuid quirk. Setting to Custom with CustomSMBIOSGuid quirk enabled can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk</div>
 
 </br>
 
-- CustomSMBIOSGuid = `No`
-> _Performs GUID patching for UpdateSMBIOSMode set to Custom. Usually relevant for Dell laptops. Enabling this quirk with UpdateSMBIOSMode. Custom mode can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk_    
-
-</br>
-
-So, it should be...
-
-- UpdateSMBIOSMode = `Custom`
 - CustomSMBIOSGuid = `Yes`
+  > _Performs GUID patching for UpdateSMBIOSMode set to Custom. Usually relevant for Dell laptops. Enabling this quirk with UpdateSMBIOSMode. Custom mode can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk. 
 
 </br>
 
-**OpenCoreMod**<div align="justify">Another option is to use the OpenCore Mod version. It is not encouraged, but the best approach to develop EFI is using a resource package. This is an example based on [OpenCore v0.8.0](https://github.com/MohdIsmailMatAsin/i510400AsrB460Msl/files/8697131/oc_v0.8.0-mod.zip). The difference with official release is `Enable for All` option and `SkipCustomEntryCheck`. This option prevents modded/patched ACPI from being injected into other operating systems ie; Windows or Linux. The difficulty is that you have to build this EFI from source. Below is standard settings for both option. 
-	
+**OpenCoreMod**<div align="justify">Another option is to use the OpenCore Mod version. It is not encouraged, but the best approach to develop EFI is using a resource package. This is an example based on [OpenCore v0.8.0](https://github.com/MohdIsmailMatAsin/i510400AsrB460Msl/files/8697131/oc_v0.8.0-mod.zip). The difference with official release is `Enable for All` option and `SkipCustomEntryCheck`.
+
 - Enable for All = `No`
-- SkipCustomEntryCheck = `Yes`	
-	
+- SkipCustomEntryCheck = `Yes`
+  > _This option prevents modded/patched ACPI from being injected into other operating systems ie; Windows or Linux. The difficulty is that you have to build this EFI from source_
+
 </br>
 
 **Solution**<div align="justify">SSDT patch is the better solution and more reasonable. Any addition or modification does not affect your machine. If an error occurs, it is easy to revert back to the original state. SSDT patch is minor modification and not affect the actual hardware performance. Using openCore debug, there are several other tables that work with OpenCore. However, modifications to other tables are not necessary. The purpose of the SSDT is designed as described in this section. Be reminded, only SSDT can be modified. The rest is no.</div>
@@ -238,31 +232,32 @@ So, it should be...
 </br>
 
 **Patch**
-- **ALS0**<div align="justify">💲 Normally, a real iMac20,1 includes compatibility with `smc-als` and `AppleLMUController`. These patches are only cosmetics on regular PC's</div>      
-- **ANS0**<div align="justify">💲 Rename KINGSTON SA2000M8500G NVme, `RP09,PXSX` to `RP09,ANS0` and pointed to Slot: `M2- 1`. Patch `Generic NVMe` to spoof as `Apple SSD Controller`</div>                                                                                                                     
-- **ANS1**<div align="justify">💲Rename KINGSTON SA2000M8500G NVme, `RP21,PXSX` to `RP21,ANS1` and pointed to Slot: `M2- 2`. Patch `Generic NVMe` to spoof as `Apple SSD Controller`</div> 
-- **ANS2**<div align="justify">💲 Rename Maxio MAP1001 NVMe SSD, `RP20,PXSX` to `RP20,ANS2` and pointed to Slot: `Slot- 2`. Patch `Generic NVMe` to spoof as `Apple SSD Controller` as built-in</div>                                                                                                               
+
+- **ALS0**<div align="justify">💲 Normally, a real iMac20,1 includes compatibility with `smc-als` and `AppleLMUController`. These patches are only cosmetics on regular PC's</div>
+- **ANS0**<div align="justify">💲 Rename KINGSTON SA2000M8500G NVme, `RP09,PXSX` to `RP09,ANS0` and pointed to Slot: `M2- 1`. Patch `Generic NVMe` to spoof as `Apple SSD Controller`</div>
+- **ANS1**<div align="justify">💲Rename KINGSTON SA2000M8500G NVme, `RP21,PXSX` to `RP21,ANS1` and pointed to Slot: `M2- 2`. Patch `Generic NVMe` to spoof as `Apple SSD Controller`</div>
+- **ANS2**<div align="justify">💲 Rename Maxio MAP1001 NVMe SSD, `RP20,PXSX` to `RP20,ANS2` and pointed to Slot: `Slot- 2`. Patch `Generic NVMe` to spoof as `Apple SSD Controller` as built-in</div>
 - **ARPT**<div align="justify">💲 Rename Broadcom BCM94360, `RP03,PXSX` to `RP03,ARPT `and pointed to Slot: `M2_Wifi`. Since the device works **OOB**, no additional patches have been applied</div>
-- **AWAC**<div align="justify">💲 AWAC/RTC0 purpose is to fix the `system clocks` found on newer hardware. Mostly on 300 Series, 400 Series, 495 Series(Ice Lake), X99 and X299 Motherboard</div>                                                                                           
-- **DRAM**<div align="justify">💲 Host bridge (DRAM) or mostly known to Memory Controller Hub `MCHC`, is one of two chips comprising the `core logic chipset` architecture on a PC motherboard</div> 
-- **EC**<div align="justify">💲 Patched `Embedded Controller` or `EC`. An EC is a microcontroller in computers that handles various system tasks that the operating system does not handle. Most generic PC motherboards lack native EC support since Apple Macs require `boot-ec` not `PNP0C09`</div>             
-- **GFX0**<div align="justify">💲 Display out from a Dedicated Graphic Processor Unit (DGPU). Patch `_SUN` enabled Slot Number and `agdpmod=pikera` with `other improvement config`</div> 
+- **AWAC**<div align="justify">💲 AWAC/RTC0 purpose is to fix the `system clocks` found on newer hardware. Mostly on 300 Series, 400 Series, 495 Series(Ice Lake), X99 and X299 Motherboard</div>
+- **DRAM**<div align="justify">💲 Host bridge (DRAM) or mostly known to Memory Controller Hub `MCHC`, is one of two chips comprising the `core logic chipset` architecture on a PC motherboard</div>
+- **EC**<div align="justify">💲 Patched `Embedded Controller` or `EC`. An EC is a microcontroller in computers that handles various system tasks that the operating system does not handle. Most generic PC motherboards lack native EC support since Apple Macs require `boot-ec` not `PNP0C09`</div>
+- **GFX0**<div align="justify">💲 Display out from a Dedicated Graphic Processor Unit (DGPU). Patch `_SUN` enabled Slot Number and `agdpmod=pikera` with `other improvement config`</div>
 - **HDAU**<div align="justify">💲 High Definition Audio. Patch `_SUN` enabled Slot Number and `layout-id` data</div>
-- **HDEF**<div align="justify">💲 Another High Definition Audio device with `AC'97` support. Renamed `HDAS` to `HDEF`</div> 
+- **HDEF**<div align="justify">💲 Another High Definition Audio device with `AC'97` support. Renamed `HDAS` to `HDEF`</div>
 - **IGPU**<div align="justify">💲 Intel Intergrated Graphics Unit device renamed from `GFX0` to `IGPU` with other `required patches` as `Headless` graphic support</div>
-- **IMEI**<div align="justify">💲 Intel Management Engine Interface. Rename `HECI` to `IMEI` with other required info</div>    
+- **IMEI**<div align="justify">💲 Intel Management Engine Interface. Rename `HECI` to `IMEI` with other required info</div>
 - **LPCB**<div align="justify">💲 Low Pin Count Bus, may also work as `PPC`. An interface allows the legacy I/O motherboard components, typically integrated in a `Super I/O` chip ie; `Nuvoton NCT6796D-E`, to migrate from the `ISA/X-bus` to the `LPC Interface`</div>
-- **PLUG**<div align="justify">💲 To allow the kernel's `XCPM` / XNU's CPU Power Management to manage CPU's power management</div> 
+- **PLUG**<div align="justify">💲 To allow the kernel's `XCPM` / XNU's CPU Power Management to manage CPU's power management</div>
 - **PPMC**<div align="justify">💲 Classed as Memory Controller in Comet Lake (CML) platform. Patch compatible supported Comet Lake `pci8086,a3a1` on `AppleIntelPCHPMC`, which is identical to Intel 200 Series/Z370 Chipset Family Power Management Controller `pci8086,a2a1`</div>
-- **PXSX**<div align="justify">💲 VIA USB 3.0 eXtensible PCIe Host Controller. Pointed to Slot: `Slot- 3`</div> 
+- **PXSX**<div align="justify">💲 VIA USB 3.0 eXtensible PCIe Host Controller. Pointed to Slot: `Slot- 3`</div>
 - **PNLF**<div align="justify">💲 Fake backlight device for macOS to play with, specifically one with a hardware ID of `APP0002`. Normally, a real iMac20,1 includes compatibility. This is only a cosmetic patch with zero config.</div>
 - **RPn**<div align="justify">💲 Root Port `RPn` (`n` = numeric) and added simple information</div>
-- **RTLK**<div align="justify">💲 Rename RTL8125 2.5GbE Controller, rename `RP04,PXSX` to `RP04,RTLK`</div>   
+- **RTLK**<div align="justify">💲 Rename RTL8125 2.5GbE Controller, rename `RP04,PXSX` to `RP04,RTLK`</div>
 - **SATA**<div align="justify">💲 Serial ATA Device, SATA. Rename `SATA` to `SAT0` and patch compatibe 400 Series SATA Family to `pci8086,a352` iMac's compatible (cosmetics)</div>
 - **SBUS**<div align="justify">💲 ACPI Method to fix Sistem Management Bus `AppleSMBus`, `AppleSMBusController`, `AppleSMBusPCI`, `Memory Reporting` (BLCK/BLC0 - `smc-blc` or DVL0 - `diagsvault`), etc</div>
 - **THSS**<div align="justify">💲 Thermal Subsystem. Fix unrecognize `pciXXXX,XXXX` which not identical properly on Mac's. Rename `pci8086,a3b1` to `THSS`. Only for Ioreg</div>
 - **USBX**<div align="justify">💲 USB Power Properties on Skylake mothermoard and new generation</div>
-- **XHC**<div align="justify">💲 The `Platform Controller Hub` (PCH) for Intel Comet Lake family single-chip chipsets known as `Intel Comet Lake PCH-V USB Controller`. Because this build has two different USB Host Controllers</div>  
+- **XHC**<div align="justify">💲 The `Platform Controller Hub` (PCH) for Intel Comet Lake family single-chip chipsets known as `Intel Comet Lake PCH-V USB Controller`. Because this build has two different USB Host Controllers</div>
 
 <p align="center"><img width="1115" alt="Screen Shot 2022-05-16 at 12 44 52 PM" src="https://user-images.githubusercontent.com/72515939/168521417-7d17f33e-85a0-45ce-ae77-ca639b218658.png"></div>
 
@@ -342,7 +337,7 @@ So, it should be...
 
 ### OC\Config.plist
 
-**Configuration**<div align="justify">A plist file is a settings file, also known as a properties file, used by MacOS applications. It contains properties and configuration settings for various programs. Based on Apple's Core Foundation DTD**, OpenCore/Clover benefit **.plist** to inject MacOS preference, also an information for the application that it holds the preference settings. Other than that, it's a markup language that shares a lot of similarities with HTML. Few different data types available, and most of the structure revolves around keeping track of opening and closing tags. Besides, a plist is often used to correct problems that a user may be having with an application or devices.</div>
+**Configuration**<div align="justify">A plist file is a settings file, also known as a properties file, used by MacOS applications. It contains properties and configuration settings for various programs. Based on Apple's Core Foundation DTD**, OpenCore/Clover benefit **.plist\*\* to inject MacOS preference, also an information for the application that it holds the preference settings. Other than that, it's a markup language that shares a lot of similarities with HTML. Few different data types available, and most of the structure revolves around keeping track of opening and closing tags. Besides, a plist is often used to correct problems that a user may be having with an application or devices.</div>
 
 <p align="center"><img width="959" alt="Screen Shot 2022-04-25 at 1 19 39 PM" src="https://user-images.githubusercontent.com/72515939/165025284-c442cf30-0099-4f94-8634-19b9877d153a.png"></div>
 
@@ -508,10 +503,14 @@ So, it should be...
 **Method 1 (Temporary)**<div align="justify">Require [Whatevergreen.kext](https://github.com/acidanthera/WhateverGreen). This boot-arg must be added to **config.plist** through the **NVRAM** section. Below is an example:</div>
 
 > NVRAM
+>
 > > Add
+> >
 > > > 7C436110-AB2A-4BBB-A880-FE41995C9F82
+> > >
 > > > > boot-args
-> > > > > `agdpmod=pikera`	
+> > > >
+> > > > > `agdpmod=pikera`
 
 </br>
 
@@ -519,8 +518,11 @@ So, it should be...
 
 > DeviceProperties
 > PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)
+>
 > > agdpmod
+> >
 > > > data
+> > >
 > > > > `70696B65726100`
 
 </br>
@@ -592,81 +594,121 @@ So, it should be...
 **AAPL,ig-platform-id:** Property used by macOS to determine the framebuffer profile with Ivy Bridge and newer
 
 > **DeviceProperties**
+>
 > > **PciRoot(0x0)/Pci(0x2,0x0)**
+> >
 > > > **`AAPL,ig-platform-id`**
+> > >
 > > > > **data**
+> > > >
 > > > > > **`0300913E`**
 
 **AAPL,slot-name:** To show/set PCI Cards on System Profiler
 
 > **DeviceProperties**
+>
 > > **PciRoot(0x0)/Pci(0x2,0x0)**
+> >
 > > > **`AAPL,slot-name`**
+> > >
 > > > > **string**
+> > > >
 > > > > > **`Internal`**
 
 **device-id:** Device id number
 
 > **DeviceProperties**
+>
 > > **PciRoot(0x0)/Pci(0x2,0x0)**
+> >
 > > > **`device-id`**
+> > >
 > > > > **data**
+> > > >
 > > > > > **`9B3E0000`**
 
 **igfxonln:** To force-online device property or to force online status on all displays
 
 > **DeviceProperties**
+>
 > > **PciRoot(0x0)/Pci(0x2,0x0)**
+> >
 > > > **`igfxonln`**
+> > >
 > > > > **data**
+> > > >
 > > > > > **`01000000`**
 
 **devicetype:** Type of device
 
 > **DeviceProperties**
+>
 > > **PciRoot(0x0)/Pci(0x2,0x0)**
+> >
 > > > **`devicetype`**
+> > >
 > > > > **string**
+> > > >
 > > > > > **`Display controller`**
 
 **enable-metal:** To enable-metal property or force enable Metal support on Intel for offline rendering
 
 > **DeviceProperties**
+>
 > > **PciRoot(0x0)/Pci(0x2,0x0)**
+> >
 > > > **`enable-metal`**
+> > >
 > > > > **data**
+> > > >
 > > > > > **`01000000`**
 
 **iommu-selection:** Allows VMs to directly use peripheral devices through direct memory access (DMA). Value 01000000 may enable IOMMU. Refer: [Apple Platform Security](https://support.apple.com/lt-lt/guide/security/seca4960c2b5/web)
 
 > **DeviceProperties**
+>
 > > **PciRoot(0x0)/Pci(0x2,0x0)**
+> >
 > > > **`iommu-selection`**
+> > >
 > > > > **data**
+> > > >
 > > > > > **`00000000`**
 
 **rps-control:** To enable RPS control patch (improves IGPU performance)
 
 > **DeviceProperties**
+>
 > > **PciRoot(0x0)/Pci(0x2,0x0)**
+> >
 > > > **`rps-control`**
+> > >
 > > > > **data**
+> > > >
 > > > > > **`01000000`**
 
 **igfxfw:** To force loading of Apple GuC firmware
 
 > **DeviceProperties**
+>
 > > **PciRoot(0x0)/Pci(0x2,0x0)**
+> >
 > > > **`igfxfw`**
+> > >
 > > > > **data**
+> > > >
 > > > > > **`02000000`**
 
 **hda-gfx:** An onboard properties to HDAU, IGPU, HDEF objects
 
 > **DeviceProperties**
+>
 > > **PciRoot(0x0)/Pci(0x2,0x0)**
+> >
 > > > **`hda-gfx`**
+> > >
 > > > > **string**
+> > > >
 > > > > > **`onboard-1`**
 
 **From the original iMac20,1 ioreg:**
@@ -699,7 +741,7 @@ So, it should be...
 
 </br>
 
-**Boot Without Whatevergreen**<div align="justify">There are several ways to boot without Whatevergreen.kext. However, only native DGPU and IGPU are capable. Here, the explanation is quite simple. If the settings above (using Whatevergreen.kext) are successful, try removing/disabling it. This method will handle **agdpmod=pikera** directly using AppleGraphiceDevicePolicy.kext. 
+**Boot Without Whatevergreen**<div align="justify">There are several ways to boot without Whatevergreen.kext. However, only native DGPU and IGPU are capable. Here, the explanation is quite simple. If the settings above (using Whatevergreen.kext) are successful, try removing/disabling it. This method will handle **agdpmod=pikera** directly using AppleGraphiceDevicePolicy.kext.
 
 1. Do not remove **agdpmod=pikera** info on DGPU properties.
 2. If **Headless UHD630 IGPU** exists in config.plist, delete some other information. **Below** is an example:
@@ -732,7 +774,8 @@ So, it should be...
 </dict>
 ```
 
-3.Save the config.plist and reboot. Additional **GPU tabs** will no longer be available after this. 
+3.Save the config.plist and reboot. Additional **GPU tabs** will no longer be available after this.
+
 > _**Refer:** Proper headless IGPUs will appear as original iMac 20.1 with CFL framebuffer._
 
 <p align="center"><img width="1105" alt="Screen Shot 2022-05-11 at 7 39 15 AM" src="https://user-images.githubusercontent.com/72515939/167741812-18910d7d-939c-4404-add1-115fd911d7d1.png"></p>
@@ -749,7 +792,7 @@ So, it should be...
 
 <p align="center"><img width="1182" alt="Screen Shot 2022-05-11 at 7 43 12 AM" src="https://user-images.githubusercontent.com/72515939/167742032-f9a623e4-4bf5-42a6-a0c4-2288b4e739ed.png"></p>
 	
-3. Now, ready to boot MacOS without Whatevergreen.kext. If any issue occur, back to the previous state (with Whatevergreen.kext)	
+3. Now, ready to boot MacOS without Whatevergreen.kext. If any issue occur, back to the previous state (with Whatevergreen.kext)
 
 </br>
 
@@ -870,45 +913,57 @@ Without this option **octool** will make a "quick guess" as to which version to 
 I would like to thanks all folks in Hackintosh Community especially:
 
 👍 **[Dortania](https://dortania.github.io/OpenCore-Install-Guide/)**
+
 - `https://dortania.github.io/OpenCore-Install-Guide/` MacOS Install Guide via OpenCore Boot-loader
 
 👍 **[acidanthera](https://github.com/acidanthera)**
+
 - `https://github.com/acidanthera/OpenCorePkg` Boot-loader
 - `https://github.com/acidanthera/MaciASL` Powerful ACPI Compiler
 
 👍 **[corpNewt](https://github.com/corpnewt)**
+
 - `https://github.com/corpnewt/USBMap` MacOS USB Mapping Tool
 - `https://github.com/corpnewt/ProperTree` Cross Platform Plist Editor
 
 👍 **[dhinakg](https://github.com/USBToolBox/tool)**
+
 - `USBToolBox](https://github.com/USBToolBox/tool` Windows based USBmap
 
 👍 **[headkaze](https://github.com/headkaze)**
+
 - `https://github.com/headkaze/Hackintool` The Swiss Army Knife of Vanilla Hackintoshing
 - `https://github.com/headkaze/EFI-Agent` EFI Mounter
 
 👍 **[Facebook](https://www.facebook.com)**
+
 - `https://www.facebook.com/groups/HackintoshMalaysia/about/` An Official Malaysia Hackintosh Community
 
 👍 **[reddit](https://www.reddit.com)**
+
 - `https://www.reddit.com/r/hackintosh/` Hackintosh Discussion Platform
 
 👍 **[daliansky](https://github.com/daliansky)**
+
 - `https://github.com/daliansky/OC-little` ACPI Guide (Chinese Language)
 
 👍 **[5T33Z0](https://github.com/5T33Z0/OC-Little-Translated)**
-- `https://github.com/5T33Z0/OC-Little-Translated` An English [OC-Little](https://github.com/daliansky/OC-little) Translation 
+
+- `https://github.com/5T33Z0/OC-Little-Translated` An English [OC-Little](https://github.com/daliansky/OC-little) Translation
 - `https://github.com/CloverHackyColor/CloverBootloader)` Clover Guide
 
 👍 **[rusty-bits](https://github.com/rusty-bits)**
+
 - `https://github.com/rusty-bits/octool` Cross Platform OpenCore Update Tool
 
 👍 **[ic005k](https://github.com/ic005k)**
+
 - `https://github.com/ic005k/Xiasl` Cross Platform ACPI Compiler
 - `https://github.com/ic005k/OCAuxiliaryTools)` Cross Platform OpenCore OCAuxiliary Tool
 - `https://github.com/ic005k/Xplist` Cross Platform Plist Editor
 
 👍 **[k33yb0rd](https://github.com/k33yb0rd/k33yb0rd)**
+
 - `https://github.com/MohdIsmailMatAsin/i510400AsrockB460MSteelLegend/blob/main/SSDT-B460M-SL.dsl` Fix certain ACPI method
 
 </br>
@@ -916,6 +971,7 @@ I would like to thanks all folks in Hackintosh Community especially:
 # Find Me
 
 ✌️ **[reddit](https://www.reddit.com)**
+
 - `https://www.reddit.com/user/mohdismailmatasin` @ u/mohdismailmatasin
 
 <!---------------------------
