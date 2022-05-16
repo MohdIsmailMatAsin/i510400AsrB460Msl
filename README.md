@@ -523,9 +523,7 @@ So, it should be...
 <key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)/Pci(0x0,0x0)</key>
 <dict>
 	<key>@0,AAPL,boot-display</key>
-	<data>
-	AQAAAA==
-	</data>
+	<data>AQAAAA==</data>
 	<key>@0,ATY,EFIDisplay</key>
 	<string>DP1</string>
 	<key>@0,name</key>
@@ -539,39 +537,22 @@ So, it should be...
 	<key>AAPL,slot-name</key>
 	<string>Slot- 1</string>
 	<key>AAPL00,DualLink</key>
-	<data>
-	AQAAAA==
-	</data>
+	<data>AQAAAA==</data>
 	<key>ATY,EFIEnabledMode</key>
-	<data>
-	AQ==
-	</data>
+	<data>AQ==</data>
 	<key>ATY,EFIVersion</key>
-	<data>
-	MzAuMC4xMDEuMTM0MA==
-	</data>
+	<data>MzAuMC4xMDEuMTM0MA==</data>
 	<key>ATY,EFIVersionB</key>
-	<data>
-	MDE3LjAwMi4wMDAuMDAwLjAzNzYzNg==
-	</data>
+	<data>MDE3LjAwMi4wMDAuMDAwLjAzNzYzNg==</data>
 	<key>ATY,copyright</key>
-	<data>
-	Q29weXJpZ2h0IEFNRCBJbmMuIEFsbCBSaWdodHMgUmVz
-	ZXJ2ZWQuIDIwMDUtMjAxOQ==
-	</data>
+	<data>Q29weXJpZ2h0IEFNRCBJbmMuIEFsbCBSaWdodHMgUmVzZXJ2ZWQuIDIwMDUtMjAxOQ==</data>
 	<key>CFG,CFG_USE_AGDC</key>
-	<data>
-	AQ==
-	</data>
-	<key>agdpmod</key>
-	<data>
-	cGlrZXJhAA==
-	</data>
+	<data>AQ==</data>
 	<key>device_type</key>
 	<string>VGA compatible controller</string>
 	<key>hda-gfx</key>
 	<string>onboard-2</string>
-</dict>	
+</dict>
 
 ```
 
@@ -719,23 +700,27 @@ So, it should be...
 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 <dict>
 	<key>AAPL,ig-platform-id</key>
-	<data>
-	AwCRPg==
-	</data>
+	<data>AwCRPg==</data>
 	<key>AAPL,slot-name</key>
-	<string>Internal</string>
+	<string>Display</string>
+	<key>built-in</key>
+	<data>AQ==</data>
 	<key>device-id</key>
-	<data>
-	mz4AAA==
-	</data>
+	<data>mz4AAA==</data>
 	<key>device_type</key>
 	<string>Display controller</string>
+	<key>enable-metal</key>
+	<data>AQAAAA==</data>
 	<key>hda-gfx</key>
 	<string>onboard-1</string>
+	<key>igfxfw</key>
+	<data>AgAAAA==</data>
+	<key>igfxonln</key>
+	<data>AQAAAA==</data>
 	<key>iommu-selection</key>
-	<data>
-	AAAAAA==
-	</data>
+	<data>AAAAAA==</data>
+	<key>rps-control</key>
+	<data>AQAAAA==</data>
 </dict>
 ```
 
