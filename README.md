@@ -220,6 +220,8 @@ So, it should be...
 - UpdateSMBIOSMode = `Custom`
 - CustomSMBIOSGuid = `Yes`
 
+</br>
+
 **OpenCoreMod**<div align="justify">Another option is to use the OpenCore Mod version. It is not encouraged, but the best approach to develop EFI is using a resource package. This is an example based on [OpenCore v0.8.0](https://github.com/MohdIsmailMatAsin/i510400AsrB460Msl/files/8697131/oc_v0.8.0-mod.zip). The difference with official release is `Enable for All` option and `SkipCustomEntryCheck`. This option prevents modded/patched ACPI from being injected into other operating systems ie; Windows or Linux. The difficulty is that you have to build this EFI from source. Below is standard settings for both option. 
 	
 - Enable for All = `No`
