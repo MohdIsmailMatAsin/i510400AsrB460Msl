@@ -205,21 +205,18 @@ Below are the base OpenCore files and folders used for this project:
 
 **On Other Operating Systems, Avoid ACPI Injection**<div align="justify">Most of these issues may affect dual booting (Windows + MacOS). Luckily, there are settings via config.plist to prevent this issue, but this is only experimental. Do not assume these settings will work 💯 on your machine. Certain users report the settings are not working, but some report the settings work as well. These settings are actually used only for Dell machines. But it is worth a try. Settings are explained via the table below.</div>
 
-- UpdateSMBIOSMode = `Create`
-  > _Replace the tables with newly allocated EfiReservedMemoryType, use Custom on Dell laptops requiring CustomSMBIOSGuid quirk. Setting to Custom with CustomSMBIOSGuid quirk enabled can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk</div>
+- UpdateSMBIOSMode = `Create`<div align="justify">Replace the tables with newly allocated EfiReservedMemoryType, use Custom on Dell laptops requiring CustomSMBIOSGuid quirk. Setting to Custom with CustomSMBIOSGuid quirk enabled can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk.</div>
 
 </br>
 
-- CustomSMBIOSGuid = `Yes`
-  > _Performs GUID patching for UpdateSMBIOSMode set to Custom. Usually relevant for Dell laptops. Enabling this quirk with UpdateSMBIOSMode. Custom mode can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk. 
+- CustomSMBIOSGuid = `Yes`<div align="justify">Performs GUID patching for UpdateSMBIOSMode set to Custom. Usually relevant for Dell laptops. Enabling this quirk with UpdateSMBIOSMode. Custom mode can also disable SMBIOS injection into "non-Apple" OSes however we do not endorse this method as it breaks Bootcamp compatibility. Use at your own risk.</div>
 
 </br>
 
-**OpenCoreMod**<div align="justify">Another option is to use the OpenCore Mod version. It is not encouraged, but the best approach to develop EFI is using a resource package. This is an example based on [OpenCore v0.8.0](https://github.com/MohdIsmailMatAsin/i510400AsrB460Msl/files/8697131/oc_v0.8.0-mod.zip). The difference with official release is `Enable for All` option and `SkipCustomEntryCheck`.
+**OpenCoreMod**<div align="justify">Another option is to use the OpenCore Mod version. It is not encouraged, but the best approach to develop EFI is using a resource package. This is an example based on [OpenCore v0.8.0](https://github.com/MohdIsmailMatAsin/i510400AsrB460Msl/files/8697131/oc_v0.8.0-mod.zip). The difference with official release is `Enable for All` option and `SkipCustomEntryCheck`. This option prevents modded/patched ACPI from being injected into other operating systems ie; Windows or Linux. The difficulty is that you have to build this EFI from source.</div>
 
 - Enable for All = `No`
 - SkipCustomEntryCheck = `Yes`
-  > _This option prevents modded/patched ACPI from being injected into other operating systems ie; Windows or Linux. The difficulty is that you have to build this EFI from source_
 
 </br>
 
