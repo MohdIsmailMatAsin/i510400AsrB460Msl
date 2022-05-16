@@ -252,10 +252,6 @@ So, it should be...
 - **USBX**<div align="justify">💲 USB Power Properties on Skylake mothermoard and new generation</div>
 - **XHC0**<div align="justify">💲 The `Platform Controller Hub` (PCH) for Intel Comet Lake family single-chip chipsets known as `Intel Comet Lake PCH-V USB Controller`. Because this build has two different USB Host Controllers, rename `XHC` to `XHC0`</div>  
 
-
-
-
-
 <p align="center"><img width="1115" alt="Screen Shot 2022-05-16 at 12 44 52 PM" src="https://user-images.githubusercontent.com/72515939/168521417-7d17f33e-85a0-45ce-ae77-ca639b218658.png"></div>
 
 </br>
